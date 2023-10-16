@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/10/16 14:55:16 by sqiu             ###   ########.fr        #
+#    Updated: 2023/10/16 16:33:02 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,8 @@ BLUE := \033[34m
 
 SRC_DIR := src
 OBJ_DIR := obj
-#LIB_DIR := lib
-#LIB_DIR_FT := $(LIB_DIR)/libft
+LIB_DIR := lib
+LIB_DIR_FT := $(LIB_DIR)/libft
 INC_DIR := inc
 DEP_DIR := $(OBJ_DIR)/dep
 #TEST_DIR := tests
@@ -38,15 +38,15 @@ DEP_DIR := $(OBJ_DIR)/dep
 # *     Libraries              *
 # ******************************
 
-#LDFLAGS := -L $(LIB_DIR_FT)
-LDLIBS :=
+LDFLAGS := -L $(LIB_DIR_FT)
+LDLIBS := -lft
 
 # ******************************
 # *     Vars for compiling     *
 # ******************************
 
 CC := cc
-CPPFLAGS := -I $(INC_DIR) #-I lib/libft
+CPPFLAGS := -I $(INC_DIR) -I lib/libft/include
 CFLAGS = -Wall -Werror -Wextra -g
 DEPFLAGS = -MT $@ -MMD -MP -MF $(DEP_DIR)/$*.Td
 COMPILE = $(CC) $(DEPFLAGS) $(CPPFLAGS) $(CFLAGS) -c
@@ -57,7 +57,7 @@ POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
 # ******************************
 
 NAME := miniRT
-#LIBFT := $(LIB_DIR_FT)/libft.a
+LIBFT := $(LIB_DIR_FT)/libft.a
 #TEST := test
 
 # ******************************

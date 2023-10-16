@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/10/16 15:04:07 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/10/16 16:33:37 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 int	main(int argc, char **argv)
 {
 	if (argc != 2)
+	{
 		printf("Error\n");
+		exit(123);
+	}
+	ft_printf("SUCCESS\n");
 	(void)argv;
 	return (0);
 }
