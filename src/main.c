@@ -32,6 +32,7 @@ int	main(int argc, char **argv)
 		printf("Error\n");
 		exit(123);
 	}
+	printf("P3\n%d %d\n255\n", image_width, image_height);
 	j = -1;
 	while (++j < image_height)
 	{
