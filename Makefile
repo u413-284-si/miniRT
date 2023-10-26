@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
+#    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/10/16 16:33:02 by gwolf            ###   ########.fr        #
+#    Updated: 2023/10/26 15:15:39 by u413q            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,8 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC :=	
+SRC :=	vec3_arithmetics.c \
+		vec3_linalgebra.c
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
 # ******************************
