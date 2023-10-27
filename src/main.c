@@ -3,27 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/10/23 14:56:42 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/10/27 11:36:26 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
+#include "colour.h"
 
 int	main(int argc, char **argv)
 {
-	int		image_width;
-	int		image_height;
-	int		i;
-	int		j;
-	float	r;
-	float	g;
-	float	b;
-	int		ir;
-	int		ig;
-	int		ib;
+	int			image_width;
+	int			image_height;
+	int			i;
+	int			j;
+	t_colour	pixel;
+
 
 	image_width = 256;
 	image_height = 256;
@@ -39,13 +36,10 @@ int	main(int argc, char **argv)
 		i = -1;
 		while (++i < image_width)
 		{
-			r = (float)i / (image_width - 1);
-			g = (float)j / (image_height - 1);
-			b = 0;
-			ir = (int)(255.99 * r);
-			ig = (int)(255.99 * g);
-			ib = (int)(255.99 * b);
-			printf("%d %d %d\n", ir, ig, ib);
+			pixel.r = (float)i / (image_width - 1);
+			pixel.g = (float)j / (image_height - 1);
+			pixel.b = 0;
+			ft_write_colour(pixel);
 		}
 	}
 	(void)argv;
