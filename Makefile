@@ -6,7 +6,7 @@
 #    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/10/27 11:51:44 by u413q            ###   ########.fr        #
+#    Updated: 2023/10/27 12:06:23 by u413q            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,9 +64,11 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC :=	vec3_arithmetics.c \
-		vec3_linalgebra.c \
-		colour.c
+SRC :=	colour.c \
+		ray.c \
+		vec3_arithmetics.c \
+		vec3_linalgebra.c
+
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
 # ******************************
