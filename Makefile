@@ -6,7 +6,7 @@
 #    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/10/26 15:15:39 by u413q            ###   ########.fr        #
+#    Updated: 2023/10/27 11:51:44 by u413q            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ DEP_DIR := $(OBJ_DIR)/dep
 # ******************************
 
 LDFLAGS := -L $(LIB_DIR_FT)
-LDLIBS := -lft
+LDLIBS := -lft -lm
 
 # ******************************
 # *     Vars for compiling     *
@@ -65,7 +65,8 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # ******************************
 
 SRC :=	vec3_arithmetics.c \
-		vec3_linalgebra.c
+		vec3_linalgebra.c \
+		colour.c
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
 # ******************************
