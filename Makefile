@@ -6,7 +6,7 @@
 #    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/10/28 13:14:03 by u413q            ###   ########.fr        #
+#    Updated: 2023/10/28 17:34:47 by u413q            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 SRC :=	camera.c \
 		colour.c \
 		ray.c \
+		scene.c \
 		vec3_arithmetics.c \
 		vec3_linalgebra.c
 
