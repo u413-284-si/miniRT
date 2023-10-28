@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/28 18:09:45 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/28 19:39:49 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,30 @@ typedef struct s_ray
 	t_vec3	direction;
 	float	d;
 }	t_ray;
+
+/**
+ * @brief Shows point of intersection
+ * @param point		point of intersection
+ * @param normal	normal vector at point of intersection
+ * @param d			distance into ray direction when point is hit
+ */
+typedef struct s_hitrecord
+{
+	t_vec3	point;
+	t_vec3	normal;
+	float	d;
+}	t_hitrecord;
+
+/**
+ * @brief Interval of accepted values
+ * @param min	Minimum of interval
+ * @param max 	Maximum of interval
+ */
+typedef struct s_interval
+{
+	float	min;
+	float	max;
+}	t_interval;
 
 /* ====== DECLARATIONS ====== */
 
