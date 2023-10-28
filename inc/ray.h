@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/27 15:30:08 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/28 18:09:45 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct s_ray
  * @param d 
  * @return t_vec3 
  */
-t_vec3		ft_ray(t_vec3 origin, t_vec3 direction, float d);
+t_vec3		ft_ray(t_ray ray, float d);
 
 /**
  * @brief Returns the colour of a ray

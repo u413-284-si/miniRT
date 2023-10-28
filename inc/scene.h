@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/28 17:27:48 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/28 18:03:46 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@
  * @param sp_centre Centre of the sphere
  * @param r 		Radius of the sphere
  * @param ray 		Ray shot into scene
- * @return true 	If sphere was hit by ray
- * @return false 	If sphere was missed by ray
+ * @return float 	Smallest solution = Closest hit point (the one seen by the 
+ * camera)
  */
-bool	ft_hit_sphere(t_vec3 sp_centre, float r, t_ray ray);
+float	ft_hit_sphere(t_vec3 sp_centre, float r, t_ray ray);
 
 #endif

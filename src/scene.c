@@ -6,13 +6,13 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/28 17:41:17 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/28 18:02:14 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "scene.h"
 
-bool	ft_hit_sphere(t_vec3 sp_centre, float r, t_ray ray)
+float	ft_hit_sphere(t_vec3 sp_centre, float r, t_ray ray)
 {
 	t_vec3	sp_centre_ray;
 	float	a;
@@ -26,7 +26,7 @@ bool	ft_hit_sphere(t_vec3 sp_centre, float r, t_ray ray)
 	c = ft_vec3_dot(sp_centre_ray, sp_centre_ray) - pow(r, 2);
 	discriminant = pow(b, 2) - 4.0 * a * c;
 	if (discriminant >= 0)
-		return (true);
+		return ((-b - sqrt(discriminant)) / (2.0 * a));
 	else
-		return (false);
+		return (-1.0);
 }
