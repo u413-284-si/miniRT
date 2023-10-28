@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/28 13:05:03 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/28 17:43:37 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	ft_initiate_camera(t_cam *cam)
 {
 	cam->image_width = 400;
-	cam->aspect_ratio = 16.0 / 9.0;
+	cam->aspect_ratio = 1.0 / 1.0;
 	cam->image_height = (int)(cam->image_width / cam->aspect_ratio);
 	if (cam->image_height < 1)
 		cam->image_height = 1;
