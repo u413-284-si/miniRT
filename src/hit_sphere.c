@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:39:35 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 14:07:38 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/29 18:02:12 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ bool	ft_hit_sphere(t_sphere sp, t_ray ray, t_hitrecord *rec, \
 	if (discriminant < 0)
 		return (false);
 	d = (-b - sqrt(discriminant)) / (2.0 * a);
-	if (d <= ray_d.min || d >= ray_d.max)
+	if (!ft_surrounds(d, ray_d))
 	{
 		d = (-b + sqrt(discriminant)) / (2.0 * a);
-		if (d <= ray_d.min || d >= ray_d.max)
+		if (!ft_surrounds(d, ray_d))
 			return (false);
 	}
 	rec->d = d;
