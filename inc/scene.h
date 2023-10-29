@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 12:21:34 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/29 13:59:04 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@
 
 // Standard C libs
 # include <stdbool.h>
+# include <stdlib.h>
 
 // Home-grown libs
-# include "ray.h"
+# include "vec3.h"
+# include "colour.h"
 
 /* ====== DEFINITIONS ====== */
 
@@ -47,7 +49,7 @@ typedef struct s_plane
 	t_vec3		point;
 	t_vec3		normal;
 	t_colour	colour;
-}	t_sphere;
+}	t_plane;
 
 /**
  * @brief Represents a cylinder
@@ -71,36 +73,21 @@ typedef struct s_cylinder
  * @param sp		Array of spheres
  * @param pl		Array of planes
  * @param cy		Array of cylinders
+ * @param sp_count	Number of spheres
+ * @param pl_count	Number of planes
+ * @param cy_count	Number of cylinders
  */
 typedef struct s_entities
 {
 	t_sphere	*sp;
 	t_plane		*pl;
 	t_cylinder	*cy;
+	int			sp_count;
+	int			pl_count;
+	int			cy_count;
 }	t_entities;
 
 /* ====== DECLARATIONS ====== */
-
-/**
- * @brief Calculates if a sphere was hit by a ray
- * 
- * A quadratic equation gives input on whether the sphere was hit or not.
- * Solutions to this equation can be determined with the discriminant of
- * -b +- sqr(b² - 4ac)/(2a)
- * 
- * Discriminant
- * - is positive => two real solutions = sphere hit twice
- * - is zero => one real solution = one tangential hit
- * - is negative => no real solutions = miss
- * @param sp		Sphere
- * @param ray 		Ray shot into scene
- * @param rec		Hit record of ray with sphere
- * @param ray_d 	Interval of accepted values of the ray distance for a hit
- * @return float 	Smallest solution = Closest hit point (the one seen by the 
- * camera)
- */
-bool	ft_hit_sphere(t_sphere sp, t_ray ray, t_hitrecord *rec, \
-	t_interval ray_d);
 
 /**
  * @brief Builds the scene by filling it with entities
