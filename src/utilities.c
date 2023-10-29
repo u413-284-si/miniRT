@@ -6,11 +6,11 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:48:18 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 11:50:28 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/29 13:45:31 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utilites.h"
+#include "utilities.h"
 
 float	ft_degree_to_radian(float degrees)
 {
