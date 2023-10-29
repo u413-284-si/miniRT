@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/28 13:10:07 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/29 13:41:38 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,10 @@ void	ft_initiate_viewport(t_cam *cam);
  * Creates rays for each pixel of the image and "shoots" them
  * through the according pixel in the viewport. The colour of
  * each ray is returned and used to print out an image. 
- * @param cam Struct containing image and viewport parameters
+ * @param cam 		Struct containing image and viewport parameters
+ * @param scene		Scene containing all hittable entities
  */
-void	ft_create_image(t_cam cam);
+void	ft_create_image(t_cam cam, t_entities scene);
 
 
 #endif

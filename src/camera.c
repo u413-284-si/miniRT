@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/28 17:43:37 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/29 14:15:16 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_initiate_viewport(t_cam *cam)
 		ft_vec3_add(cam->delta_u, cam->delta_v), 0.5));
 }
 
-void	ft_create_image(t_cam cam)
+void	ft_create_image(t_cam cam, t_entities scene)
 {
 	int			i;
 	int			j;
@@ -71,7 +71,7 @@ void	ft_create_image(t_cam cam)
 			ray.direction = ft_vec3_sub(pixel, cam.camera_centre);
 			ray.origin = cam.camera_centre;
 			ray.d = 1.0;
-			pixel_colour = ft_ray_colour(ray);
+			pixel_colour = ft_ray_colour(ray, scene);
 			ft_write_colour(pixel_colour);
 		}
 	}
