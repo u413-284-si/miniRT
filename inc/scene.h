@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/28 19:58:19 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/29 11:38:19 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 
 /**
  * @brief Represents a sphere
- * @param centre		Centre of the sphere
+ * @param centre	Centre of the sphere
  * @param r			Radius of the sphere
  */
 typedef struct s_sphere
@@ -33,6 +33,16 @@ typedef struct s_sphere
 	t_vec3	centre;
 	float	r;
 }	t_sphere;
+
+/**
+ * @brief Contains all entities in the scene
+ * @param sp		Array of spheres
+ * @param 
+ */
+typedef struct s_entities
+{
+	t_sphere	*sp;
+}	t_entities;
 
 /* ====== DECLARATIONS ====== */
 
