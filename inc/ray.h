@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/28 19:39:49 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/29 13:38:52 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "vec3.h"
-# include "colour.h"
+# include "scene.h"
 
 /* ====== DEFINITIONS ====== */
 
@@ -72,9 +71,10 @@ t_vec3		ft_ray(t_ray ray, float d);
 /**
  * @brief Returns the colour of a ray
  * 
- * @param ray Ray sent into the scene
+ * @param ray 		Ray sent into the scene
+ * @param scene		Scene containing all hittable entities
  * @return t_colour Ray colour
  */
-t_colour	ft_ray_colour(t_ray ray);
+t_colour	ft_ray_colour(t_ray ray, t_entities scene);
 
 #endif
