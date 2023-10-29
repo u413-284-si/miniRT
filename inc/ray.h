@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 13:38:52 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/29 17:49:24 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,17 +44,6 @@ typedef struct s_hitrecord
 	t_vec3	normal;
 	float	d;
 }	t_hitrecord;
-
-/**
- * @brief Interval of accepted values
- * @param min	Minimum of interval
- * @param max 	Maximum of interval
- */
-typedef struct s_interval
-{
-	float	min;
-	float	max;
-}	t_interval;
 
 /* ====== DECLARATIONS ====== */
 
