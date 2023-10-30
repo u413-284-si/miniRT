@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hit_manager.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 17:56:45 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/30 11:44:04 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 /* ====== LIBRARIES ====== */
 
 # include "ray.h"
-# include "utilities.h"
+# include "utils.h"
 
-/* ====== DEFINITIONS ====== */
+/* ====== TYPEDEFS ====== */
 
-/* ====== DECLARATIONS ====== */
+/* ====== FUNCTIONS ====== */
 
 /**
  * @brief Calculates if a sphere was hit by a ray
@@ -44,7 +44,7 @@ bool	ft_hit_sphere(t_sphere sp, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d);
 
 /**
- * @brief 
+ * @brief Iterates through all spheres in the scene and calls ft_hit_sphere()
  * 
  * @param scene		Scene containing the spheres
  * @param ray 		Ray shot into scene
