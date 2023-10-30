@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 13:41:38 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/30 11:43:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 # include "ray.h"
 
-/* ====== DEFINITIONS ====== */
+/* ====== TYPEDEFS ====== */
 
 /**
  * @brief Contains camera, image and viewport parameters
@@ -30,8 +30,8 @@
  * @param aspect_ratio			Ratio of image_width / image_height
  * @param image_width			Width of image created
  * @param image_height			Height of image created
- * @param viewport_height		Height of viewport rectangle
  * @param viewport_width		Width of viewport rectangle
+ * @param viewport_height		Height of viewport rectangle
  * @param focal_length			Distance between camera centre and viewport centre
  * @param viewport_u			Vector u in viewport coordinates (= x)
  * @param viewport_v			Vector v in viewport coordinates (= -y)
@@ -46,8 +46,8 @@ typedef struct s_cam
 	float	aspect_ratio;
 	int		image_width;
 	int		image_height;
-	float	viewport_height;
 	float	viewport_width;
+	float	viewport_height;
 	float	focal_length;
 	t_vec3	camera_centre;
 	t_vec3	viewport_u;
@@ -59,7 +59,7 @@ typedef struct s_cam
 	t_vec3	pixel00_pos;
 }	t_cam;
 
-/* ====== DECLARATIONS ====== */
+/* ====== FUNCTIONS ====== */
 
 /**
  * @brief Sets values of camera parameters
