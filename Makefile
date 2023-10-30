@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
+#    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/10/30 11:39:07 by sqiu             ###   ########.fr        #
+#    Updated: 2023/10/30 14:40:50 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,10 @@ SRC :=	camera.c \
 		scene.c \
 		utils.c \
 		vec3_arithmetics.c \
-		vec3_linalgebra.c
+		vec3_linalgebra.c \
+		error_terminate.c \
+		error_syscall_wrapper.c \
+		check_file.c
 
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
@@ -95,7 +98,7 @@ DEPFILES += $(DEP_DIR)/main.d
 # *     Test files             *
 # ******************************
 
-#TEST_SRC := 
+#TEST_SRC :=
 #TEST_SRCS := $(addprefix $(TEST_DIR)/, $(TEST_SRC))
 #TEST_OBJ := $(TEST_SRC:.c=.o)
 #TEST_OBJS := $(addprefix $(TEST_DIR)/, $(TEST_OBJ))
