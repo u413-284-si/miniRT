@@ -26,6 +26,15 @@
 /* ====== TYPEDEFS ====== */
 
 /**
+ * @brief Enumeration of different entity types.
+ */
+typedef enum e_entity_type {
+	SPHERE,
+	PLANE,
+	CYLINDER
+}	t_entity_type;
+
+/**
  * @brief Represents a sphere
  * @param centre	Centre of the sphere
  * @param r			Radius of the sphere
@@ -91,7 +100,7 @@ typedef struct s_entities
 
 /**
  * @brief Builds the scene by filling it with entities
- * 
+ *
  * @param scene 	Struct with all entities
  */
 void	ft_create_scene(t_entities *scene);
