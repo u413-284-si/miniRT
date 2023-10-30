@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:45:53 by sqiu              #+#    #+#             */
-/*   Updated: 2023/10/26 15:13:47 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/30 11:43:41 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 # include <math.h>
 
-/* ====== DEFINITIONS ====== */
+/* ====== TYPEDEFS ====== */
 
 /**
  * @brief Represents a tridimensional vector
@@ -32,7 +32,7 @@ typedef struct s_vec3
 	float	z;
 }	t_vec3;
 
-/* ====== DECLARATIONS ====== */
+/* ====== FUNCTIONS ====== */
 
 /**
  * @brief Add two vectors

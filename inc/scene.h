@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 13:59:04 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/30 11:44:30 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # include "vec3.h"
 # include "colour.h"
 
-/* ====== DEFINITIONS ====== */
+/* ====== TYPEDEFS ====== */
 
 /**
  * @brief Represents a sphere
@@ -87,7 +87,7 @@ typedef struct s_entities
 	int			cy_count;
 }	t_entities;
 
-/* ====== DECLARATIONS ====== */
+/* ====== FUNCTIONS ====== */
 
 /**
  * @brief Builds the scene by filling it with entities
