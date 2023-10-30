@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/10/16 16:33:02 by gwolf            ###   ########.fr        #
+#    Updated: 2023/10/30 11:39:07 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ DEP_DIR := $(OBJ_DIR)/dep
 # ******************************
 
 LDFLAGS := -L $(LIB_DIR_FT)
-LDLIBS := -lft
+LDLIBS := -lft -lm
 
 # ******************************
 # *     Vars for compiling     *
@@ -64,7 +64,15 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC :=	
+SRC :=	camera.c \
+		colour.c \
+		hit_sphere.c \
+		ray.c \
+		scene.c \
+		utils.c \
+		vec3_arithmetics.c \
+		vec3_linalgebra.c
+
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
 # ******************************

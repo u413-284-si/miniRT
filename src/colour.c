@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   colour.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/10/29 12:41:37 by u413q            ###   ########.fr       */
+/*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */
+/*   Updated: 2023/10/27 11:33:08 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+# include "colour.h"
 
-int	main(int argc, char **argv)
+void	ft_write_colour(t_colour pixel)
 {
-	t_cam		cam;
-	t_entities	scene;
+	int		ir;
+	int		ig;
+	int		ib;
 
-	if (argc != 2)
-	{
-		printf("Error\n");
-		exit(123);
-	}
-	ft_create_scene(&scene);
-	ft_initiate_camera(&cam);
-	ft_initiate_viewport(&cam);
-	ft_create_image(cam, scene);
-	(void)argv;
-	return (0);
+	ir = (int)(255.99 * pixel.r);
+	ig = (int)(255.99 * pixel.g);
+	ib = (int)(255.99 * pixel.b);
+	printf("%d %d %d\n", ir, ig, ib);
 }

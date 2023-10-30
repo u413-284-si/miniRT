@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   vec3_linalgebra.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/10/29 12:41:37 by u413q            ###   ########.fr       */
+/*   Created: 2023/10/26 14:52:25 by u413q             #+#    #+#             */
+/*   Updated: 2023/10/26 15:24:15 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "vec3.h"
 
-int	main(int argc, char **argv)
+float	ft_vec3_abs(t_vec3 v)
 {
-	t_cam		cam;
-	t_entities	scene;
+	return (sqrt(pow(v.x, 2) + pow(v.y, 2) + pow(v.z, 2)));
+}
 
-	if (argc != 2)
-	{
-		printf("Error\n");
-		exit(123);
-	}
-	ft_create_scene(&scene);
-	ft_initiate_camera(&cam);
-	ft_initiate_viewport(&cam);
-	ft_create_image(cam, scene);
-	(void)argv;
-	return (0);
+t_vec3	ft_vec3_norm(t_vec3 v)
+{
+	return (ft_vec3_scale(v, 1.0 / ft_vec3_abs(v)));
+}
+
+float	ft_vec3_angle(t_vec3 v1, t_vec3 v2)
+{
+	float	dot_product;
+
+	dot_product = ft_vec3_dot(v1, v2);
+	return (acos(dot_product / (ft_vec3_abs(v1) * ft_vec3_abs(v2))));
 }

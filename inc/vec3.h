@@ -6,14 +6,18 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:45:53 by sqiu              #+#    #+#             */
-/*   Updated: 2023/10/16 16:20:26 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/10/30 11:43:41 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef VEC3_H
 # define VEC3_H
 
-/* ====== DEFINITIONS ====== */
+/* ====== LIBRARIES ====== */
+
+# include <math.h>
+
+/* ====== TYPEDEFS ====== */
 
 /**
  * @brief Represents a tridimensional vector
@@ -28,7 +32,7 @@ typedef struct s_vec3
 	float	z;
 }	t_vec3;
 
-/* ====== DECLARATIONS ====== */
+/* ====== FUNCTIONS ====== */
 
 /**
  * @brief Add two vectors
