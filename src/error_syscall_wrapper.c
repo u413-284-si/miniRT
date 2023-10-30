@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:01:13 by gwolf             #+#    #+#             */
-/*   Updated: 2023/10/30 14:36:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/10/30 15:08:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,16 @@
  * @param path		Path string to file to open.
  * @param flag		Flags given to open().
  * @param fd		File descriptor to assign to opened file.
- * @param msg		Message for perror.
- * @return int		New fd
  */
-int	ft_err_open(const char *path, int flag, char *msg)
+bool	ft_err_open(const char *path, int flag, int *fd)
 {
-	int	fd;
-
 	errno = 0;
-	fd = open(path, flag);
-	if (fd == -1)
+	*fd = open(path, flag);
+	if (*fd == -1)
 	{
-		ft_terminate(msg, errno);
+		return (true);
 	}
-	return (fd);
+	return (false);
 }
 
 /**
@@ -40,7 +36,7 @@ int	ft_err_open(const char *path, int flag, char *msg)
  * @param fd		File descriptor of file to be closed.
  * @param msg		Message for perror.
  */
-void	ft_err_close(int fd, char *msg)
+bool	ft_err_close(int fd)
 {
 	int	ret;
 
@@ -48,6 +44,7 @@ void	ft_err_close(int fd, char *msg)
 	ret = close(fd);
 	if (ret == -1)
 	{
-		ft_terminate(msg, errno);
+		return (true);
 	}
+	return (false);
 }
