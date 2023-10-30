@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 17:49:24 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/30 11:44:21 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 # include "scene.h"
 
-/* ====== DEFINITIONS ====== */
+/* ====== TYPEDEFS ====== */
 
 /**
  * @brief Represents a ray
@@ -45,15 +45,14 @@ typedef struct s_hitrecord
 	float	d;
 }	t_hitrecord;
 
-/* ====== DECLARATIONS ====== */
+/* ====== FUNCTIONS ====== */
 
 /**
- * @brief 
+ * @brief Represents a ray
  * 
- * @param origin 
- * @param direction 
- * @param d 
- * @return t_vec3 
+ * @param ray			General ray created by the image manager
+ * @param d 			Distance traveled upon hit
+ * @return t_vec3 		Ray vector to hit
  */
 t_vec3		ft_ray(t_ray ray, float d);
 
