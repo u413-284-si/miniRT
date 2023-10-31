@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/30 11:41:52 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/10/31 19:18:12 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,14 @@ bool	ft_contains(float x, t_interval interval);
  * @return false 		Value is not surrounded by the interval
  */
 bool	ft_surrounds(float x, t_interval interval);
+
+/**
+ * @brief Returns the bigger of two values
+ * 
+ * @param x 	First value
+ * @param y 	Second value
+ * @return float 
+ */
+float	ft_max(float x, float y);
 
 #endif
