@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:45:53 by sqiu              #+#    #+#             */
-/*   Updated: 2023/10/30 11:43:41 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/10/31 11:27:45 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,15 @@ t_vec3	ft_vec3_norm(t_vec3 v);
  * @return float
  */
 float	ft_vec3_angle(t_vec3 v1, t_vec3 v2);
+
+/**
+ * @brief Calculates the Hadamard product of two vectors
+ * 
+ * Component-wise vector multiplication
+ * @param v1 	The first vector
+ * @param v2 	The second vector
+ * @return t_vec3 
+ */
+t_vec3	ft_vec3_hadamard(t_vec3 v1, t_vec3 v2);
 
 #endif

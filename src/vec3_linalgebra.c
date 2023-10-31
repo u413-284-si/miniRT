@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:52:25 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/26 15:24:15 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/31 11:26:22 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,14 @@ float	ft_vec3_angle(t_vec3 v1, t_vec3 v2)
 
 	dot_product = ft_vec3_dot(v1, v2);
 	return (acos(dot_product / (ft_vec3_abs(v1) * ft_vec3_abs(v2))));
+}
+
+t_vec3	ft_vec3_hadamard(t_vec3 v1, t_vec3 v2)
+{
+	t_vec3	rtrn;
+
+	rtrn.x = v1.x * v2.x;
+	rtrn.y = v1.y * v2.y;
+	rtrn.z = v1.z * v2.z;
+	return (rtrn);
 }
