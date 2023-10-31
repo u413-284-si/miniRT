@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/30 11:44:21 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/10/31 17:26:20 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,6 @@ typedef struct s_ray
 	t_vec3	direction;
 	float	d;
 }	t_ray;
-
-/**
- * @brief Shows point of intersection
- * @param point		point of intersection
- * @param normal	normal vector at point of intersection
- * @param d			distance into ray direction when point is hit
- */
-typedef struct s_hitrecord
-{
-	t_vec3	point;
-	t_vec3	normal;
-	float	d;
-}	t_hitrecord;
 
 /* ====== FUNCTIONS ====== */
 
