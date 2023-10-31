@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 12:40:37 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/31 18:51:37 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,21 +83,27 @@ typedef struct s_cylinder
 
 /**
  * @brief Contains all entities in the scene
- * @param sp		Array of spheres
- * @param pl		Array of planes
- * @param cy		Array of cylinders
- * @param sp_count	Number of spheres
- * @param pl_count	Number of planes
- * @param cy_count	Number of cylinders
+ * @param ambient		Ambient lighting
+ * @param lsrc			Light sources
+ * @param sp			Array of spheres
+ * @param pl			Array of planes
+ * @param cy			Array of cylinders
+ * @param sp_count		Number of spheres
+ * @param pl_count		Number of planes
+ * @param cy_count		Number of cylinders
+ * @param lsrc_count	Number of light sources
  */
 typedef struct s_entities
 {
+	t_light		ambient;
+	t_light		*lsrc;
 	t_sphere	*sp;
 	t_plane		*pl;
 	t_cylinder	*cy;
 	int			sp_count;
 	int			pl_count;
 	int			cy_count;
+	int			lsrc_count;
 }	t_entities;
 
 /* ====== FUNCTIONS ====== */
@@ -107,6 +113,27 @@ typedef struct s_entities
  * 
  * @param scene 	Struct with all entities
  */
-void	ft_create_scene(t_entities *scene);
+void		ft_create_scene(t_entities *scene);
+
+/**
+ * @brief Create ambient lighting
+ * 
+ * Ambient light = ambient ratio * light colour
+ * @param ambient 		Ambient light parameters
+ * @return t_colour 
+ */
+t_colour	ft_ambient_light(t_light ambient);
+
+
+/**
+ * @brief Create diffuse lighting
+ * 
+ * Diffuse factor = dot product(light dir, normal vector)
+ * Diffuse light = diffuse factor * light colour
+ * @param cur 		Current light source
+ * @param rec 		Hit record
+ * @return t_colour 
+ */
+t_colour	ft_diffuse_light(t_light cur, t_hitrecord rec);
 
 #endif
