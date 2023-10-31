@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/30 11:44:30 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/10/31 12:40:37 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,19 @@
 # include "colour.h"
 
 /* ====== TYPEDEFS ====== */
+
+/**
+ * @brief Represents lighting in the scene
+ * @param pos		Position of the light
+ * @param ratio		Light brightess ratio
+ * @param colour	Colour of the light
+ */
+typedef struct s_light
+{
+	t_vec3		pos;
+	float		ratio;
+	t_colour	colour;
+}	t_light;
 
 /**
  * @brief Represents a sphere
