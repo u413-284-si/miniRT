@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
+#    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/10/30 11:39:07 by sqiu             ###   ########.fr        #
+#    Updated: 2023/11/01 14:29:06 by u413q            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ SRC :=	camera.c \
 		colour.c \
 		hit_sphere.c \
 		ray.c \
+		scene_light.c \
 		scene.c \
 		utils.c \
 		vec3_arithmetics.c \
