@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 13:44:33 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/31 19:33:15 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_vec3	ft_ray(t_ray ray, float d)
 t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 {
 	// Spheres
-	t_colour	sphere_colour;
+	t_colour	ray_colour;
 	t_hitrecord	rec;
 	t_interval	ray_d;
 
@@ -30,16 +30,19 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 
 	if (ft_hit_scene_sp(scene, ray, &rec, ray_d))
 	{
+		ft_enlighten(&ray_colour, rec, scene);
+		return (ray_colour);
+	}
+/* 	{
 		sphere_colour.r = 0.5 * (rec.normal.x + 1.0);
 		sphere_colour.g = 0.5 * (rec.normal.y + 1.0);
 		sphere_colour.b = 0.5 * (rec.normal.z + 1.0);
 		return (sphere_colour);
-	}
+	} */
 
 	// Background
 	t_vec3		unit_direction;
 	float		a;
-	t_colour	ray_colour;
 	t_colour	white;
 	t_colour	blue;
 	white.r = 1.0;
