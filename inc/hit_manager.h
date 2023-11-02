@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 17:33:07 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/31 19:32:11 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,6 @@
 # include "utils.h"
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Shows point of intersection
- * @param point		Point of intersection
- * @param normal	Normal vector at point of intersection
- * @param d			Distance into ray direction when point is hit
- * @param colour	Colour of object at intersection
- */
-typedef struct s_hitrecord
-{
-	t_vec3		point;
-	t_vec3		normal;
-	float		d;
-	t_colour	colour;
-}	t_hitrecord;
 
 /* ====== FUNCTIONS ====== */
 

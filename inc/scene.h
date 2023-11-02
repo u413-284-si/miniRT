@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 18:51:37 by u413q            ###   ########.fr       */
+/*   Updated: 2023/10/31 19:32:18 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,21 @@
 # include "colour.h"
 
 /* ====== TYPEDEFS ====== */
+
+/**
+ * @brief Shows point of intersection
+ * @param point		Point of intersection
+ * @param normal	Normal vector at point of intersection
+ * @param d			Distance into ray direction when point is hit
+ * @param colour	Colour of object at intersection
+ */
+typedef struct s_hitrecord
+{
+	t_vec3		point;
+	t_vec3		normal;
+	float		d;
+	t_colour	colour;
+}	t_hitrecord;
 
 /**
  * @brief Represents lighting in the scene
@@ -114,6 +129,16 @@ typedef struct s_entities
  * @param scene 	Struct with all entities
  */
 void		ft_create_scene(t_entities *scene);
+
+/**
+ * @brief Calculate the effect of different lighting on perception
+ * 
+ * @param ray_colour 	Resulting colour
+ * @param rec 			Hit record
+ * @param scene 		Scene containing light information
+ */
+void		ft_enlighten(t_colour *ray_colour, t_hitrecord rec, \
+	t_entities scene);
 
 /**
  * @brief Create ambient lighting
