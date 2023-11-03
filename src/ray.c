@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ray.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 19:33:15 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/03 13:22:02 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ray.h"
-#include "hit_manager.h"
+#include "lighting.h"
 
 t_vec3	ft_ray(t_ray ray, float d)
 {
@@ -28,7 +28,7 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 	ray_d.min = 0;
 	ray_d.max = INFINITY;
 
-	if (ft_hit_scene_sp(scene, ray, &rec, ray_d))
+	if (ft_hit_scene(scene, ray, &rec, ray_d))
 	{
 		ft_enlighten(&ray_colour, rec, scene);
 		return (ray_colour);

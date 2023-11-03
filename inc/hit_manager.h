@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hit_manager.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 19:32:11 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/03 12:41:01 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,20 @@
 /* ====== TYPEDEFS ====== */
 
 /* ====== FUNCTIONS ====== */
+
+/**
+ * @brief Iterates through all entities in the scene and returns whether a hit
+ * occured or not
+ * 
+ * @param scene		Scene containing the entities
+ * @param ray 		Ray shot into scene
+ * @param rec		Hit record of ray with entities
+ * @param ray_d 	Interval of accepted values of the ray distance for a hit
+ * @return true		If entity is hit
+ * @return false	If entity is missed
+ */
+bool	ft_hit_scene(t_entities scene, t_ray ray, t_hitrecord *rec, \
+	t_interval ray_d);
 
 /**
  * @brief Calculates if a sphere was hit by a ray
