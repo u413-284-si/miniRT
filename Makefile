@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
+#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/01 14:29:06 by u413q            ###   ########.fr        #
+#    Updated: 2023/11/03 12:36:35 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,8 +67,10 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 SRC :=	camera.c \
 		colour.c \
 		hit_sphere.c \
+		hit.c \
 		ray.c \
 		scene_light.c \
+		scene_shadow.c \
 		scene.c \
 		utils.c \
 		vec3_arithmetics.c \

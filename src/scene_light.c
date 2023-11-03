@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   scene_light.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:15:24 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 19:22:46 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/03 13:21:09 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hit_manager.h"
+#include "lighting.h"
 
 void	ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene)
 {
@@ -26,6 +26,8 @@ void	ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene)
 	while (++i < scene.lsrc_count)
 	{
 		cur = scene.lsrc[i];
+		if (ft_in_shadow(cur, rec, scene))
+			continue ;
 		diffuse = ft_diffuse_light(cur, rec);
 		tmp = ft_hadamard_colour(diffuse, rec.colour);
 		*ray_colour = ft_add_colour(*ray_colour, tmp);
