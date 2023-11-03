@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/01 14:37:07 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/03 10:37:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ void	ft_create_scene(t_entities *scene)
 	scene->ambient.colour.r = 1.0;
 	scene->ambient.colour.g = 1.0;
 	scene->ambient.colour.b = 1.0;
-	scene->ambient.ratio = 1.0;
+	scene->ambient.ratio = 0.2;
 	scene->lsrc[0].colour.r = 1.0;
 	scene->lsrc[0].colour.g = 1.0;
 	scene->lsrc[0].colour.b = 1.0;
-	scene->lsrc[0].ratio = 0.6;
+	scene->lsrc[0].ratio = 0.7;
 	scene->lsrc[0].pos.x = -40.0;
 	scene->lsrc[0].pos.y = 50.0;
 	scene->lsrc[0].pos.z = 0.0;
