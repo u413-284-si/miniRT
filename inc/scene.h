@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 19:32:18 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/03 13:19:55 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,36 +129,5 @@ typedef struct s_entities
  * @param scene 	Struct with all entities
  */
 void		ft_create_scene(t_entities *scene);
-
-/**
- * @brief Calculate the effect of different lighting on perception
- * 
- * @param ray_colour 	Resulting colour
- * @param rec 			Hit record
- * @param scene 		Scene containing light information
- */
-void		ft_enlighten(t_colour *ray_colour, t_hitrecord rec, \
-	t_entities scene);
-
-/**
- * @brief Create ambient lighting
- * 
- * Ambient light = ambient ratio * light colour
- * @param ambient 		Ambient light parameters
- * @return t_colour 
- */
-t_colour	ft_ambient_light(t_light ambient);
-
-
-/**
- * @brief Create diffuse lighting
- * 
- * Diffuse factor = dot product(light dir, normal vector)
- * Diffuse light = diffuse factor * light colour
- * @param cur 		Current light source
- * @param rec 		Hit record
- * @return t_colour 
- */
-t_colour	ft_diffuse_light(t_light cur, t_hitrecord rec);
 
 #endif
