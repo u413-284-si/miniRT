@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/03 12:36:35 by sqiu             ###   ########.fr        #
+#    Updated: 2023/11/03 13:49:21 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 
 SRC :=	camera.c \
 		colour.c \
+		hit_plane.c \
 		hit_sphere.c \
 		hit.c \
 		ray.c \
