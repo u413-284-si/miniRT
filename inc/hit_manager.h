@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hit_manager.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/03 12:41:01 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/04 20:53:50 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,42 @@ bool	ft_hit_sphere(t_sphere sp, t_ray ray, t_hitrecord *rec, \
  * @return false	If sphere is missed
  */
 bool	ft_hit_scene_sp(t_entities scene, t_ray ray, t_hitrecord *rec, \
+	t_interval ray_d);
+
+/**
+ * @brief Calculates if a plane was hit by a ray
+ * 
+ * If the ray hits the plane, the dot product between the vector created
+ * going from a point on the plane P0 to the point of intersection P and the
+ * plane normal is zero. This gives an equation
+ * d = dot((P0 - A), n) / dot(B, n)
+ * 
+ * with:
+ * 			A: Point of origin of ray
+ * 			B: Direction of ray
+ * 			n: Plane normal 
+ * 
+ * to solve for the distance traveled d by the ray.
+ * @param pl 		Plane
+ * @param ray 		Ray shot into scene
+ * @param rec 		Hit record of ray with plane
+ * @param ray_d 	Interval of accepted values of the ray distance for a hit
+ * @return true 	If plane is hit
+ * @return false 	If plane is missed
+ */
+bool	ft_hit_plane(t_plane pl, t_ray ray, t_hitrecord *rec, t_interval ray_d);
+
+/**
+ * @brief Iterates through all planes in the scene and calls ft_hit_plane()
+ * 
+ * @param scene		Scene containing the planes
+ * @param ray 		Ray shot into scene
+ * @param rec		Hit record of ray with planes
+ * @param ray_d 	Interval of accepted values of the ray distance for a hit
+ * @return true		If plane is hit
+ * @return false	If plane is missed
+ */
+bool	ft_hit_scene_pl(t_entities scene, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d);
 
 #endif
