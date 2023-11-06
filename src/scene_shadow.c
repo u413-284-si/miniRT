@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:20:56 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/03 13:20:53 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/06 15:28:39 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,15 @@ bool	ft_shadow_ray_blocked(t_entities scene, t_ray shadow_ray, \
 	t_interval ray_d)
 {
 	t_hitrecord	block;
+	t_hittable	cur;
+	int			i;
 
-	if (ft_hit_scene(scene, shadow_ray, &block, ray_d))
-		return (true);
+	i = -1;
+	while (++i < scene.total)
+	{
+		cur = scene.obj[i];
+		if (ft_hit_scene(cur, shadow_ray, &block, ray_d))
+			return (true);
+	}
 	return (false);
 }
