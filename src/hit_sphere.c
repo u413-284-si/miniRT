@@ -6,13 +6,13 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:39:35 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/03 10:32:20 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/06 15:24:22 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hit_manager.h"
 
-bool	ft_hit_scene_sp(t_entities scene, t_ray ray, t_hitrecord *rec, \
+/* bool	ft_hit_scene_sp(t_entities scene, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d)
 {
 	bool			hit;
@@ -22,14 +22,15 @@ bool	ft_hit_scene_sp(t_entities scene, t_ray ray, t_hitrecord *rec, \
 	i = -1;
 	while (++i < scene.sp_count)
 	{
-		if (ft_hit_sphere(scene.sp[i], ray, rec, ray_d))
+		if (ft_hit_sphere(scene.obj[i].
+		sp[i], ray, rec, ray_d))
 		{
 			hit = true;
 			ray_d.max = rec->d;
 		}
 	}
 	return (hit);
-}
+} */
 
 bool	ft_hit_sphere(t_sphere sp, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d)
