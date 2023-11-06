@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/03 13:22:02 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/06 15:23:13 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,23 @@ t_vec3	ft_ray(t_ray ray, float d)
 
 t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 {
-	// Spheres
 	t_colour	ray_colour;
 	t_hitrecord	rec;
+	t_hittable	cur;
 	t_interval	ray_d;
+	int			i;
 
 	ray_d.min = 0;
 	ray_d.max = INFINITY;
-
-	if (ft_hit_scene(scene, ray, &rec, ray_d))
+	i = -1;
+	while (++i < scene.total)
+	{
+		cur = scene.obj[i];
+		if (ft_hit_scene(cur, ray, &rec, ray_d))
+			if (rec.d < ray_d.max)
+				ray_d.max = rec.d;
+	}
+	if (ray_d.max < INFINITY)
 	{
 		ft_enlighten(&ray_colour, rec, scene);
 		return (ray_colour);
