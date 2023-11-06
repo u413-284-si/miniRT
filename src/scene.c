@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/03 10:37:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/06 15:29:14 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,27 @@
 
 void	ft_create_scene(t_entities *scene)
 {
-	scene->sp_count = 2;
+	//int	i;
+
 	scene->lsrc_count = 1;
-	scene->sp = malloc(scene->sp_count * sizeof(t_sphere));
-	if (!scene->sp)
+	scene->sp_count = 2;
+	scene->pl_count = 0;
+	scene->cy_count = 0;
+	scene->total = scene->sp_count + scene->pl_count + scene->cy_count;
+	scene->obj = malloc(scene->total * sizeof(t_hittable));
+	if (!scene->obj)
 		exit(232);
 	scene->lsrc = malloc(scene->lsrc_count * sizeof(t_light));
 	if (!scene->lsrc)
 		exit(232);
-	scene->sp[0].centre.x = 0.0;
-	scene->sp[0].centre.y = 0.0;
-	scene->sp[0].centre.z = -1.0;
-	scene->sp[0].r = 0.5;
-	scene->sp[0].colour.r = 1.0;
-	scene->sp[0].colour.g = 0.0;
-	scene->sp[0].colour.b = 0.0;
-	scene->sp[1].centre.x = 0.0;
-	scene->sp[1].centre.y = -100.5;
-	scene->sp[1].centre.z = -1.0;
-	scene->sp[1].r = 100;
-	scene->sp[1].colour.r = 0.0;
-	scene->sp[1].colour.g = 1.0;
-	scene->sp[1].colour.b = 0.0;
+	//i = -1;
+	//while (++i < scene->sp_count)
+	ft_initiate_lights(scene);
+	ft_initiate_spheres(scene->obj);
+}
+
+void	ft_initiate_lights(t_entities *scene)
+{
 	scene->ambient.colour.r = 1.0;
 	scene->ambient.colour.g = 1.0;
 	scene->ambient.colour.b = 1.0;
@@ -47,4 +46,26 @@ void	ft_create_scene(t_entities *scene)
 	scene->lsrc[0].pos.x = -40.0;
 	scene->lsrc[0].pos.y = 50.0;
 	scene->lsrc[0].pos.z = 0.0;
+}
+
+void	ft_initiate_spheres(t_hittable *obj)
+{
+	obj[0].id = 0;
+	obj[0].type = SPHERE;
+	obj[0].params.sp.centre.x = 0.0;
+	obj[0].params.sp.centre.y = 0.0;
+	obj[0].params.sp.centre.z = -1.0;
+	obj[0].params.sp.r = 0.5;
+	obj[0].params.sp.colour.r = 1.0;
+	obj[0].params.sp.colour.g = 0.0;
+	obj[0].params.sp.colour.b = 0.0;
+	obj[1].id = 1;
+	obj[1].type = SPHERE;
+	obj[1].params.sp.centre.x = 0.0;
+	obj[1].params.sp.centre.y = -100.5;
+	obj[1].params.sp.centre.z = -1.0;
+	obj[1].params.sp.r = 100;
+	obj[1].params.sp.colour.r = 0.0;
+	obj[1].params.sp.colour.g = 1.0;
+	obj[1].params.sp.colour.b = 0.0;
 }
