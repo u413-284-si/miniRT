@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/06 15:29:14 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/06 16:03:02 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_create_scene(t_entities *scene)
 
 	scene->lsrc_count = 1;
 	scene->sp_count = 2;
-	scene->pl_count = 0;
+	scene->pl_count = 1;
 	scene->cy_count = 0;
 	scene->total = scene->sp_count + scene->pl_count + scene->cy_count;
 	scene->obj = malloc(scene->total * sizeof(t_hittable));
@@ -31,6 +31,7 @@ void	ft_create_scene(t_entities *scene)
 	//while (++i < scene->sp_count)
 	ft_initiate_lights(scene);
 	ft_initiate_spheres(scene->obj);
+	ft_initiate_planes(scene->obj);
 }
 
 void	ft_initiate_lights(t_entities *scene)
@@ -68,4 +69,19 @@ void	ft_initiate_spheres(t_hittable *obj)
 	obj[1].params.sp.colour.r = 0.0;
 	obj[1].params.sp.colour.g = 1.0;
 	obj[1].params.sp.colour.b = 0.0;
+}
+
+void	ft_initiate_planes(t_hittable *obj)
+{
+	obj[2].id = 0;
+	obj[2].type = PLANE;
+	obj[2].params.pl.point.x = 1.0;
+	obj[2].params.pl.point.y = 0.0;
+	obj[2].params.pl.point.z = 0.0;
+	obj[2].params.pl.normal.x = 1.0;
+	obj[2].params.pl.normal.y = 0.0;
+	obj[2].params.pl.normal.z = 0.0;
+	obj[2].params.pl.colour.r = 0.9;
+	obj[2].params.pl.colour.b = 0.7;
+	obj[2].params.pl.colour.g = 0.0;
 }
