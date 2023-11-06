@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 14:15:16 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/06 16:04:32 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_initiate_camera(t_cam *cam)
 
 void	ft_initiate_viewport(t_cam *cam)
 {
-	cam->viewport_height = 2.0;
+	cam->viewport_height = 2.2;
 	cam->viewport_width = cam->viewport_height * (float)(cam->image_width \
 		/ cam->image_height);
 	cam->viewport_u.x = cam->viewport_width;
