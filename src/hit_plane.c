@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   hit_plane.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:47:49 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/04 20:44:14 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/06 15:24:55 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hit_manager.h"
 
-bool	ft_hit_scene_pl(t_entities scene, t_ray ray, t_hitrecord *rec, \
+/* bool	ft_hit_scene_pl(t_entities scene, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d)
 {
 	int		i;
@@ -29,7 +29,7 @@ bool	ft_hit_scene_pl(t_entities scene, t_ray ray, t_hitrecord *rec, \
 		}
 	}
 	return (hit);
-}
+} */
 
 bool	ft_hit_plane(t_plane pl, t_ray ray, t_hitrecord *rec, t_interval ray_d)
 {
