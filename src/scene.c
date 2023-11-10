@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/10 14:56:15 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/10 19:40:19 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_create_scene(t_entities *scene)
 	//int	i;
 
 	scene->lsrc_count = 1;
-	scene->sp_count = 2;
+	scene->sp_count = 0;
 	scene->pl_count = 0;
-	scene->cy_count = 0;
+	scene->cy_count = 1;
 	scene->total = scene->sp_count + scene->pl_count + scene->cy_count;
 	scene->obj = malloc(scene->total * sizeof(t_hittable));
 	if (!scene->obj)
@@ -30,8 +30,9 @@ void	ft_create_scene(t_entities *scene)
 	//i = -1;
 	//while (++i < scene->sp_count)
 	ft_initiate_lights(scene);
-	ft_initiate_spheres(scene->obj);
+	//ft_initiate_spheres(scene->obj);
 	//ft_initiate_planes(scene->obj);
+	ft_initiate_cylinders(scene->obj);
 }
 
 void	ft_initiate_lights(t_entities *scene)
@@ -75,13 +76,30 @@ void	ft_initiate_planes(t_hittable *obj)
 {
 	obj[0].id = 0;
 	obj[0].type = PLANE;
-	obj[0].params.pl.point.x = 0.0;
+	obj[0].params.pl.point.x = 1.0;
 	obj[0].params.pl.point.y = 0.0;
-	obj[0].params.pl.point.z = -1.0;
+	obj[0].params.pl.point.z = 0.0;
 	obj[0].params.pl.normal.x = 0.707;
 	obj[0].params.pl.normal.y = 0.0;
-	obj[0].params.pl.normal.z = 0.707;
+	obj[0].params.pl.normal.z = 0.0;
 	obj[0].params.pl.colour.r = 0.0;
 	obj[0].params.pl.colour.b = 0.7;
 	obj[0].params.pl.colour.g = 0.9412;
+}
+
+void	ft_initiate_cylinders(t_hittable *obj)
+{
+	obj[0].id = 0;
+	obj[0].type = CYLINDER;
+	obj[0].params.cy.centre.x = 0.5;
+	obj[0].params.cy.centre.y = 0.0;
+	obj[0].params.cy.centre.z = 0.0;
+	obj[0].params.cy.axis.x = 0.0;
+	obj[0].params.cy.axis.y = 0.0;
+	obj[0].params.cy.axis.z = 1.0;
+	obj[0].params.cy.d = 1.2;
+	obj[0].params.cy.h = 1.5;
+	obj[0].params.cy.colour.r = 0.039;
+	obj[0].params.cy.colour.g = 0.0;
+	obj[0].params.cy.colour.b = 1.0;
 }

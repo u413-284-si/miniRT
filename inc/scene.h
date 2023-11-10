@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/06 15:54:50 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/10 19:31:02 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -191,5 +191,12 @@ void		ft_initiate_spheres(t_hittable *obj);
  * @param obj 		Array of all hittables
  */
 void		ft_initiate_planes(t_hittable *obj);
+
+/**
+ * @brief Initiates all cylinders in the scene
+ * 
+ * @param obj 		Array of all hittables
+ */
+void		ft_initiate_cylinders(t_hittable *obj);
 
 #endif
