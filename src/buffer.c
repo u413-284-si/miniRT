@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 22:34:14 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 16:41:00 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/10 18:03:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,14 +82,18 @@ t_err	ft_buf_double(t_buf *buf)
 t_err	ft_buf_read(t_buf *buf, int fd)
 {
 	ssize_t	rd_bytes;
+	char	*cur_str;
+	size_t	cur_read;
 
 	rd_bytes = 0;
 	while (1)
 	{
-		if (ft_err_read(fd, (void *)buf->str + buf->cur_pos, buf->size - buf->cur_pos, &rd_bytes))
+		cur_str = buf->str + buf->cur_pos;
+		cur_read = buf->size - buf->cur_pos;
+		if (ft_err_read(fd, (void *)cur_str, cur_read, &rd_bytes))
 			return (ERROR);
 		buf->cur_pos += rd_bytes;
-		if ((size_t)rd_bytes == buf->size)
+		if ((size_t)rd_bytes == cur_read)
 		{
 			if (ft_buf_double(buf))
 				return (ERROR);
@@ -97,5 +101,6 @@ t_err	ft_buf_read(t_buf *buf, int fd)
 		if (rd_bytes == 0)
 			break ;
 	}
+	buf->str[buf->cur_pos++] = '\0';
 	return (SUCCESS);
 }
