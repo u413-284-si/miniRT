@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 21:36:37 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 16:12:06 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/10 16:36:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_buf
 {
 	char	*str;
 	size_t	size;
-	char	*cur_pos;
+	size_t	cur_pos;
 }	t_buf;
 
 t_err	ft_buf_init(t_buf *buf);
