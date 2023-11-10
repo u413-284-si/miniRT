@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/10 15:59:21 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/10 19:39:47 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	ft_initiate_camera(t_cam *cam)
 {
 	cam->image_width = 400;
-	cam->aspect_ratio = 16.0 / 9.0;
+	cam->aspect_ratio = 4.0 / 3.0;
 	cam->image_height = (int)(cam->image_width / cam->aspect_ratio);
 	if (cam->image_height < 1)
 		cam->image_height = 1;
@@ -36,7 +36,7 @@ void	ft_initiate_camera(t_cam *cam)
 	cam->u = ft_vec3_cross(cam->vup, cam->w);
 	cam->v = ft_vec3_cross(cam->w, cam->u);
 	cam->focal_length = ft_vec3_abs(ft_vec3_sub(cam->look_from, cam->look_at));
-	cam->vfov = 90;
+	cam->vfov = 120;
 }
 
 void	ft_initiate_viewport(t_cam *cam)
