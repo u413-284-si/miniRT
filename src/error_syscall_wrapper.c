@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:01:13 by gwolf             #+#    #+#             */
-/*   Updated: 2023/10/30 15:08:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/10 14:41:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@
  * @param flag		Flags given to open().
  * @param fd		File descriptor to assign to opened file.
  */
-bool	ft_err_open(const char *path, int flag, int *fd)
+t_err	ft_err_open(const char *path, int flag, int *fd)
 {
 	errno = 0;
 	*fd = open(path, flag);
 	if (*fd == -1)
 	{
-		return (true);
+		return (ERROR);
 	}
-	return (false);
+	return (SUCCESS);
 }
 
 /**
@@ -36,7 +36,7 @@ bool	ft_err_open(const char *path, int flag, int *fd)
  * @param fd		File descriptor of file to be closed.
  * @param msg		Message for perror.
  */
-bool	ft_err_close(int fd)
+t_err	ft_err_close(int fd)
 {
 	int	ret;
 
@@ -44,7 +44,18 @@ bool	ft_err_close(int fd)
 	ret = close(fd);
 	if (ret == -1)
 	{
-		return (true);
+		return (ERROR);
 	}
-	return (false);
+	return (SUCCESS);
+}
+
+t_err	ft_err_malloc(void **ptr, size_t size)
+{
+	errno = 0;
+	*ptr = malloc(size);
+	if (*ptr == NULL)
+	{
+		return (ERROR);
+	}
+	return (SUCCESS);
 }
