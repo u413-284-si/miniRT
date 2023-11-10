@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:23:15 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 14:41:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/10 15:37:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ void	ft_terminate(char *msg, int save_errno);
 t_err	ft_err_open(const char *path, int flag, int *fd);
 t_err	ft_err_close(int fd);
 t_err	ft_err_malloc(void **ptr, size_t size);
+t_err	ft_err_read(int fd, void *buf, size_t size, ssize_t *rd_bytes);
 
 #endif
