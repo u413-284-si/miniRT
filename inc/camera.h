@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/30 11:43:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/10 15:21:50 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 /* ====== LIBRARIES ====== */
 
 # include "ray.h"
+# include "utils.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -33,6 +34,13 @@
  * @param viewport_width		Width of viewport rectangle
  * @param viewport_height		Height of viewport rectangle
  * @param focal_length			Distance between camera centre and viewport centre
+ * @param vfov					Vertical field of view in degrees
+ * @param look_from				Position the camera is looking from
+ * @param look_at				Position the camera is looking at
+ * @param u						Basis vector pointing to camera right
+ * @param v						Basis vector pointing to camera up
+ * @param w						Basis vector pointing to opposite view direction
+ * @param vup					Camera-relative up direction
  * @param viewport_u			Vector u in viewport coordinates (= x)
  * @param viewport_v			Vector v in viewport coordinates (= -y)
  * @param viewport_w			Vector w in viewport coordinates (= -z)
@@ -49,6 +57,13 @@ typedef struct s_cam
 	float	viewport_width;
 	float	viewport_height;
 	float	focal_length;
+	float	vfov;
+	t_vec3	look_from;
+	t_vec3	look_at;
+	t_vec3	u;
+	t_vec3	v;
+	t_vec3	w;
+	t_vec3	vup;
 	t_vec3	camera_centre;
 	t_vec3	viewport_u;
 	t_vec3	viewport_v;
