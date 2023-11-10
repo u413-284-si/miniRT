@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 22:34:14 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 18:03:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/10 18:04:00 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ t_err	ft_buf_double(t_buf *buf)
 	return (SUCCESS);
 }
 
-t_err	ft_buf_read(t_buf *buf, int fd)
+t_err	ft_buf_read_file(t_buf *buf, int fd)
 {
 	ssize_t	rd_bytes;
 	char	*cur_str;

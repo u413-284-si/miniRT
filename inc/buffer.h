@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 21:36:37 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 16:36:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/10 18:04:00 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ t_err	ft_buf_init(t_buf *buf);
 void	ft_buf_destroy(t_buf *buf);
 void	ft_buf_clear(t_buf *buf);
 t_err	ft_buf_double(t_buf *buf);
-t_err	ft_buf_read(t_buf *buf, int fd);
+t_err	ft_buf_read_file(t_buf *buf, int fd);
 
 #endif
