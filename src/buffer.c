@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 22:34:14 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 14:51:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/10 16:15:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_buf_destroy(t_buf *buf)
 void	ft_buf_clear(t_buf *buf)
 {
 	ft_memset(buf->str, '\0', buf->size);
-	buf->cur_pos = 0;
+	buf->cur_pos = buf->str;
 }
 
 /**
@@ -67,7 +67,7 @@ t_err	ft_buf_double(t_buf *buf)
 	tmp_size = buf->size * 2;
 	if (tmp_size < buf->size)
 	{
-		ft_putendl(2, "Error: maximum buffer size reached");
+		ft_putendl_fd("Error: maximum buffer size reached", 2);
 		return (ERROR);
 	}
 	if (ft_err_malloc((void **)&tmp_str, tmp_size))
@@ -75,6 +75,27 @@ t_err	ft_buf_double(t_buf *buf)
 	ft_memcpy(tmp_str, buf->str, buf->size);
 	free (buf->str);
 	buf->str = tmp_str;
+	buf->cur_pos = buf->str + buf->size;
 	buf->size *= 2;
+	return (SUCCESS);
+}
+
+t_err	ft_buf_read(t_buf *buf, int fd)
+{
+	ssize_t	rd_bytes;
+
+	rd_bytes = 0;
+	while (1)
+	{
+		if (ft_err_read(fd, (void *)buf->cur_pos, buf->size, &rd_bytes))
+			return (ERROR);
+		if ((size_t)rd_bytes == buf->size)
+		{
+			if (ft_buf_double(buf))
+				return (ERROR);
+		}
+		if (rd_bytes == 0)
+			break ;
+	}
 	return (SUCCESS);
 }
