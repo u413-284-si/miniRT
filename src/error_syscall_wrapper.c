@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:01:13 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 14:41:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/10 15:37:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,17 @@ t_err	ft_err_malloc(void **ptr, size_t size)
 	errno = 0;
 	*ptr = malloc(size);
 	if (*ptr == NULL)
+	{
+		return (ERROR);
+	}
+	return (SUCCESS);
+}
+
+t_err	ft_err_read(int fd, void *buf, size_t size, ssize_t *rd_bytes)
+{
+	errno = 0;
+	*rd_bytes = read(fd, buf, size);
+	if (*rd_bytes == -1)
 	{
 		return (ERROR);
 	}
