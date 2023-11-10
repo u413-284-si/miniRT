@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3_linalgebra.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:52:25 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 17:49:16 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/10 18:41:27 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,9 @@ t_vec3	ft_vec3_hadamard(t_vec3 v1, t_vec3 v2)
 		.y = v1.y * v2.y,
 		.z = v1.z * v2.z,
 	});
+}
+
+t_vec3	ft_vec3_project(t_vec3 v1, t_vec3 v2)
+{
+	return (ft_vec3_scale(v2, ft_vec3_dot(v1, v2) / ft_vec3_dot(v2, v2)));
 }
