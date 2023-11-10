@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/07 12:44:44 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/10 14:56:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_create_scene(t_entities *scene)
 	//int	i;
 
 	scene->lsrc_count = 1;
-	scene->sp_count = 0;
-	scene->pl_count = 1;
+	scene->sp_count = 2;
+	scene->pl_count = 0;
 	scene->cy_count = 0;
 	scene->total = scene->sp_count + scene->pl_count + scene->cy_count;
 	scene->obj = malloc(scene->total * sizeof(t_hittable));
@@ -30,8 +30,8 @@ void	ft_create_scene(t_entities *scene)
 	//i = -1;
 	//while (++i < scene->sp_count)
 	ft_initiate_lights(scene);
-	//ft_initiate_spheres(scene->obj);
-	ft_initiate_planes(scene->obj);
+	ft_initiate_spheres(scene->obj);
+	//ft_initiate_planes(scene->obj);
 }
 
 void	ft_initiate_lights(t_entities *scene)
@@ -53,21 +53,21 @@ void	ft_initiate_spheres(t_hittable *obj)
 {
 	obj[0].id = 0;
 	obj[0].type = SPHERE;
-	obj[0].params.sp.centre.x = 0.0;
+	obj[0].params.sp.centre.x = -cos(M_PI / 4);
 	obj[0].params.sp.centre.y = 0.0;
 	obj[0].params.sp.centre.z = -1.0;
-	obj[0].params.sp.r = 0.5;
-	obj[0].params.sp.colour.r = 1.0;
+	obj[0].params.sp.r = cos(M_PI / 4);
+	obj[0].params.sp.colour.r = 0.0;
 	obj[0].params.sp.colour.g = 0.0;
-	obj[0].params.sp.colour.b = 0.0;
+	obj[0].params.sp.colour.b = 1.0;
 	obj[1].id = 1;
 	obj[1].type = SPHERE;
-	obj[1].params.sp.centre.x = 0.0;
-	obj[1].params.sp.centre.y = -100.5;
+	obj[1].params.sp.centre.x = cos(M_PI / 4);
+	obj[1].params.sp.centre.y = 0;
 	obj[1].params.sp.centre.z = -1.0;
-	obj[1].params.sp.r = 100;
-	obj[1].params.sp.colour.r = 0.0;
-	obj[1].params.sp.colour.g = 1.0;
+	obj[1].params.sp.r = cos(M_PI / 4);
+	obj[1].params.sp.colour.r = 1.0;
+	obj[1].params.sp.colour.g = 0.0;
 	obj[1].params.sp.colour.b = 0.0;
 }
 
