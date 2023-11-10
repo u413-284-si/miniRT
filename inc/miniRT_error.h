@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:23:15 by gwolf             #+#    #+#             */
-/*   Updated: 2023/10/30 15:08:38 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/10 14:41:12 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,19 @@
 
 /* ====== TYPEDEFS ====== */
 
+typedef enum e_err {
+	SUCCESS,
+	ERROR
+}	t_err;
+
 /* ====== FUNCTIONS ====== */
 
 // error_terminate.c
 void	ft_terminate(char *msg, int save_errno);
 
 // error_syscall_wrapper.c
-bool	ft_err_open(const char *path, int flag, int *fd);
-bool	ft_err_close(int fd);
+t_err	ft_err_open(const char *path, int flag, int *fd);
+t_err	ft_err_close(int fd);
+t_err	ft_err_malloc(void **ptr, size_t size);
 
 #endif
