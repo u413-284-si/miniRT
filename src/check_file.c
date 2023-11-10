@@ -6,12 +6,31 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/10/30 16:41:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/10 19:17:32 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 #include "ft_lst.h"
+#include "buffer.h"
+
+t_err	ft_import_file(int fd, char ***lines)
+{
+	t_buf	buf;
+
+	if (ft_buf_init(&buf))
+		return (ERROR);
+	if (ft_buf_read_file(&buf, fd))
+	{
+		ft_buf_destroy(&buf);
+		return (ERROR);
+	}
+	*lines = ft_split(buf.str, '\n');
+	ft_buf_destroy(&buf);
+	if (*lines == NULL)
+		return (ERROR);
+	return (SUCCESS);
+}
 
 bool	ft_check_filename(char *argv)
 {
@@ -34,51 +53,50 @@ bool	ft_check_filename(char *argv)
 void	ft_check_file(char *argv)
 {
 	int	fd;
+	char **lines;
 
 	if (ft_check_filename(argv))
 		ft_terminate("Wrong file extension", 0);
 	fd = 0;
 	if (ft_err_open(argv, O_RDONLY, &fd))
 		ft_terminate("Open() failed", errno);
+	lines = NULL;
+	if (ft_import_file(fd, &lines))
+		ft_terminate("Could not import file", errno);
+	if (ft_check_line(lines))
+	{
+		//free array
+		ft_terminate("Not correctly formatted", 0);
+	}
 	if (ft_err_close(fd))
 		ft_terminate("Close() failed", errno);
 }
 
-bool	ft_check_line(int fd)
+t_err	ft_check_line(char **lines)
 {
-	char	*tmp;
-	t_list	*head;
-
-	tmp = get_next_line(fd);
-	head = NULL;
-	if (tmp[0] == '\n' || tmp[0] == '\0')
-		free(tmp);
-	else
+	while (*lines)
 	{
-		if (ft_is_valid_line(tmp))
-			ft_lstadd_front(&head, ft_lstnew(tmp));
-		else
-			ft_lstclear(&head, free);
-			return true;
+		if (!ft_is_valid_line(*lines))
+			return (ERROR);
+		lines++;
 	}
-	// check_line - empty or identifier
-	// pass line
-	// identify line - validate - add to list
+	return (SUCCESS);
 }
 
-bool	ft_is_valid_line(char *tmp)
+bool	ft_is_valid_line(char *line)
 {
-	if (ft_strncmp(tmp, "A ", 2))
-		return (ft_check_ambient(tmp + 2));
-	else if (ft_strncmp(tmp, "C ", 2))
-		return (ft_check_camera(tmp + 2));
-	else if (ft_strncmp(tmp, "L ", 2))
-		return (ft_check_light(tmp + 2));
-	else if (ft_strncmp(tmp, "sp ", 3))
-		return (ft_check_sphere(tmp + 3));
-	else if (ft_strncmp(tmp, "pl ", 3))
-		return (ft_check_plane(tmp + 3));
-	else if (ft_strncmp(tmp, "cy ", 3))
-		return (ft_check_cylinder(tmp + 3));
+	if (!ft_strncmp(line, "A ", 2))
+		return (ft_check_ambient(line + 2));
+	else if (!ft_strncmp(line, "C ", 2))
+		return (ft_check_camera(line + 2));
+	else if (!ft_strncmp(line, "L ", 2))
+		return (ft_check_light(line + 2));
+	else if (!ft_strncmp(line, "sp ", 3))
+		return (ft_check_sphere(line + 3));
+	else if (!ft_strncmp(line, "pl ", 3))
+		return (ft_check_plane(line + 3));
+	else if (!ft_strncmp(line, "cy ", 3))
+		return (ft_check_cylinder(line + 3));
 	return (false);
 }
+
