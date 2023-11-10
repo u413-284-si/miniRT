@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/06 16:03:02 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/07 12:44:44 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_create_scene(t_entities *scene)
 	//int	i;
 
 	scene->lsrc_count = 1;
-	scene->sp_count = 2;
+	scene->sp_count = 0;
 	scene->pl_count = 1;
 	scene->cy_count = 0;
 	scene->total = scene->sp_count + scene->pl_count + scene->cy_count;
@@ -30,7 +30,7 @@ void	ft_create_scene(t_entities *scene)
 	//i = -1;
 	//while (++i < scene->sp_count)
 	ft_initiate_lights(scene);
-	ft_initiate_spheres(scene->obj);
+	//ft_initiate_spheres(scene->obj);
 	ft_initiate_planes(scene->obj);
 }
 
@@ -73,15 +73,15 @@ void	ft_initiate_spheres(t_hittable *obj)
 
 void	ft_initiate_planes(t_hittable *obj)
 {
-	obj[2].id = 0;
-	obj[2].type = PLANE;
-	obj[2].params.pl.point.x = 1.0;
-	obj[2].params.pl.point.y = 0.0;
-	obj[2].params.pl.point.z = 0.0;
-	obj[2].params.pl.normal.x = 1.0;
-	obj[2].params.pl.normal.y = 0.0;
-	obj[2].params.pl.normal.z = 0.0;
-	obj[2].params.pl.colour.r = 0.9;
-	obj[2].params.pl.colour.b = 0.7;
-	obj[2].params.pl.colour.g = 0.0;
+	obj[0].id = 0;
+	obj[0].type = PLANE;
+	obj[0].params.pl.point.x = 0.0;
+	obj[0].params.pl.point.y = 0.0;
+	obj[0].params.pl.point.z = -1.0;
+	obj[0].params.pl.normal.x = 0.707;
+	obj[0].params.pl.normal.y = 0.0;
+	obj[0].params.pl.normal.z = 0.707;
+	obj[0].params.pl.colour.r = 0.0;
+	obj[0].params.pl.colour.b = 0.7;
+	obj[0].params.pl.colour.g = 0.9412;
 }
