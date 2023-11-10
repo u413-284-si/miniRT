@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/10 15:31:38 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/10 19:07:38 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,9 @@ SRC :=	camera.c \
 		error_terminate.c \
 		error_syscall_wrapper.c \
 		check_file.c \
+		check_line.c \
+		check_entity1.c \
+		check_entity2.c \
 		buffer.c
 
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
