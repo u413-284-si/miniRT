@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 19:18:12 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/11 22:43:38 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 
 /**
  * @brief Interval of accepted values
+ * 
  * @param min	Minimum of interval
  * @param max 	Maximum of interval
  */
@@ -34,6 +35,29 @@ typedef struct s_interval
 	float	min;
 	float	max;
 }	t_interval;
+
+/**
+ * @brief Contains factors to solve linear and quadratic equations.
+ * 
+ * ax² + bx + c = 0
+ * 
+ * x = (-b +/- sqr(b² - 4ac)) / 2a
+ * Here we use d instead of x as variable to represent the distance of the
+ * ray traveled.
+ * @param a		Factor of quadratic component
+ * @param b		Factor of linear component
+ * @param c		Constant
+ * @param d1	First solution 
+ * @param d2	Second solution
+ */
+typedef struct s_equation
+{
+	float	a;
+	float	b;
+	float	c;
+	float	d1;
+	float	d2;
+}	t_equation;
 
 /* ====== FUNCTIONS ====== */
 
@@ -73,5 +97,21 @@ bool	ft_surrounds(float x, t_interval interval);
  * @return float 
  */
 float	ft_max(float x, float y);
+
+/**
+ * @brief Solves the given equation
+ * 
+ * If the parameter a = 0, the equation is linear and the sole
+ * solution is calculated and stored in d1.
+ * Otherwise the equation is quadratic and dependent on the
+ * discriminant real solutions exist or not:
+ * 
+ * Discriminant < 0: no real solution, return -1
+ * Discriminant = 0: one solution, return 0
+ * Discriminant > 0: two solutions, return > 0
+ * @param eq 		Equation to solve
+ * @return float
+ */
+float	ft_solve(t_equation *eq);
 
 #endif
