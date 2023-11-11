@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:45:53 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/10 18:42:27 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/11 22:13:39 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,14 +105,5 @@ float	ft_vec3_angle(t_vec3 v1, t_vec3 v2);
  * @return t_vec3 
  */
 t_vec3	ft_vec3_hadamard(t_vec3 v1, t_vec3 v2);
-
-/**
- * @brief Project one vector onto the other
- * 
- * @param v1 	Vector to be projected
- * @param v2 	Vector onto which is projected
- * @return t_vec3 
- */
-t_vec3	ft_vec3_project(t_vec3 v1, t_vec3 v2);
 
 #endif
