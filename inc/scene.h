@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/30 11:44:30 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/12 14:50:37 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,6 @@
 # include "colour.h"
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Enumeration of different entity types.
- */
-typedef enum e_entity_type {
-	SPHERE,
-	PLANE,
-	CYLINDER
-}	t_entity_type;
 
 /**
  * @brief Represents a sphere
