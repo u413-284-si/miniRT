@@ -6,20 +6,22 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/10/30 14:41:10 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/12 17:51:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
-#include "check.h"
+#include "parse.h"
 
 int	main(int argc, char **argv)
 {
+	static t_entities entities;
+
 	if (argc != 2)
 	{
 		ft_terminate("Need a file", 0);
 	}
-	ft_check_file(argv[1]);
+	ft_parse_file(argv[1], &entities);
 	/*
 	t_cam		cam;
 	t_entities	scene;
