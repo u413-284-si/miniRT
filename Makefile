@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/12 16:01:26 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/12 17:58:22 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,15 +64,7 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC :=	camera.c \
-		cleanup.c \
-		colour.c \
-		hit_sphere.c \
-		ray.c \
-		scene.c \
-		utils.c \
-		vec3_arithmetics.c \
-		vec3_linalgebra.c \
+SRC := 	cleanup.c \
 		error_terminate.c \
 		error_syscall_wrapper.c \
 		check_file.c \
@@ -80,7 +72,20 @@ SRC :=	camera.c \
 		check_entity1.c \
 		check_entity2.c \
 		ft_strtod.c \
-		buffer.c
+		buffer.c \
+		parse_file.c \
+		parse_entity1.c \
+		parse_entity2.c \
+		parse_line.c
+
+# camera.c \
+		colour.c \
+		hit_sphere.c \
+		ray.c \
+		scene.c \
+		utils.c \
+		vec3_arithmetics.c \
+		vec3_linalgebra.c
 
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
