@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/10 19:40:19 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/12 16:33:29 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,15 +91,15 @@ void	ft_initiate_cylinders(t_hittable *obj)
 {
 	obj[0].id = 0;
 	obj[0].type = CYLINDER;
-	obj[0].params.cy.centre.x = 0.5;
+	obj[0].params.cy.centre.x = 0.3;
 	obj[0].params.cy.centre.y = 0.0;
-	obj[0].params.cy.centre.z = 0.0;
+	obj[0].params.cy.centre.z = -1.0;
 	obj[0].params.cy.axis.x = 0.0;
-	obj[0].params.cy.axis.y = 0.0;
-	obj[0].params.cy.axis.z = 1.0;
-	obj[0].params.cy.d = 1.2;
+	obj[0].params.cy.axis.y = 1.0;
+	obj[0].params.cy.axis.z = 0.0;
+	obj[0].params.cy.d = 0.5;
 	obj[0].params.cy.h = 1.5;
-	obj[0].params.cy.colour.r = 0.039;
-	obj[0].params.cy.colour.g = 0.0;
-	obj[0].params.cy.colour.b = 1.0;
+	obj[0].params.cy.colour.r = 0.39;
+	obj[0].params.cy.colour.g = 0.6;
+	obj[0].params.cy.colour.b = 0.4;
 }

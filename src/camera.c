@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/10 19:39:47 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/11 22:53:39 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_initiate_camera(t_cam *cam)
 	cam->u = ft_vec3_cross(cam->vup, cam->w);
 	cam->v = ft_vec3_cross(cam->w, cam->u);
 	cam->focal_length = ft_vec3_abs(ft_vec3_sub(cam->look_from, cam->look_at));
-	cam->vfov = 120;
+	cam->vfov = 100;
 }
 
 void	ft_initiate_viewport(t_cam *cam)
