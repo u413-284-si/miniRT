@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/10 19:07:38 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/12 14:04:12 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,7 @@ SRC :=	camera.c \
 		check_line.c \
 		check_entity1.c \
 		check_entity2.c \
+		ft_strtod.c \
 		buffer.c
 
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
