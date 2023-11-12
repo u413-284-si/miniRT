@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/11 13:04:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/12 14:57:25 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,9 +120,8 @@ t_err	ft_check_line(char **lines)
 	while (*lines)
 	{
 		entity_type = ft_is_valid_line(*lines);
-		if (entity_type == UNKNOWN)
-			return (ERROR);
-		if (ft_incr_entity_count(entity_count, entity_type))
+		if (entity_type == UNKNOWN
+			|| ft_incr_entity_count(entity_count, entity_type))
 		{
 			ft_putendl_fd("This following line is bad", 2);
 			ft_putendl_fd(*lines, 2);
@@ -147,6 +146,6 @@ t_entity_type	ft_is_valid_line(char *line)
 		return (ft_check_plane(line + 3));
 	else if (!ft_strncmp(line, "cy ", 3))
 		return (ft_check_cylinder(line + 3));
-	return (false);
+	return (UNKNOWN);
 }
 
