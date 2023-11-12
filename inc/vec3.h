@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:45:53 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/11 22:13:39 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/12 16:24:34 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 /* ====== LIBRARIES ====== */
 
 # include <math.h>
+# include <stdbool.h>
 
 /* ====== TYPEDEFS ====== */
 
@@ -105,5 +106,15 @@ float	ft_vec3_angle(t_vec3 v1, t_vec3 v2);
  * @return t_vec3 
  */
 t_vec3	ft_vec3_hadamard(t_vec3 v1, t_vec3 v2);
+
+/**
+ * @brief Determines if two vectors are equal
+ * 
+ * @param v1 		The first vector
+ * @param v2 		The second vector
+ * @return true 	If both vectors are equal
+ * @return false 	If the vectors differ
+ */
+bool	ft_vec3_equal(t_vec3 v1, t_vec3 v2);
 
 #endif
