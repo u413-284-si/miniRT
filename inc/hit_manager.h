@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hit_manager.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/10 19:36:13 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/12 16:28:34 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 
 # include "ray.h"
 # include "utils.h"
+
+/* ====== MACROS ====== */
+
+# define EPSILON 1e-6
 
 /* ====== TYPEDEFS ====== */
 
@@ -131,6 +135,16 @@ bool	ft_hit_scene_pl(t_entities scene, t_ray ray, t_hitrecord *rec, \
 bool	ft_hit_cylinder(t_cylinder cy, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d);
 
-int		ft_hit_cylindersphere(t_sphere sp, t_ray ray, float d[2]);
+t_vec3	ft_cylinder_normal(t_hitrecord rec, t_ray ray, t_cylinder cy);
+
+void	ft_identify_hits(t_cylinder cy, t_ray ray, t_equation eq, \
+	t_hitrecord *rec);
+
+void	ft_hit_cap(t_cylinder cy, t_ray ray, t_vec3 cap, float *d);
+
+bool	ft_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec);
+
+bool	ft_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
+	float d);
 
 #endif
