@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/12 14:57:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/12 16:14:44 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ t_err	ft_import_file(int fd, char ***lines)
 	return (SUCCESS);
 }
 
-bool	ft_check_filename(char *argv)
+bool	ft_check_filename(char *filename)
 {
 	int		len;
 	char	*start;
 
-	start = ft_strrchr(argv, '/');
+	start = ft_strrchr(filename, '/');
 	if (!start)
-		start = argv;
+		start = filename;
 	else
 		start += 1;
 	len = ft_strlen(start);
@@ -50,31 +50,30 @@ bool	ft_check_filename(char *argv)
 	return (false);
 }
 
-void	ft_check_file(char *argv)
+t_err	ft_check_file(char *filename, char ***lines, int entity_count[ENTITIES])
 {
 	int	fd;
-	char **lines;
 
-	if (ft_check_filename(argv))
+	if (ft_check_filename(filename))
 		ft_terminate("Wrong file extension", 0);
 	fd = 0;
-	if (ft_err_open(argv, O_RDONLY, &fd))
+	if (ft_err_open(filename, O_RDONLY, &fd))
 		ft_terminate("Open() failed", errno);
-	lines = NULL;
-	if (ft_import_file(fd, &lines))
+	if (ft_import_file(fd, lines))
 		ft_terminate("Could not import file", errno);
-	if (ft_check_line(lines))
-	{
-		//free array
-		ft_terminate("Not correctly formatted", 0);
-	}
 	if (ft_err_close(fd))
 		ft_terminate("Close() failed", errno);
+	if (ft_check_line(*lines, entity_count))
+	{
+		ft_free_array(*lines);
+		ft_terminate("Not correctly formatted", 0);
+	}
+	return (SUCCESS);
 }
 
 void	ft_perror_count(t_entity_type type, int max, int count)
 {
-	static const char	*entity_name[6] =	{
+	static const char	*entity_name[ENTITIES] =	{
 	[AMBIENT] = "ambient light",
 	[CAMERA] = "camera",
 	[LIGHT] = "light",
@@ -92,9 +91,9 @@ void	ft_perror_count(t_entity_type type, int max, int count)
 	ft_putendl_fd(" got ", 2);
 }
 
-t_err	ft_incr_entity_count(int entity_count[6], t_entity_type entity_type)
+t_err	ft_incr_entity_count(int entity_count[ENTITIES], t_entity_type entity_type)
 {
-	static const int	entity_max[6] =	{
+	static const int	entity_max[ENTITIES] =	{
 	[AMBIENT] = AMBIENT_MAX,
 	[CAMERA] = CAMERA_MAX,
 	[LIGHT] = LIGHT_MAX,
@@ -112,10 +111,9 @@ t_err	ft_incr_entity_count(int entity_count[6], t_entity_type entity_type)
 	return (SUCCESS);
 }
 
-t_err	ft_check_line(char **lines)
+t_err	ft_check_line(char **lines, int entity_count[ENTITIES])
 {
-	t_entity_type		entity_type;
-	static int			entity_count[6];
+	t_entity_type	entity_type;
 
 	while (*lines)
 	{
