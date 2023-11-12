@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/10 19:31:02 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/12 16:13:27 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
  * @brief Shows point of intersection
  * @param point		Point of intersection
  * @param normal	Normal vector at point of intersection
+ * @param axis_hit	Point of intersection with a cylinders axis
  * @param d			Distance into ray direction when point is hit
  * @param colour	Colour of object at intersection
  */
@@ -36,6 +37,7 @@ typedef struct s_hitrecord
 {
 	t_vec3		point;
 	t_vec3		normal;
+	t_vec3		axis_hit;
 	float		d;
 	t_colour	colour;
 }	t_hitrecord;
@@ -83,6 +85,8 @@ typedef struct s_plane
  * @brief Represents a cylinder
  * @param centre	Centre of the cylinder
  * @param axis		Normalised [-1, 1] axis of the cylinder
+ * @param cap1		Centre of first cap = centre - h/2 * axis
+ * @param cap2		Centre of second cap = centre + h/2 * axis
  * @param d			Diameter of the cylinder
  * @param h			Height of the cylinder
  * @param colour	Colour of the cylinder
@@ -91,6 +95,8 @@ typedef struct s_cylinder
 {
 	t_vec3		centre;
 	t_vec3		axis;
+	t_vec3		cap1;
+	t_vec3		cap2;
 	float		d;
 	float		h;
 	t_colour	colour;
