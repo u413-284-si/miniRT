@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:39:35 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/11 22:52:22 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/12 16:30:22 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,6 @@ bool	ft_hit_sphere(t_sphere sp, t_ray ray, t_hitrecord *rec, \
 	rec->point = ft_ray(ray, closest_d);
 	rec->normal = ft_vec3_scale(ft_vec3_sub(rec->point, sp.centre), \
 		(1.0 / sp.r));
-	rec->colour.r = sp.colour.r;
-	rec->colour.b = sp.colour.b;
-	rec->colour.g = sp.colour.g;
+	rec->colour = sp.colour;
 	return (true);
 }
