@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/12 14:04:12 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/12 16:01:26 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,7 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # ******************************
 
 SRC :=	camera.c \
+		cleanup.c \
 		colour.c \
 		hit_sphere.c \
 		ray.c \
