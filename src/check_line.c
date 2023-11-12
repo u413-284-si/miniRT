@@ -6,49 +6,52 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:27:34 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 19:22:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/12 14:35:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-void	ft_skip_space(char **line)
+void	ft_skip_space(char **str)
 {
-	while (**line == ' ')
-		(*line)++;
+	while (**str == ' ')
+		(*str)++;
 }
 
-bool	ft_is_valid_float(char **line)
+bool	ft_is_valid_float(char **line, float min, float max)
 {
-	if (**line == '-')
-		(*line)++;
-	while (ft_isdigit(**line))
-		(*line)++;
-	if (**line == ',' || **line == ' ' || **line == '\0')
-		return (true);
-	if (**line != '.')
+	size_t	offset;
+	double	num;
+	char	*tmp;
+
+	offset = 0;
+	num = ft_strtod(*line, &offset);
+	if (offset == 0)
 		return (false);
-	(*line)++;
-	while (ft_isdigit(**line))
-		(*line)++;
-	if (**line == ',' || **line == ' ' || **line == '\0')
-		return (true);
-	return (false);
+	if (fabs(num) < min)
+		return (false);
+	if (num < min || num > max)
+		return (false);
+	tmp = *line + offset;
+	if (*tmp != ',' && *tmp != ' ' && *tmp != '\0')
+		return (false);
+	*line = tmp;
+	return (true);
 }
 
-bool	ft_is_valid_float_block(char **line)
+bool	ft_is_valid_float_block(char **line, float min, float max)
 {
-	if (!ft_is_valid_float(line))
+	if (!ft_is_valid_float(line, min, max))
 		return (false);
 	if (**line != ',')
 		return (false);
 	(*line)++;
-	if (!ft_is_valid_float(line))
-	return (false);
+	if (!ft_is_valid_float(line, min, max))
+		return (false);
 	if (**line != ',')
 		return (false);
 	(*line)++;
-	if (!ft_is_valid_float(line))
+	if (!ft_is_valid_float(line, min, max))
 		return (false);
 	if (**line != ' ' && **line != '\0')
 		return (false);
