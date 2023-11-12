@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/12 14:50:37 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/12 16:21:37 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,34 @@
 # include "colour.h"
 
 /* ====== TYPEDEFS ====== */
+
+/**
+ * @brief Shows point of intersection
+ * @param point		Point of intersection
+ * @param normal	Normal vector at point of intersection
+ * @param d			Distance into ray direction when point is hit
+ * @param colour	Colour of object at intersection
+ */
+typedef struct s_hitrecord
+{
+	t_vec3		point;
+	t_vec3		normal;
+	float		d;
+	t_colour	colour;
+}	t_hitrecord;
+
+/**
+ * @brief Represents lighting in the scene
+ * @param pos		Position of the light
+ * @param ratio		Light brightess ratio
+ * @param colour	Colour of the light
+ */
+typedef struct s_light
+{
+	t_vec3		pos;
+	float		ratio;
+	t_colour	colour;
+}	t_light;
 
 /**
  * @brief Represents a sphere
@@ -69,22 +97,69 @@ typedef struct s_cylinder
 }	t_cylinder;
 
 /**
+ * @brief Contains numerical list of possible hittables
+ *
+ * Starts at 0.
+ */
+typedef enum e_type
+{
+	SPHERE,
+	PLANE,
+	CYLINDER
+}	t_type;
+
+/**
+ * @brief Contains information of the different shapes
+ *
+ * Each union represents one shape which can be addressed
+ * by the respective member. The memory space can be interpreted
+ * with different names (its members) as a variable. It
+ * has the size of the biggest member type.
+ * @param sp	Union variable addressed as sphere.
+ * @param pl	Union variable addressed as plane.
+ * @param cy	Union variable addressed as cylinder.
+ */
+typedef union u_shape
+{
+	t_sphere	sp;
+	t_plane		pl;
+	t_cylinder	cy;
+}	t_shape;
+
+/**
+ * @brief Represents a hittable
+ *
+ * @param id		The hittables ID
+ * @param type		The hittables type
+ * @param params	Required parameters to distinctly describe the hittable
+ */
+typedef struct s_hittable
+{
+	int		id;
+	t_type	type;
+	t_shape	params;
+}	t_hittable;
+
+/**
  * @brief Contains all entities in the scene
- * @param sp		Array of spheres
- * @param pl		Array of planes
- * @param cy		Array of cylinders
- * @param sp_count	Number of spheres
- * @param pl_count	Number of planes
- * @param cy_count	Number of cylinders
+ * @param ambient		Ambient lighting
+ * @param lsrc			Light sources
+ * @param obj			Array of hittables
+ * @param sp_count		Number of spheres
+ * @param pl_count		Number of planes
+ * @param cy_count		Number of cylinders
+ * @param lsrc_count	Number of light sources
  */
 typedef struct s_entities
 {
-	t_sphere	*sp;
-	t_plane		*pl;
-	t_cylinder	*cy;
+	t_light		ambient;
+	t_light		*lsrc;
+	t_hittable	*obj;
 	int			sp_count;
 	int			pl_count;
 	int			cy_count;
+	int			lsrc_count;
+	int			total;
 }	t_entities;
 
 /* ====== FUNCTIONS ====== */
@@ -94,6 +169,34 @@ typedef struct s_entities
  *
  * @param scene 	Struct with all entities
  */
-void	ft_create_scene(t_entities *scene);
+void		ft_create_scene(t_entities *scene);
+
+/**
+ * @brief Initiates all the lights in the scene
+ *
+ * @param scene 	Struct with all entities
+ */
+void		ft_initiate_lights(t_entities *scene);
+
+/**
+ * @brief Initiates all spheres in the scene
+ *
+ * @param obj 		Array of all hittables
+ */
+void		ft_initiate_spheres(t_hittable *obj);
+
+/**
+ * @brief Initiates all planes in the scene
+ *
+ * @param obj 		Array of all hittables
+ */
+void		ft_initiate_planes(t_hittable *obj);
+
+/**
+ * @brief Initiates all cylinders in the scene
+ *
+ * @param obj 		Array of all hittables
+ */
+void		ft_initiate_cylinders(t_hittable *obj);
 
 #endif
