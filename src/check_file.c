@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 19:17:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/11 13:04:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,18 +72,68 @@ void	ft_check_file(char *argv)
 		ft_terminate("Close() failed", errno);
 }
 
+void	ft_perror_count(t_entity_type type, int max, int count)
+{
+	static const char	*entity_name[6] =	{
+	[AMBIENT] = "ambient light",
+	[CAMERA] = "camera",
+	[LIGHT] = "light",
+	[SPHERE] = "sphere",
+	[PLANE] = "plane",
+	[CYLINDER] = "cylinder"
+	};
+
+	ft_putendl_fd("Error", 2);
+	ft_putstr_fd("Too many entities of type ", 2);
+	ft_putendl_fd((char *)entity_name[type], 2);
+	ft_putnbr_fd(max, 2);
+	ft_putstr_fd(" expected / ", 2);
+	ft_putnbr_fd(count, 2);
+	ft_putendl_fd(" got ", 2);
+}
+
+t_err	ft_incr_entity_count(int entity_count[6], t_entity_type entity_type)
+{
+	static const int	entity_max[6] =	{
+	[AMBIENT] = AMBIENT_MAX,
+	[CAMERA] = CAMERA_MAX,
+	[LIGHT] = LIGHT_MAX,
+	[SPHERE] = SPHERE_MAX,
+	[PLANE] = PLANE_MAX,
+	[CYLINDER] = CYLINDER_MAX
+	};
+
+	entity_count[entity_type]++;
+	if (entity_count[entity_type] > entity_max[entity_type])
+	{
+		ft_perror_count(entity_type, entity_max[entity_type], entity_count[entity_type]);
+		return (ERROR);
+	}
+	return (SUCCESS);
+}
+
 t_err	ft_check_line(char **lines)
 {
+	t_entity_type		entity_type;
+	static int			entity_count[6];
+
 	while (*lines)
 	{
-		if (!ft_is_valid_line(*lines))
+		entity_type = ft_is_valid_line(*lines);
+		if (entity_type == UNKNOWN)
 			return (ERROR);
+		if (ft_incr_entity_count(entity_count, entity_type))
+		{
+			ft_putendl_fd("This following line is bad", 2);
+			ft_putendl_fd(*lines, 2);
+			return (ERROR);
+		}
 		lines++;
 	}
 	return (SUCCESS);
 }
 
-bool	ft_is_valid_line(char *line)
+t_entity_type	ft_is_valid_line(char *line)
 {
 	if (!ft_strncmp(line, "A ", 2))
 		return (ft_check_ambient(line + 2));
