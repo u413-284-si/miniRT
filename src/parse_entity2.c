@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:34:38 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 12:17:40 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 12:37:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_parse_sphere(char *line, t_hittable *sphere, size_t id)
 
 	sphere->id = id;
 	sphere->type = SPHERE;
-	params = &sphere->params.cy;
+	params = &sphere->params.sp;
 	ft_parse_float_block(&line, &params->centre);
 	ft_parse_float(&line, &params->r);
 	ft_parse_colour_block(&line, &params->colour);

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:23:57 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 12:11:26 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 12:36:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_parse_camera(char *line, t_light *test)
 	(void)test;
 }
 
-void	ft_parse_light(const char *line, t_light *light)
+void	ft_parse_light(char *line, t_light *light)
 {
 	ft_parse_float_block(&line, &light->pos);
 	ft_parse_float(&line, &light->ratio);

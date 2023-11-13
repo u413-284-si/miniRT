@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 12:17:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 12:36:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_err	ft_parse_file(char *filename, t_entities *entities);
 
 void	ft_parse_ambient(char *line, t_light *ambient);
 void	ft_parse_camera(char *line, t_light *test);
-void	ft_parse_light(const char *line, t_light *light);
+void	ft_parse_light(char *line, t_light *light);
 void	ft_parse_sphere(char *line, t_hittable *sphere, size_t id);
 void	ft_parse_plane(char *line, t_hittable *plane, size_t id);
 void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id);
