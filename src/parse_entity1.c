@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:23:57 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 17:50:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 18:20:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@ void	ft_parse_ambient(char *line, t_light *ambient)
 	ft_parse_colour_block(&line, &ambient->colour);
 }
 
-void	ft_parse_camera(char *line, t_light *test)
+void	ft_parse_camera(char *line, t_cam *cam)
 {
-	(void)line;
-	(void)test;
+	ft_parse_float_block(&line, &cam->camera_centre);
+	ft_parse_float_block(&line, &cam->pixel00_pos);
+	ft_parse_float(&line, &cam->focal_length);
 }
 
 void	ft_parse_light(char *line, t_light *light)
