@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/12 16:13:34 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 11:33:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ t_entity_type	ft_is_valid_line(char *line);
 double	ft_strtod(const char *str, size_t *offset);
 
 // check_line.c
-void	ft_skip_space(char **line);
+void	ft_rm_space(char **line);
 bool	ft_is_valid_float(char **line, float min, float max);
 bool	ft_is_valid_float_block(char **line, float min, float max);
 bool	ft_is_valid_rgb_val(char **line);

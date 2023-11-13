@@ -6,16 +6,26 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:27:34 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/12 14:35:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 11:33:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-void	ft_skip_space(char **str)
+void	ft_rm_space(char **str)
 {
-	while (**str == ' ')
+	char	*begin;
+	char	*end;
+
+	if (**str == ' ')
 		(*str)++;
+	begin = *str;
+	end = *str;
+	while (*end == ' ')
+		end++;
+	while (*end)
+		*begin++ = *end++;
+	*begin = '\0';
 }
 
 bool	ft_is_valid_float(char **line, float min, float max)
