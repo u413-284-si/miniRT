@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:27:34 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 11:33:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 17:53:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,77 +28,69 @@ void	ft_rm_space(char **str)
 	*begin = '\0';
 }
 
-bool	ft_is_valid_float(char **line, float min, float max)
+bool	ft_isvalid_float(char **line, float min, float max, bool comma)
 {
 	size_t	offset;
 	double	num;
-	char	*tmp;
 
 	offset = 0;
 	num = ft_strtod(*line, &offset);
 	if (offset == 0)
-		return (false);
-	if (fabs(num) < min)
-		return (false);
+		return (ft_perror_convert(*line, true));
 	if (num < min || num > max)
-		return (false);
-	tmp = *line + offset;
-	if (*tmp != ',' && *tmp != ' ' && *tmp != '\0')
-		return (false);
-	*line = tmp;
+		return (ft_perror_range(*line, offset, (int)min, (int)max));
+	*line += offset;
+	if (comma && **line != ',')
+		return (ft_perror_separator(*line, comma));
+	if (!comma && **line != ' ' && **line != '\0')
+		return (ft_perror_separator(*line, comma));
 	return (true);
 }
 
-bool	ft_is_valid_float_block(char **line, float min, float max)
+bool	ft_isvalid_float_block(char **line, float min, float max)
 {
-	if (!ft_is_valid_float(line, min, max))
-		return (false);
-	if (**line != ',')
+	if (!ft_isvalid_float(line, min, max, true))
 		return (false);
 	(*line)++;
-	if (!ft_is_valid_float(line, min, max))
-		return (false);
-	if (**line != ',')
+	if (!ft_isvalid_float(line, min, max, true))
 		return (false);
 	(*line)++;
-	if (!ft_is_valid_float(line, min, max))
-		return (false);
-	if (**line != ' ' && **line != '\0')
+	if (!ft_isvalid_float(line, min, max, false))
 		return (false);
 	return (true);
 }
 
-bool	ft_is_valid_rgb_val(char **line)
+bool	ft_isvalid_rgb_val(char **line, bool comma)
 {
 	int	tmp;
 
 	tmp = 0;
+	if (!ft_isdigit(**line))
+		return (ft_perror_convert(*line, false));
 	while (ft_isdigit(**line) && tmp < 255)
 	{
 		tmp *= 10;
 		tmp += **line - '0';
 		(*line)++;
 	}
-	if (tmp <= 255 && (**line == ',' || **line == ' ' || **line == '\0'))
-		return (true);
-	return (false);
+	if (tmp > 255)
+		return (ft_perror_range(*line - 3, 3, 0, 255));
+	if (comma && **line != ',')
+		return (ft_perror_separator(*line, comma));
+	if (!comma && **line != ' ' && **line != '\0')
+		return (ft_perror_separator(*line, comma));
+	return (true);
 }
 
-bool	ft_is_valid_rgb_block(char **line)
+bool	ft_isvalid_rgb_block(char **line)
 {
-	if (!ft_is_valid_rgb_val(line))
-		return (false);
-	if (**line != ',')
+	if (!ft_isvalid_rgb_val(line, true))
 		return (false);
 	(*line)++;
-	if (!ft_is_valid_rgb_val(line))
-		return (false);
-	if (**line != ',')
+	if (!ft_isvalid_rgb_val(line, true))
 		return (false);
 	(*line)++;
-	if (!ft_is_valid_rgb_val(line))
-		return (false);
-	if (**line != ' ' && **line != '\0')
+	if (!ft_isvalid_rgb_val(line, false))
 		return (false);
 	return (true);
 }

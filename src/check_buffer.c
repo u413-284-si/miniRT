@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   buffer.c                                           :+:      :+:    :+:   */
+/*   check_buffer.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 22:34:14 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 18:04:00 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 15:47:29 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * @file buffer.c
- * @brief Functions for handling the buffer.
- */
-#include "buffer.h"
+#include "check.h"
 
 /**
  * @brief Initiates a t_buf buffer

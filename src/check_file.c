@@ -6,131 +6,50 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 11:27:40 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 16:29:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
-#include "ft_lst.h"
-#include "buffer.h"
 
-t_err	ft_import_file(int fd, char ***lines)
+t_err	ft_check_file(char *argv, char ***lines, int *lsrc_c, int *total)
 {
-	t_buf	buf;
-
-	if (ft_buf_init(&buf))
+	if (ft_validate_import(argv, lines))
 		return (ERROR);
-	if (ft_buf_read_file(&buf, fd))
-	{
-		ft_buf_destroy(&buf);
-		return (ERROR);
-	}
-	*lines = ft_split(buf.str, '\n');
-	ft_buf_destroy(&buf);
-	if (*lines == NULL)
-		return (ERROR);
-	return (SUCCESS);
-}
-
-bool	ft_check_filename(char *filename)
-{
-	int		len;
-	char	*start;
-
-	start = ft_strrchr(filename, '/');
-	if (!start)
-		start = filename;
-	else
-		start += 1;
-	len = ft_strlen(start);
-	if (!ft_strnstr(start + len - 3, ".rt", len))
-	{
-		return (true);
-	}
-	return (false);
-}
-
-t_err	ft_check_file(char *filename, char ***lines, int entity_count[ENTITIES])
-{
-	int	fd;
-
-	if (ft_check_filename(filename))
-		ft_terminate("Wrong file extension", 0);
-	fd = 0;
-	if (ft_err_open(filename, O_RDONLY, &fd))
-		ft_terminate("Open() failed", errno);
-	if (ft_import_file(fd, lines))
-		ft_terminate("Could not import file", errno);
-	if (ft_err_close(fd))
-		ft_terminate("Close() failed", errno);
-	if (ft_check_line(*lines, entity_count))
+	if (ft_check_lines(*lines, lsrc_c, total))
 	{
 		ft_free_array(*lines);
-		ft_terminate("Not correctly formatted", 0);
-	}
-	return (SUCCESS);
-}
-
-void	ft_perror_count(t_entity_type type, int max, int count)
-{
-	static const char	*entity_name[ENTITIES] =	{
-	[AMBIENT] = "ambient light",
-	[CAMERA] = "camera",
-	[LIGHT] = "light",
-	[SPHERE] = "sphere",
-	[PLANE] = "plane",
-	[CYLINDER] = "cylinder"
-	};
-
-	ft_putendl_fd("Error", 2);
-	ft_putstr_fd("Too many entities of type ", 2);
-	ft_putendl_fd((char *)entity_name[type], 2);
-	ft_putnbr_fd(max, 2);
-	ft_putstr_fd(" expected / ", 2);
-	ft_putnbr_fd(count, 2);
-	ft_putendl_fd(" got ", 2);
-}
-
-t_err	ft_incr_entity_count(int entity_count[ENTITIES], t_entity_type entity_type)
-{
-	static const int	entity_max[ENTITIES] =	{
-	[AMBIENT] = AMBIENT_MAX,
-	[CAMERA] = CAMERA_MAX,
-	[LIGHT] = LIGHT_MAX,
-	[SPHERE] = SPHERE_MAX,
-	[PLANE] = PLANE_MAX,
-	[CYLINDER] = CYLINDER_MAX
-	};
-
-	entity_count[entity_type]++;
-	if (entity_count[entity_type] > entity_max[entity_type])
-	{
-		ft_perror_count(entity_type, entity_max[entity_type], entity_count[entity_type]);
 		return (ERROR);
 	}
 	return (SUCCESS);
 }
 
-t_err	ft_check_line(char **lines, int entity_count[ENTITIES])
+t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 {
-	t_entity_type	entity_type;
+	t_ent_type	ent_type;
+	static int	ent_count[SUM_ENTS];
+	size_t		i;
 
-	while (*lines)
+	i = 0;
+	while (lines[i])
 	{
-		entity_type = ft_is_valid_line(*lines);
-		if (entity_type == UNKNOWN
-			|| ft_incr_entity_count(entity_count, entity_type))
+		ent_type = ft_check_line_type(lines[i]);
+		if (ent_type == UNKNOWN
+			|| ft_incr_ent_count(ent_count, ent_type))
 		{
-			ft_putendl_fd("This following line is bad", 2);
-			ft_putendl_fd(*lines, 2);
+			ft_putstr_fd("Line number: <", 2);
+			ft_putnbr_fd(i, 2);
+			ft_putendl_fd(">", 2);
 			return (ERROR);
 		}
-		lines++;
+		i++;
 	}
+	*lsrc_c = ent_count[LIGHT];
+	*total = ent_count[SPHERE] + ent_count[PLANE] + ent_count[CYLINDER];
 	return (SUCCESS);
 }
 
-t_entity_type	ft_is_valid_line(char *line)
+t_ent_type	ft_check_line_type(char *line)
 {
 	if (!ft_strncmp(line, "A ", 2))
 		return (ft_check_ambient(line + 1));
@@ -147,3 +66,22 @@ t_entity_type	ft_is_valid_line(char *line)
 	return (UNKNOWN);
 }
 
+t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_ent_type ent_type)
+{
+	static const int	ent_max[SUM_ENTS] = {
+	[AMBIENT] = AMBIENT_MAX,
+	[CAMERA] = CAMERA_MAX,
+	[LIGHT] = LIGHT_MAX,
+	[SPHERE] = SPHERE_MAX,
+	[PLANE] = PLANE_MAX,
+	[CYLINDER] = CYLINDER_MAX
+	};
+
+	ent_count[ent_type]++;
+	if (ent_count[ent_type] > ent_max[ent_type])
+	{
+		ft_perror_count(ent_type, ent_max[ent_type], ent_count[ent_type]);
+		return (ERROR);
+	}
+	return (SUCCESS);
+}
