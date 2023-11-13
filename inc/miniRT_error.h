@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:23:15 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/10 15:37:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 14:31:18 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ typedef enum e_err {
 /* ====== FUNCTIONS ====== */
 
 // error_terminate.c
-void	ft_terminate(char *msg, int save_errno);
+void	ft_terminate(void);
+void	ft_perror(char *msg, int save_errno);
 
 // error_syscall_wrapper.c
 t_err	ft_err_open(const char *path, int flag, int *fd);
