@@ -6,30 +6,38 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:25:28 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 17:57:52 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 19:32:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-void	ft_perror_count(t_ent_type type, int max, int count)
+void	ft_perror_count(t_ent_type type, int max, int count, bool high)
 {
 	static const char	*entity_name[SUM_ENTS] = {
-	[AMBIENT] = "ambient light",
-	[CAMERA] = "camera",
-	[LIGHT] = "light",
-	[SPHERE] = "sphere",
-	[PLANE] = "plane",
-	[CYLINDER] = "cylinder"
+	[AMBIENT] = "ambient light (A)",
+	[CAMERA] = "camera (C)",
+	[LIGHT] = "light (L)",
+	[SPHERE] = "sphere (sp)",
+	[PLANE] = "plane (pl)",
+	[CYLINDER] = "cylinder (cy)"
 	};
 
 	ft_putendl_fd("Error", 2);
-	ft_putstr_fd("Too many entities of type ", 2);
-	ft_putendl_fd((char *)entity_name[type], 2);
+	if (high)
+		ft_putstr_fd("Too many entities of type <", 2);
+	else
+		ft_putstr_fd("Missing entity of type <", 2);
+	ft_putstr_fd((char *)entity_name[type], 2);
+	ft_putendl_fd(">", 2);
+	if (!high)
+		return ;
+	ft_putstr_fd("Expected: ", 2);
 	ft_putnbr_fd(max, 2);
-	ft_putstr_fd(" expected / ", 2);
+	ft_putendl_fd("", 2);
+	ft_putstr_fd("But got:  ", 2);
 	ft_putnbr_fd(count, 2);
-	ft_putendl_fd(" got ", 2);
+	ft_putendl_fd("", 2);
 }
 
 bool	ft_perror_range(char *line, size_t offset, int min, int max)

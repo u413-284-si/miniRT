@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 17:57:40 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 19:28:25 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ t_err		ft_check_file(char *argv, char ***lines, int *lsrc_c, int *total);
 t_err		ft_check_lines(char **lines, int *lsrc_count, int *total);
 t_ent_type	ft_check_line_type(char *line);
 t_err		ft_incr_ent_count(int ent_count[SUM_ENTS], t_ent_type ent_type);
+t_err		ft_check_entity_count(int ent_count[SUM_ENTS]);
 
 // check_import.c
 t_err		ft_validate_import(char *filename, char ***lines);
@@ -108,7 +109,7 @@ t_ent_type	ft_check_plane(char *line);
 t_ent_type	ft_check_cylinder(char *line);
 
 // check_error.c
-void		ft_perror_count(t_ent_type type, int max, int count);
+void		ft_perror_count(t_ent_type type, int max, int count, bool high);
 bool		ft_perror_range(char *line, size_t offset, int min, int max);
 bool		ft_perror_convert(char *line, bool is_float);
 bool		ft_perror_separator(char *line, bool comma);

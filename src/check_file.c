@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 16:29:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 19:28:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 		}
 		i++;
 	}
+	ft_check_entity_count(ent_count);
 	*lsrc_c = ent_count[LIGHT];
 	*total = ent_count[SPHERE] + ent_count[PLANE] + ent_count[CYLINDER];
 	return (SUCCESS);
@@ -80,8 +81,24 @@ t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_ent_type ent_type)
 	ent_count[ent_type]++;
 	if (ent_count[ent_type] > ent_max[ent_type])
 	{
-		ft_perror_count(ent_type, ent_max[ent_type], ent_count[ent_type]);
+		ft_perror_count(ent_type, ent_max[ent_type], ent_count[ent_type], true);
 		return (ERROR);
 	}
 	return (SUCCESS);
+}
+
+t_err	ft_check_entity_count(int ent_count[SUM_ENTS])
+{
+	t_ent_type	missing;
+
+	if (!ent_count[AMBIENT])
+		missing = AMBIENT;
+	else if (!ent_count[CAMERA])
+		missing = CAMERA;
+	else if (!ent_count[LIGHT])
+		missing = LIGHT;
+	else
+		return (SUCCESS);
+	ft_perror_count(missing, 0, 0, false);
+	return (ERROR);
 }
