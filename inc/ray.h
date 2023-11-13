@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/30 11:44:21 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/13 15:19:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,24 +32,11 @@ typedef struct s_ray
 	float	d;
 }	t_ray;
 
-/**
- * @brief Shows point of intersection
- * @param point		point of intersection
- * @param normal	normal vector at point of intersection
- * @param d			distance into ray direction when point is hit
- */
-typedef struct s_hitrecord
-{
-	t_vec3	point;
-	t_vec3	normal;
-	float	d;
-}	t_hitrecord;
-
 /* ====== FUNCTIONS ====== */
 
 /**
  * @brief Represents a ray
- * 
+ *
  * @param ray			General ray created by the image manager
  * @param d 			Distance traveled upon hit
  * @return t_vec3 		Ray vector to hit
@@ -58,7 +45,7 @@ t_vec3		ft_ray(t_ray ray, float d);
 
 /**
  * @brief Returns the colour of a ray
- * 
+ *
  * @param ray 		Ray sent into the scene
  * @param scene		Scene containing all hittable entities
  * @return t_colour Ray colour
