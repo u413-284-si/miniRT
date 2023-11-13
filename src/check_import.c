@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:40:15 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 17:49:24 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 20:25:11 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,17 +55,11 @@ t_err	ft_import_file(int fd, char ***lines)
 bool	ft_isvalid_filename(char *filename)
 {
 	int		len;
-	char	*start;
 
-	start = ft_strrchr(filename, '/');
-	if (!start)
-		start = filename;
-	else
-		start += 1;
-	len = ft_strlen(start);
-	if (!ft_strnstr(start + len - 3, ".rt", len))
+	len = ft_strlen(filename);
+	if (!ft_strnstr(filename + len - 3, ".rt", 3))
 	{
-		ft_perror("Wrong file extension", 0);
+		ft_perror("Wrong file extension. Please provide a .rt file", 0);
 		return (false);
 	}
 	return (true);
