@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 15:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/12 16:18:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 11:25:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	ft_free_array(char **array)
 {
-	while (*array)
+	size_t	i;
+
+	i = 0;
+	while (array[i] != NULL)
 	{
-		free(*array);
-		(*array)++;
+		free(array[i]);
+		i++;
 	}
 	free (array);
 }
