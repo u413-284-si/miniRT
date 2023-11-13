@@ -6,21 +6,19 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 12:36:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 15:16:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parse.h"
 
-t_err	ft_check_file(char *filename, char ***lines, int entity_count[6]);
-
-t_err	ft_malloc_entities(t_entities *entities)
+t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total)
 {
-	if (ft_err_malloc((void **)&entities->lsrc, sizeof(t_light) * entities->lsrc_count))
+	if (ft_err_malloc((void **)*lsrc, sizeof(t_light) * lsrc_c))
 		return (ERROR);
-	if (ft_err_malloc((void **)&entities->obj, sizeof(t_shape) * entities->total))
+	if (ft_err_malloc((void **)*obj, sizeof(t_shape) * total))
 	{
-		free(entities->lsrc);
+		free(*lsrc);
 		return (ERROR);
 	}
 	return (SUCCESS);
@@ -55,22 +53,19 @@ void	ft_parse_lines(t_entities *entities, char **lines)
 	}
 }
 
-t_err	ft_parse_file(char *filename, t_entities *entities)
+t_err	ft_parse_file(char *filename, t_entities *ents)
 {
-	char		**lines;
-	static int	entity_count[6];
+	char	**lines;
 
 	lines = NULL;
-	if (ft_check_file(filename, &lines, entity_count))
+	if (ft_check_file(filename, &lines, &ents->lsrc_count, &ents->total))
 		return (ERROR);
-	entities->lsrc_count = entity_count[2];
-	entities->total = entity_count[3] + entity_count[4] + entity_count[5];
-	if (ft_malloc_entities(entities))
+	if (ft_malloc_ents(&ents->lsrc, &ents->obj, ents->lsrc_count, ents->total))
 	{
 		ft_free_array(lines);
 		return (ERROR);
 	}
-	ft_parse_lines(entities, lines);
+	ft_parse_lines(ents, lines);
 	ft_free_array(lines);
 	return (SUCCESS);
 }

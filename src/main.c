@@ -6,25 +6,28 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/12 17:51:27 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 15:18:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
 #include "parse.h"
+#include "camera.h"
 
 int	main(int argc, char **argv)
 {
-	static t_entities entities;
+	static t_cam		cam;
+	static t_entities	scene;
 
 	if (argc != 2)
 	{
-		ft_terminate("Need a file", 0);
+		ft_putendl_fd("Need a file", 2);
+		exit(1);
 	}
-	ft_parse_file(argv[1], &entities);
+	ft_parse_file(argv[1], &scene);
+	(void)cam;
 	/*
-	t_cam		cam;
-	t_entities	scene;
+
 
 	ft_create_scene(&scene);
 	ft_initiate_camera(&cam);

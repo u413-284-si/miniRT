@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 14:15:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 15:16:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 
 /* ====== FUNCTIONS ====== */
 
+t_err	ft_check_file(char *filename, char ***lines, int *lsrc_c, int *total);
 
 t_err	ft_parse_file(char *filename, t_entities *entities);
 
