@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 15:16:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 17:50:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total)
 {
-	if (ft_err_malloc((void **)*lsrc, sizeof(t_light) * lsrc_c))
+	if (ft_err_malloc((void **)lsrc, sizeof(t_light) * lsrc_c))
 		return (ERROR);
-	if (ft_err_malloc((void **)*obj, sizeof(t_shape) * total))
+	if (ft_err_malloc((void **)obj, sizeof(t_shape) * total))
 	{
 		free(*lsrc);
 		return (ERROR);
