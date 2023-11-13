@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 17:50:35 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 18:21:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total)
 	return (SUCCESS);
 }
 
-void	ft_parse_lines(t_entities *entities, char **lines)
+void	ft_parse_lines(t_entities *ents, t_cam *cam, char **lines)
 {
 	size_t	lights;
 	size_t	id;
@@ -34,26 +34,26 @@ void	ft_parse_lines(t_entities *entities, char **lines)
 	while (*lines)
 	{
 		if (**lines == 'A')
-			ft_parse_ambient(*lines + 2, &entities->ambient);
+			ft_parse_ambient(*lines + 2, &ents->ambient);
 		else if (**lines == 'C')
-			ft_parse_camera(*lines + 2, NULL);
+			ft_parse_camera(*lines + 2, cam);
 		else if (**lines == 'L')
-			ft_parse_light(*lines + 2, &entities->lsrc[lights++]);
+			ft_parse_light(*lines + 2, &ents->lsrc[lights++]);
 		else
 		{
 			if (**lines == 's')
-				ft_parse_sphere(*lines + 3, &entities->obj[id], id);
+				ft_parse_sphere(*lines + 3, &ents->obj[id], id);
 			else if (**lines == 'p')
-				ft_parse_plane(*lines + 3, &entities->obj[id], id);
+				ft_parse_plane(*lines + 3, &ents->obj[id], id);
 			else if (**lines == 'c')
-				ft_parse_cylinder(*lines + 3, &entities->obj[id], id);
+				ft_parse_cylinder(*lines + 3, &ents->obj[id], id);
 			id++;
 		}
 		lines++;
 	}
 }
 
-t_err	ft_parse_file(char *filename, t_entities *ents)
+t_err	ft_parse_file(char *filename, t_entities *ents, t_cam *cam)
 {
 	char	**lines;
 
@@ -65,7 +65,7 @@ t_err	ft_parse_file(char *filename, t_entities *ents)
 		ft_free_array(lines);
 		return (ERROR);
 	}
-	ft_parse_lines(ents, lines);
+	ft_parse_lines(ents, cam, lines);
 	ft_free_array(lines);
 	return (SUCCESS);
 }

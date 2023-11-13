@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/13 15:18:53 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 18:27:12 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,10 @@ int	main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		ft_putendl_fd("Need a file", 2);
+		ft_putendl_fd("Error\nUsage: ./miniRT file.rt", 2);
 		exit(1);
 	}
-	ft_parse_file(argv[1], &scene);
-	(void)cam;
+	ft_parse_file(argv[1], &scene, &cam);
 	/*
 
 
