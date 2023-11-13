@@ -6,18 +6,12 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 22:34:14 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 15:47:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 20:34:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-/**
- * @brief Initiates a t_buf buffer
- *
- * @param buf Pointer to buffer
- * @return t_err SUCCESS, ERROR
- */
 t_err	ft_buf_init(t_buf *buf)
 {
 	buf->size = BUF_SIZE;
@@ -27,34 +21,18 @@ t_err	ft_buf_init(t_buf *buf)
 	return (SUCCESS);
 }
 
-/**
- * @brief Destroy the buffer.
- *
- * @param buf Pointer to buffer.
- */
 void	ft_buf_destroy(t_buf *buf)
 {
 	free(buf->str);
 	buf->str = NULL;
 }
 
-/**
- * @brief Set the buffer to zero.
- *
- * @param buf Pointer to buffer.
- */
 void	ft_buf_clear(t_buf *buf)
 {
 	ft_memset(buf->str, '\0', buf->size);
 	buf->cur_pos = 0;
 }
 
-/**
- * @brief Reallocs buffer into double its size
- *
- * @param buf Pointer to buffer.
- * @return t_err SUCCESS, ERROR
- */
 t_err	ft_buf_double(t_buf *buf)
 {
 	char	*tmp_str;
