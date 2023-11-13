@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 11:33:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 14:14:40 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@
 # include "miniRT_error.h"
 # include "ft_char.h"
 # include "cleanup.h"
+# include "ft_strtod.h"
 
-/* ===== DEFINES ===== */
+/* ===== MACROS ===== */
 
 # define ENTITIES 6
 # define AMBIENT_MAX 1
@@ -58,9 +59,6 @@ bool	ft_check_filename(char *filename);
 t_err	ft_import_file(int fd, char ***lines);
 t_err	ft_check_line(char **lines, int entity_count[ENTITIES]);
 t_entity_type	ft_is_valid_line(char *line);
-
-// ft_strtod.c
-double	ft_strtod(const char *str, size_t *offset);
 
 // check_line.c
 void	ft_rm_space(char **line);

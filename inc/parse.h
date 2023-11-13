@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 12:36:57 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 14:15:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@
 # include "miniRT_error.h"
 # include "scene.h"
 # include "cleanup.h"
-# include "ft_num.h"
+# include "ft_strtod.h"
 
 /* ====== FUNCTIONS ====== */
 
-double	ft_strtod(const char *str, size_t *offset);
 
 t_err	ft_parse_file(char *filename, t_entities *entities);
 

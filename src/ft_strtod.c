@@ -6,15 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 13:23:38 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/12 14:10:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/13 13:53:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <math.h>
-#include "ft_char.h"
-
-#define MAX_DIGITS 15
+#include "ft_strtod.h"
 
 static size_t	ft_conv_nums(const char *str, long *result)
 {
