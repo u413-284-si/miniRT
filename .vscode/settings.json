@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"random": "c",
-		"utils.h": "c"
+		"utils.h": "c",
+		"hit_manager.h": "c"
 	}
 }
