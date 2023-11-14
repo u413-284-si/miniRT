@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 07:58:35 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 17:16:03 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ typedef enum e_entity_type {
 
 /* ====== FUNCTIONS ====== */
 
-// check_file.c
+// check.c
 
 /**
  * @brief Check array of imported lines.

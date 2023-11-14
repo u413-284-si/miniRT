@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:51:09 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 07:49:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 17:14:06 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 /* ====== LIBRARIES ====== */
 
+// Standard C libs
 # include <stdio.h>
 # include <math.h>
 
+// Home-grown libs
 # include "ft_char.h"
 
 /* ===== MACROS ===== */

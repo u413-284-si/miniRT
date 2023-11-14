@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:30:12 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 07:55:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 17:19:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,11 @@ typedef struct s_buf
 // import_file.c
 
 /**
- * @brief Check file extension and import file.
+ * @brief Check file extension, import file and prepare for use.
  *
  * Check extension with ft_isvalid_filename().
  * Open the file and import content with ft_read_and_split().
+ * A NULL-terminated array is created.
  * Close the file. If error free imported line array.
  * @param filename Filename passed as argv[1].
  * @param lines Array where to save imported lines.

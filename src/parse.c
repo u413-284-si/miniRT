@@ -6,11 +6,33 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 07:47:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 17:21:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parse.h"
+
+t_err	ft_parse_file(char *filename, t_entities *ents, t_cam *cam)
+{
+	char	**lines;
+
+	lines = NULL;
+	if (ft_import_file(filename, &lines))
+		return (ERROR);
+	if (ft_check_lines(lines, &ents->lsrc_count, &ents->total))
+	{
+		ft_free_array(lines);
+		return (ERROR);
+	}
+	if (ft_malloc_ents(&ents->lsrc, &ents->obj, ents->lsrc_count, ents->total))
+	{
+		ft_free_array(lines);
+		return (ERROR);
+	}
+	ft_parse_lines(ents, cam, lines);
+	ft_free_array(lines);
+	return (SUCCESS);
+}
 
 t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total)
 {
@@ -51,26 +73,4 @@ void	ft_parse_lines(t_entities *ents, t_cam *cam, char **lines)
 		}
 		lines++;
 	}
-}
-
-t_err	ft_parse_file(char *filename, t_entities *ents, t_cam *cam)
-{
-	char	**lines;
-
-	lines = NULL;
-	if (ft_import_file(filename, &lines))
-		return (ERROR);
-	if (ft_check_lines(lines, &ents->lsrc_count, &ents->total))
-	{
-		ft_free_array(lines);
-		return (ERROR);
-	}
-	if (ft_malloc_ents(&ents->lsrc, &ents->obj, ents->lsrc_count, ents->total))
-	{
-		ft_free_array(lines);
-		return (ERROR);
-	}
-	ft_parse_lines(ents, cam, lines);
-	ft_free_array(lines);
-	return (SUCCESS);
 }

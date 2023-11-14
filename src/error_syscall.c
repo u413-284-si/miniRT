@@ -1,24 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_syscall_wrapper.c                            :+:      :+:    :+:   */
+/*   error_syscall.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:01:13 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 07:54:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 08:01:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "error_syscall.h"
 
-/**
- * @brief Wrapper function for open() to print error.
- *
- * @param path		Path string to file to open.
- * @param flag		Flags given to open().
- * @param fd		File descriptor to assign to opened file.
- */
 t_err	ft_err_open(const char *path, int flag, int *fd)
 {
 	errno = 0;
@@ -31,12 +24,6 @@ t_err	ft_err_open(const char *path, int flag, int *fd)
 	return (SUCCESS);
 }
 
-/**
- * @brief Wrapper function for close to print error.
- *
- * @param fd		File descriptor of file to be closed.
- * @param msg		Message for perror.
- */
 t_err	ft_err_close(int fd)
 {
 	int	ret;
