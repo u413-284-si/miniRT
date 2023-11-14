@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:47:49 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/12 16:30:41 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/14 17:20:07 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ bool	ft_hit_plane(t_plane pl, t_ray ray, t_hitrecord *rec, t_interval ray_d)
 	pl_point_ray = ft_vec3_sub(ray.origin, pl.point);
 	eq.a = 0.0;
 	eq.c = ft_vec3_dot(pl_point_ray, pl.normal);
-	ft_solve(&eq);
-	if (!ft_surrounds(eq.d1, ray_d))
+	if (ft_solve(&eq) < 0)
+		return (false);
+	if (!ft_surrounds(eq.d1, ray_d) || eq.d1 < EPSILON)
 		return (false);
 	rec->d = eq.d1;
 	rec->point = ft_ray(ray, eq.d1);
