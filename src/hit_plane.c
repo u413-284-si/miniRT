@@ -6,30 +6,11 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:47:49 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/14 17:20:07 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/14 17:37:38 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hit_manager.h"
-
-/* bool	ft_hit_scene_pl(t_entities scene, t_ray ray, t_hitrecord *rec, \
-	t_interval ray_d)
-{
-	int		i;
-	bool	hit;
-
-	hit = false;
-	i = -1;
-	while (++i < scene.pl_count)
-	{
-		if (ft_hit_plane(scene.pl[i], ray, rec, ray_d))
-		{
-			hit = true;
-			ray_d.max = rec->d;
-		}
-	}
-	return (hit);
-} */
 
 bool	ft_hit_plane(t_plane pl, t_ray ray, t_hitrecord *rec, t_interval ray_d)
 {
