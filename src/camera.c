@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/11 22:53:39 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/14 15:16:52 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	ft_initiate_camera(t_cam *cam)
 {
-	cam->image_width = 400;
-	cam->aspect_ratio = 4.0 / 3.0;
+	cam->image_width = 800;
+	cam->aspect_ratio = 16.0 / 9.0;
 	cam->image_height = (int)(cam->image_width / cam->aspect_ratio);
 	if (cam->image_height < 1)
 		cam->image_height = 1;
@@ -45,8 +45,8 @@ void	ft_initiate_viewport(t_cam *cam)
 
 	theta = ft_degree_to_radian(cam->vfov);
 	cam->viewport_height = 2 * tan(theta / 2) * cam->focal_length;
-	cam->viewport_width = cam->viewport_height * (float)(cam->image_width \
-		/ cam->image_height);
+	cam->viewport_width = cam->viewport_height * cam->image_width \
+		/ cam->image_height;
 	cam->viewport_u = ft_vec3_scale(cam->u, cam->viewport_width);
 	cam->viewport_v = ft_vec3_scale(cam->v, -cam->viewport_height);
 	cam->viewport_w.x = 0;
