@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/12 16:28:34 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/14 16:25:46 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 /* ====== MACROS ====== */
 
-# define EPSILON 1e-6
+# define EPSILON 1e-4
 
 /* ====== TYPEDEFS ====== */
 
@@ -135,10 +135,21 @@ bool	ft_hit_scene_pl(t_entities scene, t_ray ray, t_hitrecord *rec, \
 bool	ft_hit_cylinder(t_cylinder cy, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d);
 
-t_vec3	ft_cylinder_normal(t_hitrecord rec, t_ray ray, t_cylinder cy);
+bool	ft_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
+	float potential_hits[4]);
 
-void	ft_identify_hits(t_cylinder cy, t_ray ray, t_equation eq, \
+void	ft_identify_hits(t_cylinder cy, t_ray ray, float potential_hits[4], \
 	t_hitrecord *rec);
+
+/**
+ * @brief 
+ * 
+ * @param rec 
+ * @param ray 
+ * @param cy 
+ * @return t_vec3 
+ */
+t_vec3	ft_cylinder_normal(t_hitrecord rec, t_ray ray, t_cylinder cy);
 
 void	ft_hit_cap(t_cylinder cy, t_ray ray, t_vec3 cap, float *d);
 
@@ -146,5 +157,8 @@ bool	ft_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec);
 
 bool	ft_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
 	float d);
+
+bool	ft_visible(t_equation eq, t_interval ray_d, float d3, \
+	float d4);
 
 #endif
