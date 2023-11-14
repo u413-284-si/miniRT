@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_file.c                                       :+:      :+:    :+:   */
+/*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 18:21:17 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 07:47:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,13 @@ t_err	ft_parse_file(char *filename, t_entities *ents, t_cam *cam)
 	char	**lines;
 
 	lines = NULL;
-	if (ft_check_file(filename, &lines, &ents->lsrc_count, &ents->total))
+	if (ft_import_file(filename, &lines))
 		return (ERROR);
+	if (ft_check_lines(lines, &ents->lsrc_count, &ents->total))
+	{
+		ft_free_array(lines);
+		return (ERROR);
+	}
 	if (ft_malloc_ents(&ents->lsrc, &ents->obj, ents->lsrc_count, ents->total))
 	{
 		ft_free_array(lines);

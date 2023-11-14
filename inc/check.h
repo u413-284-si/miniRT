@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 21:25:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 07:47:16 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@
 
 /* ===== MACROS ===== */
 
-# define BUF_SIZE 20
-
 # define AMBIENT_MAX 1
 # define CAMERA_MAX 1
 # define LIGHT_MAX 1
@@ -37,19 +35,6 @@
 # define FLOAT_MAX 1000.0
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Simple implementation of a buffer.
- * @param str		Buffer string.
- * @param size		Size of malloced buffer memory in bytes.
- * @param cur_pos	Current position of buffer.
- */
-typedef struct s_buf
-{
-	char	*str;
-	size_t	size;
-	size_t	cur_pos;
-}	t_buf;
 
 /**
  * @brief Enumeration of all different entity types.
@@ -70,20 +55,6 @@ typedef enum e_entity_type {
 /* ====== FUNCTIONS ====== */
 
 // check_file.c
-
-/**
- * @brief Entry point of check module.
- *
- * Imports provided file and performs various checks.
- * Validate file existence and extension, import it ft_validate_import().
- * Check imported lines with ft_check_lines().
- * @param argv Filename.
- * @param lines Array to store imported lines.
- * @param lsrc_c Count of found entities light.
- * @param total Count of found entities sphere + plane + cylinder.
- * @return t_err ERROR if any subfunction fails.
- */
-t_err		ft_check_file(char *argv, char ***lines, int *lsrc_c, int *total);
 
 /**
  * @brief Check array of imported lines.
@@ -136,92 +107,6 @@ t_err		ft_incr_ent_count(int ent_count[SUM_ENTS], t_ent_type ent_type);
  * @return t_err ERROR if minimum number of an entity is not found.
  */
 t_err		ft_check_entity_count(int ent_count[SUM_ENTS]);
-
-// check_import.c
-
-/**
- * @brief Check file extension and import file.
- *
- * Check extension with ft_isvalid_filename().
- * Open the file and import content with ft_import_file().
- * Close the file. If error free imported line array.
- * @param filename Filename passed as argv[1].
- * @param lines Array where to save imported lines.
- * @return t_err ERROR if any subfunction fails.
- */
-t_err		ft_validate_import(char *filename, char ***lines);
-
-/**
- * @brief Check if valid file extension.
- *
- * Checks if the last three characters are ".rt".
- * If not prints error.
- * @param filename Filename passed as argv[1].
- * @return true Filename has ".rt" as last three chars.
- * @return false Filename is not valid.
- */
-bool		ft_isvalid_filename(char *filename);
-
-/**
- * @brief Import file and split it into lines.
- *
- * Initialize buffer with ft_buf_init().
- * Read the whole file into buffer with ft_buf_read_file().
- * Convert file into array of lines with ft_split().
- * Split char is newline '\n', which gets rid superfluous newlines.
- * Destroy the buffer with ft_buf_destroy().
- * If error is enountered buffer also gets destroyed.
- * @param fd File descriptor of opened file.
- * @param lines Array where to store lines.
- * @return t_err ERROR if any subfunction fails.
- */
-t_err		ft_import_file(int fd, char ***lines);
-
-// check_buffer.c
-
-/**
- * @brief Initiates a t_buf buffer
- *
- * @param buf Pointer to buffer
- * @return t_err ERROR if malloc() fails.
- */
-t_err		ft_buf_init(t_buf *buf);
-
-/**
- * @brief Destroy malloced buffer.
- *
- * @param buf Pointer to buffer.
- */
-void		ft_buf_destroy(t_buf *buf);
-
-/**
- * @brief Set buffer to zero.
- *
- * @param buf Pointer to buffer.
- */
-void		ft_buf_clear(t_buf *buf);
-
-/**
- * @brief Doubles buffer size and copies content into new malloc'd buffer
- *
- * @param buf Pointer to buffer.
- * @return t_err ERROR if malloc() fails.
- */
-t_err		ft_buf_double(t_buf *buf);
-
-/**
- * @brief Reads provided file into buffer.
- *
- * In a loop:
- * - Read for remaining buffer size.
- * - If buffer is full double size with ft_buf_double().
- * - If whole file is read break.
- * Buffer gets zero terminated.
- * @param buf Pointer to buffer.
- * @param fd File descriptor of opened file.
- * @return t_err ERROR if read() or ft_buf_double() fails.
- */
-t_err		ft_buf_read_file(t_buf *buf, int fd);
 
 // check_line.c
 

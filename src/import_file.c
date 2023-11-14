@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_import.c                                     :+:      :+:    :+:   */
+/*   import_file.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:40:15 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 20:25:11 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 07:36:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "check.h"
+#include "import_file.h"
 
-t_err	ft_validate_import(char *filename, char ***lines)
+t_err	ft_import_file(char *filename, char ***lines)
 {
 	int	fd;
 
@@ -21,7 +21,7 @@ t_err	ft_validate_import(char *filename, char ***lines)
 	fd = 0;
 	if (ft_err_open(filename, O_RDONLY, &fd))
 		return (ERROR);
-	if (ft_import_file(fd, lines))
+	if (ft_read_and_split(fd, lines))
 		return (ERROR);
 	if (ft_err_close(fd))
 	{
@@ -31,7 +31,7 @@ t_err	ft_validate_import(char *filename, char ***lines)
 	return (SUCCESS);
 }
 
-t_err	ft_import_file(int fd, char ***lines)
+t_err	ft_read_and_split(int fd, char ***lines)
 {
 	t_buf	buf;
 

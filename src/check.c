@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_file.c                                       :+:      :+:    :+:   */
+/*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 19:28:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 07:47:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
-
-t_err	ft_check_file(char *argv, char ***lines, int *lsrc_c, int *total)
-{
-	if (ft_validate_import(argv, lines))
-		return (ERROR);
-	if (ft_check_lines(*lines, lsrc_c, total))
-	{
-		ft_free_array(*lines);
-		return (ERROR);
-	}
-	return (SUCCESS);
-}
 
 t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 {
@@ -37,7 +25,7 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 		if (ent_type == UNKNOWN
 			|| ft_incr_ent_count(ent_count, ent_type))
 		{
-			ft_putstr_fd("Line number: <", 2);
+			ft_putstr_fd("Line number [ignoring empty lines]: <", 2);
 			ft_putnbr_fd(i, 2);
 			ft_putendl_fd(">", 2);
 			return (ERROR);

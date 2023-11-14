@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 18:21:55 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 07:47:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@
 
 /* ====== FUNCTIONS ====== */
 
+// import from import_file.c
+t_err	ft_import_file(char *filename, char ***lines);
+
 // import from check_file.c
-t_err	ft_check_file(char *filename, char ***lines, int *lsrc_c, int *total);
+t_err	ft_check_lines(char **lines, int *lsrc_c, int *total);
 
 // parse_file.c
 t_err	ft_parse_file(char *filename, t_entities *ents, t_cam *cam);
