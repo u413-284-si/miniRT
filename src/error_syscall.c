@@ -6,11 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:01:13 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 14:26:57 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 07:54:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT_error.h"
+#include "error_syscall.h"
 
 /**
  * @brief Wrapper function for open() to print error.

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 07:47:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 07:58:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,8 @@
 
 /* ====== LIBRARIES ====== */
 
-# include <math.h>
-
-# include "miniRT_error.h"
+# include "error_msg.h"
 # include "ft_char.h"
-# include "cleanup.h"
 # include "ft_strtod.h"
 
 /* ===== MACROS ===== */

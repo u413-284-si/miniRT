@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 07:47:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 07:58:59 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "miniRT_error.h"
+# include "error_syscall.h"
 # include "scene.h"
 # include "cleanup.h"
 # include "ft_strtod.h"

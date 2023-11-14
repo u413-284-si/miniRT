@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:51:09 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 14:16:44 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/14 07:49:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # include <stdio.h>
 # include <math.h>
+
 # include "ft_char.h"
 
 /* ===== MACROS ===== */
@@ -30,7 +31,7 @@
  *
  * Simple implementation: handles only numbers with upto 15 digits excluding
  * an optional radix point. 15 digits can be stored in long without overflow.
- * 
+ *
  * Does NOT ignore spaces at the beginning.
  * Does allow 1 negative sign (-).
  * Radix point is the dot char (.) and is optional (can convert ints like 123).

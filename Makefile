@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/14 07:48:30 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/14 07:58:22 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,13 +65,13 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # ******************************
 
 SRC := 	cleanup.c \
-		error_terminate.c \
-		error_syscall_wrapper.c \
 		check_entity1.c \
 		check_entity2.c \
 		check_error.c \
 		check_line.c \
 		check.c \
+		error_msg.c \
+		error_syscall.c \
 		ft_strtod.c \
 		import_file_buffer.c \
 		import_file.c \
