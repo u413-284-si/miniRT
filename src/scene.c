@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/12 16:33:29 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/14 16:56:55 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,15 +91,19 @@ void	ft_initiate_cylinders(t_hittable *obj)
 {
 	obj[0].id = 0;
 	obj[0].type = CYLINDER;
-	obj[0].params.cy.centre.x = 0.3;
+	obj[0].params.cy.centre.x = 0.0;
 	obj[0].params.cy.centre.y = 0.0;
 	obj[0].params.cy.centre.z = -1.0;
-	obj[0].params.cy.axis.x = 0.0;
-	obj[0].params.cy.axis.y = 1.0;
+	obj[0].params.cy.axis.x = 0.707;
+	obj[0].params.cy.axis.y = 0.707;
 	obj[0].params.cy.axis.z = 0.0;
 	obj[0].params.cy.d = 0.5;
-	obj[0].params.cy.h = 1.5;
-	obj[0].params.cy.colour.r = 0.39;
-	obj[0].params.cy.colour.g = 0.6;
-	obj[0].params.cy.colour.b = 0.4;
+	obj[0].params.cy.h = 1.0;
+	obj[0].params.cy.cap1 = ft_vec3_add(obj[0].params.cy.centre, \
+		ft_vec3_scale(obj[0].params.cy.axis, -obj[0].params.cy.h / 2.0));
+	obj[0].params.cy.cap2 = ft_vec3_add(obj[0].params.cy.centre, \
+		ft_vec3_scale(obj[0].params.cy.axis, obj[0].params.cy.h / 2.0));
+	obj[0].params.cy.colour.r = 1.0;
+	obj[0].params.cy.colour.g = 0.0;
+	obj[0].params.cy.colour.b = 0.0;
 }
