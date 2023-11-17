@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:48:18 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/14 16:59:54 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/17 14:40:57 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,6 @@ bool	ft_contains(float x, t_interval interval)
 bool	ft_surrounds(float x, t_interval interval)
 {
 	return (interval.min < x && interval.max > x);
-}
-
-float	ft_max(float x, float y)
-{
-	if (x > y)
-		return (x);
-	else
-		return (y);
 }
 
 float	ft_solve(t_equation *eq)

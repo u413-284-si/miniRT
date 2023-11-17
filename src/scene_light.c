@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:15:24 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/03 13:21:09 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/17 14:40:50 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ t_colour	ft_diffuse_light(t_light cur, t_hitrecord rec)
 	float	dot_product;
 
 	light_dir = ft_vec3_norm(ft_vec3_sub(cur.pos, rec.point));
-	dot_product = ft_max(0.0, ft_vec3_dot(light_dir, rec.normal));
+	dot_product = fmaxf(0.0, ft_vec3_dot(light_dir, rec.normal));
 	return ((t_colour){
 		.r = dot_product * cur.ratio * cur.colour.r,
 		.b = dot_product * cur.ratio * cur.colour.b,
