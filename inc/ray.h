@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 11:27:06 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/17 15:00:26 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,23 @@ typedef struct s_ray
 	t_vec3	direction;
 	float	d;
 }	t_ray;
+
+/**
+ * @brief Shows point of intersection
+ * @param point		Point of intersection
+ * @param normal	Normal vector at point of intersection
+ * @param axis_hit	Point of intersection with a cylinders axis
+ * @param d			Distance into ray direction when point is hit
+ * @param colour	Colour of object at intersection
+ */
+typedef struct s_hitrecord
+{
+	t_vec3		point;
+	t_vec3		normal;
+	t_vec3		axis_hit;
+	float		d;
+	t_colour	colour;
+}	t_hitrecord;
 
 /* ====== FUNCTIONS ====== */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/12 16:13:27 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/17 15:00:14 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,6 @@
 # include "colour.h"
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Shows point of intersection
- * @param point		Point of intersection
- * @param normal	Normal vector at point of intersection
- * @param axis_hit	Point of intersection with a cylinders axis
- * @param d			Distance into ray direction when point is hit
- * @param colour	Colour of object at intersection
- */
-typedef struct s_hitrecord
-{
-	t_vec3		point;
-	t_vec3		normal;
-	t_vec3		axis_hit;
-	float		d;
-	t_colour	colour;
-}	t_hitrecord;
 
 /**
  * @brief Represents lighting in the scene
