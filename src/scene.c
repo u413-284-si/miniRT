@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   scene.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/14 16:56:55 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/17 15:07:59 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "scene.h"
+#include "init.h"
 
 void	ft_create_scene(t_entities *scene)
 {

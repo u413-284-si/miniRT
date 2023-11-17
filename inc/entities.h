@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   scene.h                                            :+:      :+:    :+:   */
+/*   entities.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 15:00:14 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/17 15:08:37 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCENE_H
-# define SCENE_H
+#ifndef ENTITIES_H
+# define ENTITIES_H
 
 /* ====== LIBRARIES ====== */
 
@@ -150,42 +150,5 @@ typedef struct s_entities
 	int			lsrc_count;
 	int			total;
 }	t_entities;
-
-/* ====== FUNCTIONS ====== */
-
-/**
- * @brief Builds the scene by filling it with entities
- * 
- * @param scene 	Struct with all entities
- */
-void		ft_create_scene(t_entities *scene);
-
-/**
- * @brief Initiates all the lights in the scene
- * 
- * @param scene 	Struct with all entities
- */
-void		ft_initiate_lights(t_entities *scene);
-
-/**
- * @brief Initiates all spheres in the scene
- * 
- * @param obj 		Array of all hittables
- */
-void		ft_initiate_spheres(t_hittable *obj);
-
-/**
- * @brief Initiates all planes in the scene
- * 
- * @param obj 		Array of all hittables
- */
-void		ft_initiate_planes(t_hittable *obj);
-
-/**
- * @brief Initiates all cylinders in the scene
- * 
- * @param obj 		Array of all hittables
- */
-void		ft_initiate_cylinders(t_hittable *obj);
 
 #endif
