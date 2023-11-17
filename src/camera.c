@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 14:28:01 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/17 16:32:56 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
 		{
 			pixel = ft_vec3_add(ft_vec3_add(vp.pixel00_pos, \
 				ft_vec3_scale(vp.delta_u, i)), ft_vec3_scale(vp.delta_v, j));
-			ray.direction = ft_vec3_sub(pixel, cam.camera_centre);
+			ray.direction = ft_vec3_norm(ft_vec3_sub(pixel, cam.camera_centre));
 			ray.origin = cam.camera_centre;
 			ray.d = 1.0;
 			pixel_colour = ft_ray_colour(ray, scene);
