@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 17:26:20 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/17 11:27:06 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,16 @@ t_vec3		ft_ray(t_ray ray, float d);
  * @return t_colour Ray colour
  */
 t_colour	ft_ray_colour(t_ray ray, t_entities scene);
+
+/**
+ * @brief Returns the background colour
+ * 
+ * The background colour depends on the ray direction
+ * and creates a transition between two colours
+ * @param ray 			Ray shot into scene
+ * @return t_colour 
+ */
+t_colour	ft_background_colour(t_ray ray);
+
 
 #endif
