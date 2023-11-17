@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 11:28:30 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/17 14:38:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 	while (++i < scene.total)
 	{
 		cur = scene.obj[i];
-		if (ft_hit_scene(cur, ray, &rec, ray_d))
+		if (ft_hit_hittable(cur, ray, &rec, ray_d))
 			if (rec.d < ray_d.max)
 				ray_d.max = rec.d;
 	}

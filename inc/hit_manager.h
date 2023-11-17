@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hit_manager.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/14 17:58:32 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/17 14:38:56 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@
  * @return true		If hittable is hit
  * @return false	If hittable is missed
  */
-bool	ft_hit_scene(t_hittable obj, t_ray ray, t_hitrecord *rec, \
+bool	ft_hit_hittable(t_hittable obj, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d);
 
 /**

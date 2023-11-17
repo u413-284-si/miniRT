@@ -6,13 +6,13 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:32:23 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/10 19:24:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/17 14:38:43 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hit_manager.h"
 
-bool	ft_hit_scene(t_hittable obj, t_ray ray, t_hitrecord *rec, \
+bool	ft_hit_hittable(t_hittable obj, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d)
 {
 	if (obj.type == SPHERE)
