@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   utils_cylinder.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/14 16:51:37 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/17 16:41:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hit_manager.h"
 
-t_vec3	ft_cylinder_normal(t_hitrecord rec, t_ray ray, t_cylinder cy)
+t_vec3	ft_cy_normal(t_hitrecord rec, t_ray ray, t_cylinder cy)
 {
 	t_vec3	hit;
 	t_vec3	normal;
@@ -27,7 +27,7 @@ t_vec3	ft_cylinder_normal(t_hitrecord rec, t_ray ray, t_cylinder cy)
 	return (normal);
 }
 
-bool	ft_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec)
+bool	ft_cy_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec)
 {
 	t_vec3	hit;
 	t_vec3	cap1_ray;
@@ -51,7 +51,7 @@ bool	ft_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec)
 	return (false);
 }
 
-bool	ft_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
+bool	ft_cy_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
 	float d)
 {
 	t_vec3	hit;
@@ -65,7 +65,7 @@ bool	ft_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
 	return (false);
 }
 
-bool	ft_visible(t_equation eq, t_interval ray_d, float d3, \
+bool	ft_cy_visible(t_equation eq, t_interval ray_d, float d3, \
 	float d4)
 {
 	if (!ft_surrounds(eq.d1, ray_d))

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 14:38:56 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/17 16:42:28 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ bool	ft_hit_sphere(t_sphere sp, t_ray ray, t_hitrecord *rec, \
 bool	ft_hit_plane(t_plane pl, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d);
 
+// CYLINDER
 /**
  * @brief Calculates if a cylinder was hit by a ray
  * 
@@ -113,7 +114,7 @@ bool	ft_hit_cylinder(t_cylinder cy, t_ray ray, t_hitrecord *rec, \
  * @return true 			If cylinder is hit
  * @return false 			If cylinder is missed
  */
-bool	ft_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
+bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
 	float potential_hits[4]);
 
 /**
@@ -126,7 +127,7 @@ bool	ft_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
  * @param cap 		Cap in question
  * @param d 		Distance of ray, if a hit was detected
  */
-void	ft_hit_cap(t_cylinder cy, t_ray ray, t_vec3 cap, float *d);
+void	ft_cy_hit_cap(t_cylinder cy, t_ray ray, t_vec3 cap, float *d);
 
 /**
  * @brief Determines if the potential hits are accurate
@@ -138,7 +139,7 @@ void	ft_hit_cap(t_cylinder cy, t_ray ray, t_vec3 cap, float *d);
  * @return true 			If cylinder is hit
  * @return false 			If cylinder is missed
  */
-void	ft_identify_hits(t_cylinder cy, t_ray ray, float potential_hits[4], \
+void	ft_cy_identify_hits(t_cylinder cy, t_ray ray, float potential_hits[4], \
 	t_hitrecord *rec);
 
 /**
@@ -149,7 +150,7 @@ void	ft_identify_hits(t_cylinder cy, t_ray ray, float potential_hits[4], \
  * @param cy 			Cylinder
  * @return t_vec3 
  */
-t_vec3	ft_cylinder_normal(t_hitrecord rec, t_ray ray, t_cylinder cy);
+t_vec3	ft_cy_normal(t_hitrecord rec, t_ray ray, t_cylinder cy);
 
 /**
  * @brief Checks if the ray actually hit the cylinder wall
@@ -163,7 +164,7 @@ t_vec3	ft_cylinder_normal(t_hitrecord rec, t_ray ray, t_cylinder cy);
  * @return true 		If wall is hit
  * @return false 		If wall is missed
  */
-bool	ft_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec);
+bool	ft_cy_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec);
 
 /**
  * @brief Checks if the ray actually hit the cylinder cap
@@ -177,7 +178,7 @@ bool	ft_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec);
  * @return true 		If cap is hit
  * @return false 		If cap is missed
  */
-bool	ft_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
+bool	ft_cy_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
 	float d);
 
 /**
@@ -190,7 +191,7 @@ bool	ft_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
  * @param d3		Distance of ray indicating potential hit with one cap
  * @param d4		Distance of ray indicating potential hit with other cap
  */
-bool	ft_visible(t_equation eq, t_interval ray_d, float d3, \
+bool	ft_cy_visible(t_equation eq, t_interval ray_d, float d3, \
 	float d4);
 
 #endif
