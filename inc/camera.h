@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 14:27:40 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/18 15:30:41 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef struct s_image
  * @param w						Basis vector pointing to opposite view direction
  * @param vup					Camera-relative up direction
  * @param camera_centre			Camera position
+ * @param hfov					Horizontal field of view in degrees
  */
 typedef struct s_cam
 {
@@ -54,6 +55,7 @@ typedef struct s_cam
 	t_vec3	w;
 	t_vec3	vup;
 	t_vec3	camera_centre;
+	float	hfov;
 }	t_cam;
 
 /**
@@ -67,7 +69,6 @@ typedef struct s_cam
  * @param viewport_width		Width of viewport rectangle
  * @param viewport_height		Height of viewport rectangle
  * @param focal_length			Distance between camera centre and viewport centre
- * @param hfov					Horizontal field of view in degrees
  * @param viewport_u			Vector u in viewport coordinates (= x)
  * @param viewport_v			Vector v in viewport coordinates (= -y)
  * @param delta_u				Distance between two pixels in u-direction
@@ -80,7 +81,6 @@ typedef struct s_viewport
 	float	viewport_width;
 	float	viewport_height;
 	float	focal_length;
-	float	hfov;
 	t_vec3	viewport_u;
 	t_vec3	viewport_v;
 	t_vec3	delta_u;

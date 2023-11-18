@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 16:32:56 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/18 15:31:11 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ void	ft_initiate_camera(t_cam *cam)
 void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image)
 {
 	vp->focal_length = ft_vec3_abs(ft_vec3_sub(cam.look_from, cam.look_at));
-	vp->hfov = ft_degree_to_radian(100);
-	vp->viewport_width = 2 * tan(vp->hfov / 2) * vp->focal_length;
+	cam.hfov = ft_degree_to_radian(100);
+	vp->viewport_width = 2 * tan(cam.hfov / 2) * vp->focal_length;
 	vp->viewport_height = vp->viewport_width / image.image_width \
 		* image.image_height;
 	vp->viewport_u = ft_vec3_scale(cam.u, vp->viewport_width);
