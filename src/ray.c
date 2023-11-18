@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ray.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/29 13:44:33 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/17 14:38:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ray.h"
-#include "hit_manager.h"
+#include "lighting.h"
 
 t_vec3	ft_ray(t_ray ray, float d)
 {
@@ -20,28 +20,39 @@ t_vec3	ft_ray(t_ray ray, float d)
 
 t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 {
-	// Spheres
-	t_colour	sphere_colour;
+	t_colour	ray_colour;
 	t_hitrecord	rec;
+	t_hittable	cur;
 	t_interval	ray_d;
+	int			i;
 
 	ray_d.min = 0;
 	ray_d.max = INFINITY;
-
-	if (ft_hit_scene_sp(scene, ray, &rec, ray_d))
+	rec.d = INFINITY;
+	i = -1;
+	while (++i < scene.total)
 	{
-		sphere_colour.r = 0.5 * (rec.normal.x + 1.0);
-		sphere_colour.g = 0.5 * (rec.normal.y + 1.0);
-		sphere_colour.b = 0.5 * (rec.normal.z + 1.0);
-		return (sphere_colour);
+		cur = scene.obj[i];
+		if (ft_hit_hittable(cur, ray, &rec, ray_d))
+			if (rec.d < ray_d.max)
+				ray_d.max = rec.d;
 	}
+	if (ray_d.max < INFINITY)
+	{
+		ft_enlighten(&ray_colour, rec, scene);
+		return (ray_colour);
+	}
+	return (ft_background_colour(ray));
+}
 
-	// Background
+t_colour	ft_background_colour(t_ray ray)
+{
 	t_vec3		unit_direction;
 	float		a;
-	t_colour	ray_colour;
 	t_colour	white;
 	t_colour	blue;
+	t_colour	ray_colour;
+
 	white.r = 1.0;
 	white.g = 1.0;
 	white.b = 1.0;

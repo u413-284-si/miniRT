@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/10/30 11:39:07 by sqiu             ###   ########.fr        #
+#    Updated: 2023/11/17 15:41:40 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,9 +66,15 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 
 SRC :=	camera.c \
 		colour.c \
+		hit_cylinder.c \
+		hit_plane.c \
 		hit_sphere.c \
+		hit.c \
 		ray.c \
-		scene.c \
+		scene_light.c \
+		scene_shadow.c \
+		scene_init.c \
+		utils_cylinder.c \
 		utils.c \
 		vec3_arithmetics.c \
 		vec3_linalgebra.c

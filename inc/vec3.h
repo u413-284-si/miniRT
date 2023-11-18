@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:45:53 by sqiu              #+#    #+#             */
-/*   Updated: 2023/10/30 11:43:41 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/18 15:25:07 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 /* ====== LIBRARIES ====== */
 
 # include <math.h>
+# include <stdbool.h>
+# include "utils.h"
+
+/* ====== MACROS ====== */
 
 /* ====== TYPEDEFS ====== */
 
@@ -95,5 +99,25 @@ t_vec3	ft_vec3_norm(t_vec3 v);
  * @return float
  */
 float	ft_vec3_angle(t_vec3 v1, t_vec3 v2);
+
+/**
+ * @brief Calculates the Hadamard product of two vectors
+ * 
+ * Component-wise vector multiplication
+ * @param v1 	The first vector
+ * @param v2 	The second vector
+ * @return t_vec3 
+ */
+t_vec3	ft_vec3_hadamard(t_vec3 v1, t_vec3 v2);
+
+/**
+ * @brief Determines if two vectors are equal
+ * 
+ * @param v1 		The first vector
+ * @param v2 		The second vector
+ * @return true 	If both vectors are equal
+ * @return false 	If the vectors differ
+ */
+bool	ft_vec3_equal(t_vec3 v1, t_vec3 v2);
 
 #endif
