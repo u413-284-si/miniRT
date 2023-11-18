@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3_linalgebra.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:52:25 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 16:56:50 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/18 15:26:08 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ t_vec3	ft_vec3_hadamard(t_vec3 v1, t_vec3 v2)
 
 bool	ft_vec3_equal(t_vec3 v1, t_vec3 v2)
 {
-	return ((v1.x - v2.x) < EPSILON && (v1.y - v2.y) < EPSILON \
-		&& (v1.z - v2.z) < EPSILON);
+	return (ft_nearly_equal_flt(v1.x, v2.x) && ft_nearly_equal_flt(v1.y, v2.y) \
+		&& ft_nearly_equal_flt(v1.z, v2.z));
 }

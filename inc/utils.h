@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 14:41:05 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/18 15:24:40 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 /* ====== MACROS ====== */
 
 # define RAD 0.01745329251
+# define EPSILON 1e-4
 
 /* ====== TYPEDEFS ====== */
 
@@ -104,5 +105,17 @@ bool	ft_surrounds(float x, t_interval interval);
  * @return float
  */
 float	ft_solve(t_equation *eq);
+
+/**
+ * @brief Checks if two floats are (almost) equal
+ * 
+ * If their absolute difference is below threshold EPSILON,
+ * then they are declared equal
+ * @param one 		First float
+ * @param two 		Second float
+ * @return true 	If both floats are (almost) equal
+ * @return false 	If they are not equal
+ */
+bool	ft_nearly_equal_flt(float one, float two);
 
 #endif
