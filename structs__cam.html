@@ -95,73 +95,50 @@ $(document).ready(function(){initNavTree('structs__cam.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
-<p>Contains camera, image and viewport parameters.  
+<p>Contains camera parameters.  
  <a href="structs__cam.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="camera_8h_source.html">camera.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a5584bdb427edfe29e0c0c3753b619161"><td class="memItemLeft" align="right" valign="top"><a id="a5584bdb427edfe29e0c0c3753b619161"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>aspect_ratio</b></td></tr>
-<tr class="separator:a5584bdb427edfe29e0c0c3753b619161"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcdf062bf62cd36e741bd190386f5fdb"><td class="memItemLeft" align="right" valign="top"><a id="adcdf062bf62cd36e741bd190386f5fdb"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>image_width</b></td></tr>
-<tr class="separator:adcdf062bf62cd36e741bd190386f5fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e0e6a62a1d85a2fdf500d466ea7a33f"><td class="memItemLeft" align="right" valign="top"><a id="a1e0e6a62a1d85a2fdf500d466ea7a33f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>image_height</b></td></tr>
-<tr class="separator:a1e0e6a62a1d85a2fdf500d466ea7a33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9302b05c3227e216beac4d5e2e491219"><td class="memItemLeft" align="right" valign="top"><a id="a9302b05c3227e216beac4d5e2e491219"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>viewport_width</b></td></tr>
-<tr class="separator:a9302b05c3227e216beac4d5e2e491219"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad15e7f5ff23f41531867de986174191c"><td class="memItemLeft" align="right" valign="top"><a id="ad15e7f5ff23f41531867de986174191c"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>viewport_height</b></td></tr>
-<tr class="separator:ad15e7f5ff23f41531867de986174191c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6058af181f19d940f7e30a94877f422b"><td class="memItemLeft" align="right" valign="top"><a id="a6058af181f19d940f7e30a94877f422b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>focal_length</b></td></tr>
-<tr class="separator:a6058af181f19d940f7e30a94877f422b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a070a72d358260a9ee2a9d0eef0b4b"><td class="memItemLeft" align="right" valign="top"><a id="a00a070a72d358260a9ee2a9d0eef0b4b"></a>
+<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>look_from</b></td></tr>
+<tr class="separator:a00a070a72d358260a9ee2a9d0eef0b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a261ce0491533902f4005ee6e42b7b62a"><td class="memItemLeft" align="right" valign="top"><a id="a261ce0491533902f4005ee6e42b7b62a"></a>
+<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>look_at</b></td></tr>
+<tr class="separator:a261ce0491533902f4005ee6e42b7b62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2500923867e58e508a04f0e2dc7a5a9"><td class="memItemLeft" align="right" valign="top"><a id="ad2500923867e58e508a04f0e2dc7a5a9"></a>
+<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>u</b></td></tr>
+<tr class="separator:ad2500923867e58e508a04f0e2dc7a5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f461a97f97758ac375c5a925092823"><td class="memItemLeft" align="right" valign="top"><a id="a62f461a97f97758ac375c5a925092823"></a>
+<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>v</b></td></tr>
+<tr class="separator:a62f461a97f97758ac375c5a925092823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a847e598e6d6ee5145a152c1747a7ceda"><td class="memItemLeft" align="right" valign="top"><a id="a847e598e6d6ee5145a152c1747a7ceda"></a>
+<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>w</b></td></tr>
+<tr class="separator:a847e598e6d6ee5145a152c1747a7ceda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b3f678a942cbc45b709b4ec1de762d"><td class="memItemLeft" align="right" valign="top"><a id="a96b3f678a942cbc45b709b4ec1de762d"></a>
+<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vup</b></td></tr>
+<tr class="separator:a96b3f678a942cbc45b709b4ec1de762d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd3be18cfab47bc071b59efdde0c2998"><td class="memItemLeft" align="right" valign="top"><a id="afd3be18cfab47bc071b59efdde0c2998"></a>
 <a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>camera_centre</b></td></tr>
 <tr class="separator:afd3be18cfab47bc071b59efdde0c2998"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14215ad122daf2255a4f5fa56545eee2"><td class="memItemLeft" align="right" valign="top"><a id="a14215ad122daf2255a4f5fa56545eee2"></a>
-<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>viewport_u</b></td></tr>
-<tr class="separator:a14215ad122daf2255a4f5fa56545eee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aded53c14f5dad333dc27290fb1c4b31c"><td class="memItemLeft" align="right" valign="top"><a id="aded53c14f5dad333dc27290fb1c4b31c"></a>
-<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>viewport_v</b></td></tr>
-<tr class="separator:aded53c14f5dad333dc27290fb1c4b31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2f0f3e4672e8cdcb93489697990172f"><td class="memItemLeft" align="right" valign="top"><a id="ac2f0f3e4672e8cdcb93489697990172f"></a>
-<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>viewport_w</b></td></tr>
-<tr class="separator:ac2f0f3e4672e8cdcb93489697990172f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88e94e4de620845d48dd902d23bd54f0"><td class="memItemLeft" align="right" valign="top"><a id="a88e94e4de620845d48dd902d23bd54f0"></a>
-<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>delta_u</b></td></tr>
-<tr class="separator:a88e94e4de620845d48dd902d23bd54f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b4f59096fb0409225f1e2bf65f4af25"><td class="memItemLeft" align="right" valign="top"><a id="a0b4f59096fb0409225f1e2bf65f4af25"></a>
-<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>delta_v</b></td></tr>
-<tr class="separator:a0b4f59096fb0409225f1e2bf65f4af25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a316948b4706eba372777b94fbcfcbfe0"><td class="memItemLeft" align="right" valign="top"><a id="a316948b4706eba372777b94fbcfcbfe0"></a>
-<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>viewport_upper_left</b></td></tr>
-<tr class="separator:a316948b4706eba372777b94fbcfcbfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75ebcd0aad35d467ecb23efc7cc7c2e4"><td class="memItemLeft" align="right" valign="top"><a id="a75ebcd0aad35d467ecb23efc7cc7c2e4"></a>
-<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pixel00_pos</b></td></tr>
-<tr class="separator:a75ebcd0aad35d467ecb23efc7cc7c2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672c6ed4b0124b4f2a0a2c72ceb308ed"><td class="memItemLeft" align="right" valign="top"><a id="a672c6ed4b0124b4f2a0a2c72ceb308ed"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>hfov</b></td></tr>
+<tr class="separator:a672c6ed4b0124b4f2a0a2c72ceb308ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains camera, image and viewport parameters. </p>
-<p>The viewport is a virtual rectangle in the 3D world containing the grid of image pixel locations. If pixels are equispaced horizontally and verti- cally, the viewport has the same aspect_ratio as the image. The focal length is the distance between the camera centre and the viewport centre (vector orthogonal on viewport plane). </p><dl class="params"><dt>Parameters</dt><dd>
+<div class="textblock"><p>Contains camera parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aspect_ratio</td><td>Ratio of image_width / image_height </td></tr>
-    <tr><td class="paramname">image_width</td><td>Width of image created </td></tr>
-    <tr><td class="paramname">image_height</td><td>Height of image created </td></tr>
-    <tr><td class="paramname">viewport_width</td><td>Width of viewport rectangle </td></tr>
-    <tr><td class="paramname">viewport_height</td><td>Height of viewport rectangle </td></tr>
-    <tr><td class="paramname">focal_length</td><td>Distance between camera centre and viewport centre </td></tr>
-    <tr><td class="paramname">viewport_u</td><td>Vector u in viewport coordinates (= x) </td></tr>
-    <tr><td class="paramname">viewport_v</td><td>Vector v in viewport coordinates (= -y) </td></tr>
-    <tr><td class="paramname">viewport_w</td><td>Vector w in viewport coordinates (= -z) </td></tr>
-    <tr><td class="paramname">delta_u</td><td>Distance between two pixels in u-direction </td></tr>
-    <tr><td class="paramname">delta_v</td><td>Distance between two pixels in v-direction </td></tr>
-    <tr><td class="paramname">viewport_upper_left</td><td>Position of upper left corner of viewport </td></tr>
-    <tr><td class="paramname">pixel00_pos</td><td>Position of the first pixel (0, 0) </td></tr>
+    <tr><td class="paramname">look_from</td><td>Position the camera is looking from </td></tr>
+    <tr><td class="paramname">look_at</td><td>Position the camera is looking at </td></tr>
+    <tr><td class="paramname">u</td><td>Basis vector pointing to camera right </td></tr>
+    <tr><td class="paramname">v</td><td>Basis vector pointing to camera up </td></tr>
+    <tr><td class="paramname">w</td><td>Basis vector pointing to opposite view direction </td></tr>
+    <tr><td class="paramname">vup</td><td>Camera-relative up direction </td></tr>
+    <tr><td class="paramname">camera_centre</td><td>Camera position </td></tr>
+    <tr><td class="paramname">hfov</td><td>Horizontal field of view in degrees </td></tr>
   </table>
   </dd>
 </dl>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: s_colour Struct Reference</title>
+<title>MiniRT: u_shape Union Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structs__colour.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('unionu__shape.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,34 +91,34 @@ $(document).ready(function(){initNavTree('structs__colour.html',''); initResizab
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">s_colour Struct Reference</div>  </div>
+<div class="title">u_shape Union Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents an RGB colour with float values from 0.0 - 1.0.  
- <a href="structs__colour.html#details">More...</a></p>
+<p>Contains information of the different shapes.  
+ <a href="unionu__shape.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="colour_8h_source.html">colour.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="entities_8h_source.html">entities.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a4788d82c901b9367dd5c0daff8a7616b"><td class="memItemLeft" align="right" valign="top"><a id="a4788d82c901b9367dd5c0daff8a7616b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>r</b></td></tr>
-<tr class="separator:a4788d82c901b9367dd5c0daff8a7616b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf17d727651616de6f2b79ef32170cd"><td class="memItemLeft" align="right" valign="top"><a id="a8cf17d727651616de6f2b79ef32170cd"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>g</b></td></tr>
-<tr class="separator:a8cf17d727651616de6f2b79ef32170cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83fc1af92e29717b4513d121b0c72c7d"><td class="memItemLeft" align="right" valign="top"><a id="a83fc1af92e29717b4513d121b0c72c7d"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>b</b></td></tr>
-<tr class="separator:a83fc1af92e29717b4513d121b0c72c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc9375daac853aada5acdd08f407adf0"><td class="memItemLeft" align="right" valign="top"><a id="adc9375daac853aada5acdd08f407adf0"></a>
+<a class="el" href="structs__sphere.html">t_sphere</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sp</b></td></tr>
+<tr class="separator:adc9375daac853aada5acdd08f407adf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef96f2ffd702dc2a112eb2d95ac0aa69"><td class="memItemLeft" align="right" valign="top"><a id="aef96f2ffd702dc2a112eb2d95ac0aa69"></a>
+<a class="el" href="structs__plane.html">t_plane</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pl</b></td></tr>
+<tr class="separator:aef96f2ffd702dc2a112eb2d95ac0aa69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16d3c8c94f7085273d02d0cf2758e56"><td class="memItemLeft" align="right" valign="top"><a id="af16d3c8c94f7085273d02d0cf2758e56"></a>
+<a class="el" href="structs__cylinder.html">t_cylinder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cy</b></td></tr>
+<tr class="separator:af16d3c8c94f7085273d02d0cf2758e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents an RGB colour with float values from 0.0 - 1.0. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<div class="textblock"><p>Contains information of the different shapes. </p>
+<p>Each union represents one shape which can be addressed by the respective member. The memory space can be interpreted with different names (its members) as a variable. It has the size of the biggest member type. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>Red component </td></tr>
-    <tr><td class="paramname">g</td><td>Green component </td></tr>
-    <tr><td class="paramname">b</td><td>Blue component </td></tr>
+    <tr><td class="paramname">sp</td><td>Union variable addressed as sphere. </td></tr>
+    <tr><td class="paramname">pl</td><td>Union variable addressed as plane. </td></tr>
+    <tr><td class="paramname">cy</td><td>Union variable addressed as cylinder. </td></tr>
   </table>
   </dd>
 </dl>
@@ -127,7 +127,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>b</b></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="structs__colour.html">s_colour</a></li>
+    <li class="navelem"><a class="el" href="unionu__shape.html">u_shape</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

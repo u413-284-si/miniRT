@@ -98,19 +98,19 @@ $(document).ready(function(){initNavTree('structs__entities.html',''); initResiz
 <p>Contains all entities in the scene.  
  <a href="structs__entities.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="scene_8h_source.html">scene.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="entities_8h_source.html">entities.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a65ea6eb2e6dd02913de334114c0423f6"><td class="memItemLeft" align="right" valign="top"><a id="a65ea6eb2e6dd02913de334114c0423f6"></a>
-<a class="el" href="structs__sphere.html">t_sphere</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>sp</b></td></tr>
-<tr class="separator:a65ea6eb2e6dd02913de334114c0423f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4162213b98b0079d468bffd4ae4f2c0d"><td class="memItemLeft" align="right" valign="top"><a id="a4162213b98b0079d468bffd4ae4f2c0d"></a>
-<a class="el" href="structs__plane.html">t_plane</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pl</b></td></tr>
-<tr class="separator:a4162213b98b0079d468bffd4ae4f2c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcb1fcb3d0456edfb303a95ea43c9ced"><td class="memItemLeft" align="right" valign="top"><a id="adcb1fcb3d0456edfb303a95ea43c9ced"></a>
-<a class="el" href="structs__cylinder.html">t_cylinder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cy</b></td></tr>
-<tr class="separator:adcb1fcb3d0456edfb303a95ea43c9ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb57bdaefa87300e076b3e9a4ddc6184"><td class="memItemLeft" align="right" valign="top"><a id="adb57bdaefa87300e076b3e9a4ddc6184"></a>
+<a class="el" href="structs__light.html">t_light</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ambient</b></td></tr>
+<tr class="separator:adb57bdaefa87300e076b3e9a4ddc6184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ca2988c2a2c6b37d9e1e5fa7d3f2f2"><td class="memItemLeft" align="right" valign="top"><a id="ad6ca2988c2a2c6b37d9e1e5fa7d3f2f2"></a>
+<a class="el" href="structs__light.html">t_light</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lsrc</b></td></tr>
+<tr class="separator:ad6ca2988c2a2c6b37d9e1e5fa7d3f2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65db50568efc1e70b28b181328d14367"><td class="memItemLeft" align="right" valign="top"><a id="a65db50568efc1e70b28b181328d14367"></a>
+<a class="el" href="structs__hittable.html">t_hittable</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>obj</b></td></tr>
+<tr class="separator:a65db50568efc1e70b28b181328d14367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39e95cd63134c98783681ca6f50af0e1"><td class="memItemLeft" align="right" valign="top"><a id="a39e95cd63134c98783681ca6f50af0e1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>sp_count</b></td></tr>
 <tr class="separator:a39e95cd63134c98783681ca6f50af0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,17 +120,24 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pl_count</b></td></tr>
 <tr class="memitem:aa62b41406ef16b518c9b98299ae11880"><td class="memItemLeft" align="right" valign="top"><a id="aa62b41406ef16b518c9b98299ae11880"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>cy_count</b></td></tr>
 <tr class="separator:aa62b41406ef16b518c9b98299ae11880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41095695a4b729ef79d0c98e432ce62b"><td class="memItemLeft" align="right" valign="top"><a id="a41095695a4b729ef79d0c98e432ce62b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>lsrc_count</b></td></tr>
+<tr class="separator:a41095695a4b729ef79d0c98e432ce62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7af894858cf396a219d632f40afdc8d"><td class="memItemLeft" align="right" valign="top"><a id="ac7af894858cf396a219d632f40afdc8d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>total</b></td></tr>
+<tr class="separator:ac7af894858cf396a219d632f40afdc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains all entities in the scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sp</td><td>Array of spheres </td></tr>
-    <tr><td class="paramname">pl</td><td>Array of planes </td></tr>
-    <tr><td class="paramname">cy</td><td>Array of cylinders </td></tr>
+    <tr><td class="paramname">ambient</td><td>Ambient lighting </td></tr>
+    <tr><td class="paramname">lsrc</td><td>Light sources </td></tr>
+    <tr><td class="paramname">obj</td><td>Array of hittables </td></tr>
     <tr><td class="paramname">sp_count</td><td>Number of spheres </td></tr>
     <tr><td class="paramname">pl_count</td><td>Number of planes </td></tr>
     <tr><td class="paramname">cy_count</td><td>Number of cylinders </td></tr>
+    <tr><td class="paramname">lsrc_count</td><td>Number of light sources </td></tr>
   </table>
   </dd>
 </dl>

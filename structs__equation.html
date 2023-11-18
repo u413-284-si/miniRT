@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: s_colour Struct Reference</title>
+<title>MiniRT: s_equation Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structs__colour.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('structs__equation.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,34 +91,43 @@ $(document).ready(function(){initNavTree('structs__colour.html',''); initResizab
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">s_colour Struct Reference</div>  </div>
+<div class="title">s_equation Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents an RGB colour with float values from 0.0 - 1.0.  
- <a href="structs__colour.html#details">More...</a></p>
+<p>Contains factors to solve linear and quadratic equations.  
+ <a href="structs__equation.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="colour_8h_source.html">colour.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="utils_8h_source.html">utils.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a4788d82c901b9367dd5c0daff8a7616b"><td class="memItemLeft" align="right" valign="top"><a id="a4788d82c901b9367dd5c0daff8a7616b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>r</b></td></tr>
-<tr class="separator:a4788d82c901b9367dd5c0daff8a7616b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf17d727651616de6f2b79ef32170cd"><td class="memItemLeft" align="right" valign="top"><a id="a8cf17d727651616de6f2b79ef32170cd"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>g</b></td></tr>
-<tr class="separator:a8cf17d727651616de6f2b79ef32170cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aec1a5be9d9a4a394a2e49e9744286e"><td class="memItemLeft" align="right" valign="top"><a id="a4aec1a5be9d9a4a394a2e49e9744286e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>a</b></td></tr>
+<tr class="separator:a4aec1a5be9d9a4a394a2e49e9744286e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83fc1af92e29717b4513d121b0c72c7d"><td class="memItemLeft" align="right" valign="top"><a id="a83fc1af92e29717b4513d121b0c72c7d"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>b</b></td></tr>
 <tr class="separator:a83fc1af92e29717b4513d121b0c72c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78103ab33f03590e84ff7bc735629d7"><td class="memItemLeft" align="right" valign="top"><a id="ae78103ab33f03590e84ff7bc735629d7"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>c</b></td></tr>
+<tr class="separator:ae78103ab33f03590e84ff7bc735629d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3967641da3863c1f79e94be997341402"><td class="memItemLeft" align="right" valign="top"><a id="a3967641da3863c1f79e94be997341402"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>d1</b></td></tr>
+<tr class="separator:a3967641da3863c1f79e94be997341402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1777fc7cfc528c03b3e8c38f14e2b9"><td class="memItemLeft" align="right" valign="top"><a id="aac1777fc7cfc528c03b3e8c38f14e2b9"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>d2</b></td></tr>
+<tr class="separator:aac1777fc7cfc528c03b3e8c38f14e2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents an RGB colour with float values from 0.0 - 1.0. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<div class="textblock"><p>Contains factors to solve linear and quadratic equations. </p>
+<p>ax² + bx + c = 0</p>
+<p>x = (-b +/- sqr(b² - 4ac)) / 2a Here we use d instead of x as variable to represent the distance of the ray traveled. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>Red component </td></tr>
-    <tr><td class="paramname">g</td><td>Green component </td></tr>
-    <tr><td class="paramname">b</td><td>Blue component </td></tr>
+    <tr><td class="paramname">a</td><td>Factor of quadratic component </td></tr>
+    <tr><td class="paramname">b</td><td>Factor of linear component </td></tr>
+    <tr><td class="paramname">c</td><td>Constant </td></tr>
+    <tr><td class="paramname">d1</td><td>First solution </td></tr>
+    <tr><td class="paramname">d2</td><td>Second solution </td></tr>
   </table>
   </dd>
 </dl>
@@ -127,7 +136,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>b</b></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="structs__colour.html">s_colour</a></li>
+    <li class="navelem"><a class="el" href="structs__equation.html">s_equation</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
