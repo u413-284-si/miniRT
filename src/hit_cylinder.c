@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hit_cylinder.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/17 16:41:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/18 15:19:08 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
 {
 	t_equation	eq;
 	t_vec3		cap1_ray;
-	float		d3;
-	float		d4;
+	float		cap_hit1;
+	float		cap_hit2;
 
 	cap1_ray = ft_vec3_sub(ray.origin, cy.cap1);
 	eq.a = ft_vec3_dot(ray.direction, ray.direction) - \
@@ -45,14 +45,14 @@ bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
 		pow(ft_vec3_dot(cap1_ray, cy.axis), 2) - pow(cy.d / 2.0, 2);
 	if (ft_solve(&eq) < 0)
 		return (false);
-	ft_cy_hit_cap(cy, ray, cy.cap1, &d3);
-	ft_cy_hit_cap(cy, ray, cy.cap2, &d4);
-	if (!ft_cy_visible(eq, ray_d, d3, d4))
+	ft_cy_hit_cap(cy, ray, cy.cap1, &cap_hit1);
+	ft_cy_hit_cap(cy, ray, cy.cap2, &cap_hit2);
+	if (!ft_cy_visible(eq, ray_d, cap_hit1, cap_hit2))
 		return (false);
 	potential_hits[0] = eq.d1;
 	potential_hits[1] = eq.d2;
-	potential_hits[2] = d3;
-	potential_hits[3] = d4;
+	potential_hits[2] = cap_hit1;
+	potential_hits[3] = cap_hit2;
 	return (true);
 }
 
