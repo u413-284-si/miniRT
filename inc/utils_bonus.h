@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/19 20:28:25 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/19 21:35:37 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,5 +118,30 @@ float	ft_solve(t_equation *eq);
  * @return false 	If they are not equal
  */
 bool	ft_nearly_equal_flt(float one, float two);
+
+/**
+ * @brief Return a random float
+ * 
+ * @return float 
+ */
+float	ft_random_float(void);
+
+/**
+ * @brief Return a random float within min and max
+ * 
+ * @param min 		Lower bounder
+ * @param max 		Upper bounder
+ * @return float 
+ */
+float	ft_random_float_in(float min, float max);
+
+/**
+ * @brief Ensure that the returned float lies within the interval
+ * 
+ * @param x 			Float given
+ * @param interval 		Interval with min and max value
+ * @return float 
+ */
+float	ft_clamp(float x, t_interval interval);
 
 #endif
