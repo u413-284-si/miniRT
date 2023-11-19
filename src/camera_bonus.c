@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/19 22:41:47 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/19 23:02:09 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	ft_initiate_camera(t_cam *cam)
 	cam->w = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
 	cam->u = ft_vec3_cross(cam->vup, cam->w);
 	cam->v = ft_vec3_cross(cam->w, cam->u);
+	cam->samples_per_pixel = 10;
 }
 
 void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image)
@@ -64,20 +65,20 @@ void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image)
 void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
 	t_entities scene)
 {
-	int	iterate[3];
+	int	iterate[2];
 
-	iterate[2] = 10;
 	printf("P3\n%d %d\n255\n", image.image_width, image.image_height);
 	iterate[1] = -1;
 	while (++iterate[1] < image.image_height)
 	{
 		iterate[0] = -1;
 		while (++iterate[0] < image.image_width)
-			ft_write_colour(ft_get_colour(iterate, vp, cam, scene), iterate[2]);
+			ft_write_colour(ft_get_colour(iterate, vp, cam, scene), \
+				cam.samples_per_pixel);
 	}
 }
 
-t_colour	ft_get_colour(int iterate[3], t_viewport vp, t_cam cam, \
+t_colour	ft_get_colour(int iterate[2], t_viewport vp, t_cam cam, \
 	t_entities scene)
 {
 	int			curr_sample;
@@ -88,7 +89,7 @@ t_colour	ft_get_colour(int iterate[3], t_viewport vp, t_cam cam, \
 	pixel_colour.r = 0.0;
 	pixel_colour.g = 0.0;
 	pixel_colour.b = 0.0;
-	while (++curr_sample < iterate[2])
+	while (++curr_sample < cam.samples_per_pixel)
 	{
 		ray = ft_create_sample_ray(iterate[0], iterate[1], vp, cam);
 		pixel_colour = ft_add_colour(pixel_colour, \

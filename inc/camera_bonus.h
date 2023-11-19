@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/19 22:43:49 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/19 22:57:49 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ typedef struct s_image
  * @param vup					Camera-relative up direction
  * @param camera_centre			Camera position
  * @param hfov					Horizontal field of view in degrees
+ * @param samples_per_pixel		Amount of ray samples generated per pixel for anit-aliasing
  */
 typedef struct s_cam
 {
@@ -56,6 +57,7 @@ typedef struct s_cam
 	t_vec3	vup;
 	t_vec3	camera_centre;
 	float	hfov;
+	int		samples_per_pixel;
 }	t_cam;
 
 /**
@@ -155,13 +157,13 @@ t_vec3		ft_pixel_sample(t_viewport vp);
  * 
  * The pixel colour is generated as an average of a sample of ray colours
  * around the pixel in question.
- * @param iterate		Integer array containing current pixel position and amount of samples
+ * @param iterate		Integer array containing current pixel position
  * @param vp			Viewport
  * @param cam			Camera
  * @param scene			The scene containing all hittables
  * @return t_colour
  */
-t_colour	ft_get_colour(int iterate[3], t_viewport vp, t_cam cam, \
+t_colour	ft_get_colour(int iterate[2], t_viewport vp, t_cam cam, \
 	t_entities scene);
 
 #endif
