@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
+#    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/17 15:41:40 by sqiu             ###   ########.fr        #
+#    Updated: 2023/11/19 21:14:40 by u413q            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
 # ******************************
 
 NAME := miniRT
+BONUSNAME := miniRT_supreme
 LIBFT := $(LIB_DIR_FT)/libft.a
 #TEST := test
 
@@ -81,12 +82,34 @@ SRC :=	camera.c \
 
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
+SRC_B := camera.c \
+		colour.c \
+		hit_cylinder.c \
+		hit_plane.c \
+		hit_sphere.c \
+		hit.c \
+		ray.c \
+		scene_light.c \
+		scene_shadow.c \
+		scene_init.c \
+		utils_cylinder.c \
+		utils_random_bonus.c \
+		utils.c \
+		vec3_arithmetics.c \
+		vec3_linalgebra.c
+
+SRCS_B := $(addprefix $(SRC_DIR)/, $(SRC_B))
+
 # ******************************
 # *     Object files           *
 # ******************************
 
 OBJ := $(SRC:.c=.o)
 OBJS := $(addprefix $(OBJ_DIR)/, $(OBJ))
+
+OBJ_B := $(SRC_B:.c=.o)
+OBJS_B := $(addprefix $(OBJ_DIR)/, $(OBJ_B))
+
 OBJ_MAIN = $(OBJ_DIR)/main.o
 
 # ******************************
@@ -94,8 +117,13 @@ OBJ_MAIN = $(OBJ_DIR)/main.o
 # ******************************
 
 DEPFILES = $(SRC:%.c=$(DEP_DIR)/%.d)
+
+DEPFILES_B = $(SRC_B:%.c=$(DEP_DIR)/%.d)
+
 # add dependency for main, since not in SRC
 DEPFILES += $(DEP_DIR)/main.d
+
+DEPFILES_B += $(DEP_DIR)/main.d
 
 # ******************************
 # *     Test files             *
@@ -110,16 +138,26 @@ DEPFILES += $(DEP_DIR)/main.d
 .PHONY: all
 all: $(NAME)
 
+.PHONY: BONUS
+bonus: $(BONUSNAME)
+
 # ******************************
 # *     NAME linkage           *
 # ******************************
 
 # Linking the NAME target
 $(NAME): $(LIBFT) $(OBJS) $(OBJ_MAIN)
-	@printf "\n$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "\n$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE) $@ $(RESET)]\n"
 	$(CC) $(LDFLAGS) $(OBJS) $(OBJ_MAIN) $(LDLIBS) -o $@
-	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	@printf "$(BOLD)$(GREEN)$(NAME) created!$(RESET)\n\n"
+	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE) $@ $(RESET)]\n"
+	@printf "$(BOLD)$(GREEN) $@ created!$(RESET)\n\n"
+
+# Linking the BONUSNAME target
+$(BONUSNAME): $(LIBFT) $(OBJS_B) $(OBJ_MAIN)
+	@printf "\n$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE) $@ $(RESET)]\n"
+	$(CC) $(LDFLAGS) $(OBJS_B) $(OBJ_MAIN) $(LDLIBS) -o $@
+	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE) $@ $(RESET)]\n"
+	@printf "$(BOLD)$(GREEN) $@ created! 🔥$(RESET)\n\n"
 
 # This target adds fsanitize leak checker to the flags. It needs to clean and recompile.
 .PHONY: leak
@@ -217,6 +255,8 @@ $(DEP_DIR):
 # Mention each dependency file as a target, so that make won’t fail if the file doesn’t exist.
 $(DEPFILES):
 
+$(DEPFILES_B):
+
 # ******************************
 # *     External Libraries     *
 # ******************************
@@ -232,7 +272,7 @@ $(LIBFT):
 
 .PHONY: clean
 clean:
-	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)$(NAME)/$(BONUSNAME)$(RESET)]\n"
 	@rm -rf $(OBJ_DIR)
 	@printf "$(RED)removed subdir $(OBJ_DIR)$(RESET)\n"
 
@@ -246,8 +286,9 @@ clean:
 
 .PHONY: fclean
 fclean: clean
+	@printf "$(RED)clean bin $(NAME)/$(BONUSNAME)$(RESET)\n"
 	@rm -rf $(NAME)
-	@printf "$(RED)clean bin $(NAME)$(RESET)\n"
+	@rm -rf $(BONUSNAME)
 	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)libft$(RESET)]\n"
 	@$(MAKE) --no-print-directory -C $(LIB_DIR_FT) fclean
 
@@ -265,3 +306,5 @@ re: fclean all
 # Include the dependency files that exist. Use wildcard to avoid failing on non-existent files.
 # Needs to be last target
 include $(wildcard $(DEPFILES))
+
+include $(wildcard $(DEPFILES_B))
