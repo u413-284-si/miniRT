@@ -6,7 +6,7 @@
 #    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/19 21:14:40 by u413q            ###   ########.fr        #
+#    Updated: 2023/11/19 22:32:28 by u413q            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,14 +76,14 @@ SRC :=	camera.c \
 		scene_shadow.c \
 		scene_init.c \
 		utils_cylinder.c \
-		utils.c \
+		utils_math.c \
 		vec3_arithmetics.c \
 		vec3_linalgebra.c
 
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
-SRC_B := camera.c \
-		colour.c \
+SRC_B := camera_bonus.c \
+		colour_bonus.c \
 		hit_cylinder.c \
 		hit_plane.c \
 		hit_sphere.c \
@@ -92,9 +92,10 @@ SRC_B := camera.c \
 		scene_light.c \
 		scene_shadow.c \
 		scene_init.c \
+		utils_camera_bonus.c \
 		utils_cylinder.c \
+		utils_math_bonus.c \
 		utils_random_bonus.c \
-		utils.c \
 		vec3_arithmetics.c \
 		vec3_linalgebra.c
 
