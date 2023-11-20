@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:30:12 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 17:19:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:18:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@
 
 # include "error_syscall.h"
 # include "cleanup.h"
-
-/* ===== MACROS ===== */
-
-# define BUF_SIZE 20
+# include "miniRT_config.h"
 
 /* ====== TYPEDEFS ====== */
 

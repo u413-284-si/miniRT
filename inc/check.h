@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 09:45:00 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:14:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,7 @@
 # include "ft_char.h"
 # include "ft_strtod.h"
 # include "entities.h"
-
-/* ===== MACROS ===== */
-
-# define AMBIENT_MAX 1
-# define CAMERA_MAX 1
-# define LIGHT_MAX 1
-# define SPHERE_MAX 100
-# define PLANE_MAX 100
-# define CYLINDER_MAX 100
-
-# define FLOAT_MIN -1000.0
-# define FLOAT_MAX 1000.0
+# include "miniRT_config.h"
 
 /* ====== TYPEDEFS ====== */
 
