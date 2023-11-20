@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 09:50:13 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 10:51:03 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 		}
 		i++;
 	}
-	ft_check_entity_count(ent_count);
+	if (ft_check_entity_count(ent_count))
+		return (ERROR);
 	*lsrc_c = ent_count[LIGHT];
 	*total = ent_count[SPHERE] + ent_count[PLANE] + ent_count[CYLINDER];
 	return (SUCCESS);
