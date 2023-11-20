@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/20 09:31:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:55:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,10 @@ int	main(int argc, char **argv)
 		exit(1);
 	}
 	ft_parse_file(argv[1], &scene, &cam);
-	/*
-
-
-	ft_create_scene(&scene);
 	ft_initiate_image(&image);
 	ft_initiate_camera(&cam);
 	ft_initiate_viewport(&viewport, cam, image);
 	ft_create_image(image, cam, viewport, scene);
-	(void)argv;
+
 	return (0);
 }
