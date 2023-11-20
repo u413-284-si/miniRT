@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:18:23 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/19 22:36:41 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/20 17:14:29 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 /* ====== LIBRARIES ====== */
 
 # include "hit_manager_bonus.h"
+# include "camera_bonus.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -28,9 +29,10 @@
  * @param ray_colour 	Resulting colour
  * @param rec 			Hit record
  * @param scene 		Scene containing light information
+ * @param cam			Camera looking at scene
  */
 void		ft_enlighten(t_colour *ray_colour, t_hitrecord rec, \
-	t_entities scene);
+	t_entities scene, t_cam cam);
 
 /**
  * @brief Create ambient lighting
@@ -52,6 +54,27 @@ t_colour	ft_ambient_light(t_light ambient);
  * @return t_colour 
  */
 t_colour	ft_diffuse_light(t_light cur, t_hitrecord rec);
+
+/**
+ * @brief Create specular lighting
+ * 
+ * Specular factor = (dot product(view dir, reflected dir))^shininess
+ * Specular lighting = specular factor * specular strength * light colour
+ * @param cur 			Current light source
+ * @param rec 			Hit record
+ * @param cam 			Camera
+ * @return t_colour 
+ */
+t_colour	ft_specular_light(t_light cur, t_hitrecord rec, t_cam cam);
+
+/**
+ * @brief Calculate the reflection vector
+ * 
+ * @param incoming 	Vector being reflected on surface
+ * @param normal 	Surface normal
+ * @return t_vec3 
+ */
+t_vec3		ft_reflect(t_vec3 incoming, t_vec3 normal);
 
 // Shadow realm
 

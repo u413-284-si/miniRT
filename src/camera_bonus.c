@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/19 23:02:09 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/20 08:11:12 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ t_colour	ft_get_colour(int iterate[2], t_viewport vp, t_cam cam, \
 	{
 		ray = ft_create_sample_ray(iterate[0], iterate[1], vp, cam);
 		pixel_colour = ft_add_colour(pixel_colour, \
-			ft_ray_colour(ray, scene));
+			ft_ray_colour(ray, scene, cam));
 	}
 	return (pixel_colour);
 }

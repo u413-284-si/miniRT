@@ -6,7 +6,7 @@
 #    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/19 22:32:28 by u413q            ###   ########.fr        #
+#    Updated: 2023/11/20 17:26:23 by u413q            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,9 +72,9 @@ SRC :=	camera.c \
 		hit_sphere.c \
 		hit.c \
 		ray.c \
+		scene_init.c \
 		scene_light.c \
 		scene_shadow.c \
-		scene_init.c \
 		utils_cylinder.c \
 		utils_math.c \
 		vec3_arithmetics.c \
@@ -88,10 +88,10 @@ SRC_B := camera_bonus.c \
 		hit_plane.c \
 		hit_sphere.c \
 		hit.c \
-		ray.c \
-		scene_light.c \
+		ray_bonus.c \
+		scene_init_bonus.c \
+		scene_light_bonus.c \
 		scene_shadow.c \
-		scene_init.c \
 		utils_camera_bonus.c \
 		utils_cylinder.c \
 		utils_math_bonus.c \
