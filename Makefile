@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/20 15:56:53 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/20 23:05:05 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,6 +87,7 @@ SRC := 	camera.c \
 		parse_entity_sp_pl_cy.c \
 		parse_line.c \
 		parse.c \
+		print_ppm.c \
 		ray.c \
 		render_draw.c \
 		render_init.c \
