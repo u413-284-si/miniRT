@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   scene.c                                            :+:      :+:    :+:   */
+/*   scene_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 15:07:59 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/20 11:27:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ void	ft_create_scene(t_entities *scene)
 	//int	i;
 
 	scene->lsrc_count = 1;
-	scene->sp_count = 0;
-	scene->pl_count = 0;
-	scene->cy_count = 1;
-	scene->total = scene->sp_count + scene->pl_count + scene->cy_count;
+	scene->total = 1;
 	scene->obj = malloc(scene->total * sizeof(t_hittable));
 	if (!scene->obj)
 		exit(232);

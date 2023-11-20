@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 10:30:17 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:27:22 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,9 +140,6 @@ typedef struct s_hittable
  * @param ambient		Ambient lighting
  * @param lsrc			Light sources
  * @param obj			Array of hittables
- * @param sp_count		Number of spheres
- * @param pl_count		Number of planes
- * @param cy_count		Number of cylinders
  * @param lsrc_count	Number of light sources
  */
 typedef struct s_entities
@@ -150,9 +147,6 @@ typedef struct s_entities
 	t_light		ambient;
 	t_light		*lsrc;
 	t_hittable	*obj;
-	int			sp_count;
-	int			pl_count;
-	int			cy_count;
 	int			lsrc_count;
 	int			total;
 }	t_entities;
