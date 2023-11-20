@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/19 22:57:49 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/20 17:35:29 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ typedef struct s_image
  * @param vup					Camera-relative up direction
  * @param camera_centre			Camera position
  * @param hfov					Horizontal field of view in degrees
- * @param samples_per_pixel		Amount of ray samples generated per pixel for anit-aliasing
+ * @param samples_per_pixel		Amount of ray samples generated per pixel 
+ * 								for anit-aliasing
  */
 typedef struct s_cam
 {
@@ -165,5 +166,15 @@ t_vec3		ft_pixel_sample(t_viewport vp);
  */
 t_colour	ft_get_colour(int iterate[2], t_viewport vp, t_cam cam, \
 	t_entities scene);
+
+/**
+ * @brief Returns the colour of a ray
+ * 
+ * @param ray 		Ray sent into the scene
+ * @param scene		Scene containing all hittable entities
+ * @param cam		Camera looking at scene
+ * @return t_colour Ray colour
+ */
+t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam);
 
 #endif
