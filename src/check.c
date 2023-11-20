@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 10:51:03 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:35:44 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 {
-	t_type	ent_type;
+	t_type	type;
 	static int	ent_count[SUM_ENTS];
 	size_t		i;
 
 	i = 0;
 	while (lines[i])
 	{
-		ent_type = ft_check_line_type(lines[i]);
-		if (ent_type == UNKNOWN
-			|| ft_incr_ent_count(ent_count, ent_type))
+		type = ft_check_line_type(lines[i]);
+		if (type == UNKNOWN
+			|| ft_incr_ent_count(ent_count, type))
 		{
 			ft_putstr_fd("Line number [ignoring empty lines]: <", 2);
 			ft_putnbr_fd(i, 2);
@@ -56,7 +56,7 @@ t_type	ft_check_line_type(char *line)
 	return (UNKNOWN);
 }
 
-t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_type ent_type)
+t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_type type)
 {
 	static const int	ent_max[SUM_ENTS] = {
 	[SPHERE] = SPHERE_MAX,
@@ -67,10 +67,10 @@ t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_type ent_type)
 	[LIGHT] = LIGHT_MAX
 	};
 
-	ent_count[ent_type]++;
-	if (ent_count[ent_type] > ent_max[ent_type])
+	ent_count[type]++;
+	if (ent_count[type] > ent_max[type])
 	{
-		ft_perror_count(ent_type, ent_max[ent_type], ent_count[ent_type], true);
+		ft_perror_count(type, ent_max[type], ent_count[type], true);
 		return (ERROR);
 	}
 	return (SUCCESS);
