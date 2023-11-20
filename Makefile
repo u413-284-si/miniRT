@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/20 11:50:12 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/20 14:40:47 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ DEP_DIR := $(OBJ_DIR)/dep
 # ******************************
 
 LDFLAGS := -L $(LIB_DIR_FT)
-LDLIBS := -lft -lm
+LDLIBS := -lft -lm -lmlx -lXext -lX11
 
 # ******************************
 # *     Vars for compiling     *
@@ -71,6 +71,7 @@ SRC := 	camera.c \
 		check.c \
 		cleanup.c \
 		colour.c \
+		error_mlx.c \
 		error_msg_check.c \
 		error_msg_generic.c \
 		error_syscall.c \
@@ -87,6 +88,7 @@ SRC := 	camera.c \
 		parse_line.c \
 		parse.c \
 		ray.c \
+		render_init.c \
 		scene_init.c \
 		scene_light.c \
 		scene_shadow.c \

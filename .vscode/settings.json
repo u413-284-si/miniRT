@@ -6,6 +6,10 @@
 		"hit_manager.h": "c",
 		"entities.h": "c",
 		"error_msg.h": "c",
-		"check.h": "c"
+		"check.h": "c",
+		"camera.h": "c",
+		"cleanup.h": "c",
+		"render.h": "c",
+		"error_syscall.h": "c"
 	}
 }
