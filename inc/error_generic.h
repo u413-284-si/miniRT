@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_msg.h                                        :+:      :+:    :+:   */
+/*   error_generic.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:23:15 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 17:12:42 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:41:12 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ERROR_MSG_H
-# define ERROR_MSG_H
+#ifndef ERROR_GENERIC_H
+# define ERROR_GENERIC_H
 
 /* ====== LIBRARIES ====== */
 
@@ -45,5 +45,6 @@ typedef enum e_err {
  * @param save_errno	Errno at the time of calling the function.
  */
 void	ft_perror(char *msg, int save_errno);
+void	ft_perror_number(char *msg, int number);
 
 #endif

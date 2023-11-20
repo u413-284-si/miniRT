@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:14:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:42:54 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "error_msg.h"
+# include "error_generic.h"
 # include "ft_char.h"
 # include "ft_strtod.h"
 # include "entities.h"

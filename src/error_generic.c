@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_msg.c                                        :+:      :+:    :+:   */
+/*   error_generic.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:17:35 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 07:57:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:41:22 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "error_msg.h"
+#include "error_generic.h"
 
 void	ft_perror(char *msg, int save_errno)
 {
@@ -22,4 +22,12 @@ void	ft_perror(char *msg, int save_errno)
 		errno = save_errno;
 		perror(msg);
 	}
+}
+
+void	ft_perror_number(char *msg, int number)
+{
+	ft_putstr_fd(msg, 2);
+	ft_putstr_fd(": <", 2);
+	ft_putnbr_fd(number, 2);
+	ft_putendl_fd(">", 2);
 }

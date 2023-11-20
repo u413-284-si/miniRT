@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/20 11:34:50 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/20 11:42:44 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,12 +67,12 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 SRC := 	camera.c \
 		check_entity_ACL.c \
 		check_entity_sp_pl_cy.c \
-		check_error.c \
 		check_line.c \
 		check.c \
 		cleanup.c \
 		colour.c \
-		error_msg.c \
+		error_check.c \
+		error_generic.c \
 		error_syscall.c \
 		ft_strtod.c \
 		hit_cylinder.c \

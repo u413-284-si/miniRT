@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:35:44 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:42:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 		if (type == UNKNOWN
 			|| ft_incr_ent_count(ent_count, type))
 		{
-			ft_putstr_fd("Line number [ignoring empty lines]: <", 2);
-			ft_putnbr_fd(i, 2);
-			ft_putendl_fd(">", 2);
+			ft_perror_number("Line number [ignoring empty lines]", i);
 			return (ERROR);
 		}
 		i++;
