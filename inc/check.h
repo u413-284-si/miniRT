@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:42:54 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:48:51 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "error_generic.h"
+# include "error_type.h"
+# include "error_msg.h"
 # include "ft_char.h"
 # include "ft_strtod.h"
 # include "entities.h"
@@ -230,54 +231,5 @@ t_type	ft_check_plane(char *line);
  * @return t_type CYLINDER on success, UNKNOWN if fail.
  */
 t_type	ft_check_cylinder(char *line);
-
-// check_error.c
-
-/**
- * @brief Error message if entity count is not correct.
- *
- * @param type Entity type.
- * @param max Maximum number for entity type.
- * @param count Found number for entity type.
- * @param high Controls if count is too high or too low.
- */
-void		ft_perror_count(t_type type, int max, int count, bool high);
-
-/**
- * @brief Error message if converted number is out of range.
- *
- * @param line Start position of converted number.
- * @param offset Offset from start position.
- * @param min Minimum for number.
- * @param max Maximum for number.
- * @return false Always returns false.
- */
-bool		ft_perror_range(char *line, size_t offset, int min, int max);
-
-/**
- * @brief Error message if conversion failed.
- *
- * @param line Line with current position, where conversion failed.
- * @param is_float Controls if converted number should have been float.
- * @return false Always returns false.
- */
-bool		ft_perror_convert(char *line, bool is_float);
-
-/**
- * @brief Error message if wrong separator was encountered.
- *
- * @param line Line with current position, where separator was encountered.
- * @param comma Controls if separator should be ',' or ' ' and '\0'.
- * @return false Always returns false.
- */
-bool		ft_perror_separator(char *line, bool comma);
-
-/**
- * @brief Error message if line doesn't end with space or zero temrinator.
- *
- * @param line Line with current position, where wrong char was encountered.
- * @return t_type Always returns UNKNOWN.
- */
-t_type	ft_perror_end(char *line);
 
 #endif

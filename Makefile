@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/20 11:42:44 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/20 11:50:12 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,8 +71,8 @@ SRC := 	camera.c \
 		check.c \
 		cleanup.c \
 		colour.c \
-		error_check.c \
-		error_generic.c \
+		error_msg_check.c \
+		error_msg_generic.c \
 		error_syscall.c \
 		ft_strtod.c \
 		hit_cylinder.c \

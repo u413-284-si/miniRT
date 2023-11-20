@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:50:58 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:43:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:50:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 # include <fcntl.h>
 
 // Home-grown libs
-# include "error_generic.h"
+# include "error_type.h"
+# include "error_msg.h"
 
 /* ====== FUNCTIONS ====== */
 
