@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/20 10:01:24 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/20 11:05:17 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -189,7 +189,7 @@ $(DEPFILES):
 # Use Makefile of libft to compile the library.
 $(LIBFT):
 	@printf "$(YELLOW)$(BOLD)compilation$(RESET) [$(BLUE)libft$(RESET)]\n"
-	$(MAKE) -s -C $(LIB_DIR)/libft
+	@$(MAKE) --no-print-directory -C $(LIB_DIR)/libft
 
 # ******************************
 # *     Cleanup                *
@@ -207,6 +207,7 @@ fclean: clean
 	@printf "$(RED)clean bin $(NAME)$(RESET)\n"
 	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)libft$(RESET)]\n"
 	@$(MAKE) --no-print-directory -C $(LIB_DIR_FT) fclean
+	@echo
 
 # ******************************
 # *     Recompilation          *
