@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/20 09:30:40 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/20 10:01:24 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,32 +64,32 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC := 	cleanup.c \
+SRC := 	camera.c \
 		check_entity1.c \
 		check_entity2.c \
 		check_error.c \
 		check_line.c \
 		check.c \
+		cleanup.c \
+		colour.c \
 		error_msg.c \
 		error_syscall.c \
 		ft_strtod.c \
-		import_file_buffer.c \
-		import_file.c \
-		parse_entity1.c \
-		parse_entity2.c \
-		parse_line.c \
-		parse.c
-
-# camera.c \
-		colour.c \
 		hit_cylinder.c \
 		hit_plane.c \
 		hit_sphere.c \
 		hit.c \
+		import_file_buffer.c \
+		import_file.c \
+		main.c \
+		parse_entity1.c \
+		parse_entity2.c \
+		parse_line.c \
+		parse.c \
 		ray.c \
+		scene_init.c \
 		scene_light.c \
 		scene_shadow.c \
-		scene_init.c \
 		utils_cylinder.c \
 		utils.c \
 		vec3_arithmetics.c \
@@ -103,25 +103,16 @@ SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
 OBJ := $(SRC:.c=.o)
 OBJS := $(addprefix $(OBJ_DIR)/, $(OBJ))
-OBJ_MAIN = $(OBJ_DIR)/main.o
 
 # ******************************
 # *     Dependency files       *
 # ******************************
 
 DEPFILES = $(SRC:%.c=$(DEP_DIR)/%.d)
-# add dependency for main, since not in SRC
-DEPFILES += $(DEP_DIR)/main.d
 
 # ******************************
-# *     Test files             *
+# *     Default target         *
 # ******************************
-
-#TEST_SRC :=
-#TEST_SRCS := $(addprefix $(TEST_DIR)/, $(TEST_SRC))
-#TEST_OBJ := $(TEST_SRC:.c=.o)
-#TEST_OBJS := $(addprefix $(TEST_DIR)/, $(TEST_OBJ))
-#TEST_OBJ_MAIN = $(TEST_DIR)/test_main.o
 
 .PHONY: all
 all: $(NAME)
@@ -131,9 +122,9 @@ all: $(NAME)
 # ******************************
 
 # Linking the NAME target
-$(NAME): $(LIBFT) $(OBJS) $(OBJ_MAIN)
+$(NAME): $(LIBFT) $(OBJS)
 	@printf "\n$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	$(CC) $(LDFLAGS) $(OBJS) $(OBJ_MAIN) $(LDLIBS) -o $@
+	$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
 	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@printf "$(BOLD)$(GREEN)$(NAME) created!$(RESET)\n\n"
 
@@ -164,44 +155,6 @@ valgr: $(NAME)
 #	@less ./valgrind-out.txt
 
 # ******************************
-# *     TEST linkage           *
-# ******************************
-
-# Create the binary TEST, which has its own test_main.
-#$(TEST): CFLAGS = -g -gdwarf-4
-#$(TEST): $(LIBFT) $(OBJS) $(TEST_OBJS) $(TEST_OBJ_MAIN)
-#	@printf "\n$(YELLOW)$(BOLD)link test binary$(RESET) [$(BLUE)minishell$(RESET)]\n"
-#	$(CC) $(LDFLAGS) $(OBJS) $(TEST_OBJS) $(TEST_OBJ_MAIN) $(LDLIBS) -o $@
-#	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE)minishell$(RESET)]\n"
-#	@printf "$(BOLD)$(GREEN)$(TEST) created!$(RESET)\n\n"
-
-# This target adds fsanitize leak checker to the flags. It needs to clean and recompile.
-#.PHONY: tleak
-#tleak: CFLAGS += -fsanitize=leak
-#tleak: LDFLAGS += -fsanitize=leak
-#tleak: clean tclean $(TEST)
-#	@printf "Compiled with $(YELLOW)$(BOLD)fsanitize=leak$(RESET)\n\n"
-
-# This target adds fsanitize address checker to the flags. It needs to clean and recompile.
-#.PHONY: taddress
-#taddress: CFLAGS += -fsanitize=address
-#taddress: LDFLAGS += -fsanitize=address
-#taddress: clean tclean $(TEST)
-#	@printf "Compiled with $(YELLOW)$(BOLD)fsanitize=address$(RESET)\n\n"
-
-# Perform memory check on TEST. Needs manual clean if tleak or taddress was called before
-#.PHONY: tvalgr
-#tvalgr: $(TEST)
-#	@valgrind --leak-check=full\
-			--show-leak-kinds=all\
-			--trace-children=no\
-			--track-fds=no\
-			--log-file=valgrind-out.txt\
-			--suppressions=./minishell.supp
-#			./$(TEST)
-#	@less ./valgrind-out.txt
-
-# ******************************
 # *     Object compiling and   *
 # *     dependecy creation     *
 # ******************************
@@ -220,10 +173,6 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(DEP_DIR)/%.d message | $(DEP_DIR)
 .INTERMEDIATE: message
 message:
 	@printf "\n$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-
-# Create objects from test source files
-$(TEST_DIR)/%.o: $(TEST_DIR)/%.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 # Create directory obj/dep if it doesn't exist
 $(DEP_DIR):
@@ -251,14 +200,6 @@ clean:
 	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@rm -rf $(OBJ_DIR)
 	@printf "$(RED)removed subdir $(OBJ_DIR)$(RESET)\n"
-
-# Clean test objects and tester
-#.PHONY: tclean
-#tclean:
-#	@rm -rf $(TEST_DIR)/*.o
-#	@printf "$(RED)removed .o files in subdir $(TEST_DIR)$(RESET)\n"
-#	@rm -rf $(TEST)
-#	@printf "$(RED)clean bin $(TEST)$(RESET)\n"
 
 .PHONY: fclean
 fclean: clean
