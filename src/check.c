@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:42:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 13:00:38 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,15 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 	i = 0;
 	while (lines[i])
 	{
-		type = ft_check_line_type(lines[i]);
+		type = ft_check_line_type(lines[i++]);
+		if (type == COMMENT)
+			continue ;
 		if (type == UNKNOWN
-			|| ft_incr_ent_count(ent_count, type))
+		|| ft_incr_ent_count(ent_count, type))
 		{
-			ft_perror_number("Line number [ignoring empty lines]", i);
+			ft_perror_number("Line number [ignoring empty lines]", i - 1);
 			return (ERROR);
 		}
-		i++;
 	}
 	if (ft_check_entity_count(ent_count))
 		return (ERROR);
@@ -51,6 +52,10 @@ t_type	ft_check_line_type(char *line)
 		return (ft_check_plane(line + 2));
 	else if (!ft_strncmp(line, "cy ", 3))
 		return (ft_check_cylinder(line + 2));
+	else if (!ft_strncmp(line, "#", 1))
+		return (COMMENT);
+	else
+		ft_perror("Line type not recognized", 0);
 	return (UNKNOWN);
 }
 

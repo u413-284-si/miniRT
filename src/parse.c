@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:26:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 13:03:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,9 @@ void	ft_parse_lines(t_entities *ents, t_cam *cam, char **lines)
 	id = 0;
 	while (*lines)
 	{
-		if (**lines == 'A')
+		if (**lines == '#')
+			;
+		else if (**lines == 'A')
 			ft_parse_ambient(*lines + 2, &ents->ambient);
 		else if (**lines == 'C')
 			ft_parse_camera(*lines + 2, cam);

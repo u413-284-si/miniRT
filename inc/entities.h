@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 11:27:22 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 12:59:05 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,11 +88,13 @@ typedef struct s_cylinder
 /**
  * @brief Enumeration of all different entity types.
  *
+ * @param COMMENT	Used for comments: line beginning with # is ignored.
  * @param UNKOWN	Used, if line not recognized, set to -1.
  * @param SUM_ENTS	Amounts to sum of all entity types.
  */
 typedef enum e_type
 {
+	COMMENT = -2,
 	UNKNOWN = -1,
 	SPHERE,
 	PLANE,
