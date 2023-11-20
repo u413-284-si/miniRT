@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 17:39:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:45:22 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "error_syscall.h"
 # include "cleanup.h"
 # include "ft_strtod.h"
-# include "scene.h"
+# include "entities.h"
 # include "camera.h"
 
 /* ====== FUNCTIONS ====== */

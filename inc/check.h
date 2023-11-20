@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 17:16:03 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:45:00 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "error_msg.h"
 # include "ft_char.h"
 # include "ft_strtod.h"
+# include "entities.h"
 
 /* ===== MACROS ===== */
 
@@ -32,22 +33,6 @@
 # define FLOAT_MAX 1000.0
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Enumeration of all different entity types.
- * @param UNKOWN	Used if line not recognized.
- * @param SUM_ENTS	Amounts to sum of all entity types.
- */
-typedef enum e_entity_type {
-	UNKNOWN = -1,
-	AMBIENT,
-	CAMERA,
-	LIGHT,
-	SPHERE,
-	PLANE,
-	CYLINDER,
-	SUM_ENTS
-}	t_ent_type;
 
 /* ====== FUNCTIONS ====== */
 
@@ -76,9 +61,9 @@ t_err		ft_check_lines(char **lines, int *lsrc_count, int *total);
  * If found calls and returns correct check function.
  * If not returns UNKNOWN.
  * @param line Line to check for identifier.
- * @return t_ent_type Specific entity type if correct, else UNKOWN.
+ * @return t_type Specific entity type if correct, else UNKOWN.
  */
-t_ent_type	ft_check_line_type(char *line);
+t_type	ft_check_line_type(char *line);
 
 /**
  * @brief Increase entity count, and check if too many.
@@ -90,7 +75,7 @@ t_ent_type	ft_check_line_type(char *line);
  * @param ent_type Specific type which should be increased.
  * @return t_err ERROR if increased count is bigger than specific max.
  */
-t_err		ft_incr_ent_count(int ent_count[SUM_ENTS], t_ent_type ent_type);
+t_err		ft_incr_ent_count(int ent_count[SUM_ENTS], t_type ent_type);
 
 /**
  * @brief Check if minimum number of specific entities was found.
@@ -184,9 +169,9 @@ bool		ft_isvalid_rgb_block(char **line);
  * - ambient lighting ratio in range [0.0,1.0].
  * - R,G,B colors in range [0-255].
  * @param line Pointer to current line.
- * @return t_ent_type AMBIENT on success, UNKNOWN if fail.
+ * @return t_type AMBIENT on success, UNKNOWN if fail.
  */
-t_ent_type	ft_check_ambient(char *line);
+t_type	ft_check_ambient(char *line);
 
 /**
  * @brief Checks if camera line is correct.
@@ -197,9 +182,9 @@ t_ent_type	ft_check_ambient(char *line);
  * - 3d normalized orientation vector. In range [-1,1] for each x,y,z axis.
  * - FOV : Horizontal field of view in degrees in range [0,180].
  * @param line Pointer to current line.
- * @return t_ent_type CAMERA on success, UNKNOWN if fail.
+ * @return t_type CAMERA on success, UNKNOWN if fail.
  */
-t_ent_type	ft_check_camera(char *line);
+t_type	ft_check_camera(char *line);
 
 /**
  * @brief Checks if light line is correct.
@@ -210,9 +195,9 @@ t_ent_type	ft_check_camera(char *line);
  * - the light brightness ratio in range [0.0,1.0].
  * - R,G,B colors in range [0-255].
  * @param line Pointer to current line.
- * @return t_ent_type LIGHT on success, UNKNOWN if fail.
+ * @return t_type LIGHT on success, UNKNOWN if fail.
  */
-t_ent_type	ft_check_light(char *line);
+t_type	ft_check_light(char *line);
 
 // check_entity2.c
 
@@ -225,9 +210,9 @@ t_ent_type	ft_check_light(char *line);
  * - the sphere diameter.
  * - R,G,B colors in range [0-255].
  * @param line Pointer to current line.
- * @return t_ent_type SPHERE on success, UNKNOWN if fail.
+ * @return t_type SPHERE on success, UNKNOWN if fail.
  */
-t_ent_type	ft_check_sphere(char *line);
+t_type	ft_check_sphere(char *line);
 
 /**
  * @brief Checks if plane line is correct.
@@ -238,9 +223,9 @@ t_ent_type	ft_check_sphere(char *line);
  * - 3d normalized normal vector. In range [-1,1] for each x,y,z axis.
  * - R,G,B colors in range [0-255].
  * @param line Pointer to current line.
- * @return t_ent_type PLANE on success, UNKNOWN if fail.
+ * @return t_type PLANE on success, UNKNOWN if fail.
  */
-t_ent_type	ft_check_plane(char *line);
+t_type	ft_check_plane(char *line);
 
 /**
  * @brief Checks if cylinder line is correct.
@@ -253,9 +238,9 @@ t_ent_type	ft_check_plane(char *line);
  * - the cylinder height.
  * - R,G,B colors in range [0,255].
  * @param line Pointer to current line.
- * @return t_ent_type CYLINDER on success, UNKNOWN if fail.
+ * @return t_type CYLINDER on success, UNKNOWN if fail.
  */
-t_ent_type	ft_check_cylinder(char *line);
+t_type	ft_check_cylinder(char *line);
 
 // check_error.c
 
@@ -267,7 +252,7 @@ t_ent_type	ft_check_cylinder(char *line);
  * @param count Found number for entity type.
  * @param high Controls if count is too high or too low.
  */
-void		ft_perror_count(t_ent_type type, int max, int count, bool high);
+void		ft_perror_count(t_type type, int max, int count, bool high);
 
 /**
  * @brief Error message if converted number is out of range.
@@ -302,8 +287,8 @@ bool		ft_perror_separator(char *line, bool comma);
  * @brief Error message if line doesn't end with space or zero temrinator.
  *
  * @param line Line with current position, where wrong char was encountered.
- * @return t_ent_type Always returns UNKNOWN.
+ * @return t_type Always returns UNKNOWN.
  */
-t_ent_type	ft_perror_end(char *line);
+t_type	ft_perror_end(char *line);
 
 #endif

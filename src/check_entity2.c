@@ -6,13 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:17:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 17:59:37 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:44:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-t_ent_type	ft_check_sphere(char *line)
+t_type	ft_check_sphere(char *line)
 {
 	ft_rm_space(&line);
 	if (!ft_isvalid_float_block(&line, FLOAT_MIN, FLOAT_MAX))
@@ -29,7 +29,7 @@ t_ent_type	ft_check_sphere(char *line)
 	return (SPHERE);
 }
 
-t_ent_type	ft_check_plane(char *line)
+t_type	ft_check_plane(char *line)
 {
 	ft_rm_space(&line);
 	if (!ft_isvalid_float_block(&line, FLOAT_MIN, FLOAT_MAX))
@@ -46,7 +46,7 @@ t_ent_type	ft_check_plane(char *line)
 	return (PLANE);
 }
 
-t_ent_type	ft_check_cylinder(char *line)
+t_type	ft_check_cylinder(char *line)
 {
 	ft_rm_space(&line);
 	if (!ft_isvalid_float_block(&line, FLOAT_MIN, FLOAT_MAX))

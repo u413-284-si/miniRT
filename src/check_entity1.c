@@ -6,13 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:17:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 17:59:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:44:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-t_ent_type	ft_check_ambient(char *line)
+t_type	ft_check_ambient(char *line)
 {
 	ft_rm_space(&line);
 	if (!ft_isvalid_float(&line, 0.0, 1.0, false))
@@ -26,7 +26,7 @@ t_ent_type	ft_check_ambient(char *line)
 	return (AMBIENT);
 }
 
-t_ent_type	ft_check_camera(char *line)
+t_type	ft_check_camera(char *line)
 {
 	ft_rm_space(&line);
 	if (!ft_isvalid_float_block(&line, FLOAT_MIN, FLOAT_MAX))
@@ -43,7 +43,7 @@ t_ent_type	ft_check_camera(char *line)
 	return (CAMERA);
 }
 
-t_ent_type	ft_check_light(char *line)
+t_type	ft_check_light(char *line)
 {
 	ft_rm_space(&line);
 	if (!ft_isvalid_float_block(&line, FLOAT_MIN, FLOAT_MAX))

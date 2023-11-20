@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   entities.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 15:08:37 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/20 09:43:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,23 +86,29 @@ typedef struct s_cylinder
 }	t_cylinder;
 
 /**
- * @brief Contains numerical list of possible hittables
+ * @brief Enumeration of all different entity types.
  * 
- * Starts at 0.
+ * @param UNKOWN	Used, if line not recognized, set to -1.
+ * @param SUM_ENTS	Amounts to sum of all entity types.
  */
 typedef enum e_type
 {
+	UNKNOWN = -1,
 	SPHERE,
 	PLANE,
-	CYLINDER
+	CYLINDER,
+	AMBIENT,
+	CAMERA,
+	LIGHT,
+	SUM_ENTS
 }	t_type;
 
 /**
  * @brief Contains information of the different shapes
- * 
+ *
  * Each union represents one shape which can be addressed
  * by the respective member. The memory space can be interpreted
- * with different names (its members) as a variable. It 
+ * with different names (its members) as a variable. It
  * has the size of the biggest member type.
  * @param sp	Union variable addressed as sphere.
  * @param pl	Union variable addressed as plane.
@@ -116,8 +122,8 @@ typedef union u_shape
 }	t_shape;
 
 /**
- * @brief Represents a hittable 
- * 
+ * @brief Represents a hittable
+ *
  * @param id		The hittables ID
  * @param type		The hittables type
  * @param params	Required parameters to distinctly describe the hittable

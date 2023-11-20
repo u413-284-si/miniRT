@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 07:47:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:50:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 {
-	t_ent_type	ent_type;
+	t_type	ent_type;
 	static int	ent_count[SUM_ENTS];
 	size_t		i;
 
@@ -38,7 +38,7 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 	return (SUCCESS);
 }
 
-t_ent_type	ft_check_line_type(char *line)
+t_type	ft_check_line_type(char *line)
 {
 	if (!ft_strncmp(line, "A ", 2))
 		return (ft_check_ambient(line + 1));
@@ -55,15 +55,15 @@ t_ent_type	ft_check_line_type(char *line)
 	return (UNKNOWN);
 }
 
-t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_ent_type ent_type)
+t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_type ent_type)
 {
 	static const int	ent_max[SUM_ENTS] = {
-	[AMBIENT] = AMBIENT_MAX,
-	[CAMERA] = CAMERA_MAX,
-	[LIGHT] = LIGHT_MAX,
 	[SPHERE] = SPHERE_MAX,
 	[PLANE] = PLANE_MAX,
-	[CYLINDER] = CYLINDER_MAX
+	[CYLINDER] = CYLINDER_MAX,
+	[AMBIENT] = AMBIENT_MAX,
+	[CAMERA] = CAMERA_MAX,
+	[LIGHT] = LIGHT_MAX
 	};
 
 	ent_count[ent_type]++;
@@ -77,7 +77,7 @@ t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_ent_type ent_type)
 
 t_err	ft_check_entity_count(int ent_count[SUM_ENTS])
 {
-	t_ent_type	missing;
+	t_type	missing;
 
 	if (!ent_count[AMBIENT])
 		missing = AMBIENT;

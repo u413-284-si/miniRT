@@ -6,21 +6,21 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:25:28 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 19:32:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:49:29 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-void	ft_perror_count(t_ent_type type, int max, int count, bool high)
+void	ft_perror_count(t_type type, int max, int count, bool high)
 {
 	static const char	*entity_name[SUM_ENTS] = {
-	[AMBIENT] = "ambient light (A)",
-	[CAMERA] = "camera (C)",
-	[LIGHT] = "light (L)",
 	[SPHERE] = "sphere (sp)",
 	[PLANE] = "plane (pl)",
-	[CYLINDER] = "cylinder (cy)"
+	[CYLINDER] = "cylinder (cy)",
+	[AMBIENT] = "ambient light (A)",
+	[CAMERA] = "camera (C)",
+	[LIGHT] = "light (L)"
 	};
 
 	ft_putendl_fd("Error", 2);
@@ -79,7 +79,7 @@ bool	ft_perror_separator(char *line, bool comma)
 	return (false);
 }
 
-t_ent_type	ft_perror_end(char *line)
+t_type	ft_perror_end(char *line)
 {
 	ft_putendl_fd("Error", 2);
 	ft_putstr_fd("Not recognized line end: -->", 2);
