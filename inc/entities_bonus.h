@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/19 22:34:55 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/20 16:25:07 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,12 +121,17 @@ typedef union u_shape
  * @param id		The hittables ID
  * @param type		The hittables type
  * @param params	Required parameters to distinctly describe the hittable
+ * @param shininess	Material property of reflecting light
+ * 					(rather than scattering)
+ * @param textured	Indicates whether the hittable is textured or not
  */
 typedef struct s_hittable
 {
 	int		id;
 	t_type	type;
 	t_shape	params;
+	float	shininess;
+	bool	textured;
 }	t_hittable;
 
 /**

@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/19 22:37:11 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/20 17:35:08 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ typedef struct s_ray
  * @param axis_hit	Point of intersection with a cylinders axis
  * @param d			Distance into ray direction when point is hit
  * @param colour	Colour of object at intersection
+ * @param shininess	Material property of point of intersection
+ * 					on reflecting light
  */
 typedef struct s_hitrecord
 {
@@ -47,6 +49,7 @@ typedef struct s_hitrecord
 	t_vec3		axis_hit;
 	float		d;
 	t_colour	colour;
+	float		shininess;
 }	t_hitrecord;
 
 /* ====== FUNCTIONS ====== */
@@ -59,15 +62,6 @@ typedef struct s_hitrecord
  * @return t_vec3 		Ray vector to hit
  */
 t_vec3		ft_ray(t_ray ray, float d);
-
-/**
- * @brief Returns the colour of a ray
- * 
- * @param ray 		Ray sent into the scene
- * @param scene		Scene containing all hittable entities
- * @return t_colour Ray colour
- */
-t_colour	ft_ray_colour(t_ray ray, t_entities scene);
 
 /**
  * @brief Returns the background colour
