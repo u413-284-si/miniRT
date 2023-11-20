@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 09:43:27 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 10:30:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,26 +68,26 @@ typedef struct s_plane
  * @brief Represents a cylinder
  * @param centre	Centre of the cylinder
  * @param axis		Normalised [-1, 1] axis of the cylinder
- * @param cap1		Centre of first cap = centre - h/2 * axis
- * @param cap2		Centre of second cap = centre + h/2 * axis
  * @param d			Diameter of the cylinder
  * @param h			Height of the cylinder
  * @param colour	Colour of the cylinder
+ * @param cap1		Centre of first cap = centre - h/2 * axis
+ * @param cap2		Centre of second cap = centre + h/2 * axis
  */
 typedef struct s_cylinder
 {
 	t_vec3		centre;
 	t_vec3		axis;
-	t_vec3		cap1;
-	t_vec3		cap2;
 	float		d;
 	float		h;
 	t_colour	colour;
+	t_vec3		cap1;
+	t_vec3		cap2;
 }	t_cylinder;
 
 /**
  * @brief Enumeration of all different entity types.
- * 
+ *
  * @param UNKOWN	Used, if line not recognized, set to -1.
  * @param SUM_ENTS	Amounts to sum of all entity types.
  */
