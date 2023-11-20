@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:19:10 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 15:01:22 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 16:42:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,11 @@ void	ft_set_fullscreen(t_render *render, t_image *screen)
 
 t_err	ft_init_image(t_render *render, int size[2])
 {
-	int	bpp;
-
 	if (ft_err_mlx_new_image((void**)&render->buffer, render->mlx_ptr, size))
 		return (ERROR);
-	bpp = 0;
-	render->buffer.addr = mlx_get_data_addr(render->buffer.ptr, &bpp,
+	render->buffer.addr = mlx_get_data_addr(render->buffer.ptr, &render->buffer.bpp,
 		&render->buffer.line_len, &render->buffer.endian);
-	render->buffer.bytes = bpp / 8;
+	render->buffer.bytes = render->buffer.bpp / 8;
 	if (render->buffer.endian)
 		ft_printf("🥚 Endian\n   |big|\n\n");
 	else
