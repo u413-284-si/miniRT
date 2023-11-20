@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 16:09:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 22:48:56 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,14 @@ int	ft_convert_colour2int(t_colour colour)
 	g = (int)(255.99 * colour.g);
 	b = (int)(255.99 * colour.b);
 	return ((a << 24) | (r << 16) | (g << 8) | b);
+}
+
+t_colour	ft_convert_int2colour(int colour)
+{
+	t_colour	ret;
+
+	ret.r = colour >> 16 & 0xFF;
+	ret.g = colour >> 8 & 0xFF;
+	ret.b = colour & 0xFF;
+	return (ret);
 }

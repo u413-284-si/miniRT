@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 16:12:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 22:49:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ t_colour	ft_hadamard_colour(t_colour c1, t_colour c2);
  * @param colour	Colour to convert.
  * @return int		Int value of the color
  */
-int	ft_convert_colour2int(t_colour colour);
+int			ft_convert_colour2int(t_colour colour);
+
+t_colour	ft_convert_int2colour(int colour);
 
 #endif
