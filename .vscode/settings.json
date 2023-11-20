@@ -10,6 +10,10 @@
 		"camera.h": "c",
 		"cleanup.h": "c",
 		"render.h": "c",
-		"error_syscall.h": "c"
+		"error_syscall.h": "c",
+		"keysym.h": "c",
+		"keysymdef.h": "c",
+		"x.h": "c",
+		"colour.h": "c"
 	}
 }

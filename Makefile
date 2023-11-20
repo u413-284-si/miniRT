@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/20 14:40:47 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/20 15:56:53 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,7 +88,10 @@ SRC := 	camera.c \
 		parse_line.c \
 		parse.c \
 		ray.c \
+		render_draw.c \
 		render_init.c \
+		render_keyhook.c \
+		render_loop.c \
 		scene_init.c \
 		scene_light.c \
 		scene_shadow.c \
