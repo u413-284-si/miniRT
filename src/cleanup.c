@@ -6,13 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 15:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 11:25:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:26:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cleanup.h"
 
-void	ft_free_array(char **array)
+void	ft_free_char_arr(char **array)
 {
 	size_t	i;
 

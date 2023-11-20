@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:40:15 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/14 07:36:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:26:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_err	ft_import_file(char *filename, char ***lines)
 		return (ERROR);
 	if (ft_err_close(fd))
 	{
-		ft_free_array(*lines);
+		ft_free_char_arr(*lines);
 		return (ERROR);
 	}
 	return (SUCCESS);

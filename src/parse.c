@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 10:20:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:26:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ t_err	ft_parse_file(char *filename, t_entities *ents, t_cam *cam)
 		return (ERROR);
 	if (ft_check_lines(lines, &ents->lsrc_count, &ents->total))
 	{
-		ft_free_array(lines);
+		ft_free_char_arr(lines);
 		return (ERROR);
 	}
 	if (ft_malloc_ents(&ents->lsrc, &ents->obj, ents->lsrc_count, ents->total))
 	{
-		ft_free_array(lines);
+		ft_free_char_arr(lines);
 		return (ERROR);
 	}
 	ft_parse_lines(ents, cam, lines);
-	ft_free_array(lines);
+	ft_free_char_arr(lines);
 	return (SUCCESS);
 }
 
