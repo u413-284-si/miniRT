@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:23:57 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 18:20:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:47:12 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	ft_parse_ambient(char *line, t_light *ambient)
 
 void	ft_parse_camera(char *line, t_cam *cam)
 {
-	ft_parse_float_block(&line, &cam->camera_centre);
-	ft_parse_float_block(&line, &cam->pixel00_pos);
-	ft_parse_float(&line, &cam->focal_length);
+	ft_parse_float_block(&line, &cam->look_from);
+	ft_parse_float_block(&line, &cam->look_at);
+	ft_parse_float(&line, &cam->hfov);
 }
 
 void	ft_parse_light(char *line, t_light *light)
