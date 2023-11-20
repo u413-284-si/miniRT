@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/20 11:05:17 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/20 11:34:50 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,8 +65,8 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # ******************************
 
 SRC := 	camera.c \
-		check_entity1.c \
-		check_entity2.c \
+		check_entity_ACL.c \
+		check_entity_sp_pl_cy.c \
 		check_error.c \
 		check_line.c \
 		check.c \
@@ -82,8 +82,8 @@ SRC := 	camera.c \
 		import_file_buffer.c \
 		import_file.c \
 		main.c \
-		parse_entity1.c \
-		parse_entity2.c \
+		parse_entity_ACL.c \
+		parse_entity_sp_pl_cy.c \
 		parse_line.c \
 		parse.c \
 		ray.c \
