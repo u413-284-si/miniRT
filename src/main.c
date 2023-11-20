@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/20 10:51:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:25:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	main(int argc, char **argv)
 	ft_initiate_camera(&cam);
 	ft_initiate_viewport(&viewport, cam, image);
 	ft_create_image(image, cam, viewport, scene);
-
+	free(scene.obj);
+	free(scene.lsrc);
 	return (0);
 }
