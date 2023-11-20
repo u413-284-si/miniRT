@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/13 18:27:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:31:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@
 
 int	main(int argc, char **argv)
 {
-	static t_cam		cam;
-	static t_entities	scene;
+	t_image		image;
+	t_cam		cam;
+	t_viewport	viewport;
+	t_entities	scene;
 
 	if (argc != 2)
 	{
@@ -29,9 +31,10 @@ int	main(int argc, char **argv)
 
 
 	ft_create_scene(&scene);
+	ft_initiate_image(&image);
 	ft_initiate_camera(&cam);
-	ft_initiate_viewport(&cam);
-	ft_create_image(cam, scene);
-	*/
+	ft_initiate_viewport(&viewport, cam, image);
+	ft_create_image(image, cam, viewport, scene);
+	(void)argv;
 	return (0);
 }

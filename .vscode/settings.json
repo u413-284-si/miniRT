@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"random": "c",
+		"utils.h": "c",
+		"hit_manager.h": "c",
+		"entities.h": "c"
+	}
+}
