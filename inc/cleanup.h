@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:00:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:26:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/20 15:01:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@
  * @param array Array to free.
  */
 void	ft_free_char_arr(char **array);
+
+void	ft_free_mlx(void *mlx_ptr, void *win_ptr, void *img_ptr);
 
 #endif
