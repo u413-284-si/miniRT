@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   colour.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 16:34:38 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/20 16:09:49 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,18 @@ t_colour	ft_hadamard_colour(t_colour c1, t_colour c2)
 		.b = c1.b * c2.b,
 		.g = c1.g * c2.g
 	});
+}
+
+int	ft_convert_colour2int(t_colour colour)
+{
+	int	a;
+	int	r;
+	int	g;
+	int	b;
+
+	a = 0;
+	r = (int)(255.99 * colour.r);
+	g = (int)(255.99 * colour.g);
+	b = (int)(255.99 * colour.b);
+	return ((a << 24) | (r << 16) | (g << 8) | b);
 }
