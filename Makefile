@@ -6,7 +6,7 @@
 #    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/20 17:26:23 by u413q            ###   ########.fr        #
+#    Updated: 2023/11/21 11:12:15 by u413q            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -112,6 +112,7 @@ OBJ_B := $(SRC_B:.c=.o)
 OBJS_B := $(addprefix $(OBJ_DIR)/, $(OBJ_B))
 
 OBJ_MAIN = $(OBJ_DIR)/main.o
+OBJ_B_MAIN = $(OBJ_DIR)/main_bonus.o
 
 # ******************************
 # *     Dependency files       *
@@ -124,7 +125,7 @@ DEPFILES_B = $(SRC_B:%.c=$(DEP_DIR)/%.d)
 # add dependency for main, since not in SRC
 DEPFILES += $(DEP_DIR)/main.d
 
-DEPFILES_B += $(DEP_DIR)/main.d
+DEPFILES_B += $(DEP_DIR)/main_bonus.d
 
 # ******************************
 # *     Test files             *
@@ -154,9 +155,9 @@ $(NAME): $(LIBFT) $(OBJS) $(OBJ_MAIN)
 	@printf "$(BOLD)$(GREEN) $@ created!$(RESET)\n\n"
 
 # Linking the BONUSNAME target
-$(BONUSNAME): $(LIBFT) $(OBJS_B) $(OBJ_MAIN)
+$(BONUSNAME): $(LIBFT) $(OBJS_B) $(OBJ_B_MAIN)
 	@printf "\n$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE) $@ $(RESET)]\n"
-	$(CC) $(LDFLAGS) $(OBJS_B) $(OBJ_MAIN) $(LDLIBS) -o $@
+	$(CC) $(LDFLAGS) $(OBJS_B) $(OBJ_B_MAIN) $(LDLIBS) -o $@
 	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE) $@ $(RESET)]\n"
 	@printf "$(BOLD)$(GREEN) $@ created! 🔥$(RESET)\n\n"
 
