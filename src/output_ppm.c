@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_ppm.c                                        :+:      :+:    :+:   */
+/*   output_ppm.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 22:50:12 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 23:12:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/21 18:40:34 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,27 +26,32 @@ void	ft_write_pixel(int col, int fd)
 	ft_putchar_fd('\n', fd);
 }
 
-t_err	ft_print_image_as_ppm(t_image image, t_buffer buffer)
+void	ft_write_ppm_header(int width, int height, int fd)
 {
-	int	fd;
-	int	pixel_sum;
-	int	*arr;
-	int	i;
-
-	fd = 0;
-	ft_err_open("outfile.ppm", O_CREAT | O_WRONLY | O_TRUNC, &fd);
 	ft_putendl_fd("P3", fd);
-	ft_putnbr_fd(image.image_width, fd);
+	ft_putnbr_fd(width, fd);
 	ft_putchar_fd(' ', fd);
-	ft_putnbr_fd(image.image_height, fd);
+	ft_putnbr_fd(height, fd);
 	ft_putchar_fd('\n', fd);
 	ft_putnbr_fd(255, fd);
 	ft_putchar_fd('\n', fd);
-	pixel_sum = image.image_height * image.image_width;
-	arr = (int *)buffer.addr;
+}
+
+t_err	ft_print_image_as_ppm(int *img_arr, int width, int height)
+{
+	int	fd;
+	int	pixel_sum;
+	int	i;
+
+	fd = 0;
+	if (ft_err_open("outfile.ppm", O_CREAT | O_WRONLY | O_TRUNC, &fd))
+		return (ERROR);
+	ft_write_ppm_header(width, height, fd);
+	pixel_sum = width * height;
 	i = 0;
 	while (i < pixel_sum)
-		ft_write_pixel(arr[i++], fd);
-	ft_err_close(fd);
+		ft_write_pixel(img_arr[i++], fd);
+	if (ft_err_close(fd))
+		return (ERROR);
 	return (SUCCESS);
 }

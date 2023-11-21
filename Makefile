@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/20 23:05:05 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/21 18:38:37 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ LDLIBS := -lft -lm -lmlx -lXext -lX11
 
 CC := cc
 CPPFLAGS := -I $(INC_DIR) -I lib/libft/include
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra -gdwarf-4
 DEPFLAGS = -MT $@ -MMD -MP -MF $(DEP_DIR)/$*.Td
 COMPILE = $(CC) $(DEPFLAGS) $(CPPFLAGS) $(CFLAGS) -c
 POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
@@ -83,11 +83,11 @@ SRC := 	camera.c \
 		import_file_buffer.c \
 		import_file.c \
 		main.c \
+		output_ppm.c \
 		parse_entity_ACL.c \
 		parse_entity_sp_pl_cy.c \
 		parse_line.c \
 		parse.c \
-		print_ppm.c \
 		ray.c \
 		render_draw.c \
 		render_init.c \
