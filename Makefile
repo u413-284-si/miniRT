@@ -6,7 +6,7 @@
 #    By: u413q <u413q@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/21 11:12:15 by u413q            ###   ########.fr        #
+#    Updated: 2023/11/21 12:15:49 by u413q            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,20 +84,20 @@ SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
 SRC_B := camera_bonus.c \
 		colour_bonus.c \
-		hit_cylinder.c \
-		hit_plane.c \
-		hit_sphere.c \
-		hit.c \
+		hit_cylinder_bonus.c \
+		hit_plane_bonus.c \
+		hit_sphere_bonus.c \
+		hit_bonus.c \
 		ray_bonus.c \
 		scene_init_bonus.c \
 		scene_light_bonus.c \
-		scene_shadow.c \
+		scene_shadow_bonus.c \
 		utils_camera_bonus.c \
-		utils_cylinder.c \
+		utils_cylinder_bonus.c \
 		utils_math_bonus.c \
 		utils_random_bonus.c \
-		vec3_arithmetics.c \
-		vec3_linalgebra.c
+		vec3_arithmetics_bonus.c \
+		vec3_linalgebra_bonus.c
 
 SRCS_B := $(addprefix $(SRC_DIR)/, $(SRC_B))
 
