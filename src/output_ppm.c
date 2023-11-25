@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 22:50:12 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/21 18:40:34 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/22 12:07:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_write_ppm_header(int width, int height, int fd)
 	ft_putchar_fd('\n', fd);
 }
 
-t_err	ft_print_image_as_ppm(int *img_arr, int width, int height)
+t_err	ft_output_as_ppm(int *img_arr, int width, int height)
 {
 	int	fd;
 	int	pixel_sum;
