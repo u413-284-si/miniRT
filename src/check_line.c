@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:27:34 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 17:53:13 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/25 18:36:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	ft_rm_space(char **str)
 	end = *str;
 	while (*end == ' ')
 		end++;
+	if (begin == end)
+		return ;
 	while (*end)
 		*begin++ = *end++;
 	*begin = '\0';
