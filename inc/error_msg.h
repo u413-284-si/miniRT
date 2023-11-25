@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:44:43 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/25 18:09:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/25 18:19:00 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ bool	ft_perror_convert(char *line, bool is_float);
 bool	ft_perror_separator(char *line, bool comma);
 
 /**
- * @brief Error message if line doesn't end with space or zero temrinator.
+ * @brief Error message if line doesn't end with space or zero terminator.
  *
  * @param line Line with current position, where wrong char was encountered.
  * @return t_type Always returns UNKNOWN to chain msg and UNKNOWN in return.
