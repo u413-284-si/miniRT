@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 09:45:22 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/25 17:56:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total);
  * Allocate memory with ft_malloc_ents().
  * Parse with ft_parse_lines().
  * @param filename	Provided filename.
- * @param ents		Where entities are stored.
+ * @param scene		Where entities are stored.
  * @param cam		Camera used in program.
  * @return t_err SUCCESS, ERROR if subfunction fails.
  */
-t_err	ft_parse_file(char *filename, t_entities *ents, t_cam *cam);
+t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam);
 
 /**
  * @brief Allocates memory for lights and hittable array.
@@ -57,15 +57,15 @@ t_err	ft_parse_file(char *filename, t_entities *ents, t_cam *cam);
 t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total);
 
 /**
- * @brief Dipatcher for different parsing functions
+ * @brief Dispatcher for different parsing functions
  *
  * Loops through lines and saves them according to their identifier.
  * Keeps track of lights and id to correctly address array index.
- * @param ents 	Where entities are stored.
+ * @param scene 	Where entities are stored.
  * @param cam	Camera used in program.
  * @param lines	Imported file in sanitized array.
  */
-void	ft_parse_lines(t_entities *ents, t_cam *cam, char **lines);
+void	ft_parse_lines(t_entities *scene, t_cam *cam, char **lines);
 
 // parse_entity1.c
 
