@@ -6,13 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/20 12:33:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/25 18:14:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
-#include "parse.h"
-#include "camera.h"
 
 int	main(int argc, char **argv)
 {
