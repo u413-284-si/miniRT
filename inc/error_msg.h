@@ -6,12 +6,12 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:44:43 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/25 18:07:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/25 18:09:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ERROR_MSG
-# define ERROR_MSG
+#ifndef ERROR_MSG_H
+# define ERROR_MSG_H
 
 /* ====== LIBRARIES ====== */
 
@@ -57,7 +57,7 @@ void	ft_perror_number(char *msg, int number);
  * @param count Found number for entity type.
  * @param high Controls if count is too high or too low.
  */
-void		ft_perror_count(t_type type, int max, int count, bool high);
+void	ft_perror_count(t_type type, int max, int count, bool high);
 
 /**
  * @brief Error message if converted number is out of range.
@@ -68,7 +68,7 @@ void		ft_perror_count(t_type type, int max, int count, bool high);
  * @param max Maximum for number.
  * @return false Always returns false to chain msg and false in return.
  */
-bool		ft_perror_range(char *line, size_t offset, int min, int max);
+bool	ft_perror_range(char *line, size_t offset, int min, int max);
 
 /**
  * @brief Error message if conversion failed.
@@ -77,7 +77,7 @@ bool		ft_perror_range(char *line, size_t offset, int min, int max);
  * @param is_float Controls if converted number should have been float.
  * @return false Always returns false to chain msg and false in return.
  */
-bool		ft_perror_convert(char *line, bool is_float);
+bool	ft_perror_convert(char *line, bool is_float);
 
 /**
  * @brief Error message if wrong separator was encountered.
@@ -86,7 +86,7 @@ bool		ft_perror_convert(char *line, bool is_float);
  * @param comma Controls if separator should be ',' or ' ' and '\0'.
  * @return false Always returns false to chain msg and false in return.
  */
-bool		ft_perror_separator(char *line, bool comma);
+bool	ft_perror_separator(char *line, bool comma);
 
 /**
  * @brief Error message if line doesn't end with space or zero temrinator.
@@ -95,6 +95,5 @@ bool		ft_perror_separator(char *line, bool comma);
  * @return t_type Always returns UNKNOWN to chain msg and UNKNOWN in return.
  */
 t_type	ft_perror_end(char *line);
-
 
 #endif
