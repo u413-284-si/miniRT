@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:18:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/26 08:59:37 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/26 09:56:12 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,6 @@ typedef struct s_render {
 t_err	ft_init_renderer(t_render *render, t_image *screen, bool fullscreen);
 t_err	ft_init_image(t_render *render, int size[2]);
 void	ft_set_fullscreen(t_render *render, t_image *screen);
-
-// render_keyhook.c
-int	ft_keyhook_press(int key, t_render *render);
 
 // render_draw.c
 void	ft_put_pix_to_image(t_buffer *img, int x, int y, int color);

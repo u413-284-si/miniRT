@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:19:10 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/26 08:41:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/26 09:52:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@ t_err	ft_init_renderer(t_render *render, t_image *screen, bool fullscreen)
 {
 	int	size[2];
 
-	if (ft_err_mlx_init((void**)&render->mlx_ptr))
+	if (ft_err_mlx_init((void **)&render->mlx_ptr))
 		return (ERROR);
 	if (fullscreen)
 		ft_set_fullscreen(render, screen);
 	size[0] = screen->image_width;
 	size[1] = screen->image_height;
-	if (ft_err_mlx_new_window((void**)&render->win_ptr, render->mlx_ptr, size, "miniRT"))
+	if (ft_err_mlx_new_window((void **)&render->win_ptr,
+			render->mlx_ptr, size, "miniRT"))
 	{
 		ft_free_mlx(render->mlx_ptr, NULL, NULL);
 		return (ERROR);

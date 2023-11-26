@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/26 09:31:32 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/26 09:54:28 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ SRC := 	camera.c \
 		cleanup.c \
 		colour.c \
 		engine_draw.c \
+		engine_keyhook.c \
 		engine_loop.c \
 		error_mlx.c \
 		error_msg_check.c \
@@ -93,7 +94,6 @@ SRC := 	camera.c \
 		ray.c \
 		render_draw.c \
 		render_init.c \
-		render_keyhook.c \
 		render_put_num_utils.c \
 		render_put_num.c \
 		scene_init.c \

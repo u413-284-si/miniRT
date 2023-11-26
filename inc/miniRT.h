@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/26 09:33:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/26 09:55:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,8 @@ void	ft_start_engine(t_engine *engine);
 
 // engine_draw.c
 int		ft_draw_scene(t_engine *engine);
+
+// engine_keyhook.c
+int		ft_keyhook_press(int key, t_engine *engine);
 
 #endif
