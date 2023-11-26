@@ -6,13 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:19:10 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 16:42:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/26 08:41:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
 
-t_err	ft_init_window(t_render *render, t_image *screen, bool fullscreen)
+t_err	ft_init_renderer(t_render *render, t_image *screen, bool fullscreen)
 {
 	int	size[2];
 

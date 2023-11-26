@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:18:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/22 12:37:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/26 08:41:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ typedef struct s_render {
 /* ====== FUNCTIONS ====== */
 
 // render_init.c
-t_err	ft_init_window(t_render *render, t_image *screen, bool fullscreen);
+t_err	ft_init_renderer(t_render *render, t_image *screen, bool fullscreen);
 t_err	ft_init_image(t_render *render, int size[2]);
 void	ft_set_fullscreen(t_render *render, t_image *screen);
 

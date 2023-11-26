@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/22 12:38:17 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/26 08:41:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 	ft_initiate_image(&image);
 	ft_initiate_camera(&cam);
 	ft_initiate_viewport(&viewport, cam, image);
-	ft_init_window(&render, &image, false);
+	ft_init_renderer(&render, &image, false);
 	ft_start_mlx_loop(&render, image, scene, cam, viewport);
 	//ft_create_image(image, cam, viewport, scene);
 	free(scene.obj);
