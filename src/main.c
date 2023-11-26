@@ -6,37 +6,30 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/26 08:41:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/26 09:33:32 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
-#include "parse.h"
-#include "camera.h"
-#include "render.h"
+
 
 int	main(int argc, char **argv)
 {
-	t_image		image;
-	t_cam		cam;
-	t_viewport	viewport;
-	t_entities	scene;
-	t_render	render;
+	static t_engine	engine;
 
 	if (argc != 2)
 	{
 		ft_perror("Usage: ./miniRT file.rt", 0);
 		exit(1);
 	}
-	if (ft_parse_file(argv[1], &scene, &cam))
+	if (ft_parse_file(argv[1], &engine.scene, &engine.cam))
 		exit(1);
-	ft_initiate_image(&image);
-	ft_initiate_camera(&cam);
-	ft_initiate_viewport(&viewport, cam, image);
-	ft_init_renderer(&render, &image, false);
-	ft_start_mlx_loop(&render, image, scene, cam, viewport);
-	//ft_create_image(image, cam, viewport, scene);
-	free(scene.obj);
-	free(scene.lsrc);
+	ft_initiate_image(&engine.image);
+	ft_initiate_camera(&engine.cam);
+	ft_initiate_viewport(&engine.vp, engine.cam, engine.image);
+	ft_init_renderer(&engine.render, &engine.image, false);
+	ft_start_engine(&engine);
+	free(engine.scene.obj);
+	free(engine.scene.lsrc);
 	return (0);
 }

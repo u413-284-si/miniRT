@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:18:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/26 08:41:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/26 08:59:37 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,8 @@ void	ft_set_fullscreen(t_render *render, t_image *screen);
 // render_keyhook.c
 int	ft_keyhook_press(int key, t_render *render);
 
-// render_loop.c
-void	ft_start_mlx_loop(t_render *render, t_image image, t_entities scene, t_cam cam, t_viewport vp);
-
 // render_draw.c
 void	ft_put_pix_to_image(t_buffer *img, int x, int y, int color);
-void	ft_render_image(t_image image, t_cam cam, t_viewport vp, \
-	t_entities scene, t_render *render);
 
 t_err	ft_output_as_ppm(int *img_arr, int width, int height);
 
