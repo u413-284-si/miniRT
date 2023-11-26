@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 12:59:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/26 10:39:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,6 +151,7 @@ typedef struct s_entities
 	t_hittable	*obj;
 	int			lsrc_count;
 	int			total;
+	int			active;
 }	t_entities;
 
 #endif
