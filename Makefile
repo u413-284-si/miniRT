@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/26 09:54:28 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/27 10:25:57 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,8 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC := 	camera.c \
+SRC := 	camera_move.c \
+		camera.c \
 		check_entity_ACL.c \
 		check_entity_sp_pl_cy.c \
 		check_line.c \
@@ -91,6 +92,7 @@ SRC := 	camera.c \
 		parse_entity_sp_pl_cy.c \
 		parse_line.c \
 		parse.c \
+		quaternion_ops.c \
 		ray.c \
 		render_draw.c \
 		render_init.c \
