@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/26 10:39:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/27 08:34:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@
 # include "parse.h"
 # include "camera.h"
 # include "render.h"
+
+/* ====== MACROS ====== */
+
+# define MV_UNIT 1.0
 
 /* ====== TYPEDEFS ====== */
 

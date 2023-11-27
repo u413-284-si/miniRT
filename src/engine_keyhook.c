@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:08:26 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/26 11:18:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/27 10:20:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 void	ft_move_camera(int key, t_cam *cam, t_viewport *vp, t_image *image)
 {
 	if (key == KEY_Q)
-		cam->look_from.z += 1;
+		ft_move_cam_up(cam, -MV_UNIT);
 	else if (key == KEY_E)
-		cam->look_from.z -= 1;
+		ft_move_cam_up(cam, MV_UNIT);
 	else if (key == KEY_W)
-		cam->look_from.y += 1;
+		ft_move_cam_w(cam, -MV_UNIT);
 	else if (key == KEY_S)
-		cam->look_from.y -= 1;
+		ft_move_cam_w(cam, MV_UNIT);
 	else if (key == KEY_A)
-		cam->look_from.x += 1;
+		ft_move_cam_u(cam, -MV_UNIT);
 	else if (key == KEY_D)
-		cam->look_from.x -= 1;
+		ft_move_cam_u(cam, MV_UNIT);
 	ft_initiate_camera(cam);
 	ft_initiate_viewport(vp, *cam, *image);
 }
@@ -47,7 +47,6 @@ void	ft_change_active_hittable(int key, t_entities *scene)
 			scene->active = 0;
 	}
 }
-
 
 void	ft_manip_sphere(int key, t_sphere *sp)
 {
