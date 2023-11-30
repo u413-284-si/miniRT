@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/27 10:25:57 by gwolf            ###   ########.fr        #
+#    Updated: 2023/11/30 08:51:43 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,6 +87,8 @@ SRC := 	camera_move.c \
 		import_file_buffer.c \
 		import_file.c \
 		main.c \
+		matrix_inverse.c \
+		matrix.c \
 		output_ppm.c \
 		parse_entity_ACL.c \
 		parse_entity_sp_pl_cy.c \

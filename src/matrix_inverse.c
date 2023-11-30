@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:52:56 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/30 08:50:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/30 08:52:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ static int	find_non_zero_and_swap(t_mat4 inv, t_mat4 identity, int i)
 	{
 		if (inv[k][i] != 0.0f)
 		{
-			ft_mat_swap_rows(inv, i, k);
-			ft_mat_swap_rows(identity, i, k);
+			swap_rows(inv, i, k);
+			swap_rows(identity, i, k);
 			return (1);
 		}
 		++k;
