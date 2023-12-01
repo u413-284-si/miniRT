@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/27 10:23:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/01 15:24:12 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "ray.h"
 # include "utils.h"
 # include "quaternion.h"
+# include "matrix.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -57,6 +58,10 @@ typedef struct s_cam
 	t_vec3	vup;
 	t_vec3	camera_centre;
 	float	hfov;
+	t_mat4	view;
+	t_mat4	inv_view;
+	t_mat4	projection;
+	t_mat4	inv_projection;
 }	t_cam;
 
 /**
@@ -133,5 +138,8 @@ void	ft_move_cam_w(t_cam *cam, float dist);
 void	ft_move_cam_up(t_cam *cam, float dist);
 void	ft_move_cam_u(t_cam *cam, float dist);
 void	ft_rotate_cam(t_cam *cam, float angle, float x, float y, float z);
+
+void	ft_cam_recalc_view(t_cam *cam);
+void	ft_cam_recalc_projection(t_cam *cam);
 
 #endif

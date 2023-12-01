@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:00:30 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/26 09:32:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/01 15:23:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,19 @@ int	ft_draw_scene(t_engine *engine)
 		i = -1;
 		while (++i < engine->image.image_width)
 		{
-			pix_centre = ft_calc_pix_centre(engine->vp, i, j);
+			float x = (float)i / (float)engine->image.image_width;
+			x = x * 2.0 - 1.0;
+			float y = (float)j / (float)engine->image.image_height;
+			y = y * 2.0 - 1.0;
+			t_vec4 target;
+			target = ft_vec4_create(x, y, 1, 1);
+			target = ft_mult_vec4_mat4(target, engine->cam.inv_projection);
+			t_vec3	temp;
+			temp = ft_vec3_create(target.x, target.y, target.z);
+			temp = ft_vec3_norm(ft_vec3_scale(temp, 1 / target.w));
+			target = ft_vec4_create(temp.x, temp.y, temp.z, 0);
+			target = ft_mult_vec4_mat4(target, engine->cam.inv_view);
+			pix_centre = ft_vec3_create(target.x, target.y, target.z);
 			colour = ft_calc_pix_colour(engine->cam, pix_centre, engine->scene);
 			ft_put_pix_to_image(&engine->render.buffer, i, j, colour);
 		}

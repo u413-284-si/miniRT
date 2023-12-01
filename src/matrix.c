@@ -6,13 +6,73 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:00:10 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/30 18:29:35 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/01 15:15:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "matrix.h"
 
-// is in column major form
+t_vec4	ft_vec4_create(float x, float y, float z, float w)
+{
+	t_vec4	ret;
+
+	ret.x = x;
+	ret.y = y;
+	ret.z = z;
+	ret.w = w;
+	return (ret);
+}
+
+t_vec3	ft_vec3_create(float x, float y, float z)
+{
+	t_vec3	ret;
+
+	ret.x = x;
+	ret.y = y;
+	ret.z = z;
+	return (ret);
+}
+
+t_vec4	ft_mult_vec4_mat4(t_vec4 vec, t_mat4 mat)
+{
+	t_vec4	result;
+
+	result.x = vec.x * mat[0][0] + vec.y * mat[1][0] + vec.z * mat[2][0]
+		+ vec.w * mat[3][0];
+	result.y = vec.x * mat[0][1] + vec.y * mat[1][1] + vec.z * mat[2][1]
+		+ vec.w * mat[3][1];
+	result.z = vec.x * mat[0][2] + vec.y * mat[1][2] + vec.z * mat[2][2]
+		+ vec.w * mat[3][2];
+	result.w = vec.x * mat[0][3] + vec.y * mat[1][3] + vec.z * mat[2][3]
+		+ vec.w * mat[3][3];
+	return (result);
+}
+
+// inverse could easily be calculated
+void	ft_mat4_cam_look_at(t_mat4 mat, t_vec3 cam_pos, t_vec3 cam_dir, t_vec3 v_up)
+{
+	t_vec3	cam_right;
+	t_vec3	cam_up;
+
+	cam_right = ft_vec3_norm(ft_vec3_cross(cam_dir, v_up));
+	cam_up = ft_vec3_cross(cam_right, cam_dir);
+	ft_mat4_set_identity(mat);
+	mat[0][0] = cam_right.x;
+	mat[1][0] = cam_right.y;
+	mat[2][0] = cam_right.z;
+	mat[0][1] = cam_up.x;
+	mat[1][1] = cam_up.y;
+	mat[2][1] = cam_up.z;
+	mat[0][2] = -cam_dir.x;
+	mat[1][2] = -cam_dir.y;
+	mat[2][2] = -cam_dir.z;
+	mat[0][3] = cam_pos.x;
+	mat[1][3] = cam_pos.y;
+	mat[2][3] = cam_pos.z;
+	return ;
+}
+
+// is in row major form
 // angle is in rad
 void	ft_mat4_perspective(t_mat4 mat, float angle, float ratio, float near, float far)
 {
@@ -23,8 +83,8 @@ void	ft_mat4_perspective(t_mat4 mat, float angle, float ratio, float near, float
 	mat[0][0] = 1 / (ratio * tan_half_angle);
 	mat[1][1] = 1 / (tan_half_angle);
 	mat[2][2] = -(far + near) / (far - near);
-	mat[3][2] = -1;
-	mat[2][3] = -(2 * far * near) / (far - near);
+	mat[2][3] = -1.0;
+	mat[3][2] = -(2 * far * near) / (far - near);
 }
 
 void	ft_mat4_copy(const t_mat4 src, t_mat4 dst)
