@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/18 15:31:11 by u413q            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:54:03 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,6 @@ void	ft_initiate_image(t_image *image)
 
 void	ft_initiate_camera(t_cam *cam)
 {
-	cam->look_from.x = -0.0;
-	cam->look_from.y = 0.0;
-	cam->look_from.z = 0.0;
-	cam->look_at.x = 0.0;
-	cam->look_at.y = 0.0;
-	cam->look_at.z = -1.0;
 	cam->vup.x = 0.0;
 	cam->vup.y = 1.0;
 	cam->vup.z = 0.0;
@@ -43,7 +37,7 @@ void	ft_initiate_camera(t_cam *cam)
 void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image)
 {
 	vp->focal_length = ft_vec3_abs(ft_vec3_sub(cam.look_from, cam.look_at));
-	cam.hfov = ft_degree_to_radian(100);
+	cam.hfov = ft_degree_to_radian(cam.hfov);
 	vp->viewport_width = 2 * tan(cam.hfov / 2) * vp->focal_length;
 	vp->viewport_height = vp->viewport_width / image.image_width \
 		* image.image_height;

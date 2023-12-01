@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   miniRT.h                                           :+:      :+:    :+:   */
+/*   error_type.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/25 18:14:31 by gwolf            ###   ########.fr       */
+/*   Created: 2023/10/30 14:23:15 by gwolf             #+#    #+#             */
+/*   Updated: 2023/11/20 11:46:00 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_H
-# define MINIRT_H
+#ifndef ERROR_TYPE_H
+# define ERROR_TYPE_H
 
-/* ====== LIBRARIES ====== */
+/* ====== TYPEDEFS ====== */
 
-// Standard C libs
-# include <stdio.h>
-# include <fcntl.h>				// req for open()
-# include <unistd.h>			// req for read(), write(), close()
-
-// Home-grown libs
-# include "ft_print.h"
-# include "camera.h"
-# include "init.h"
-# include "parse.h"
+/**
+ * @brief Gives return of function explicit meaning with SUCCESS or ERROR.
+ *
+ */
+typedef enum e_err {
+	SUCCESS,
+	ERROR
+}	t_err;
 
 #endif

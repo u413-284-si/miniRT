@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/17 14:28:38 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/11/25 18:14:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,16 @@ int	main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		printf("Error\n");
-		exit(123);
+		ft_perror("Usage: ./miniRT file.rt", 0);
+		exit(1);
 	}
-	ft_create_scene(&scene);
+	if (ft_parse_file(argv[1], &scene, &cam))
+		exit(1);
 	ft_initiate_image(&image);
 	ft_initiate_camera(&cam);
 	ft_initiate_viewport(&viewport, cam, image);
 	ft_create_image(image, cam, viewport, scene);
-	(void)argv;
+	free(scene.obj);
+	free(scene.lsrc);
 	return (0);
 }
