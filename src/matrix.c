@@ -6,11 +6,26 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:00:10 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/30 08:50:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/30 18:29:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "matrix.h"
+
+// is in column major form
+// angle is in rad
+void	ft_mat4_perspective(t_mat4 mat, float angle, float ratio, float near, float far)
+{
+	float	tan_half_angle;
+
+	ft_mat4_set_identity(mat);
+	tan_half_angle = tan(angle / 2);
+	mat[0][0] = 1 / (ratio * tan_half_angle);
+	mat[1][1] = 1 / (tan_half_angle);
+	mat[2][2] = -(far + near) / (far - near);
+	mat[3][2] = -1;
+	mat[2][3] = -(2 * far * near) / (far - near);
+}
 
 void	ft_mat4_copy(const t_mat4 src, t_mat4 dst)
 {
