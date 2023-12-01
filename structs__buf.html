@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: s_entities Struct Reference</title>
+<title>MiniRT: s_buf Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structs__entities.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('structs__buf.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,41 +91,34 @@ $(document).ready(function(){initNavTree('structs__entities.html',''); initResiz
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">s_entities Struct Reference</div>  </div>
+<div class="title">s_buf Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Contains all entities in the scene.  
- <a href="structs__entities.html#details">More...</a></p>
+<p>Simple implementation of a buffer.  
+ <a href="structs__buf.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="entities_8h_source.html">entities.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="import__file_8h_source.html">import_file.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:adb57bdaefa87300e076b3e9a4ddc6184"><td class="memItemLeft" align="right" valign="top"><a id="adb57bdaefa87300e076b3e9a4ddc6184"></a>
-<a class="el" href="structs__light.html">t_light</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ambient</b></td></tr>
-<tr class="separator:adb57bdaefa87300e076b3e9a4ddc6184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6ca2988c2a2c6b37d9e1e5fa7d3f2f2"><td class="memItemLeft" align="right" valign="top"><a id="ad6ca2988c2a2c6b37d9e1e5fa7d3f2f2"></a>
-<a class="el" href="structs__light.html">t_light</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lsrc</b></td></tr>
-<tr class="separator:ad6ca2988c2a2c6b37d9e1e5fa7d3f2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65db50568efc1e70b28b181328d14367"><td class="memItemLeft" align="right" valign="top"><a id="a65db50568efc1e70b28b181328d14367"></a>
-<a class="el" href="structs__hittable.html">t_hittable</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>obj</b></td></tr>
-<tr class="separator:a65db50568efc1e70b28b181328d14367"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41095695a4b729ef79d0c98e432ce62b"><td class="memItemLeft" align="right" valign="top"><a id="a41095695a4b729ef79d0c98e432ce62b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>lsrc_count</b></td></tr>
-<tr class="separator:a41095695a4b729ef79d0c98e432ce62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7af894858cf396a219d632f40afdc8d"><td class="memItemLeft" align="right" valign="top"><a id="ac7af894858cf396a219d632f40afdc8d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>total</b></td></tr>
-<tr class="separator:ac7af894858cf396a219d632f40afdc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab50d783982593ef993ea0b68f7ad8b80"><td class="memItemLeft" align="right" valign="top"><a id="ab50d783982593ef993ea0b68f7ad8b80"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>str</b></td></tr>
+<tr class="separator:ab50d783982593ef993ea0b68f7ad8b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854352f53b148adc24983a58a1866d66"><td class="memItemLeft" align="right" valign="top"><a id="a854352f53b148adc24983a58a1866d66"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<tr class="separator:a854352f53b148adc24983a58a1866d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cc23fe6b0f6df6286f28725f5d05d1"><td class="memItemLeft" align="right" valign="top"><a id="a81cc23fe6b0f6df6286f28725f5d05d1"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>cur_pos</b></td></tr>
+<tr class="separator:a81cc23fe6b0f6df6286f28725f5d05d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains all entities in the scene. </p>
+<div class="textblock"><p>Simple implementation of a buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ambient</td><td>Ambient lighting </td></tr>
-    <tr><td class="paramname">lsrc</td><td>Light sources </td></tr>
-    <tr><td class="paramname">obj</td><td>Array of hittables </td></tr>
-    <tr><td class="paramname">lsrc_count</td><td>Number of light sources </td></tr>
+    <tr><td class="paramname">str</td><td>Buffer string. </td></tr>
+    <tr><td class="paramname">size</td><td>Size of malloced buffer memory in bytes. </td></tr>
+    <tr><td class="paramname">cur_pos</td><td>Current position of buffer. </td></tr>
   </table>
   </dd>
 </dl>
@@ -134,7 +127,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>total</b></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="structs__entities.html">s_entities</a></li>
+    <li class="navelem"><a class="el" href="structs__buf.html">s_buf</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
