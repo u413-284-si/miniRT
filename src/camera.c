@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/01 15:24:54 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/06 11:46:11 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_cam_recalc_projection(t_cam *cam)
 {
-	ft_mat4_perspective(cam->projection, ft_degree_to_radian(cam->hfov), 1, 0.1, 100.0);
+	ft_mat4_perspective(cam->projection, ft_degree_to_radian(cam->hfov), 1.7777, 0.1, 100.0);
 	ft_inverse_matrix(cam->projection, cam->inv_projection);
 }
 
@@ -26,8 +26,8 @@ void	ft_cam_recalc_view(t_cam *cam)
 
 void	ft_initiate_image(t_image *image)
 {
-	image->image_width = 800;
-	image->aspect_ratio = 16.0 / 9.0;
+	image->image_width = WIN_X;
+	image->aspect_ratio = RATIO;
 	image->image_height = (int)(image->image_width / image->aspect_ratio);
 	if (image->image_height < 1)
 		image->image_height = 1;

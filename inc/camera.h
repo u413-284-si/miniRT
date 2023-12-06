@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/01 15:24:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/06 14:30:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 # include "utils.h"
 # include "quaternion.h"
 # include "matrix.h"
+
+/* ====== MACROS ====== */
+
+# define WIN_X 800
+# define WIN_Y 600
+# define RATIO 1.333333
 
 /* ====== TYPEDEFS ====== */
 
