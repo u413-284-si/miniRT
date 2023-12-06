@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 22:49:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/06 15:28:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 /* ====== LIBRARIES ====== */
 
 # include <stdio.h>
+# include <stdint.h>
 
 /* ====== TYPEDEFS ====== */
 
@@ -67,5 +68,8 @@ t_colour	ft_hadamard_colour(t_colour c1, t_colour c2);
 int			ft_convert_colour2int(t_colour colour);
 
 t_colour	ft_convert_int2colour(int colour);
+
+t_colour	ft_clamp_colour(t_colour colour, float min, float max);
+t_colour	ft_colour_create(float r, float g, float b);
 
 #endif

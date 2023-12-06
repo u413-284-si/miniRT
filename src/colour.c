@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 22:48:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/06 15:28:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,15 @@ t_colour	ft_hadamard_colour(t_colour c1, t_colour c2)
 
 int	ft_convert_colour2int(t_colour colour)
 {
-	int	a;
-	int	r;
-	int	g;
-	int	b;
+	uint8_t	a;
+	uint8_t	r;
+	uint8_t	g;
+	uint8_t	b;
 
 	a = 0;
-	r = (int)(255.99 * colour.r);
-	g = (int)(255.99 * colour.g);
-	b = (int)(255.99 * colour.b);
+	r = (uint8_t)(255.0 * colour.r);
+	g = (uint8_t)(255.0 * colour.g);
+	b = (uint8_t)(255.0 * colour.b);
 	return ((a << 24) | (r << 16) | (g << 8) | b);
 }
 
@@ -63,5 +63,32 @@ t_colour	ft_convert_int2colour(int colour)
 	ret.r = colour >> 16 & 0xFF;
 	ret.g = colour >> 8 & 0xFF;
 	ret.b = colour & 0xFF;
+	return (ret);
+}
+
+t_colour	ft_clamp_colour(t_colour colour, float min, float max)
+{
+	if (colour.r < min)
+		colour.r = min;
+	else if (colour.r > max)
+		colour.r = max;
+	if (colour.g < min)
+		colour.g = min;
+	else if (colour.g > max)
+		colour.g = max;
+	if (colour.b < min)
+		colour.b = min;
+	else if (colour.b > max)
+		colour.b = max;
+	return (colour);
+}
+
+t_colour	ft_colour_create(float r, float g, float b)
+{
+	t_colour ret;
+
+	ret.r = r;
+	ret.g = g;
+	ret.b = b;
 	return (ret);
 }
