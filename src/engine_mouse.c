@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 18:48:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/06 19:03:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/06 21:04:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int	ft_mouse_hook_move(int x, int y, t_engine *engine)
 	if (engine->mouse.right)
 	{
 		//ft_mouse_translate(x, y, engine);
+		ft_mouse_move_center(engine);
 	}
 	return (0);
 }
