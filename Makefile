@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/11/30 08:51:43 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/06 18:57:49 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ SRC := 	camera_move.c \
 		engine_draw.c \
 		engine_keyhook.c \
 		engine_loop.c \
+		engine_mouse.c \
 		error_mlx.c \
 		error_msg_check.c \
 		error_msg_generic.c \
