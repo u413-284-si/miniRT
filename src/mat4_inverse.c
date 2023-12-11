@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   matrix_inverse.c                                   :+:      :+:    :+:   */
+/*   mat4_inverse.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:52:56 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/30 08:52:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/11 16:45:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "matrix.h"
+#include "mat4.h"
 
-static void	swap_rows(t_mat4 mat, int row1, int row2)
+static void	swap_rows(t_mat4 *mat, int row1, int row2)
 {
 	int		i;
 	float	temp;
@@ -20,24 +20,24 @@ static void	swap_rows(t_mat4 mat, int row1, int row2)
 	i = 0;
 	while (i < 4)
 	{
-		temp = mat[row1][i];
-		mat[row1][i] = mat[row2][i];
-		mat[row2][i] = temp;
+		temp = mat->mat[row1][i];
+		mat->mat[row1][i] = mat->mat[row2][i];
+		mat->mat[row2][i] = temp;
 		i++;
 	}
 }
 
-static int	find_non_zero_and_swap(t_mat4 inv, t_mat4 identity, int i)
+static int	find_non_zero_and_swap(t_mat4 *mat, t_mat4 *inverse, int i)
 {
 	int	k;
 
 	k = i + 1;
 	while (k < 4)
 	{
-		if (inv[k][i] != 0.0f)
+		if (mat->mat[k][i] != 0.0f)
 		{
-			swap_rows(inv, i, k);
-			swap_rows(identity, i, k);
+			swap_rows(mat, i, k);
+			swap_rows(inverse, i, k);
 			return (1);
 		}
 		++k;
@@ -45,20 +45,20 @@ static int	find_non_zero_and_swap(t_mat4 inv, t_mat4 identity, int i)
 	return (0);
 }
 
-static void	normalize_row(t_mat4 inv, t_mat4 identity, int row, float divisor)
+static void	normalize_row(t_mat4 *mat, t_mat4 *inverse, int row, float divisor)
 {
 	int	j;
 
 	j = 0;
 	while (j < 4)
 	{
-		inv[row][j] /= divisor;
-		identity[row][j] /= divisor;
+		mat->mat[row][j] /= divisor;
+		inverse->mat[row][j] /= divisor;
 		++j;
 	}
 }
 
-static void	eliminate_non_diagonal(t_mat4 inv, t_mat4 identity, int i)
+static void	eliminate_non_diagonal(t_mat4 *mat, t_mat4 *inverse, int i)
 {
 	int		k;
 	int		j;
@@ -69,12 +69,12 @@ static void	eliminate_non_diagonal(t_mat4 inv, t_mat4 identity, int i)
 	{
 		if (k != i)
 		{
-			factor = inv[k][i];
+			factor = mat->mat[k][i];
 			j = 0;
 			while (j < 4)
 			{
-				inv[k][j] -= factor * inv[i][j];
-				identity[k][j] -= factor * identity[i][j];
+				mat->mat[k][j] -= factor * mat->mat[i][j];
+				inverse->mat[k][j] -= factor * inverse->mat[i][j];
 				++j;
 			}
 		}
@@ -82,28 +82,26 @@ static void	eliminate_non_diagonal(t_mat4 inv, t_mat4 identity, int i)
 	}
 }
 
-int	ft_inverse_matrix(const t_mat4 mat, t_mat4 inv)
+t_mat4	ft_mat4_inverse(t_mat4 mat)
 {
-	t_mat4	identity;
+	t_mat4	inverse;
 	int		i;
 
-	ft_mat4_set_identity(identity);
-	ft_mat4_copy(mat, inv);
+	inverse = ft_mat4_set_identity();
 	i = 0;
 	while (i < 4)
 	{
-		if (inv[i][i] == 0.0f)
+		if (mat.mat[i][i] == 0.0f)
 		{
-			if (!find_non_zero_and_swap(inv, identity, i))
+			if (!find_non_zero_and_swap(&mat, &inverse, i))
 			{
 				ft_perror("Matrix is singular, cannot find its inverse.", 0);
-				return (1);
+				return (ft_mat4_set_identity());
 			}
 		}
-		normalize_row(inv, identity, i, inv[i][i]);
-		eliminate_non_diagonal(inv, identity, i);
+		normalize_row(&mat, &inverse, i, mat.mat[i][i]);
+		eliminate_non_diagonal(&mat, &inverse, i);
 		++i;
 	}
-	ft_mat4_copy(identity, inv);
-	return (0);
+	return (inverse);
 }

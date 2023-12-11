@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/06 18:57:49 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/11 16:48:07 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,14 +88,14 @@ SRC := 	camera_move.c \
 		import_file_buffer.c \
 		import_file.c \
 		main.c \
-		matrix_inverse.c \
-		matrix.c \
+		mat4_inverse.c \
+		mat4_transform.c \
+		mat4.c \
 		output_ppm.c \
 		parse_entity_ACL.c \
 		parse_entity_sp_pl_cy.c \
 		parse_line.c \
 		parse.c \
-		quaternion_ops.c \
 		ray.c \
 		render_draw.c \
 		render_init.c \
@@ -107,7 +107,9 @@ SRC := 	camera_move.c \
 		utils_cylinder.c \
 		utils.c \
 		vec3_arithmetics.c \
-		vec3_linalgebra.c
+		vec3_linalgebra.c \
+		vec3.c \
+		vec4.c
 
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
