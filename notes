@@ -1,0 +1,12 @@
+we use column major matrix
+
+[	a1	b1	c1	d1	]
+[	a2	b2	c2	d2	]
+[	a3	b3	c3	d3	]
+[	a4	b4	c4	d4	]
+
+Post-multiplication: Mv
+
+Call order is the reverse of the order in the transforms are applied: "take P, transform by T, transform by Rz, transform by Ry" is written as P1 = Ry * Rz * T * P
+
+The translation values are stored in the d1, d2, and d3 elements.
