@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 09:55:14 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/08 01:34:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/11 16:36:56 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 # include <math.h>
 # include "vec3.h"
-# include "matrix.h"
+# include "mat4.h"
 
 /* ====== TYPEDEFS ====== */
 

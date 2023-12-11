@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 10:18:52 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/07 21:53:17 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/11 16:58:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,11 @@ void	ft_rotate_cam(t_cam *cam, int delta[2])
 	//t_quat	q;
 
 	//float pitch = delta[1] * 0.002;
-	float yaw = delta[0] * 0.3;
+	//float yaw = delta[0] * 0.3;
 	//rotate_pitch = ft_quat_angle_axis(-pitch, cam->right);
 	//rotate_yaw = ft_quat_angle_axis(-yaw, cam->vup);
 	//q = ft_quat_norm(ft_quat_mult(rotate_pitch, rotate_yaw));
-	cam->direction = ft_quat_rotate2(yaw, cam->vup, cam->direction);
+	//cam->direction = ft_quat_rotate2(yaw, cam->vup, cam->direction);
+	(void)cam;
+	(void)delta;
 }

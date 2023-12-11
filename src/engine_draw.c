@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:00:30 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/08 01:31:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/11 16:55:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ int	ft_draw_scene(t_engine *engine)
 			y_div = y_div * 2.0 - 1.0;
 
 			t_vec4 target;
-			target = ft_mult_vec4_mat4(ft_vec4_create(x_div, y_div, 1, 1), engine->cam.inv_projection);
+			target = ft_mat4_mult_vec4(engine->cam.inv_projection, ft_vec4_create(x_div, y_div, 1, 1));
 
 			t_vec3	target2;
 			target2 = ft_vec3_norm(ft_vec3_scale(ft_vec3_create(target.x, target.y, target.z), 1 / target.w));
@@ -105,7 +105,7 @@ int	ft_draw_scene(t_engine *engine)
 			t_vec4	tmp;
 			tmp = ft_vec4_create(target2.x, target2.y, target2.z, 0);
 
-			target = ft_mult_vec4_mat4(tmp, engine->cam.inv_view);
+			target = ft_mat4_mult_vec4(engine->cam.inv_view, tmp);
 
 			ray.direction = ft_vec3_create(target.x, target.y, target.z);
 

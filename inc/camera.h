@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/08 01:34:14 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/11 16:46:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "ray.h"
 # include "utils.h"
 # include "quaternion.h"
-# include "matrix.h"
+# include "mat4.h"
 
 /* ====== MACROS ====== */
 
@@ -149,7 +149,6 @@ void	ft_rotate_cam(t_cam *cam, int delta[2]);
 
 void	ft_cam_recalc_view(t_cam *cam);
 void	ft_cam_recalc_projection(t_cam *cam);
-void	ft_cam_view_mat(t_cam *cam);
 void	ft_cam_update(t_cam *cam);
 
 #endif
