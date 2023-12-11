@@ -6,22 +6,33 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/06 11:46:11 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/08 02:22:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "camera.h"
+#include "ft_print.h"
+
+void printMatrix(t_mat4 mat);
 
 void	ft_cam_recalc_projection(t_cam *cam)
 {
-	ft_mat4_perspective(cam->projection, ft_degree_to_radian(cam->hfov), 1.7777, 0.1, 100.0);
+	ft_mat4_perspective(cam->projection, ft_degree_to_radian(cam->hfov), RATIO, 0.1, 100.0);
+	//ft_printf("Proj mat\n");
+	//printMatrix(cam->projection);
 	ft_inverse_matrix(cam->projection, cam->inv_projection);
+	//ft_printf("Inv proj mat\n");
+	//printMatrix(cam->inv_projection);
 }
 
 void	ft_cam_recalc_view(t_cam *cam)
 {
-	ft_mat4_cam_look_at(cam->view, cam->camera_centre, ft_vec3_norm(cam->look_at), cam->vup);
+	ft_cam_view_mat(cam);
+	ft_printf("View mat\n");
+	printMatrix(cam->view);
 	ft_inverse_matrix(cam->view, cam->inv_view);
+	ft_printf("Inv view mat\n");
+	printMatrix(cam->inv_view);
 }
 
 void	ft_initiate_image(t_image *image)
@@ -35,12 +46,10 @@ void	ft_initiate_image(t_image *image)
 
 void	ft_initiate_camera(t_cam *cam)
 {
-	cam->vup.x = 0.0;
-	cam->vup.y = 1.0;
-	cam->vup.z = 0.0;
-	cam->camera_centre.x = cam->look_from.x;
-	cam->camera_centre.y = cam->look_from.y;
-	cam->camera_centre.z = cam->look_from.z;
+	cam->vup = ft_vec3_create(0.0, 1.0, 0.0);
+	cam->camera_centre = cam->look_from;
+	cam->direction = ft_vec3_norm(cam->look_at);
+	cam->right = ft_vec3_norm(ft_vec3_cross(cam->direction, cam->vup));
 	cam->w = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
 	cam->u = ft_vec3_cross(cam->vup, cam->w);
 	cam->v = ft_vec3_cross(cam->w, cam->u);
@@ -94,4 +103,34 @@ void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
 			ft_write_colour(pixel_colour);
 		}
 	}
+}
+
+void	ft_cam_view_mat(t_cam *cam)
+{
+	t_vec3	cam_up;
+
+	cam_up = ft_vec3_norm(ft_vec3_cross(cam->right, cam->direction));
+	cam->view[0][0] = cam->right.x;
+	cam->view[1][0] = cam->right.y;
+	cam->view[2][0] = cam->right.z;
+	cam->view[0][1] = cam_up.x;
+	cam->view[1][1] = cam_up.y;
+	cam->view[2][1] = cam_up.z;
+	cam->view[0][2] = -cam->direction.x;
+	cam->view[1][2] = -cam->direction.y;
+	cam->view[2][2] = -cam->direction.z;
+	cam->view[3][0] = -ft_vec3_dot(cam->right, cam->look_from);
+	cam->view[3][1] = -ft_vec3_dot(cam_up, cam->look_from);
+	cam->view[3][2] = ft_vec3_dot(cam->direction, cam->look_from);
+	cam->view[0][3] = 0;
+	cam->view[1][3] = 0;
+	cam->view[2][3] = 0;
+	cam->view[3][3] = 1;
+}
+
+void	ft_cam_update(t_cam *cam)
+{
+	cam->right = ft_vec3_norm(ft_vec3_cross(cam->direction, cam->vup));
+	ft_cam_recalc_view(cam);
+	ft_cam_recalc_projection(cam);
 }

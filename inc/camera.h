@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/06 14:30:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/08 01:34:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 
 /* ====== MACROS ====== */
 
-# define WIN_X 800
+# define WIN_X 600
 # define WIN_Y 600
-# define RATIO 1.333333
+# define RATIO 1
 
 /* ====== TYPEDEFS ====== */
 
@@ -63,6 +63,8 @@ typedef struct s_cam
 	t_vec3	w;
 	t_vec3	vup;
 	t_vec3	camera_centre;
+	t_vec3	direction;
+	t_vec3	right;
 	float	hfov;
 	t_mat4	view;
 	t_mat4	inv_view;
@@ -140,12 +142,14 @@ void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image);
 void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
 	t_entities scene);
 
-void	ft_move_cam_w(t_cam *cam, float dist);
+void	ft_move_cam_forward(t_cam *cam, float dist);
 void	ft_move_cam_up(t_cam *cam, float dist);
-void	ft_move_cam_u(t_cam *cam, float dist);
-void	ft_rotate_cam(t_cam *cam, float angle, float x, float y, float z);
+void	ft_move_cam_right(t_cam *cam, float dist);
+void	ft_rotate_cam(t_cam *cam, int delta[2]);
 
 void	ft_cam_recalc_view(t_cam *cam);
 void	ft_cam_recalc_projection(t_cam *cam);
+void	ft_cam_view_mat(t_cam *cam);
+void	ft_cam_update(t_cam *cam);
 
 #endif

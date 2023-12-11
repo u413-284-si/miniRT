@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:00:30 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/06 18:20:11 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/08 01:31:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,23 +39,21 @@ int	ft_calc_pix_colour(t_cam cam, t_vec3 pix_centre, t_entities scene)
 	t_colour	pix_colour;
 	int			colour;
 
-	ray.origin = cam.camera_centre;
-	ray.direction = ft_vec3_norm(ft_vec3_sub(pix_centre, cam.camera_centre));
+	ray.origin = cam.look_from;
+	ray.direction = ft_vec3_norm(ft_vec3_sub(pix_centre, cam.look_from));
 	ray.d = 1.0;
 	pix_colour = ft_ray_colour(ray, scene);
 	colour = ft_convert_colour2int(pix_colour);
 	return (colour);
 }
 
-t_colour	ft_per_pixel(float x, float y)
+t_colour	ft_per_pixel(t_ray ray)
 {
-	t_vec3 ray_origin = ft_vec3_create(0.0, 0.0, 1.0);
-	t_vec3 ray_direction = ft_vec3_create(x, y, -1.0);
 	float radius = 0.5;
 
-	float a = ft_vec3_dot(ray_direction, ray_direction);
-	float b = 2.0 * ft_vec3_dot(ray_origin, ray_direction);
-	float c = ft_vec3_dot(ray_origin, ray_origin) - (radius * radius);
+	float a = ft_vec3_dot(ray.direction, ray.direction);
+	float b = 2.0 * ft_vec3_dot(ray.origin, ray.direction);
+	float c = ft_vec3_dot(ray.origin, ray.origin) - (radius * radius);
 
 	float discriminant = b * b - 4.0 * a * c;
 
@@ -66,7 +64,7 @@ t_colour	ft_per_pixel(float x, float y)
 	float t_close = (-b - sqrtf(discriminant)) / (2.0 * a);
 
 	//t_vec3	h0 = ft_vec3_scale(ft_vec3_add(ray_origin, ray_direction), t0);
-	t_vec3	hit_point = ft_vec3_add(ray_origin, ft_vec3_scale(ray_direction, t_close));
+	t_vec3	hit_point = ft_vec3_add(ray.origin, ft_vec3_scale(ray.direction, t_close));
 	t_vec3	normal = ft_vec3_norm(hit_point);
 
 	t_vec3	light_dir = ft_vec3_scale(ft_vec3_norm(ft_vec3_create(-1.0, -1.0, -1.0)), -1);
@@ -84,8 +82,9 @@ int	ft_draw_scene(t_engine *engine)
 	int			y;
 	//t_vec3		pix_centre;
 	t_colour	colour;
+	t_ray		ray;
 
-
+	ray.origin = engine->cam.look_from;
 	y = -1;
 	while (++y < engine->image.image_height)
 	{
@@ -94,10 +93,24 @@ int	ft_draw_scene(t_engine *engine)
 		{
 			float x_div = (float)x / (float)engine->image.image_width;
 			x_div = x_div * 2.0 - 1.0;
-			x_div *= engine->image.aspect_ratio;
 			float y_div = (float)y / (float)engine->image.image_height;
 			y_div = y_div * 2.0 - 1.0;
-			colour = ft_per_pixel(x_div, y_div);
+
+			t_vec4 target;
+			target = ft_mult_vec4_mat4(ft_vec4_create(x_div, y_div, 1, 1), engine->cam.inv_projection);
+
+			t_vec3	target2;
+			target2 = ft_vec3_norm(ft_vec3_scale(ft_vec3_create(target.x, target.y, target.z), 1 / target.w));
+
+			t_vec4	tmp;
+			tmp = ft_vec4_create(target2.x, target2.y, target2.z, 0);
+
+			target = ft_mult_vec4_mat4(tmp, engine->cam.inv_view);
+
+			ray.direction = ft_vec3_create(target.x, target.y, target.z);
+
+
+			colour = ft_per_pixel(ray);
 			colour = ft_clamp_colour(colour, 0.0, 1.0);
 			int convert = ft_convert_colour2int(colour);
 			// flip image height with height - 1 - y

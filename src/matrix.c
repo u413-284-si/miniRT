@@ -6,11 +6,12 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:00:10 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/01 15:15:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/07 21:22:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "matrix.h"
+#include "ft_print.h"
 
 t_vec4	ft_vec4_create(float x, float y, float z, float w)
 {
@@ -37,13 +38,21 @@ t_vec4	ft_mult_vec4_mat4(t_vec4 vec, t_mat4 mat)
 {
 	t_vec4	result;
 
-	result.x = vec.x * mat[0][0] + vec.y * mat[1][0] + vec.z * mat[2][0]
+	result.x = vec.x * mat[0][0]
+		+ vec.y * mat[1][0]
+		+ vec.z * mat[2][0]
 		+ vec.w * mat[3][0];
-	result.y = vec.x * mat[0][1] + vec.y * mat[1][1] + vec.z * mat[2][1]
+	result.y = vec.x * mat[0][1]
+		+ vec.y * mat[1][1]
+		+ vec.z * mat[2][1]
 		+ vec.w * mat[3][1];
-	result.z = vec.x * mat[0][2] + vec.y * mat[1][2] + vec.z * mat[2][2]
+	result.z = vec.x * mat[0][2]
+		+ vec.y * mat[1][2]
+		+ vec.z * mat[2][2]
 		+ vec.w * mat[3][2];
-	result.w = vec.x * mat[0][3] + vec.y * mat[1][3] + vec.z * mat[2][3]
+	result.w = vec.x * mat[0][3]
+		+ vec.y * mat[1][3]
+		+ vec.z * mat[2][3]
 		+ vec.w * mat[3][3];
 	return (result);
 }
@@ -72,19 +81,18 @@ void	ft_mat4_cam_look_at(t_mat4 mat, t_vec3 cam_pos, t_vec3 cam_dir, t_vec3 v_up
 	return ;
 }
 
-// is in row major form
+// is in column major form
 // angle is in rad
 void	ft_mat4_perspective(t_mat4 mat, float angle, float ratio, float near, float far)
 {
-	float	tan_half_angle;
+	const float	fov_vertical = 2 * atanf(tanf(angle / 2) / ratio);
 
 	ft_mat4_set_identity(mat);
-	tan_half_angle = tan(angle / 2);
-	mat[0][0] = 1 / (ratio * tan_half_angle);
-	mat[1][1] = 1 / (tan_half_angle);
-	mat[2][2] = -(far + near) / (far - near);
+	mat[0][0] = 1.0 / tanf(angle / 2);
+	mat[1][1] = 1.0 / tanf(fov_vertical / 2);
+	mat[2][2] = -((far + near) / (far - near));
 	mat[2][3] = -1.0;
-	mat[3][2] = -(2 * far * near) / (far - near);
+	mat[3][2] = -((2 * far * near) / (far - near));
 }
 
 void	ft_mat4_copy(const t_mat4 src, t_mat4 dst)
@@ -115,4 +123,14 @@ void	ft_mat4_set_identity(t_mat4 mat)
 	};
 
 	ft_mat4_copy(identity, mat);
+}
+
+void printMatrix(t_mat4 mat)
+{
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			printf("%.2f\t", mat[i][j]);
+		}
+		printf("\n");
+	}
 }

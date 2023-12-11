@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 18:48:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/06 21:04:14 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/08 01:36:49 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,19 @@ int	ft_mouse_hook_release(int button, int x, int y, t_engine *engine)
 
 int	ft_mouse_hook_move(int x, int y, t_engine *engine)
 {
+	int	delta[2];
+
 	if (x > engine->image.image_width || x < 0
 		|| y > engine->image.image_height || y < 0)
 		return (0);
 	if (engine->mouse.right)
 	{
-		//ft_mouse_translate(x, y, engine);
+		ft_mouse_calc_delta(x, y, engine, delta);
+		if (delta[X] > 0.0 && delta[Y] > 0.0)
+		{
+			ft_rotate_cam(&engine->cam, delta);
+			ft_cam_update(&engine->cam);
+		}
 		ft_mouse_move_center(engine);
 	}
 	return (0);
@@ -66,31 +73,16 @@ void	ft_mouse_move_center(t_engine *engine)
 	mlx_mouse_move(engine->render.mlx_ptr, engine->render.win_ptr, x, y);
 }
 
-/*
-void	ft_mouse_translate(int x, int y, t_engine *engine)
+
+void	ft_mouse_calc_delta(int x, int y, t_engine *engine, int delta[2])
 {
-	int		delta_x;
-	int		delta_y;
 	float	distance;
 
-	delta_x = engine->mouse.last_right[X] - x;
-	delta_y = engine->mouse.last_right[Y] - y;
-	distance = sqrt(delta_x * delta_x + delta_y * delta_y);
+	delta[X] = engine->mouse.last_right[X] - x;
+	delta[Y] = engine->mouse.last_right[Y] - y;
+	distance = sqrt(delta[X] * delta[X] + delta[Y] * delta[Y]);
 	if (distance < 10)
 		return ;
-	engine->map.props.translate[X] -= delta_x;
-	if (engine->map.props.translate[X] >= 5000
-		|| engine->map.props.translate[X] <= -5000)
-		engine->map.props.translate[X] += delta_x;
-	else
-		engine->map.mat[3][0] -= delta_x;
-	engine->map.props.translate[Y] -= delta_y;
-	if (engine->map.props.translate[Y] >= 5000
-		|| engine->map.props.translate[Y] <= -5000)
-		engine->map.props.translate[Y] += delta_y;
-	else
-		engine->map.mat[3][1] -= delta_y;
 	engine->mouse.last_right[X] = x;
 	engine->mouse.last_right[Y] = y;
 }
-*/
