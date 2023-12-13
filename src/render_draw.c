@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 16:14:06 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/13 12:20:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ void	ft_render_image(t_image image, t_cam cam, t_viewport vp, \
 		{
 			pixel = ft_vec3_add(ft_vec3_add(vp.pixel00_pos, \
 				ft_vec3_scale(vp.delta_u, i)), ft_vec3_scale(vp.delta_v, j));
-			ray.origin = cam.camera_centre;
-			ray.direction = ft_vec3_norm(ft_vec3_sub(pixel, cam.camera_centre));
+			ray.origin = cam.look_from;
+			ray.direction = ft_vec3_norm(ft_vec3_sub(pixel, cam.look_from));
 			ray.d = 1.0;
 			pixel_colour = ft_ray_colour(ray, scene);
 			colour = ft_convert_colour2int(pixel_colour);

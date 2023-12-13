@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 18:48:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/08 01:36:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/13 17:03:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,14 @@ int	ft_mouse_hook_release(int button, int x, int y, t_engine *engine)
 int	ft_mouse_hook_move(int x, int y, t_engine *engine)
 {
 	int	delta[2];
+	static bool	first;
+
+	if (!first)
+	{
+		engine->mouse.last_right[0] = x;
+		engine->mouse.last_right[1] = y;
+		first = true;
+	}
 
 	if (x > engine->image.image_width || x < 0
 		|| y > engine->image.image_height || y < 0)
@@ -76,13 +84,8 @@ void	ft_mouse_move_center(t_engine *engine)
 
 void	ft_mouse_calc_delta(int x, int y, t_engine *engine, int delta[2])
 {
-	float	distance;
-
 	delta[X] = engine->mouse.last_right[X] - x;
-	delta[Y] = engine->mouse.last_right[Y] - y;
-	distance = sqrt(delta[X] * delta[X] + delta[Y] * delta[Y]);
-	if (distance < 10)
-		return ;
+	delta[Y] = y - engine->mouse.last_right[Y];
 	engine->mouse.last_right[X] = x;
 	engine->mouse.last_right[Y] = y;
 }

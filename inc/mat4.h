@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:53:31 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/11 16:50:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/13 14:44:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,13 @@ typedef struct s_mat4
 t_mat4	ft_mat4_set_identity(void);
 t_mat4	ft_mat4_copy(const t_mat4 src);
 t_vec4	ft_mat4_mult_vec4(const t_mat4 mat, const t_vec4 vec);
+t_mat4	ft_mat4_mult_mat4(const t_mat4 left, const t_mat4 right);
 void	ft_mat4_print(t_mat4 mat);
 
 t_mat4	ft_mat4_inverse(t_mat4 mat);
 
-t_mat4	ft_mat4_cam_look_at(t_vec3 cam_pos, t_vec3 cam_dir, t_vec3 v_up);
+
 t_mat4	ft_mat4_perspective(float angle, float ratio, float near, float far);
+t_mat4	ft_mat4_cam_look_at(t_vec3 position, t_vec3 target, t_vec3 world_up);
 
 #endif

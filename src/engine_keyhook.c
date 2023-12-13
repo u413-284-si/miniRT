@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:08:26 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/08 01:36:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/13 17:46:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ void	ft_move_camera(int key, t_cam *cam)
 		ft_move_cam_right(cam, -MV_UNIT);
 	else if (key == KEY_D)
 		ft_move_cam_right(cam, MV_UNIT);
+	else if (key == KEY_ARROW_UP)
+		cam->pitch += 0.01;
+	else if (key == KEY_ARROW_DOWN)
+		cam->pitch -= 0.01;
+	else if (key == KEY_ARROW_LEFT)
+		cam->yaw += 0.01;
+	else if (key == KEY_ARROW_RIGHT)
+		cam->yaw -= 0.01;
 	ft_cam_update(cam);
 }
 
@@ -85,7 +93,7 @@ int	ft_keyhook_press(int key, t_engine *engine)
 		ft_output_as_ppm((int *)engine->render.buffer.addr, 800, 450);
 	}
 	else if (key == KEY_Q || key == KEY_W || key == KEY_E || key == KEY_A
-		|| key == KEY_S || key == KEY_D)
+		|| key == KEY_S || key == KEY_D || key == KEY_ARROW_DOWN || key == KEY_ARROW_UP || key == KEY_ARROW_LEFT || key == KEY_ARROW_RIGHT)
 	{
 		ft_move_camera(key, &engine->cam);
 	}

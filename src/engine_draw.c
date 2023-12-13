@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:00:30 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/11 16:55:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/13 16:08:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,13 @@ t_vec3	ft_calc_pix_centre(t_viewport vp, int i, int j)
 	return (pix_centre);
 }
 
-int	ft_calc_pix_colour(t_cam cam, t_vec3 pix_centre, t_entities scene)
+t_colour	ft_calc_pix_colour(t_ray ray, t_entities scene)
 {
-	t_ray		ray;
 	t_colour	pix_colour;
-	int			colour;
 
-	ray.origin = cam.look_from;
-	ray.direction = ft_vec3_norm(ft_vec3_sub(pix_centre, cam.look_from));
 	ray.d = 1.0;
 	pix_colour = ft_ray_colour(ray, scene);
-	colour = ft_convert_colour2int(pix_colour);
-	return (colour);
+	return (pix_colour);
 }
 
 t_colour	ft_per_pixel(t_ray ray)
@@ -110,7 +105,7 @@ int	ft_draw_scene(t_engine *engine)
 			ray.direction = ft_vec3_create(target.x, target.y, target.z);
 
 
-			colour = ft_per_pixel(ray);
+			colour = ft_calc_pix_colour(ray, engine->scene);
 			colour = ft_clamp_colour(colour, 0.0, 1.0);
 			int convert = ft_convert_colour2int(colour);
 			// flip image height with height - 1 - y

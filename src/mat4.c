@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:00:10 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/11 16:57:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/13 15:34:16 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,12 @@ t_vec4	ft_mat4_mult_vec4(const t_mat4 mat, const t_vec4 vec)
 	return (result);
 }
 
-void	ft_mat4_print(t_mat4 mat)
+t_mat4	ft_mat4_mult_mat4(const t_mat4 left, const t_mat4 right)
 {
-	int	i;
-	int	j;
+	t_mat4	ret;
+	int		i;
+	int		j;
+	int		k;
 
 	i = 0;
 	while (i < 4)
@@ -83,10 +85,35 @@ void	ft_mat4_print(t_mat4 mat)
 		j = 0;
 		while (j < 4)
 		{
-			printf("%.2f\t", mat.mat[i][j]);
+			ret.mat[j][i] = 0;
+			k = 0;
+			while (k < 4)
+			{
+				ret.mat[j][i] += left.mat[k][j] * right.mat[i][k];
+				k++;
+			}
 			j++;
 		}
-		ft_putchar_fd('\n', 1);
 		i++;
+	}
+	return (ret);
+}
+
+void	ft_mat4_print(t_mat4 mat)
+{
+	int	col;
+	int	row;
+
+	col = 0;
+	while (col < 4)
+	{
+		row = 0;
+		while (row < 4)
+		{
+			printf("%.2f\t", mat.mat[row][col]);
+			row++;
+		}
+		printf("\n");
+		col++;
 	}
 }

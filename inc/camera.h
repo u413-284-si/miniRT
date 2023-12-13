@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/11 16:46:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/13 16:24:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 
 # include "ray.h"
 # include "utils.h"
-# include "quaternion.h"
 # include "mat4.h"
 
 /* ====== MACROS ====== */
@@ -58,11 +57,11 @@ typedef struct s_cam
 {
 	t_vec3	look_from;
 	t_vec3	look_at;
-	t_vec3	u;
-	t_vec3	v;
-	t_vec3	w;
+	//t_vec3	u;
+	//t_vec3	v;
+	//t_vec3	w;
 	t_vec3	vup;
-	t_vec3	camera_centre;
+	//t_vec3	camera_centre;
 	t_vec3	direction;
 	t_vec3	right;
 	float	hfov;
@@ -70,6 +69,8 @@ typedef struct s_cam
 	t_mat4	inv_view;
 	t_mat4	projection;
 	t_mat4	inv_projection;
+	float	pitch;
+	float	yaw;
 }	t_cam;
 
 /**

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/11 16:54:24 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/13 18:07:56 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ void	ft_cam_recalc_projection(t_cam *cam)
 
 void	ft_cam_recalc_view(t_cam *cam)
 {
-	cam->view = ft_mat4_cam_look_at(cam->camera_centre, cam->look_at, (t_vec3){0, 1, 0});
-	ft_mat4_print(cam->view);
+	cam->view = ft_mat4_cam_look_at(cam->look_from, ft_vec3_add(cam->look_from, cam->look_at), (t_vec3){0, 1, 0});
+	//printf("View mat\n");
+	//ft_mat4_print(cam->view);
 	cam->inv_view = ft_mat4_inverse(cam->view);
-	ft_mat4_print(cam->inv_view);
+	//printf("Inv View mat\n");
+	//ft_mat4_print(cam->inv_view);
 }
 
 void	ft_initiate_image(t_image *image)
@@ -42,17 +44,17 @@ void	ft_initiate_image(t_image *image)
 
 void	ft_initiate_camera(t_cam *cam)
 {
-	cam->vup = ft_vec3_create(0.0, 1.0, 0.0);
-	cam->camera_centre = cam->look_from;
-	cam->direction = ft_vec3_norm(cam->look_at);
-	cam->right = ft_vec3_norm(ft_vec3_cross(cam->direction, cam->vup));
-	cam->w = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
-	cam->u = ft_vec3_cross(cam->vup, cam->w);
-	cam->v = ft_vec3_cross(cam->w, cam->u);
+	cam->direction = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
+	cam->right = ft_vec3_norm(ft_vec3_cross(ft_vec3_norm((t_vec3){0, 1, 0}), cam->direction));
+	cam->vup = ft_vec3_cross(cam->direction, cam->right);
+	cam->pitch = asinf(cam->look_at.y);
+	cam->yaw = atan2f(-cam->look_at.x, -cam->look_at.z) - 1.57079632679489661923;
+	printf("Pitch: %.2f, Yaw: %.2f\n", cam->pitch, cam->yaw);
 	ft_cam_recalc_view(cam);
 	ft_cam_recalc_projection(cam);
 }
 
+/*
 void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image)
 {
 	vp->focal_length = ft_vec3_abs(ft_vec3_sub(cam.look_from, cam.look_at));
@@ -73,6 +75,7 @@ void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image)
 	vp->pixel00_pos = ft_vec3_add(vp->viewport_upper_left, ft_vec3_scale(\
 		ft_vec3_add(vp->delta_u, vp->delta_v), 0.5));
 }
+
 
 void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
 	t_entities scene)
@@ -100,10 +103,21 @@ void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
 		}
 	}
 }
+*/
 
 void	ft_cam_update(t_cam *cam)
 {
-	cam->right = ft_vec3_norm(ft_vec3_cross(cam->direction, cam->vup));
+	t_vec3	 direction;
+
+	cam->direction = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
+	cam->right = ft_vec3_norm(ft_vec3_cross(ft_vec3_norm((t_vec3){0, 1, 0}), cam->direction));
+	cam->vup = ft_vec3_cross(cam->direction, cam->right);
+	direction.x = cos(cam->yaw) * cos(cam->pitch);
+	direction.y = sin(cam->pitch);
+	direction.z = sin(cam->yaw) * cos(cam->pitch);
+	cam->look_at = ft_vec3_norm(direction);
+	printf("yaw: %.2f, pitch: %.2f\n", cam->yaw, cam->pitch);
+	printf("Look at: x (%.2f), y (%.2f), z (%.2f)\n", cam->look_at.x, cam->look_at.y, cam->look_at.z);
 	ft_cam_recalc_view(cam);
 	ft_cam_recalc_projection(cam);
 }

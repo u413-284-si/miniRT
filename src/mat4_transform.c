@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 16:42:13 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/11 16:42:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/13 15:49:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,30 +25,36 @@ t_mat4	ft_mat4_perspective(float angle, float ratio, float near, float far)
 	mat.mat[2][2] = -((far + near) / (far - near));
 	mat.mat[2][3] = -1.0;
 	mat.mat[3][2] = -((2 * far * near) / (far - near));
+	mat.mat[3][3] = 0;
 	return (mat);
 }
 
 // inverse could easily be calculated
-t_mat4	ft_mat4_cam_look_at(t_vec3 cam_pos, t_vec3 cam_dir, t_vec3 v_up)
+t_mat4	ft_mat4_cam_look_at(t_vec3 position, t_vec3 target, t_vec3 world_up)
 {
+	t_vec3	cam_direction;
 	t_vec3	cam_right;
 	t_vec3	cam_up;
-	t_mat4	mat;
+	t_mat4	ret;
 
-	cam_right = ft_vec3_norm(ft_vec3_cross(cam_dir, v_up));
-	cam_up = ft_vec3_cross(cam_right, cam_dir);
-	mat = ft_mat4_set_identity();
-	mat.mat[0][0] = cam_right.x;
-	mat.mat[1][0] = cam_right.y;
-	mat.mat[2][0] = cam_right.z;
-	mat.mat[0][1] = cam_up.x;
-	mat.mat[1][1] = cam_up.y;
-	mat.mat[2][1] = cam_up.z;
-	mat.mat[0][2] = -cam_dir.x;
-	mat.mat[1][2] = -cam_dir.y;
-	mat.mat[2][2] = -cam_dir.z;
-	mat.mat[0][3] = cam_pos.x;
-	mat.mat[1][3] = cam_pos.y;
-	mat.mat[2][3] = cam_pos.z;
-	return (mat);
+	cam_direction = ft_vec3_norm(ft_vec3_sub(target, position));
+	cam_right = ft_vec3_norm(ft_vec3_cross(cam_direction, world_up));
+	cam_up = ft_vec3_cross(cam_right, cam_direction);
+
+	ret = ft_mat4_set_identity();
+
+	ret.mat[0][0] = cam_right.x;
+	ret.mat[1][0] = cam_right.y;
+	ret.mat[2][0] = cam_right.z;
+	ret.mat[0][1] = cam_up.x;
+	ret.mat[1][1] = cam_up.y;
+	ret.mat[2][1] = cam_up.z;
+	ret.mat[0][2] = -cam_direction.x;
+	ret.mat[1][2] = -cam_direction.y;
+	ret.mat[2][2] = -cam_direction.z;
+	ret.mat[3][0] = -ft_vec3_dot(cam_right, position);
+	ret.mat[3][1] = -ft_vec3_dot(cam_up, position);
+	ret.mat[3][2] = ft_vec3_dot(cam_direction, position);
+
+	return (ret);
 }

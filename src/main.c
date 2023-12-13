@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/26 09:33:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/13 12:12:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 		exit(1);
 	ft_initiate_image(&engine.image);
 	ft_initiate_camera(&engine.cam);
-	ft_initiate_viewport(&engine.vp, engine.cam, engine.image);
+	//ft_initiate_viewport(&engine.vp, engine.cam, engine.image);
 	ft_init_renderer(&engine.render, &engine.image, false);
 	ft_start_engine(&engine);
 	free(engine.scene.obj);
