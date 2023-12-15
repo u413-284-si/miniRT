@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:00:30 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/15 14:20:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/15 16:22:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ int	ft_draw_scene(t_engine *engine)
 {
 	int			x;
 	int			y;
-	//t_vec3		pix_centre;
 	t_colour	colour;
 	t_ray		ray;
 
@@ -86,25 +85,7 @@ int	ft_draw_scene(t_engine *engine)
 		x = -1;
 		while (++x < engine->image.width)
 		{
-			float x_div = (float)x / (float)engine->image.width;
-			x_div = x_div * 2.0 - 1.0;
-			float y_div = (float)y / (float)engine->image.height;
-			y_div = y_div * 2.0 - 1.0;
-
-			t_vec4 target;
-			target = ft_mat4_mult_vec4(engine->cam.inv_projection, ft_vec4_create(x_div, y_div, 1, 1));
-
-			t_vec3	target2;
-			target2 = ft_vec3_norm(ft_vec3_scale(ft_vec3_create(target.x, target.y, target.z), 1 / target.w));
-
-			t_vec4	tmp;
-			tmp = ft_vec4_create(target2.x, target2.y, target2.z, 0);
-
-			target = ft_mat4_mult_vec4(engine->cam.inv_view, tmp);
-
-			ray.direction = ft_vec3_create(target.x, target.y, target.z);
-
-
+			ray.direction = engine->cam.cached_rays[y * engine->image.width + x];
 			colour = ft_calc_pix_colour(ray, engine->scene);
 			colour = ft_clamp_colour(colour, 0.0, 1.0);
 			int convert = ft_convert_colour2int(colour);

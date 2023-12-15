@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/15 15:05:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/15 16:20:24 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,42 @@ void	ft_cam_calc_inv_view(t_cam *cam)
 	cam->inv_view = ft_mat4_inverse(view);
 }
 
+void	ft_cam_calc_ray_directions(t_cam *cam)
+{
+	int		y;
+	int		x;
+	float	x_div;
+	float	y_div;
+	t_vec4	projected;
+	t_vec3	normalized;
+	t_vec4	viewed;
+
+	y = -1;
+	while (++y < cam->screen.height)
+	{
+		x = -1;
+		while (++x < cam->screen.width)
+		{
+			x_div = (float)x / (float)cam->screen.width;
+			x_div = x_div * 2.0 - 1.0;
+			y_div = (float)y / (float)cam->screen.height;
+			y_div = y_div * 2.0 - 1.0;
+
+
+			projected = ft_mat4_mult_vec4(cam->inv_projection, ft_vec4_create(x_div, y_div, 1, 1));
+
+			normalized = ft_vec3_norm(ft_vec3_scale(ft_vec3_create(projected.x, projected.y, projected.z), 1 / projected.w));
+
+			viewed = ft_vec4_create(normalized.x, normalized.y, normalized.z, 0);
+
+			viewed = ft_mat4_mult_vec4(cam->inv_view, viewed);
+
+			cam->cached_rays[y * cam->screen.width + x] = ft_vec3_create(viewed.x, viewed.y, viewed.z);
+		}
+	}
+
+}
+
 void	ft_initiate_image(t_image *image)
 {
 	image->width = WIN_X;
@@ -49,7 +85,7 @@ t_err	ft_initiate_camera(t_cam *cam)
 		return (ERROR);
 	ft_cam_calc_inv_view(cam);
 	ft_cam_calc_inv_projection(cam);
-	//ft_cam_calc_ray_directions(cam);
+	ft_cam_calc_ray_directions(cam);
 	return (SUCCESS);
 }
 
