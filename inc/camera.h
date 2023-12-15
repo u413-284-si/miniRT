@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/13 16:24:21 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/15 15:03:40 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "ray.h"
 # include "utils.h"
 # include "mat4.h"
+# include "error_syscall.h"
 
 /* ====== MACROS ====== */
 
@@ -30,15 +31,15 @@
 /**
  * @brief Contains image parameters
  *
- * @param aspect_ratio			Ratio of image_width / image_height
- * @param image_width			Width of image created
- * @param image_height			Height of image created
+ * @param width			Width of image created
+ * @param height		Height of image created
+ * @param aspect_ratio	Ratio of width / height
  */
 typedef struct s_image
 {
+	int		width;
+	int		height;
 	float	aspect_ratio;
-	int		image_width;
-	int		image_height;
 }	t_image;
 
 /**
@@ -61,16 +62,13 @@ typedef struct s_cam
 	//t_vec3	v;
 	//t_vec3	w;
 	t_vec3	vup;
-	//t_vec3	camera_centre;
-	t_vec3	direction;
-	t_vec3	right;
 	float	hfov;
-	t_mat4	view;
 	t_mat4	inv_view;
-	t_mat4	projection;
 	t_mat4	inv_projection;
 	float	pitch;
 	float	yaw;
+	t_vec3	*cached_rays;
+	t_image	screen;
 }	t_cam;
 
 /**
@@ -118,7 +116,7 @@ void	ft_initiate_image(t_image *image);
  *
  * @param cam 	Struct containing camera parameters
  */
-void	ft_initiate_camera(t_cam *cam);
+t_err	ft_initiate_camera(t_cam *cam);
 
 /**
  * @brief Sets values of viewport parameters
@@ -148,8 +146,8 @@ void	ft_move_cam_up(t_cam *cam, float dist);
 void	ft_move_cam_right(t_cam *cam, float dist);
 void	ft_rotate_cam(t_cam *cam, int delta[2]);
 
-void	ft_cam_recalc_view(t_cam *cam);
-void	ft_cam_recalc_projection(t_cam *cam);
+void	ft_cam_calc_inv_view(t_cam *cam);
+void	ft_cam_calc_inv_projection(t_cam *cam);
 void	ft_cam_update(t_cam *cam);
 
 #endif

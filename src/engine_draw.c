@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:00:30 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/13 16:08:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/15 14:20:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,14 +81,14 @@ int	ft_draw_scene(t_engine *engine)
 
 	ray.origin = engine->cam.look_from;
 	y = -1;
-	while (++y < engine->image.image_height)
+	while (++y < engine->image.height)
 	{
 		x = -1;
-		while (++x < engine->image.image_width)
+		while (++x < engine->image.width)
 		{
-			float x_div = (float)x / (float)engine->image.image_width;
+			float x_div = (float)x / (float)engine->image.width;
 			x_div = x_div * 2.0 - 1.0;
-			float y_div = (float)y / (float)engine->image.image_height;
+			float y_div = (float)y / (float)engine->image.height;
 			y_div = y_div * 2.0 - 1.0;
 
 			t_vec4 target;
@@ -109,7 +109,7 @@ int	ft_draw_scene(t_engine *engine)
 			colour = ft_clamp_colour(colour, 0.0, 1.0);
 			int convert = ft_convert_colour2int(colour);
 			// flip image height with height - 1 - y
-			ft_put_pix_to_image(&engine->render.buffer, x, engine->image.image_height - 1 - y, convert);
+			ft_put_pix_to_image(&engine->render.buffer, x, engine->image.height - 1 - y, convert);
 
 		}
 	}

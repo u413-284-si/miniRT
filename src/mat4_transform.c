@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 16:42:13 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/13 15:49:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/15 13:18:49 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 // is in column major form
 // angle is in rad
-t_mat4	ft_mat4_perspective(float angle, float ratio, float near, float far)
+t_mat4	ft_mat4_perspective(float hfov, float ratio, float near, float far)
 {
-	const float	fov_vertical = 2 * atanf(tanf(angle / 2) / ratio);
+	const float	fov_vertical = 2 * atanf(tanf(hfov / 2) / ratio);
 	t_mat4		mat;
 
 	mat = ft_mat4_set_identity();
-	mat.mat[0][0] = 1.0 / tanf(angle / 2);
+	mat.mat[0][0] = 1.0 / tanf(hfov / 2);
 	mat.mat[1][1] = 1.0 / tanf(fov_vertical / 2);
 	mat.mat[2][2] = -((far + near) / (far - near));
 	mat.mat[2][3] = -1.0;

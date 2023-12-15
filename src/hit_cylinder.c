@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hit_cylinder.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/18 15:19:08 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/15 13:29:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 bool	ft_hit_cylinder(t_cylinder cy, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d)
 {
-	float		potential_hits[4];
+	float		potential_hits[4] = {0, 0, 0, 0};
 
 	if (!ft_cy_calculate_pot_hits(cy, ray, ray_d, potential_hits))
 		return (false);

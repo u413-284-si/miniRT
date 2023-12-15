@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 18:48:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/13 17:03:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/15 14:20:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ int	ft_mouse_hook_move(int x, int y, t_engine *engine)
 		first = true;
 	}
 
-	if (x > engine->image.image_width || x < 0
-		|| y > engine->image.image_height || y < 0)
+	if (x > engine->image.width || x < 0
+		|| y > engine->image.height || y < 0)
 		return (0);
 	if (engine->mouse.right)
 	{
@@ -76,8 +76,8 @@ void	ft_mouse_move_center(t_engine *engine)
 	int	x;
 	int	y;
 
-	x = engine->image.image_width * 0.5;
-	y = engine->image.image_height * 0.5;
+	x = engine->image.width * 0.5;
+	y = engine->image.height * 0.5;
 	mlx_mouse_move(engine->render.mlx_ptr, engine->render.win_ptr, x, y);
 }
 

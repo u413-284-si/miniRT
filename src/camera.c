@@ -6,52 +6,51 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/13 18:07:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/15 15:05:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "camera.h"
 #include "ft_print.h"
 
-void	ft_cam_recalc_projection(t_cam *cam)
+
+void	ft_cam_calc_inv_projection(t_cam *cam)
 {
-	cam->projection = ft_mat4_perspective(ft_degree_to_radian(cam->hfov), RATIO, 0.1, 100.0);
-	//ft_printf("Proj mat\n");
-	//ft_mat4_print(cam->projection);
-	cam->inv_projection = ft_mat4_inverse(cam->projection);
-	//ft_printf("Inv proj mat\n");
-	//ft_mat4_print(cam->inv_projection);
+	t_mat4	projection;
+
+	projection = ft_mat4_perspective(ft_degree_to_radian(cam->hfov), cam->screen.aspect_ratio, 0.1, 100.0);
+	cam->inv_projection = ft_mat4_inverse(projection);
 }
 
-void	ft_cam_recalc_view(t_cam *cam)
+void	ft_cam_calc_inv_view(t_cam *cam)
 {
-	cam->view = ft_mat4_cam_look_at(cam->look_from, ft_vec3_add(cam->look_from, cam->look_at), (t_vec3){0, 1, 0});
-	//printf("View mat\n");
-	//ft_mat4_print(cam->view);
-	cam->inv_view = ft_mat4_inverse(cam->view);
-	//printf("Inv View mat\n");
-	//ft_mat4_print(cam->inv_view);
+	t_mat4	view;
+
+	view = ft_mat4_cam_look_at(cam->look_from, ft_vec3_add(cam->look_from, cam->look_at), (t_vec3){0, 1, 0});
+	cam->inv_view = ft_mat4_inverse(view);
 }
 
 void	ft_initiate_image(t_image *image)
 {
-	image->image_width = WIN_X;
-	image->aspect_ratio = RATIO;
-	image->image_height = (int)(image->image_width / image->aspect_ratio);
-	if (image->image_height < 1)
-		image->image_height = 1;
+	image->width = WIN_X;
+	image->height = WIN_Y;
+	image->aspect_ratio = image->width / image->height;
+
 }
 
-void	ft_initiate_camera(t_cam *cam)
+t_err	ft_initiate_camera(t_cam *cam)
 {
-	cam->direction = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
-	cam->right = ft_vec3_norm(ft_vec3_cross(ft_vec3_norm((t_vec3){0, 1, 0}), cam->direction));
-	cam->vup = ft_vec3_cross(cam->direction, cam->right);
+	ft_initiate_image(&cam->screen);
 	cam->pitch = asinf(cam->look_at.y);
-	cam->yaw = atan2f(-cam->look_at.x, -cam->look_at.z) - 1.57079632679489661923;
+	cam->yaw = atan2f(cam->look_at.z, cam->look_at.x);
 	printf("Pitch: %.2f, Yaw: %.2f\n", cam->pitch, cam->yaw);
-	ft_cam_recalc_view(cam);
-	ft_cam_recalc_projection(cam);
+	if (ft_err_malloc((void **)cam->cached_rays,
+			cam->screen.width * cam->screen.height * sizeof (*cam->cached_rays)))
+		return (ERROR);
+	ft_cam_calc_inv_view(cam);
+	ft_cam_calc_inv_projection(cam);
+	//ft_cam_calc_ray_directions(cam);
+	return (SUCCESS);
 }
 
 /*
@@ -60,14 +59,14 @@ void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image)
 	vp->focal_length = ft_vec3_abs(ft_vec3_sub(cam.look_from, cam.look_at));
 	cam.hfov = ft_degree_to_radian(cam.hfov);
 	vp->viewport_width = 2 * tan(cam.hfov / 2) * vp->focal_length;
-	vp->viewport_height = vp->viewport_width / image.image_width \
-		* image.image_height;
+	vp->viewport_height = vp->viewport_width / image.width \
+		* image.height;
 	vp->viewport_u = ft_vec3_scale(cam.u, vp->viewport_width);
 	vp->viewport_v = ft_vec3_scale(cam.v, -vp->viewport_height);
 	vp->delta_u = ft_vec3_scale(vp->viewport_u, \
-		(float)(1.0 / image.image_width));
+		(float)(1.0 / image.width));
 	vp->delta_v = ft_vec3_scale(vp->viewport_v, \
-		(float)(1.0 / image.image_height));
+		(float)(1.0 / image.height));
 	vp->viewport_upper_left = ft_vec3_sub(ft_vec3_sub(ft_vec3_sub(\
 		cam.camera_centre, ft_vec3_scale(cam.w, vp->focal_length)), \
 		ft_vec3_scale(vp->viewport_u, 0.5)), \
@@ -86,12 +85,12 @@ void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
 	t_colour	pixel_colour;
 	t_ray		ray;
 
-	printf("P3\n%d %d\n255\n", image.image_width, image.image_height);
+	printf("P3\n%d %d\n255\n", image.width, image.height);
 	j = -1;
-	while (++j < image.image_height)
+	while (++j < image.height)
 	{
 		i = -1;
-		while (++i < image.image_width)
+		while (++i < image.width)
 		{
 			pixel = ft_vec3_add(ft_vec3_add(vp.pixel00_pos, \
 				ft_vec3_scale(vp.delta_u, i)), ft_vec3_scale(vp.delta_v, j));
@@ -107,17 +106,14 @@ void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
 
 void	ft_cam_update(t_cam *cam)
 {
-	t_vec3	 direction;
+	t_vec3	direction;
 
-	cam->direction = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
-	cam->right = ft_vec3_norm(ft_vec3_cross(ft_vec3_norm((t_vec3){0, 1, 0}), cam->direction));
-	cam->vup = ft_vec3_cross(cam->direction, cam->right);
 	direction.x = cos(cam->yaw) * cos(cam->pitch);
 	direction.y = sin(cam->pitch);
 	direction.z = sin(cam->yaw) * cos(cam->pitch);
 	cam->look_at = ft_vec3_norm(direction);
 	printf("yaw: %.2f, pitch: %.2f\n", cam->yaw, cam->pitch);
 	printf("Look at: x (%.2f), y (%.2f), z (%.2f)\n", cam->look_at.x, cam->look_at.y, cam->look_at.z);
-	ft_cam_recalc_view(cam);
-	ft_cam_recalc_projection(cam);
+	ft_cam_calc_inv_view(cam);
+	ft_cam_calc_inv_projection(cam);
 }

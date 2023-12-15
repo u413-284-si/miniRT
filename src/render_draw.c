@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/13 12:20:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/15 14:20:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ void	ft_render_image(t_image image, t_cam cam, t_viewport vp, \
 	t_ray		ray;
 
 	j = -1;
-	while (++j < image.image_height)
+	while (++j < image.height)
 	{
 		i = -1;
-		while (++i < image.image_width)
+		while (++i < image.width)
 		{
 			pixel = ft_vec3_add(ft_vec3_add(vp.pixel00_pos, \
 				ft_vec3_scale(vp.delta_u, i)), ft_vec3_scale(vp.delta_v, j));

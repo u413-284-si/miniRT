@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 14:38:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/15 13:26:26 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 	ray_d.min = 0;
 	ray_d.max = INFINITY;
 	rec.d = INFINITY;
+	rec.point = (t_vec3){0, 0, 0};
+	rec.normal = (t_vec3){0, 0, 0};
+	rec.axis_hit = (t_vec3){0, 0, 0};
+	rec.colour = (t_colour){0, 0, 0};
 	i = -1;
 	while (++i < scene.total)
 	{

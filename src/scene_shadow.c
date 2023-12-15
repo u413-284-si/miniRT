@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene_shadow.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:20:56 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/17 14:41:29 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/15 13:30:59 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ bool	ft_in_shadow(t_light cur, t_hitrecord rec, t_entities scene)
 bool	ft_shadow_ray_blocked(t_entities scene, t_ray shadow_ray, \
 	t_interval ray_d)
 {
-	t_hitrecord	block;
-	t_hittable	cur;
+	t_hitrecord	block = {0};
+	t_hittable	cur = {0};
 	int			i;
 
 	i = -1;
