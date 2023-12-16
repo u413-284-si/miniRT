@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/16 11:22:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:40:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,13 @@ t_err	ft_initiate_camera(t_cam *cam)
 
 	ft_initiate_image(&cam->screen);
 	sum_pixel = cam->screen.height * cam->screen.width;
-	cam->pitch = asinf(cam->look_at.y);
-	cam->yaw = atan2f(cam->look_at.z, cam->look_at.x);
 	if (ft_err_malloc((void **)&cam->cached_rays,
 			sizeof (*cam->cached_rays) * sum_pixel))
 		return (ERROR);
+	cam->pitch = ft_radian_to_degree(asinf(cam->look_at.y));
+	cam->yaw = ft_radian_to_degree(atan2f(cam->look_at.z, cam->look_at.x));
+	cam->near = NEAR_CLIP;
+	cam->far = FAR_CLIP;
 	ft_cam_calc_inv_view(cam);
 	ft_cam_calc_inv_projection(cam);
 	ft_cam_calc_all_ray_dirs(cam);
@@ -63,10 +65,14 @@ void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image)
 void	ft_cam_update_angle(t_cam *cam)
 {
 	t_vec3	direction;
+	float	yaw_rad;
+	float	pitch_rad;
 
-	direction.x = cos(cam->yaw) * cos(cam->pitch);
-	direction.y = sin(cam->pitch);
-	direction.z = sin(cam->yaw) * cos(cam->pitch);
+	yaw_rad = ft_degree_to_radian(cam->yaw);
+	pitch_rad = ft_degree_to_radian(cam->pitch);
+	direction.x = cos(yaw_rad) * cos(pitch_rad);
+	direction.y = sin(pitch_rad);
+	direction.z = sin(yaw_rad) * cos(pitch_rad);
 	cam->look_at = ft_vec3_norm(direction);
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:48:18 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/18 15:22:27 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:38:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 float	ft_degree_to_radian(float degrees)
 {
 	return (degrees * RAD);
+}
+
+float	ft_radian_to_degree(float radians)
+{
+	return (radians * RAD_TO_DEG);
 }
 
 bool	ft_contains(float x, t_interval interval)

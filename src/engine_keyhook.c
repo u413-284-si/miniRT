@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:08:26 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/16 11:23:38 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:41:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ void	ft_move_camera(int key, t_cam *cam)
 void	ft_pan_camera(int key, t_cam *cam)
 {
 	if (key == KEY_ARROW_UP)
-		cam->pitch += 0.03;
+		cam->pitch += MV_UNIT;
 	else if (key == KEY_ARROW_DOWN)
-		cam->pitch -= 0.03;
+		cam->pitch -= MV_UNIT;
 	else if (key == KEY_ARROW_LEFT)
-		cam->yaw += 0.03;
+		cam->yaw += MV_UNIT;
 	else if (key == KEY_ARROW_RIGHT)
-		cam->yaw -= 0.03;
+		cam->yaw -= MV_UNIT;
 	ft_cam_update_view(cam, true);
 }
 

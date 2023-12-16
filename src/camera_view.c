@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/16 11:24:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:32:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void	ft_cam_calc_inv_projection(t_cam *cam)
 {
 	t_mat4	projection;
 
-	projection = ft_mat4_perspective(ft_degree_to_radian(cam->hfov), cam->screen.aspect_ratio, 0.1, 100.0);
+	projection = ft_mat4_perspective(ft_degree_to_radian(cam->hfov),
+			cam->screen.aspect_ratio,
+			cam->near,
+			cam->far);
 	cam->inv_projection = ft_mat4_inverse(projection);
 }
 

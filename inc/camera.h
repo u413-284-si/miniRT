@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/16 11:22:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:31:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@
 
 # define WIN_X 600
 # define WIN_Y 600
-# define RATIO 1
+# define NEAR_CLIP 0.1
+# define FAR_CLIP 100.0
 
 /* ====== TYPEDEFS ====== */
 
@@ -61,7 +62,7 @@ typedef struct s_cam
 	//t_vec3	u;
 	//t_vec3	v;
 	//t_vec3	w;
-	t_vec3	vup;
+	//t_vec3	vup;
 	float	hfov;
 	t_mat4	inv_view;
 	t_mat4	inv_projection;
@@ -69,6 +70,8 @@ typedef struct s_cam
 	float	yaw;
 	t_vec3	*cached_rays;
 	t_image	screen;
+	float	near;
+	float	far;
 }	t_cam;
 
 /**
