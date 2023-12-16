@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:00:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 15:18:55 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 12:15:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@
 void	ft_free_char_arr(char **array);
 
 void	ft_free_mlx(void *mlx_ptr, void *win_ptr, void *img_ptr);
+
+void	ft_free_stuff(void *p1, void *p2, void *p3);
 
 #endif
