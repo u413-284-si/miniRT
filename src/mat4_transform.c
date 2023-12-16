@@ -6,22 +6,20 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 16:42:13 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/15 13:18:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:05:11 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mat4.h"
 
-// is in column major form
-// angle is in rad
 t_mat4	ft_mat4_perspective(float hfov, float ratio, float near, float far)
 {
-	const float	fov_vertical = 2 * atanf(tanf(hfov / 2) / ratio);
+	const float	vfov = 2 * atanf(tanf(hfov / 2) / ratio);
 	t_mat4		mat;
 
 	mat = ft_mat4_set_identity();
 	mat.mat[0][0] = 1.0 / tanf(hfov / 2);
-	mat.mat[1][1] = 1.0 / tanf(fov_vertical / 2);
+	mat.mat[1][1] = 1.0 / tanf(vfov / 2);
 	mat.mat[2][2] = -((far + near) / (far - near));
 	mat.mat[2][3] = -1.0;
 	mat.mat[3][2] = -((2 * far * near) / (far - near));
@@ -29,7 +27,6 @@ t_mat4	ft_mat4_perspective(float hfov, float ratio, float near, float far)
 	return (mat);
 }
 
-// inverse could easily be calculated
 t_mat4	ft_mat4_cam_look_at(t_vec3 position, t_vec3 target, t_vec3 world_up)
 {
 	t_vec3	cam_direction;
