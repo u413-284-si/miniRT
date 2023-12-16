@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:30:12 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:18:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/25 18:19:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ bool		ft_isvalid_filename(char *filename);
  * Initialize buffer with ft_buf_init().
  * Read the whole file into buffer with ft_buf_read_file().
  * Convert file into array of lines with ft_split().
- * Split char is newline '\n', which gets rid superfluous newlines.
+ * Split char is newline '\n', which gets rid of superfluous newlines.
  * Destroy the buffer with ft_buf_destroy().
  * If error is enountered buffer also gets destroyed.
  * @param fd File descriptor of opened file.

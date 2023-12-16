@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:48:51 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/25 18:02:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ t_err		ft_check_lines(char **lines, int *lsrc_count, int *total);
  * If found calls and returns correct check function.
  * If not returns UNKNOWN.
  * @param line Line to check for identifier.
- * @return t_type Specific entity type if correct, else UNKOWN.
+ * @return t_type Specific entity type if correct, else UNKNOWN.
  */
 t_type	ft_check_line_type(char *line);
 

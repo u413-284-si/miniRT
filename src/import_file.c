@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:40:15 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:26:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/11/25 18:58:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ bool	ft_isvalid_filename(char *filename)
 	int		len;
 
 	len = ft_strlen(filename);
-	if (!ft_strnstr(filename + len - 3, ".rt", 3))
+	if (ft_strncmp(filename + len - 3, ".rt", 3))
 	{
 		ft_perror("Wrong file extension. Please provide a .rt file", 0);
 		return (false);

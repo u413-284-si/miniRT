@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/16 11:57:58 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 12:01:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@ int		ft_mouse_hook_release(int button, int x, int y, t_engine *engine);
 int		ft_mouse_hook_move(int x, int y, t_engine *engine);
 void	ft_mouse_move_center(t_engine *engine);
 void	ft_mouse_calc_delta(int x, int y, t_engine *engine, int delta[2]);
+# include "parse.h"
 
 #endif
