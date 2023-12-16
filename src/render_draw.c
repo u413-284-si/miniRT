@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/15 14:20:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 10:58:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,30 +29,27 @@ void	ft_put_pix_to_image(t_buffer *img, int x, int y, int color)
 	}
 }
 
-void	ft_render_image(t_image image, t_cam cam, t_viewport vp, \
-	t_entities scene, t_render *render)
+void	ft_render_image(t_render *render, t_cam *cam, t_entities scene)
 {
-	int			i;
-	int			j;
-	t_vec3		pixel;
+	int			x;
+	int			y;
 	t_colour	pixel_colour;
 	int			colour;
 	t_ray		ray;
 
-	j = -1;
-	while (++j < image.height)
+	ray.origin = cam->look_from;
+	ray.d = 1.0;
+	y = -1;
+	while (++y < cam->screen.height)
 	{
-		i = -1;
-		while (++i < image.width)
+		x = -1;
+		while (++x < cam->screen.width)
 		{
-			pixel = ft_vec3_add(ft_vec3_add(vp.pixel00_pos, \
-				ft_vec3_scale(vp.delta_u, i)), ft_vec3_scale(vp.delta_v, j));
-			ray.origin = cam.look_from;
-			ray.direction = ft_vec3_norm(ft_vec3_sub(pixel, cam.look_from));
-			ray.d = 1.0;
+			ray.direction = cam->cached_rays[y * cam->screen.width + x];
 			pixel_colour = ft_ray_colour(ray, scene);
+			pixel_colour = ft_clamp_colour(pixel_colour, 0.0, 1.0);
 			colour = ft_convert_colour2int(pixel_colour);
-			ft_put_pix_to_image(&render->buffer, i, j, colour);
+			ft_put_pix_to_image(&render->buffer, x, cam->screen.height - y - 1, colour);
 
 		}
 	}

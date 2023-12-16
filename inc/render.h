@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:18:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/26 09:56:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:02:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@
 
 /* ====== TYPEDEFS ====== */
 
-typedef struct s_buffer {
+typedef struct s_buffer
+{
 	void	*ptr;
 	char	*addr;
 	int		bpp;
@@ -36,7 +37,8 @@ typedef struct s_buffer {
 	int		bytes;
 }	t_buffer;
 
-typedef struct s_render {
+typedef struct s_render
+{
 	void		*mlx_ptr;
 	void		*win_ptr;
 	t_buffer	buffer;
@@ -51,6 +53,7 @@ void	ft_set_fullscreen(t_render *render, t_image *screen);
 
 // render_draw.c
 void	ft_put_pix_to_image(t_buffer *img, int x, int y, int color);
+void	ft_render_image(t_render *render, t_cam *cam, t_entities scene);
 
 t_err	ft_output_as_ppm(int *img_arr, int width, int height);
 
