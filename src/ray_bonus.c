@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/21 12:17:14 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/16 16:50:52 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,15 @@ t_vec3	ft_ray(t_ray ray, float d)
 	return (ft_vec3_add(ray.origin, ft_vec3_scale(ray.direction, d)));
 }
 
+void	ft_init_hitrecord(t_hitrecord *rec)
+{
+	rec->axis_hit = (t_vec3){.x = 0, .y = 0, .z = 0};
+	rec->colour = (t_colour){.b = 0, .g = 0, .r = 0};
+	rec->d = INFINITY;
+	rec->normal = (t_vec3){.x = 0, .y = 0, .z = 0};
+	rec->point = (t_vec3){.x = 0, .y = 0, .z = 0};
+}
+
 t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam)
 {
 	t_colour	ray_colour;
@@ -25,9 +34,9 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam)
 	t_interval	ray_d;
 	int			i;
 
-	ray_d.min = 0;
-	ray_d.max = INFINITY;
-	rec.d = INFINITY;
+	ft_init_colour(&ray_colour);
+	ft_init_hitrecord(&rec);
+	ft_init_interval(&ray_d);
 	i = -1;
 	while (++i < scene.total)
 	{

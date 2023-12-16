@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 17:35:08 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/16 16:49:36 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,11 @@ t_vec3		ft_ray(t_ray ray, float d);
  */
 t_colour	ft_background_colour(t_ray ray);
 
+/**
+ * @brief Initiates hitrecord struct
+ * 
+ * @param rec 			Hitrecord to be initiated
+ */
+void		ft_init_hitrecord(t_hitrecord *rec);
 
 #endif
