@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2023/10/31 18:26:21 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/16 16:46:25 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,18 @@ typedef struct s_colour
 
 /* ====== FUNCTIONS ====== */
 
+/**
+ * @brief Initiates colour
+ * 
+ * @param colour 	Colour to be initiated	
+ */
+void		ft_init_colour(t_colour *colour);
+
+/**
+ * @brief Write a colour to std out
+ * 
+ * @param pixel 	Pixel containing the RBG values
+ */
 void		ft_write_colour(t_colour pixel);
 
 /**

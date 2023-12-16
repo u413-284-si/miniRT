@@ -3,14 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   colour.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 16:34:38 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/16 16:44:34 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "colour.h"
+
+void	ft_init_colour(t_colour *colour)
+{
+	colour->b = 0;
+	colour->g = 0;
+	colour->r = 0;
+}
 
 void	ft_write_colour(t_colour pixel)
 {
