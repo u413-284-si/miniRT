@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/21 12:12:23 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/16 19:04:16 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ bool	ft_hit_cylinder(t_cylinder cy, t_ray ray, t_hitrecord *rec, \
 {
 	float		potential_hits[4];
 
+	potential_hits[0] = 0;
+	potential_hits[1] = 0;
+	potential_hits[2] = 0;
+	potential_hits[3] = 0;
 	if (!ft_cy_calculate_pot_hits(cy, ray, ray_d, potential_hits))
 		return (false);
 	ft_cy_identify_hits(cy, ray, potential_hits, rec);
