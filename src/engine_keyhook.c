@@ -6,85 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:08:26 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/16 11:41:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:50:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
 
-void	ft_move_camera(int key, t_cam *cam)
-{
-	if (key == KEY_Q)
-		ft_cam_move_vertical(cam, -MV_UNIT);
-	else if (key == KEY_E)
-		ft_cam_move_vertical(cam, MV_UNIT);
-	else if (key == KEY_W)
-		ft_cam_move_horizontal(cam, MV_UNIT);
-	else if (key == KEY_S)
-		ft_cam_move_horizontal(cam, -MV_UNIT);
-	else if (key == KEY_A)
-		ft_cam_move_lateral(cam, -MV_UNIT);
-	else if (key == KEY_D)
-		ft_cam_move_lateral(cam, MV_UNIT);
-	ft_cam_update_view(cam, false);
-}
 
-void	ft_pan_camera(int key, t_cam *cam)
-{
-	if (key == KEY_ARROW_UP)
-		cam->pitch += MV_UNIT;
-	else if (key == KEY_ARROW_DOWN)
-		cam->pitch -= MV_UNIT;
-	else if (key == KEY_ARROW_LEFT)
-		cam->yaw += MV_UNIT;
-	else if (key == KEY_ARROW_RIGHT)
-		cam->yaw -= MV_UNIT;
-	ft_cam_update_view(cam, true);
-}
-
-void	ft_change_active_hittable(int key, t_entities *scene)
-{
-	if (scene->active == -1)
-		return ;
-	if (key == KEY_ARROW_LEFT)
-	{
-		scene->active--;
-		if (scene->active < 0)
-			scene->active = scene->total - 1;
-	}
-	if (key == KEY_ARROW_RIGHT)
-	{
-		scene->active++;
-		if (scene->active == scene->total)
-			scene->active = 0;
-	}
-}
-
-void	ft_manip_sphere(int key, t_sphere *sp)
-{
-	if (key == KEY_Q)
-		sp->centre.z -= MV_UNIT;
-	else if (key == KEY_E)
-		sp->centre.z += MV_UNIT;
-	else if (key == KEY_W)
-		sp->centre.y += MV_UNIT;
-	else if (key == KEY_S)
-		sp->centre.y -= MV_UNIT;
-	else if (key == KEY_D)
-		sp->centre.x -= MV_UNIT;
-	else if (key == KEY_A)
-		sp->centre.x += MV_UNIT;
-	else if (key == KEY_R)
-		sp->r -= MV_UNIT;
-	else if (key == KEY_F)
-		sp->r += MV_UNIT;
-}
-
-void	ft_manip_hittable(int key, t_entities *scene)
-{
-	if (scene->obj[scene->active].type == SPHERE)
-		ft_manip_sphere(key, &scene->obj[scene->active].params.sp);
-}
 
 int	ft_keyhook_press(int key, t_engine *engine)
 {
