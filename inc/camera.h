@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/16 10:07:34 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:22:29 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,8 @@ typedef struct s_viewport
 
 /* ====== FUNCTIONS ====== */
 
+// camera_init_update.c
+
 /**
  * @brief Sets values of image parameters
  *
@@ -124,30 +126,26 @@ t_err	ft_initiate_camera(t_cam *cam);
  * @param vp	Struct containing viewport parameters
  * @param cam 	Struct containing camera parameters
  * @param image	Struct containing image parameters
- */
+
 void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image);
+*/
 
-/**
- * @brief Generates an image
- *
- * Creates rays for each pixel of the image and "shoots" them
- * through the according pixel in the viewport. The colour of
- * each ray is returned and used to print out an image.
- * @param image		Struct containing image parameters
- * @param cam 		Struct containing image and viewport parameters
- * @param vp		Struct containing viewport parameters
- * @param scene		Scene containing all hittable entities
- */
-void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
-	t_entities scene);
+void	ft_cam_update_angle(t_cam *cam);
 
-void	ft_move_cam_forward(t_cam *cam, float dist);
-void	ft_move_cam_up(t_cam *cam, float dist);
-void	ft_move_cam_right(t_cam *cam, float dist);
+void	ft_cam_update_view(t_cam *cam, bool update_angle);
+
+// camera_move.c
+
+void	ft_cam_move_horizontal(t_cam *cam, float dist);
+void	ft_cam_move_vertical(t_cam *cam, float dist);
+void	ft_cam_move_lateral(t_cam *cam, float dist);
 void	ft_rotate_cam(t_cam *cam, int delta[2]);
 
-void	ft_cam_calc_inv_view(t_cam *cam);
+// camera_view
+
 void	ft_cam_calc_inv_projection(t_cam *cam);
-void	ft_cam_update(t_cam *cam, bool update_angle);
+void	ft_cam_calc_inv_view(t_cam *cam);
+void	ft_cam_calc_ray_dir(t_cam *cam, float y_ndc, float x_ndc, int index);
+void	ft_cam_calc_all_ray_dirs(t_cam *cam);
 
 #endif

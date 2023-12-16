@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:08:26 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/16 10:20:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:23:38 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 void	ft_move_camera(int key, t_cam *cam)
 {
 	if (key == KEY_Q)
-		ft_move_cam_up(cam, -MV_UNIT);
+		ft_cam_move_vertical(cam, -MV_UNIT);
 	else if (key == KEY_E)
-		ft_move_cam_up(cam, MV_UNIT);
+		ft_cam_move_vertical(cam, MV_UNIT);
 	else if (key == KEY_W)
-		ft_move_cam_forward(cam, MV_UNIT);
+		ft_cam_move_horizontal(cam, MV_UNIT);
 	else if (key == KEY_S)
-		ft_move_cam_forward(cam, -MV_UNIT);
+		ft_cam_move_horizontal(cam, -MV_UNIT);
 	else if (key == KEY_A)
-		ft_move_cam_right(cam, -MV_UNIT);
+		ft_cam_move_lateral(cam, -MV_UNIT);
 	else if (key == KEY_D)
-		ft_move_cam_right(cam, MV_UNIT);
-	ft_cam_update(cam, false);
+		ft_cam_move_lateral(cam, MV_UNIT);
+	ft_cam_update_view(cam, false);
 }
 
 void	ft_pan_camera(int key, t_cam *cam)
@@ -39,7 +39,7 @@ void	ft_pan_camera(int key, t_cam *cam)
 		cam->yaw += 0.03;
 	else if (key == KEY_ARROW_RIGHT)
 		cam->yaw -= 0.03;
-	ft_cam_update(cam, true);
+	ft_cam_update_view(cam, true);
 }
 
 void	ft_change_active_hittable(int key, t_entities *scene)

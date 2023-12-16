@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/16 11:07:33 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/16 11:12:57 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,8 +64,9 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC := 	camera_move.c \
-		camera.c \
+SRC :=	camera_init_update.c \
+		camera_move.c \
+		camera_view.c \
 		check_entity_ACL.c \
 		check_entity_sp_pl_cy.c \
 		check_line.c \
@@ -107,7 +108,7 @@ SRC := 	camera_move.c \
 		utils_cylinder.c \
 		utils.c \
 		vec3_arithmetics.c \
-		vec3_linalgebra.c 
+		vec3_linalgebra.c
 
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 

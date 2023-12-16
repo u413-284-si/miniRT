@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 18:48:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/16 10:10:22 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:24:22 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ int	ft_mouse_hook_move(int x, int y, t_engine *engine)
 		ft_mouse_calc_delta(x, y, engine, delta);
 		if (delta[X] > 0.0 && delta[Y] > 0.0)
 		{
-			ft_rotate_cam(&engine->cam, delta);
-			ft_cam_update(&engine->cam, true);
+			//ft_rotate_cam(&engine->cam, delta);
+			ft_cam_update_view(&engine->cam, true);
 		}
 		ft_mouse_move_center(engine);
 	}

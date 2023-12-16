@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   camera.c                                           :+:      :+:    :+:   */
+/*   camera_view.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/16 11:22:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:24:49 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ft_cam_calc_ray_dir(t_cam *cam, float y_ndc, float x_ndc, int index)
 
 }
 
-void	ft_cam_calc_ray_dirs(t_cam *cam)
+void	ft_cam_calc_all_ray_dirs(t_cam *cam)
 {
 	int		y;
 	int		x;
@@ -66,22 +66,4 @@ void	ft_cam_calc_ray_dirs(t_cam *cam)
 			ft_cam_calc_ray_dir(cam, y_ndc, x_ndc, y * cam->screen.width + x);
 		}
 	}
-}
-
-void	ft_cam_update_angle(t_cam *cam)
-{
-	t_vec3	direction;
-
-	direction.x = cos(cam->yaw) * cos(cam->pitch);
-	direction.y = sin(cam->pitch);
-	direction.z = sin(cam->yaw) * cos(cam->pitch);
-	cam->look_at = ft_vec3_norm(direction);
-}
-
-void	ft_cam_update_view(t_cam *cam, bool update_angle)
-{
-	if (update_angle)
-		ft_cam_update_angle(cam);
-	ft_cam_calc_inv_view(cam);
-	ft_cam_calc_ray_dirs(cam);
 }
