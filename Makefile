@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/16 11:53:27 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/16 11:58:15 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,6 @@ SRC :=	camera_init_update.c \
 		check.c \
 		cleanup.c \
 		colour.c \
-		engine_draw.c \
 		engine_keyhook_camera.c \
 		engine_keyhook_hittable.c \
 		engine_keyhook.c \

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/16 11:52:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 11:57:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,7 @@ typedef struct s_engine {
 
 // engine_loop.c
 void	ft_start_engine(t_engine *engine);
-
-// engine_draw.c
+int		ft_end_loop(void *mlx_ptr);
 int		ft_draw_scene(t_engine *engine);
 
 // engine_keyhook.c
@@ -74,10 +73,9 @@ void	ft_manip_sphere(int key, t_sphere *sp);
 void	ft_manip_hittable(int key, t_entities *scene);
 
 // engine_mouse.c
-
-int	ft_mouse_hook_press(int button, int x, int y, t_engine *engine);
-int	ft_mouse_hook_release(int button, int x, int y, t_engine *engine);
-int	ft_mouse_hook_move(int x, int y, t_engine *engine);
+int		ft_mouse_hook_press(int button, int x, int y, t_engine *engine);
+int		ft_mouse_hook_release(int button, int x, int y, t_engine *engine);
+int		ft_mouse_hook_move(int x, int y, t_engine *engine);
 void	ft_mouse_move_center(t_engine *engine);
 void	ft_mouse_calc_delta(int x, int y, t_engine *engine, int delta[2]);
 
