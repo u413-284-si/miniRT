@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/11 16:48:07 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/16 10:50:29 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -169,6 +169,12 @@ valgr: $(NAME)
 #			-s --suppressions=./minishell.supp\
 
 #	@less ./valgrind-out.txt
+
+# This target has optimized flags for speed.
+.PHONY: speed
+speed: CFLAGS = -O3 -march=native -fomit-frame-pointer
+speed: clean $(NAME)
+	@printf "Compiled with $(YELLOW)$(BOLD)speed$(RESET)\n\n"
 
 # ******************************
 # *     Object compiling and   *
