@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:08:26 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/15 13:09:14 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 10:20:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,12 @@ void	ft_move_camera(int key, t_cam *cam)
 		ft_move_cam_right(cam, -MV_UNIT);
 	else if (key == KEY_D)
 		ft_move_cam_right(cam, MV_UNIT);
-	else if (key == KEY_ARROW_UP)
+	ft_cam_update(cam, false);
+}
+
+void	ft_pan_camera(int key, t_cam *cam)
+{
+	if (key == KEY_ARROW_UP)
 		cam->pitch += 0.03;
 	else if (key == KEY_ARROW_DOWN)
 		cam->pitch -= 0.03;
@@ -34,7 +39,7 @@ void	ft_move_camera(int key, t_cam *cam)
 		cam->yaw += 0.03;
 	else if (key == KEY_ARROW_RIGHT)
 		cam->yaw -= 0.03;
-	ft_cam_update(cam);
+	ft_cam_update(cam, true);
 }
 
 void	ft_change_active_hittable(int key, t_entities *scene)
@@ -57,22 +62,22 @@ void	ft_change_active_hittable(int key, t_entities *scene)
 
 void	ft_manip_sphere(int key, t_sphere *sp)
 {
-	if (key == KEY_Z)
-		sp->centre.z -= 1;
-	else if (key == KEY_I)
-		sp->centre.z += 1;
-	if (key == KEY_U)
-		sp->centre.y -= 1;
-	else if (key == KEY_J)
-		sp->centre.y += 1;
-	if (key == KEY_H)
-		sp->centre.x -= 1;
-	else if (key == KEY_K)
-		sp->centre.x += 1;
-	if (key == KEY_N)
-		sp->r -= 1;
-	else if (key == KEY_M)
-		sp->r += 1;
+	if (key == KEY_Q)
+		sp->centre.z -= MV_UNIT;
+	else if (key == KEY_E)
+		sp->centre.z += MV_UNIT;
+	else if (key == KEY_W)
+		sp->centre.y += MV_UNIT;
+	else if (key == KEY_S)
+		sp->centre.y -= MV_UNIT;
+	else if (key == KEY_D)
+		sp->centre.x -= MV_UNIT;
+	else if (key == KEY_A)
+		sp->centre.x += MV_UNIT;
+	else if (key == KEY_R)
+		sp->r -= MV_UNIT;
+	else if (key == KEY_F)
+		sp->r += MV_UNIT;
 }
 
 void	ft_manip_hittable(int key, t_entities *scene)
@@ -91,16 +96,19 @@ int	ft_keyhook_press(int key, t_engine *engine)
 	{
 		print = true;
 		ft_output_as_ppm((int *)engine->render.buffer.addr, 800, 450);
+		print = false;
 	}
-	else if (key == KEY_Q || key == KEY_W || key == KEY_E || key == KEY_A
-		|| key == KEY_S || key == KEY_D || key == KEY_ARROW_DOWN || key == KEY_ARROW_UP || key == KEY_ARROW_LEFT || key == KEY_ARROW_RIGHT)
-	{
+	else if ((engine->mouse.right == true) && (key == KEY_Q || key == KEY_E
+			|| key == KEY_W || key == KEY_A || key == KEY_S || key == KEY_D))
 		ft_move_camera(key, &engine->cam);
-	}
+	else if ((engine->mouse.right == true) && (key == KEY_ARROW_DOWN
+			|| key == KEY_ARROW_UP || key == KEY_ARROW_LEFT
+			|| key == KEY_ARROW_RIGHT))
+		ft_pan_camera(key, &engine->cam);
 	else if (key == KEY_ARROW_LEFT || key == KEY_ARROW_RIGHT)
 		ft_change_active_hittable(key, &engine->scene);
-	else if (key == KEY_Z || key == KEY_U || key == KEY_I || key == KEY_H
-		|| key == KEY_J || key == KEY_K || key == KEY_N || key == KEY_M)
+	else if (key == KEY_Q || key == KEY_E || key == KEY_W || key == KEY_A
+		|| key == KEY_S || key == KEY_D || key == KEY_R || key == KEY_F)
 		ft_manip_hittable(key, &engine->scene);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/15 16:20:24 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 10:07:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,30 @@ void	ft_cam_calc_inv_view(t_cam *cam)
 	cam->inv_view = ft_mat4_inverse(view);
 }
 
+void	ft_cam_calc_ray_direction(t_cam *cam, float y_ndc, float x_ndc, int index)
+{
+	t_vec4	projected;
+	t_vec3	perspective_div;
+	t_vec4	viewed;
+
+	projected = ft_mat4_mult_vec4(cam->inv_projection,
+			(t_vec4){x_ndc, y_ndc, 1, 1});
+
+	perspective_div = ft_vec3_norm(ft_vec3_scale((t_vec3){projected.x, projected.y, projected.z}, 1 / projected.w));
+
+	viewed = ft_mat4_mult_vec4(cam->inv_view,
+			(t_vec4){perspective_div.x, perspective_div.y, perspective_div.z, 0});
+
+	cam->cached_rays[index] = (t_vec3){viewed.x, viewed.y, viewed.z};
+
+}
+
 void	ft_cam_calc_ray_directions(t_cam *cam)
 {
 	int		y;
 	int		x;
-	float	x_div;
-	float	y_div;
-	t_vec4	projected;
-	t_vec3	normalized;
-	t_vec4	viewed;
+	float	x_ndc;
+	float	y_ndc;
 
 	y = -1;
 	while (++y < cam->screen.height)
@@ -46,24 +61,13 @@ void	ft_cam_calc_ray_directions(t_cam *cam)
 		x = -1;
 		while (++x < cam->screen.width)
 		{
-			x_div = (float)x / (float)cam->screen.width;
-			x_div = x_div * 2.0 - 1.0;
-			y_div = (float)y / (float)cam->screen.height;
-			y_div = y_div * 2.0 - 1.0;
-
-
-			projected = ft_mat4_mult_vec4(cam->inv_projection, ft_vec4_create(x_div, y_div, 1, 1));
-
-			normalized = ft_vec3_norm(ft_vec3_scale(ft_vec3_create(projected.x, projected.y, projected.z), 1 / projected.w));
-
-			viewed = ft_vec4_create(normalized.x, normalized.y, normalized.z, 0);
-
-			viewed = ft_mat4_mult_vec4(cam->inv_view, viewed);
-
-			cam->cached_rays[y * cam->screen.width + x] = ft_vec3_create(viewed.x, viewed.y, viewed.z);
+			x_ndc = (float)x / (float)cam->screen.width;
+			x_ndc = x_ndc * 2.0 - 1.0;
+			y_ndc = (float)y / (float)cam->screen.height;
+			y_ndc = y_ndc * 2.0 - 1.0;
+			ft_cam_calc_ray_direction(cam, y_ndc, x_ndc, y * cam->screen.width + x);
 		}
 	}
-
 }
 
 void	ft_initiate_image(t_image *image)
@@ -76,12 +80,14 @@ void	ft_initiate_image(t_image *image)
 
 t_err	ft_initiate_camera(t_cam *cam)
 {
+	int	sum_pixel;
+
 	ft_initiate_image(&cam->screen);
+	sum_pixel = cam->screen.height * cam->screen.width;
 	cam->pitch = asinf(cam->look_at.y);
 	cam->yaw = atan2f(cam->look_at.z, cam->look_at.x);
-	printf("Pitch: %.2f, Yaw: %.2f\n", cam->pitch, cam->yaw);
-	if (ft_err_malloc((void **)cam->cached_rays,
-			cam->screen.width * cam->screen.height * sizeof (*cam->cached_rays)))
+	if (ft_err_malloc((void **)&cam->cached_rays,
+			sizeof (*cam->cached_rays) * sum_pixel))
 		return (ERROR);
 	ft_cam_calc_inv_view(cam);
 	ft_cam_calc_inv_projection(cam);
@@ -140,7 +146,7 @@ void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
 }
 */
 
-void	ft_cam_update(t_cam *cam)
+void	ft_cam_update_angle(t_cam *cam)
 {
 	t_vec3	direction;
 
@@ -148,8 +154,12 @@ void	ft_cam_update(t_cam *cam)
 	direction.y = sin(cam->pitch);
 	direction.z = sin(cam->yaw) * cos(cam->pitch);
 	cam->look_at = ft_vec3_norm(direction);
-	printf("yaw: %.2f, pitch: %.2f\n", cam->yaw, cam->pitch);
-	printf("Look at: x (%.2f), y (%.2f), z (%.2f)\n", cam->look_at.x, cam->look_at.y, cam->look_at.z);
+}
+
+void	ft_cam_update(t_cam *cam, bool update_angle)
+{
+	if (update_angle)
+		ft_cam_update_angle(cam);
 	ft_cam_calc_inv_view(cam);
-	ft_cam_calc_inv_projection(cam);
+	ft_cam_calc_ray_directions(cam);
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/15 15:03:40 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 10:07:34 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,6 +148,6 @@ void	ft_rotate_cam(t_cam *cam, int delta[2]);
 
 void	ft_cam_calc_inv_view(t_cam *cam);
 void	ft_cam_calc_inv_projection(t_cam *cam);
-void	ft_cam_update(t_cam *cam);
+void	ft_cam_update(t_cam *cam, bool update_angle);
 
 #endif

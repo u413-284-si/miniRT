@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 18:48:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/15 14:20:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 10:10:22 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ int	ft_mouse_hook_press(int button, int x, int y, t_engine *engine)
 {
 	if (button == M_LEFT)
 	{
-		engine->mouse.left = true;
+		//engine->mouse.left = true;
 		engine->mouse.last_left[X] = x;
 		engine->mouse.last_left[Y] = y;
 	}
 	else if (button == M_RIGHT)
 	{
-		engine->mouse.right = true;
+		//engine->mouse.right = true;
 		engine->mouse.last_right[X] = x;
 		engine->mouse.last_right[Y] = y;
 		mlx_mouse_hide(engine->render.mlx_ptr, engine->render.win_ptr);
@@ -36,9 +36,9 @@ int	ft_mouse_hook_release(int button, int x, int y, t_engine *engine)
 	(void)x;
 	(void)y;
 	if (button == M_LEFT)
-		engine->mouse.left = false;
+		engine->mouse.left = !engine->mouse.left;
 	if (button == M_RIGHT)
-		engine->mouse.right = false;
+		engine->mouse.right = !engine->mouse.right;
 	mlx_mouse_show(engine->render.mlx_ptr, engine->render.win_ptr);
 	return (0);
 }
@@ -64,7 +64,7 @@ int	ft_mouse_hook_move(int x, int y, t_engine *engine)
 		if (delta[X] > 0.0 && delta[Y] > 0.0)
 		{
 			ft_rotate_cam(&engine->cam, delta);
-			ft_cam_update(&engine->cam);
+			ft_cam_update(&engine->cam, true);
 		}
 		ft_mouse_move_center(engine);
 	}

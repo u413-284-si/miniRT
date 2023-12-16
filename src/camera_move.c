@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 10:18:52 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/13 17:32:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/16 10:11:37 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_move_cam_forward(t_cam *cam, float dist)
 
 void	ft_move_cam_up(t_cam *cam, float dist)
 {
-	cam->look_from = ft_vec3_add(cam->look_from, ft_vec3_scale(cam->vup, dist));
+	cam->look_from = ft_vec3_add(cam->look_from, ft_vec3_scale((t_vec3){0, 1, 0}, dist));
 }
 
 void	ft_move_cam_right(t_cam *cam, float dist)
