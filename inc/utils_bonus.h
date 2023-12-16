@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/19 21:35:37 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/16 16:49:49 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,5 +143,12 @@ float	ft_random_float_in(float min, float max);
  * @return float 
  */
 float	ft_clamp(float x, t_interval interval);
+
+/**
+ * @brief Initiates interval
+ * 
+ * @param interval 			Interval to be initiated
+ */
+void	ft_init_interval(t_interval *interval);
 
 #endif

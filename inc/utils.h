@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/18 15:24:40 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/16 16:47:27 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,5 +117,14 @@ float	ft_solve(t_equation *eq);
  * @return false 	If they are not equal
  */
 bool	ft_nearly_equal_flt(float one, float two);
+
+
+
+/**
+ * @brief Initiates interval
+ * 
+ * @param interval 	Interval to be initiated
+ */
+void	ft_init_interval(t_interval *interval);
 
 #endif
