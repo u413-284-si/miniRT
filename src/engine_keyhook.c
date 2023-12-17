@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:08:26 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/16 11:50:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/17 15:20:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,11 @@ int	ft_keyhook_press(int key, t_engine *engine)
 			|| key == KEY_ARROW_UP || key == KEY_ARROW_LEFT
 			|| key == KEY_ARROW_RIGHT))
 		ft_pan_camera(key, &engine->cam);
-	else if (key == KEY_ARROW_LEFT || key == KEY_ARROW_RIGHT)
+	else if (key == KEY_ONE || key == KEY_TWO)
 		ft_change_active_hittable(key, &engine->scene);
 	else if (key == KEY_Q || key == KEY_E || key == KEY_W || key == KEY_A
-		|| key == KEY_S || key == KEY_D || key == KEY_R || key == KEY_F)
+		|| key == KEY_S || key == KEY_D || key == KEY_R || key == KEY_F
+		|| key ==  KEY_ARROW_RIGHT || key == KEY_ARROW_LEFT)
 		ft_manip_hittable(key, &engine->scene);
 	return (0);
 }
