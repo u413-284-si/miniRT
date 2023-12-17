@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:16:27 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/17 10:48:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/17 10:53:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,31 @@
 
 void	ft_print_vec3(const t_vec3 vec)
 {
-	printf("x: %f, y: %f, z: %f\n", vec.x, vec.y, vec.z);
+	printf("x: %.2f, y: %.2f, z: %.2f\n", vec.x, vec.y, vec.z);
 }
 
 void	ft_print_colour(const t_colour col)
 {
-	printf("r: %f, g: %f, b: %f\n", col.r, col.g, col.b);
+	printf("r: %.2f, g: %.2f, b: %.2f\n", col.r, col.g, col.b);
 }
 
 void	ft_print_sphere(const t_sphere sp)
 {
-	printf("Sphere:\n");
+	printf("🔮  Sphere:\n");
 	printf("Centre: ");
 	ft_print_vec3(sp.centre);
 	printf("Radius: %f\n", sp.r);
 	printf("Colour: ");
-	ft_print_vec3(sp.colour);
+	ft_print_colour(sp.colour);
 }
 
 void	ft_print_plane(const t_plane pl)
 {
-	printf("Plane:\n");
+	printf("✈️  Plane:\n");
 	printf("Point: ");
 	ft_print_vec3(pl.point);
 	printf("Normal: ");
 	ft_print_vec3(pl.normal);
 	printf("Colour: ");
-	ft_print_vec3(pl.colour);
+	ft_print_colour(pl.colour);
 }
