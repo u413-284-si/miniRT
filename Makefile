@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/17 09:20:54 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/17 10:50:45 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,6 +91,7 @@ SRC :=	camera_init_update.c \
 		import_file.c \
 		main.c \
 		mat4_inverse.c \
+		mat4_rotation.c \
 		mat4_transform.c \
 		mat4.c \
 		output_ppm.c \
@@ -98,6 +99,7 @@ SRC :=	camera_init_update.c \
 		parse_entity_sp_pl_cy.c \
 		parse_line.c \
 		parse.c \
+		print_hittable.c \
 		ray.c \
 		render_draw.c \
 		render_init.c \

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/16 12:19:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/17 10:49:59 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # include "parse.h"
 # include "camera.h"
 # include "render.h"
+# include "print.h"
 
 /* ====== MACROS ====== */
 
