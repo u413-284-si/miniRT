@@ -16,6 +16,9 @@
 *.gch
 *.pch
 
+# Compile file
+.last_build_flags
+
 # Libraries
 *.lib
 *.a

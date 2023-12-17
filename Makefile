@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/16 11:58:15 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/17 09:20:54 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -131,7 +131,7 @@ DEPFILES = $(SRC:%.c=$(DEP_DIR)/%.d)
 # ******************************
 
 .PHONY: all
-all: $(NAME)
+all: check_flags $(NAME)
 
 # ******************************
 # *     NAME linkage           *
@@ -139,6 +139,7 @@ all: $(NAME)
 
 # Linking the NAME target
 $(NAME): $(LIBFT) $(OBJS)
+	@echo "$(CFLAGS)" > $(OBJ_DIR)/.last_build_flags
 	@printf "\n$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
 	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE)miniRT$(RESET)]\n"
@@ -148,14 +149,16 @@ $(NAME): $(LIBFT) $(OBJS)
 .PHONY: leak
 leak: CFLAGS += -fsanitize=leak
 leak: LDFLAGS += -fsanitize=leak
-leak: clean $(NAME)
+leak: check_flags $(NAME)
+	@echo "$(CFLAGS)" > $(OBJ_DIR)/.last_build_flags
 	@printf "Compiled with $(YELLOW)$(BOLD)fsanitize=leak$(RESET)\n\n"
 
 # This target adds fsanitize address checker to the flags. It needs to clean and recompile.
 .PHONY: address
 address: CFLAGS += -fsanitize=address
 address: LDFLAGS += -fsanitize=address
-address: clean $(NAME)
+address: check_flags $(NAME)
+	@echo "$(CFLAGS)" > $(OBJ_DIR)/.last_build_flags
 	@printf "Compiled with $(YELLOW)$(BOLD)fsanitize=address$(RESET)\n\n"
 
 # Perform memory check on NAME. Needs manual clean if target leak or address was called before
@@ -172,8 +175,10 @@ valgr: $(NAME)
 
 # This target has optimized flags for speed.
 .PHONY: speed
-speed: CFLAGS = -O3 -march=native -fomit-frame-pointer
-speed: clean $(NAME)
+speed: CFLAGS = -Ofast -march=native -fomit-frame-pointer
+speed: LDFLAGS += -flto
+speed: check_flags $(NAME)
+	@echo "$(CFLAGS)" > $(OBJ_DIR)/.last_build_flags
 	@printf "Compiled with $(YELLOW)$(BOLD)speed$(RESET)\n\n"
 
 # ******************************
@@ -203,6 +208,16 @@ $(DEP_DIR):
 
 # Mention each dependency file as a target, so that make won’t fail if the file doesn’t exist.
 $(DEPFILES):
+
+.PHONY: check_flags
+check_flags:
+	@if [ -f $(OBJ_DIR)/.last_build_flags ]; then \
+		if [ "$$(cat $(OBJ_DIR)/.last_build_flags)" != "$(CFLAGS)" ]; then \
+			printf "\n$(YELLOW)$(BOLD)check_flags$(RESET) [$(BLUE)miniRT$(RESET)]\n"; \
+			printf "CFLAGS changed, cleaning $(OBJ_DIR)\n"; \
+			rm -f $(OBJ_DIR)/*.o; \
+		fi \
+	fi
 
 # ******************************
 # *     External Libraries     *
