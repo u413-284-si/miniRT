@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:00:10 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/13 15:34:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/17 10:00:38 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,28 @@ t_vec4	ft_mat4_mult_vec4(const t_mat4 mat, const t_vec4 vec)
 		+ vec.y * mat.mat[1][3]
 		+ vec.z * mat.mat[2][3]
 		+ vec.w * mat.mat[3][3];
+	return (result);
+}
+
+t_vec3	ft_mat4_mult_vec3(const t_mat4 mat, const t_vec3 vec)
+{
+	t_vec3	result;
+
+	result.x
+		= vec.x * mat.mat[0][0]
+		+ vec.y * mat.mat[1][0]
+		+ vec.z * mat.mat[2][0]
+		+ mat.mat[3][0];
+	result.y
+		= vec.x * mat.mat[0][1]
+		+ vec.y * mat.mat[1][1]
+		+ vec.z * mat.mat[2][1]
+		+ mat.mat[3][1];
+	result.z
+		= vec.x * mat.mat[0][2]
+		+ vec.y * mat.mat[1][2]
+		+ vec.z * mat.mat[2][2]
+		+ mat.mat[3][2];
 	return (result);
 }
 
