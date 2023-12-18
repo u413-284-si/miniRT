@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/16 19:04:03 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/16 19:57:54 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
 	float		cap_hit1;
 	float		cap_hit2;
 
+	cap_hit1 = 0;
+	cap_hit2 = 0;
 	cap1_ray = ft_vec3_sub(ray.origin, cy.cap1);
 	eq.a = ft_vec3_dot(ray.direction, ray.direction) - \
 		pow(ft_vec3_dot(ray.direction, cy.axis), 2);
@@ -69,8 +71,8 @@ void	ft_cy_hit_cap(t_cylinder cy, t_ray ray, t_vec3 cap, float *d)
 	pl.point = cap;
 	pl.normal = cy.axis;
 	pl.colour = cy.colour;
-	ray_d.min = 0;
-	ray_d.max = INFINITY;
+	ft_init_hitrecord(&rec);
+	ft_init_interval(&ray_d);
 	if (ft_hit_plane(pl, ray, &rec, ray_d))
 		*d = rec.d;
 	else
@@ -98,4 +100,5 @@ void	ft_cy_identify_hits(t_cylinder cy, t_ray ray, float potential_hits[4], \
 		rec->axis_hit = cy.cap2;
 		rec->d = potential_hits[3];
 	}
+	rec->d = 0;
 }
