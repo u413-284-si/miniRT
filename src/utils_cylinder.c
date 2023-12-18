@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_cylinder.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 16:41:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/18 17:45:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_vec3	ft_cy_normal(t_hitrecord rec, t_ray ray, t_cylinder cy)
 	if (ft_vec3_equal(rec.axis_hit, cy.cap1))
 		normal = ft_vec3_scale(cy.axis, -1);
 	else if (ft_vec3_equal(rec.axis_hit, cy.cap2))
-		normal = ft_vec3_scale(cy.axis, 1);
+		normal = cy.axis;
 	else
 		normal = ft_vec3_sub(hit, rec.axis_hit);
 	return (normal);
@@ -75,3 +75,4 @@ bool	ft_cy_visible(t_equation eq, t_interval ray_d, float d3, \
 					return (false);
 	return (true);
 }
+
