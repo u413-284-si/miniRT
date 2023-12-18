@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:53:31 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/17 10:00:55 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/18 11:40:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ t_mat4	ft_mat4_perspective(float angle, float ratio, float near, float far);
 t_mat4	ft_mat4_cam_look_at(t_vec3 position, t_vec3 target, t_vec3 world_up);
 
 t_mat4	ft_mat4_create_rotate_x(float roll);
+t_mat4	ft_mat4_create_rotate_y(float pitch);
+t_mat4	ft_mat4_create_rotate_z(float yaw);
 
 #endif
