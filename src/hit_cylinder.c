@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/15 13:29:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/18 18:25:26 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,18 @@
 bool	ft_hit_cylinder(t_cylinder cy, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d)
 {
-	float		potential_hits[4] = {0, 0, 0, 0};
+	float		potential_hits[4] = {0};
+	t_hitrecord tmp = {0};
 
+	tmp.d = INFINITY;
 	if (!ft_cy_calculate_pot_hits(cy, ray, ray_d, potential_hits))
 		return (false);
-	ft_cy_identify_hits(cy, ray, potential_hits, rec);
-	if (rec->d < EPSILON)
+	ft_cy_identify_hits(cy, ray, potential_hits, &tmp);
+	if (tmp.d < EPSILON)
 		return (false);
+	rec->d = tmp.d;
 	rec->point = ft_ray(ray, rec->d);
+	rec->axis_hit = tmp.axis_hit;
 	rec->normal = ft_vec3_norm(ft_cy_normal(*rec, ray, cy));
 	rec->colour = cy.colour;
 	return (true);
@@ -43,7 +47,7 @@ bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
 		(ft_vec3_dot(ray.direction, cy.axis) * ft_vec3_dot(cap1_ray, cy.axis)));
 	eq.c = ft_vec3_dot(cap1_ray, cap1_ray) - \
 		pow(ft_vec3_dot(cap1_ray, cy.axis), 2) - pow(cy.d / 2.0, 2);
-	if (ft_solve(&eq) < 0)
+	if (ft_solve(&eq) < 0 || eq.d1 < EPSILON || eq.d2 < EPSILON)
 		return (false);
 	ft_cy_hit_cap(cy, ray, cy.cap1, &cap_hit1);
 	ft_cy_hit_cap(cy, ray, cy.cap2, &cap_hit2);
@@ -70,7 +74,7 @@ void	ft_cy_hit_cap(t_cylinder cy, t_ray ray, t_vec3 cap, float *d)
 	if (ft_hit_plane(pl, ray, &rec, ray_d))
 		*d = rec.d;
 	else
-		*d = -1;
+		*d = INFINITY;
 }
 
 void	ft_cy_identify_hits(t_cylinder cy, t_ray ray, float potential_hits[4], \
@@ -94,4 +98,6 @@ void	ft_cy_identify_hits(t_cylinder cy, t_ray ray, float potential_hits[4], \
 		rec->axis_hit = cy.cap2;
 		rec->d = potential_hits[3];
 	}
+	if (rec->d == INFINITY)
+		rec->d = 0;
 }
