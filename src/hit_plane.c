@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hit_plane.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:47:49 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/14 17:37:38 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/18 16:55:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,21 @@ bool	ft_hit_plane(t_plane pl, t_ray ray, t_hitrecord *rec, t_interval ray_d)
 	t_vec3		pl_point_ray;
 	t_equation	eq;
 
-	eq.b = ft_vec3_dot(ray.direction, pl.normal);
-	if (eq.b < EPSILON)
+	eq.a = 0.0;
+	eq.b = ft_vec3_dot(ft_vec3_norm(ray.direction), pl.normal);
+	if (fabs(eq.b) < EPSILON)
 		return (false);
 	pl_point_ray = ft_vec3_sub(ray.origin, pl.point);
-	eq.a = 0.0;
 	eq.c = ft_vec3_dot(pl_point_ray, pl.normal);
-	if (ft_solve(&eq) < 0)
-		return (false);
+	ft_solve(&eq);
 	if (!ft_surrounds(eq.d1, ray_d) || eq.d1 < EPSILON)
 		return (false);
 	rec->d = eq.d1;
+	if (eq.b > 0)
+		rec->normal = ft_vec3_scale(pl.normal, -1);
+	else
+		rec->normal = pl.normal;
 	rec->point = ft_ray(ray, eq.d1);
-	rec->normal = pl.normal;
 	rec->colour = pl.colour;
 	return (true);
 }
