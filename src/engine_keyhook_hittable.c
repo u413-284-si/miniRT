@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/17 10:50:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/18 12:09:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,14 @@ void	ft_manip_plane(int key, t_plane *pl)
 	else if (key == KEY_A)
 		pl->point.x += MV_UNIT;
 	else if (key == KEY_ARROW_LEFT)
-		pl->normal = ft_mat4_mult_vec3(ft_mat4_create_rotate_x(1), pl->normal);
+		pl->normal = ft_mat4_mult_vec3(ft_mat4_create_rotate_x(MV_UNIT), pl->normal);
 	else if (key == KEY_ARROW_RIGHT)
-		pl->normal = ft_mat4_mult_vec3(ft_mat4_create_rotate_x(-1), pl->normal);
+		pl->normal = ft_mat4_mult_vec3(ft_mat4_create_rotate_x(-MV_UNIT), pl->normal);
+	else if (key == KEY_ARROW_UP)
+		pl->normal = ft_mat4_mult_vec3(ft_mat4_create_rotate_y(MV_UNIT), pl->normal);
+	else if (key == KEY_ARROW_DOWN)
+		pl->normal = ft_mat4_mult_vec3(ft_mat4_create_rotate_y(-MV_UNIT), pl->normal);
+
 	ft_print_plane(*pl);
 }
 
