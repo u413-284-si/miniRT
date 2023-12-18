@@ -3,6 +3,8 @@
 		"random": "c",
 		"utils.h": "c",
 		"hit_manager.h": "c",
-		"entities.h": "c"
+		"entities.h": "c",
+		"ray_bonus.h": "c",
+		"ray.h": "c"
 	}
 }
