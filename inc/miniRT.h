@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/17 10:49:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/18 17:37:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void	ft_pan_camera(int key, t_cam *cam);
 void	ft_change_active_hittable(int key, t_entities *scene);
 void	ft_manip_sphere(int key, t_sphere *sp);
 void	ft_manip_hittable(int key, t_entities *scene);
+void	ft_manip_cylinder(int key, t_cylinder *cl);
 
 // engine_mouse.c
 int		ft_mouse_hook_press(int button, int x, int y, t_engine *engine);
