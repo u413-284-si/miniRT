@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 09:54:03 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/19 23:19:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,31 +53,4 @@ void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image)
 		ft_vec3_scale(vp->viewport_v, 0.5));
 	vp->pixel00_pos = ft_vec3_add(vp->viewport_upper_left, ft_vec3_scale(\
 		ft_vec3_add(vp->delta_u, vp->delta_v), 0.5));
-}
-
-void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
-	t_entities scene)
-{
-	int			i;
-	int			j;
-	t_vec3		pixel;
-	t_colour	pixel_colour;
-	t_ray		ray;
-
-	printf("P3\n%d %d\n255\n", image.image_width, image.image_height);
-	j = -1;
-	while (++j < image.image_height)
-	{
-		i = -1;
-		while (++i < image.image_width)
-		{
-			pixel = ft_vec3_add(ft_vec3_add(vp.pixel00_pos, \
-				ft_vec3_scale(vp.delta_u, i)), ft_vec3_scale(vp.delta_v, j));
-			ray.direction = ft_vec3_norm(ft_vec3_sub(pixel, cam.camera_centre));
-			ray.origin = cam.camera_centre;
-			ray.d = 1.0;
-			pixel_colour = ft_ray_colour(ray, scene);
-			ft_write_colour(pixel_colour);
-		}
-	}
 }
