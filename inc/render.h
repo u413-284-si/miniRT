@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/19 23:52:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/20 11:53:29 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@
 # include "cleanup.h"
 # include "entities.h"
 # include "key_codes.h"
+# include "mat4_vec3.h"
+
+/* ====== MACROS ====== */
+# define MV_UNIT 1.0f
 
 /* ====== TYPEDEFS ====== */
 
