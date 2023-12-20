@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/25 17:55:42 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/20 11:50:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam)
 		ft_free_char_arr(lines);
 		return (ERROR);
 	}
+	if (scene->total != 0)
+		scene->active = 1;
+	else
+		scene->active = -1;
 	if (ft_malloc_ents(&scene->lsrc, &scene->obj,
 			scene->lsrc_count, scene->total))
 	{
