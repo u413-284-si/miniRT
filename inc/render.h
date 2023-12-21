@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/22 00:17:26 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/22 00:54:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@
 /* ====== LIBRARIES ====== */
 
 # include <mlx.h>
+# include <X11/Xlib.h>
 # include <X11/X.h>
+# include <X11/keysym.h>
 
 # include "error_mlx.h"
 # include "camera.h"
 # include "ft_print.h"
 # include "cleanup.h"
 # include "entities.h"
-# include "key_codes.h"
 # include "miniRT_config.h"
 
 /* ====== TYPEDEFS ====== */
