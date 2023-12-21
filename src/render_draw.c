@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/19 22:37:03 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/22 00:17:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color)
 	}
 }
 
-void	ft_render_image(t_render render)
+void	ft_render_image(t_render *render)
 {
 	t_ray		ray;
 	int			y;
@@ -38,22 +38,22 @@ void	ft_render_image(t_render render)
 	t_colour	pixel_colour;
 	int			colour;
 
-	ray.origin = render.cam.look_from;
+	ray.origin = render->cam.look_from;
 	ray.d = 1.0;
 	y = -1;
-	while (++y < render.image.image_height)
+	while (++y < render->mlx_ptrs.img.height)
 	{
 		x = -1;
-		while (++x < render.image.image_width)
+		while (++x < render->mlx_ptrs.img.width)
 		{
-			pix_centre = ft_vec3_add(ft_vec3_add(render.vp.pixel00_pos, \
-				ft_vec3_scale(render.vp.delta_u, x)), ft_vec3_scale(render.vp.delta_v, y));
-			ray.direction = ft_vec3_norm(ft_vec3_sub(pix_centre, render.cam.look_from));
-			pixel_colour = ft_ray_colour(ray, render.scene);
+			pix_centre = ft_vec3_add(ft_vec3_add(render->vp.pixel00_pos, \
+				ft_vec3_scale(render->vp.delta_u, x)), ft_vec3_scale(render->vp.delta_v, y));
+			ray.direction = ft_vec3_norm(ft_vec3_sub(pix_centre, render->cam.look_from));
+			pixel_colour = ft_ray_colour(ray, render->scene);
 			colour = ft_convert_colour2int(pixel_colour);
-			ft_put_pix_to_image(&render.mlx_ptrs.img, x, y, colour);
+			ft_put_pix_to_image(&render->mlx_ptrs.img, x, y, colour);
 		}
 	}
-	mlx_put_image_to_window(render.mlx_ptrs.mlx_ptr, render.mlx_ptrs.win_ptr,
-		render.mlx_ptrs.img.ptr, 0, 0);
+	mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr,
+		render->mlx_ptrs.img.ptr, 0, 0);
 }
