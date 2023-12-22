@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:47:49 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/18 16:58:59 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/22 11:31:34 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ bool	ft_hit_plane(t_plane pl, t_ray ray, t_hitrecord *rec, t_interval ray_d)
 {
 	t_vec3		pl_point_ray;
 	t_equation	eq;
-	
+
 	eq.a = 0.0;
 	eq.b = ft_vec3_dot(ft_vec3_norm(ray.direction), pl.normal);
 	if (fabs(eq.b) < EPSILON)
