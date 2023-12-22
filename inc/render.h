@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/20 11:53:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/22 14:14:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@
 /* ====== LIBRARIES ====== */
 
 # include <mlx.h>
+# include <X11/Xlib.h>
 # include <X11/X.h>
+# include <X11/keysym.h>
 
 # include "error_mlx.h"
 # include "camera.h"
 # include "ft_print.h"
 # include "cleanup.h"
 # include "entities.h"
-# include "key_codes.h"
+# include "miniRT_config.h"
 # include "mat4_vec3.h"
 
 /* ====== MACROS ====== */
@@ -50,6 +52,8 @@ typedef struct s_img
 	int		line_len;
 	int		endian;
 	int		bytes;
+	int		width;
+	int		height;
 }	t_img;
 
 /**
@@ -80,7 +84,6 @@ typedef struct s_render
 	t_mlx_ptrs	mlx_ptrs;
 	t_cam		cam;
 	t_entities	scene;
-	t_image		image;
 	t_viewport	vp;
 }	t_render;
 
@@ -92,11 +95,10 @@ typedef struct s_render
  * @brief Initializes the mlx_ptrs struct.
  *
  * @param mlx_ptrs		Pointer to mlx_ptrs struct.
- * @param image			Pointer to image struct.
  * @param fullscreen	Fullscreen flag.
  * @return t_err		SUCCESS, ERROR.
  */
-t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, t_image *image, bool fullscreen);
+t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen);
 
 /**
  * @brief Initializes the mlx img struct.
@@ -110,10 +112,10 @@ t_err	ft_init_image(t_mlx_ptrs *mlx_ptrs, int size[2]);
 /**
  * @brief Sets the window to fullscreen.
  *
- * @param mlx_ptrs	Pointer to mlx_ptrs struct.
- * @param image		Pointer to image struct.
+ * @param mlx_ptr	Mlx pointer.
+ * @param win_size	Pointer to int array for window size.
  */
-void	ft_set_fullscreen(t_mlx_ptrs *mlx_ptrs, t_image *image);
+void	ft_set_fullscreen(void *mlx_ptr, int win_size[2]);
 
 // render_draw.c
 
@@ -136,7 +138,7 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color);
  * each ray is returned and written to the mlx img.
  * @param render	Pointer to render struct.
  */
-void	ft_render_image(t_render render);
+void	ft_render_image(t_render *render);
 
 // render_output_ppm.c
 

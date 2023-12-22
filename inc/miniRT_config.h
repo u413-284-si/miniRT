@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 11:17:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/21 23:58:40 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@
 # define FLOAT_MIN -10000.0
 # define FLOAT_MAX 10000.0
 
+// standard window size
+# define WIN_SIZE_X 800
+# define WIN_SIZE_Y 600
 
 
 #endif
