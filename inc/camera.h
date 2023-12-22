@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/18 15:30:41 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/22 12:02:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,8 @@
 /* ====== TYPEDEFS ====== */
 
 /**
- * @brief Contains image parameters
- * 
- * @param aspect_ratio			Ratio of image_width / image_height
- * @param image_width			Width of image created
- * @param image_height			Height of image created
- */
-typedef struct s_image
-{
-	float	aspect_ratio;
-	int		image_width;
-	int		image_height;
-}	t_image;
-
-/**
  * @brief Contains camera parameters
- * 
+ *
  * @param look_from				Position the camera is looking from
  * @param look_at				Position the camera is looking at
  * @param u						Basis vector pointing to camera right
@@ -60,7 +46,7 @@ typedef struct s_cam
 
 /**
  * @brief Contains viewport parameters
- * 
+ *
  * The viewport is a virtual rectangle in the 3D world containing the grid
  * of image pixel locations. If pixels are equispaced horizontally and verti-
  * cally, the viewport has the same aspect_ratio as the image.
@@ -92,41 +78,20 @@ typedef struct s_viewport
 /* ====== FUNCTIONS ====== */
 
 /**
- * @brief Sets values of image parameters
- * 
- * @param image Struct containing image parameters
- */
-void	ft_initiate_image(t_image *image);
-
-/**
  * @brief Sets values of camera parameters
- * 
+ *
  * @param cam 	Struct containing camera parameters
  */
 void	ft_initiate_camera(t_cam *cam);
 
 /**
  * @brief Sets values of viewport parameters
- * 
- * @param vp	Struct containing viewport parameters
- * @param cam 	Struct containing camera parameters
- * @param image	Struct containing image parameters
- */
-void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image);
-
-/**
- * @brief Generates an image
- * 
- * Creates rays for each pixel of the image and "shoots" them
- * through the according pixel in the viewport. The colour of
- * each ray is returned and used to print out an image.
- * @param image		Struct containing image parameters 
- * @param cam 		Struct containing image and viewport parameters
+ *
  * @param vp		Struct containing viewport parameters
- * @param scene		Scene containing all hittable entities
+ * @param cam 		Struct containing camera parameters
+ * @param size_x	Width of image.
+ * @param size_y	Height of image.
  */
-void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
-	t_entities scene);
-
+void	ft_initiate_viewport(t_viewport *vp, t_cam cam, int size_x, int size_y);
 
 #endif
