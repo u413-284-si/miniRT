@@ -5,6 +5,7 @@ var files_dup =
     [ "cleanup.h", "cleanup_8h_source.html", null ],
     [ "colour.h", "colour_8h_source.html", null ],
     [ "entities.h", "entities_8h_source.html", null ],
+    [ "error_mlx.h", "error__mlx_8h_source.html", null ],
     [ "error_msg.h", "error__msg_8h_source.html", null ],
     [ "error_syscall.h", "error__syscall_8h_source.html", null ],
     [ "error_type.h", "error__type_8h_source.html", null ],
@@ -17,6 +18,7 @@ var files_dup =
     [ "miniRT_config.h", "mini_r_t__config_8h_source.html", null ],
     [ "parse.h", "parse_8h_source.html", null ],
     [ "ray.h", "ray_8h_source.html", null ],
+    [ "render.h", "render_8h_source.html", null ],
     [ "utils.h", "utils_8h_source.html", null ],
     [ "vec3.h", "vec3_8h_source.html", null ]
 ];

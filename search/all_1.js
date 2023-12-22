@@ -8,12 +8,14 @@ var searchData=
   ['s_5fequation_6',['s_equation',['../structs__equation.html',1,'']]],
   ['s_5fhitrecord_7',['s_hitrecord',['../structs__hitrecord.html',1,'']]],
   ['s_5fhittable_8',['s_hittable',['../structs__hittable.html',1,'']]],
-  ['s_5fimage_9',['s_image',['../structs__image.html',1,'']]],
+  ['s_5fimg_9',['s_img',['../structs__img.html',1,'']]],
   ['s_5finterval_10',['s_interval',['../structs__interval.html',1,'']]],
   ['s_5flight_11',['s_light',['../structs__light.html',1,'']]],
-  ['s_5fplane_12',['s_plane',['../structs__plane.html',1,'']]],
-  ['s_5fray_13',['s_ray',['../structs__ray.html',1,'']]],
-  ['s_5fsphere_14',['s_sphere',['../structs__sphere.html',1,'']]],
-  ['s_5fvec3_15',['s_vec3',['../structs__vec3.html',1,'']]],
-  ['s_5fviewport_16',['s_viewport',['../structs__viewport.html',1,'']]]
+  ['s_5fmlx_5fptrs_12',['s_mlx_ptrs',['../structs__mlx__ptrs.html',1,'']]],
+  ['s_5fplane_13',['s_plane',['../structs__plane.html',1,'']]],
+  ['s_5fray_14',['s_ray',['../structs__ray.html',1,'']]],
+  ['s_5frender_15',['s_render',['../structs__render.html',1,'']]],
+  ['s_5fsphere_16',['s_sphere',['../structs__sphere.html',1,'']]],
+  ['s_5fvec3_17',['s_vec3',['../structs__vec3.html',1,'']]],
+  ['s_5fviewport_18',['s_viewport',['../structs__viewport.html',1,'']]]
 ];

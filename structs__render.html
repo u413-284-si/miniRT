@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: s_image Struct Reference</title>
+<title>MiniRT: s_render Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structs__image.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('structs__render.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,34 +91,39 @@ $(document).ready(function(){initNavTree('structs__image.html',''); initResizabl
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">s_image Struct Reference</div>  </div>
+<div class="title">s_render Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Contains image parameters.  
- <a href="structs__image.html#details">More...</a></p>
+<p>Overarching render struct.  
+ <a href="structs__render.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="camera_8h_source.html">camera.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="render_8h_source.html">render.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a5584bdb427edfe29e0c0c3753b619161"><td class="memItemLeft" align="right" valign="top"><a id="a5584bdb427edfe29e0c0c3753b619161"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>aspect_ratio</b></td></tr>
-<tr class="separator:a5584bdb427edfe29e0c0c3753b619161"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcdf062bf62cd36e741bd190386f5fdb"><td class="memItemLeft" align="right" valign="top"><a id="adcdf062bf62cd36e741bd190386f5fdb"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>image_width</b></td></tr>
-<tr class="separator:adcdf062bf62cd36e741bd190386f5fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e0e6a62a1d85a2fdf500d466ea7a33f"><td class="memItemLeft" align="right" valign="top"><a id="a1e0e6a62a1d85a2fdf500d466ea7a33f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>image_height</b></td></tr>
-<tr class="separator:a1e0e6a62a1d85a2fdf500d466ea7a33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce880ae43b7ec34ab96f0a387451285"><td class="memItemLeft" align="right" valign="top"><a id="a9ce880ae43b7ec34ab96f0a387451285"></a>
+<a class="el" href="structs__mlx__ptrs.html">t_mlx_ptrs</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mlx_ptrs</b></td></tr>
+<tr class="separator:a9ce880ae43b7ec34ab96f0a387451285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0002493ad73e0a6a3a45de57db20df"><td class="memItemLeft" align="right" valign="top"><a id="a5b0002493ad73e0a6a3a45de57db20df"></a>
+<a class="el" href="structs__cam.html">t_cam</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cam</b></td></tr>
+<tr class="separator:a5b0002493ad73e0a6a3a45de57db20df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80055edd364356489de21cdad66e875"><td class="memItemLeft" align="right" valign="top"><a id="ab80055edd364356489de21cdad66e875"></a>
+<a class="el" href="structs__entities.html">t_entities</a>&#160;</td><td class="memItemRight" valign="bottom"><b>scene</b></td></tr>
+<tr class="separator:ab80055edd364356489de21cdad66e875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098e5f8f31a3869e73c2a0bffeb1319a"><td class="memItemLeft" align="right" valign="top"><a id="a098e5f8f31a3869e73c2a0bffeb1319a"></a>
+<a class="el" href="structs__viewport.html">t_viewport</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vp</b></td></tr>
+<tr class="separator:a098e5f8f31a3869e73c2a0bffeb1319a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains image parameters. </p>
+<div class="textblock"><p>Overarching render struct. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aspect_ratio</td><td>Ratio of image_width / image_height </td></tr>
-    <tr><td class="paramname">image_width</td><td>Width of image created </td></tr>
-    <tr><td class="paramname">image_height</td><td>Height of image created </td></tr>
+    <tr><td class="paramname">mlx_ptrs</td><td>mlx pointers struct. </td></tr>
+    <tr><td class="paramname">cam</td><td>Camera struct. </td></tr>
+    <tr><td class="paramname">scene</td><td>Scene struct. </td></tr>
+    <tr><td class="paramname">image</td><td>Image struct. </td></tr>
+    <tr><td class="paramname">vp</td><td>Viewport struct. </td></tr>
   </table>
   </dd>
 </dl>
@@ -127,7 +132,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>image_height</b></td><
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="structs__image.html">s_image</a></li>
+    <li class="navelem"><a class="el" href="structs__render.html">s_render</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
