@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/20 11:56:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/22 21:24:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ void	ft_change_active_hittable(int key, t_entities *scene)
 {
 	if (scene->active == -1)
 		return ;
-	if (key == K_ONE)
+	if (key == XK_1)
 	{
 		scene->active--;
 		if (scene->active < 0)
 			scene->active = scene->total - 1;
 	}
-	if (key == K_TWO)
+	if (key == XK_2)
 	{
 		scene->active++;
 		if (scene->active == scene->total)
@@ -30,59 +30,58 @@ void	ft_change_active_hittable(int key, t_entities *scene)
 	}
 }
 
-void	ft_manip_hittable(int key, t_entities *scene)
+void	ft_manip_hittable(int key, t_hittable *hittable)
 {
-	if (scene->obj[scene->active].type == SPHERE)
-		ft_manip_sphere(key, &scene->obj[scene->active].params.sp);
-	else if (scene->obj[scene->active].type == PLANE)
-		ft_manip_plane(key, &scene->obj[scene->active].params.pl);
-	else if (scene->obj[scene->active].type == CYLINDER)
-		ft_manip_cylinder(key, &scene->obj[scene->active].params.cy);
+	if (hittable->type == SPHERE)
+		ft_manip_sphere(key, &hittable->params.sp);
+	else if (hittable->type == PLANE)
+		ft_manip_plane(key, &hittable->params.pl);
+	else if (hittable->type == CYLINDER)
+		ft_manip_cylinder(key, &hittable->params.cy);
 }
-
 
 void	ft_manip_sphere(int key, t_sphere *sp)
 {
-	if (key == K_Q)
+	if (key == XK_q)
 		sp->centre.z -= MV_UNIT;
-	else if (key == K_E)
+	else if (key == XK_e)
 		sp->centre.z += MV_UNIT;
-	else if (key == K_W)
+	else if (key == XK_w)
 		sp->centre.y += MV_UNIT;
-	else if (key == K_S)
+	else if (key == XK_s)
 		sp->centre.y -= MV_UNIT;
-	else if (key == K_D)
+	else if (key == XK_d)
 		sp->centre.x += MV_UNIT;
-	else if (key == K_A)
+	else if (key == XK_a)
 		sp->centre.x -= MV_UNIT;
-	else if (key == K_R)
+	else if (key == XK_r)
 		sp->r -= MV_UNIT;
-	else if (key == K_F)
+	else if (key == XK_f)
 		sp->r += MV_UNIT;
 	ft_print_sphere(*sp);
 }
 
 void	ft_manip_plane(int key, t_plane *pl)
 {
-	if (key == K_Q)
+	if (key == XK_q)
 		pl->point.z -= MV_UNIT;
-	else if (key == K_E)
+	else if (key == XK_e)
 		pl->point.z += MV_UNIT;
-	else if (key == K_W)
+	else if (key == XK_w)
 		pl->point.y += MV_UNIT;
-	else if (key == K_S)
+	else if (key == XK_s)
 		pl->point.y -= MV_UNIT;
-	else if (key == K_D)
+	else if (key == XK_d)
 		pl->point.x += MV_UNIT;
-	else if (key == K_A)
+	else if (key == XK_a)
 		pl->point.x -= MV_UNIT;
-	else if (key == K_ARROW_L)
+	else if (key == XK_Left)
 		pl->normal = ft_vec3_rotate_x(pl->normal, MV_UNIT);
-	else if (key == K_ARROW_R)
+	else if (key == XK_Right)
 		pl->normal = ft_vec3_rotate_x(pl->normal, -MV_UNIT);
-	else if (key == K_ARROW_U)
+	else if (key == XK_Up)
 		pl->normal = ft_vec3_rotate_y(pl->normal, MV_UNIT);
-	else if (key == K_ARROW_D)
+	else if (key == XK_Down)
 		pl->normal = ft_vec3_rotate_y(pl->normal, -MV_UNIT);
 	ft_print_plane(*pl);
 }
@@ -95,43 +94,43 @@ void	ft_cy_calc_caps(t_cylinder *cy)
 
 void	ft_manip_cylinder(int key, t_cylinder *cy)
 {
-	if (key == K_Q)
+	if (key == XK_q)
 	{
 		cy->centre.z -= MV_UNIT;
 		ft_cy_calc_caps(cy);
 	}
-	else if (key == K_E)
+	else if (key == XK_e)
 	{
 		cy->centre.z += MV_UNIT;
 		ft_cy_calc_caps(cy);
 	}
-	else if (key == K_W)
+	else if (key == XK_w)
 	{
 		cy->centre.y += MV_UNIT;
 		ft_cy_calc_caps(cy);
 	}
-	else if (key == K_S)
+	else if (key == XK_s)
 	{
 		cy->centre.y -= MV_UNIT;
 		ft_cy_calc_caps(cy);
 	}
-	else if (key == K_D)
+	else if (key == XK_d)
 	{
 		cy->centre.x += MV_UNIT;
 		ft_cy_calc_caps(cy);
 	}
-	else if (key == K_A)
+	else if (key == XK_a)
 	{
 		cy->centre.x -= MV_UNIT;
 		ft_cy_calc_caps(cy);
 	}
-	else if (key == K_ARROW_L)
+	else if (key == XK_Left)
 		cy->axis = ft_vec3_rotate_x(cy->axis, MV_UNIT);
-	else if (key == K_ARROW_R)
+	else if (key == XK_Right)
 		cy->axis = ft_vec3_rotate_x(cy->axis, -MV_UNIT);
-	else if (key == K_ARROW_U)
+	else if (key == XK_Up)
 		cy->axis = ft_vec3_rotate_y(cy->axis, MV_UNIT);
-	else if (key == K_ARROW_D)
+	else if (key == XK_Down)
 		cy->axis = ft_vec3_rotate_y(cy->axis, -MV_UNIT);
 	ft_print_cylinder(*cy);
 }
