@@ -6,7 +6,7 @@
 /*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/16 19:57:54 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/21 18:44:32 by u413q            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
 	float		cap_hit1;
 	float		cap_hit2;
 
-	cap_hit1 = 0;
-	cap_hit2 = 0;
+	cap_hit1 = -1;
+	cap_hit2 = -1;
 	cap1_ray = ft_vec3_sub(ray.origin, cy.cap1);
 	eq.a = ft_vec3_dot(ray.direction, ray.direction) - \
 		pow(ft_vec3_dot(ray.direction, cy.axis), 2);
