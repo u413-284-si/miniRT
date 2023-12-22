@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene_init_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/21 12:16:42 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/22 11:36:11 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ void	ft_initiate_lights(t_entities *scene)
 	scene->lsrc[0].colour.g = 1.0;
 	scene->lsrc[0].colour.b = 1.0;
 	scene->lsrc[0].ratio = 0.7;
-	scene->lsrc[0].pos.x = -40.0;
-	scene->lsrc[0].pos.y = 50.0;
+	scene->lsrc[0].pos.x = 0.0;
+	scene->lsrc[0].pos.y = 0.0;
 	scene->lsrc[0].pos.z = 0.0;
 }
 
@@ -96,12 +96,12 @@ void	ft_initiate_cylinders(t_hittable *obj)
 	obj[0].shininess = 32;
 	obj[0].params.cy.centre.x = 0.0;
 	obj[0].params.cy.centre.y = 0.0;
-	obj[0].params.cy.centre.z = -1.0;
-	obj[0].params.cy.axis.x = 0.707;
-	obj[0].params.cy.axis.y = 0.707;
-	obj[0].params.cy.axis.z = 0.0;
-	obj[0].params.cy.d = 0.5;
-	obj[0].params.cy.h = 1.0;
+	obj[0].params.cy.centre.z = 50.0;
+	obj[0].params.cy.axis.x = 1.0;
+	obj[0].params.cy.axis.y = 1.0;
+	obj[0].params.cy.axis.z = 1.0;
+	obj[0].params.cy.d = 16;
+	obj[0].params.cy.h = 20;
 	obj[0].params.cy.cap1 = ft_vec3_add(obj[0].params.cy.centre, \
 		ft_vec3_scale(obj[0].params.cy.axis, -obj[0].params.cy.h / 2.0));
 	obj[0].params.cy.cap2 = ft_vec3_add(obj[0].params.cy.centre, \
