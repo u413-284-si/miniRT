@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/23 20:58:57 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/23 21:57:17 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -141,12 +141,14 @@ SRC := 	camera.c \
 		render_draw.c \
 		render_init_mlx.c \
 		render_keyhook_hittable.c \
+		render_keyhook_utils.c \
 		render_keyhook.c \
 		render_loop_mlx.c \
 		render_output_ppm.c \
 		scene_init.c \
 		scene_light.c \
 		scene_shadow.c \
+		utils_entities.c \
 		utils_cylinder.c \
 		utils.c \
 		vec3_arithmetics.c \

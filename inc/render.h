@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 21:03:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 21:41:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,6 +202,12 @@ void	ft_manip_plane(int key, t_plane *pl);
  * @param cy		Pointer to cylinder struct.
  */
 void	ft_manip_cylinder(int key, t_cylinder *cy);
+
+// render_keyhook_utils.c
+
+void	ft_keyhook_mv_point(int key, t_vec3 *point);
+
+void	ft_keyhook_rot_vec(int key, t_vec3 *vector);
 
 // render_loop_mlx.c
 
