@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/22 11:38:50 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/23 19:02:29 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ void	ft_initiate_image(t_image *image)
 
 void	ft_initiate_camera(t_cam *cam)
 {
-	cam->look_from.x = -0.0;
+	cam->look_from.x = 0.0;
 	cam->look_from.y = 0.0;
 	cam->look_from.z = 0.0;
 	cam->look_at.x = 0.0;
 	cam->look_at.y = 0.0;
-	cam->look_at.z = 1.0;
+	cam->look_at.z = -1.0;
 	cam->vup.x = 0.0;
 	cam->vup.y = 1.0;
 	cam->vup.z = 0.0;
@@ -36,7 +36,7 @@ void	ft_initiate_camera(t_cam *cam)
 	cam->camera_centre.y = cam->look_from.y;
 	cam->camera_centre.z = cam->look_from.z;
 	cam->w = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
-	cam->u = ft_vec3_cross(cam->vup, cam->w);
+	cam->u = ft_vec3_norm(ft_vec3_cross(cam->vup, cam->w));
 	cam->v = ft_vec3_cross(cam->w, cam->u);
 }
 

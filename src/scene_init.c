@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/22 11:38:15 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/23 19:03:00 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,11 @@ void	ft_initiate_cylinders(t_hittable *obj)
 	obj[0].type = CYLINDER;
 	obj[0].params.cy.centre.x = 0.0;
 	obj[0].params.cy.centre.y = 0.0;
-	obj[0].params.cy.centre.z = 50.0;
-	obj[0].params.cy.axis.x = 1.0;
+	obj[0].params.cy.centre.z = -50.0;
+	obj[0].params.cy.axis.x = -1.0;
 	obj[0].params.cy.axis.y = 1.0;
-	obj[0].params.cy.axis.z = 1.0;
+	obj[0].params.cy.axis.z = -1.0;
+	obj[0].params.cy.axis = ft_vec3_norm(obj[0].params.cy.axis);
 	obj[0].params.cy.d = 16;
 	obj[0].params.cy.h = 20;
 	obj[0].params.cy.cap1 = ft_vec3_add(obj[0].params.cy.centre, \
