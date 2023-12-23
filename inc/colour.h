@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/19 23:38:52 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 22:13:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,16 @@ typedef struct s_colour
 	float	g;
 	float	b;
 }	t_colour;
+
+typedef enum e_col_name
+{
+	RED,
+	GREEN,
+	BLUE,
+	YELLOW,
+	PURPLE,
+	CYAN
+}	t_col_name;
 
 /* ====== FUNCTIONS ====== */
 
@@ -71,5 +81,13 @@ int32_t		ft_convert_colour2int(t_colour colour);
  * @return t_colour	Converted t_colour.
  */
 t_colour	ft_convert_int2colour(int colour);
+
+/**
+ * @brief Returns a colour based on the given colour name.
+ *
+ * @param col_name	Colour name.
+ * @return t_colour	Colour.
+ */
+t_colour	ft_get_colour(t_col_name col_name);
 
 #endif
