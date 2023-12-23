@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/22 21:26:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 21:03:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@
 # include "miniRT_config.h"
 # include "mat4_vec3.h"
 # include "print.h"
-
-/* ====== MACROS ====== */
-# define MV_UNIT 1.0f
 
 /* ====== TYPEDEFS ====== */
 

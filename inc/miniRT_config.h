@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/21 23:58:40 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 21:04:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@
 # define WIN_SIZE_X 800
 # define WIN_SIZE_Y 600
 
+// standard movement speed
+# define MV_UNIT 0.5f
 
 #endif
