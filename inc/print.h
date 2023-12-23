@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 11:26:06 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/20 11:30:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 22:25:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	ft_print_mat4(const t_mat4 mat);
 void	ft_print_colour(const t_colour colour);
 
 // print_entity.c
+void	ft_print_hittable(t_hittable hittable);
 void	ft_print_sphere(const t_sphere sp);
 void	ft_print_plane(const t_plane pl);
 void	ft_print_cylinder(const t_cylinder cy);

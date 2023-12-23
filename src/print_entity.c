@@ -6,11 +6,23 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:16:27 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/20 11:31:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 22:29:29 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "print.h"
+
+void	ft_print_hittable(t_hittable hittable)
+{
+	printf("ID: %d\n", hittable.id);
+	if (hittable.type == SPHERE)
+		ft_print_sphere(hittable.params.sp);
+	else if (hittable.type == PLANE)
+		ft_print_plane(hittable.params.pl);
+	else if (hittable.type == CYLINDER)
+		ft_print_cylinder(hittable.params.cy);
+	printf("\n");
+}
 
 void	ft_print_sphere(const t_sphere sp)
 {
