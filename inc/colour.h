@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/23 22:13:14 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 22:38:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,11 @@ typedef enum e_col_name
 	BLUE,
 	YELLOW,
 	PURPLE,
-	CYAN
+	CYAN,
+	WHITE,
+	BLACK,
+	ORANGE,
+	PINK
 }	t_col_name;
 
 /* ====== FUNCTIONS ====== */

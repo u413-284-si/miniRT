@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 22:29:14 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 22:40:51 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	ft_manip_hittable(int key, t_hittable *hittable)
 
 void	ft_manip_sphere(int key, t_sphere *sp)
 {
-	if (key >= XK_1 && key <= XK_6)
+	if (key >= XK_0 && key <= XK_9)
 		ft_keyhook_change_col(key, &sp->colour);
 	else if (key == XK_r)
 		sp->r -= MV_UNIT;
@@ -57,7 +57,7 @@ void	ft_manip_sphere(int key, t_sphere *sp)
 
 void	ft_manip_plane(int key, t_plane *pl)
 {
-	if (key >= XK_1 && key <= XK_6)
+	if (key >= XK_0 && key <= XK_9)
 		ft_keyhook_change_col(key, &pl->colour);
 	else if (key >= XK_Left && key <= XK_Down)
 		ft_keyhook_rot_vec(key, &pl->normal);
@@ -67,7 +67,7 @@ void	ft_manip_plane(int key, t_plane *pl)
 
 void	ft_manip_cylinder(int key, t_cylinder *cy)
 {
-	if (key >= XK_1 && key <= XK_6)
+	if (key >= XK_0 && key <= XK_9)
 		ft_keyhook_change_col(key, &cy->colour);
 	else if (key >= XK_Left && key <= XK_Down)
 		ft_keyhook_rot_vec(key, &cy->axis);
