@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 22:16:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 22:29:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	ft_change_active_hittable(int key, t_entities *scene)
 		if (scene->active == scene->total)
 			scene->active = 0;
 	}
+	ft_print_hittable(scene->obj[scene->active]);
 }
 
 void	ft_manip_hittable(int key, t_hittable *hittable)
@@ -38,6 +39,7 @@ void	ft_manip_hittable(int key, t_hittable *hittable)
 		ft_manip_plane(key, &hittable->params.pl);
 	else if (hittable->type == CYLINDER)
 		ft_manip_cylinder(key, &hittable->params.cy);
+	ft_print_hittable(*hittable);
 }
 
 
@@ -51,26 +53,31 @@ void	ft_manip_sphere(int key, t_sphere *sp)
 		sp->r += MV_UNIT;
 	else
 		ft_keyhook_mv_point(key, &sp->centre);
-	ft_print_sphere(*sp);
 }
 
 void	ft_manip_plane(int key, t_plane *pl)
 {
-	if (key >= XK_Left)
+	if (key >= XK_1 && key <= XK_6)
+		ft_keyhook_change_col(key, &pl->colour);
+	else if (key >= XK_Left && key <= XK_Down)
 		ft_keyhook_rot_vec(key, &pl->normal);
 	else
 		ft_keyhook_mv_point(key, &pl->point);
-	ft_print_plane(*pl);
 }
 
 void	ft_manip_cylinder(int key, t_cylinder *cy)
 {
-	if (key >= XK_Left)
+	if (key >= XK_1 && key <= XK_6)
+		ft_keyhook_change_col(key, &cy->colour);
+	else if (key >= XK_Left && key <= XK_Down)
 		ft_keyhook_rot_vec(key, &cy->axis);
+	else if (key == XK_r)
+		cy->d -= MV_UNIT;
+	else if (key == XK_f)
+		cy->d += MV_UNIT;
 	else
 	{
 		ft_keyhook_mv_point(key, &cy->centre);
 		ft_cy_calc_caps(cy);
 	}
-	ft_print_cylinder(*cy);
 }
