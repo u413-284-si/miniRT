@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   miniRT.h                                           :+:      :+:    :+:   */
+/*   render_keyhook.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/19 22:36:50 by gwolf            ###   ########.fr       */
+/*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
+/*   Updated: 2023/12/22 00:55:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_H
-# define MINIRT_H
+#include "render.h"
 
-/* ====== LIBRARIES ====== */
+int	ft_keyhook_press(int key, t_render *render)
+{
+	static bool	print;
 
-// Standard C libs
-# include <stdio.h>
-# include <fcntl.h>				// req for open()
-# include <unistd.h>			// req for read(), write(), close()
-
-// Home-grown libs
-# include "ft_print.h"
-# include "camera.h"
-# include "init.h"
-# include "parse.h"
-# include "render.h"
-
-#endif
+	if (key == XK_Escape)
+		mlx_loop_end(render->mlx_ptrs.mlx_ptr);
+	else if (key == XK_c && !print)
+	{
+		print = true;
+		ft_output_as_ppm((int *)render->mlx_ptrs.img.addr,
+				render->mlx_ptrs.img.width, render->mlx_ptrs.img.height);
+		print = false;
+	}
+	return (0);
+}

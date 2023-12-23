@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   miniRT.h                                           :+:      :+:    :+:   */
+/*   error_msg_generic.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/19 22:36:50 by gwolf            ###   ########.fr       */
+/*   Created: 2023/10/30 14:17:35 by gwolf             #+#    #+#             */
+/*   Updated: 2023/11/20 11:49:37 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_H
-# define MINIRT_H
+#include "error_msg.h"
 
-/* ====== LIBRARIES ====== */
+void	ft_perror(char *msg, int save_errno)
+{
+	ft_putendl_fd("Error", 2);
+	if (!save_errno)
+		ft_putendl_fd(msg, 2);
+	else
+	{
+		errno = save_errno;
+		perror(msg);
+	}
+}
 
-// Standard C libs
-# include <stdio.h>
-# include <fcntl.h>				// req for open()
-# include <unistd.h>			// req for read(), write(), close()
-
-// Home-grown libs
-# include "ft_print.h"
-# include "camera.h"
-# include "init.h"
-# include "parse.h"
-# include "render.h"
-
-#endif
+void	ft_perror_number(char *msg, int number)
+{
+	ft_putstr_fd(msg, 2);
+	ft_putstr_fd(": <", 2);
+	ft_putnbr_fd(number, 2);
+	ft_putendl_fd(">", 2);
+}

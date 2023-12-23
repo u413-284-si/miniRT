@@ -1,9 +1,12 @@
 {
 	"files.associations": {
+		"\"*.h\"": "\"c\"",
 		"random": "c",
 		"utils.h": "c",
 		"hit_manager.h": "c",
 		"entities.h": "c",
+		"error_msg.h": "c",
+		"check.h": "c",
 		"ray_bonus.h": "c",
 		"ray.h": "c"
 	}

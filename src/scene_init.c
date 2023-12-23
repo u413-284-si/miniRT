@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/23 19:03:00 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/23 19:17:10 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ void	ft_create_scene(t_entities *scene)
 	//int	i;
 
 	scene->lsrc_count = 1;
-	scene->sp_count = 0;
-	scene->pl_count = 0;
-	scene->cy_count = 1;
-	scene->total = scene->sp_count + scene->pl_count + scene->cy_count;
+	scene->total = 1;
 	scene->obj = malloc(scene->total * sizeof(t_hittable));
 	if (!scene->obj)
 		exit(232);
