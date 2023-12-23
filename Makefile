@@ -6,9 +6,20 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/22 21:29:53 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/23 20:58:57 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+# ******************************
+# *     Verbosity              *
+# ******************************
+
+# Set VERBOSE=1 to echo all commands
+ifeq ($(VERBOSE),1)
+	SILENT =
+else
+	SILENT = @
+endif
 
 # ******************************
 # *     Text effects           *
@@ -27,12 +38,30 @@ BLUE := \033[34m
 # ******************************
 
 SRC_DIR := src
-OBJ_DIR := obj
+# Base directory for object files
+BASE_OBJ_DIR := obj
+# Subdirectory for default compilation
+OBJ_DIR_DEFAULT := $(BASE_OBJ_DIR)/default
+# Subdirectory for compilation with fsanitize leak checker
+OBJ_DIR_LEAK := $(BASE_OBJ_DIR)/leak
+# Subdirectory for compilation with fsanitize address checker
+OBJ_DIR_ADDRESS := $(BASE_OBJ_DIR)/address
+# Subdirectory for compilation with speed optimization
+OBJ_DIR_SPEED := $(BASE_OBJ_DIR)/speed
+# Set default object directory
+OBJ_DIR = $(OBJ_DIR_DEFAULT)
+# Set object directory depending on target
+ifneq (,$(findstring leak,$(MAKECMDGOALS)))
+	OBJ_DIR = $(OBJ_DIR_LEAK)
+else ifneq (,$(findstring address,$(MAKECMDGOALS)))
+	OBJ_DIR = $(OBJ_DIR_ADDRESS)
+else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
+	OBJ_DIR = $(OBJ_DIR_SPEED)
+endif
 LIB_DIR := lib
 LIB_DIR_FT := $(LIB_DIR)/libft
 INC_DIR := inc
-DEP_DIR := $(OBJ_DIR)/dep
-#TEST_DIR := tests
+DEP_DIR = $(OBJ_DIR)/dep
 
 # ******************************
 # *     Libraries              *
@@ -56,9 +85,25 @@ POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
 # *     Targets                *
 # ******************************
 
-NAME := miniRT
+# Default target
+DEFAULT := miniRT
+# Target for fsanitize leak checker
+LEAK := $(DEFAULT)_leak
+# Target for fsanitize address checker
+ADDRESS := $(DEFAULT)_address
+# Target for speed optimization
+SPEED := $(DEFAULT)_speed
+# Set default target
+NAME = $(DEFAULT)
+# Set target depending on target
+ifneq (,$(findstring leak,$(MAKECMDGOALS)))
+	NAME = $(LEAK)
+else ifneq (,$(findstring address,$(MAKECMDGOALS)))
+	NAME = $(ADDRESS)
+else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
+	NAME = $(SPEED)
+endif
 LIBFT := $(LIB_DIR_FT)/libft.a
-#TEST := test
 
 # ******************************
 # *     Source files           *
@@ -136,25 +181,29 @@ all: $(NAME)
 # Linking the NAME target
 $(NAME): $(LIBFT) $(OBJS)
 	@printf "\n$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
+	$(SILENT)$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
 	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@printf "$(BOLD)$(GREEN)$(NAME) created!$(RESET)\n\n"
 
-# This target adds fsanitize leak checker to the flags. It needs to clean and recompile.
+# This target adds fsanitize leak checker to the flags.
 .PHONY: leak
 leak: CFLAGS += -fsanitize=leak
 leak: LDFLAGS += -fsanitize=leak
-leak: clean $(NAME)
-	@printf "Compiled with $(YELLOW)$(BOLD)fsanitize=leak$(RESET)\n\n"
+leak: $(NAME)
 
-# This target adds fsanitize address checker to the flags. It needs to clean and recompile.
+# This target adds fsanitize address checker to the flags.
 .PHONY: address
 address: CFLAGS += -fsanitize=address
 address: LDFLAGS += -fsanitize=address
-address: clean $(NAME)
-	@printf "Compiled with $(YELLOW)$(BOLD)fsanitize=address$(RESET)\n\n"
+address: $(NAME)
 
-# Perform memory check on NAME. Needs manual clean if target leak or address was called before
+# This target adds flags which optimize the program for speed.
+.PHONY: speed
+speed: CFLAGS = -Ofast -march=native -fomit-frame-pointer
+speed: LDFLAGS += -flto
+speed: $(NAME)
+
+# Perform memory check on NAME.
 .PHONY: valgr
 valgr: $(NAME)
 	@valgrind 	--leak-check=full\
@@ -171,25 +220,33 @@ valgr: $(NAME)
 # *     dependecy creation     *
 # ******************************
 
+# File counter for status output
+TOTAL_FILES := $(words $(SRC))
+CURRENT_FILE := 0
+
 # Create object and dependency files
 # $(DEP_DIR)/%.d =	Declare the generated dependency file as a prerequisite of the target,
 # 					so that if it’s missing the target will be rebuilt.
 # | $(DEPDIR) = 	Declare the dependency directory as an order-only prerequisite of the target,
 # 					so that it will be created when needed.
+# $(eval ...) =		Increment file counter.
 # $(POSTCOMPILE) =	Move temp dependency file and touch object to ensure right timestamps.
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(DEP_DIR)/%.d message | $(DEP_DIR)
-	$(COMPILE) $< -o $@
-	$(POSTCOMPILE)
+	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
+	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
+	$(SILENT)$(COMPILE) $< -o $@
+	$(SILENT)$(POSTCOMPILE)
 
 # Print message only if there are objects to compile
 .INTERMEDIATE: message
 message:
 	@printf "\n$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 
-# Create directory obj/dep if it doesn't exist
+# Create obj and dep subdirectory if it doesn't exist
 $(DEP_DIR):
 	@printf "\n$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	mkdir -p $@
+	@echo $@
+	$(SILENT)mkdir -p $@
 
 # Mention each dependency file as a target, so that make won’t fail if the file doesn’t exist.
 $(DEPFILES):
@@ -207,16 +264,18 @@ $(LIBFT):
 # *     Cleanup                *
 # ******************************
 
+# Remove all object files and dependency files
 .PHONY: clean
 clean:
 	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	@rm -rf $(OBJ_DIR)
-	@printf "$(RED)removed subdir $(OBJ_DIR)$(RESET)\n"
+	@rm -rf $(BASE_OBJ_DIR)
+	@printf "$(RED)removed subdir $(BASE_OBJ_DIR)$(RESET)\n"
 
+# Remove all object files, dependency files and binaries
 .PHONY: fclean
 fclean: clean
-	@rm -rf $(NAME)
-	@printf "$(RED)clean bin $(NAME)$(RESET)\n"
+	@rm -rf $(NAME)*
+	@printf "$(RED)removed binaries $(NAME)*$(RESET)\n"
 	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)libft$(RESET)]\n"
 	@$(MAKE) --no-print-directory -C $(LIB_DIR_FT) fclean
 	@echo
