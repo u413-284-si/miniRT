@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 21:54:21 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 22:16:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ void	ft_change_active_hittable(int key, t_entities *scene)
 {
 	if (scene->active == -1)
 		return ;
-	if (key == XK_1)
+	if (key == XK_n)
 	{
 		scene->active--;
 		if (scene->active < 0)
 			scene->active = scene->total - 1;
 	}
-	if (key == XK_2)
+	if (key == XK_m)
 	{
 		scene->active++;
 		if (scene->active == scene->total)
@@ -43,7 +43,9 @@ void	ft_manip_hittable(int key, t_hittable *hittable)
 
 void	ft_manip_sphere(int key, t_sphere *sp)
 {
-	if (key == XK_r)
+	if (key >= XK_1 && key <= XK_6)
+		ft_keyhook_change_col(key, &sp->colour);
+	else if (key == XK_r)
 		sp->r -= MV_UNIT;
 	else if (key == XK_f)
 		sp->r += MV_UNIT;

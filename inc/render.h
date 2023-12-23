@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 21:41:13 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 22:17:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -208,6 +208,8 @@ void	ft_manip_cylinder(int key, t_cylinder *cy);
 void	ft_keyhook_mv_point(int key, t_vec3 *point);
 
 void	ft_keyhook_rot_vec(int key, t_vec3 *vector);
+
+void	ft_keyhook_change_col(int key, t_colour *col);
 
 // render_loop_mlx.c
 
