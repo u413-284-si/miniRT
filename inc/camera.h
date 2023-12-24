@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/24 22:36:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 22:46:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,5 +124,9 @@ void	ft_cam_calc_viewport_dimensions(t_cam *cam, int size_x, int size_y);
  * @param size_y	Height of image in pixels.
  */
 void	ft_cam_calc_pixel_grid(t_cam *cam, int size_x, int size_y);
+
+void	ft_cam_move_forward(t_cam *cam, float distance);
+void	ft_cam_move_right(t_cam *cam, float distance);
+void	ft_cam_move_up(t_cam *cam, float distance);
 
 #endif
