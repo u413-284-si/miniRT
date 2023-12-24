@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/16 16:44:16 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/24 19:42:34 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 	ft_init_colour(&ray_colour);
 	ft_init_hitrecord(&rec);
 	ft_init_interval(&ray_d);
-
 	i = -1;
 	while (++i < scene.total)
 	{
