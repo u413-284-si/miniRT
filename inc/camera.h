@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/24 17:38:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 17:44:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,19 @@
  * @brief Contains camera parameters
  *
  * @param position				Where the camera is located.
- * @param orientation			How the camera is orientated.
+ * @param direction				In which direction the camera is looking.
  * @param u						Basis vector pointing to camera right
  * @param v						Basis vector pointing to camera up
  * @param w						Basis vector pointing to opposite view direction
- * @param vup					Camera-relative up direction
  * @param hfov					Horizontal field of view in radians
  */
 typedef struct s_cam
 {
 	t_vec3	position;
-	t_vec3	orientation;
+	t_vec3	direction;
 	t_vec3	u;
 	t_vec3	v;
 	t_vec3	w;
-	t_vec3	vup;
 	float	hfov;
 }	t_cam;
 
