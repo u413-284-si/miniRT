@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/22 12:02:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 17:35:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,8 @@ void	ft_initiate_camera(t_cam *cam)
 
 void	ft_initiate_viewport(t_viewport *vp, t_cam cam, int size_x, int size_y)
 {
-	float	hfov_rad;
-
 	vp->focal_length = ft_vec3_abs(ft_vec3_sub(cam.look_from, cam.look_at));
-	hfov_rad = ft_degree_to_radian(cam.hfov);
-	vp->viewport_width = 2 * tan(hfov_rad / 2) * vp->focal_length;
+	vp->viewport_width = 2 * tan(cam.hfov / 2) * vp->focal_length;
 	vp->viewport_height = vp->viewport_width / size_x * size_y;
 	vp->viewport_u = ft_vec3_scale(cam.u, vp->viewport_width);
 	vp->viewport_v = ft_vec3_scale(cam.v, -vp->viewport_height);

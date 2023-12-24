@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/22 12:02:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 17:35:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
  * @param w						Basis vector pointing to opposite view direction
  * @param vup					Camera-relative up direction
  * @param camera_centre			Camera position
- * @param hfov					Horizontal field of view in degrees
+ * @param hfov					Horizontal field of view in radians
  */
 typedef struct s_cam
 {

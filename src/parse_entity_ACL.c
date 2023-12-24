@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_entity1.c                                    :+:      :+:    :+:   */
+/*   parse_entity_ACL.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:23:57 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 09:47:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 17:34:59 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_parse_camera(char *line, t_cam *cam)
 	ft_parse_float_block(&line, &cam->look_from);
 	ft_parse_float_block(&line, &cam->look_at);
 	ft_parse_float(&line, &cam->hfov);
+	cam->hfov = ft_degree_to_radian(cam->hfov);
 }
 
 void	ft_parse_light(char *line, t_light *light)
