@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/22 12:02:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 12:06:06 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "ray.h"
 # include "utils.h"
 
-/* ====== TYPEDEFS ====== */
+//* ====== TYPEDEFS ====== */
 
 /**
  * @brief Contains camera parameters
@@ -29,7 +29,9 @@
  * @param v						Basis vector pointing to camera up
  * @param w						Basis vector pointing to opposite view direction
  * @param vup					Camera-relative up direction
+ * @param vright				Camera-relative right direction
  * @param camera_centre			Camera position
+ * @param camera_direction		Direction of camera view
  * @param hfov					Horizontal field of view in degrees
  */
 typedef struct s_cam
@@ -40,7 +42,9 @@ typedef struct s_cam
 	t_vec3	v;
 	t_vec3	w;
 	t_vec3	vup;
+	t_vec3	vright;
 	t_vec3	camera_centre;
+	t_vec3	camera_direction;
 	float	hfov;
 }	t_cam;
 

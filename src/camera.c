@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: Invalid date        by                   #+#    #+#             */
-/*   Updated: 2023/12/23 19:15:54 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/24 18:19:44 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 
 void	ft_initiate_camera(t_cam *cam)
 {
-	cam->vup.x = 0.0;
-	cam->vup.y = 1.0;
-	cam->vup.z = 0.0;
-	cam->camera_centre.x = cam->look_from.x;
-	cam->camera_centre.y = cam->look_from.y;
-	cam->camera_centre.z = cam->look_from.z;
+	cam->vup = (t_vec3){0.0, 1.0, 0.0};
+	cam->camera_centre = cam->look_from;
+	cam->look_at = ft_vec3_add(cam->camera_centre, cam->camera_direction);
 	cam->w = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
-	cam->u = ft_vec3_norm(ft_vec3_cross(cam->vup, cam->w));
+	if (cam->camera_direction.y == 1)
+		cam->u = (t_vec3){1, 0, 0};
+	else if (cam->camera_direction.y == -1)
+		cam->u = (t_vec3){-1, 0, 0};
+	else
+		cam->u = ft_vec3_norm(ft_vec3_cross(cam->vup, cam->w));
 	cam->v = ft_vec3_cross(cam->w, cam->u);
 }
 
