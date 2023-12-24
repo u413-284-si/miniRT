@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/24 17:35:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 17:36:44 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@ void	ft_initiate_camera(t_cam *cam)
 	cam->vup.x = 0.0;
 	cam->vup.y = 1.0;
 	cam->vup.z = 0.0;
-	cam->camera_centre.x = cam->look_from.x;
-	cam->camera_centre.y = cam->look_from.y;
-	cam->camera_centre.z = cam->look_from.z;
 	cam->w = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
 	cam->u = ft_vec3_cross(cam->vup, cam->w);
 	cam->v = ft_vec3_cross(cam->w, cam->u);
