@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/24 18:03:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 22:36:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int argc, char **argv)
 		ft_free_scene(&render.scene);
 		return (1);
 	}
-	ft_initiate_camera(&render.cam, render.mlx_ptrs.img.width, render.mlx_ptrs.img.height);
+	ft_cam_init(&render.cam, render.mlx_ptrs.img.width, render.mlx_ptrs.img.height);
 	ft_render_start_loop(&render);
 	ft_free_scene(&render.scene);
 	return (0);
