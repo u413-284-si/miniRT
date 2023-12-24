@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/24 17:46:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 17:49:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,23 @@ void	ft_cam_calc_base_vector(t_cam *cam)
 	cam->v = ft_vec3_cross(cam->w, cam->u);
 }
 
+void	ft_cam_calc_viewport_dimensions(t_cam *cam, int size_x, int size_y)
+{
+	cam->viewport_width = 2 * tan(cam->hfov / 2) * cam->focal_length;
+	cam->viewport_height = cam->viewport_width / size_x * size_y;
+}
+
 void	ft_initiate_camera(t_cam *cam)
 {
 	ft_cam_calc_base_vector(cam);
 	cam->focal_length = 10.0;
+	ft_cam_calc_viewport_dimensions(cam, 800, 600);
 }
 
 void	ft_initiate_viewport(t_viewport *vp, t_cam cam, int size_x, int size_y)
 {
-	vp->viewport_width = 2 * tan(cam.hfov / 2) * cam.focal_length;
-	vp->viewport_height = vp->viewport_width / size_x * size_y;
-	vp->viewport_u = ft_vec3_scale(cam.u, vp->viewport_width);
-	vp->viewport_v = ft_vec3_scale(cam.v, -vp->viewport_height);
+	vp->viewport_u = ft_vec3_scale(cam.u, cam.viewport_width);
+	vp->viewport_v = ft_vec3_scale(cam.v, -cam.viewport_height);
 	vp->delta_u = ft_vec3_scale(vp->viewport_u, \
 		(float)(1.0 / size_x));
 	vp->delta_v = ft_vec3_scale(vp->viewport_v, \

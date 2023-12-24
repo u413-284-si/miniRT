@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/24 17:45:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 17:48:42 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@
  * @param w						Basis vector pointing to opposite view direction
  * @param hfov					Horizontal field of view in radians
  * @param focal_length			Distance between camera centre and viewport centre.
+ * @param viewport_width		Width of viewport rectangle
+ * @param viewport_height		Height of viewport rectangle
  */
 typedef struct s_cam
 {
@@ -40,6 +42,8 @@ typedef struct s_cam
 	t_vec3	w;
 	float	hfov;
 	float	focal_length;
+	float	viewport_width;
+	float	viewport_height;
 }	t_cam;
 
 /**
@@ -50,8 +54,6 @@ typedef struct s_cam
  * cally, the viewport has the same aspect_ratio as the image.
  * The focal length is the distance between the camera centre and the viewport
  * centre (vector orthogonal on viewport plane).
- * @param viewport_width		Width of viewport rectangle
- * @param viewport_height		Height of viewport rectangle
  * @param viewport_u			Vector u in viewport coordinates (= x)
  * @param viewport_v			Vector v in viewport coordinates (= -y)
  * @param delta_u				Distance between two pixels in u-direction
@@ -61,8 +63,6 @@ typedef struct s_cam
  */
 typedef struct s_viewport
 {
-	float	viewport_width;
-	float	viewport_height;
 	t_vec3	viewport_u;
 	t_vec3	viewport_v;
 	t_vec3	delta_u;
