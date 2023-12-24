@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   entities.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 12:59:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 18:25:35 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,13 @@ typedef struct s_light
 /**
  * @brief Represents a sphere
  * @param centre	Centre of the sphere
- * @param r			Radius of the sphere
+ * @param d			Diameter of the sphere
  * @param colour	Colour of the sphere
  */
 typedef struct s_sphere
 {
 	t_vec3		centre;
-	float		r;
+	float		d;
 	t_colour	colour;
 }	t_sphere;
 

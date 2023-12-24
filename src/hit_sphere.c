@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hit_sphere.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:39:35 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/14 17:38:00 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/24 18:27:06 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ bool	ft_hit_sphere(t_sphere sp, t_ray ray, t_hitrecord *rec, \
 	sp_centre_ray = ft_vec3_sub(ray.origin, sp.centre);
 	eq.a = ft_vec3_dot(ray.direction, ray.direction);
 	eq.b = 2.0 * ft_vec3_dot(ray.direction, sp_centre_ray);
-	eq.c = ft_vec3_dot(sp_centre_ray, sp_centre_ray) - pow(sp.r, 2);
+	eq.c = ft_vec3_dot(sp_centre_ray, sp_centre_ray) - pow(sp.d / 2.0, 2);
 	if (ft_solve(&eq) < 0)
 		return (false);
 	closest_d = eq.d1;
@@ -35,7 +35,7 @@ bool	ft_hit_sphere(t_sphere sp, t_ray ray, t_hitrecord *rec, \
 	rec->d = closest_d;
 	rec->point = ft_ray(ray, closest_d);
 	rec->normal = ft_vec3_scale(ft_vec3_sub(rec->point, sp.centre), \
-		(1.0 / sp.r));
+		(1.0 / (sp.d / 2.0)));
 	rec->colour = sp.colour;
 	return (true);
 }
