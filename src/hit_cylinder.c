@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hit_cylinder.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/21 18:44:32 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/24 23:28:49 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,29 @@ bool	ft_hit_cylinder(t_cylinder cy, t_ray ray, t_hitrecord *rec, \
 	t_interval ray_d)
 {
 	float		potential_hits[4];
+	t_hitrecord	tmp;
 
 	potential_hits[0] = 0;
 	potential_hits[1] = 0;
 	potential_hits[2] = 0;
 	potential_hits[3] = 0;
+	ft_init_hitrecord(&tmp);
 	if (!ft_cy_calculate_pot_hits(cy, ray, ray_d, potential_hits))
 		return (false);
-	ft_cy_identify_hits(cy, ray, potential_hits, rec);
-	if (rec->d < EPSILON)
+	ft_cy_identify_hits(cy, ray, potential_hits, &tmp);
+	if (tmp.d < EPSILON)
 		return (false);
-	rec->point = ft_ray(ray, rec->d);
-	rec->normal = ft_vec3_norm(ft_cy_normal(*rec, ray, cy));
-	rec->colour = cy.colour;
-	return (true);
+	if (tmp.d < rec->d)
+	{
+		rec->d = tmp.d;
+		rec->axis_hit = tmp.axis_hit;
+		rec->point = ft_ray(ray, rec->d);
+		rec->normal = ft_vec3_norm(ft_cy_normal(*rec, ray, cy));
+		rec->colour = cy.colour;
+		return (true);
+	}
+	else
+		return (false);
 }
 
 bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
@@ -82,23 +91,14 @@ void	ft_cy_hit_cap(t_cylinder cy, t_ray ray, t_vec3 cap, float *d)
 void	ft_cy_identify_hits(t_cylinder cy, t_ray ray, float potential_hits[4], \
 	t_hitrecord *rec)
 {
-	if (ft_cy_check_wall(cy, ray, potential_hits[0], rec) \
-		&& potential_hits[0] < rec->d)
+	if (ft_cy_check_wall(cy, ray, potential_hits[0], rec))
 		rec->d = potential_hits[0];
-	if (ft_cy_check_wall(cy, ray, potential_hits[1], rec) \
-		&& potential_hits[1] < rec->d)
+	if (ft_cy_check_wall(cy, ray, potential_hits[1], rec))
 		rec->d = potential_hits[1];
-	if (ft_cy_check_cap(cy, ray, cy.cap1, potential_hits[2]) \
-		&& potential_hits[2] < rec->d)
-	{
-		rec->axis_hit = cy.cap1;
+	if (ft_cy_check_cap(cy, ray, cy.cap1, potential_hits[2], rec))
 		rec->d = potential_hits[2];
-	}
-	if (ft_cy_check_cap(cy, ray, cy.cap2, potential_hits[3]) \
-		&& potential_hits[3] < rec->d)
-	{
-		rec->axis_hit = cy.cap2;
+	if (ft_cy_check_cap(cy, ray, cy.cap2, potential_hits[3], rec))
 		rec->d = potential_hits[3];
-	}
-	rec->d = 0;
+	if (rec->d == INFINITY)
+		rec->d = 0;
 }

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:34:38 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/24 18:26:10 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/24 21:14:46 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id)
 	params = &cylinder->params.cy;
 	ft_parse_float_block(&line, &params->centre);
 	ft_parse_float_block(&line, &params->axis);
+	params->axis = ft_vec3_norm(params->axis);
 	ft_parse_float(&line, &params->d);
 	ft_parse_float(&line, &params->h);
 	ft_parse_colour_block(&line, &params->colour);

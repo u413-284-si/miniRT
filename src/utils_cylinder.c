@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 16:41:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/24 23:26:58 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ bool	ft_cy_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec)
 	len = ft_vec3_abs(ft_vec3_sub(hit, axis_hit));
 	m -= EPSILON;
 	len -= EPSILON;
-	if (m >= 0 && m <= cy.h && len <= (cy.d / 2.0) && d > EPSILON)
+	if (m >= 0 && m <= cy.h && len <= (cy.d / 2.0) && d > EPSILON && d < rec->d)
 	{
 		rec->axis_hit = axis_hit;
 		return (true);
@@ -52,7 +52,7 @@ bool	ft_cy_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec)
 }
 
 bool	ft_cy_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
-	float d)
+	float d, t_hitrecord *rec)
 {
 	t_vec3	hit;
 	float	len;
@@ -60,8 +60,11 @@ bool	ft_cy_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
 	hit = ft_ray(ray, d);
 	len = ft_vec3_abs(ft_vec3_sub(hit, cap));
 	len += EPSILON;
-	if (len <= (cy.d / 2.0) && d > EPSILON)
+	if (len <= (cy.d / 2.0) && d > EPSILON && d < rec->d)
+	{
+		rec->axis_hit = cap;
 		return (true);
+	}
 	return (false);
 }
 

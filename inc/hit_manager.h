@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/17 16:56:04 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/24 23:28:01 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,7 +177,7 @@ bool	ft_cy_check_wall(t_cylinder cy, t_ray ray, float d, t_hitrecord *rec);
  * @return false 		If cap is missed
  */
 bool	ft_cy_check_cap(t_cylinder cy, t_ray ray, t_vec3 cap, \
-	float d);
+	float d, t_hitrecord *rec);
 
 /**
  * @brief Checks if cylinder is not blocked by another object
