@@ -6,11 +6,19 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/24 17:49:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 18:09:42 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "camera.h"
+
+void	ft_initiate_camera(t_cam *cam, int size_x, int size_y)
+{
+	ft_cam_calc_base_vector(cam);
+	cam->focal_length = 10.0;
+	ft_cam_calc_viewport_dimensions(cam, size_x, size_y);
+	ft_cam_calc_viewport_pixels(cam, size_x, size_y);
+}
 
 void	ft_cam_calc_base_vector(t_cam *cam)
 {
@@ -23,29 +31,24 @@ void	ft_cam_calc_base_vector(t_cam *cam)
 
 void	ft_cam_calc_viewport_dimensions(t_cam *cam, int size_x, int size_y)
 {
-	cam->viewport_width = 2 * tan(cam->hfov / 2) * cam->focal_length;
-	cam->viewport_height = cam->viewport_width / size_x * size_y;
+	cam->vp.width = 2 * tan(cam->hfov / 2) * cam->focal_length;
+	cam->vp.height = cam->vp.width / size_x * size_y;
 }
 
-void	ft_initiate_camera(t_cam *cam)
+void	ft_cam_calc_viewport_pixels(t_cam *cam, int size_x, int size_y)
 {
-	ft_cam_calc_base_vector(cam);
-	cam->focal_length = 10.0;
-	ft_cam_calc_viewport_dimensions(cam, 800, 600);
-}
+	t_vec3	viewport_u;
+	t_vec3	viewport_v;
+	t_vec3	viewport_upper_left;
 
-void	ft_initiate_viewport(t_viewport *vp, t_cam cam, int size_x, int size_y)
-{
-	vp->viewport_u = ft_vec3_scale(cam.u, cam.viewport_width);
-	vp->viewport_v = ft_vec3_scale(cam.v, -cam.viewport_height);
-	vp->delta_u = ft_vec3_scale(vp->viewport_u, \
-		(float)(1.0 / size_x));
-	vp->delta_v = ft_vec3_scale(vp->viewport_v, \
-		(float)(1.0 / size_y));
-	vp->viewport_upper_left = ft_vec3_sub(ft_vec3_sub(ft_vec3_sub(\
-		cam.position, ft_vec3_scale(cam.w, cam.focal_length)), \
-		ft_vec3_scale(vp->viewport_u, 0.5)), \
-		ft_vec3_scale(vp->viewport_v, 0.5));
-	vp->pixel00_pos = ft_vec3_add(vp->viewport_upper_left, ft_vec3_scale(\
-		ft_vec3_add(vp->delta_u, vp->delta_v), 0.5));
+	viewport_u = ft_vec3_scale(cam->u, cam->vp.width);
+	viewport_v = ft_vec3_scale(cam->v, -cam->vp.height);
+	cam->vp.delta_u = ft_vec3_scale(viewport_u, (1.0 / size_x));
+	cam->vp.delta_v = ft_vec3_scale(viewport_v, (1.0 / size_y));
+	viewport_upper_left = ft_vec3_sub(ft_vec3_sub(ft_vec3_sub(\
+		cam->position, ft_vec3_scale(cam->w, cam->focal_length)), \
+		ft_vec3_scale(viewport_u, 0.5)), \
+		ft_vec3_scale(viewport_v, 0.5));
+	cam->vp.pixel00_pos = ft_vec3_add(viewport_upper_left, ft_vec3_scale(\
+		ft_vec3_add(cam->vp.delta_u, cam->vp.delta_v), 0.5));
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 22:17:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 18:02:05 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ typedef struct s_render
 	t_mlx_ptrs	mlx_ptrs;
 	t_cam		cam;
 	t_entities	scene;
-	t_viewport	vp;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/24 17:38:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/24 18:02:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ void	ft_render_image(t_render *render)
 		x = -1;
 		while (++x < render->mlx_ptrs.img.width)
 		{
-			pix_centre = ft_vec3_add(ft_vec3_add(render->vp.pixel00_pos, \
-				ft_vec3_scale(render->vp.delta_u, x)), ft_vec3_scale(render->vp.delta_v, y));
+			pix_centre = ft_vec3_add(ft_vec3_add(render->cam.vp.pixel00_pos, \
+				ft_vec3_scale(render->cam.vp.delta_u, x)), ft_vec3_scale(render->cam.vp.delta_v, y));
 			ray.direction = ft_vec3_norm(ft_vec3_sub(pix_centre, render->cam.position));
 			pixel_colour = ft_ray_colour(ray, render->scene);
 			colour = ft_convert_colour2int(pixel_colour);
