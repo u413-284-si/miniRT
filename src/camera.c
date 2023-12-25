@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 07:39:06 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 07:53:00 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ void	ft_cam_init(t_cam *cam, int size_x, int size_y)
 {
 	ft_cam_calc_base_vectors(cam);
 	cam->focal_length = 10.0;
-	ft_cam_calc_viewport_dimensions(cam, size_x, size_y);
-	ft_cam_calc_pixel_grid(cam, size_x, size_y);
+	cam->image.x = size_x;
+	cam->image.y = size_y;
+	ft_cam_calc_viewport_dimensions(cam);
+	ft_cam_calc_pixel_grid(cam);
 }
 
 void	ft_cam_calc_base_vectors(t_cam *cam)
@@ -29,22 +31,22 @@ void	ft_cam_calc_base_vectors(t_cam *cam)
 	cam->v = ft_vec3_cross(cam->w, cam->u);
 }
 
-void	ft_cam_calc_viewport_dimensions(t_cam *cam, int size_x, int size_y)
+void	ft_cam_calc_viewport_dimensions(t_cam *cam)
 {
-	cam->viewport_width = 2 * tan(cam->hfov / 2) * cam->focal_length;
-	cam->viewport_height = cam->viewport_width / size_x * size_y;
+	cam->viewport.x = 2 * tan(cam->hfov / 2) * cam->focal_length;
+	cam->viewport.y = cam->viewport.x / cam->image.x * cam->image.y;
 }
 
-void	ft_cam_calc_pixel_grid(t_cam *cam, int size_x, int size_y)
+void	ft_cam_calc_pixel_grid(t_cam *cam)
 {
 	t_vec3	viewport_u;
 	t_vec3	viewport_v;
 	t_vec3	viewport_upper_left;
 
-	viewport_u = ft_vec3_scale(cam->u, cam->viewport_width);
-	viewport_v = ft_vec3_scale(cam->v, -cam->viewport_height);
-	cam->pixels.delta_u = ft_vec3_scale(viewport_u, (1.0 / size_x));
-	cam->pixels.delta_v = ft_vec3_scale(viewport_v, (1.0 / size_y));
+	viewport_u = ft_vec3_scale(cam->u, cam->viewport.x);
+	viewport_v = ft_vec3_scale(cam->v, -cam->viewport.y);
+	cam->pixels.delta_u = ft_vec3_scale(viewport_u, (1.0 / cam->image.x));
+	cam->pixels.delta_v = ft_vec3_scale(viewport_v, (1.0 / cam->image.y));
 	viewport_upper_left = ft_vec3_sub(ft_vec3_sub(ft_vec3_sub(\
 		cam->position, ft_vec3_scale(cam->w, cam->focal_length)), \
 		ft_vec3_scale(viewport_u, 0.5)), \

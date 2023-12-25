@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 07:23:24 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 07:55:11 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "ray.h"
+# include "vec2.h"
+# include "vec3.h"
 # include "utils.h"
 
 /* ====== TYPEDEFS ====== */
@@ -47,8 +48,8 @@ typedef struct s_pixel_grid
  * @param w					Basis vector pointing to opposite view direction
  * @param hfov				Horizontal field of view in radians
  * @param focal_length		Distance between camera centre and viewport centre.
- * @param viewport_width	Width of viewport rectangle
- * @param viewport_height	Height of viewport rectangle
+ * @param viewport			Width and height of viewport rectangle
+ * @param image				Width and height of image in pixels
  * @param pixels			Pixel grid parameters.
  */
 typedef struct s_cam
@@ -60,16 +61,21 @@ typedef struct s_cam
 	t_vec3			w;
 	float			hfov;
 	float			focal_length;
-	float			viewport_width;
-	float			viewport_height;
+	t_vec2f			viewport;
+	t_vec2i			image;
 	t_pixel_grid	pixels;
 }	t_cam;
 
 /* ====== FUNCTIONS ====== */
 
 /**
- * @brief Sets values of camera parameters
+ * @brief Initializes camera parameters.
  *
+ * Calculates the base vectors.
+ * Sets the focal length to 10.0.
+ * Sets the image size to the given size.
+ * Calculates the viewport dimensions.
+ * Calculates the pixel grid parameters.
  * @param cam 	Struct containing camera parameters
  */
 void	ft_cam_init(t_cam *cam, int size_x, int size_y);
@@ -100,10 +106,8 @@ void	ft_cam_calc_base_vectors(t_cam *cam);
  * Viewport_height is calculated from the viewport_width and aspect ratio.
  * The aspect ratio is not directly used to minimize rounding errors.
  * @param cam		Struct containing camera parameters.
- * @param size_x	Width of image in pixels.
- * @param size_y	Height of image in pixels.
  */
-void	ft_cam_calc_viewport_dimensions(t_cam *cam, int size_x, int size_y);
+void	ft_cam_calc_viewport_dimensions(t_cam *cam);
 
 /**
  * @brief Calculates the pixel grid parameters of the viewport.
@@ -120,10 +124,8 @@ void	ft_cam_calc_viewport_dimensions(t_cam *cam, int size_x, int size_y);
  * camera position, view direction and focal length, and viewport_u and -_v.
  * The position of the first pixel is then calculated from the upper left corner.
  * @param cam		Struct containing camera parameters.
- * @param size_x	Width of image in pixels.
- * @param size_y	Height of image in pixels.
  */
-void	ft_cam_calc_pixel_grid(t_cam *cam, int size_x, int size_y);
+void	ft_cam_calc_pixel_grid(t_cam *cam);
 
 void	ft_cam_move_forward(t_cam *cam, float distance);
 void	ft_cam_move_right(t_cam *cam, float distance);
