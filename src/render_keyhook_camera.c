@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 08:19:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 15:26:25 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ void	ft_keyhook_move_cam(int key, t_cam *cam)
 	else if (key == XK_e)
 		ft_cam_move_up(cam, MV_UNIT);
 	else if (key == XK_w)
-		ft_cam_move_forward(cam, MV_UNIT);
-	else if (key == XK_s)
 		ft_cam_move_forward(cam, -MV_UNIT);
+	else if (key == XK_s)
+		ft_cam_move_forward(cam, MV_UNIT);
 	else if (key == XK_d)
 		ft_cam_move_right(cam, MV_UNIT);
 	else if (key == XK_a)
