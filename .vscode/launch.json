@@ -58,7 +58,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/miniRT_supreme",
-			"args": ["er", ">", "super.ppm"],
+			"args": ["scenes/cylinder_bonus.rt"],
 			"stopAtEntry": true,
 			"cwd": "${workspaceFolder}",
 			"environment": [],
@@ -76,7 +76,7 @@
 					"ignoreFailures": true
 				}
 			],
-			"preLaunchTask": "make"
+			"preLaunchTask": "make bonus"
 		}
 	]
 }
