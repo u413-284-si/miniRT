@@ -11,6 +11,7 @@ var annotated_dup =
     [ "s_img", "structs__img.html", "structs__img" ],
     [ "s_interval", "structs__interval.html", "structs__interval" ],
     [ "s_light", "structs__light.html", "structs__light" ],
+    [ "s_mat4", "structs__mat4.html", "structs__mat4" ],
     [ "s_mlx_ptrs", "structs__mlx__ptrs.html", "structs__mlx__ptrs" ],
     [ "s_plane", "structs__plane.html", "structs__plane" ],
     [ "s_ray", "structs__ray.html", "structs__ray" ],

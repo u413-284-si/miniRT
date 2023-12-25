@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('entities_8h_source.html',''); initResi
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/11/20 12:59:05 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/12/23 21:56:26 by gwolf            ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -185,9 +185,16 @@ $(document).ready(function(){initNavTree('entities_8h_source.html',''); initResi
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="structs__hittable.html">t_hittable</a>  *obj;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">int</span>         lsrc_count;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">int</span>         total;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}   <a class="code" href="structs__entities.html">t_entities</a>;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">int</span>         active;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}   <a class="code" href="structs__entities.html">t_entities</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">// utils_entities.c</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keywordtype">void</span>    ft_cy_calc_caps(<a class="code" href="structs__cylinder.html">t_cylinder</a> *cy);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="astructs__colour_html"><div class="ttname"><a href="structs__colour.html">s_colour</a></div><div class="ttdoc">Represents an RGB colour with float values from 0.0 - 1.0.</div><div class="ttdef"><b>Definition:</b> colour.h:30</div></div>
 <div class="ttc" id="astructs__cylinder_html"><div class="ttname"><a href="structs__cylinder.html">s_cylinder</a></div><div class="ttdoc">Represents a cylinder.</div><div class="ttdef"><b>Definition:</b> entities.h:78</div></div>
 <div class="ttc" id="astructs__entities_html"><div class="ttname"><a href="structs__entities.html">s_entities</a></div><div class="ttdoc">Contains all entities in the scene.</div><div class="ttdef"><b>Definition:</b> entities.h:148</div></div>
