@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:27:34 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/25 18:36:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 15:48:44 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,14 @@ void	ft_rm_space(char **str)
 
 	if (**str == ' ')
 		(*str)++;
+	else if (**str == '\t')
+	{
+		(*str)++;
+		*(*str - 1) = ' ';
+	}
 	begin = *str;
 	end = *str;
-	while (*end == ' ')
+	while (*end == ' ' || *end == '\t')
 		end++;
 	if (begin == end)
 		return ;
@@ -44,7 +49,7 @@ bool	ft_isvalid_float(char **line, float min, float max, bool comma)
 	*line += offset;
 	if (comma && **line != ',')
 		return (ft_perror_separator(*line, comma));
-	if (!comma && **line != ' ' && **line != '\0')
+	if (!comma && **line != ' ' && **line != '\t' && **line != '\0')
 		return (ft_perror_separator(*line, comma));
 	return (true);
 }
@@ -79,7 +84,7 @@ bool	ft_isvalid_rgb_val(char **line, bool comma)
 		return (ft_perror_range(*line - 3, 3, 0, 255));
 	if (comma && **line != ',')
 		return (ft_perror_separator(*line, comma));
-	if (!comma && **line != ' ' && **line != '\0')
+	if (!comma && **line != ' ' && **line != '\t' && **line != '\0')
 		return (ft_perror_separator(*line, comma));
 	return (true);
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/25 18:02:10 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 15:47:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,11 @@ t_err		ft_check_entity_count(int ent_count[SUM_ENTS]);
 // check_line.c
 
 /**
- * @brief Moves line one space forward and sanitizes spaces.
+ * @brief Moves line one space or htab forward and sanitizes spaces.
  *
- * Move line forward if space ' ' is encountered.
- * Search for first non-space char.
+ * Move line forward if space ' ' or horizontal tab '\t' is encountered.
+ * Sets the first char to space ' '.
+ * Search for first non space or htab char.
  * Shift line to left by copying it, getting rid of spaces.
  * Sanitizes spaces to only one space between numbers.
  * @param line Pointer to current line.
