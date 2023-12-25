@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 15:36:33 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 20:37:08 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,14 @@ bool	ft_nearly_equal_flt(float one, float two);
  * @param interval 	Interval to be initiated
  */
 void	ft_init_interval(t_interval *interval);
+
+/**
+ * @brief Ensure that the returned float lies within the interval
+ * 
+ * @param x 			Float given
+ * @param interval 		Interval with min and max value
+ * @return float 
+ */
+float	ft_clamp(float x, t_interval interval);
 
 #endif

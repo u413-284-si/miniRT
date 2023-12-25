@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene_light_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:15:24 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/21 12:21:15 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 20:01:08 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,22 @@ void	ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene, \
 	t_cam cam)
 {
 	t_light		cur;
-	t_colour	tmp;
-	t_colour	ambient;
+	t_colour	amb;
 	t_colour	light;
 	int			i;
 
-	ambient = ft_ambient_light(scene.ambient);
-	*ray_colour = ft_hadamard_colour(ambient, rec.colour);
+	amb = ft_ambient_light(scene.ambient);
+	light = amb;
 	i = -1;
 	while (++i < scene.lsrc_count)
 	{
 		cur = scene.lsrc[i];
 		if (ft_in_shadow(cur, rec, scene))
 			continue ;
-		light = ft_add_colour(ft_diffuse_light(cur, rec), \
-			ft_specular_light(cur, rec, cam));
-		tmp = ft_hadamard_colour(light, rec.colour);
-		*ray_colour = ft_add_colour(*ray_colour, tmp);
+		light = ft_add_colour(light, ft_add_colour(ft_diffuse_light(cur, rec), \
+			ft_specular_light(cur, rec, cam)));
 	}
+	*ray_colour = ft_hadamard_colour(light, rec.colour);
 }
 
 t_colour	ft_ambient_light(t_light ambient)
@@ -71,7 +69,7 @@ t_colour	ft_specular_light(t_light cur, t_hitrecord rec, t_cam cam)
 	view_direction = ft_vec3_norm(ft_vec3_sub(cam.camera_centre, rec.point));
 	light_direction = ft_vec3_norm(ft_vec3_scale(\
 		ft_vec3_sub(cur.pos, rec.point), -1));
-	reflect_direction = ft_reflect(light_direction, rec.normal);
+	reflect_direction = ft_vec3_norm(ft_reflect(light_direction, rec.normal));
 	specular_factor = pow(fmaxf(0.0, ft_vec3_dot(view_direction, \
 		reflect_direction)), rec.shininess);
 	return ((t_colour){
