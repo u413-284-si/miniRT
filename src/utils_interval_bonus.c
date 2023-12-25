@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_init_bonus.c                                 :+:      :+:    :+:   */
+/*   utils_interval_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 15:52:42 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/16 16:50:29 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 20:35:00 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,23 @@ void	ft_init_interval(t_interval *interval)
 {
 	interval->max = INFINITY;
 	interval->min = 0;
+}
+
+bool	ft_contains(float x, t_interval interval)
+{
+	return (interval.min <= x && interval.max >= x);
+}
+
+bool	ft_surrounds(float x, t_interval interval)
+{
+	return (interval.min < x && interval.max > x);
+}
+
+float	ft_clamp(float x, t_interval interval)
+{
+	if (x < interval.min)
+		return (interval.min);
+	else if (x > interval.max)
+		return (interval.max);
+	return (x);
 }

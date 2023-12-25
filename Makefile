@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/25 15:14:03 by sqiu             ###   ########.fr        #
+#    Updated: 2023/12/25 20:35:58 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -98,7 +98,7 @@ SRC := 	camera.c \
 		scene_light.c \
 		scene_shadow.c \
 		utils_cylinder.c \
-		utils_init.c \
+		utils_interval.c \
 		utils_math.c \
 		vec3_arithmetics.c \
 		vec3_linalgebra.c
@@ -139,7 +139,7 @@ SRC_B := camera_bonus.c \
 		scene_shadow_bonus.c \
 		utils_camera_bonus.c \
 		utils_cylinder_bonus.c \
-		utils_init_bonus.c \
+		utils_interval_bonus.c \
 		utils_math_bonus.c \
 		utils_random_bonus.c \
 		vec3_arithmetics_bonus.c \

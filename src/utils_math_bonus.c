@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_math_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:48:18 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/19 22:32:46 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 20:35:24 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,6 @@
 float	ft_degree_to_radian(float degrees)
 {
 	return (degrees * RAD);
-}
-
-bool	ft_contains(float x, t_interval interval)
-{
-	return (interval.min <= x && interval.max >= x);
-}
-
-bool	ft_surrounds(float x, t_interval interval)
-{
-	return (interval.min < x && interval.max > x);
 }
 
 float	ft_solve(t_equation *eq)
