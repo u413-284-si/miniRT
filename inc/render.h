@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 08:55:42 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 10:04:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -221,6 +221,8 @@ void	ft_keyhook_change_col(int key, t_colour *col);
 
 // render_keyhook_camera.c
 
+void	ft_keyhook_rot_cam(int key, t_vec3 *direction);
+void	ft_keyhook_move_cam(int key, t_cam *cam);
 void	ft_manip_cam(int key, t_cam *cam);
 
 // render_mouse.c
@@ -228,6 +230,7 @@ void	ft_manip_cam(int key, t_cam *cam);
 int	ft_mouse_hook_press(int button, int x, int y, t_render *render);
 int	ft_mouse_hook_release(int button, int x, int y, t_render *render);
 int	ft_mouse_hook_move(int x, int y, t_render *render);
+void	ft_mouse_hook_cam(int x, int y, t_render *render);
 
 // render_loop_mlx.c
 
