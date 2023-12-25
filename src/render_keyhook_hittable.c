@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 22:40:51 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 19:03:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,10 @@ void	ft_manip_cylinder(int key, t_cylinder *cy)
 		cy->d -= MV_UNIT;
 	else if (key == XK_f)
 		cy->d += MV_UNIT;
+	else if (key == XK_t)
+		cy->h -= MV_UNIT;
+	else if (key == XK_g)
+		cy->h += MV_UNIT;
 	else
 	{
 		ft_keyhook_mv_point(key, &cy->centre);

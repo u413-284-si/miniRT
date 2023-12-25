@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 22:40:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 19:03:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	ft_keyhook_press(int key, t_render *render)
 		ft_change_active_hittable(key, &render->scene);
 	else if (key == XK_w || key == XK_s || key == XK_a || key == XK_d
 		|| key == XK_q || key == XK_e || key == XK_r || key == XK_f
+		|| key == XK_t || key == XK_g
 		|| (key >= XK_Left && key <= XK_Down)
 		|| (key >= XK_0 && key <= XK_9))
 		ft_manip_hittable(key, &render->scene.obj[render->scene.active]);
