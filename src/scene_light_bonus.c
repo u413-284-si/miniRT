@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:15:24 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 20:01:08 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 23:03:09 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,10 @@ void	ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene, \
 	t_cam cam)
 {
 	t_light		cur;
-	t_colour	amb;
 	t_colour	light;
 	int			i;
 
-	amb = ft_ambient_light(scene.ambient);
-	light = amb;
+	light = ft_ambient_light(scene.ambient);
 	i = -1;
 	while (++i < scene.lsrc_count)
 	{
