@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 13:00:38 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 15:43:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,19 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 
 t_type	ft_check_line_type(char *line)
 {
-	if (!ft_strncmp(line, "A ", 2))
+	if (*line == 'A')
 		return (ft_check_ambient(line + 1));
-	else if (!ft_strncmp(line, "C ", 2))
+	else if (*line == 'C')
 		return (ft_check_camera(line + 1));
-	else if (!ft_strncmp(line, "L ", 2))
+	else if (*line == 'L')
 		return (ft_check_light(line + 1));
-	else if (!ft_strncmp(line, "sp ", 3))
+	else if (!ft_strncmp(line, "sp", 2))
 		return (ft_check_sphere(line + 2));
-	else if (!ft_strncmp(line, "pl ", 3))
+	else if (!ft_strncmp(line, "pl", 2))
 		return (ft_check_plane(line + 2));
-	else if (!ft_strncmp(line, "cy ", 3))
+	else if (!ft_strncmp(line, "cy", 2))
 		return (ft_check_cylinder(line + 2));
-	else if (!ft_strncmp(line, "#", 1))
+	else if (*line == '#')
 		return (COMMENT);
 	else
 		ft_perror("Line type not recognized", 0);
