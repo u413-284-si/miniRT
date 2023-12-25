@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 11:41:46 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 12:49:18 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ t_err		ft_check_lines(char **lines, int *lsrc_count, int *total);
  * @param line Line to check for identifier.
  * @return t_type Specific entity type if correct, else UNKNOWN.
  */
-t_type	ft_check_line_type(char *line);
+t_type		ft_check_line_type(char *line);
 
 /**
  * @brief Increase entity count, and check if too many.

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 10:31:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 13:18:18 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,6 +161,7 @@ bool	ft_cy_check_wall(t_cylinder cy, float d, t_hitrecord *rec);
  * @param cy 			Cylinder
  * @param cap			Cap in question
  * @param d 			Distance of ray indicating the potential hit
+ * @param rec			Hit record of ray containing most recent hit
  * @return true 		If cap is hit
  * @return false 		If cap is missed
  */

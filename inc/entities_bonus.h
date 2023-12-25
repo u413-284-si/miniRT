@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   entities_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 16:25:07 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 13:09:18 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 
 /**
  * @brief Represents lighting in the scene
+ * 
  * @param pos		Position of the light
  * @param ratio		Light brightess ratio
  * @param colour	Colour of the light
@@ -40,19 +41,21 @@ typedef struct s_light
 
 /**
  * @brief Represents a sphere
+ * 
  * @param centre	Centre of the sphere
- * @param r			Radius of the sphere
+ * @param d			Diameter of the sphere
  * @param colour	Colour of the sphere
  */
 typedef struct s_sphere
 {
 	t_vec3		centre;
-	float		r;
+	float		d;
 	t_colour	colour;
 }	t_sphere;
 
 /**
  * @brief Represents a plane
+ * 
  * @param point		Point on the plane
  * @param normal	Normalised [-1, 1] normal vector of the plane
  * @param colour	Colour of the plane
@@ -66,35 +69,44 @@ typedef struct s_plane
 
 /**
  * @brief Represents a cylinder
+ * 
  * @param centre	Centre of the cylinder
  * @param axis		Normalised [-1, 1] axis of the cylinder
- * @param cap1		Centre of first cap = centre - h/2 * axis
- * @param cap2		Centre of second cap = centre + h/2 * axis
  * @param d			Diameter of the cylinder
  * @param h			Height of the cylinder
  * @param colour	Colour of the cylinder
+ * @param cap1		Centre of first cap = centre - h/2 * axis
+ * @param cap2		Centre of second cap = centre + h/2 * axis
  */
 typedef struct s_cylinder
 {
 	t_vec3		centre;
 	t_vec3		axis;
-	t_vec3		cap1;
-	t_vec3		cap2;
 	float		d;
 	float		h;
 	t_colour	colour;
+	t_vec3		cap1;
+	t_vec3		cap2;
 }	t_cylinder;
 
 /**
- * @brief Contains numerical list of possible hittables
- * 
- * Starts at 0.
+ * @brief Enumeration of all different entity types.
+ *
+ * @param COMMENT	Used for comments: line beginning with # is ignored.
+ * @param UNKOWN	Used, if line not recognized, set to -1.
+ * @param SUM_ENTS	Amounts to sum of all entity types.
  */
 typedef enum e_type
 {
+	COMMENT = -2,
+	UNKNOWN = -1,
 	SPHERE,
 	PLANE,
-	CYLINDER
+	CYLINDER,
+	AMBIENT,
+	CAMERA,
+	LIGHT,
+	SUM_ENTS
 }	t_type;
 
 /**
@@ -139,19 +151,14 @@ typedef struct s_hittable
  * @param ambient		Ambient lighting
  * @param lsrc			Light sources
  * @param obj			Array of hittables
- * @param sp_count		Number of spheres
- * @param pl_count		Number of planes
- * @param cy_count		Number of cylinders
  * @param lsrc_count	Number of light sources
+ * @param total
  */
 typedef struct s_entities
 {
 	t_light		ambient;
 	t_light		*lsrc;
 	t_hittable	*obj;
-	int			sp_count;
-	int			pl_count;
-	int			cy_count;
 	int			lsrc_count;
 	int			total;
 }	t_entities;

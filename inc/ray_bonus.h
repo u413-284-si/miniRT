@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray_bonus.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/16 16:49:36 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 12:09:37 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ typedef struct s_ray
 
 /**
  * @brief Shows point of intersection
+ * 
+ * @param ray		Intersecting ray
  * @param point		Point of intersection
  * @param normal	Normal vector at point of intersection
  * @param axis_hit	Point of intersection with a cylinders axis
@@ -44,6 +46,7 @@ typedef struct s_ray
  */
 typedef struct s_hitrecord
 {
+	t_ray		ray;
 	t_vec3		point;
 	t_vec3		normal;
 	t_vec3		axis_hit;
@@ -62,6 +65,16 @@ typedef struct s_hitrecord
  * @return t_vec3 		Ray vector to hit
  */
 t_vec3		ft_ray(t_ray ray, float d);
+
+/**
+ * @brief Returns the colour of a ray
+ *
+ * @param ray 		Ray sent into the scene
+ * @param scene		Scene containing all hittable entities
+ * @param cam		Camera observing scene
+ * @return t_colour Ray colour
+ */
+t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam);
 
 /**
  * @brief Returns the background colour

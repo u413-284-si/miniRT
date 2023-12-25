@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   colour_bonus.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/16 16:48:39 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 13:08:12 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,21 @@ t_colour	ft_add_colour(t_colour c1, t_colour c2);
  * @return t_colour 
  */
 t_colour	ft_hadamard_colour(t_colour c1, t_colour c2);
+
+/**
+ * @brief Converts a t_colour struct to an int32_t.
+ *
+ * @param colour	Colour to convert.
+ * @return int32_t	Converted colour.
+ */
+int32_t		ft_convert_colour2int(t_colour colour);
+
+/**
+ * @brief Converts an int colour to a t_colour struct.
+ *
+ * @param colour	Int Colour to convert.
+ * @return t_colour	Converted t_colour.
+ */
+t_colour	ft_convert_int2colour(int colour);
 
 #endif

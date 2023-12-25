@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 11:40:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 12:20:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,5 +136,14 @@ t_vec3		ft_pixel_sample(t_viewport vp);
  */
 t_colour	ft_get_colour(int iterate[2], t_viewport vp, t_cam cam, \
 	t_entities scene);
+
+/**
+ * @brief Returns a sampled down colour
+ * 
+ * @param pixel 		Colour of pixel
+ * @param samples 		Amount of samples
+ * @return t_colour 
+ */
+t_colour	ft_sample_down(t_colour pixel, int samples);
 
 #endif
