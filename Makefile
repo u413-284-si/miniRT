@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/25 09:52:45 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/25 19:30:23 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -226,7 +226,7 @@ address: $(NAME)
 
 # This target adds flags which optimize the program for speed.
 .PHONY: speed
-speed: CFLAGS = -Ofast -march=native -fomit-frame-pointer
+speed: CFLAGS = -Ofast -march=native
 speed: LDFLAGS += -flto
 speed: $(NAME)
 
