@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/25 09:27:23 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/25 09:52:45 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -115,13 +115,6 @@ endif
 LIBFT := $(LIB_DIR_FT)/libft.a
 
 # ******************************
-# *     Profiling              *
-# ******************************
-
-PROFILE_SCENE = scenes/basic_spheres.rt
-LOG_FILE = $(LOG_DIR)/$(shell date +"%H-%M-%S").log
-
-# ******************************
 # *     Source files           *
 # ******************************
 
@@ -189,6 +182,15 @@ OBJS := $(addprefix $(OBJ_DIR)/, $(OBJ))
 DEPFILES = $(SRC:%.c=$(DEP_DIR)/%.d)
 
 # ******************************
+# *     Log files              *
+# ******************************
+
+DEFAULT_SCENE = scenes/basic_spheres.rt
+LOG_FILE_BASE = $(LOG_DIR)/$(shell date "+%Y-%m-%d-%H-%M-%S")
+LOG_VALGRIND = $(LOG_FILE_BASE)_valgrind.log
+LOG_GPROF = $(LOG_FILE_BASE)_gprof.log
+
+# ******************************
 # *     Default target         *
 # ******************************
 
@@ -201,10 +203,14 @@ all: $(NAME)
 
 # Linking the NAME target
 $(NAME): $(LIBFT) $(OBJS)
-	@printf "\n$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	$(SILENT)$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
-	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	@printf "$(BOLD)$(GREEN)$(NAME) created!$(RESET)\n\n"
+	@printf "$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(BOLD)$(GREEN)$(NAME) created!$(RESET)\n"
+
+# ******************************
+# *     Special targets        *
+# ******************************
 
 # This target adds fsanitize leak checker to the flags.
 .PHONY: leak
@@ -225,28 +231,27 @@ speed: LDFLAGS += -flto
 speed: $(NAME)
 
 # This target adds flags which enable profiling.
+.PHONY: profile
 profile: CFLAGS += -pg
 profile: LDFLAGS += -pg
 profile: $(NAME) | $(LOG_DIR)
 	@printf "\n$(YELLOW)$(BOLD)Run for profiling$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	@printf "Profile scene: $(PROFILE_SCENE)\n"
-	$(SILENT)./$(NAME) $(PROFILE_SCENE)
-	$(SILENT)gprof $(NAME) gmon.out > $(LOG_FILE)
+	@printf "Profile scene: $(DEFAULT_SCENE)\n"
+	$(SILENT)./$(NAME) $(DEFAULT_SCENE)
+	$(SILENT)gprof $(NAME) gmon.out > $(LOG_GPROF)
 	@printf "\n$(YELLOW)$(BOLD)Saved log file$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	$(SILENT)rm gmon.out
 	$(SILENT)ls -dt1 $(LOG_DIR)/* | head -n 1 | xargs less
 
 # Perform memory check on NAME.
 .PHONY: valgr
-valgr: $(NAME)
-	@valgrind 	--leak-check=full\
-				--show-leak-kinds=all\
-				--track-fds=yes\
-				./$(NAME)
-#			--log-file=valgrind-out.txt\
-#			-s --suppressions=./minishell.supp\
-
-#	@less ./valgrind-out.txt
+valgr: $(NAME) | $(LOG_DIR)
+	$(SILENT)valgrind	--leak-check=full\
+						--show-leak-kinds=all\
+						--track-fds=yes\
+						--log-file=$(LOG_VALGRIND)\
+						./$(NAME) $(DEFAULT_SCENE)
+	$(SILENT)ls -dt1 $(LOG_DIR)/* | head -n 1 | xargs less
 
 # ******************************
 # *     Object compiling and   *
@@ -273,16 +278,16 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(DEP_DIR)/%.d message | $(DEP_DIR)
 # Print message only if there are objects to compile
 .INTERMEDIATE: message
 message:
-	@printf "\n$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 
 # Create obj and dep subdirectory if it doesn't exist
 $(DEP_DIR):
-	@printf "\n$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@echo $@
 	$(SILENT)mkdir -p $@
 
 $(LOG_DIR):
-	@printf "\n$(YELLOW)$(BOLD)create subdir $(LOG_DIR)$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@echo $@
 	$(SILENT)mkdir -p $@
 
@@ -309,11 +314,13 @@ clean:
 	@rm -rf $(BASE_OBJ_DIR)
 	@printf "$(RED)removed subdir $(BASE_OBJ_DIR)$(RESET)\n"
 
-# Remove all object files, dependency files and binaries
+# Remove all object, dependency, binaries and log files
 .PHONY: fclean
 fclean: clean
 	@rm -rf $(NAME)*
 	@printf "$(RED)removed binaries $(NAME)*$(RESET)\n"
+	@rm -rf $(LOG_DIR)
+	@printf "$(RED)removed subdir $(LOG_DIR)$(RESET)\n"
 	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)libft$(RESET)]\n"
 	@$(MAKE) --no-print-directory -C $(LIB_DIR_FT) fclean
 	@echo
