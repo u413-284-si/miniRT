@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:16:27 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 22:29:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 19:06:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,8 @@ void	ft_print_cylinder(const t_cylinder cy)
 	ft_print_vec3(cy.centre);
 	printf("Axis: ");
 	ft_print_vec3(cy.axis);
-	printf("Cap1: ");
-	ft_print_vec3(cy.cap1);
-	printf("Cap2: ");
-	ft_print_vec3(cy.cap2);
-	printf("Radius: %f\n", cy.d / 2.0);
+	printf("Diameter: %.6f\n", cy.d);
+	printf("Height: %.6f\n", cy.h);
 	printf("Colour: ");
 	ft_print_colour(cy.colour);
 }
