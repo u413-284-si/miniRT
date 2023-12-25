@@ -6,76 +6,48 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/22 11:34:52 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 12:34:14 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "camera_bonus.h"
 
-void	ft_initiate_image(t_image *image)
-{
-	image->image_width = 800;
-	image->aspect_ratio = 16.0 / 9.0;
-	image->image_height = (int)(image->image_width / image->aspect_ratio);
-	if (image->image_height < 1)
-		image->image_height = 1;
-}
-
 void	ft_initiate_camera(t_cam *cam)
 {
-	cam->look_from.x = -0.0;
-	cam->look_from.y = 0.0;
-	cam->look_from.z = 0.0;
-	cam->look_at.x = 0.0;
-	cam->look_at.y = 0.0;
-	cam->look_at.z = 1.0;
-	cam->vup.x = 0.0;
-	cam->vup.y = 1.0;
-	cam->vup.z = 0.0;
-	cam->camera_centre.x = cam->look_from.x;
-	cam->camera_centre.y = cam->look_from.y;
-	cam->camera_centre.z = cam->look_from.z;
+	cam->vup = (t_vec3){0.0, 1.0, 0.0};
+	cam->camera_centre = cam->look_from;
+	cam->look_at = ft_vec3_add(cam->camera_centre, cam->camera_direction);
 	cam->w = ft_vec3_norm(ft_vec3_sub(cam->look_from, cam->look_at));
-	cam->u = ft_vec3_cross(cam->vup, cam->w);
+	if (cam->camera_direction.y == 1)
+		cam->u = (t_vec3){1, 0, 0};
+	else if (cam->camera_direction.y == -1)
+		cam->u = (t_vec3){-1, 0, 0};
+	else
+		cam->u = ft_vec3_norm(ft_vec3_cross(cam->vup, cam->w));
 	cam->v = ft_vec3_cross(cam->w, cam->u);
-	cam->samples_per_pixel = 10;
+	cam->samples_per_pixel = SAMPLE_SIZE;
 }
 
-void	ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image)
+void	ft_initiate_viewport(t_viewport *vp, t_cam cam, int size_x, int size_y)
 {
+	float	hfov_rad;
+
 	vp->focal_length = ft_vec3_abs(ft_vec3_sub(cam.look_from, cam.look_at));
-	cam.hfov = ft_degree_to_radian(60);
-	vp->viewport_width = 2 * tan(cam.hfov / 2) * vp->focal_length;
-	vp->viewport_height = vp->viewport_width / image.image_width \
-		* image.image_height;
+	hfov_rad = ft_degree_to_radian(cam.hfov);
+	vp->viewport_width = 2 * tan(hfov_rad / 2) * vp->focal_length;
+	vp->viewport_height = vp->viewport_width / size_x * size_y;
 	vp->viewport_u = ft_vec3_scale(cam.u, vp->viewport_width);
 	vp->viewport_v = ft_vec3_scale(cam.v, -vp->viewport_height);
 	vp->delta_u = ft_vec3_scale(vp->viewport_u, \
-		(float)(1.0 / image.image_width));
+		(float)(1.0 / size_x));
 	vp->delta_v = ft_vec3_scale(vp->viewport_v, \
-		(float)(1.0 / image.image_height));
+		(float)(1.0 / size_y));
 	vp->viewport_upper_left = ft_vec3_sub(ft_vec3_sub(ft_vec3_sub(\
-		cam.camera_centre, ft_vec3_scale(cam.w, vp->focal_length)), \
+		cam.look_from, ft_vec3_scale(cam.w, vp->focal_length)), \
 		ft_vec3_scale(vp->viewport_u, 0.5)), \
 		ft_vec3_scale(vp->viewport_v, 0.5));
 	vp->pixel00_pos = ft_vec3_add(vp->viewport_upper_left, ft_vec3_scale(\
 		ft_vec3_add(vp->delta_u, vp->delta_v), 0.5));
-}
-
-void	ft_create_image(t_image image, t_cam cam, t_viewport vp, \
-	t_entities scene)
-{
-	int	iterate[2];
-
-	printf("P3\n%d %d\n255\n", image.image_width, image.image_height);
-	iterate[1] = -1;
-	while (++iterate[1] < image.image_height)
-	{
-		iterate[0] = -1;
-		while (++iterate[0] < image.image_width)
-			ft_write_colour(ft_get_colour(iterate, vp, cam, scene), \
-				cam.samples_per_pixel);
-	}
 }
 
 t_colour	ft_get_colour(int iterate[2], t_viewport vp, t_cam cam, \
@@ -96,4 +68,15 @@ t_colour	ft_get_colour(int iterate[2], t_viewport vp, t_cam cam, \
 			ft_ray_colour(ray, scene, cam));
 	}
 	return (pixel_colour);
+}
+
+t_colour	ft_sample_down(t_colour pixel, int samples)
+{
+	float		scale;
+
+	scale = 1.0 / samples;
+	pixel.r *= scale;
+	pixel.g *= scale;
+	pixel.b *= scale;
+	return (pixel);
 }

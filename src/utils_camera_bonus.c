@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_camera_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 21:41:38 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/19 21:59:02 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 11:29:42 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_ray	ft_create_sample_ray(int i, int j, t_viewport vp, t_cam cam)
 		ft_vec3_scale(vp.delta_u, i)), ft_vec3_scale(vp.delta_v, j));
 	pixel_sample = ft_vec3_add(pixel_centre, ft_pixel_sample(vp));
 	ray.origin = cam.camera_centre;
-	ray.direction = ft_vec3_sub(pixel_sample, ray.origin);
+	ray.direction = ft_vec3_norm(ft_vec3_sub(pixel_sample, ray.origin));
 	ray.d = 1.0;
 	return (ray);
 }
