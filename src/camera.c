@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/24 22:36:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 07:23:24 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_cam_init(t_cam *cam, int size_x, int size_y)
 {
-	ft_cam_calc_base_vector(cam);
+	ft_cam_calc_base_vectors(cam);
 	cam->focal_length = 10.0;
 	ft_cam_calc_viewport_dimensions(cam, size_x, size_y);
 	ft_cam_calc_pixel_grid(cam, size_x, size_y);
 }
 
-void	ft_cam_calc_base_vector(t_cam *cam)
+void	ft_cam_calc_base_vectors(t_cam *cam)
 {
 	const t_vec3	world_up = {0.0, 1.0, 0.0};
 

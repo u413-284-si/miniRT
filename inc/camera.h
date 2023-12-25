@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/24 22:46:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 07:23:24 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	ft_cam_init(t_cam *cam, int size_x, int size_y);
  * the up direction of the camera (v) can be calculated.
  * @param cam 	Struct containing camera parameters
  */
-void	ft_cam_calc_base_vector(t_cam *cam);
+void	ft_cam_calc_base_vectors(t_cam *cam);
 
 /**
  * @brief Calculates viewport dimensions.
