@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 08:30:26 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 08:37:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 08:49:37 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ int	ft_mouse_hook_release(int button, int x, int y, t_render *render)
 
 int	ft_mouse_hook_move(int x, int y, t_render *render)
 {
-	if (x > render->mlx_ptrs.img.width || x < 0
-		|| y > render->mlx_ptrs.img.height || y < 0)
+	if (x > render->mlx_ptrs.img.size.x || x < 0
+		|| y > render->mlx_ptrs.img.size.y || y < 0)
 		return (0);
 	if (render->mouse.right)
 	{

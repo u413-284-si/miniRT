@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/24 21:50:40 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 08:56:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ void	ft_render_image(t_render *render)
 	ray.origin = render->cam.position;
 	ray.d = 1.0;
 	y = -1;
-	while (++y < render->mlx_ptrs.img.height)
+	while (++y < render->cam.image.y)
 	{
 		x = -1;
-		while (++x < render->mlx_ptrs.img.width)
+		while (++x < render->cam.image.x)
 		{
 			pix_centre = ft_vec3_add(ft_vec3_add(render->cam.pixels.pos00, \
 				ft_vec3_scale(render->cam.pixels.delta_u, x)), ft_vec3_scale(render->cam.pixels.delta_v, y));

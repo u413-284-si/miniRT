@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 07:55:11 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 08:47:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,10 @@ typedef struct s_cam
  * Sets the image size to the given size.
  * Calculates the viewport dimensions.
  * Calculates the pixel grid parameters.
- * @param cam 	Struct containing camera parameters
+ * @param cam 		Struct containing camera parameters
+ * @param img_size	Width and height of image in pixels
  */
-void	ft_cam_init(t_cam *cam, int size_x, int size_y);
+void	ft_cam_init(t_cam *cam, t_vec2i img_size);
 
 /**
  * @brief Calculates basis vectors u, v, w

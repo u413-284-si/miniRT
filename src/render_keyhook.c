@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 08:43:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 08:49:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_keyhook_press(int key, t_render *render)
 	{
 		print = true;
 		ft_output_as_ppm((int *)render->mlx_ptrs.img.addr,
-			render->mlx_ptrs.img.width, render->mlx_ptrs.img.height);
+			render->mlx_ptrs.img.size.x, render->mlx_ptrs.img.size.y);
 		print = false;
 	}
 	else if (key == XK_n || key == XK_m)

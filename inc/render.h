@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 08:40:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 08:55:42 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,7 @@ typedef struct s_img
 	int		line_len;
 	int		endian;
 	int		bytes;
-	int		width;
-	int		height;
+	t_vec2i	size;
 }	t_img;
 
 /**
@@ -114,15 +113,15 @@ t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen);
  * @param size			Image size as int array.
  * @return t_err		SUCCESS, ERROR.
  */
-t_err	ft_init_image(t_mlx_ptrs *mlx_ptrs, int size[2]);
+t_err	ft_init_image(t_mlx_ptrs *mlx_ptrs, t_vec2i size);
 
 /**
  * @brief Sets the window to fullscreen.
  *
  * @param mlx_ptr	Mlx pointer.
- * @param win_size	Pointer to int array for window size.
+ * @return t_vec2i	Window size.
  */
-void	ft_set_fullscreen(void *mlx_ptr, int win_size[2]);
+t_vec2i	ft_set_fullscreen(void *mlx_ptr);
 
 // render_draw.c
 
