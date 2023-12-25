@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 15:26:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 20:06:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_keyhook_move_cam(int key, t_cam *cam)
 		ft_cam_move_right(cam, -MV_UNIT);
 }
 
-void	ft_keyhook_fov(int key, t_cam *cam)
+void	ft_keyhook_fov_cam(int key, t_cam *cam)
 {
 	float	fov_in_degree;
 
@@ -64,7 +64,7 @@ void	ft_manip_cam(int key, t_cam *cam)
 {
 	if (key == XK_r || key == XK_f)
 	{
-		ft_keyhook_fov(key, cam);
+		ft_keyhook_fov_cam(key, cam);
 		ft_cam_calc_viewport_dimensions(cam);
 	}
 	else if (key >= XK_Left && key <= XK_Down)
