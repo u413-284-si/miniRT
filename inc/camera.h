@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 08:47:35 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 16:03:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,8 +128,33 @@ void	ft_cam_calc_viewport_dimensions(t_cam *cam);
  */
 void	ft_cam_calc_pixel_grid(t_cam *cam);
 
+// camera_movement.c
+
+/**
+ * @brief Moves the camera along its direction vector.
+ *
+ * Moves the camera forward by the given distance.
+ * @param cam		Struct containing camera parameters.
+ * @param distance	Distance to move the camera.
+ */
 void	ft_cam_move_forward(t_cam *cam, float distance);
+
+/**
+ * @brief Moves the camera along its right vector.
+ *
+ * Moves the camera right by the given distance.
+ * @param cam		Struct containing camera parameters.
+ * @param distance	Distance to move the camera.
+ */
 void	ft_cam_move_right(t_cam *cam, float distance);
+
+/**
+ * @brief Moves the camera along the world up vector.
+ *
+ * Moves the camera up by the given distance.
+ * @param cam		Struct containing camera parameters.
+ * @param distance	Distance to move the camera.
+ */
 void	ft_cam_move_up(t_cam *cam, float distance);
 
 #endif
