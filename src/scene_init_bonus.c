@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/22 11:36:11 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 14:59:00 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,14 @@
 
 void	ft_create_scene(t_entities *scene)
 {
-	//int	i;
-
 	scene->lsrc_count = 1;
-	scene->sp_count = 0;
-	scene->pl_count = 0;
-	scene->cy_count = 1;
-	scene->total = scene->sp_count + scene->pl_count + scene->cy_count;
+	scene->total = 1;
 	scene->obj = malloc(scene->total * sizeof(t_hittable));
 	if (!scene->obj)
 		exit(232);
 	scene->lsrc = malloc(scene->lsrc_count * sizeof(t_light));
 	if (!scene->lsrc)
 		exit(232);
-	//i = -1;
-	//while (++i < scene->sp_count)
 	ft_initiate_lights(scene);
 	//ft_initiate_spheres(scene->obj);
 	//ft_initiate_planes(scene->obj);
@@ -58,7 +51,7 @@ void	ft_initiate_spheres(t_hittable *obj)
 	obj[0].params.sp.centre.x = -cos(M_PI / 4);
 	obj[0].params.sp.centre.y = 0.0;
 	obj[0].params.sp.centre.z = -1.0;
-	obj[0].params.sp.r = cos(M_PI / 4);
+	obj[0].params.sp.d = cos(M_PI / 4) * 2;
 	obj[0].params.sp.colour.r = 0.0;
 	obj[0].params.sp.colour.g = 0.0;
 	obj[0].params.sp.colour.b = 1.0;
@@ -68,7 +61,7 @@ void	ft_initiate_spheres(t_hittable *obj)
 	obj[1].params.sp.centre.x = cos(M_PI / 4);
 	obj[1].params.sp.centre.y = 0;
 	obj[1].params.sp.centre.z = -1.0;
-	obj[1].params.sp.r = cos(M_PI / 4);
+	obj[1].params.sp.d = cos(M_PI / 4) * 2;
 	obj[1].params.sp.colour.r = 1.0;
 	obj[1].params.sp.colour.g = 0.0;
 	obj[1].params.sp.colour.b = 0.0;

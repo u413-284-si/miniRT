@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3_bonus.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:45:53 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/19 22:37:50 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 15:30:19 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,14 @@
 
 # include <math.h>
 # include <stdbool.h>
+
+//home-grown libs
+# include "structs_bonus.h"
 # include "utils_bonus.h"
 
 /* ====== MACROS ====== */
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Represents a tridimensional vector
- * @param x	The x coordinate
- * @param y	The y coordinate
- * @param z	The z coordinate
- */
-typedef struct s_vec3
-{
-	float	x;
-	float	y;
-	float	z;
-}	t_vec3;
 
 /* ====== FUNCTIONS ====== */
 

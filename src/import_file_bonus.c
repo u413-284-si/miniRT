@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   import_file.c                                      :+:      :+:    :+:   */
+/*   import_file_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:40:15 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 14:00:29 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 14:00:43 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "import_file.h"
+#include "import_file_bonus.h"
 
 t_err	ft_import_file(char *filename, char ***lines)
 {

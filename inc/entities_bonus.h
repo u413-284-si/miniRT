@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 13:09:18 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 15:58:36 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,7 +152,7 @@ typedef struct s_hittable
  * @param lsrc			Light sources
  * @param obj			Array of hittables
  * @param lsrc_count	Number of light sources
- * @param total
+ * @param total			Number of hittables
  */
 typedef struct s_entities
 {

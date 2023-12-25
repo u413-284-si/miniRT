@@ -1,49 +1,62 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_mlx.c                                        :+:      :+:    :+:   */
+/*   error_syscall_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 14:04:04 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 13:38:16 by sqiu             ###   ########.fr       */
+/*   Created: 2023/10/30 14:01:13 by gwolf             #+#    #+#             */
+/*   Updated: 2023/12/25 13:40:08 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "error_mlx.h"
+#include "error_syscall_bonus.h"
 
-t_err	ft_err_mlx_init(void **ptr)
+t_err	ft_err_open(const char *path, int flag, int *fd)
 {
 	errno = 0;
-	*ptr = mlx_init();
-	if (*ptr == NULL)
+	*fd = open(path, flag);
+	if (*fd == -1)
 	{
-		ft_perror("mlx_init() failed", errno);
+		ft_perror("open() failed", errno);
 		return (ERROR);
 	}
 	return (SUCCESS);
 }
 
-t_err	ft_err_mlx_new_window(void **ptr, void *mlx_ptr, int size[2], \
-	char *title)
+t_err	ft_err_close(int fd)
 {
+	int	ret;
+
 	errno = 0;
-	*ptr = mlx_new_window(mlx_ptr, size[0], size[1], title);
-	if (*ptr == NULL)
+	ret = close(fd);
+	if (ret == -1)
 	{
-		ft_perror("mlx_new_window() failed", errno);
+		ft_perror("close() failed", errno);
 		return (ERROR);
 	}
 	return (SUCCESS);
 }
 
-t_err	ft_err_mlx_new_image(void **ptr, void *mlx_ptr, int size[2])
+t_err	ft_err_malloc(void **ptr, size_t size)
 {
 	errno = 0;
-	*ptr = mlx_new_image(mlx_ptr, size[0], size[1]);
+	*ptr = malloc(size);
 	if (*ptr == NULL)
 	{
-		ft_perror("mlx_new_image() failed", errno);
+		ft_perror("malloc() failed", errno);
+		return (ERROR);
+	}
+	return (SUCCESS);
+}
+
+t_err	ft_err_read(int fd, void *buf, size_t size, ssize_t *rd_bytes)
+{
+	errno = 0;
+	*rd_bytes = read(fd, buf, size);
+	if (*rd_bytes == -1)
+	{
+		ft_perror("read() failed", errno);
 		return (ERROR);
 	}
 	return (SUCCESS);

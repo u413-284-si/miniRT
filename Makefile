@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/23 19:13:14 by sqiu             ###   ########.fr        #
+#    Updated: 2023/12/25 15:14:03 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,12 +106,34 @@ SRC := 	camera.c \
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
 
 SRC_B := camera_bonus.c \
+		check_entity_ACL_bonus.c \
+		check_entity_sp_pl_cy_bonus.c \
+		check_line_bonus.c \
+		check_bonus.c \
+		cleanup_bonus.c \
 		colour_bonus.c \
+		error_mlx_bonus.c \
+		error_msg_check_bonus.c \
+		error_msg_generic_bonus.c \
+		error_syscall_bonus.c \
+		ft_strtod.c \
 		hit_cylinder_bonus.c \
 		hit_plane_bonus.c \
 		hit_sphere_bonus.c \
 		hit_bonus.c \
+		import_file_buffer_bonus.c \
+		import_file_bonus.c \
+		main_bonus.c \
+		parse_entity_ACL_bonus.c \
+		parse_entity_sp_pl_cy_bonus.c \
+		parse_line_bonus.c \
+		parse_bonus.c \
 		ray_bonus.c \
+		render_draw_bonus.c \
+		render_init_mlx_bonus.c \
+		render_keyhook_bonus.c \
+		render_loop_mlx_bonus.c \
+		render_output_ppm_bonus.c \
 		scene_init_bonus.c \
 		scene_light_bonus.c \
 		scene_shadow_bonus.c \
@@ -135,8 +157,6 @@ OBJS := $(addprefix $(OBJ_DIR)/, $(OBJ))
 OBJ_B := $(SRC_B:.c=.o)
 OBJS_B := $(addprefix $(OBJ_DIR)/, $(OBJ_B))
 
-OBJ_B_MAIN = $(OBJ_DIR)/main_bonus.o
-
 # ******************************
 # *     Dependency files       *
 # ******************************
@@ -144,9 +164,6 @@ OBJ_B_MAIN = $(OBJ_DIR)/main_bonus.o
 DEPFILES = $(SRC:%.c=$(DEP_DIR)/%.d)
 
 DEPFILES_B = $(SRC_B:%.c=$(DEP_DIR)/%.d)
-
-
-DEPFILES_B += $(DEP_DIR)/main_bonus.d
 
 # ******************************
 # *     Default target         *
@@ -170,9 +187,9 @@ $(NAME): $(LIBFT) $(OBJS)
 	@printf "$(BOLD)$(GREEN) $@ created!$(RESET)\n\n"
 
 # Linking the BONUSNAME target
-$(BONUSNAME): $(LIBFT) $(OBJS_B) $(OBJ_B_MAIN)
+$(BONUSNAME): $(LIBFT) $(OBJS_B)
 	@printf "\n$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE) $@ $(RESET)]\n"
-	$(CC) $(LDFLAGS) $(OBJS_B) $(OBJ_B_MAIN) $(LDLIBS) -o $@
+	$(CC) $(LDFLAGS) $(OBJS_B) $(LDLIBS) -o $@
 	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE) $@ $(RESET)]\n"
 	@printf "$(BOLD)$(GREEN) $@ created! 🔥$(RESET)\n\n"
 

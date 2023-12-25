@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   scene_shadow_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:20:56 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/16 18:43:27 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 15:01:44 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,12 @@ bool	ft_shadow_ray_blocked(t_entities scene, t_ray shadow_ray, \
 	int			i;
 
 	ft_init_hitrecord(&block);
+	block.ray = shadow_ray;
 	i = -1;
 	while (++i < scene.total)
 	{
 		cur = scene.obj[i];
-		if (ft_hit_hittable(cur, shadow_ray, &block, ray_d))
+		if (ft_hit_hittable(cur, &block, ray_d))
 			return (true);
 	}
 	return (false);

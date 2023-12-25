@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hit_bonus.c                                        :+:      :+:    :+:   */
+/*   render_keyhook_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 12:32:23 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/25 13:42:29 by sqiu             ###   ########.fr       */
+/*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
+/*   Updated: 2023/12/25 14:52:24 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hit_manager_bonus.h"
+#include "render_bonus.h"
 
-bool	ft_hit_hittable(t_hittable obj, t_hitrecord *rec, t_interval ray_d)
+int	ft_keyhook_press(int key, t_render *render)
 {
-	if (obj.type == SPHERE)
-		return (ft_hit_sphere(obj.params.sp, rec, ray_d));
-	else if (obj.type == PLANE)
-		return (ft_hit_plane(obj.params.pl, rec, ray_d));
-	else if (obj.type == CYLINDER)
-		return (ft_hit_cylinder(obj.params.cy, rec, ray_d));
-	else
-		return (false);
+	static bool	print;
+
+	if (key == XK_Escape)
+		mlx_loop_end(render->mlx_ptrs.mlx_ptr);
+	else if (key == XK_c && !print)
+	{
+		print = true;
+		ft_output_as_ppm((int *)render->mlx_ptrs.img.addr,
+			render->mlx_ptrs.img.width, render->mlx_ptrs.img.height);
+		print = false;
+	}
+	return (0);
 }

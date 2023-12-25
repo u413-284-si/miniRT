@@ -3,33 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   hit_cylinder_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/16 19:04:16 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 13:52:54 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hit_manager_bonus.h"
 
-bool	ft_hit_cylinder(t_cylinder cy, t_ray ray, t_hitrecord *rec, \
-	t_interval ray_d)
+bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d)
 {
 	float		potential_hits[4];
+	t_hitrecord	tmp;
 
 	potential_hits[0] = 0;
 	potential_hits[1] = 0;
 	potential_hits[2] = 0;
 	potential_hits[3] = 0;
-	if (!ft_cy_calculate_pot_hits(cy, ray, ray_d, potential_hits))
+	ft_init_hitrecord(&tmp);
+	tmp.ray = rec->ray;
+	if (!ft_cy_calculate_pot_hits(cy, rec->ray, ray_d, potential_hits))
 		return (false);
-	ft_cy_identify_hits(cy, ray, potential_hits, rec);
-	if (rec->d < EPSILON)
+	ft_cy_identify_hits(cy, potential_hits, &tmp);
+	if (tmp.d < EPSILON)
 		return (false);
-	rec->point = ft_ray(ray, rec->d);
-	rec->normal = ft_vec3_norm(ft_cy_normal(*rec, ray, cy));
-	rec->colour = cy.colour;
-	return (true);
+	if (tmp.d < rec->d)
+	{
+		rec->d = tmp.d;
+		rec->axis_hit = tmp.axis_hit;
+		rec->point = ft_ray(rec->ray, rec->d);
+		rec->normal = ft_vec3_norm(ft_cy_normal(*rec, cy));
+		rec->colour = cy.colour;
+		return (true);
+	}
+	return (false);
 }
 
 bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
@@ -40,6 +48,8 @@ bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
 	float		cap_hit1;
 	float		cap_hit2;
 
+	cap_hit1 = -1;
+	cap_hit2 = -1;
 	cap1_ray = ft_vec3_sub(ray.origin, cy.cap1);
 	eq.a = ft_vec3_dot(ray.direction, ray.direction) - \
 		pow(ft_vec3_dot(ray.direction, cy.axis), 2);
@@ -69,33 +79,26 @@ void	ft_cy_hit_cap(t_cylinder cy, t_ray ray, t_vec3 cap, float *d)
 	pl.point = cap;
 	pl.normal = cy.axis;
 	pl.colour = cy.colour;
-	ray_d.min = 0;
-	ray_d.max = INFINITY;
-	if (ft_hit_plane(pl, ray, &rec, ray_d))
+	ft_init_hitrecord(&rec);
+	rec.ray = ray;
+	ft_init_interval(&ray_d);
+	if (ft_hit_plane(pl, &rec, ray_d))
 		*d = rec.d;
 	else
 		*d = -1;
 }
 
-void	ft_cy_identify_hits(t_cylinder cy, t_ray ray, float potential_hits[4], \
+void	ft_cy_identify_hits(t_cylinder cy, float potential_hits[4], \
 	t_hitrecord *rec)
 {
-	if (ft_cy_check_wall(cy, ray, potential_hits[0], rec) \
-		&& potential_hits[0] < rec->d)
+	if (ft_cy_check_wall(cy, potential_hits[0], rec))
 		rec->d = potential_hits[0];
-	if (ft_cy_check_wall(cy, ray, potential_hits[1], rec) \
-		&& potential_hits[1] < rec->d)
+	if (ft_cy_check_wall(cy, potential_hits[1], rec))
 		rec->d = potential_hits[1];
-	if (ft_cy_check_cap(cy, ray, cy.cap1, potential_hits[2]) \
-		&& potential_hits[2] < rec->d)
-	{
-		rec->axis_hit = cy.cap1;
+	if (ft_cy_check_cap(cy, cy.cap1, potential_hits[2], rec))
 		rec->d = potential_hits[2];
-	}
-	if (ft_cy_check_cap(cy, ray, cy.cap2, potential_hits[3]) \
-		&& potential_hits[3] < rec->d)
-	{
-		rec->axis_hit = cy.cap2;
+	if (ft_cy_check_cap(cy, cy.cap2, potential_hits[3], rec))
 		rec->d = potential_hits[3];
-	}
+	if (rec->d == INFINITY)
+		rec->d = 0;
 }

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 12:21:26 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 15:42:48 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color)
 
 void	ft_render_image(t_render *render)
 {
-	t_ray		ray;
 	int			iterate[2];
-	t_vec3		pix_centre;
 	t_colour	pixel_colour;
 	int			colour;
 

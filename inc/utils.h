@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 13:26:43 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 15:36:33 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,47 +18,15 @@
 # include <math.h>
 # include <stdbool.h>
 
+//home-grown libs
+# include "structs.h"
+
 /* ====== MACROS ====== */
 
 # define RAD 0.01745329251
 # define EPSILON 1e-3
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Interval of accepted values
- * 
- * @param min	Minimum of interval
- * @param max 	Maximum of interval
- */
-typedef struct s_interval
-{
-	float	min;
-	float	max;
-}	t_interval;
-
-/**
- * @brief Contains factors to solve linear and quadratic equations.
- * 
- * ax² + bx + c = 0
- * 
- * x = (-b +/- sqr(b² - 4ac)) / 2a
- * Here we use d instead of x as variable to represent the distance of the
- * ray traveled.
- * @param a		Factor of quadratic component
- * @param b		Factor of linear component
- * @param c		Constant
- * @param d1	First solution 
- * @param d2	Second solution
- */
-typedef struct s_equation
-{
-	float	a;
-	float	b;
-	float	c;
-	float	d1;
-	float	d2;
-}	t_equation;
 
 /* ====== FUNCTIONS ====== */
 

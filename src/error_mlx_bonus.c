@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_mlx.c                                        :+:      :+:    :+:   */
+/*   error_mlx_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 14:04:04 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 13:38:16 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 13:38:08 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "error_mlx.h"
+#include "error_mlx_bonus.h"
 
 t_err	ft_err_mlx_init(void **ptr)
 {
@@ -24,7 +24,7 @@ t_err	ft_err_mlx_init(void **ptr)
 	return (SUCCESS);
 }
 
-t_err	ft_err_mlx_new_window(void **ptr, void *mlx_ptr, int size[2], \
+t_err	ft_err_mlx_new_window(void **ptr, void *mlx_ptr, int size[2],\
 	char *title)
 {
 	errno = 0;

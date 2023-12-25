@@ -6,11 +6,10 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 10:33:45 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 14:08:39 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ray.h"
 #include "lighting.h"
 
 t_vec3	ft_ray(t_ray ray, float d)

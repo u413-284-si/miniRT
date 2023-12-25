@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/25 10:32:11 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 13:46:12 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d)
 		rec->colour = cy.colour;
 		return (true);
 	}
-	else
-		return (false);
+	return (false);
 }
 
 bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 13:08:12 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 15:40:48 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,12 @@
 /* ====== LIBRARIES ====== */
 
 # include <stdio.h>
+# include <stdint.h>
 
 # include "utils_bonus.h"
+# include "structs_bonus.h"
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Represents an RGB colour with float values from 0.0 - 1.0
- * @param r		Red component
- * @param g		Green component
- * @param b		Blue component
- */
-typedef struct s_colour
-{
-	float	r;
-	float	g;
-	float	b;
-}	t_colour;
 
 /* ====== FUNCTIONS ====== */
 

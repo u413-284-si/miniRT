@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 12:09:37 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 15:27:42 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,42 +18,6 @@
 # include "entities_bonus.h"
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Represents a ray
- * @param origin	point of ray origin
- * @param direction	vector of ray direction
- * @param d			distance into ray direction
- */
-typedef struct s_ray
-{
-	t_vec3	origin;
-	t_vec3	direction;
-	float	d;
-}	t_ray;
-
-/**
- * @brief Shows point of intersection
- * 
- * @param ray		Intersecting ray
- * @param point		Point of intersection
- * @param normal	Normal vector at point of intersection
- * @param axis_hit	Point of intersection with a cylinders axis
- * @param d			Distance into ray direction when point is hit
- * @param colour	Colour of object at intersection
- * @param shininess	Material property of point of intersection
- * 					on reflecting light
- */
-typedef struct s_hitrecord
-{
-	t_ray		ray;
-	t_vec3		point;
-	t_vec3		normal;
-	t_vec3		axis_hit;
-	float		d;
-	t_colour	colour;
-	float		shininess;
-}	t_hitrecord;
 
 /* ====== FUNCTIONS ====== */
 

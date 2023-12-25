@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/22 12:02:52 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 14:05:20 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	ft_initiate_camera(&render.cam);
-	ft_initiate_viewport(&render.vp, render.cam, render.mlx_ptrs.img.width, render.mlx_ptrs.img.height);
+	ft_initiate_viewport(&render.vp, render.cam, render.mlx_ptrs.img.width, \
+		render.mlx_ptrs.img.height);
 	ft_render_start_loop(&render);
 	ft_free_scene(&render.scene);
 	return (0);

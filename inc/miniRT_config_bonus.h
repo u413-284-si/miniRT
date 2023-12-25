@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 11:40:34 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 16:31:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@
 # define WIN_SIZE_Y 600
 
 // sample size
-# define SAMPLE_SIZE 10
+# define SAMPLE_SIZE 5
 
 #endif

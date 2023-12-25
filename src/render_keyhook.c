@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render_keyhook.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/22 00:55:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 14:52:32 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_keyhook_press(int key, t_render *render)
 	{
 		print = true;
 		ft_output_as_ppm((int *)render->mlx_ptrs.img.addr,
-				render->mlx_ptrs.img.width, render->mlx_ptrs.img.height);
+			render->mlx_ptrs.img.width, render->mlx_ptrs.img.height);
 		print = false;
 	}
 	return (0);
