@@ -58,7 +58,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/miniRT_supreme",
-			"args": ["scenes/cylinder_bonus.rt"],
+			"args": ["scenes/two_spheres_bonus.rt"],
 			"stopAtEntry": true,
 			"cwd": "${workspaceFolder}",
 			"environment": [],
