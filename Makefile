@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/25 08:41:59 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/25 09:27:23 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,8 @@ OBJ_DIR_LEAK := $(BASE_OBJ_DIR)/leak
 OBJ_DIR_ADDRESS := $(BASE_OBJ_DIR)/address
 # Subdirectory for compilation with speed optimization
 OBJ_DIR_SPEED := $(BASE_OBJ_DIR)/speed
+# Subdirectory for compilation with profiling
+OBJ_DIR_PROFILE := $(BASE_OBJ_DIR)/profile
 # Set default object directory
 OBJ_DIR = $(OBJ_DIR_DEFAULT)
 # Set object directory depending on target
@@ -57,11 +59,14 @@ else ifneq (,$(findstring address,$(MAKECMDGOALS)))
 	OBJ_DIR = $(OBJ_DIR_ADDRESS)
 else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
 	OBJ_DIR = $(OBJ_DIR_SPEED)
+else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
+	OBJ_DIR = $(OBJ_DIR_PROFILE)
 endif
 LIB_DIR := lib
 LIB_DIR_FT := $(LIB_DIR)/libft
 INC_DIR := inc
 DEP_DIR = $(OBJ_DIR)/dep
+LOG_DIR := log
 
 # ******************************
 # *     Libraries              *
@@ -93,6 +98,8 @@ LEAK := $(DEFAULT)_leak
 ADDRESS := $(DEFAULT)_address
 # Target for speed optimization
 SPEED := $(DEFAULT)_speed
+# Target for profiling
+PROFILE := $(DEFAULT)_profile
 # Set default target
 NAME = $(DEFAULT)
 # Set target depending on target
@@ -102,8 +109,17 @@ else ifneq (,$(findstring address,$(MAKECMDGOALS)))
 	NAME = $(ADDRESS)
 else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
 	NAME = $(SPEED)
+else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
+	NAME = $(PROFILE)
 endif
 LIBFT := $(LIB_DIR_FT)/libft.a
+
+# ******************************
+# *     Profiling              *
+# ******************************
+
+PROFILE_SCENE = scenes/basic_spheres.rt
+LOG_FILE = $(LOG_DIR)/$(shell date +"%H-%M-%S").log
 
 # ******************************
 # *     Source files           *
@@ -208,6 +224,18 @@ speed: CFLAGS = -Ofast -march=native -fomit-frame-pointer
 speed: LDFLAGS += -flto
 speed: $(NAME)
 
+# This target adds flags which enable profiling.
+profile: CFLAGS += -pg
+profile: LDFLAGS += -pg
+profile: $(NAME) | $(LOG_DIR)
+	@printf "\n$(YELLOW)$(BOLD)Run for profiling$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "Profile scene: $(PROFILE_SCENE)\n"
+	$(SILENT)./$(NAME) $(PROFILE_SCENE)
+	$(SILENT)gprof $(NAME) gmon.out > $(LOG_FILE)
+	@printf "\n$(YELLOW)$(BOLD)Saved log file$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	$(SILENT)rm gmon.out
+	$(SILENT)ls -dt1 $(LOG_DIR)/* | head -n 1 | xargs less
+
 # Perform memory check on NAME.
 .PHONY: valgr
 valgr: $(NAME)
@@ -250,6 +278,11 @@ message:
 # Create obj and dep subdirectory if it doesn't exist
 $(DEP_DIR):
 	@printf "\n$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@echo $@
+	$(SILENT)mkdir -p $@
+
+$(LOG_DIR):
+	@printf "\n$(YELLOW)$(BOLD)create subdir $(LOG_DIR)$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@echo $@
 	$(SILENT)mkdir -p $@
 
