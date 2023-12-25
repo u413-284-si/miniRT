@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   miniRT_bonus.h                                     :+:      :+:    :+:   */
+/*   error_type_bonus.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/25 11:48:48 by sqiu             ###   ########.fr       */
+/*   Created: 2023/10/30 14:23:15 by gwolf             #+#    #+#             */
+/*   Updated: 2023/12/25 11:46:24 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_BONUS_H
-# define MINIRT_BONUS_H
+#ifndef ERROR_TYPE_BONUS_H
+# define ERROR_TYPE_BONUS_H
 
-/* ====== LIBRARIES ====== */
+/* ====== TYPEDEFS ====== */
 
-// Standard C libs
-# include <stdio.h>
-# include <fcntl.h>				// req for open()
-# include <unistd.h>			// req for read(), write(), close()
-
-// Home-grown libs
-# include "ft_print.h"
-# include "camera_bonus.h"
-# include "init_bonus.h"
-# include "parse_bonus.h"
-# include "render_bonus.h"
-
+/**
+ * @brief Gives return of function explicit meaning with SUCCESS or ERROR.
+ *
+ */
+typedef enum e_err {
+	SUCCESS,
+	ERROR
+}	t_err;
 
 #endif

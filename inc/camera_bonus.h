@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera_bonus.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 17:35:29 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/25 11:40:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,9 @@
 
 # include "ray_bonus.h"
 # include "utils_bonus.h"
+# include "miniRT_config_bonus.h"
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Contains image parameters
- * 
- * @param aspect_ratio			Ratio of image_width / image_height
- * @param image_width			Width of image created
- * @param image_height			Height of image created
- */
-typedef struct s_image
-{
-	float	aspect_ratio;
-	int		image_width;
-	int		image_height;
-}	t_image;
 
 /**
  * @brief Contains camera parameters
@@ -44,6 +31,7 @@ typedef struct s_image
  * @param w						Basis vector pointing to opposite view direction
  * @param vup					Camera-relative up direction
  * @param camera_centre			Camera position
+ * @param camera_direction		Direction of camera view
  * @param hfov					Horizontal field of view in degrees
  * @param samples_per_pixel		Amount of ray samples generated per pixel 
  * 								for anit-aliasing
@@ -57,6 +45,7 @@ typedef struct s_cam
 	t_vec3	w;
 	t_vec3	vup;
 	t_vec3	camera_centre;
+	t_vec3	camera_direction;
 	float	hfov;
 	int		samples_per_pixel;
 }	t_cam;
@@ -95,13 +84,6 @@ typedef struct s_viewport
 /* ====== FUNCTIONS ====== */
 
 /**
- * @brief Sets values of image parameters
- * 
- * @param image Struct containing image parameters
- */
-void		ft_initiate_image(t_image *image);
-
-/**
  * @brief Sets values of camera parameters
  * 
  * @param cam 	Struct containing camera parameters
@@ -110,26 +92,14 @@ void		ft_initiate_camera(t_cam *cam);
 
 /**
  * @brief Sets values of viewport parameters
- * 
- * @param vp	Struct containing viewport parameters
- * @param cam 	Struct containing camera parameters
- * @param image	Struct containing image parameters
- */
-void		ft_initiate_viewport(t_viewport *vp, t_cam cam, t_image image);
-
-/**
- * @brief Generates an image
- * 
- * Creates rays for each pixel of the image and "shoots" them
- * through the according pixel in the viewport. The colour of
- * each ray is returned and used to print out an image.
- * @param image		Struct containing image parameters 
- * @param cam 		Struct containing image and viewport parameters
+ *
  * @param vp		Struct containing viewport parameters
- * @param scene		Scene containing all hittable entities
+ * @param cam 		Struct containing camera parameters
+ * @param size_x	Width of image.
+ * @param size_y	Height of image.
  */
-void		ft_create_image(t_image image, t_cam cam, t_viewport vp, \
-	t_entities scene);
+void		ft_initiate_viewport(t_viewport *vp, t_cam cam, int size_x, \
+	int size_y);
 
 /**
  * @brief Creates a random sample ray in a square surrounding the current pixel
@@ -166,15 +136,5 @@ t_vec3		ft_pixel_sample(t_viewport vp);
  */
 t_colour	ft_get_colour(int iterate[2], t_viewport vp, t_cam cam, \
 	t_entities scene);
-
-/**
- * @brief Returns the colour of a ray
- * 
- * @param ray 		Ray sent into the scene
- * @param scene		Scene containing all hittable entities
- * @param cam		Camera looking at scene
- * @return t_colour Ray colour
- */
-t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam);
 
 #endif
