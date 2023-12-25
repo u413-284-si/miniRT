@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 12:34:14 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 19:34:58 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_initiate_viewport(t_viewport *vp, t_cam cam, int size_x, int size_y)
 		ft_vec3_add(vp->delta_u, vp->delta_v), 0.5));
 }
 
-t_colour	ft_get_colour(int iterate[2], t_viewport vp, t_cam cam, \
+t_colour	ft_sum_up_colour_samples(int iterate[2], t_viewport vp, t_cam cam, \
 	t_entities scene)
 {
 	int			curr_sample;

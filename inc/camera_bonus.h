@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 15:25:01 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/25 19:34:58 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ t_vec3		ft_pixel_sample(t_viewport vp);
  * @param scene			The scene containing all hittables
  * @return t_colour
  */
-t_colour	ft_get_colour(int iterate[2], t_viewport vp, t_cam cam, \
+t_colour	ft_sum_up_colour_samples(int iterate[2], t_viewport vp, t_cam cam, \
 	t_entities scene);
 
 /**
