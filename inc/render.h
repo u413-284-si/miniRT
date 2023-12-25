@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/22 00:54:57 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 22:17:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 # include "cleanup.h"
 # include "entities.h"
 # include "miniRT_config.h"
+# include "mat4_vec3.h"
+# include "print.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -158,6 +160,56 @@ t_err	ft_output_as_ppm(int *img_arr, int width, int height);
  * @return int		0 if successful, -1 if not.
  */
 int		ft_keyhook_press(int key, t_render *render);
+
+// render_keyhook_hittable.c
+
+/**
+ * @brief Changes the active hittable.
+ *
+ * @param key		Keycode of the pressed key.
+ * @param scene		Pointer to scene struct.
+ */
+void	ft_change_active_hittable(int key, t_entities *scene);
+
+/**
+ * @brief Manipulates the active hittable.
+ *
+ * @param key		Keycode of the pressed key.
+ * @param hittable	Pointer to hittable struct.
+ */
+void	ft_manip_hittable(int key, t_hittable *hittable);
+
+/**
+ * @brief Manipulates the active sphere.
+ *
+ * @param key		Keycode of the pressed key.
+ * @param sp		Pointer to sphere struct.
+ */
+void	ft_manip_sphere(int key, t_sphere *sp);
+
+/**
+ * @brief Manipulates the active plane.
+ *
+ * @param key		Keycode of the pressed key.
+ * @param pl		Pointer to plane struct.
+ */
+void	ft_manip_plane(int key, t_plane *pl);
+
+/**
+ * @brief Manipulates the active cylinder.
+ *
+ * @param key		Keycode of the pressed key.
+ * @param cy		Pointer to cylinder struct.
+ */
+void	ft_manip_cylinder(int key, t_cylinder *cy);
+
+// render_keyhook_utils.c
+
+void	ft_keyhook_mv_point(int key, t_vec3 *point);
+
+void	ft_keyhook_rot_vec(int key, t_vec3 *vector);
+
+void	ft_keyhook_change_col(int key, t_colour *col);
 
 // render_loop_mlx.c
 

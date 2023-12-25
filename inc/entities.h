@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/20 12:59:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/23 21:56:26 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,6 +151,18 @@ typedef struct s_entities
 	t_hittable	*obj;
 	int			lsrc_count;
 	int			total;
+	int			active;
 }	t_entities;
+
+/* ====== FUNCTIONS ====== */
+
+// utils_entities.c
+
+/**
+ * @brief Calculates the planes of the caps of a cylinder.
+ *
+ * @param cy	Pointer to cylinder struct.
+ */
+void	ft_cy_calc_caps(t_cylinder *cy);
 
 #endif
