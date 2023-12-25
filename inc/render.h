@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 07:48:21 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 08:40:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 # include "mat4_vec3.h"
 # include "print.h"
 # include "ray.h"
+# include "vec2.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -69,6 +70,13 @@ typedef struct s_mlx_ptrs
 	t_img	img;
 }	t_mlx_ptrs;
 
+typedef struct s_mouse {
+	bool	left;
+	bool	right;
+	t_vec2i	last_left;
+	t_vec2i	last_right;
+}	t_mouse;
+
 /**
  * @brief Overarching render struct.
  *
@@ -83,6 +91,7 @@ typedef struct s_render
 	t_mlx_ptrs	mlx_ptrs;
 	t_cam		cam;
 	t_entities	scene;
+	t_mouse		mouse;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
@@ -214,6 +223,12 @@ void	ft_keyhook_change_col(int key, t_colour *col);
 // render_keyhook_camera.c
 
 void	ft_manip_cam(int key, t_cam *cam);
+
+// render_mouse.c
+
+int	ft_mouse_hook_press(int button, int x, int y, t_render *render);
+int	ft_mouse_hook_release(int button, int x, int y, t_render *render);
+int	ft_mouse_hook_move(int x, int y, t_render *render);
 
 // render_loop_mlx.c
 

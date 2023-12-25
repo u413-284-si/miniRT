@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/22 00:48:14 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 08:41:26 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@ int	ft_draw_scene(t_render *render)
 void	ft_render_start_loop(t_render *render)
 {
 	mlx_hook(render->mlx_ptrs.win_ptr, KeyPress, KeyPressMask, ft_keyhook_press, render);
+	mlx_hook(render->mlx_ptrs.win_ptr, ButtonPress, ButtonPressMask, \
+			ft_mouse_hook_press, render);
+	mlx_hook(render->mlx_ptrs.win_ptr, ButtonRelease, ButtonReleaseMask, \
+			ft_mouse_hook_release, render);
+	mlx_hook(render->mlx_ptrs.win_ptr, MotionNotify, ButtonMotionMask, \
+			ft_mouse_hook_move, render);
 	mlx_hook(render->mlx_ptrs.win_ptr, DestroyNotify, StructureNotifyMask,
 		mlx_loop_end, render->mlx_ptrs.mlx_ptr);
 	mlx_loop_hook(render->mlx_ptrs.mlx_ptr, ft_draw_scene, render);
