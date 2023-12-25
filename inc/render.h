@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/24 22:48:10 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 07:48:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # include "miniRT_config.h"
 # include "mat4_vec3.h"
 # include "print.h"
+# include "ray.h"
 
 /* ====== TYPEDEFS ====== */
 
