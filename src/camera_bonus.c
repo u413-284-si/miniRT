@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 19:34:58 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/26 17:32:58 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	ft_initiate_camera(t_cam *cam)
 	else
 		cam->u = ft_vec3_norm(ft_vec3_cross(cam->vup, cam->w));
 	cam->v = ft_vec3_cross(cam->w, cam->u);
-	cam->samples_per_pixel = SAMPLE_SIZE;
 }
 
 void	ft_initiate_viewport(t_viewport *vp, t_cam cam, int size_x, int size_y)
@@ -50,7 +49,7 @@ void	ft_initiate_viewport(t_viewport *vp, t_cam cam, int size_x, int size_y)
 		ft_vec3_add(vp->delta_u, vp->delta_v), 0.5));
 }
 
-t_colour	ft_sum_up_colour_samples(int iterate[2], t_viewport vp, t_cam cam, \
+t_colour	ft_anti_aliase_colour(int iterate[2], t_viewport vp, t_cam cam, \
 	t_entities scene)
 {
 	int			curr_sample;
@@ -58,25 +57,15 @@ t_colour	ft_sum_up_colour_samples(int iterate[2], t_viewport vp, t_cam cam, \
 	t_colour	pixel_colour;
 
 	curr_sample = -1;
-	pixel_colour.r = 0.0;
-	pixel_colour.g = 0.0;
-	pixel_colour.b = 0.0;
-	while (++curr_sample < cam.samples_per_pixel)
+	ft_init_colour(&pixel_colour);
+	while (++curr_sample < SAMPLE_SIZE)
 	{
 		ray = ft_create_sample_ray(iterate[0], iterate[1], vp, cam);
 		pixel_colour = ft_add_colour(pixel_colour, \
 			ft_ray_colour(ray, scene, cam));
 	}
+	pixel_colour.r /= SAMPLE_SIZE;
+	pixel_colour.g /= SAMPLE_SIZE;
+	pixel_colour.b /= SAMPLE_SIZE;
 	return (pixel_colour);
-}
-
-t_colour	ft_sample_down(t_colour pixel, int samples)
-{
-	float		scale;
-
-	scale = 1.0 / samples;
-	pixel.r *= scale;
-	pixel.g *= scale;
-	pixel.b *= scale;
-	return (pixel);
 }

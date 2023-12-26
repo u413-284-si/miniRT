@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 15:22:00 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/25 15:37:56 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/26 17:32:29 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,6 @@ typedef struct s_hitrecord
  * @param camera_centre			Camera position
  * @param camera_direction		Direction of camera view
  * @param hfov					Horizontal field of view in degrees
- * @param samples_per_pixel		Amount of ray samples generated per pixel 
- * 								for anit-aliasing
  */
 
 typedef struct s_cam
@@ -103,7 +101,6 @@ typedef struct s_cam
 	t_vec3	camera_centre;
 	t_vec3	camera_direction;
 	float	hfov;
-	int		samples_per_pixel;
 }	t_cam;
 
 /**

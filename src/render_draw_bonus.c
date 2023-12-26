@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 19:35:31 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/26 17:27:19 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,8 @@ void	ft_render_image(t_render *render)
 		iterate[0] = -1;
 		while (++iterate[0] < render->mlx_ptrs.img.width)
 		{
-			pixel_colour = ft_sample_down(ft_sum_up_colour_samples(iterate, \
-				render->vp, render->cam, render->scene), \
-				render->cam.samples_per_pixel);
+			pixel_colour = ft_anti_aliase_colour(iterate, \
+				render->vp, render->cam, render->scene);
 			colour = ft_convert_colour2int(pixel_colour);
 			ft_put_pix_to_image(&render->mlx_ptrs.img, iterate[0], \
 				iterate[1], colour);
