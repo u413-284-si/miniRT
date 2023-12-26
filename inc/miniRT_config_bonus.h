@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/26 17:26:18 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/26 17:37:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@
 # define WIN_SIZE_Y 600
 
 // sample size
+
+// Adjusting this value allows to tweak the degree of anti-aliasing.
+// The more samples are used to calculate the colour of a pixel,
+// the smoother are the transitions, yet the more costly the calculations.
 # define SAMPLE_SIZE 5
 
 #endif
