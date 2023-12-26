@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 15:58:36 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/26 23:08:43 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,12 +130,15 @@ typedef union u_shape
 /**
  * @brief Represents a hittable 
  * 
- * @param id		The hittables ID
- * @param type		The hittables type
- * @param params	Required parameters to distinctly describe the hittable
- * @param shininess	Material property of reflecting light
- * 					(rather than scattering)
- * @param textured	Indicates whether the hittable is textured or not
+ * @param id			The hittables ID
+ * @param type			The hittables type
+ * @param params		Required parameters to distinctly describe the hittable
+ * @param shininess		Material property of point of intersection
+ * 						on the breadth of the angle of specular reflection 
+ * 						(the higher, the smoother the surface appears)
+ * @param reflectivity	Material property of point of intersection
+ * 						on share of reflected light 
+ * @param textured		Indicates whether the hittable is textured or not
  */
 typedef struct s_hittable
 {
@@ -143,6 +146,7 @@ typedef struct s_hittable
 	t_type	type;
 	t_shape	params;
 	float	shininess;
+	float	reflectivity;
 	bool	textured;
 }	t_hittable;
 

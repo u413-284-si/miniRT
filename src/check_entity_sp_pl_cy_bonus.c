@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:17:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 16:24:02 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/26 23:11:48 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ t_type	ft_check_sphere(char *line)
 {
 	ft_rm_space(&line);
 	if (!ft_isvalid_float_block(&line, FLOAT_MIN, FLOAT_MAX))
+		return (UNKNOWN);
+	ft_rm_space(&line);
+	if (!ft_isvalid_float(&line, FLOAT_MIN, FLOAT_MAX, false))
 		return (UNKNOWN);
 	ft_rm_space(&line);
 	if (!ft_isvalid_float(&line, FLOAT_MIN, FLOAT_MAX, false))
@@ -44,6 +47,9 @@ t_type	ft_check_plane(char *line)
 	if (!ft_isvalid_float(&line, FLOAT_MIN, FLOAT_MAX, false))
 		return (UNKNOWN);
 	ft_rm_space(&line);
+	if (!ft_isvalid_float(&line, FLOAT_MIN, FLOAT_MAX, false))
+		return (UNKNOWN);
+	ft_rm_space(&line);
 	if (!ft_isvalid_rgb_block(&line))
 		return (UNKNOWN);
 	ft_rm_space(&line);
@@ -59,6 +65,9 @@ t_type	ft_check_cylinder(char *line)
 		return (UNKNOWN);
 	ft_rm_space(&line);
 	if (!ft_isvalid_float_block(&line, -1.0, 1.0))
+		return (UNKNOWN);
+	ft_rm_space(&line);
+	if (!ft_isvalid_float(&line, FLOAT_MIN, FLOAT_MAX, false))
 		return (UNKNOWN);
 	ft_rm_space(&line);
 	if (!ft_isvalid_float(&line, FLOAT_MIN, FLOAT_MAX, false))

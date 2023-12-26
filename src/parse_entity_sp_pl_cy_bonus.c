@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:34:38 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 16:30:30 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/26 23:13:05 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_parse_sphere(char *line, t_hittable *sphere, size_t id)
 	ft_parse_float_block(&line, &params->centre);
 	ft_parse_float(&line, &params->d);
 	ft_parse_float(&line, &sphere->shininess);
+	ft_parse_float(&line, &sphere->reflectivity);
 	ft_parse_colour_block(&line, &params->colour);
 }
 
@@ -36,6 +37,7 @@ void	ft_parse_plane(char *line, t_hittable *plane, size_t id)
 	ft_parse_float_block(&line, &params->normal);
 	params->normal = ft_vec3_norm(params->normal);
 	ft_parse_float(&line, &plane->shininess);
+	ft_parse_float(&line, &plane->reflectivity);
 	ft_parse_colour_block(&line, &params->colour);
 }
 
@@ -52,6 +54,7 @@ void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id)
 	ft_parse_float(&line, &params->d);
 	ft_parse_float(&line, &params->h);
 	ft_parse_float(&line, &cylinder->shininess);
+	ft_parse_float(&line, &cylinder->reflectivity);
 	ft_parse_colour_block(&line, &params->colour);
 	params->cap1 = ft_vec3_add(params->centre, \
 		ft_vec3_scale(params->axis, -params->h * 0.5));
