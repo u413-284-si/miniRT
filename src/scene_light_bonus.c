@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:15:24 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 23:03:09 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/26 22:19:31 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ void	ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene, \
 		cur = scene.lsrc[i];
 		if (ft_in_shadow(cur, rec, scene))
 			continue ;
-		light = ft_add_colour(light, ft_add_colour(ft_diffuse_light(cur, rec), \
-			ft_specular_light(cur, rec, cam)));
+		light = ft_add_colour(light, ft_diffuse_light(cur, rec));
+		if (rec.shininess > 0.0)
+			light = ft_add_colour(light, ft_specular_light(cur, rec, cam));
 	}
 	*ray_colour = ft_hadamard_colour(light, rec.colour);
 }
