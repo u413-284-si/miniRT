@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/27 17:15:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/27 17:46:11 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,13 @@ typedef struct s_numinfo
 	int		prec;
 }	t_numinfo;
 
+typedef struct s_menu
+{
+	uint8_t		inv_alpha;
+	uint32_t	rb;
+	uint32_t	g;
+}	t_menu;
+
 // menu_put_num.c
 
 void	ft_mlx_put_int(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_numinfo numinfo);
@@ -57,5 +64,11 @@ void	ft_put_cylinder(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_cylinder cy);
 
 void	ft_put_camera(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_cam cam);
 void	ft_put_light(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_light light);
+
+// menu_draw.c
+uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu);
+t_menu	ft_init_menu(uint8_t alpha, uint32_t colour);
+void	ft_blend_background(t_img *img, int x, int y, t_menu menu);
+void	ft_draw_background(t_render *render);
 
 #endif
