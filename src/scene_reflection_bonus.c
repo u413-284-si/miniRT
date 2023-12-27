@@ -6,14 +6,14 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 23:15:28 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/27 00:43:57 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/27 13:22:58 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lighting_bonus.h"
 
 t_colour	ft_reflective_light(t_light cur, t_hitrecord rec, \
-	t_entities scene, t_cam cam, int reflection_count)
+	t_entities scene, t_cam cam)
 {
 	t_vec3		reflect_direction;
 	t_ray		reflect_ray;
@@ -29,11 +29,11 @@ t_colour	ft_reflective_light(t_light cur, t_hitrecord rec, \
 	interval.min = 0.001;
 	interval.max = INFINITY;
 	if (ft_get_closest_hit(scene, reflect_ray, interval, &rec) \
-		&& reflection_count < REFLECTION_MAX)
+		&& rec.reflection_count < REFLECTION_MAX)
 	{
-		reflection_count++;
+		rec.reflection_count++;
 		if (rec.reflectivity > 0.0)
-			reflective_colour = ft_compute_colour(cur, rec, scene, cam, reflection_count);
+			reflective_colour = ft_compute_colour(cur, rec, scene, cam);
 		else
 			reflective_colour = ft_diffuse_light(cur, rec);
 	}
@@ -61,26 +61,9 @@ bool	ft_get_closest_hit(t_entities scene, t_ray ray, t_interval ray_d, \
 			{
 				ray_d.max = (*closest).d;
 				(*closest).reflectivity = cur.reflectivity;
+				(*closest).shininess = cur.shininess;
 			}
 		}
 	}
 	return (hit_found);
-}
-
-t_colour	ft_compute_colour(t_light cur, t_hitrecord rec, \
-	t_entities scene, t_cam cam, int reflection_count)
-{
-	t_colour	diff;
-	t_colour	refl;
-	t_colour	light;
-
-	ft_init_colour(&refl);
-	diff = ft_diffuse_light(cur, rec);
-	if (rec.reflectivity > 0.0)
-		refl = ft_reflective_light(cur, rec, scene, cam, reflection_count);
-	light = ft_add_colour(ft_scale_colour(refl, rec.reflectivity), \
-		ft_scale_colour(diff, 1.0 - rec.reflectivity));
-	if (rec.shininess > 0.0)
-		light = ft_add_colour(light, ft_specular_light(cur, rec, cam));
-	return (light);
 }

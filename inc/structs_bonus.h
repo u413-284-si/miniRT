@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 15:22:00 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/26 23:07:40 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/27 12:35:14 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,17 +56,18 @@ typedef struct s_colour
 /**
  * @brief Shows point of intersection
  * 
- * @param ray			Intersecting ray
- * @param point			Point of intersection
- * @param normal		Normal vector at point of intersection
- * @param axis_hit		Point of intersection with a cylinders axis
- * @param d				Distance into ray direction when point is hit
- * @param colour		Colour of object at intersection
- * @param shininess		Material property of point of intersection
- * 						on the breadth of the angle of specular reflection 
- * 						(the higher, the smoother the surface appears)
- * @param reflectivity	Material property of point of intersection
- * 						on share of reflected light 
+ * @param ray				Intersecting ray
+ * @param point				Point of intersection
+ * @param normal			Normal vector at point of intersection
+ * @param axis_hit			Point of intersection with a cylinders axis
+ * @param d					Distance into ray direction when point is hit
+ * @param colour			Colour of object at intersection
+ * @param shininess			Material property of point of intersection
+ * 							on the breadth of the angle of specular reflection 
+ * 							(the higher, the smoother the surface appears)
+ * @param reflectivity		Material property of point of intersection
+ * 							on share of reflected light 
+ * @param reflection_count	Amount of reflections performed
  */
 typedef struct s_hitrecord
 {
@@ -78,6 +79,7 @@ typedef struct s_hitrecord
 	t_colour	colour;
 	float		shininess;
 	float		reflectivity;
+	int			reflection_count;
 }	t_hitrecord;
 
 /**
