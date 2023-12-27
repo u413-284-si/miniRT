@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:15:24 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/26 22:19:31 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/27 00:44:34 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene, \
 	t_light		cur;
 	t_colour	light;
 	int			i;
+	int			reflection_count;
 
+	reflection_count = 0;
 	light = ft_ambient_light(scene.ambient);
 	i = -1;
 	while (++i < scene.lsrc_count)
@@ -26,9 +28,7 @@ void	ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene, \
 		cur = scene.lsrc[i];
 		if (ft_in_shadow(cur, rec, scene))
 			continue ;
-		light = ft_add_colour(light, ft_diffuse_light(cur, rec));
-		if (rec.shininess > 0.0)
-			light = ft_add_colour(light, ft_specular_light(cur, rec, cam));
+		light = ft_add_colour(light, ft_compute_colour(cur, rec, scene, cam, reflection_count));
 	}
 	*ray_colour = ft_hadamard_colour(light, rec.colour);
 }

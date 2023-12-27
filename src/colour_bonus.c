@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 20:27:25 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/27 00:16:25 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,15 @@ t_colour	ft_add_colour(t_colour c1, t_colour c2)
 		.r = c1.r + c2.r,
 		.b = c1.b + c2.b,
 		.g = c1.g + c2.g
+	});
+}
+
+t_colour	ft_scale_colour(t_colour c, float scale)
+{
+	return ((t_colour){
+		.r = c.r * scale,
+		.g = c.g * scale,
+		.b = c.b * scale
 	});
 }
 

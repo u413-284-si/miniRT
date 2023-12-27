@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/26 17:37:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/26 23:21:48 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,9 @@
 // The more samples are used to calculate the colour of a pixel,
 // the smoother are the transitions, yet the more costly the calculations.
 # define SAMPLE_SIZE 5
+
+// maximum reflection of rays in scene
+
+# define REFLECTION_MAX 3
 
 #endif

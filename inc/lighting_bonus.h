@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lighting_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:18:23 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/20 17:14:29 by u413q            ###   ########.fr       */
+/*   Updated: 2023/12/27 00:43:28 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,26 @@ bool		ft_in_shadow(t_light cur, t_hitrecord rec, t_entities scene);
  */
 bool		ft_shadow_ray_blocked(t_entities scene, t_ray shadow_ray, \
 	t_interval ray_d);
+
+/**
+ * @brief 
+ * 
+ */
+t_colour	ft_reflective_light(t_light cur, t_hitrecord rec, \
+	t_entities scene, t_cam cam, int reflection_count);
+
+/**
+ * @brief 
+ * 
+ */
+bool		ft_get_closest_hit(t_entities scene, t_ray ray, t_interval ray_d, \
+	t_hitrecord *closest);
+
+/**
+ * @brief 
+ * 
+ */
+t_colour	ft_compute_colour(t_light cur, t_hitrecord rec, \
+	t_entities scene, t_cam cam, int reflection_count);
 
 #endif
