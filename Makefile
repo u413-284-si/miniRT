@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/25 16:33:40 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/27 17:00:50 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -131,6 +131,9 @@ SRC := 	camera.c \
 		mat4_rotation.c \
 		mat4_vec3_rotate.c \
 		mat4.c \
+		menu_put_num.c \
+		menu_put_element.c \
+		menu_put_hittable.c \
 		parse_entity_ACL.c \
 		parse_entity_sp_pl_cy.c \
 		parse_line.c \
