@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dashboard_put_element.c                            :+:      :+:    :+:   */
+/*   menu_put_element.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:16:08 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/27 15:42:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/27 17:31:06 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dashboard.h"
+#include "render_menu.h"
 
 void	ft_put_3d_point(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_vec3 point, char *name)
 {
