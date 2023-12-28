@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/27 17:46:11 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/28 08:56:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@
 /* ====== MACROS ====== */
 
 # define NUMLEN 10
+# define BOLD "-schumacher-*-bold-r-normal-*-*-160-*-*-*-*-*-*"
+# define REGULAR "-schumacher-*-medium-r-normal-*-*-160-*-*-*-*-*-*"
+# define Y_NEXT_LINE 20
+# define Y_ELEM_SPACE 30
+# define X_OFFSET 30
+# define X_OFFSET_BIG 70
+# define WHITE 0xffffff
 
 /* ====== TYPEDEFS ====== */
 
@@ -49,9 +56,10 @@ void	ft_mlx_put_float(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_numinfo numinfo);
 
 // menu_put_element.c
 
-void	ft_put_3d_point(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_vec3 point, char *name);
-void	ft_put_unit_vec(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_vec3 vec, char *name);
-void	ft_put_colour(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_colour colour);
+t_vec2i	ft_put_3d_point(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_vec3 point, char *name);
+t_vec2i	ft_put_unit_vec(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_vec3 vec, char *name);
+t_vec2i	ft_put_colour(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_colour colour);
+t_vec2i	ft_put_float_value(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, float value, char *name);
 
 // menu_put_hittable.c
 
