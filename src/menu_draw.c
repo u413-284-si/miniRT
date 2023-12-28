@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/27 17:40:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/27 20:16:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	ft_draw_background(t_render *render)
 	int		y;
 	t_menu	menu;
 
-	menu = ft_init_menu(100, 0xff0000);
+	menu = ft_init_menu(155, 0x0047AB);
 	y = -1;
 	while (++y < render->mlx_ptrs.img.height)
 	{
