@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/27 00:32:48 by sqiu             ###   ########.fr        #
+#    Updated: 2023/12/29 19:07:08 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -117,6 +117,7 @@ SRC_B := camera_bonus.c \
 		error_msg_generic_bonus.c \
 		error_syscall_bonus.c \
 		ft_strtod.c \
+		geometric_transform.c \
 		hit_cylinder_bonus.c \
 		hit_plane_bonus.c \
 		hit_sphere_bonus.c \
@@ -124,6 +125,9 @@ SRC_B := camera_bonus.c \
 		import_file_buffer_bonus.c \
 		import_file_bonus.c \
 		main_bonus.c \
+		mat4_rotation.c \
+		mat4_vec3_rotate.c \
+		mat4.c \
 		parse_entity_ACL_bonus.c \
 		parse_entity_sp_pl_cy_bonus.c \
 		parse_line_bonus.c \

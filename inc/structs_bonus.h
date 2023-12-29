@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 15:22:00 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/27 12:35:14 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/29 18:48:54 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,21 @@ typedef struct s_vec3
 	float	y;
 	float	z;
 }	t_vec3;
+
+/**
+ * @brief Represents a fourdimensional vector
+ * @param x		The x coordinate
+ * @param y		The y coordinate
+ * @param z		The z coordinate
+ * @param one	4th component with value 1
+ */
+typedef struct s_vec4
+{
+	float	x;
+	float	y;
+	float	z;
+	float	one;
+}	t_vec4;
 
 /**
  * @brief Represents a ray
