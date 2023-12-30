@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/26 23:08:43 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/30 00:21:17 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,25 @@ typedef struct s_cylinder
 }	t_cylinder;
 
 /**
+ * @brief Represents a cone
+ * 
+ * @param base		Base point of the cone
+ * @param axis		Normalised [-1, 1] axis of the cone
+ * @param r			Radius of the circular base
+ * @param h			Height of the cone
+ * @param colour	Colour of the cone
+ */
+typedef struct s_cone
+{
+	t_vec3		base;
+	t_vec3		axis;
+	float		r;
+	float		h;
+	t_colour	colour;
+}	t_cone;
+
+
+/**
  * @brief Enumeration of all different entity types.
  *
  * @param COMMENT	Used for comments: line beginning with # is ignored.
@@ -103,6 +122,7 @@ typedef enum e_type
 	SPHERE,
 	PLANE,
 	CYLINDER,
+	CONE,
 	AMBIENT,
 	CAMERA,
 	LIGHT,
@@ -125,6 +145,7 @@ typedef union u_shape
 	t_sphere	sp;
 	t_plane		pl;
 	t_cylinder	cy;
+	t_cone		co;
 }	t_shape;
 
 /**

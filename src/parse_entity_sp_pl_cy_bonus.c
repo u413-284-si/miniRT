@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:34:38 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/26 23:13:05 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/30 00:24:06 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,21 @@ void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id)
 		ft_vec3_scale(params->axis, -params->h * 0.5));
 	params->cap2 = ft_vec3_add(params->centre, \
 		ft_vec3_scale(params->axis, params->h * 0.5));
+}
+
+void	ft_parse_cone(char *line, t_hittable *cone, size_t id)
+{
+	t_cone	*params;
+
+	cone->id = id;
+	cone->type = CONE;
+	params = &cone->params.co;
+	ft_parse_float_block(&line, &params->base);
+	ft_parse_float_block(&line, &params->axis);
+	params->axis = ft_vec3_norm(params->axis);
+	ft_parse_float(&line, &params->r);
+	ft_parse_float(&line, &params->h);
+	ft_parse_float(&line, &cone->shininess);
+	ft_parse_float(&line, &cone->reflectivity);
+	ft_parse_colour_block(&line, &params->colour);
 }

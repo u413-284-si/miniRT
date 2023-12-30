@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 14:07:53 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/30 00:58:41 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,10 @@ void	ft_parse_lines(t_entities *scene, t_cam *cam, char **lines)
 				ft_parse_sphere(*lines + 3, &scene->obj[id], id);
 			else if (**lines == 'p')
 				ft_parse_plane(*lines + 3, &scene->obj[id], id);
-			else if (**lines == 'c')
+			else if (!ft_strncmp(*lines, "cy ", 3))
 				ft_parse_cylinder(*lines + 3, &scene->obj[id], id);
+			else if (!ft_strncmp(*lines, "co ", 3))
+				ft_parse_cone(*lines + 3, &scene->obj[id], id);
 			id++;
 		}
 		lines++;

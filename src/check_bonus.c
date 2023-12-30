@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 13:35:25 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/30 00:54:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 	if (ft_check_entity_count(ent_count))
 		return (ERROR);
 	*lsrc_c = ent_count[LIGHT];
-	*total = ent_count[SPHERE] + ent_count[PLANE] + ent_count[CYLINDER];
+	*total = ent_count[SPHERE] + ent_count[PLANE] + ent_count[CYLINDER] + \
+		ent_count[CONE];
 	return (SUCCESS);
 }
 
@@ -52,6 +53,8 @@ t_type	ft_check_line_type(char *line)
 		return (ft_check_plane(line + 2));
 	else if (!ft_strncmp(line, "cy ", 3))
 		return (ft_check_cylinder(line + 2));
+	else if (!ft_strncmp(line, "co ", 3))
+		return (ft_check_cone(line + 2));
 	else if (!ft_strncmp(line, "#", 1))
 		return (COMMENT);
 	else
@@ -65,6 +68,7 @@ t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_type type)
 	[SPHERE] = SPHERE_MAX,
 	[PLANE] = PLANE_MAX,
 	[CYLINDER] = CYLINDER_MAX,
+	[CONE] = CONE_MAX,
 	[AMBIENT] = AMBIENT_MAX,
 	[CAMERA] = CAMERA_MAX,
 	[LIGHT] = LIGHT_MAX

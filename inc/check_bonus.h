@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 12:49:18 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/30 00:32:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -231,5 +231,13 @@ t_type	ft_check_plane(char *line);
  * @return t_type CYLINDER on success, UNKNOWN if fail.
  */
 t_type	ft_check_cylinder(char *line);
+
+/**
+ * @brief 
+ * 
+ * @param line 
+ * @return t_type 
+ */
+t_type	ft_check_cone(char *line);
 
 #endif

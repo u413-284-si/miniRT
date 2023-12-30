@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/26 23:21:48 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/30 00:34:31 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define SPHERE_MAX 100
 # define PLANE_MAX 100
 # define CYLINDER_MAX 100
+# define CONE_MAX 100
 
 // allowed interval of parsed floats
 # define FLOAT_MIN -10000.0
