@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 12:27:18 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/29 19:07:30 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/29 23:43:36 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,14 @@ t_ray	ft_transform_ray(t_ray input, bool dir_flag, t_mat4 fwd, t_mat4 bck);
  * @return t_vec3 
  */
 t_vec3	ft_transform_vec3(t_vec3 input, bool dir_flag, t_mat4 fwd, t_mat4 bck);
+
+/**
+ * @brief Returns the rotation vector describing the rotation of any vector from (0,0,1)
+ * 
+ * Elements in radian
+ * @param orientation		Rotated vector  
+ * @return t_vec3 
+ */
+t_vec3	ft_get_rotation_vec3(t_vec3 orientation);
 
 #endif

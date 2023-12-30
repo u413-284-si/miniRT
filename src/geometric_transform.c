@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 12:26:59 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/29 19:36:01 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/29 22:04:44 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void	ft_set_transform(t_vec3 translation, t_vec3 rotation, t_vec3 scale, \
 	scale_matrix.mat[1][1] = scale.y;
 	scale_matrix.mat[2][2] = scale.z;
 	*result = ft_mat4_mult_mat4(ft_mat4_mult_mat4(ft_mat4_mult_mat4(\
-		ft_mat4_mult_mat4(rot_z_matrix, rot_y_matrix), \
-		rot_x_matrix), transl_matrix), scale_matrix);
+		ft_mat4_mult_mat4(scale_matrix, transl_matrix), \
+		rot_z_matrix), rot_y_matrix), rot_x_matrix);
 }
 
 void	ft_set_rotation_matrices(t_mat4 *rot_x_matrix, t_mat4 *rot_y_matrix, \
@@ -74,4 +74,15 @@ t_vec3	ft_transform_vec3(t_vec3 input, bool dir_flag, t_mat4 fwd, t_mat4 bck)
 	else
 		output = ft_vec3_mult_mat4(bck, input);
 	return (output);
+}
+
+t_vec3	ft_get_rotation_vec3(t_vec3 orientation)
+{
+	t_vec3	rotation;
+
+	rotation.x = atan2f(orientation.y, orientation.z);
+	rotation.y = atan2f(orientation.x, sqrtf(powf(orientation.y, 2.0) + \
+		powf(orientation.z, 2.0)));
+	rotation.z = 0.0;
+	return (rotation);
 }

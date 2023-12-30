@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 13:18:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/30 00:10:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,5 +179,21 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec);
  */
 bool	ft_cy_visible(t_equation eq, t_interval ray_d, float d3, \
 	float d4);
+
+bool	ft_hit_cone(t_cone co, t_hitrecord *rec, t_interval ray_d);
+
+t_ray	ft_get_bckray(t_cone co, t_hitrecord rec);
+
+bool	ft_calculate_cone_hits(t_ray bckray, t_vec3 hits[3], float h, \
+	t_hitrecord *tmp);
+
+bool	ft_check_cone_hits(float d, t_vec3 hit, float h);
+
+bool	ft_calculate_cap_hit(t_ray bckray, t_vec3 hits[3], float r, \
+	t_hitrecord *tmp);
+
+
+
+
 
 #endif
