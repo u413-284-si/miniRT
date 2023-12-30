@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 22:17:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/30 16:48:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,14 @@ typedef struct s_mlx_ptrs
 	t_img	img;
 }	t_mlx_ptrs;
 
+typedef struct s_menu
+{
+	uint8_t		inv_alpha;
+	uint32_t	rb;
+	uint32_t	g;
+	uint32_t	font_col;
+}	t_menu;
+
 /**
  * @brief Overarching render struct.
  *
@@ -83,6 +91,7 @@ typedef struct s_render
 	t_cam		cam;
 	t_entities	scene;
 	t_viewport	vp;
+	t_menu		menu;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
@@ -221,5 +230,9 @@ void	ft_keyhook_change_col(int key, t_colour *col);
  * @param render	Pointer to render struct.
  */
 void	ft_render_start_loop(t_render *render);
+
+
+t_menu	ft_init_menu(uint8_t alpha, uint32_t colour, uint32_t font_col);
+void	ft_draw_menu(t_render *render);
 
 #endif

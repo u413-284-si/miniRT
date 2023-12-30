@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/22 00:48:14 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/30 16:51:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	ft_draw_scene(t_render *render)
 {
 	ft_render_image(render);
+	ft_draw_menu(render);
 	return (0);
 }
 

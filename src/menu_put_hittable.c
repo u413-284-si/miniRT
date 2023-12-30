@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:55:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 16:29:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/30 16:56:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_put_hittable(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 	ft_mlx_put_str(mlx_ptrs, pos, col, "*** ID:   ***");
 	pos.x += 50;
 	ft_mlx_put_int(mlx_ptrs, pos,
-		(t_numinfo){.numi = hittable.id, .pad = 3, .prec = 0});
+		(t_numinfo){.numi = hittable.id, .pad = 3, .prec = 0, .col = col});
 	mlx_set_font(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, REGULAR);
 	pos.x -= 50;
 	pos.y += Y_NEXT_LINE;

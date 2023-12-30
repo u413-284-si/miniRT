@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 16:36:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/30 16:40:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # define X_OFFSET 30
 # define X_OFFSET_BIG 70
 # define WHITE 0xffffff
+# define MENU_WIDTH 150
 
 /* ====== TYPEDEFS ====== */
 
@@ -42,14 +43,6 @@ typedef struct s_numinfo
 	uint8_t		prec;
 	uint32_t	col;
 }	t_numinfo;
-
-typedef struct s_menu
-{
-	uint8_t		inv_alpha;
-	uint32_t	rb;
-	uint32_t	g;
-	uint32_t	font_col;
-}	t_menu;
 
 /* ====== FUNCTIONS ====== */
 

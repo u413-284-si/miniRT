@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 16:36:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/30 16:55:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,23 +36,26 @@ void	ft_blend_background(t_img *img, int x, int y, t_menu menu)
 	img_colour = *(uint32_t *)pixel;
 	blend_colour = fast_alpha_blend(img_colour, menu);
 	*(uint32_t *)pixel = blend_colour;
-	(void)menu;
 }
 
 void	ft_draw_menu(t_render *render)
 {
 	int		x;
 	int		y;
-	t_menu	menu;
 
-	menu = ft_init_menu(155, 0x0047AB);
 	y = -1;
 	while (++y < render->mlx_ptrs.img.height)
 	{
 		x = -1;
-		while (++x < 150)
+		while (++x < MENU_WIDTH)
 		{
-			ft_blend_background(&render->mlx_ptrs.img, x, y, menu);
+			ft_blend_background(&render->mlx_ptrs.img, x, y, render->menu);
 		}
 	}
+	if (1)
+		ft_put_hittable(&render->mlx_ptrs, (t_vec2i){20, 20},
+			render->menu.font_col, render->scene.obj[render->scene.active]);
+	else
+		ft_put_camera(&render->mlx_ptrs, (t_vec2i){20, 20},
+			render->menu.font_col, render->cam);
 }
