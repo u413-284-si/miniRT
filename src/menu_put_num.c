@@ -6,11 +6,18 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 13:30:56 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/28 08:50:34 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/30 15:50:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_menu.h"
+
+void	ft_mlx_put_str(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
+						char *str)
+{
+	mlx_string_put(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr,
+		pos.x, pos.y, col, str);
+}
 
 void	ft_mlx_put_int(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_numinfo numinfo)
 {
@@ -21,7 +28,7 @@ void	ft_mlx_put_int(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_numinfo numinfo)
 	numinfo.pad -= numlen;
 	if (numinfo.pad + numlen > NUMLEN - 1)
 	{
-		mlx_string_put(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, pos.x, pos.y, 0x0, "max");
+		ft_mlx_put_str(mlx_ptrs, pos, numinfo.col, "max");
 		return ;
 	}
 	ft_memset(str, 0, NUMLEN);
@@ -33,7 +40,7 @@ void	ft_mlx_put_int(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_numinfo numinfo)
 	}
 	else
 		ft_itoa_in_place(numinfo.numi, str);
-	mlx_string_put(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, pos.x, pos.y, WHITE, str);
+	ft_mlx_put_str(mlx_ptrs, pos, numinfo.col, str);
 }
 
 void	ft_mlx_put_float(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_numinfo numinfo)
@@ -47,7 +54,7 @@ void	ft_mlx_put_float(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_numinfo numinfo)
 	numinfo.pad -= numlen;
 	if (numinfo.pad + numlen + 1 + numinfo.prec > NUMLEN - 1)
 	{
-		mlx_string_put(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, pos.x, pos.y, 0x0, "max");
+		ft_mlx_put_str(mlx_ptrs, pos, numinfo.col, "max");
 		return ;
 	}
 	ft_memset(str, 0, NUMLEN);
@@ -59,5 +66,5 @@ void	ft_mlx_put_float(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, t_numinfo numinfo)
 	}
 	else
 		ft_ftoa_in_place(numinfo.numf, str, numinfo.prec);
-	mlx_string_put(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, pos.x, pos.y, WHITE, str);
+	ft_mlx_put_str(mlx_ptrs, pos, numinfo.col, str);
 }

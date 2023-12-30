@@ -6,12 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/27 20:16:10 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/30 16:36:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_menu.h"
-
 
 uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu)
 {
@@ -27,16 +26,6 @@ uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu)
 	return (blend_rb | blend_g);
 }
 
-t_menu	ft_init_menu(uint8_t alpha, uint32_t colour)
-{
-	t_menu	menu;
-
-	menu.inv_alpha = 255 - alpha;
-	menu.rb = (colour & 0xFF00FF) * alpha;
-	menu.g = (colour & 0x00FF00) * alpha;
-	return (menu);
-}
-
 void	ft_blend_background(t_img *img, int x, int y, t_menu menu)
 {
 	char		*pixel;
@@ -50,7 +39,7 @@ void	ft_blend_background(t_img *img, int x, int y, t_menu menu)
 	(void)menu;
 }
 
-void	ft_draw_background(t_render *render)
+void	ft_draw_menu(t_render *render)
 {
 	int		x;
 	int		y;

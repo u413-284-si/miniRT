@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/27 17:30:56 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/30 16:36:48 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -132,6 +132,7 @@ SRC := 	camera.c \
 		mat4_vec3_rotate.c \
 		mat4.c \
 		menu_draw.c \
+		menu_init.c \
 		menu_put_camera_lights.c \
 		menu_put_element.c \
 		menu_put_hittable.c \
