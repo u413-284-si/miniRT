@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 16:48:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/31 10:48:34 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ typedef struct s_render
 	t_entities	scene;
 	t_viewport	vp;
 	t_menu		menu;
+	bool		show_menu;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
