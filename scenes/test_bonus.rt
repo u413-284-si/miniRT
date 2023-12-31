@@ -15,4 +15,7 @@ sp     -4,-2.25,10        1.5    32          0.5          255,255,0
 pl     0,-3,0         0,1,0     32          0.5           0,255,255
 
 #      Centre   Axis    Diameter  Height   Shininess   Reflectivity  Color       
-cy     0,1,10  -1,0.5,-1     2       3       32          0.5           155,100,155
+cy     -2,1,10  -1,0.5,-1     2       3       32          0.5           155,100,155
+
+#      Apex      Axis     Radius  Height  Shininess   Reflectivity  Color       
+co     2,0.75,5     -1,-1,-1    0.5       2       32          0.5      0,210,200

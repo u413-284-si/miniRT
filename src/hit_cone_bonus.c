@@ -1,130 +1,141 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hit_cone_bonus.c                                   :+:      :+:    :+:   */
+/*   hit_cone_bonus_.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/29 20:09:27 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/30 00:43:46 by sqiu             ###   ########.fr       */
+/*   Created: 2023/12/31 11:33:09 by sqiu              #+#    #+#             */
+/*   Updated: 2023/12/31 13:14:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hit_manager_bonus.h"
-#include "geometric_transform_bonus.h"
 
 bool	ft_hit_cone(t_cone co, t_hitrecord *rec, t_interval ray_d)
 {
-	t_ray		bckray;
-	t_vec3		hits[3];
+	t_vec3		ray_apex;
+	t_equation	eq;
+	float		d3;
 	t_hitrecord	tmp;
 
 	(void)ray_d;
-	hits[0] = (t_vec3){-1.0, -1.0, -1.0};
-	hits[1] = (t_vec3){-1.0, -1.0, -1.0};
-	hits[2] = (t_vec3){-1.0, -1.0, -1.0};
 	ft_init_hitrecord(&tmp);
-	bckray = ft_get_bckray(co, *rec);
-	bckray.direction = ft_vec3_norm(bckray.direction);
-	if (!ft_calculate_cone_hits(bckray, hits, co.h, &tmp) \
-		&& !ft_calculate_cap_hit(bckray, hits, co.r, &tmp))
+	tmp.ray = rec->ray;
+	ray_apex = ft_vec3_sub(rec->ray.origin, co.apex);
+	eq.a = pow(ft_vec3_dot(rec->ray.direction, co.axis), 2) \
+		- pow(cos(co.angle), 2);
+	eq.b = 2.0 * (ft_vec3_dot(rec->ray.direction, co.axis) * \
+		ft_vec3_dot(ray_apex, co.axis) - ft_vec3_dot(rec->ray.direction, \
+		ray_apex) * pow(cos(co.angle), 2));
+	eq.c = pow(ft_vec3_dot(ray_apex, co.axis), 2) - ft_vec3_dot(ray_apex, \
+		ray_apex) * pow(cos(co.angle), 2);
+	if (!ft_solve(&eq))
 		return (false);
-	t_mat4	fwd;
-	t_mat4	bck;
-	t_vec3	rotation;
-	rotation = ft_get_rotation_vec3(co.axis);
-	ft_set_transform(co.base, rotation, (t_vec3){0, 0, 0}, &fwd);
-	ft_invert_matrix(fwd, &bck);
-	if (tmp.point.z == 0)
-	{
-		tmp.normal = (t_vec3){0.0, 0.0, 1.0};
-		t_vec3	origin = ft_transform_vec3((t_vec3){0.0, 0.0, 0.0}, FWDTRFM, fwd, bck);
-		tmp.normal = ft_vec3_norm(ft_vec3_sub(ft_transform_vec3(tmp.normal, FWDTRFM, fwd, bck), origin));
-	}
-	else
-	{
-		tmp.normal.x = tmp.point.x;
-		tmp.normal.y = tmp.point.y;
-		tmp.normal.z = -sqrtf(pow(tmp.point.x, 2.0) + pow(tmp.point.y, 2.0));
-		tmp.normal = ft_vec3_norm(ft_transform_vec3(tmp.normal, FWDTRFM, fwd, bck));
-	}
-	tmp.point = ft_transform_vec3(tmp.point, FWDTRFM, fwd, bck);
-	tmp.d = ft_vec3_abs(ft_vec3_sub(tmp.point, rec->ray.origin));
+	d3 = ft_co_cap_hit(co, tmp.ray);
+	ft_co_identify_hits(co, &tmp, eq, d3);
+	if (tmp.d < EPSILON)
+		return (false);
 	if (tmp.d < rec->d)
 	{
 		rec->d = tmp.d;
-		rec->point = tmp.point;
-		rec->normal = tmp.normal;
-		//rec->normal = ft_vec3_norm(ft_co_normal(*rec, co));
+		rec->point = ft_ray(rec->ray, rec->d);
+		rec->normal = ft_vec3_norm(ft_co_normal(*rec, co));
 		rec->colour = co.colour;
 		return (true);
 	}
 	return (false);
 }
 
-t_ray	ft_get_bckray(t_cone co, t_hitrecord rec)
+float	ft_co_cap_hit(t_cone co, t_ray ray)
 {
-	t_mat4	fwd;
-	t_mat4	bck;
-	t_vec3	rotation;
-	t_ray	bckray;
+	t_plane		pl;
+	t_hitrecord	rec;
+	t_interval	ray_d;
+	float		d;
 
-	rotation = ft_get_rotation_vec3(co.axis);
-	ft_set_transform(co.base, rotation, (t_vec3){0, 0, 0}, &fwd);
-	ft_invert_matrix(fwd, &bck);
-	bckray = ft_transform_ray(rec.ray, BCKTRFM, fwd, bck);
-	return (bckray);
+	pl.point = co.base;
+	pl.normal = co.axis;
+	pl.colour = co.colour;
+	ft_init_hitrecord(&rec);
+	rec.ray = ray;
+	ft_init_interval(&ray_d);
+	if (ft_hit_plane(pl, &rec, ray_d))
+		d = rec.d;
+	else
+		d = -1;
+	return (d);
 }
 
-bool	ft_calculate_cone_hits(t_ray bckray, t_vec3 hits[3], float h, \
-	t_hitrecord *tmp)
+void	ft_co_identify_hits(t_cone co, t_hitrecord *rec, t_equation eq, float d3)
 {
-	t_equation	eq;
+	if (ft_co_check_wall(co, eq.d1, rec))
+		rec->d = eq.d1;
+	if (ft_co_check_wall(co, eq.d2, rec))
+		rec->d = eq.d2;
+	if (ft_co_check_cap(co, d3, rec))
+		rec->d = d3;
+	if (rec->d == INFINITY)
+		rec->d = 0;
+}
 
-	eq.a = pow(bckray.direction.x, 2.0) + pow(bckray.direction.y, 2.0) - \
-		pow(bckray.direction.z, 2.0);
-	eq.b = 2.0 * (bckray.origin.x * bckray.direction.x + bckray.origin.y * \
-		bckray.direction.y - bckray.origin.z * bckray.direction.z);
-	eq.c = pow(bckray.origin.x, 2.0) + pow(bckray.origin.y, 2.0) - \
-		pow(bckray.origin.z, 2.0);
-	if (ft_solve(&eq) < 0)
-		return (false);
-	hits[0] = ft_ray(bckray, eq.d1);
-	hits[1] = ft_ray(bckray, eq.d2);
-	tmp->d = eq.d1;
-	tmp->point = hits[0];
-	if (!ft_check_cone_hits(eq.d1, hits[0], h))
+bool	ft_co_check_wall(t_cone co, float d, t_hitrecord *rec)
+{
+	t_vec3	ray_apex;
+	t_vec3	tmp;
+	t_vec3	hit;
+	double	angle;
+	double	m;
+
+	hit = ft_ray(rec->ray, d);
+	ray_apex = ft_vec3_sub(rec->ray.origin, co.apex);
+	m = ft_vec3_dot(rec->ray.direction, co.axis) * d + ft_vec3_dot(ray_apex,
+			co.axis);
+	tmp = ft_vec3_sub(hit, co.apex);
+	angle = acos(ft_vec3_dot(co.axis, tmp) / \
+		(ft_vec3_abs(co.axis) * ft_vec3_abs(tmp))) - 0.001;
+	if (m >= 0 && m <= co.h && angle - EPSILON <= co.angle && d > EPSILON
+		&& d < rec->d)
 	{
-		tmp->d = eq.d2;
-		tmp->point = hits[1];
-		if (!ft_check_cone_hits(eq.d2, hits[1], h))
-			return (false);
-	}
-	return (true);
-}
-
-bool	ft_check_cone_hits(float d, t_vec3 hit, float h)
-{
-	if (d > 0.0 && hit.z > 0.0 && hit.z < h)
-		return (true);
-	return (false);
-}
-
-bool	ft_calculate_cap_hit(t_ray bckray, t_vec3 hits[3], float r, \
-	t_hitrecord *tmp)
-{
-	int	d;
-
-	if (ft_nearly_equal_flt(bckray.direction.z, 0.0))
-		return (false);
-	d = (bckray.origin.z - 1.0) / -bckray.direction.z;
-	hits[2] = ft_ray(bckray, d);
-	if (d > 0.0 && sqrtf(pow(hits[2].x, 2.0) + pow(hits[2].y, 2.0)) < r && \
-		d < tmp->d)
-	{
-		tmp->d = d;
-		tmp->point = hits[2];
+		rec->axis_hit = ft_vec3_add(co.apex, ft_vec3_scale(co.axis, m));
 		return (true);
 	}
 	return (false);
+}
+
+bool	ft_co_check_cap(t_cone co, float d, t_hitrecord *rec)
+{
+	double	len;
+	t_vec3	hit;
+
+	hit = ft_ray(rec->ray, d);
+	len = ft_vec3_abs(ft_vec3_sub(hit, co.base));
+	len -= EPSILON;
+	if (len >= 0 && len <= co.r && d > EPSILON && d < rec->d)
+	{
+		rec->axis_hit = co.axis;
+		return (true);
+	}
+	return (false);
+}
+
+t_vec3	ft_co_normal(t_hitrecord rec, t_cone co)
+{
+	t_vec3	normal;
+	t_vec3	tmp;
+	double	adj;
+	double	hip;
+
+	if (ft_vec3_equal(rec.axis_hit, co.axis))
+		normal = co.axis;
+	else if (ft_vec3_equal(rec.point, co.apex))
+		normal = ft_vec3_scale(co.axis, -1);
+	else
+	{
+		adj = ft_vec3_abs(ft_vec3_sub(rec.point, co.apex));
+		hip = adj / cos(co.angle);
+		tmp = ft_vec3_add(co.apex, ft_vec3_scale(co.axis, hip));
+		normal = ft_vec3_sub(rec.point, tmp);
+	}
+	return (normal);
 }

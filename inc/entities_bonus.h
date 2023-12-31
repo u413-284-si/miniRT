@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/30 00:21:17 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/31 11:36:41 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,18 +92,22 @@ typedef struct s_cylinder
 /**
  * @brief Represents a cone
  * 
- * @param base		Base point of the cone
+ * @param apex		Apex point of the cone
+ * @param base		Base of the cone
  * @param axis		Normalised [-1, 1] axis of the cone
  * @param r			Radius of the circular base
  * @param h			Height of the cone
+ * @param angle		Half angle of the cone
  * @param colour	Colour of the cone
  */
 typedef struct s_cone
 {
+	t_vec3		apex;
 	t_vec3		base;
 	t_vec3		axis;
 	float		r;
 	float		h;
+	float		angle;
 	t_colour	colour;
 }	t_cone;
 
