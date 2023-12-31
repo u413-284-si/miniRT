@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/31 11:07:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/31 11:45:16 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,13 @@ typedef struct s_menu
 	t_pages		cur_page;
 }	t_menu;
 
+typedef enum e_mode
+{
+	CTRL_SCENE,
+	CTRL_CAM,
+	CTRL_LIGHT
+}	t_mode;
+
 /**
  * @brief Overarching render struct.
  *
@@ -106,6 +113,7 @@ typedef struct s_render
 	t_viewport	vp;
 	t_menu		menu;
 	bool		show_menu;
+	t_mode		mode;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
@@ -248,5 +256,8 @@ void	ft_render_start_loop(t_render *render);
 
 void	ft_init_menu(t_menu *menu, uint8_t alpha, uint32_t colour, uint32_t font_col);
 void	ft_draw_menu(t_render *render);
+
+void	ft_manip_light(int key, t_entities *scene);
+void	ft_manip_light_src(int key, t_light *light);
 
 #endif
