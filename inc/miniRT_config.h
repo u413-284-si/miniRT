@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 21:04:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/31 11:13:34 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,18 @@
 
 // standard movement speed
 # define MV_UNIT 0.5f
+
+// menu parameters
+# define MENU_WIDTH 150
+# define REGULAR "-schumacher-*-medium-r-normal-*-*-160-*-*-*-*-*-*"
+# define BOLD "-schumacher-*-bold-r-normal-*-*-160-*-*-*-*-*-*"
+# define Y_NEXT_LINE 20
+# define Y_NEXT_LINE_BIG 30
+# define X_OFFSET 30
+# define X_OFFSET_BIG 70
+# define MENU_OPACITY 100
+# define MENU_BACK 0x000000
+# define MENU_FONT 0xFFFFFF
+# define NUMLEN 10
 
 #endif

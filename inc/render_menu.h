@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/31 11:08:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/31 11:10:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,9 @@
 
 /* ====== LIBRARIES ====== */
 
+# include "miniRT_config.h"
 # include "render.h"
 # include "vec2.h"
-
-/* ====== MACROS ====== */
-
-# define NUMLEN 10
-# define BOLD "-schumacher-*-bold-r-normal-*-*-160-*-*-*-*-*-*"
-# define REGULAR "-schumacher-*-medium-r-normal-*-*-160-*-*-*-*-*-*"
-# define Y_NEXT_LINE 20
-# define Y_NEXT_LINE_BIG 30
-# define X_OFFSET 30
-# define X_OFFSET_BIG 70
-# define WHITE 0xffffff
-# define MENU_WIDTH 150
 
 /* ====== TYPEDEFS ====== */
 
