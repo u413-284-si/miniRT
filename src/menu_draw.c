@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/31 10:46:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/31 13:07:52 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	ft_draw_menu(t_render *render)
 {
 	int		x;
 	int		y;
+	t_vec2i	pos;
 
 	if (render->show_menu == false)
 		return (ft_mlx_put_str(&render->mlx_ptrs, (t_vec2i){20, 20},
@@ -55,10 +56,16 @@ void	ft_draw_menu(t_render *render)
 			ft_blend_background(&render->mlx_ptrs.img, x, y, render->menu);
 		}
 	}
-	if (1)
-		ft_put_hittable(&render->mlx_ptrs, (t_vec2i){20, 20},
+	pos = (t_vec2i){20, 20};
+	pos = ft_put_mode(&render->mlx_ptrs, pos,
+		render->menu.font_col, render->mode);
+	if (render->mode == CTRL_SCENE)
+		ft_put_hittable(&render->mlx_ptrs, pos,
 			render->menu.font_col, render->scene.obj[render->scene.active]);
-	else
-		ft_put_camera(&render->mlx_ptrs, (t_vec2i){20, 20},
+	else if (render->mode == CTRL_CAM)
+		ft_put_camera(&render->mlx_ptrs, pos,
 			render->menu.font_col, render->cam);
+	else if (render->mode == CTRL_LIGHT)
+		;//ft_put_light(&render->mlx_ptrs, pos,
+		//	render->menu.font_col, render->scene.light[render->scene.active]);}
 }
