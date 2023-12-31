@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/30 16:36:48 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/31 11:58:33 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -136,6 +136,7 @@ SRC := 	camera.c \
 		menu_put_camera_lights.c \
 		menu_put_element.c \
 		menu_put_hittable.c \
+		menu_put_mode.c \
 		menu_put_num.c \
 		parse_entity_ACL.c \
 		parse_entity_sp_pl_cy.c \
@@ -147,6 +148,7 @@ SRC := 	camera.c \
 		render_draw.c \
 		render_init_mlx.c \
 		render_keyhook_hittable.c \
+		render_keyhook_light.c \
 		render_keyhook_utils.c \
 		render_keyhook.c \
 		render_loop_mlx.c \

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/31 11:10:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/31 12:54:22 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,15 @@
 # include "miniRT_config.h"
 # include "render.h"
 # include "vec2.h"
+
+/* ====== MACROS ====== */
+
+# define Y_NEXT_LINE 20
+# define Y_NEXT_LINE_BIG 30
+# define X_OFFSET 30
+# define X_OFFSET_MID 50
+# define X_OFFSET_BIG 70
+# define NUMLEN 10
 
 /* ====== TYPEDEFS ====== */
 
@@ -34,10 +43,6 @@ typedef struct s_numinfo
 }	t_numinfo;
 
 /* ====== FUNCTIONS ====== */
-
-// menu_init.c
-
-void	ft_init_menu(t_menu *menu, uint8_t alpha, uint32_t colour, uint32_t font_col);
 
 // menu_put_num.c
 
@@ -75,9 +80,13 @@ void	ft_put_camera(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 void	ft_put_light(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 			t_light light);
 
+// menu_put_mode.c
+
+t_vec2i	ft_put_mode(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
+			t_mode mode);
+
 // menu_draw.c
 uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu);
-void	ft_blend_background(t_img *img, int x, int y, t_menu menu);
-void	ft_draw_menu(t_render *render);
+void	ft_blend_background(t_img *img, int height, t_menu menu);
 
 #endif
