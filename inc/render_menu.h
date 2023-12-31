@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 16:40:28 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/31 11:08:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ typedef struct s_numinfo
 
 // menu_init.c
 
-t_menu	ft_init_menu(uint8_t alpha, uint32_t colour, uint32_t font_col);
+void	ft_init_menu(t_menu *menu, uint8_t alpha, uint32_t colour, uint32_t font_col);
 
 // menu_put_num.c
 
