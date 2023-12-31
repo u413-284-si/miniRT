@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 12:26:59 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/29 22:04:44 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/30 15:24:52 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,11 @@ t_vec3	ft_get_rotation_vec3(t_vec3 orientation)
 {
 	t_vec3	rotation;
 
-	rotation.x = atan2f(orientation.y, orientation.z);
-	rotation.y = atan2f(orientation.x, sqrtf(powf(orientation.y, 2.0) + \
-		powf(orientation.z, 2.0)));
-	rotation.z = 0.0;
+	rotation.x = atan2f(sqrtf(pow(orientation.z, 2.0) + \
+		pow(orientation.x, 2.0)), orientation.y);
+	if (orientation.y < 0)
+		rotation.x *= -1;
+	rotation.y = 0.0;
+	rotation.z = atan2f(orientation.x, orientation.z);
 	return (rotation);
 }
