@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/31 13:35:40 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/31 14:50:57 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d);
  * @return true 			If cylinder is hit
  * @return false 			If cylinder is missed
  */
-bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
+bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
 	float potential_hits[4]);
 
 /**
@@ -180,18 +180,95 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec);
 bool	ft_cy_visible(t_equation eq, t_interval ray_d, float d3, \
 	float d4);
 
+// CONE
+
+/**
+ * @brief Calculates if a cone was hit by a ray
+ * 
+ * The calculation is very similar to the cylinder with a few adjustments in
+ * the equation and the amount of possible hits.
+ * The ray can hit the cone in three different spots. Two represent the wall 
+ * of the cone. The third one is at the end cap or base. The three potential 
+ * hits are calculated and checked whether they are "visible" - not blocked 
+ * by another object - and if the calculated hit is actually a hit and not
+ * result of a rounding error.
+ * @param co 		Cone 
+ * @param rec 		Hit record of ray containing most recent hit
+ * @param ray_d 	Interval of min and max defining area of visibility
+ * @return true 	If cone is hit
+ * @return false 	If cone is not hit
+ */
 bool	ft_hit_cone(t_cone co, t_hitrecord *rec, t_interval ray_d);
 
+/**
+ * @brief Calculates potential hits of a cone
+ * 
+ * @param co 				Cone
+ * @param ray 				Ray shot into scene
+ * @param potential_hits 	Float array for three potential hits
+ * @return true 			If cone is potentially hit
+ * @return false 			If cone is not hit
+ */
+bool	ft_co_calc_pot_hits(t_cone co, t_ray ray, float potential_hits[3]);
 
+/**
+ * @brief Calculates potential hit of cone cap
+ * 
+ * @param co		Cone 
+ * @param ray 		Ray shot into scene
+ * @return float 
+ */
 float	ft_co_cap_hit(t_cone co, t_ray ray);
 
+/**
+ * @brief Determines whether the potential hits are accurate
+ * 
+ * @param co				Cone
+ * @param rec				Hit record containing all meta data of identified hits
+ * @param potential_hits	Float array for three potential hits
+ */
+void	ft_co_identify_hits(t_cone co, t_hitrecord *rec, \
+	float potential_hits[3]);
 
-void	ft_co_identify_hits(t_cone co, t_hitrecord *rec, t_equation eq, float d3);
-
+/**
+ * @brief Check if the ray actually hit the cone wall
+ * 
+ * @param co 		Cone
+ * @param d 		Distance traveled by ray until hit
+ * @param rec 		Hit record containing all meta data of identified hits
+ * @return true 	If wall was hit
+ * @return false 	If was was not hit
+ */
 bool	ft_co_check_wall(t_cone co, float d, t_hitrecord *rec);
 
+/**
+ * @brief Check if the ray actually hit the cone cap
+ * 
+ * @param co 		Cone
+ * @param d 		Distance traveled by ray until hit
+ * @param rec 		Hit record containing all meta data of identified hits
+ * @return true 	If cap was hit
+ * @return false 	If cap was not hit
+ */
 bool	ft_co_check_cap(t_cone co, float d, t_hitrecord *rec);
 
+/**
+ * @brief Calculates the normal on the point of intersection of the cone
+ * 
+ * @param rec 		Hit record containing all meta data of identified hit
+ * @param co 		Cone
+ * @return t_vec3 
+ */
 t_vec3	ft_co_normal(t_hitrecord rec, t_cone co);
+
+/**
+ * @brief Checks whether the cone is blocked by another object
+ * 
+ * @param ray_d 			Interval of min and max defining area of visibility
+ * @param potential_hits 	Float array for three potential hits
+ * @return true 			If the cone is visible/not blocked
+ * @return false 			If the cone is blocked
+ */
+bool	ft_co_visible(t_interval ray_d, float potential_hits[3]);
 
 #endif
