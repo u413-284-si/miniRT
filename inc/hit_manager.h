@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 13:18:18 by sqiu             ###   ########.fr       */
+/*   Updated: 2023/12/31 13:48:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d);
  * @return true 			If cylinder is hit
  * @return false 			If cylinder is missed
  */
-bool	ft_cy_calculate_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
+bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
 	float potential_hits[4]);
 
 /**
