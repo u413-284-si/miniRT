@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:16:27 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 19:30:58 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 18:55:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_print_cam(const t_cam cam)
 {
 	printf("Camera:\n");
 	printf("Position: ");
-	ft_print_vec3(cam.position);
+	ft_print_vec3(cam.centre);
 	printf("Direction: ");
 	ft_print_vec3(cam.direction);
 	printf("FOV: %f\n", ft_radian_to_degree(cam.hfov));

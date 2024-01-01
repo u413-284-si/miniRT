@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/01 18:03:18 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 18:55:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ typedef struct s_pixel_grid
 /**
  * @brief Contains camera parameters
  *
- * @param position			Where the camera is located.
+ * @param centre			Where the camera is located.
  * @param direction			In which direction the camera is looking.
  * @param u					Basis vector pointing to camera right
  * @param v					Basis vector pointing to camera up
@@ -54,7 +54,7 @@ typedef struct s_pixel_grid
  */
 typedef struct s_cam
 {
-	t_vec3			position;
+	t_vec3			centre;
 	t_vec3			direction;
 	t_vec3			u;
 	t_vec3			v;
@@ -123,7 +123,7 @@ void	ft_cam_calc_viewport_dimensions(t_cam *cam);
  * calculated from these vectors and the image size.
  *
  * The upper left corner of the viewport is calculated from
- * camera position, view direction and focal length, and viewport_u and -_v.
+ * camera centre, view direction and focal length, and viewport_u and -_v.
  * The position of the first pixel is then calculated from the upper left corner.
  * @param cam		Struct containing camera parameters.
  */
