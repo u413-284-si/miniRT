@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/01 17:33:58 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 18:03:18 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ typedef struct s_cam
  * @brief Initializes camera parameters.
  *
  * Calculates the base vectors.
- * Sets the focal length to 10.0.
+ * Sets the focal length to 1.
  * Sets the image size to the given size.
  * Calculates the viewport dimensions.
  * Calculates the pixel grid parameters.

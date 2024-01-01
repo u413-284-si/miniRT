@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 08:47:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 18:03:23 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_cam_init(t_cam *cam, t_vec2i img_size)
 {
 	ft_cam_calc_base_vectors(cam);
-	cam->focal_length = 10.0;
+	cam->focal_length = 1.0;
 	cam->image = img_size;
 	ft_cam_calc_viewport_dimensions(cam);
 	ft_cam_calc_pixel_grid(cam);
