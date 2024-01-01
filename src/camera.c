@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/01 18:55:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 18:58:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,13 @@ void	ft_cam_calc_base_vectors(t_cam *cam)
 {
 	const t_vec3	world_up = {0.0, 1.0, 0.0};
 
-	cam->w = ft_vec3_norm(ft_vec3_scale(cam->direction, -1));
-	cam->u = ft_vec3_cross(world_up, cam->w);
+	cam->w = ft_vec3_scale(cam->direction, -1);
+	if (cam->w.y == 1)
+		cam->u = (t_vec3){-1, 0, 0};
+	else if (cam->w.y == -1)
+		cam->u = (t_vec3){1, 0, 0};
+	else
+		cam->u = ft_vec3_cross(world_up, cam->w);
 	cam->v = ft_vec3_cross(cam->w, cam->u);
 }
 
