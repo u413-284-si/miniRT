@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 16:03:58 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 17:33:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,9 @@ void	ft_cam_init(t_cam *cam, t_vec2i img_size);
  * @brief Calculates basis vectors u, v, w
  *
  * Calculates the orthonormal basis (coordinate system) to describe the
- * cameras orientation. The camera is looking in the direction of the
- * vector cam->direction (w). The world_up vector represents "up" of the world.
+ * cameras orientation. The camera is looking down along the negative z-axis,
+ * which is the opposite of the view direction (w).
+ * The world_up vector represents "up" of the world.
  * It is used to calculate the right direction (u). With these two vectors,
  * the up direction of the camera (v) can be calculated.
  * @param cam 	Struct containing camera parameters
