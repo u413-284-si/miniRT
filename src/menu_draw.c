@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/31 13:07:52 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 16:54:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,46 +26,52 @@ uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu)
 	return (blend_rb | blend_g);
 }
 
-void	ft_blend_background(t_img *img, int x, int y, t_menu menu)
+void	ft_blend_background(t_img *img, t_menu menu)
 {
 	char		*pixel;
 	uint32_t	img_colour;
 	uint32_t	blend_colour;
+	t_vec2i		pos;
 
-	pixel = img->addr + (y * img->line_len + x * img->bytes);
-	img_colour = *(uint32_t *)pixel;
-	blend_colour = fast_alpha_blend(img_colour, menu);
-	*(uint32_t *)pixel = blend_colour;
+	pos.y = -1;
+	while (++pos.y < img->height)
+	{
+		pos.x = -1;
+		while (++pos.x < MENU_WIDTH)
+		{
+			pixel = img->addr + (pos.y * img->line_len + pos.x * img->bytes);
+			img_colour = *(uint32_t *)pixel;
+			blend_colour = fast_alpha_blend(img_colour, menu);
+			*(uint32_t *)pixel = blend_colour;
+		}
+	}
 }
 
 void	ft_draw_menu(t_render *render)
 {
-	int		x;
-	int		y;
 	t_vec2i	pos;
 
-	if (render->show_menu == false)
-		return (ft_mlx_put_str(&render->mlx_ptrs, (t_vec2i){20, 20},
-			render->menu.font_col, "Press 'i' to show menu"));
-	y = -1;
-	while (++y < render->mlx_ptrs.img.height)
-	{
-		x = -1;
-		while (++x < MENU_WIDTH)
-		{
-			ft_blend_background(&render->mlx_ptrs.img, x, y, render->menu);
-		}
-	}
 	pos = (t_vec2i){20, 20};
+	if (render->show_menu == false)
+		return (ft_mlx_put_str(&render->mlx_ptrs, pos,
+			render->menu.font_col, "Press 'i' to show menu"));
+	ft_blend_background(&render->mlx_ptrs.img, render->menu);
 	pos = ft_put_mode(&render->mlx_ptrs, pos,
-		render->menu.font_col, render->mode);
+			render->menu.font_col, render->mode);
 	if (render->mode == CTRL_SCENE)
 		ft_put_hittable(&render->mlx_ptrs, pos,
 			render->menu.font_col, render->scene.obj[render->scene.active]);
 	else if (render->mode == CTRL_CAM)
+	{
 		ft_put_camera(&render->mlx_ptrs, pos,
 			render->menu.font_col, render->cam);
+		pos.y = 300;
+		ft_put_ctrl_camera(&render->mlx_ptrs, pos, render->menu.font_col);
+	}
 	else if (render->mode == CTRL_LIGHT)
+
 		;//ft_put_light(&render->mlx_ptrs, pos,
 		//	render->menu.font_col, render->scene.light[render->scene.active]);}
+	pos = (t_vec2i){20, 530};
+	ft_put_info(&render->mlx_ptrs, pos, render->menu.font_col);
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/31 12:12:55 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 16:54:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 # define MV_UNIT 0.5f
 
 // menu parameters
-# define MENU_WIDTH 150
+# define MENU_WIDTH 200
 # define REGULAR "-schumacher-*-medium-r-normal-*-*-160-*-*-*-*-*-*"
 # define BOLD "-schumacher-*-bold-r-normal-*-*-160-*-*-*-*-*-*"
 # define MENU_OPACITY 100

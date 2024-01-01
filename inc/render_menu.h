@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/31 13:05:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 16:51:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,14 @@ void	ft_put_light(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 
 t_vec2i	ft_put_mode(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 			t_mode mode);
+t_vec2i	ft_put_info(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col);
+
+// menu_put_ctrl.c
+
+t_vec2i	ft_put_ctrl_camera(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col);
 
 // menu_draw.c
 uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu);
-void	ft_blend_background(t_img *img, int x, int y, t_menu menu);
+void	ft_blend_background(t_img *img, t_menu menu);
 
 #endif
