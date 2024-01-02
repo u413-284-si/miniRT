@@ -13,10 +13,13 @@ var searchData=
   ['s_5flight_11',['s_light',['../structs__light.html',1,'']]],
   ['s_5fmat4_12',['s_mat4',['../structs__mat4.html',1,'']]],
   ['s_5fmlx_5fptrs_13',['s_mlx_ptrs',['../structs__mlx__ptrs.html',1,'']]],
-  ['s_5fplane_14',['s_plane',['../structs__plane.html',1,'']]],
-  ['s_5fray_15',['s_ray',['../structs__ray.html',1,'']]],
-  ['s_5frender_16',['s_render',['../structs__render.html',1,'']]],
-  ['s_5fsphere_17',['s_sphere',['../structs__sphere.html',1,'']]],
-  ['s_5fvec3_18',['s_vec3',['../structs__vec3.html',1,'']]],
-  ['s_5fviewport_19',['s_viewport',['../structs__viewport.html',1,'']]]
+  ['s_5fmouse_14',['s_mouse',['../structs__mouse.html',1,'']]],
+  ['s_5fpixel_5fgrid_15',['s_pixel_grid',['../structs__pixel__grid.html',1,'']]],
+  ['s_5fplane_16',['s_plane',['../structs__plane.html',1,'']]],
+  ['s_5fray_17',['s_ray',['../structs__ray.html',1,'']]],
+  ['s_5frender_18',['s_render',['../structs__render.html',1,'']]],
+  ['s_5fsphere_19',['s_sphere',['../structs__sphere.html',1,'']]],
+  ['s_5fvec2f_20',['s_vec2f',['../structs__vec2f.html',1,'']]],
+  ['s_5fvec2i_21',['s_vec2i',['../structs__vec2i.html',1,'']]],
+  ['s_5fvec3_22',['s_vec3',['../structs__vec3.html',1,'']]]
 ];

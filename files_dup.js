@@ -23,5 +23,6 @@ var files_dup =
     [ "ray.h", "ray_8h_source.html", null ],
     [ "render.h", "render_8h_source.html", null ],
     [ "utils.h", "utils_8h_source.html", null ],
+    [ "vec2.h", "vec2_8h_source.html", null ],
     [ "vec3.h", "vec3_8h_source.html", null ]
 ];

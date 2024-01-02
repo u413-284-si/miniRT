@@ -1,11 +1,13 @@
 var structs__cam =
 [
-    [ "camera_centre", "structs__cam.html#afd3be18cfab47bc071b59efdde0c2998", null ],
+    [ "centre", "structs__cam.html#a0f188ccfa73fd29ad62023c50c7d2a5f", null ],
+    [ "direction", "structs__cam.html#af64cb245ee8ece9da45ed51f894db302", null ],
+    [ "focal_length", "structs__cam.html#a6058af181f19d940f7e30a94877f422b", null ],
     [ "hfov", "structs__cam.html#a672c6ed4b0124b4f2a0a2c72ceb308ed", null ],
-    [ "look_at", "structs__cam.html#a261ce0491533902f4005ee6e42b7b62a", null ],
-    [ "look_from", "structs__cam.html#a00a070a72d358260a9ee2a9d0eef0b4b", null ],
+    [ "image", "structs__cam.html#a640694e915fe124129546485924e6a6a", null ],
+    [ "pixels", "structs__cam.html#a83bea1e743e210079e1e9a8d693d0360", null ],
     [ "u", "structs__cam.html#ad2500923867e58e508a04f0e2dc7a5a9", null ],
     [ "v", "structs__cam.html#a62f461a97f97758ac375c5a925092823", null ],
-    [ "vup", "structs__cam.html#a96b3f678a942cbc45b709b4ec1de762d", null ],
+    [ "viewport", "structs__cam.html#a99ab88141e8e5546082274caf7a11ec8", null ],
     [ "w", "structs__cam.html#a847e598e6d6ee5145a152c1747a7ceda", null ]
 ];

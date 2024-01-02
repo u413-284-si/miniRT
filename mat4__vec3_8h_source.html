@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('mat4__vec3_8h_source.html',''); initRe
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/12/20 11:33:46 by gwolf             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/12/20 11:43:50 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/12/25 16:15:51 by gwolf            ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -116,13 +116,17 @@ $(document).ready(function(){initNavTree('mat4__vec3_8h_source.html',''); initRe
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// mat4_vec3_rotate.c</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_mult_mat4(<span class="keyword">const</span> <a class="code" href="structs__mat4.html">t_mat4</a> mat, <span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_rotate_x(<span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> roll);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_rotate_y(<span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> pitch);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_rotate_z(<span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> yaw);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructs__mat4_html"><div class="ttname"><a href="structs__mat4.html">s_mat4</a></div><div class="ttdef"><b>Definition:</b> mat4.h:22</div></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_mult_mat4(<span class="keyword">const</span> <a class="code" href="structs__mat4.html">t_mat4</a> mat, <span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_rotate_x(<span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> roll);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_rotate_y(<span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> pitch);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_rotate_z(<span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> yaw);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astructs__mat4_html"><div class="ttname"><a href="structs__mat4.html">s_mat4</a></div><div class="ttdoc">4x4 matrix of floats.</div><div class="ttdef"><b>Definition:</b> mat4.h:29</div></div>
 <div class="ttc" id="astructs__vec3_html"><div class="ttname"><a href="structs__vec3.html">s_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> vec3.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

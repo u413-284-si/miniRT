@@ -13,11 +13,14 @@ var annotated_dup =
     [ "s_light", "structs__light.html", "structs__light" ],
     [ "s_mat4", "structs__mat4.html", "structs__mat4" ],
     [ "s_mlx_ptrs", "structs__mlx__ptrs.html", "structs__mlx__ptrs" ],
+    [ "s_mouse", "structs__mouse.html", "structs__mouse" ],
+    [ "s_pixel_grid", "structs__pixel__grid.html", "structs__pixel__grid" ],
     [ "s_plane", "structs__plane.html", "structs__plane" ],
     [ "s_ray", "structs__ray.html", "structs__ray" ],
     [ "s_render", "structs__render.html", "structs__render" ],
     [ "s_sphere", "structs__sphere.html", "structs__sphere" ],
+    [ "s_vec2f", "structs__vec2f.html", "structs__vec2f" ],
+    [ "s_vec2i", "structs__vec2i.html", "structs__vec2i" ],
     [ "s_vec3", "structs__vec3.html", "structs__vec3" ],
-    [ "s_viewport", "structs__viewport.html", "structs__viewport" ],
     [ "u_shape", "unionu__shape.html", "unionu__shape" ]
 ];
