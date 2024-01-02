@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:19:10 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/22 00:40:06 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 08:55:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen)
 {
-	int	win_size[2];
+	t_vec2i	win_size;
 
 	if (ft_err_mlx_init((void **)&mlx_ptrs->mlx_ptr))
 		return (ERROR);
 	if (fullscreen)
-		ft_set_fullscreen(mlx_ptrs->mlx_ptr, win_size);
+		win_size = ft_set_fullscreen(mlx_ptrs->mlx_ptr);
 	else
 	{
-		win_size[0] = WIN_SIZE_X;
-		win_size[1] = WIN_SIZE_Y;
+		win_size.x = WIN_SIZE_X;
+		win_size.y = WIN_SIZE_Y;
 	}
 	if (ft_err_mlx_new_window((void **)&mlx_ptrs->win_ptr,
 			mlx_ptrs->mlx_ptr, win_size, "miniRT"))
@@ -39,12 +39,15 @@ t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen)
 	return (SUCCESS);
 }
 
-void	ft_set_fullscreen(void *mlx_ptr, int win_size[2])
+t_vec2i	ft_set_fullscreen(void *mlx_ptr)
 {
-	mlx_get_screen_size(mlx_ptr, &win_size[0], &win_size[0]);
+	t_vec2i	win_size;
+
+	mlx_get_screen_size(mlx_ptr, &win_size.x, &win_size.y);
+	return (win_size);
 }
 
-t_err	ft_init_image(t_mlx_ptrs *mlx_ptrs, int size[2])
+t_err	ft_init_image(t_mlx_ptrs *mlx_ptrs, t_vec2i size)
 {
 	if (ft_err_mlx_new_image((void **)&mlx_ptrs->img, mlx_ptrs->mlx_ptr, size))
 		return (ERROR);
@@ -52,7 +55,6 @@ t_err	ft_init_image(t_mlx_ptrs *mlx_ptrs, int size[2])
 			&mlx_ptrs->img.bpp, &mlx_ptrs->img.line_len,
 			&mlx_ptrs->img.endian);
 	mlx_ptrs->img.bytes = mlx_ptrs->img.bpp / 8;
-	mlx_ptrs->img.width = size[0];
-	mlx_ptrs->img.height = size[1];
+	mlx_ptrs->img.size = size;
 	return (SUCCESS);
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 22:17:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 20:12:42 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@
 # include "miniRT_config.h"
 # include "mat4_vec3.h"
 # include "print.h"
+# include "ray.h"
+# include "vec2.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -50,8 +52,7 @@ typedef struct s_img
 	int		line_len;
 	int		endian;
 	int		bytes;
-	int		width;
-	int		height;
+	t_vec2i	size;
 }	t_img;
 
 /**
@@ -69,6 +70,19 @@ typedef struct s_mlx_ptrs
 }	t_mlx_ptrs;
 
 /**
+ * @brief Mouse struct.
+ *
+ * @param left		Left mouse button pressed flag.
+ * @param right		Right mouse button pressed flag.
+ * @param last_pos	Last mouse position.
+ */
+typedef struct s_mouse {
+	bool	left;
+	bool	right;
+	t_vec2i	last_pos;
+}	t_mouse;
+
+/**
  * @brief Overarching render struct.
  *
  * @param mlx_ptrs		mlx pointers struct.
@@ -82,7 +96,7 @@ typedef struct s_render
 	t_mlx_ptrs	mlx_ptrs;
 	t_cam		cam;
 	t_entities	scene;
-	t_viewport	vp;
+	t_mouse		mouse;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
@@ -105,15 +119,15 @@ t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen);
  * @param size			Image size as int array.
  * @return t_err		SUCCESS, ERROR.
  */
-t_err	ft_init_image(t_mlx_ptrs *mlx_ptrs, int size[2]);
+t_err	ft_init_image(t_mlx_ptrs *mlx_ptrs, t_vec2i size);
 
 /**
  * @brief Sets the window to fullscreen.
  *
  * @param mlx_ptr	Mlx pointer.
- * @param win_size	Pointer to int array for window size.
+ * @return t_vec2i	Window size.
  */
-void	ft_set_fullscreen(void *mlx_ptr, int win_size[2]);
+t_vec2i	ft_set_fullscreen(void *mlx_ptr);
 
 // render_draw.c
 
@@ -205,11 +219,133 @@ void	ft_manip_cylinder(int key, t_cylinder *cy);
 
 // render_keyhook_utils.c
 
+/**
+ * @brief Moves a 3D point with a keypress.
+ *
+ * WS (Forward, Backward)
+ * AD (Left, Right)
+ * QE (Up, Down)
+ * @param key	Keycode of the pressed key.
+ * @param point	3D point to move.
+ */
 void	ft_keyhook_mv_point(int key, t_vec3 *point);
 
+/**
+ * @brief Rotates a 3D vector with a keypress.
+ *
+ * Arrow Left, Right (Rotate X)
+ * Arrow Up, Down (Rotate Y)
+ * @param key		Keycode of the pressed key.
+ * @param vector	3D vector to rotate.
+ */
 void	ft_keyhook_rot_vec(int key, t_vec3 *vector);
 
+/**
+ * @brief Changes the colour with a keypress.
+ *
+ * Number keys have predefined colors associated.
+ * @param key	Keycode of the pressed key.
+ * @param col	Pointer to colour struct.
+ */
 void	ft_keyhook_change_col(int key, t_colour *col);
+
+// render_keyhook_camera.c
+
+/**
+ * @brief Rotates the camera with a keypress.
+ *
+ * Arrow Left, Right (Rotate X)
+ * Arrow Up, Down (Rotate Y)
+ * @param key		Keycode of the pressed key.
+ * @param direction	Camera direction vector.
+ */
+void	ft_keyhook_rot_cam(int key, t_vec3 *direction);
+
+/**
+ * @brief Moves the camera with a keypress.
+ *
+ * The camera moves along its orthonormal basis.
+ * WS (Forward, Backward)
+ * AD (Left, Right)
+ * QE (Up, Down)
+ * @param key	Keycode of the pressed key.
+ * @param cam	Pointer to camera struct.
+ */
+void	ft_keyhook_move_cam(int key, t_cam *cam);
+
+/**
+ * @brief Changes the camera FOV with a keypress.
+ *
+ * R (Decrease FOV)
+ * F (Increase FOV)
+ * @param key	Keycode of the pressed key.
+ * @param cam	Pointer to camera struct.
+ */
+void	ft_keyhook_fov_cam(int key, t_cam *cam);
+
+/**
+ * @brief Manipulates the camera with a keypress.
+ *
+ * Checks for keypresses and calls the corresponding function.
+ * Re-calculates different aspects of camera (viewport dimensions,
+ * base vectors, pixel grid) if necessary.
+ * @param key	Keycode of the pressed key.
+ * @param cam	Pointer to camera struct.
+ */
+void	ft_manip_cam(int key, t_cam *cam);
+
+// render_mouse.c
+
+/**
+ * @brief Handles mouse button presses.
+ *
+ * If right mouse button is pressed, the last mouse position is saved
+ * and the right mouse button flag is set.
+ * @param button	Button code.
+ * @param x			X coordinate.
+ * @param y			Y coordinate.
+ * @param render	Pointer to render struct.
+ * @return int		0 if successful, -1 if not.
+ */
+int		ft_mouse_hook_press(int button, int x, int y, t_render *render);
+
+/**
+ * @brief Handles mouse button releases.
+ *
+ * If left mouse button is released, the left mouse button flag is toggled.
+ * If right mouse button is released, the right mouse button flag is cleared.
+ * @param button	Button code.
+ * @param x			X coordinate.
+ * @param y			Y coordinate.
+ * @param render	Pointer to render struct.
+ * @return int		0 if successful, -1 if not.
+ */
+int		ft_mouse_hook_release(int button, int x, int y, t_render *render);
+
+/**
+ * @brief Handles mouse movement.
+ *
+ * If right mouse button is pressed, the camera is rotated with
+ * ft_mouse_hook_rot_cam().
+ * @param x			X coordinate.
+ * @param y			Y coordinate.
+ * @param render	Pointer to render struct.
+ * @return int		0 if successful, -1 if not.
+ */
+int		ft_mouse_hook_move(int x, int y, t_render *render);
+
+/**
+ * @brief Rotates the camera with the mouse.
+ *
+ * Calc the delta between the last mouse position and the current mouse position.
+ * The delta is multiplied by 0.1 to slow down the rotation.
+ * Rotate the camera direction vector with the delta.
+ * Re-calculate the camera base vectors and pixel grid.
+ * @param x			X coordinate.
+ * @param y			Y coordinate.
+ * @param render	Pointer to render struct.
+ */
+void	ft_mouse_hook_rot_cam(int x, int y, t_render *render);
 
 // render_loop_mlx.c
 

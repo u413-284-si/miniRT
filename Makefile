@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/25 16:33:40 by gwolf            ###   ########.fr        #
+#    Updated: 2023/12/25 19:30:23 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,8 @@ OBJ_DIR_LEAK := $(BASE_OBJ_DIR)/leak
 OBJ_DIR_ADDRESS := $(BASE_OBJ_DIR)/address
 # Subdirectory for compilation with speed optimization
 OBJ_DIR_SPEED := $(BASE_OBJ_DIR)/speed
+# Subdirectory for compilation with profiling
+OBJ_DIR_PROFILE := $(BASE_OBJ_DIR)/profile
 # Set default object directory
 OBJ_DIR = $(OBJ_DIR_DEFAULT)
 # Set object directory depending on target
@@ -57,11 +59,14 @@ else ifneq (,$(findstring address,$(MAKECMDGOALS)))
 	OBJ_DIR = $(OBJ_DIR_ADDRESS)
 else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
 	OBJ_DIR = $(OBJ_DIR_SPEED)
+else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
+	OBJ_DIR = $(OBJ_DIR_PROFILE)
 endif
 LIB_DIR := lib
 LIB_DIR_FT := $(LIB_DIR)/libft
 INC_DIR := inc
 DEP_DIR = $(OBJ_DIR)/dep
+LOG_DIR := log
 
 # ******************************
 # *     Libraries              *
@@ -93,6 +98,8 @@ LEAK := $(DEFAULT)_leak
 ADDRESS := $(DEFAULT)_address
 # Target for speed optimization
 SPEED := $(DEFAULT)_speed
+# Target for profiling
+PROFILE := $(DEFAULT)_profile
 # Set default target
 NAME = $(DEFAULT)
 # Set target depending on target
@@ -102,6 +109,8 @@ else ifneq (,$(findstring address,$(MAKECMDGOALS)))
 	NAME = $(ADDRESS)
 else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
 	NAME = $(SPEED)
+else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
+	NAME = $(PROFILE)
 endif
 LIBFT := $(LIB_DIR_FT)/libft.a
 
@@ -109,7 +118,8 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC := 	camera.c \
+SRC :=	camera_movement.c \
+		camera.c \
 		check_entity_ACL.c \
 		check_entity_sp_pl_cy.c \
 		check_line.c \
@@ -140,10 +150,12 @@ SRC := 	camera.c \
 		ray.c \
 		render_draw.c \
 		render_init_mlx.c \
+		render_keyhook_camera.c \
 		render_keyhook_hittable.c \
 		render_keyhook_utils.c \
 		render_keyhook.c \
 		render_loop_mlx.c \
+		render_mouse.c \
 		render_output_ppm.c \
 		scene_init.c \
 		scene_light.c \
@@ -170,6 +182,15 @@ OBJS := $(addprefix $(OBJ_DIR)/, $(OBJ))
 DEPFILES = $(SRC:%.c=$(DEP_DIR)/%.d)
 
 # ******************************
+# *     Log files              *
+# ******************************
+
+DEFAULT_SCENE = scenes/basic_spheres.rt
+LOG_FILE_BASE = $(LOG_DIR)/$(shell date "+%Y-%m-%d-%H-%M-%S")
+LOG_VALGRIND = $(LOG_FILE_BASE)_valgrind.log
+LOG_GPROF = $(LOG_FILE_BASE)_gprof.log
+
+# ******************************
 # *     Default target         *
 # ******************************
 
@@ -182,10 +203,14 @@ all: $(NAME)
 
 # Linking the NAME target
 $(NAME): $(LIBFT) $(OBJS)
-	@printf "\n$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	$(SILENT)$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
-	@printf "\n$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	@printf "$(BOLD)$(GREEN)$(NAME) created!$(RESET)\n\n"
+	@printf "$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(BOLD)$(GREEN)$(NAME) created!$(RESET)\n"
+
+# ******************************
+# *     Special targets        *
+# ******************************
 
 # This target adds fsanitize leak checker to the flags.
 .PHONY: leak
@@ -205,17 +230,28 @@ speed: CFLAGS = -Ofast -march=native
 speed: LDFLAGS += -flto
 speed: $(NAME)
 
+# This target adds flags which enable profiling.
+.PHONY: profile
+profile: CFLAGS += -pg
+profile: LDFLAGS += -pg
+profile: $(NAME) | $(LOG_DIR)
+	@printf "\n$(YELLOW)$(BOLD)Run for profiling$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "Profile scene: $(DEFAULT_SCENE)\n"
+	$(SILENT)./$(NAME) $(DEFAULT_SCENE)
+	$(SILENT)gprof $(NAME) gmon.out > $(LOG_GPROF)
+	@printf "\n$(YELLOW)$(BOLD)Saved log file$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	$(SILENT)rm gmon.out
+	$(SILENT)ls -dt1 $(LOG_DIR)/* | head -n 1 | xargs less
+
 # Perform memory check on NAME.
 .PHONY: valgr
-valgr: $(NAME)
-	@valgrind 	--leak-check=full\
-				--show-leak-kinds=all\
-				--track-fds=yes\
-				./$(NAME)
-#			--log-file=valgrind-out.txt\
-#			-s --suppressions=./minishell.supp\
-
-#	@less ./valgrind-out.txt
+valgr: $(NAME) | $(LOG_DIR)
+	$(SILENT)valgrind	--leak-check=full\
+						--show-leak-kinds=all\
+						--track-fds=yes\
+						--log-file=$(LOG_VALGRIND)\
+						./$(NAME) $(DEFAULT_SCENE)
+	$(SILENT)ls -dt1 $(LOG_DIR)/* | head -n 1 | xargs less
 
 # ******************************
 # *     Object compiling and   *
@@ -242,11 +278,16 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(DEP_DIR)/%.d message | $(DEP_DIR)
 # Print message only if there are objects to compile
 .INTERMEDIATE: message
 message:
-	@printf "\n$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 
 # Create obj and dep subdirectory if it doesn't exist
 $(DEP_DIR):
-	@printf "\n$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@echo $@
+	$(SILENT)mkdir -p $@
+
+$(LOG_DIR):
+	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@echo $@
 	$(SILENT)mkdir -p $@
 
@@ -273,11 +314,13 @@ clean:
 	@rm -rf $(BASE_OBJ_DIR)
 	@printf "$(RED)removed subdir $(BASE_OBJ_DIR)$(RESET)\n"
 
-# Remove all object files, dependency files and binaries
+# Remove all object, dependency, binaries and log files
 .PHONY: fclean
 fclean: clean
 	@rm -rf $(NAME)*
 	@printf "$(RED)removed binaries $(NAME)*$(RESET)\n"
+	@rm -rf $(LOG_DIR)
+	@printf "$(RED)removed subdir $(LOG_DIR)$(RESET)\n"
 	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)libft$(RESET)]\n"
 	@$(MAKE) --no-print-directory -C $(LIB_DIR_FT) fclean
 	@echo

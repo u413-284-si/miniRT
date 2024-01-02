@@ -13,3 +13,7 @@ miniRT
 miniRT_leak
 miniRT_address
 miniRT_speed
+miniRT_profile
+
+# Log files
+*.log

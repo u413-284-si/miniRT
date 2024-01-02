@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 19:03:53 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 19:59:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,16 @@ int	ft_keyhook_press(int key, t_render *render)
 	{
 		print = true;
 		ft_output_as_ppm((int *)render->mlx_ptrs.img.addr,
-			render->mlx_ptrs.img.width, render->mlx_ptrs.img.height);
+			render->mlx_ptrs.img.size.x, render->mlx_ptrs.img.size.y);
 		print = false;
 	}
 	else if (key == XK_n || key == XK_m)
 		ft_change_active_hittable(key, &render->scene);
+	else if ((render->mouse.left)
+		&& (key == XK_w || key == XK_s || key == XK_a || key == XK_d
+			|| key == XK_q || key == XK_e || key == XK_r || key == XK_f
+			|| (key >= XK_Left && key <= XK_Down)))
+		ft_manip_cam(key, &render->cam);
 	else if (key == XK_w || key == XK_s || key == XK_a || key == XK_d
 		|| key == XK_q || key == XK_e || key == XK_r || key == XK_f
 		|| key == XK_t || key == XK_g
