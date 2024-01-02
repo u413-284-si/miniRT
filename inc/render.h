@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/02 23:35:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/02 23:38:16 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@
  * @param line_len	Line length.
  * @param endian	Endian.
  * @param bytes		Number of bytes per pixel.
- *
+ * @param size		Size of the img as int vector.
  */
 typedef struct s_img
 {

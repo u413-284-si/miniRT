@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/01 16:54:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/02 23:38:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_blend_background(t_img *img, t_menu menu)
 	t_vec2i		pos;
 
 	pos.y = -1;
-	while (++pos.y < img->height)
+	while (++pos.y < img->size.y)
 	{
 		pos.x = -1;
 		while (++pos.x < MENU_WIDTH)

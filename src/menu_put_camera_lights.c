@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:10:57 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 16:54:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/02 23:39:00 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	ft_put_camera(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 	pos.y += Y_NEXT_LINE_BIG;
 	ft_mlx_put_str(mlx_ptrs, pos, col, "Look from");
 	pos.y += Y_NEXT_LINE;
-	pos = ft_put_3d_point(mlx_ptrs, pos, col, cam.look_from);
+	pos = ft_put_3d_point(mlx_ptrs, pos, col, cam.centre);
 	ft_mlx_put_str(mlx_ptrs, pos, col, "Look at");
 	pos.y += Y_NEXT_LINE;
-	pos = ft_put_unit_vec(mlx_ptrs, pos, col, cam.look_at);
+	pos = ft_put_unit_vec(mlx_ptrs, pos, col, cam.centre);
 	ft_mlx_put_str(mlx_ptrs, pos, col, "FOV");
 	pos.y += Y_NEXT_LINE;
 	pos = ft_put_float_value(mlx_ptrs, pos, col, cam.hfov);
