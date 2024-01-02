@@ -6,13 +6,24 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:16:27 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 19:06:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 18:55:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "print.h"
 
-void	ft_print_hittable(t_hittable hittable)
+void	ft_print_cam(const t_cam cam)
+{
+	printf("Camera:\n");
+	printf("Position: ");
+	ft_print_vec3(cam.centre);
+	printf("Direction: ");
+	ft_print_vec3(cam.direction);
+	printf("FOV: %f\n", ft_radian_to_degree(cam.hfov));
+	printf("\n");
+}
+
+void	ft_print_hittable(const t_hittable hittable)
 {
 	printf("ID: %d\n", hittable.id);
 	if (hittable.type == SPHERE)

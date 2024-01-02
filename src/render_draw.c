@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/22 00:17:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/01 18:55:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,17 @@ void	ft_render_image(t_render *render)
 	t_colour	pixel_colour;
 	int			colour;
 
-	ray.origin = render->cam.look_from;
+	ray.origin = render->cam.centre;
 	ray.d = 1.0;
 	y = -1;
-	while (++y < render->mlx_ptrs.img.height)
+	while (++y < render->cam.image.y)
 	{
 		x = -1;
-		while (++x < render->mlx_ptrs.img.width)
+		while (++x < render->cam.image.x)
 		{
-			pix_centre = ft_vec3_add(ft_vec3_add(render->vp.pixel00_pos, \
-				ft_vec3_scale(render->vp.delta_u, x)), ft_vec3_scale(render->vp.delta_v, y));
-			ray.direction = ft_vec3_norm(ft_vec3_sub(pix_centre, render->cam.look_from));
+			pix_centre = ft_vec3_add(ft_vec3_add(render->cam.pixels.pos00, \
+				ft_vec3_scale(render->cam.pixels.delta_u, x)), ft_vec3_scale(render->cam.pixels.delta_v, y));
+			ray.direction = ft_vec3_norm(ft_vec3_sub(pix_centre, render->cam.centre));
 			pixel_colour = ft_ray_colour(ray, render->scene);
 			colour = ft_convert_colour2int(pixel_colour);
 			ft_put_pix_to_image(&render->mlx_ptrs.img, x, y, colour);

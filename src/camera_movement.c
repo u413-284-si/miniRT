@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_entity_ACL.c                                 :+:      :+:    :+:   */
+/*   camera_movement.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 17:23:57 by gwolf             #+#    #+#             */
+/*   Created: 2023/12/24 22:38:49 by gwolf             #+#    #+#             */
 /*   Updated: 2024/01/01 18:55:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parse.h"
+#include "camera.h"
 
-void	ft_parse_ambient(char *line, t_light *ambient)
+void	ft_cam_move_forward(t_cam *cam, float distance)
 {
-	ft_parse_float(&line, &ambient->ratio);
-	ft_parse_colour_block(&line, &ambient->colour);
+	cam->centre = ft_vec3_add(cam->centre, ft_vec3_scale(cam->w, distance));
 }
 
-void	ft_parse_camera(char *line, t_cam *cam)
+void	ft_cam_move_right(t_cam *cam, float distance)
 {
-	ft_parse_float_block(&line, &cam->centre);
-	ft_parse_float_block(&line, &cam->direction);
-	ft_parse_float(&line, &cam->hfov);
-	cam->hfov = ft_degree_to_radian(cam->hfov);
+	cam->centre = ft_vec3_add(cam->centre, ft_vec3_scale(cam->u, distance));
 }
 
-void	ft_parse_light(char *line, t_light *light)
+void	ft_cam_move_up(t_cam *cam, float distance)
 {
-	ft_parse_float_block(&line, &light->pos);
-	ft_parse_float(&line, &light->ratio);
-	ft_parse_colour_block(&line, &light->colour);
+	const t_vec3	world_up = {0.0, 1.0, 0.0};
+
+	cam->centre = ft_vec3_add(cam->centre, ft_vec3_scale(world_up, distance));
 }

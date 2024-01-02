@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 14:04:04 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 14:56:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2023/12/25 08:55:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ t_err	ft_err_mlx_init(void **ptr)
 	return (SUCCESS);
 }
 
-t_err	ft_err_mlx_new_window(void **ptr, void *mlx_ptr, int size[2], char *title)
+t_err	ft_err_mlx_new_window(void **ptr, void *mlx_ptr, t_vec2i size, char *title)
 {
 	errno = 0;
-	*ptr = mlx_new_window(mlx_ptr, size[0], size[1], title);
+	*ptr = mlx_new_window(mlx_ptr, size.x, size.y, title);
 	if (*ptr == NULL)
 	{
 		ft_perror("mlx_new_window() failed", errno);
@@ -36,10 +36,10 @@ t_err	ft_err_mlx_new_window(void **ptr, void *mlx_ptr, int size[2], char *title)
 	return (SUCCESS);
 }
 
-t_err	ft_err_mlx_new_image(void **ptr, void *mlx_ptr, int size[2])
+t_err	ft_err_mlx_new_image(void **ptr, void *mlx_ptr, t_vec2i size)
 {
 	errno = 0;
-	*ptr = mlx_new_image(mlx_ptr, size[0], size[1]);
+	*ptr = mlx_new_image(mlx_ptr, size.x, size.y);
 	if (*ptr == NULL)
 	{
 		ft_perror("mlx_new_image() failed", errno);
