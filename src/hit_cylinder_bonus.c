@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/31 13:48:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 00:49:58 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d)
 	if (!ft_cy_calc_pot_hits(cy, rec->ray, ray_d, potential_hits))
 		return (false);
 	ft_cy_identify_hits(cy, potential_hits, &tmp);
-	if (tmp.d < EPSILON)
-		return (false);
-	if (tmp.d < rec->d)
+	if (tmp.d >= EPSILON && tmp.d < rec->d)
 	{
 		rec->d = tmp.d;
 		rec->axis_hit = tmp.axis_hit;
+		rec->u = tmp.u;
+		rec->v = tmp.v;
 		rec->point = ft_ray(rec->ray, rec->d);
 		rec->normal = ft_vec3_norm(ft_cy_normal(*rec, cy));
 		rec->colour = cy.colour;

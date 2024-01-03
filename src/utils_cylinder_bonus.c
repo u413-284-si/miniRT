@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/31 14:34:06 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 00:51:01 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ bool	ft_cy_check_wall(t_cylinder cy, float d, t_hitrecord *rec)
 	if (m >= 0 && m <= cy.h && len <= (cy.d / 2.0) && d > EPSILON && d < rec->d)
 	{
 		rec->axis_hit = axis_hit;
+		rec->u = atan2(hit.y, hit.x) / M_PI;
+		rec->v = hit.z;
 		return (true);
 	}
 	return (false);
@@ -60,6 +62,8 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec)
 	if (len <= (cy.d / 2.0) && d > EPSILON && d < rec->d)
 	{
 		rec->axis_hit = cap;
+		rec->u = hit.x;
+		rec->v = hit.y;
 		return (true);
 	}
 	return (false);

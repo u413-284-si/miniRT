@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/31 14:50:57 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 00:41:40 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,13 @@ bool	ft_hit_hittable(t_hittable obj, t_hitrecord *rec, t_interval ray_d);
  * @return false	If sphere is missed
  */
 bool	ft_hit_sphere(t_sphere sp, t_hitrecord *rec, t_interval ray_d);
+
+/**
+ * @brief 
+ * 
+ * @param rec 
+ */
+void	ft_get_sp_uvcoords(t_hitrecord *rec);
 
 /**
  * @brief Calculates if a plane was hit by a ray

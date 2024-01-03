@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:47:49 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/25 13:56:07 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 00:32:22 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ bool	ft_hit_plane(t_plane pl, t_hitrecord *rec, t_interval ray_d)
 		rec->normal = pl.normal;
 	rec->point = ft_ray(rec->ray, eq.d1);
 	rec->colour = pl.colour;
+	rec->u = rec->point.x;
+	rec->v = rec->point.y;
 	return (true);
 }

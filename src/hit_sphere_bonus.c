@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:39:35 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 13:59:29 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 00:41:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,17 @@ bool	ft_hit_sphere(t_sphere sp, t_hitrecord *rec, t_interval ray_d)
 	rec->normal = ft_vec3_norm(ft_vec3_scale(\
 		ft_vec3_sub(rec->point, sp.centre), (1.0 / (sp.d / 2.0))));
 	rec->colour = sp.colour;
+	ft_get_sp_uvcoords(rec);
 	return (true);
+}
+
+void	ft_get_sp_uvcoords(t_hitrecord *rec)
+{
+	rec->u = atan(sqrtf(pow(rec->point.x, 2.0) + pow(rec->point.y, 2.0)) / \
+		rec->point.z);
+	rec->v = atan(rec->point.y / rec->point.x);
+	if (rec->point.x < 0)
+		rec->v += M_PI;
+	rec->u /= M_PI;
+	rec->v /= M_PI;
 }

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 15:22:00 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/29 18:48:54 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/01 15:47:28 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ typedef struct s_colour
  * @param reflectivity		Material property of point of intersection
  * 							on share of reflected light 
  * @param reflection_count	Amount of reflections performed
+ * @param u					U-coordinate of hittable at intersection point
+ * @param v					V-coordinate of hittable at intersection point
  */
 typedef struct s_hitrecord
 {
@@ -95,6 +97,8 @@ typedef struct s_hitrecord
 	float		shininess;
 	float		reflectivity;
 	int			reflection_count;
+	float		u;
+	float		v;
 }	t_hitrecord;
 
 /**

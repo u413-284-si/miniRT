@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:33:09 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/31 14:30:56 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 00:55:31 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ bool	ft_hit_cone(t_cone co, t_hitrecord *rec, t_interval ray_d)
 	if (!ft_co_visible(ray_d, potential_hits))
 		return (false);
 	ft_co_identify_hits(co, &tmp, potential_hits);
-	if (tmp.d < EPSILON)
-		return (false);
-	if (tmp.d < rec->d)
+	if (tmp.d >= EPSILON && tmp.d < rec->d)
 	{
 		rec->d = tmp.d;
 		rec->point = ft_ray(rec->ray, rec->d);
+		rec->u = tmp.u;
+		rec->v = tmp.v;
 		rec->normal = ft_vec3_norm(ft_co_normal(*rec, co));
 		rec->colour = co.colour;
 		return (true);
