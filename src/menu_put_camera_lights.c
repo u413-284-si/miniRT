@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:10:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 16:09:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 17:11:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,15 @@
 void	ft_put_camera(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 						t_cam cam)
 {
-	mlx_set_font(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, REGULAR);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Camera");
-	pos.y += Y_NEXT_LINE_BIG;
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Look from");
+	ft_mlx_put_str(mlx_ptrs, pos, col, "Centre");
 	pos.y += Y_NEXT_LINE;
 	pos = ft_put_3d_point(mlx_ptrs, pos, col, cam.centre);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Look at");
+	ft_mlx_put_str(mlx_ptrs, pos, col, "View Direction");
 	pos.y += Y_NEXT_LINE;
-	pos = ft_put_unit_vec(mlx_ptrs, pos, col, cam.centre);
+	pos = ft_put_unit_vec(mlx_ptrs, pos, col, cam.direction);
 	ft_mlx_put_str(mlx_ptrs, pos, col, "FOV");
 	pos.y += Y_NEXT_LINE;
-	pos = ft_put_float_value(mlx_ptrs, pos, col, cam.hfov);
+	pos = ft_put_float_value(mlx_ptrs, pos, col, ft_radian_to_degree(cam.hfov));
 }
 
 void	ft_put_ambient(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
