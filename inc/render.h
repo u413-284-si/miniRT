@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 15:56:34 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 16:31:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -197,7 +197,7 @@ void	ft_render_image(t_render *render);
  * @param height	Height of the image.
  * @return t_err	SUCCESS, ERROR.
  */
-t_err	ft_output_as_ppm(int *img_arr, int width, int height);
+t_err	ft_output_as_ppm(const t_img img, bool *is_printing);
 
 // render_keyhook.c
 

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 16:03:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 16:34:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,7 @@ int	ft_keyhook_press(int key, t_render *render)
 	if (key == XK_Escape)
 		return (mlx_loop_end(render->mlx_ptrs.mlx_ptr));
 	else if (key == XK_c && !render->is_printing)
-	{
-		render->is_printing = true;
-		ft_output_as_ppm((int *)render->mlx_ptrs.img.addr,
-			render->mlx_ptrs.img.size.x, render->mlx_ptrs.img.size.y);
-		render->is_printing = false;
-	}
+		ft_output_as_ppm(render->mlx_ptrs.img, &render->is_printing);
 	else if (key == XK_i)
 		render->show_menu = !render->show_menu;
 	else if (key == XK_Control_L)
