@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 11:52:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 15:47:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,8 @@ typedef struct s_render
 	bool		show_menu;
 	bool		is_printing;
 	bool		is_changed;
+	int			active_hittable;
+	int			active_light;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
@@ -215,8 +217,9 @@ int		ft_keyhook_press(int key, t_render *render);
  *
  * @param key		Keycode of the pressed key.
  * @param scene		Pointer to scene struct.
+ * @param active	Pointer to index of active hittable.
  */
-void	ft_change_active_hittable(int key, t_entities *scene);
+void	ft_change_active_hittable(int key, t_entities *scene, int *active);
 
 /**
  * @brief Manipulates the active hittable.

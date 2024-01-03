@@ -6,29 +6,28 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 19:03:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 15:47:49 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
 
-void	ft_change_active_hittable(int key, t_entities *scene)
+void	ft_change_active_hittable(int key, t_entities *scene, int *active)
 {
-	if (scene->active == -1)
+	if (*active == -1)
 		return ;
 	if (key == XK_n)
 	{
-		scene->active--;
-		if (scene->active < 0)
-			scene->active = scene->total - 1;
+		*active -= 1;
+		if (*active < 0)
+			*active = scene->total - 1;
 	}
 	if (key == XK_m)
 	{
-		scene->active++;
-		if (scene->active == scene->total)
-			scene->active = 0;
+		*active += 1;
+		if (*active == scene->total)
+			*active = 0;
 	}
-	ft_print_hittable(scene->obj[scene->active]);
 }
 
 void	ft_manip_hittable(int key, t_hittable *hittable)
@@ -39,9 +38,7 @@ void	ft_manip_hittable(int key, t_hittable *hittable)
 		ft_manip_plane(key, &hittable->params.pl);
 	else if (hittable->type == CYLINDER)
 		ft_manip_cylinder(key, &hittable->params.cy);
-	ft_print_hittable(*hittable);
 }
-
 
 void	ft_manip_sphere(int key, t_sphere *sp)
 {

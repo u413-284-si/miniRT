@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 15:03:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 15:43:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	ft_draw_menu(t_render *render)
 			render->menu.font_col, render->mode);
 	if (render->menu.cur_page == PAGE_SCENE)
 		ft_put_hittable(&render->mlx_ptrs, pos,
-			render->menu.font_col, render->scene.obj[render->scene.active]);
+			render->menu.font_col, render->scene.obj[render->active_hittable]);
 	else if (render->menu.cur_page == PAGE_LIGHT)
 		;//ft_put_light(&render->mlx_ptrs, pos,
 		//	render->menu.font_col, render->scene.light[render->scene.active]);}
@@ -69,7 +69,7 @@ void	ft_draw_menu(t_render *render)
 			render->menu.font_col, render->cam);
 	else if (render->menu.cur_page == PAGE_SCENE_CTRL)
 		ft_put_ctrl_hittable(&render->mlx_ptrs, pos,
-			render->menu.font_col, &render->scene.obj[render->scene.active]);
+			render->menu.font_col, &render->scene.obj[render->active_hittable]);
 	else if (render->menu.cur_page == PAGE_LIGHT_CTRL)
 		ft_put_ctrl_light(&render->mlx_ptrs, pos,
 			render->menu.font_col, 1);
