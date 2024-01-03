@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 16:13:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 18:09:52 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	ft_draw_menu(t_render *render)
 			render->menu.font_col, &render->scene.obj[render->active_hittable]);
 	else if (render->menu.cur_page == PAGE_LIGHT_CTRL)
 		ft_put_ctrl_light(&render->mlx_ptrs, pos,
-			render->menu.font_col, 1);
+			render->menu.font_col, render->active_light);
 	else if (render->menu.cur_page == PAGE_CAM_CTRL)
 		ft_put_ctrl_cam(&render->mlx_ptrs, pos,
 			render->menu.font_col);
