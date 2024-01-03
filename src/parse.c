@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 15:43:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 17:43:38 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,23 @@ t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total)
 	return (SUCCESS);
 }
 
+void	ft_parse_entity(char *line, t_hittable *obj)
+{
+	static int	id = 0;
+
+	if (*line == 's')
+		ft_parse_sphere(line + 3, &obj[id], id);
+	else if (*line == 'p')
+		ft_parse_plane(line + 3, &obj[id], id);
+	else if (*line == 'c')
+		ft_parse_cylinder(line + 3, &obj[id], id);
+	id++;
+}
+
 void	ft_parse_lines(t_entities *scene, t_cam *cam, char **lines)
 {
-	size_t	lights;
-	size_t	id;
+	static int	light_id = 0;
 
-	lights = 0;
-	id = 0;
 	while (*lines)
 	{
 		if (**lines == 'A')
@@ -61,17 +71,12 @@ void	ft_parse_lines(t_entities *scene, t_cam *cam, char **lines)
 		else if (**lines == 'C')
 			ft_parse_camera(*lines + 2, cam);
 		else if (**lines == 'L')
-			ft_parse_light(*lines + 2, &scene->lsrc[lights++]);
-		else if (**lines != '#')
 		{
-			if (**lines == 's')
-				ft_parse_sphere(*lines + 3, &scene->obj[id], id);
-			else if (**lines == 'p')
-				ft_parse_plane(*lines + 3, &scene->obj[id], id);
-			else if (**lines == 'c')
-				ft_parse_cylinder(*lines + 3, &scene->obj[id], id);
-			id++;
+			ft_parse_light(*lines + 2, &scene->lsrc[light_id], light_id);
+			light_id++;
 		}
+		else if (**lines != '#')
+			ft_parse_entity(*lines, scene->obj);
 		lines++;
 	}
 }
