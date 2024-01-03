@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/31 14:29:54 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/01 18:00:27 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -180,6 +180,8 @@ DEPFILES_B = $(SRC_B:%.c=$(DEP_DIR)/%.d)
 all: $(NAME)
 
 .PHONY: BONUS
+bonus: CFLAGS = -Ofast -march=native
+bonus: LDFLAGS += -flto
 bonus: $(BONUSNAME)
 
 # ******************************
