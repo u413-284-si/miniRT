@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/02 23:35:04 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/03 15:02:10 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -144,7 +144,9 @@ SRC :=	camera_movement.c \
 		menu_draw.c \
 		menu_init.c \
 		menu_put_camera_lights.c \
-		menu_put_ctrl.c \
+		menu_put_ctrl_base.c \
+		menu_put_ctrl_cam_lights.c \
+		menu_put_ctrl_hittable.c \
 		menu_put_element.c \
 		menu_put_hittable.c \
 		menu_put_mode.c \

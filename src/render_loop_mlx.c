@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 11:52:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 12:14:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ int	ft_draw_scene(t_render *render)
 	if (render->is_changed)
 	{
 		ft_render_image(render);
-		ft_draw_menu(render);
+		mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
+			render->mlx_ptrs.win_ptr, render->mlx_ptrs.img.ptr, 0, 0);
 		render->is_changed = false;
+		ft_draw_menu(render);
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/01 16:51:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 15:00:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,9 +86,24 @@ t_vec2i	ft_put_mode(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 			t_mode mode);
 t_vec2i	ft_put_info(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col);
 
-// menu_put_ctrl.c
+// menu_put_ctrl_base.c
 
-t_vec2i	ft_put_ctrl_camera(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col);
+t_vec2i	ft_put_ctrl_move(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col, char *name);
+t_vec2i	ft_put_ctrl_rot(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col, char *name);
+t_vec2i	ft_put_ctrl_inc_dec_1(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col, char *name);
+t_vec2i	ft_put_ctrl_inc_dec_2(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col, char *name);
+
+// menu_put_ctrl_hittable.c
+
+t_vec2i	ft_put_ctrl_hittable(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
+			t_hittable *hittable);
+t_vec2i	ft_put_ctrl_sp(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col);
+t_vec2i	ft_put_ctrl_pl(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col);
+t_vec2i	ft_put_ctrl_cy(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col);
+
+// menu_put_ctrl_cam_lights.c
+t_vec2i	ft_put_ctrl_light(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col, uint32_t active);
+t_vec2i	ft_put_ctrl_cam(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col);
 
 // menu_draw.c
 uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu);

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/02 23:38:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 15:03:25 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,24 +54,28 @@ void	ft_draw_menu(t_render *render)
 	pos = (t_vec2i){20, 20};
 	if (render->show_menu == false)
 		return (ft_mlx_put_str(&render->mlx_ptrs, pos,
-			render->menu.font_col, "Press 'i' to show menu"));
+				render->menu.font_col, "Press 'i' to show menu"));
 	ft_blend_background(&render->mlx_ptrs.img, render->menu);
 	pos = ft_put_mode(&render->mlx_ptrs, pos,
 			render->menu.font_col, render->mode);
-	if (render->mode == CTRL_SCENE)
+	if (render->menu.cur_page == PAGE_SCENE)
 		ft_put_hittable(&render->mlx_ptrs, pos,
 			render->menu.font_col, render->scene.obj[render->scene.active]);
-	else if (render->mode == CTRL_CAM)
-	{
-		ft_put_camera(&render->mlx_ptrs, pos,
-			render->menu.font_col, render->cam);
-		pos.y = 300;
-		ft_put_ctrl_camera(&render->mlx_ptrs, pos, render->menu.font_col);
-	}
-	else if (render->mode == CTRL_LIGHT)
-
+	else if (render->menu.cur_page == PAGE_LIGHT)
 		;//ft_put_light(&render->mlx_ptrs, pos,
 		//	render->menu.font_col, render->scene.light[render->scene.active]);}
+	else if (render->menu.cur_page == PAGE_CAM)
+		ft_put_camera(&render->mlx_ptrs, pos,
+			render->menu.font_col, render->cam);
+	else if (render->menu.cur_page == PAGE_SCENE_CTRL)
+		ft_put_ctrl_hittable(&render->mlx_ptrs, pos,
+			render->menu.font_col, &render->scene.obj[render->scene.active]);
+	else if (render->menu.cur_page == PAGE_LIGHT_CTRL)
+		ft_put_ctrl_light(&render->mlx_ptrs, pos,
+			render->menu.font_col, 1);
+	else if (render->menu.cur_page == PAGE_CAM_CTRL)
+		ft_put_ctrl_cam(&render->mlx_ptrs, pos,
+			render->menu.font_col);
 	pos = (t_vec2i){20, 530};
 	ft_put_info(&render->mlx_ptrs, pos, render->menu.font_col);
 }

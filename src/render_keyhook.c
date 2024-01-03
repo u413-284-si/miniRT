@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 11:54:37 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 15:04:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,33 @@ void	ft_manip_scene(int key, t_entities *scene)
 		ft_change_active_hittable(key, scene);
 	else
 		ft_manip_hittable(key, &scene->obj[scene->active]);
-
 }
 
 void	ft_change_mode(t_render *render)
 {
 	if (render->mode == CTRL_SCENE)
-		render->mode = CTRL_CAM;
-	else if (render->mode == CTRL_CAM)
+	{
 		render->mode = CTRL_LIGHT;
+		render->menu.cur_page++;
+	}
 	else if (render->mode == CTRL_LIGHT)
+	{
+		render->mode = CTRL_CAM;
+		render->menu.cur_page++;
+	}
+	else if (render->mode == CTRL_CAM)
+	{
 		render->mode = CTRL_SCENE;
+		render->menu.cur_page -= 2;
+	}
+}
+
+void	ft_change_menu_page_ctrl(t_render *render)
+{
+	if (render->menu.cur_page <= PAGE_CAM)
+		render->menu.cur_page += 3;
+	else
+		render->menu.cur_page -= 3;
 }
 
 int	ft_keyhook_press(int key, t_render *render)
@@ -55,6 +71,8 @@ int	ft_keyhook_press(int key, t_render *render)
 		render->show_menu = !render->show_menu;
 	else if (key == XK_Control_L)
 		ft_change_mode(render);
+	else if (key == XK_Shift_L)
+		ft_change_menu_page_ctrl(render);
 	else if (ft_is_manip_key(key))
 	{
 		if (render->mode == CTRL_SCENE)
