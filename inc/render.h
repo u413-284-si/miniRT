@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/02 23:38:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 11:52:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,8 +126,10 @@ typedef struct s_render
 	t_entities	scene;
 	t_mouse		mouse;
 	t_menu		menu;
-	bool		show_menu;
 	t_mode		mode;
+	bool		show_menu;
+	bool		is_printing;
+	bool		is_changed;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
