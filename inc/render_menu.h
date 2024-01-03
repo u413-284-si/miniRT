@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 15:00:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 16:14:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ void	ft_put_cylinder(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 
 void	ft_put_camera(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 			t_cam cam);
+void	ft_put_ambient(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
+			t_light ambient);
 void	ft_put_light(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 			t_light light);
 

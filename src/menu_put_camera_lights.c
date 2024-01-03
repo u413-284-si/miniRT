@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:10:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/02 23:39:00 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 16:09:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,19 @@ void	ft_put_camera(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 	ft_mlx_put_str(mlx_ptrs, pos, col, "FOV");
 	pos.y += Y_NEXT_LINE;
 	pos = ft_put_float_value(mlx_ptrs, pos, col, cam.hfov);
+}
+
+void	ft_put_ambient(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
+						t_light ambient)
+{
+	ft_mlx_put_str(mlx_ptrs, pos, col, "Ambient");
+	pos.y += Y_NEXT_LINE_BIG;
+	ft_mlx_put_str(mlx_ptrs, pos, col, "Brightness");
+	pos.y += Y_NEXT_LINE;
+	pos = ft_put_float_value(mlx_ptrs, pos, col, ambient.ratio);
+	ft_mlx_put_str(mlx_ptrs, pos, col, "Colour");
+	pos.y += Y_NEXT_LINE;
+	pos = ft_put_colour(mlx_ptrs, pos, col, ambient.colour);
 }
 
 void	ft_put_light(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
