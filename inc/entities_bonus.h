@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/31 11:36:41 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 11:39:14 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,7 +163,7 @@ typedef union u_shape
  * 						(the higher, the smoother the surface appears)
  * @param reflectivity	Material property of point of intersection
  * 						on share of reflected light 
- * @param textured		Indicates whether the hittable is textured or not
+ * @param Checkered		Indicates whether the hittable has a checker texture
  */
 typedef struct s_hittable
 {
@@ -172,7 +172,7 @@ typedef struct s_hittable
 	t_shape	params;
 	float	shininess;
 	float	reflectivity;
-	bool	textured;
+	float	checkered;
 }	t_hittable;
 
 /**

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:47:49 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/04 11:30:50 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 11:40:27 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ bool	ft_hit_plane(t_plane pl, t_hitrecord *rec, t_interval ray_d)
 	rec->point = ft_ray(rec->ray, eq.d1);
 	rec->colour = pl.colour;
 	ft_get_pl_uvcoords(rec);
-	rec->textured = true;
 	return (true);
 }
 

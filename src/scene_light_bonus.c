@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:15:24 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/04 01:18:45 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 11:43:05 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene, \
 
 	rec.reflection_count = 0;
 	light = ft_ambient_light(scene.ambient);
-	if (rec.textured)
+	if (rec.checkered)
 		ft_apply_checker_texture(&rec);
 	i = -1;
 	while (++i < scene.lsrc_count)

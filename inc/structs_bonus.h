@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 15:22:00 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/04 01:23:36 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 11:40:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ typedef struct s_colour
  * @param reflectivity		Material property of point of intersection
  * 							on share of reflected light 
  * @param reflection_count	Amount of reflections performed
- * @param textured			Indicates whether the hittable is textured or not
+ * @param checkered			Indicates whether the hittable has a checkered texture
  * @param u					U-coordinate of hittable at intersection point
  * @param v					V-coordinate of hittable at intersection point
  */
@@ -100,7 +100,7 @@ typedef struct s_hitrecord
 	float		shininess;
 	float		reflectivity;
 	int			reflection_count;
-	bool		textured;
+	bool		checkered;
 	float		u;
 	float		v;
 }	t_hitrecord;
