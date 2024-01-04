@@ -6,13 +6,15 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 15:22:00 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/01 15:47:28 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 01:23:36 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUCTS_BONUS_H
 # define STRUCTS_BONUS_H
 
+// Standard C libs
+# include <stdbool.h>
 
 /**
  * @brief Represents a tridimensional vector
@@ -83,6 +85,7 @@ typedef struct s_colour
  * @param reflectivity		Material property of point of intersection
  * 							on share of reflected light 
  * @param reflection_count	Amount of reflections performed
+ * @param textured			Indicates whether the hittable is textured or not
  * @param u					U-coordinate of hittable at intersection point
  * @param v					V-coordinate of hittable at intersection point
  */
@@ -97,6 +100,7 @@ typedef struct s_hitrecord
 	float		shininess;
 	float		reflectivity;
 	int			reflection_count;
+	bool		textured;
 	float		u;
 	float		v;
 }	t_hitrecord;

@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/01 18:00:27 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/04 01:16:00 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -143,6 +143,7 @@ SRC_B := camera_bonus.c \
 		scene_light_bonus.c \
 		scene_reflection_bonus.c \
 		scene_shadow_bonus.c \
+		texture_bonus.c \
 		utils_camera_bonus.c \
 		utils_cone_bonus.c \
 		utils_cylinder_bonus.c \
