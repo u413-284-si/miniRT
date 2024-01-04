@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/04 00:41:40 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 01:33:26 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,10 @@ void	ft_get_sp_uvcoords(t_hitrecord *rec);
  * @return false 	If plane is missed
  */
 bool	ft_hit_plane(t_plane pl, t_hitrecord *rec, t_interval ray_d);
+
+
+void	ft_get_pl_uvcoords(t_hitrecord *rec);
+
 
 // CYLINDER
 /**
