@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:47:49 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/04 01:33:53 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 11:30:50 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,24 +40,13 @@ bool	ft_hit_plane(t_plane pl, t_hitrecord *rec, t_interval ray_d)
 
 void	ft_get_pl_uvcoords(t_hitrecord *rec)
 {
-	if (rec->normal.x != 0 + EPSILON)
-	{
-		rec->u = rec->point.z;
-		rec->v = rec->point.y;
-	}
-	else if (rec->normal.y != 0 + EPSILON)
-	{
-		rec->u = rec->point.x;
-		rec->v = rec->point.z;
-	}
-	else if (rec->normal.z != 0 + EPSILON)
-	{
-		rec->u = rec->point.x;
-		rec->v = rec->point.y;
-	}
-	else
-	{
-		rec->u = 0.0;
-		rec->v = 0.0;
-	}
+	t_vec3	base1;
+	t_vec3	base2;
+
+	base1 = ft_vec3_norm(ft_vec3_cross(rec->normal, (t_vec3){1, 0, 0}));
+	if (ft_vec3_equal(base1, (t_vec3){0, 0, 0}))
+		base1 = ft_vec3_norm(ft_vec3_cross(rec->normal, (t_vec3){0, 0, 1}));
+	base2 = ft_vec3_norm(ft_vec3_cross(rec->normal, base1));
+	rec->u = ft_vec3_dot(base1, rec->point);
+	rec->v = ft_vec3_dot(base2, rec->point);
 }
