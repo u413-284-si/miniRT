@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/26 23:57:15 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 01:28:29 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ void	ft_init_hitrecord(t_hitrecord *rec)
 	rec->ray = (t_ray){.origin = {0}, .direction = {0}, .d = 0};
 	rec->shininess = 0.0;
 	rec->reflectivity = 0.0;
+	rec->textured = false;
+	rec->u = 0.0;
+	rec->v = 0.0;
 }
 
 t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam)
