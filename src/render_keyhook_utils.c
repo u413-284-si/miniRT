@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 21:19:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 11:42:10 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 11:51:40 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ void	ft_keyhook_mv_point(int key, t_vec3 *point)
 	t_interval	lim;
 
 	lim = (t_interval){.min = FLOAT_MIN, .max = FLOAT_MAX};
-	if (key == XK_e && point->z > lim.max)
+	if (key == XK_e && point->z < lim.max)
 		point->z += MV_UNIT;
-	else if (key == XK_q && point->z < lim.min)
+	else if (key == XK_q && point->z > lim.min)
 		point->z -= MV_UNIT;
 	else if (key == XK_w && point->y < lim.max)
 		point->y += MV_UNIT;
