@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 13:26:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 15:30:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,14 @@ void	ft_change_menu_page_ctrl(t_render *render)
 		render->menu.cur_page -= 3;
 }
 
+void	ft_toggle_menu(t_render *render)
+{
+	render->show_menu = !render->show_menu;
+	if (render->show_menu == false)
+		mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
+			render->mlx_ptrs.win_ptr, render->mlx_ptrs.img.ptr, 0, 0);
+}
+
 int	ft_keyhook_press(int key, t_render *render)
 {
 	if (key == XK_Escape)
@@ -63,7 +71,7 @@ int	ft_keyhook_press(int key, t_render *render)
 	else if (render->is_printing)
 		return (0);
 	else if (key == XK_i)
-		render->show_menu = !render->show_menu;
+		ft_toggle_menu(render);
 	else if (key == XK_Control_L)
 		ft_change_mode(render);
 	else if (key == XK_Shift_L)

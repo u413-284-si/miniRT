@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 15:03:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 15:21:26 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ t_vec2i	ft_put_ctrl_inc_dec_2(t_mlx_ptrs *mlx_ptrs, t_putinfo put, char *name);
 // menu_put_ctrl_hittable.c
 
 t_vec2i	ft_put_ctrl_hittable(t_mlx_ptrs *mlx_ptrs, t_putinfo put,
-			t_hittable *hittable);
+			t_hittable hittable);
 t_vec2i	ft_put_ctrl_sp(t_mlx_ptrs *mlx_ptrs, t_putinfo put);
 t_vec2i	ft_put_ctrl_pl(t_mlx_ptrs *mlx_ptrs, t_putinfo put);
 t_vec2i	ft_put_ctrl_cy(t_mlx_ptrs *mlx_ptrs, t_putinfo put);
@@ -106,6 +106,17 @@ t_vec2i	ft_put_ctrl_cy(t_mlx_ptrs *mlx_ptrs, t_putinfo put);
 // menu_put_ctrl_cam_lights.c
 t_vec2i	ft_put_ctrl_light(t_mlx_ptrs *mlx_ptrs, t_putinfo put, uint32_t active);
 t_vec2i	ft_put_ctrl_cam(t_mlx_ptrs *mlx_ptrs, t_putinfo put);
+
+// menu_put_page.c
+
+void	ft_put_page_scene(t_mlx_ptrs *mlx_ptrs, t_putinfo put,
+			t_hittable active, t_pages cur_page);
+void	ft_put_page_ambient(t_mlx_ptrs *mlx_ptrs, t_putinfo put,
+			t_light ambient, t_pages cur_page);
+void	ft_put_page_light(t_mlx_ptrs *mlx_ptrs, t_putinfo put,
+			t_light light, t_pages cur_page);
+void	ft_put_page_cam(t_mlx_ptrs *mlx_ptrs, t_putinfo put,
+			t_cam cam, t_pages cur_page);
 
 // menu_draw.c
 uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu);

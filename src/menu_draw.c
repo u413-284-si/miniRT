@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 15:02:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 15:31:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,32 +54,23 @@ void	ft_draw_menu(t_render *render)
 	put.pos = (t_vec2i){20, 20};
 	put.col = render->menu.font_col;
 	if (render->show_menu == false)
-	{
-		mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
-			render->mlx_ptrs.win_ptr, render->mlx_ptrs.img.ptr, 0, 0);
 		return (ft_mlx_put_str(&render->mlx_ptrs, put,
-				"Press 'i' to show menu"));
-	}
+				"Press I to show menu"));
 	mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
 		render->mlx_ptrs.win_ptr, render->mlx_ptrs.veil.ptr, 0, 0);
 	put.pos = ft_put_mode(&render->mlx_ptrs, put, render->mode);
-	if (render->menu.cur_page == PAGE_SCENE)
-		ft_put_hittable(&render->mlx_ptrs, put,
-			render->scene.obj[render->active_hittable]);
-	else if (render->menu.cur_page == PAGE_LIGHT && render->active_light == 0)
-		ft_put_ambient(&render->mlx_ptrs, put, render->scene.ambient);
-	else if (render->menu.cur_page == PAGE_LIGHT)
-		ft_put_light(&render->mlx_ptrs, put,
-			render->scene.lsrc[render->active_light - 1]);
-	else if (render->menu.cur_page == PAGE_CAM)
-		ft_put_camera(&render->mlx_ptrs, put, render->cam);
-	else if (render->menu.cur_page == PAGE_SCENE_CTRL)
-		ft_put_ctrl_hittable(&render->mlx_ptrs, put,
-			&render->scene.obj[render->active_hittable]);
-	else if (render->menu.cur_page == PAGE_LIGHT_CTRL)
-		ft_put_ctrl_light(&render->mlx_ptrs, put, render->active_light);
-	else if (render->menu.cur_page == PAGE_CAM_CTRL)
-		ft_put_ctrl_cam(&render->mlx_ptrs, put);
+	if (render->menu.cur_page % 3 == 0)
+		ft_put_page_scene(&render->mlx_ptrs, put,
+			render->scene.obj[render->active_hittable], render->menu.cur_page);
+	else if (render->menu.cur_page % 3 == 1 && render->active_light == 0)
+		ft_put_page_ambient(&render->mlx_ptrs, put,
+			render->scene.ambient, render->menu.cur_page);
+	else if (render->menu.cur_page % 3 == 1)
+		ft_put_page_light(&render->mlx_ptrs, put,
+			render->scene.lsrc[render->active_light - 1], render->menu.cur_page);
+	else if (render->menu.cur_page % 3 == 2)
+		ft_put_page_cam(&render->mlx_ptrs, put,
+			render->cam, render->menu.cur_page);
 	put.pos = (t_vec2i){20, 490};
 	ft_put_info(&render->mlx_ptrs, put);
 }

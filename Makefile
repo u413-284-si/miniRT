@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/05 12:46:57 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/05 15:24:24 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -151,6 +151,7 @@ SRC :=	camera_movement.c \
 		menu_put_hittable.c \
 		menu_put_mode.c \
 		menu_put_num.c \
+		menu_put_page.c \
 		parse_entity_ACL.c \
 		parse_entity_sp_pl_cy.c \
 		parse_line.c \
