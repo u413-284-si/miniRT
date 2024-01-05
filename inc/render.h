@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 10:33:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 11:42:40 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -258,8 +258,21 @@ void	ft_manip_cylinder(int key, t_cylinder *cy);
 // render_keyhook_utils.c
 
 /**
+ * @brief Increases or decreases a value with a keypress.
+ *
+ * If value is negative, it is set to 0.
+ * If value is more than max, it is set to max.
+ * R or T (Decrease value)
+ * F or G (Increase value)
+ * @param key	Keycode of the pressed key.
+ * @param value	Pointer to value to change.
+ */
+void	ft_keyhook_inc_dec(int key, float *value, float max);
+
+/**
  * @brief Moves a 3D point with a keypress.
  *
+ * Movement is only applied if it is within the limits of the scene.
  * WS (Forward, Backward)
  * AD (Left, Right)
  * QE (Up, Down)

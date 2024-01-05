@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 20:06:53 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 11:27:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,20 @@ void	ft_keyhook_rot_cam(int key, t_vec3 *direction)
 
 void	ft_keyhook_move_cam(int key, t_cam *cam)
 {
-	if (key == XK_q)
+	t_interval	lim;
+
+	lim = (t_interval){.min = FLOAT_MIN, .max = FLOAT_MAX};
+	if (key == XK_q && cam->centre.y > lim.min)
 		ft_cam_move_up(cam, -MV_UNIT);
-	else if (key == XK_e)
+	else if (key == XK_e && cam->centre.y < lim.max)
 		ft_cam_move_up(cam, MV_UNIT);
-	else if (key == XK_w)
+	else if (key == XK_w && cam->centre.z > lim.min)
 		ft_cam_move_forward(cam, -MV_UNIT);
-	else if (key == XK_s)
+	else if (key == XK_s && cam->centre.z < lim.max)
 		ft_cam_move_forward(cam, MV_UNIT);
-	else if (key == XK_d)
+	else if (key == XK_d && cam->centre.x < lim.max)
 		ft_cam_move_right(cam, MV_UNIT);
-	else if (key == XK_a)
+	else if (key == XK_a && cam->centre.x > lim.min)
 		ft_cam_move_right(cam, -MV_UNIT);
 }
 
@@ -75,5 +78,4 @@ void	ft_manip_cam(int key, t_cam *cam)
 	else
 		ft_keyhook_move_cam(key, cam);
 	ft_cam_calc_pixel_grid(cam);
-	ft_print_cam(*cam);
 }

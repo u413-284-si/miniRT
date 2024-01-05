@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:40:21 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 16:18:55 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 11:44:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ void	ft_manip_light_src(int key, t_light *light)
 {
 	if (key >= XK_0 && key <= XK_9)
 		ft_keyhook_change_col(key, &light->colour);
-	else if (key == XK_r)
-		light->ratio -= MV_UNIT;
-	else if (key == XK_f)
-		light->ratio += MV_UNIT;
+	else if (key == XK_r || key == XK_f)
+		ft_keyhook_inc_dec(key, &light->ratio, 1.0);
 	else
 		ft_keyhook_mv_point(key, &light->pos);
 }
@@ -28,10 +26,8 @@ void	ft_manip_ambient(int key, t_light *ambient)
 {
 	if (key >= XK_0 && key <= XK_9)
 		ft_keyhook_change_col(key, &ambient->colour);
-	else if (key == XK_r)
-		ambient->ratio -= MV_UNIT;
-	else if (key == XK_f)
-		ambient->ratio += MV_UNIT;
+	else if (key == XK_r || key == XK_f)
+		ft_keyhook_inc_dec(key, &ambient->ratio, 1.0);
 }
 
 void	ft_change_active_light(int key, t_entities *scene, int *active)

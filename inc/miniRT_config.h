@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/01 16:54:28 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 11:37:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@
 # define CYLINDER_MAX 100
 
 // allowed interval of parsed floats
-# define FLOAT_MIN -10000.0
-# define FLOAT_MAX 10000.0
+# define FLOAT_MIN -1000.0
+# define FLOAT_MAX 1000.0
 
 // standard window size
 # define WIN_SIZE_X 800

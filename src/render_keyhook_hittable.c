@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 15:47:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 11:43:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,8 @@ void	ft_manip_sphere(int key, t_sphere *sp)
 {
 	if (key >= XK_0 && key <= XK_9)
 		ft_keyhook_change_col(key, &sp->colour);
-	else if (key == XK_r)
-		sp->r -= MV_UNIT;
-	else if (key == XK_f)
-		sp->r += MV_UNIT;
+	else if (key == XK_r || key == XK_f)
+		ft_keyhook_inc_dec(key, &sp->r, FLOAT_MAX);
 	else
 		ft_keyhook_mv_point(key, &sp->centre);
 }
@@ -68,14 +66,10 @@ void	ft_manip_cylinder(int key, t_cylinder *cy)
 		ft_keyhook_change_col(key, &cy->colour);
 	else if (key >= XK_Left && key <= XK_Down)
 		ft_keyhook_rot_vec(key, &cy->axis);
-	else if (key == XK_r)
-		cy->d -= MV_UNIT;
-	else if (key == XK_f)
-		cy->d += MV_UNIT;
-	else if (key == XK_t)
-		cy->h -= MV_UNIT;
-	else if (key == XK_g)
-		cy->h += MV_UNIT;
+	else if (key == XK_r || key == XK_f)
+		ft_keyhook_inc_dec(key, &cy->d, FLOAT_MAX);
+	else if (key == XK_t || key == XK_g)
+		ft_keyhook_inc_dec(key, &cy->h, FLOAT_MAX);
 	else
 	{
 		ft_keyhook_mv_point(key, &cy->centre);
