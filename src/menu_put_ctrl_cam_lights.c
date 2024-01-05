@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:56:30 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 13:46:44 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:52:22 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,14 @@ t_vec2i	ft_put_ctrl_cam(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col)
 	pos = ft_put_ctrl_move(mlx_ptrs, pos, col, "centre");
 	pos = ft_put_ctrl_rot(mlx_ptrs, pos, col, "view");
 	pos = ft_put_ctrl_inc_dec_1(mlx_ptrs, pos, col, "FOV");
+	pos.y += Y_NEXT_LINE_BIG;
+	ft_mlx_put_str(mlx_ptrs, pos, col, "Rotate view");
+	pos.y += Y_NEXT_LINE;
+	ft_mlx_put_str(mlx_ptrs, pos, col, "(Mode independent)");
+	pos.y += Y_NEXT_LINE;
+	ft_mlx_put_str(mlx_ptrs, pos, col, "  Right mouse and move");
+	pos.y += Y_NEXT_LINE_BIG;
+
 	return (pos);
 }
 
