@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 16:31:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 09:52:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,15 @@ typedef struct s_img
  *
  * @param mlx_ptr	Pointer to mlx.
  * @param win_ptr	Pointer to mlx window.
- * @param img		mlx img struct.
+ * @param img		mlx img struct for rendered image.
+ * @param veil		mlx img struct for menu overlay.
  */
 typedef struct s_mlx_ptrs
 {
 	void	*mlx_ptr;
 	void	*win_ptr;
 	t_img	img;
+	t_img	veil;
 }	t_mlx_ptrs;
 
 /**

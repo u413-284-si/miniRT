@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 16:14:35 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 09:54:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,6 @@ t_vec2i	ft_put_ctrl_cam(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col);
 
 // menu_draw.c
 uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu);
-void	ft_blend_background(t_img *img, t_menu menu);
+void	ft_blend_background(t_img *img, t_img *veil, t_menu menu);
 
 #endif

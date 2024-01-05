@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 18:09:52 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 10:13:18 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,23 @@ uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu)
 	return (blend_rb | blend_g);
 }
 
-void	ft_blend_background(t_img *img, t_menu menu)
+void	ft_blend_background(t_img *img, t_img *veil, t_menu menu)
 {
-	char		*pixel;
-	uint32_t	img_colour;
+	char		*img_pixel;
+	char		*veil_pixel;
 	uint32_t	blend_colour;
 	t_vec2i		pos;
 
 	pos.y = -1;
-	while (++pos.y < img->size.y)
+	while (++pos.y < veil->size.y)
 	{
 		pos.x = -1;
-		while (++pos.x < MENU_WIDTH)
+		while (++pos.x < veil->size.x)
 		{
-			pixel = img->addr + (pos.y * img->line_len + pos.x * img->bytes);
-			img_colour = *(uint32_t *)pixel;
-			blend_colour = fast_alpha_blend(img_colour, menu);
-			*(uint32_t *)pixel = blend_colour;
+			img_pixel = img->addr + (pos.y * img->line_len + pos.x * img->bytes);
+			blend_colour = fast_alpha_blend(*(uint32_t *)img_pixel, menu);
+			veil_pixel = veil->addr + (pos.y * veil->line_len + pos.x * veil->bytes);
+			*(uint32_t *)veil_pixel = blend_colour;
 		}
 	}
 }
@@ -55,7 +55,9 @@ void	ft_draw_menu(t_render *render)
 	if (render->show_menu == false)
 		return (ft_mlx_put_str(&render->mlx_ptrs, pos,
 				render->menu.font_col, "Press 'i' to show menu"));
-	ft_blend_background(&render->mlx_ptrs.img, render->menu);
+	ft_blend_background(&render->mlx_ptrs.img, &render->mlx_ptrs.veil, render->menu);
+	mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
+			render->mlx_ptrs.win_ptr, render->mlx_ptrs.veil.ptr, 0, 0);
 	pos = ft_put_mode(&render->mlx_ptrs, pos,
 			render->menu.font_col, render->mode);
 	if (render->menu.cur_page == PAGE_SCENE)
