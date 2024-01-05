@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 12:07:18 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 15:02:05 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,41 +49,37 @@ void	ft_blend_background(t_img *img, t_img *veil, t_menu menu)
 
 void	ft_draw_menu(t_render *render)
 {
-	t_vec2i	pos;
+	t_putinfo	put;
 
-	pos = (t_vec2i){20, 20};
+	put.pos = (t_vec2i){20, 20};
+	put.col = render->menu.font_col;
 	if (render->show_menu == false)
 	{
 		mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
 			render->mlx_ptrs.win_ptr, render->mlx_ptrs.img.ptr, 0, 0);
-		return (ft_mlx_put_str(&render->mlx_ptrs, pos,
-				render->menu.font_col, "Press 'i' to show menu"));
+		return (ft_mlx_put_str(&render->mlx_ptrs, put,
+				"Press 'i' to show menu"));
 	}
 	mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
-			render->mlx_ptrs.win_ptr, render->mlx_ptrs.veil.ptr, 0, 0);
-	pos = ft_put_mode(&render->mlx_ptrs, pos,
-			render->menu.font_col, render->mode);
+		render->mlx_ptrs.win_ptr, render->mlx_ptrs.veil.ptr, 0, 0);
+	put.pos = ft_put_mode(&render->mlx_ptrs, put, render->mode);
 	if (render->menu.cur_page == PAGE_SCENE)
-		ft_put_hittable(&render->mlx_ptrs, pos,
-			render->menu.font_col, render->scene.obj[render->active_hittable]);
+		ft_put_hittable(&render->mlx_ptrs, put,
+			render->scene.obj[render->active_hittable]);
 	else if (render->menu.cur_page == PAGE_LIGHT && render->active_light == 0)
-		ft_put_ambient(&render->mlx_ptrs, pos,
-			render->menu.font_col, render->scene.ambient);
+		ft_put_ambient(&render->mlx_ptrs, put, render->scene.ambient);
 	else if (render->menu.cur_page == PAGE_LIGHT)
-		ft_put_light(&render->mlx_ptrs, pos,
-			render->menu.font_col, render->scene.lsrc[render->active_light - 1]);
+		ft_put_light(&render->mlx_ptrs, put,
+			render->scene.lsrc[render->active_light - 1]);
 	else if (render->menu.cur_page == PAGE_CAM)
-		ft_put_camera(&render->mlx_ptrs, pos,
-			render->menu.font_col, render->cam);
+		ft_put_camera(&render->mlx_ptrs, put, render->cam);
 	else if (render->menu.cur_page == PAGE_SCENE_CTRL)
-		ft_put_ctrl_hittable(&render->mlx_ptrs, pos,
-			render->menu.font_col, &render->scene.obj[render->active_hittable]);
+		ft_put_ctrl_hittable(&render->mlx_ptrs, put,
+			&render->scene.obj[render->active_hittable]);
 	else if (render->menu.cur_page == PAGE_LIGHT_CTRL)
-		ft_put_ctrl_light(&render->mlx_ptrs, pos,
-			render->menu.font_col, render->active_light);
+		ft_put_ctrl_light(&render->mlx_ptrs, put, render->active_light);
 	else if (render->menu.cur_page == PAGE_CAM_CTRL)
-		ft_put_ctrl_cam(&render->mlx_ptrs, pos,
-			render->menu.font_col);
-	pos = (t_vec2i){20, 490};
-	ft_put_info(&render->mlx_ptrs, pos, render->menu.font_col);
+		ft_put_ctrl_cam(&render->mlx_ptrs, put);
+	put.pos = (t_vec2i){20, 490};
+	ft_put_info(&render->mlx_ptrs, put);
 }

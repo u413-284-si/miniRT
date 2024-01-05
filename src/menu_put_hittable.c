@@ -6,69 +6,69 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:55:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 13:37:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 14:31:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_menu.h"
 
-void	ft_put_hittable(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
-							t_hittable hittable)
+void	ft_put_hittable(t_mlx_ptrs *mlx_ptrs, t_putinfo put,
+			t_hittable hittable)
 {
-	pos = ft_put_id(mlx_ptrs, pos, col, hittable.id);
-	pos = ft_put_type(mlx_ptrs, pos, col, hittable.type);
+	put.pos = ft_put_id(mlx_ptrs, put, hittable.id);
+	put.pos = ft_put_type(mlx_ptrs, put, hittable.type);
 	if (hittable.type == SPHERE)
-		ft_put_sphere(mlx_ptrs, pos, col, hittable.params.sp);
+		ft_put_sphere(mlx_ptrs, put, hittable.params.sp);
 	else if (hittable.type == PLANE)
-		ft_put_plane(mlx_ptrs, pos, col, hittable.params.pl);
+		ft_put_plane(mlx_ptrs, put, hittable.params.pl);
 	else if (hittable.type == CYLINDER)
-		ft_put_cylinder(mlx_ptrs, pos, col, hittable.params.cy);
+		ft_put_cylinder(mlx_ptrs, put, hittable.params.cy);
 }
 
-void	ft_put_sphere(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
+void	ft_put_sphere(t_mlx_ptrs *mlx_ptrs, t_putinfo put,
 						t_sphere sp)
 {
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Centre");
-	pos.y += Y_NEXT_LINE;
-	pos = ft_put_3d_point(mlx_ptrs, pos, col, sp.centre);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Diameter");
-	pos.y += Y_NEXT_LINE;
-	pos = ft_put_float_value(mlx_ptrs, pos, col, sp.r);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Colour");
-	pos.y += Y_NEXT_LINE;
-	pos = ft_put_colour(mlx_ptrs, pos, col, sp.colour);
+	ft_mlx_put_str(mlx_ptrs, put, "Centre");
+	put.pos.y += Y_NEXT_LINE;
+	put.pos = ft_put_3d_point(mlx_ptrs, put, sp.centre);
+	ft_mlx_put_str(mlx_ptrs, put, "Diameter");
+	put.pos.y += Y_NEXT_LINE;
+	put.pos = ft_put_float_value(mlx_ptrs, put, sp.r);
+	ft_mlx_put_str(mlx_ptrs, put, "Colour");
+	put.pos.y += Y_NEXT_LINE;
+	put.pos = ft_put_colour(mlx_ptrs, put, sp.colour);
 }
 
-void	ft_put_plane(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
+void	ft_put_plane(t_mlx_ptrs *mlx_ptrs, t_putinfo put,
 						t_plane pl)
 {
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Point");
-	pos.y += Y_NEXT_LINE;
-	pos = ft_put_3d_point(mlx_ptrs, pos, col, pl.point);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Normal");
-	pos.y += Y_NEXT_LINE;
-	pos = ft_put_unit_vec(mlx_ptrs, pos, col, pl.normal);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Colour");
-	pos.y += Y_NEXT_LINE;
-	pos = ft_put_colour(mlx_ptrs, pos, col, pl.colour);
+	ft_mlx_put_str(mlx_ptrs, put, "Point");
+	put.pos.y += Y_NEXT_LINE;
+	put.pos = ft_put_3d_point(mlx_ptrs, put, pl.point);
+	ft_mlx_put_str(mlx_ptrs, put, "Normal");
+	put.pos.y += Y_NEXT_LINE;
+	put.pos = ft_put_unit_vec(mlx_ptrs, put, pl.normal);
+	ft_mlx_put_str(mlx_ptrs, put, "Colour");
+	put.pos.y += Y_NEXT_LINE;
+	put.pos = ft_put_colour(mlx_ptrs, put, pl.colour);
 }
 
-void	ft_put_cylinder(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
+void	ft_put_cylinder(t_mlx_ptrs *mlx_ptrs, t_putinfo put,
 							t_cylinder cy)
 {
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Centre");
-	pos.y += Y_NEXT_LINE;
-	pos = ft_put_3d_point(mlx_ptrs, pos, col, cy.centre);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Axis");
-	pos.y += Y_NEXT_LINE;
-	pos = ft_put_unit_vec(mlx_ptrs, pos, col, cy.axis);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Diameter");
-	pos.y += Y_NEXT_LINE;
-	pos = ft_put_float_value(mlx_ptrs, pos, col, cy.d);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Height");
-	pos.y += Y_NEXT_LINE;
-	pos = ft_put_float_value(mlx_ptrs, pos, col, cy.h);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Colour");
-	pos.y += Y_NEXT_LINE;
-	ft_put_colour(mlx_ptrs, pos, col, cy.colour);
+	ft_mlx_put_str(mlx_ptrs, put, "Centre");
+	put.pos.y += Y_NEXT_LINE;
+	put.pos = ft_put_3d_point(mlx_ptrs, put, cy.centre);
+	ft_mlx_put_str(mlx_ptrs, put, "Axis");
+	put.pos.y += Y_NEXT_LINE;
+	put.pos = ft_put_unit_vec(mlx_ptrs, put, cy.axis);
+	ft_mlx_put_str(mlx_ptrs, put, "Diameter");
+	put.pos.y += Y_NEXT_LINE;
+	put.pos = ft_put_float_value(mlx_ptrs, put, cy.d);
+	ft_mlx_put_str(mlx_ptrs, put, "Height");
+	put.pos.y += Y_NEXT_LINE;
+	put.pos = ft_put_float_value(mlx_ptrs, put, cy.h);
+	ft_mlx_put_str(mlx_ptrs, put, "Colour");
+	put.pos.y += Y_NEXT_LINE;
+	ft_put_colour(mlx_ptrs, put, cy.colour);
 }
