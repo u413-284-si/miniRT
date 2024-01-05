@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 10:13:18 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 10:34:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,12 @@ void	ft_draw_menu(t_render *render)
 
 	pos = (t_vec2i){20, 20};
 	if (render->show_menu == false)
+	{
+		mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
+			render->mlx_ptrs.win_ptr, render->mlx_ptrs.img.ptr, 0, 0);
 		return (ft_mlx_put_str(&render->mlx_ptrs, pos,
 				render->menu.font_col, "Press 'i' to show menu"));
-	ft_blend_background(&render->mlx_ptrs.img, &render->mlx_ptrs.veil, render->menu);
+	}
 	mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
 			render->mlx_ptrs.win_ptr, render->mlx_ptrs.veil.ptr, 0, 0);
 	pos = ft_put_mode(&render->mlx_ptrs, pos,

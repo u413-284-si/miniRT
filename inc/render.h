@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 09:52:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 10:33:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -399,6 +399,7 @@ void	ft_render_start_loop(t_render *render);
 
 void	ft_init_menu(t_menu *menu, uint8_t alpha, uint32_t colour, uint32_t font_col);
 void	ft_draw_menu(t_render *render);
+void	ft_blend_background(t_img *img, t_img *veil, t_menu menu);
 
 void	ft_manip_light(int key, t_entities *scene, int *active);
 void	ft_manip_light_src(int key, t_light *light);
