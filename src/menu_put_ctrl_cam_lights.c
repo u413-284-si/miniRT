@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:56:30 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 18:09:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:46:44 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ t_vec2i	ft_put_ctrl_cam(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col)
 
 t_vec2i	ft_put_ctrl_light(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col, uint32_t active)
 {
+	pos = ft_put_id(mlx_ptrs, pos, col, active);
 	if (active == 0)
-	{
-		ft_mlx_put_str(mlx_ptrs, pos, col, "Ambient Light");
-		pos.y += Y_NEXT_LINE_BIG;
-	}
+		pos = ft_put_type(mlx_ptrs, pos, col, AMBIENT);
 	else
+	{
+		pos = ft_put_type(mlx_ptrs, pos, col, LIGHT);
 		pos = ft_put_ctrl_move(mlx_ptrs, pos, col, "position");
+	}
 	pos = ft_put_ctrl_inc_dec_1(mlx_ptrs, pos, col, "brightness");
 	ft_mlx_put_str(mlx_ptrs, pos, col, "Change Colour");
 	pos.y += Y_NEXT_LINE;

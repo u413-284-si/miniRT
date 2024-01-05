@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:54:31 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 12:08:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:40:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,39 @@ t_vec2i	ft_put_mode(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 	mlx_set_font(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, REGULAR);
 	pos.x -= X_OFFSET_MID;
 	pos.y += Y_NEXT_LINE_BIG;
+	return (pos);
+}
+
+t_vec2i	ft_put_type(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
+					t_type type)
+{
+	ft_mlx_put_str(mlx_ptrs, pos, col, "Type:");
+	pos.x += X_OFFSET_MID;
+	if (type == SPHERE)
+		ft_mlx_put_str(mlx_ptrs, pos, col, "Sphere");
+	else if (type == PLANE)
+		ft_mlx_put_str(mlx_ptrs, pos, col, "Plane");
+	else if (type == CYLINDER)
+		ft_mlx_put_str(mlx_ptrs, pos, col, "Cylinder");
+	else if (type == AMBIENT)
+		ft_mlx_put_str(mlx_ptrs, pos, col, "Ambient");
+	else if (type == LIGHT)
+		ft_mlx_put_str(mlx_ptrs, pos, col, "Light");
+	pos.x -= X_OFFSET_MID;
+	pos.y += Y_NEXT_LINE_BIG;
+	return (pos);
+}
+
+t_vec2i	ft_put_id(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col, int id)
+{
+	mlx_set_font(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, BOLD);
+	ft_mlx_put_str(mlx_ptrs, pos, col, "*** ID:   ***");
+	pos.x += 50;
+	ft_mlx_put_int(mlx_ptrs, pos,
+		(t_numinfo){.numi = id, .pad = 3, .prec = 0, .col = col});
+	mlx_set_font(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, REGULAR);
+	pos.x -= 50;
+	pos.y += Y_NEXT_LINE;
 	return (pos);
 }
 

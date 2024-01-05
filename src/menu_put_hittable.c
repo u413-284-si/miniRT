@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:55:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 16:56:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:37:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,8 @@
 void	ft_put_hittable(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 							t_hittable hittable)
 {
-	mlx_set_font(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, BOLD);
-	ft_mlx_put_str(mlx_ptrs, pos, col, "*** ID:   ***");
-	pos.x += 50;
-	ft_mlx_put_int(mlx_ptrs, pos,
-		(t_numinfo){.numi = hittable.id, .pad = 3, .prec = 0, .col = col});
-	mlx_set_font(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, REGULAR);
-	pos.x -= 50;
-	pos.y += Y_NEXT_LINE;
+	pos = ft_put_id(mlx_ptrs, pos, col, hittable.id);
+	pos = ft_put_type(mlx_ptrs, pos, col, hittable.type);
 	if (hittable.type == SPHERE)
 		ft_put_sphere(mlx_ptrs, pos, col, hittable.params.sp);
 	else if (hittable.type == PLANE)
@@ -34,8 +28,6 @@ void	ft_put_hittable(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 void	ft_put_sphere(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 						t_sphere sp)
 {
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Type: Sphere");
-	pos.y += Y_NEXT_LINE_BIG;
 	ft_mlx_put_str(mlx_ptrs, pos, col, "Centre");
 	pos.y += Y_NEXT_LINE;
 	pos = ft_put_3d_point(mlx_ptrs, pos, col, sp.centre);
@@ -50,8 +42,6 @@ void	ft_put_sphere(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 void	ft_put_plane(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 						t_plane pl)
 {
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Type: Plane");
-	pos.y += Y_NEXT_LINE_BIG;
 	ft_mlx_put_str(mlx_ptrs, pos, col, "Point");
 	pos.y += Y_NEXT_LINE;
 	pos = ft_put_3d_point(mlx_ptrs, pos, col, pl.point);
@@ -66,8 +56,6 @@ void	ft_put_plane(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 void	ft_put_cylinder(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 							t_cylinder cy)
 {
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Type: Cylinder");
-	pos.y += Y_NEXT_LINE_BIG;
 	ft_mlx_put_str(mlx_ptrs, pos, col, "Centre");
 	pos.y += Y_NEXT_LINE;
 	pos = ft_put_3d_point(mlx_ptrs, pos, col, cy.centre);

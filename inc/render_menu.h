@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 09:54:55 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:34:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,9 @@ void	ft_put_light(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 t_vec2i	ft_put_mode(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 			t_mode mode);
 t_vec2i	ft_put_info(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col);
+t_vec2i	ft_put_id(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col, int id);
+t_vec2i	ft_put_type(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
+			t_type type);
 
 // menu_put_ctrl_base.c
 

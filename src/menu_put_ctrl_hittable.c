@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:09:14 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 14:14:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:35:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 t_vec2i	ft_put_ctrl_hittable(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 			t_hittable *hittable)
 {
+	pos = ft_put_id(mlx_ptrs, pos, col, hittable->id);
+	pos = ft_put_type(mlx_ptrs, pos, col, hittable->type);
 	if (hittable->type == SPHERE)
 		pos = ft_put_ctrl_sp(mlx_ptrs, pos, col);
 	else if (hittable->type == PLANE)

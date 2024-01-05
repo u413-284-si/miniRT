@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:10:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 17:11:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:46:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	ft_put_camera(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 void	ft_put_ambient(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 						t_light ambient)
 {
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Ambient");
-	pos.y += Y_NEXT_LINE_BIG;
+	pos = ft_put_id(mlx_ptrs, pos, col, 0);
+	pos = ft_put_type(mlx_ptrs, pos, col, AMBIENT);
 	ft_mlx_put_str(mlx_ptrs, pos, col, "Brightness");
 	pos.y += Y_NEXT_LINE;
 	pos = ft_put_float_value(mlx_ptrs, pos, col, ambient.ratio);
@@ -42,8 +42,8 @@ void	ft_put_ambient(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 void	ft_put_light(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 						t_light light)
 {
-	ft_mlx_put_str(mlx_ptrs, pos, col, "Light");
-	pos.y += Y_NEXT_LINE_BIG;
+	pos = ft_put_id(mlx_ptrs, pos, col, light.id);
+	pos = ft_put_type(mlx_ptrs, pos, col, LIGHT);
 	ft_mlx_put_str(mlx_ptrs, pos, col, "Position");
 	pos.y += Y_NEXT_LINE;
 	pos = ft_put_3d_point(mlx_ptrs, pos, col, light.pos);
