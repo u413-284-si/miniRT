@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:16:08 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 16:18:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 14:13:23 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_vec2i	ft_put_3d_point(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 							t_vec3 point)
 {
 	t_numinfo	numinfo;
-	const int	num_x = pos.x + X_OFFSET;
+	const int	num_x = pos.x + 30;
 
 	numinfo.pad = 5;
 	numinfo.prec = 2;
@@ -40,7 +40,7 @@ t_vec2i	ft_put_unit_vec(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 							t_vec3 vec)
 {
 	t_numinfo	numinfo;
-	const int	num_x = pos.x + X_OFFSET;
+	const int	num_x = pos.x + 30;
 
 	numinfo.pad = 2;
 	numinfo.prec = 5;
@@ -64,7 +64,7 @@ t_vec2i	ft_put_colour(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 						t_colour colour)
 {
 	t_numinfo	numinfo;
-	const int	num_x = pos.x + X_OFFSET_BIG;
+	const int	num_x = pos.x + 70;
 
 	numinfo.pad = 3;
 	numinfo.col = col;
@@ -87,7 +87,7 @@ t_vec2i	ft_put_float_value(t_mlx_ptrs *mlx_ptrs, t_vec2i pos, uint32_t col,
 							float value)
 {
 	t_numinfo	numinfo;
-	const int	num_x = pos.x + X_OFFSET;
+	const int	num_x = pos.x + 30;
 
 	numinfo.pad = 5;
 	numinfo.prec = 2;

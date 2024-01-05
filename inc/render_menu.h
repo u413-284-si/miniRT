@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 13:34:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 14:13:29 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@
 
 # define Y_NEXT_LINE 20
 # define Y_NEXT_LINE_BIG 30
-# define X_OFFSET 30
-# define X_OFFSET_MID 50
-# define X_OFFSET_BIG 70
 # define NUMLEN 10
 
 /* ====== TYPEDEFS ====== */
