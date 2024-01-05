@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:16:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 10:34:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 12:07:18 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,6 @@ void	ft_draw_menu(t_render *render)
 	else if (render->menu.cur_page == PAGE_CAM_CTRL)
 		ft_put_ctrl_cam(&render->mlx_ptrs, pos,
 			render->menu.font_col);
-	pos = (t_vec2i){20, 530};
+	pos = (t_vec2i){20, 490};
 	ft_put_info(&render->mlx_ptrs, pos, render->menu.font_col);
 }
