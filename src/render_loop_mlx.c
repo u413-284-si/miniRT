@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 10:32:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:23:25 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 
 int	ft_draw_scene(t_render *render)
 {
+	if (render->is_printing)
+	{
+		mlx_string_put(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr,
+			100, 100, WHITE, "Printing - Please wait");
+		ft_output_as_ppm(render->mlx_ptrs.img, &render->is_printing);
+		mlx_do_key_autorepeaton(render->mlx_ptrs.mlx_ptr);
+		return (0);
+	}
 	if (render->is_changed)
 	{
 		ft_render_image(render);
@@ -29,6 +37,7 @@ int	ft_draw_scene(t_render *render)
 void	ft_render_start_loop(t_render *render)
 {
 	mlx_hook(render->mlx_ptrs.win_ptr, KeyPress, KeyPressMask, ft_keyhook_press, render);
+	mlx_hook(render->mlx_ptrs.win_ptr, KeyRelease, KeyReleaseMask, ft_keyhook_release, render);
 	mlx_hook(render->mlx_ptrs.win_ptr, ButtonPress, ButtonPressMask, \
 			ft_mouse_hook_press, render);
 	mlx_hook(render->mlx_ptrs.win_ptr, ButtonRelease, ButtonReleaseMask, \

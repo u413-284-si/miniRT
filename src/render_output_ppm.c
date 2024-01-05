@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:57:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 17:21:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:23:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,25 +34,45 @@ static void	ft_write_ppm_header(int width, int height, int fd)
 	ft_putchar_fd('\n', fd);
 }
 
+static void	ft_write_to_file(int fd, int *pix_arr, int pixel_sum)
+{
+	int	i;
+
+	i = 0;
+	while (i < pixel_sum)
+	{
+		ft_write_pixel(pix_arr[i++], fd);
+		if (i % 100 == 0)
+			printf("\r%d%%", (i * 100) / pixel_sum);
+	}
+	printf("\r100%%\nFinished printing\n");
+}
+
+static void	ft_create_filename(char outfile[14])
+{
+	static int	i;
+	char		num[3];
+
+	if (i++ > 99)
+		i = 0;
+	ft_strlcpy(outfile, "outfile_", 8);
+	ft_itoa_in_place(i, num);
+	ft_strlcat(outfile, num, 14);
+	ft_strlcat(outfile, ".ppm", 14);
+}
+
 t_err	ft_output_as_ppm(const t_img img, bool *is_printing)
 {
-	int	fd;
-	int	pixel_sum;
-	int	i;
-	int	*addr;
+	int		fd;
+	char	outfile[14];
 
-	if (*is_printing)
-		return (SUCCESS);
-	*is_printing = true;
+	ft_create_filename(outfile);
 	fd = 0;
-	if (ft_err_open("outfile.ppm", O_CREAT | O_WRONLY | O_TRUNC, &fd))
+	if (ft_err_open(outfile, O_CREAT | O_WRONLY | O_TRUNC, &fd))
 		return (ERROR);
 	ft_write_ppm_header(img.size.x, img.size.y, fd);
-	pixel_sum = img.size.x * img.size.y;
-	i = 0;
-	addr = (int *)img.addr;
-	while (i < pixel_sum)
-		ft_write_pixel(addr[i++], fd);
+	printf("Printing scene to %s...\n", outfile);
+	ft_write_to_file(fd, (int *)img.addr, img.size.x * img.size.y);
 	if (ft_err_close(fd))
 		return (ERROR);
 	*is_printing = false;

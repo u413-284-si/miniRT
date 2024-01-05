@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_keyhook.c                                   :+:      :+:    :+:   */
+/*   render_keyhook_press.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 10:31:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:26:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ int	ft_keyhook_press(int key, t_render *render)
 {
 	if (key == XK_Escape)
 		return (mlx_loop_end(render->mlx_ptrs.mlx_ptr));
-	else if (key == XK_c && !render->is_printing)
-		ft_output_as_ppm(render->mlx_ptrs.img, &render->is_printing);
+	else if (render->is_printing)
+		return (0);
 	else if (key == XK_i)
 		render->show_menu = !render->show_menu;
 	else if (key == XK_Control_L)

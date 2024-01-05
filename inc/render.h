@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 11:42:40 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 12:46:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -201,7 +201,7 @@ void	ft_render_image(t_render *render);
  */
 t_err	ft_output_as_ppm(const t_img img, bool *is_printing);
 
-// render_keyhook.c
+// render_keyhook_press.c
 
 /**
  * @brief Handles keypresses.
@@ -211,6 +211,17 @@ t_err	ft_output_as_ppm(const t_img img, bool *is_printing);
  * @return int		0 if successful, -1 if not.
  */
 int		ft_keyhook_press(int key, t_render *render);
+
+// render_keyhook_release.c
+
+/**
+ * @brief Handles key releases.
+ *
+ * @param key		Keycode of the pressed key.
+ * @param render	Pointer to render struct.
+ * @return int		0 if successful, -1 if not.
+ */
+int		ft_keyhook_release(int key, t_render *render);
 
 // render_keyhook_hittable.c
 
