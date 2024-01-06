@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 13:21:05 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 14:22:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 16:11:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,3 @@ t_vec2i	ft_put_ctrl_inc_dec(t_putinfo put, char *name, bool first)
 	put.pos.y += Y_NEXT_LINE_BIG;
 	return (put.pos);
 }
-

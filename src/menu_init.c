@@ -6,13 +6,14 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 16:34:39 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/31 11:07:57 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 16:12:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_menu.h"
 
-void	ft_init_menu(t_menu *menu, uint8_t alpha, uint32_t colour, uint32_t font_col)
+void	ft_init_menu(t_menu *menu, uint8_t alpha, uint32_t colour,
+			uint32_t font_col)
 {
 	menu->inv_alpha = 255 - alpha;
 	menu->rb = (colour & 0xFF00FF) * alpha;
