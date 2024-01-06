@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/04 00:49:58 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 15:23:22 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,9 @@ bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d)
 	{
 		rec->d = tmp.d;
 		rec->axis_hit = tmp.axis_hit;
-		rec->u = tmp.u;
-		rec->v = tmp.v;
 		rec->point = ft_ray(rec->ray, rec->d);
 		rec->normal = ft_vec3_norm(ft_cy_normal(*rec, cy));
+		ft_get_cy_uvcoords(rec, cy);
 		rec->colour = cy.colour;
 		return (true);
 	}

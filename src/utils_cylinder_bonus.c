@@ -6,11 +6,12 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/04 00:51:01 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/04 15:39:45 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hit_manager_bonus.h"
+#include "texture_bonus.h"
 
 t_vec3	ft_cy_normal(t_hitrecord rec, t_cylinder cy)
 {
@@ -44,8 +45,6 @@ bool	ft_cy_check_wall(t_cylinder cy, float d, t_hitrecord *rec)
 	if (m >= 0 && m <= cy.h && len <= (cy.d / 2.0) && d > EPSILON && d < rec->d)
 	{
 		rec->axis_hit = axis_hit;
-		rec->u = atan2(hit.y, hit.x) / M_PI;
-		rec->v = hit.z;
 		return (true);
 	}
 	return (false);
@@ -62,8 +61,8 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec)
 	if (len <= (cy.d / 2.0) && d > EPSILON && d < rec->d)
 	{
 		rec->axis_hit = cap;
-		rec->u = hit.x;
-		rec->v = hit.y;
+/* 		rec->u = hit.x;
+		rec->v = hit.y; */
 		return (true);
 	}
 	return (false);
@@ -78,4 +77,24 @@ bool	ft_cy_visible(t_equation eq, t_interval ray_d, float d3, \
 				if (!ft_surrounds(d4, ray_d))
 					return (false);
 	return (true);
+}
+
+void	ft_get_cy_uvcoords(t_hitrecord *rec, t_cylinder cy)
+{
+	t_vec3	base1;
+	t_vec3	base2;
+
+	if (fabs(rec->normal.x) > fabs(rec->normal.y))
+		base1 = ft_vec3_scale((t_vec3){rec->normal.z, 0, -rec->normal.x}, \
+			1.0 / sqrt(pow(rec->normal.x, 2.0) + pow(rec->normal.z, 2.0)));
+	else
+		base1 = ft_vec3_scale((t_vec3){0, -rec->normal.z, rec->normal.y}, \
+			1.0 / sqrt(pow(rec->normal.y, 2.0) + pow(rec->normal.z, 2.0)));
+	base2 = ft_vec3_cross(rec->normal, base1);
+	rec->u = (acos(ft_vec3_dot(base1, rec->normal)) / M_PI) * 0.5;
+	if (ft_vec3_dot(base2, rec->normal) > 0)
+		rec->u = 1 - rec->u;
+	rec->u = ft_set_tiling(rec->u, 0.75);
+	rec->v = ft_vec3_abs(ft_vec3_sub(cy.cap1, rec->axis_hit)) / cy.h;
+	rec->v = ft_set_tiling(rec->v, 0.75);
 }
