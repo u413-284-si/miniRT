@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 01:11:24 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/04 01:41:16 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/05 01:51:37 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,23 @@ void	ft_apply_checker_texture(t_hitrecord *rec)
 		rec->colour = (t_colour){0.2, 0.2, 0.2};
 	else
 		rec->colour = (t_colour){1.0, 1.0, 1.0};
+}
+
+float	ft_set_tiling(const float uv, const float scale)
+{
+	float		out;
+
+	out = uv;
+	if (fabs(out) > 1)
+		out = fmod(out, scale) / scale;
+	else
+	{
+		if (scale < 1)
+			out = fmod(out / scale, 1);
+		else
+			out /= scale;
+	}
+	if (out < 0)
+		out = 1 - fabs(out);
+	return (out);
 }
