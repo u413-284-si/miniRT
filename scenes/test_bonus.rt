@@ -6,16 +6,16 @@ L 0,-1,5            0.6       255,0,0
 L -4,-1,8.8         0.6       0,255,0
 L 1,-1,2            0.6       0,0,255
 
-#      Centre         Diameter  Shininess   Reflectivity  Color       
-sp     0,-2.25,7         1.5    32          0.75          255,0,0
-sp     3,-2.25,15        1.5    32          0.0          0,255,0
-sp     -4,-2.25,10        1.5    32          0.5          255,255,0
+#      Centre         Diameter  Shininess   Reflectivity  Checkered     Color       
+sp     0,-2.25,7         1.5    32          0.75          1               255,0,0
+sp     3,-2.25,15        1.5    32          0.0           0              0,255,0
+sp     -4,-2.25,10        1.5    32          0.5          0              255,255,0
 
-#      Centre         Normal    Shininess   Reflectivity  Color       
-pl     0,-3,0         0,1,0     32          0.5           0,255,255
+#      Centre         Normal    Shininess   Reflectivity  Checkered      Color       
+pl     0,-3,0         0,1,0     32          0.5           1              0,255,255
 
-#      Centre   Axis    Diameter  Height   Shininess   Reflectivity  Color       
-cy     -2,1,10  -1,0.5,-1     2       3       32          0.5           155,100,155
+#      Centre   Axis    Diameter  Height   Shininess   Reflectivity    Checkered    Color       
+cy     -2,1,10  -1,0.5,-1     2       3       32          0.5          1            155,100,155
 
-#      Apex      Axis     Radius  Height  Shininess   Reflectivity  Color       
-co     2,0.75,5     -1,-1,-1    0.5       2       32          0.5      0,210,200
+#      Apex      Axis     Radius  Height  Shininess   Reflectivity    Checkered      Color       
+co     2,0.75,5     -1,-1,-1    0.5       2       32          0.5     0               0,210,200
