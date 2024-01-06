@@ -6,13 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 15:30:17 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 15:18:18 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
 
-bool	ft_is_manip_key(int key)
+static bool	ft_is_manip_key(int key)
 {
 	return (key == XK_w || key == XK_s || key == XK_a || key == XK_d
 		|| key == XK_q || key == XK_e || key == XK_r || key == XK_f
@@ -21,15 +21,7 @@ bool	ft_is_manip_key(int key)
 		|| (key >= XK_0 && key <= XK_9));
 }
 
-void	ft_manip_scene(int key, t_entities *scene, int *active)
-{
-	if (key == XK_n || key == XK_m)
-		ft_change_active_hittable(key, scene, active);
-	else
-		ft_manip_hittable(key, &scene->obj[*active]);
-}
-
-void	ft_change_mode(t_render *render)
+static void	ft_change_mode(t_render *render)
 {
 	if (render->mode == CTRL_SCENE)
 	{
@@ -48,7 +40,7 @@ void	ft_change_mode(t_render *render)
 	}
 }
 
-void	ft_change_menu_page_ctrl(t_render *render)
+static void	ft_change_menu_page_ctrl(t_render *render)
 {
 	if (render->menu.cur_page <= PAGE_CAM)
 		render->menu.cur_page += 3;
@@ -56,7 +48,7 @@ void	ft_change_menu_page_ctrl(t_render *render)
 		render->menu.cur_page -= 3;
 }
 
-void	ft_toggle_menu(t_render *render)
+static void	ft_toggle_menu(t_render *render)
 {
 	render->show_menu = !render->show_menu;
 	if (render->show_menu == false)
