@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 14:22:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 14:26:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -282,6 +282,7 @@ t_vec2i	ft_put_ctrl_rot(t_putinfo put, char *name);
  * If first false: Shows T and G as control buttons.
  * @param put		t_putinfo struct.
  * @param name		Name of the value to increment or decrement.
+ * @param first		Whether this is first version of control scheme.
  * @return t_vec2i	Next position of text.
  */
 t_vec2i	ft_put_ctrl_inc_dec(t_putinfo put, char *name, bool first);
@@ -350,6 +351,7 @@ t_vec2i	ft_put_ctrl_cam(t_putinfo put);
  * Control for move, inc/dec brightness and change colour of the other lights.
  * Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG.
  * @param put		t_putinfo struct.
+ * @param active	ID of the passed light.
  * @return t_vec2i	Next position of text.
  */
 t_vec2i	ft_put_ctrl_light(t_putinfo put, uint32_t active);
