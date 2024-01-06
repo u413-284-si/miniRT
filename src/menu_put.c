@@ -6,13 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 13:42:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 14:29:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
 
-void	ft_draw_menu(t_render *render)
+void	ft_menu_put_text(t_render *render)
 {
 	t_putinfo	put;
 

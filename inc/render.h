@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 13:00:57 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 15:20:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,19 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color);
  * @param render	Pointer to render struct.
  */
 void	ft_render_image(t_render *render);
+
+/**
+ * @brief Aplha blends current image with menu color to create overlay.
+ *
+ * For each pixel of the menu size, the menu colour is blended with the
+ * corresponding pixel of the current image.
+ * The current image pixel is multiplied with the inverse of the alpha value
+ * of the menu colour. Both are added together. To speed up the process,
+ * the alpha value is pre-calculated. Furthermore, only two variables (rb and g)
+ * are used to calc the blended colour.
+ * @param render	Pointer to render struct.
+ */
+void	ft_blend_background(t_img *img, t_img *veil, t_menu menu);
 
 // render_output_ppm.c
 
@@ -336,6 +349,18 @@ void	ft_keyhook_fov_cam(int key, t_cam *cam);
  */
 void	ft_manip_cam(int key, t_cam *cam);
 
+// render_keyhook_light.c
+
+/**
+ * @brief Manipulates the active light.
+ *
+ * Checks for keypresses and calls the corresponding function.
+ * @param key		Keycode of the pressed key.
+ * @param scene		Pointer to scene struct.
+ * @param active	Pointer to index of active light.
+ */
+void	ft_manip_light(int key, t_entities *scene, int *active);
+
 // render_mouse.c
 
 /**
@@ -400,12 +425,13 @@ void	ft_mouse_hook_rot_cam(int x, int y, t_render *render);
  */
 void	ft_render_start_loop(t_render *render);
 
+// IMPORT from render_menu.h
 
-void	ft_init_menu(t_menu *menu, uint8_t alpha, uint32_t colour, uint32_t font_col);
-void	ft_draw_menu(t_render *render);
-void	ft_blend_background(t_img *img, t_img *veil, t_menu menu);
-
-void	ft_manip_light(int key, t_entities *scene, int *active);
-void	ft_manip_light_src(int key, t_light *light);
+/**
+ * @brief Puts the current menu page on the screen.
+ *
+ * @param render	Pointer to render struct.
+ */
+void	ft_menu_put_text(t_render *render);
 
 #endif
