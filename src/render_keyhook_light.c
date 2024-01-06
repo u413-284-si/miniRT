@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:40:21 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 11:44:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 19:25:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,12 @@ void	ft_change_active_light(int key, t_entities *scene, int *active)
 	{
 		*active -= 1;
 		if (*active < 0)
-			*active = scene->lsrc_count + 1 - 1;
+			*active = scene->lsrc_count;
 	}
 	if (key == XK_m)
 	{
 		*active += 1;
-		if (*active == scene->lsrc_count + 1)
+		if (*active > scene->lsrc_count)
 			*active = 0;
 	}
 }
