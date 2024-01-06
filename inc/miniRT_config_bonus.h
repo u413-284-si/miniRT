@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 00:34:31 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/06 16:01:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,9 @@
 # define SAMPLE_SIZE 5
 
 // maximum reflection of rays in scene
-
 # define REFLECTION_MAX 3
+
+// checker tiling scale
+# define CHECKER_SCALE 10
 
 #endif

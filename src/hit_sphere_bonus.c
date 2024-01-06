@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:39:35 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/05 01:50:59 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/06 16:09:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,20 +42,8 @@ bool	ft_hit_sphere(t_sphere sp, t_hitrecord *rec, t_interval ray_d)
 
 void	ft_get_sp_uvcoords(t_hitrecord *rec, t_sphere sp)
 {
-	t_vec3	north_pole;
-	t_vec3	equator;
-	float	phi;
-	float	theta;
-
-	north_pole = ft_vec3_add(sp.centre, ft_vec3_scale((t_vec3){0, 1, 0}, sp.d / 2.0));
-	equator = ft_vec3_add(sp.centre, ft_vec3_scale((t_vec3){1, 0, 0}, sp.d / 2.0));
-	phi = acos(ft_vec3_dot(ft_vec3_scale(rec->normal, -1), north_pole));
-	theta = acos(ft_vec3_dot(rec->normal, equator) / sin(phi)) / (2 * M_PI);
-	if (ft_vec3_dot(ft_vec3_cross(north_pole, equator), rec->normal) > 0)
-		rec->u = theta;
-	else
-		rec->u = 1 - theta;
-	rec->u = ft_set_tiling(rec->u, 0.1);
-	rec->v = phi / M_PI;
-	rec->v = ft_set_tiling(rec->v, 0.1);
+	rec->u = 0.5 + (atan2(rec->normal.x, rec->normal.z) / (2 * M_PI));
+	rec->v = 0.5 + (asin(rec->normal.y) / M_PI);
+	rec->u *= CHECKER_SCALE;
+	rec->v *= CHECKER_SCALE;
 }
