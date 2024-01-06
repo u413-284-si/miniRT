@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 01:07:37 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/04 15:32:19 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/06 15:59:43 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,5 @@
  * @param rec	Hit record containing data on hit point 
  */
 void	ft_apply_checker_texture(t_hitrecord *rec);
-
-
-float	ft_set_tiling(const float uv, const float scale);
-
 
 #endif
