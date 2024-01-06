@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 19:11:13 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 19:21:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_blend_background(t_img *img, t_img *veil, t_menu menu)
 		{
 			img_pixel = img->addr
 				+ (pos.y * img->line_len + pos.x * img->bytes);
-			blend_colour = fast_alpha_blend(*(uint32_t *)img_pixel, menu);
+			blend_colour = ft_fast_alpha_blend(*(uint32_t *)img_pixel, menu);
 			veil_pixel = veil->addr
 				+ (pos.y * veil->line_len + pos.x * veil->bytes);
 			*(uint32_t *)veil_pixel = blend_colour;

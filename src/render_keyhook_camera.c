@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 11:27:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 19:22:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,8 @@ void	ft_keyhook_rot_cam(int key, t_vec3 *direction)
 
 void	ft_keyhook_move_cam(int key, t_cam *cam)
 {
-	t_interval	lim;
+	const t_interval	lim = (t_interval){.min = FLOAT_MIN, .max = FLOAT_MAX};
 
-	lim = (t_interval){.min = FLOAT_MIN, .max = FLOAT_MAX};
 	if (key == XK_q && cam->centre.y > lim.min)
 		ft_cam_move_up(cam, -MV_UNIT);
 	else if (key == XK_e && cam->centre.y < lim.max)
