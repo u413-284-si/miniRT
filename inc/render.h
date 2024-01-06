@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 15:20:55 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 15:26:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,8 @@ typedef struct s_mlx_ptrs
  * @param right		Right mouse button pressed flag.
  * @param last_pos	Last mouse position.
  */
-typedef struct s_mouse {
+typedef struct s_mouse
+{
 	bool	left;
 	bool	right;
 	t_vec2i	last_pos;
@@ -217,6 +218,16 @@ int		ft_keyhook_press(int key, t_render *render);
 int		ft_keyhook_release(int key, t_render *render);
 
 // render_keyhook_hittable.c
+
+/**
+ * @brief Manipulates the active hittable.
+ *
+ * Chnages the active hittable or manipulates it.
+ * @param key		Keycode of the pressed key.
+ * @param scene		Pointer to scene struct.
+ * @param active	Pointer to index of active hittable.
+ */
+void	ft_manip_scene(int key, t_entities *scene, int *active);
 
 /**
  * @brief Changes the active hittable.
