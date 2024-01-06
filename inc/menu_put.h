@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 14:17:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 14:22:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -276,25 +276,15 @@ t_vec2i	ft_put_ctrl_rot(t_putinfo put, char *name);
 
 /**
  * @brief Puts control scheme for incrementing and decrementing
- * a value on the screen. Version 1.
+ * a value on the screen.
  *
- * Shows R and F as control buttons.
+ * If first true: Shows R and F as control buttons.
+ * If first false: Shows T and G as control buttons.
  * @param put		t_putinfo struct.
  * @param name		Name of the value to increment or decrement.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_ctrl_inc_dec_1(t_putinfo put, char *name);
-
-/**
- * @brief Puts control scheme for incrementing and decrementing
- * a value on the screen. Version 2.
- *
- * Shows T and G as control buttons.
- * @param put		t_putinfo struct.
- * @param name		Name of the value to increment or decrement.
- * @return t_vec2i	Next position of text.
- */
-t_vec2i	ft_put_ctrl_inc_dec_2(t_putinfo put, char *name);
+t_vec2i	ft_put_ctrl_inc_dec(t_putinfo put, char *name, bool first);
 
 // menu_put_hittable_ctrl.c
 

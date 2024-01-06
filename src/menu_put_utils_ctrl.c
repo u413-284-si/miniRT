@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 13:21:05 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 13:42:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 14:22:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,26 +36,17 @@ t_vec2i	ft_put_ctrl_rot(t_putinfo put, char *name)
 	return (put.pos);
 }
 
-t_vec2i	ft_put_ctrl_inc_dec_1(t_putinfo put, char *name)
+t_vec2i	ft_put_ctrl_inc_dec(t_putinfo put, char *name, bool first)
 {
 	ft_put_str(put, "Inc/Dec ");
 	put.pos.x += 60;
 	ft_put_str(put, name);
 	put.pos.x -= 60;
 	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, "  R F");
-	put.pos.y += Y_NEXT_LINE_BIG;
-	return (put.pos);
-}
-
-t_vec2i	ft_put_ctrl_inc_dec_2(t_putinfo put, char *name)
-{
-	ft_put_str(put, "Inc/Dec ");
-	put.pos.x += 60;
-	ft_put_str(put, name);
-	put.pos.x -= 60;
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, "  T G");
+	if (first)
+		ft_put_str(put, "  R F");
+	else
+		ft_put_str(put, "  T G");
 	put.pos.y += Y_NEXT_LINE_BIG;
 	return (put.pos);
 }
