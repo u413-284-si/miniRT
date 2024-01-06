@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 12:17:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 13:01:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,112 +15,35 @@
 
 /* ====== LIBRARIES ====== */
 
+# include <stdint.h>
+
 # include "miniRT_config.h"
-# include "render.h"
-# include "vec2.h"
 
 /* ====== MACROS ====== */
 
-# define Y_NEXT_LINE 20
-# define Y_NEXT_LINE_BIG 30
-# define NUMLEN 10
-
-/* ====== TYPEDEFS ====== */
-
-typedef struct s_putinfo
+typedef enum e_pages
 {
-	t_mlx_ptrs	mlx_ptrs;
-	t_vec2i		pos;
-	uint32_t	col;
-}	t_putinfo;
+	PAGE_SCENE,
+	PAGE_LIGHT,
+	PAGE_CAM,
+	PAGE_SCENE_CTRL,
+	PAGE_LIGHT_CTRL,
+	PAGE_CAM_CTRL,
+	PAGE_SCENE_LST,
+	PAGE_LIGHT_LST
+}	t_pages;
 
-typedef struct s_numinfo
+typedef struct s_menu
 {
-	union
-	{
-		int32_t	numi;
-		float	numf;
-	};
-	uint8_t		pad;
-	uint8_t		prec;
-}	t_numinfo;
+	uint8_t		inv_alpha;
+	uint32_t	rb;
+	uint32_t	g;
+	uint32_t	font_col;
+	t_pages		cur_page;
+}	t_menu;
 
 /* ====== FUNCTIONS ====== */
 
-// menu_put_num.c
-
-void	ft_mlx_put_str(t_putinfo put, char *str);
-void	ft_mlx_put_int(t_putinfo put, t_numinfo numinfo);
-void	ft_mlx_put_float(t_putinfo put, t_numinfo numinfo);
-
-// menu_put_element.c
-
-t_vec2i	ft_put_3d_point(t_putinfo put, t_vec3 point);
-t_vec2i	ft_put_unit_vec(t_putinfo put, t_vec3 vec);
-t_vec2i	ft_put_colour(t_putinfo put, t_colour colour);
-t_vec2i	ft_put_float_value(t_putinfo put, float value);
-
-// menu_put_hittable.c
-
-void	ft_put_hittable(t_putinfo put,
-			t_hittable hittable);
-void	ft_put_sphere(t_putinfo put,
-			t_sphere sp);
-void	ft_put_plane(t_putinfo put,
-			t_plane pl);
-void	ft_put_cylinder(t_putinfo put,
-			t_cylinder cy);
-
-// menu_put_camera_lights.c
-
-void	ft_put_camera(t_putinfo put,
-			t_cam cam);
-void	ft_put_ambient(t_putinfo put,
-			t_light ambient);
-void	ft_put_light(t_putinfo put,
-			t_light light);
-
-// menu_put_mode.c
-
-t_vec2i	ft_put_mode(t_putinfo put,
-			t_mode mode);
-t_vec2i	ft_put_info(t_putinfo put);
-t_vec2i	ft_put_id(t_putinfo put, int id);
-t_vec2i	ft_put_type(t_putinfo put,
-			t_type type);
-
-// menu_put_ctrl_base.c
-
-t_vec2i	ft_put_ctrl_move(t_putinfo put, char *name);
-t_vec2i	ft_put_ctrl_rot(t_putinfo put, char *name);
-t_vec2i	ft_put_ctrl_inc_dec_1(t_putinfo put, char *name);
-t_vec2i	ft_put_ctrl_inc_dec_2(t_putinfo put, char *name);
-
-// menu_put_ctrl_hittable.c
-
-t_vec2i	ft_put_ctrl_hittable(t_putinfo put,
-			t_hittable hittable);
-t_vec2i	ft_put_ctrl_sp(t_putinfo put);
-t_vec2i	ft_put_ctrl_pl(t_putinfo put);
-t_vec2i	ft_put_ctrl_cy(t_putinfo put);
-
-// menu_put_ctrl_cam_lights.c
-t_vec2i	ft_put_ctrl_light(t_putinfo put, uint32_t active);
-t_vec2i	ft_put_ctrl_cam(t_putinfo put);
-
-// menu_put_page.c
-
-void	ft_put_page_scene(t_putinfo put,
-			t_hittable active, t_pages cur_page);
-void	ft_put_page_ambient(t_putinfo put,
-			t_light ambient, t_pages cur_page);
-void	ft_put_page_light(t_putinfo put,
-			t_light light, t_pages cur_page);
-void	ft_put_page_cam(t_putinfo put,
-			t_cam cam, t_pages cur_page);
-
-// menu_draw.c
-uint32_t	fast_alpha_blend(uint32_t bg_color, t_menu menu);
-void	ft_blend_background(t_img *img, t_img *veil, t_menu menu);
+void	ft_init_menu(t_menu *menu, uint8_t alpha, uint32_t colour, uint32_t font_col);
 
 #endif

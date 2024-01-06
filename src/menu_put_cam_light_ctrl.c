@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   menu_put_ctrl_cam_lights.c                         :+:      :+:    :+:   */
+/*   menu_put_cam_light_ctrl.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:56:30 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 12:23:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 13:44:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "render_menu.h"
+#include "menu_put.h"
 
 t_vec2i	ft_put_ctrl_cam(t_putinfo put)
 {
@@ -18,11 +18,11 @@ t_vec2i	ft_put_ctrl_cam(t_putinfo put)
 	put.pos = ft_put_ctrl_rot(put, "view");
 	put.pos = ft_put_ctrl_inc_dec_1(put, "FOV");
 	put.pos.y += Y_NEXT_LINE_BIG;
-	ft_mlx_put_str(put, "Rotate view");
+	ft_put_str(put, "Rotate view");
 	put.pos.y += Y_NEXT_LINE;
-	ft_mlx_put_str(put, "(Mode independent)");
+	ft_put_str(put, "(Mode independent)");
 	put.pos.y += Y_NEXT_LINE;
-	ft_mlx_put_str(put, "  Right mouse and move");
+	ft_put_str(put, "  Right mouse and move");
 	put.pos.y += Y_NEXT_LINE_BIG;
 
 	return (put.pos);
@@ -39,12 +39,12 @@ t_vec2i	ft_put_ctrl_light(t_putinfo put, uint32_t active)
 		put.pos = ft_put_ctrl_move(put, "position");
 	}
 	put.pos = ft_put_ctrl_inc_dec_1(put, "brightness");
-	ft_mlx_put_str(put, "Change Colour");
+	ft_put_str(put, "Change Colour");
 	put.pos.y += Y_NEXT_LINE;
-	ft_mlx_put_str(put, "  1 - 9");
+	ft_put_str(put, "  1 - 9");
 	put.pos.y += Y_NEXT_LINE_BIG;
-	ft_mlx_put_str(put, "Change Light");
+	ft_put_str(put, "Change Light");
 	put.pos.y += Y_NEXT_LINE;
-	ft_mlx_put_str(put, "  N M");
+	ft_put_str(put, "  N M");
 	return (put.pos);
 }
