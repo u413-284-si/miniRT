@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/05 01:39:32 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/06 16:01:43 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # include "ray_bonus.h"
 # include "utils_bonus.h"
+# include "miniRT_config_bonus.h"
 
 /* ====== MACROS ====== */
 

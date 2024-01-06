@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/04 15:39:45 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/06 16:40:26 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,20 +81,22 @@ bool	ft_cy_visible(t_equation eq, t_interval ray_d, float d3, \
 
 void	ft_get_cy_uvcoords(t_hitrecord *rec, t_cylinder cy)
 {
-	t_vec3	base1;
-	t_vec3	base2;
+	t_vec3	centre_hit;
+	float	theta;
+	float	rotation;
 
-	if (fabs(rec->normal.x) > fabs(rec->normal.y))
-		base1 = ft_vec3_scale((t_vec3){rec->normal.z, 0, -rec->normal.x}, \
-			1.0 / sqrt(pow(rec->normal.x, 2.0) + pow(rec->normal.z, 2.0)));
-	else
-		base1 = ft_vec3_scale((t_vec3){0, -rec->normal.z, rec->normal.y}, \
-			1.0 / sqrt(pow(rec->normal.y, 2.0) + pow(rec->normal.z, 2.0)));
-	base2 = ft_vec3_cross(rec->normal, base1);
-	rec->u = (acos(ft_vec3_dot(base1, rec->normal)) / M_PI) * 0.5;
-	if (ft_vec3_dot(base2, rec->normal) > 0)
-		rec->u = 1 - rec->u;
-	rec->u = ft_set_tiling(rec->u, 0.75);
-	rec->v = ft_vec3_abs(ft_vec3_sub(cy.cap1, rec->axis_hit)) / cy.h;
-	rec->v = ft_set_tiling(rec->v, 0.75);
+	centre_hit = ft_vec3_sub(rec->point, cy.centre);
+/* 	if (!((cy.axis.y + EPSILON >= 1.0) && (cy.axis.y - EPSILON <= 1.0)))
+	{
+		rotation = acos(cy.axis.y);
+		centre_hit = quaternionf_rotate_vector3f(-rotation,
+				vector3f_unit(vector3f_cross(vector3f_create(0, 1, 0), \
+				cy.axis)), centre_hit);
+	} */
+	theta = atan2(centre_hit.x / (cy.d / 2.0),
+			centre_hit.z / (cy.d / 2.0));
+	rec->u = 1.0 - (theta / (2.0 * M_PI) + 0.5);
+	rec->v = (0.5 + centre_hit.y / cy.h);
+	rec->u *= CHECKER_SCALE;
+	rec->v *= CHECKER_SCALE;
 }
