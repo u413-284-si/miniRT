@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/04 01:33:26 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/05 01:39:32 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ bool	ft_hit_sphere(t_sphere sp, t_hitrecord *rec, t_interval ray_d);
  * 
  * @param rec 
  */
-void	ft_get_sp_uvcoords(t_hitrecord *rec);
+void	ft_get_sp_uvcoords(t_hitrecord *rec, t_sphere sp);
 
 /**
  * @brief Calculates if a plane was hit by a ray
@@ -104,6 +104,9 @@ void	ft_get_pl_uvcoords(t_hitrecord *rec);
  * @return false 	If cylinder is missed
  */
 bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d);
+
+void	ft_get_cy_uvcoords(t_hitrecord *rec, t_cylinder cy);
+
 
 /**
  * @brief Calculates all four potential hits of a cylinder
