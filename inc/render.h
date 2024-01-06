@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 15:26:21 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 16:06:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -217,7 +217,7 @@ int		ft_keyhook_press(int key, t_render *render);
  */
 int		ft_keyhook_release(int key, t_render *render);
 
-// render_keyhook_hittable.c
+// render_keyhook_scene.c
 
 /**
  * @brief Manipulates the active hittable.
@@ -237,6 +237,8 @@ void	ft_manip_scene(int key, t_entities *scene, int *active);
  * @param active	Pointer to index of active hittable.
  */
 void	ft_change_active_hittable(int key, t_entities *scene, int *active);
+
+// render_keyhook_hittable.c
 
 /**
  * @brief Manipulates the active hittable.
