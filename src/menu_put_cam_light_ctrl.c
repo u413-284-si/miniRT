@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:56:30 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 14:23:00 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 19:10:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ t_vec2i	ft_put_ctrl_cam(t_putinfo put)
 	put.pos.y += Y_NEXT_LINE;
 	ft_put_str(put, "  Right mouse and move");
 	put.pos.y += Y_NEXT_LINE_BIG;
-
 	return (put.pos);
 }
 

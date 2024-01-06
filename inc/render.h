@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 16:06:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 19:05:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,13 @@ typedef struct s_mouse
 	t_vec2i	last_pos;
 }	t_mouse;
 
+/**
+ * @brief Mode enum for different manipulation modes.
+ *
+ * CTRL_SCENE		Scene manipulation mode.
+ * CTRL_CAM			Camera manipulation mode.
+ * CTRL_LIGHT		Light manipulation mode.
+ */
 typedef enum e_mode
 {
 	CTRL_SCENE,
@@ -222,7 +229,7 @@ int		ft_keyhook_release(int key, t_render *render);
 /**
  * @brief Manipulates the active hittable.
  *
- * Chnages the active hittable or manipulates it.
+ * Changes the active hittable or manipulates it.
  * @param key		Keycode of the pressed key.
  * @param scene		Pointer to scene struct.
  * @param active	Pointer to index of active hittable.

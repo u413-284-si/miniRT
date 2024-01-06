@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 14:19:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 19:08:24 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ typedef struct s_menu
 
 /* ====== FUNCTIONS ====== */
 
-void	ft_init_menu(t_menu *menu, uint8_t alpha, uint32_t colour,
+void	ft_menu_init(t_menu *menu, uint8_t alpha, uint32_t colour,
 			uint32_t font_col);
 
 #endif

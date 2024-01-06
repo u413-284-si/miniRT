@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 14:29:58 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 19:09:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ void	ft_menu_put_text(t_render *render)
 	put.pos = (t_vec2i){20, 20};
 	put.col = render->menu.font_col;
 	if (render->show_menu == false)
-		return (ft_put_str(put,
-				"Press I to show menu"));
+		return (ft_put_str(put, "Press I to show menu"));
 	mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
 		render->mlx_ptrs.win_ptr, render->mlx_ptrs.veil.ptr, 0, 0);
 	put.pos = ft_put_mode(put, render->mode);
