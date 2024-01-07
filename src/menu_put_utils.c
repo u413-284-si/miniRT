@@ -6,96 +6,94 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:16:08 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 13:43:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/07 12:41:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
 
-t_vec2i	ft_put_3d_point(t_putinfo put, t_vec3 point)
+static t_vec2i	ft_put_coord(char *name, t_putinfo put, t_numinfo numinfo,
+					bool is_int)
 {
-	t_numinfo	numinfo;
-	const int	num_x = put.pos.x + 30;
+	const int	offset = ft_strlen(name) * 10;
 
-	numinfo.pad = 5;
-	numinfo.prec = 2;
-	ft_put_str(put, " x:");
-	numinfo.numf = point.x;
-	ft_put_float((t_putinfo){.mlx_ptrs = put.mlx_ptrs,
-		.pos.x = num_x, .pos.y = put.pos.y, .col = put.col}, numinfo);
+	ft_put_str(put, name);
+	put.pos.x += offset;
+	if (is_int)
+		ft_put_int(put, numinfo);
+	else
+		ft_put_float(put, numinfo);
+	put.pos.x -= offset;
 	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, " y:");
-	numinfo.numf = point.y;
-	ft_put_float((t_putinfo){.mlx_ptrs = put.mlx_ptrs,
-		.pos.x = num_x, .pos.y = put.pos.y, .col = put.col}, numinfo);
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, " z:");
-	numinfo.numf = point.z;
-	ft_put_float((t_putinfo){.mlx_ptrs = put.mlx_ptrs,
-		.pos.x = num_x, .pos.y = put.pos.y, .col = put.col}, numinfo);
-	put.pos.y += Y_NEXT_LINE_BIG;
 	return (put.pos);
 }
 
-t_vec2i	ft_put_unit_vec(t_putinfo put, t_vec3 vec)
+t_vec2i	ft_put_3d_point(char *name, t_putinfo put, t_vec3 point)
 {
 	t_numinfo	numinfo;
-	const int	num_x = put.pos.x + 30;
 
+	ft_put_str(put, name);
+	put.pos.y += Y_NEXT_LINE;
+	numinfo.pad = 5;
+	numinfo.prec = 2;
+	numinfo.numf = point.x;
+	put.pos = ft_put_coord(" x:", put, numinfo, false);
+	numinfo.numf = point.y;
+	put.pos = ft_put_coord(" y:", put, numinfo, false);
+	numinfo.numf = point.z;
+	put.pos = ft_put_coord(" z:", put, numinfo, false);
+	put.pos.y += Y_HALF_LINE;
+	return (put.pos);
+}
+
+t_vec2i	ft_put_unit_vec(char *name, t_putinfo put, t_vec3 vec)
+{
+	t_numinfo	numinfo;
+
+	ft_put_str(put, name);
+	put.pos.y += Y_NEXT_LINE;
 	numinfo.pad = 2;
 	numinfo.prec = 5;
-	ft_put_str(put, " x:");
 	numinfo.numf = vec.x;
-	ft_put_float((t_putinfo){.mlx_ptrs = put.mlx_ptrs,
-		.pos.x = num_x, .pos.y = put.pos.y, .col = put.col}, numinfo);
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, " y:");
+	put.pos = ft_put_coord(" x:", put, numinfo, false);
 	numinfo.numf = vec.y;
-	ft_put_float((t_putinfo){.mlx_ptrs = put.mlx_ptrs,
-		.pos.x = num_x, .pos.y = put.pos.y, .col = put.col}, numinfo);
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, " z:");
+	put.pos = ft_put_coord(" y:", put, numinfo, false);
 	numinfo.numf = vec.z;
-	ft_put_float((t_putinfo){.mlx_ptrs = put.mlx_ptrs,
-		.pos.x = num_x, .pos.y = put.pos.y, .col = put.col}, numinfo);
-	put.pos.y += Y_NEXT_LINE_BIG;
+	put.pos = ft_put_coord(" z:", put, numinfo, false);
+	put.pos.y += Y_HALF_LINE;
 	return (put.pos);
 }
 
 t_vec2i	ft_put_colour(t_putinfo put, t_colour colour)
 {
 	t_numinfo	numinfo;
-	const int	num_x = put.pos.x + 70;
 
+	ft_put_str(put, "Colour");
+	put.pos.y += Y_NEXT_LINE;
 	numinfo.pad = 3;
-	ft_put_str(put, " r:");
 	numinfo.numi = colour.r * 255.99;
-	ft_put_int((t_putinfo){.mlx_ptrs = put.mlx_ptrs,
-		.pos.x = num_x, .pos.y = put.pos.y, .col = put.col}, numinfo);
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, " g:");
+	put.pos = ft_put_coord(" r:    ", put, numinfo, true);
 	numinfo.numi = colour.g * 255.99;
-	ft_put_int((t_putinfo){.mlx_ptrs = put.mlx_ptrs,
-		.pos.x = num_x, .pos.y = put.pos.y, .col = put.col}, numinfo);
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, " b:");
+	put.pos = ft_put_coord(" g:    ", put, numinfo, true);
 	numinfo.numi = colour.b * 255.99;
-	ft_put_int((t_putinfo){.mlx_ptrs = put.mlx_ptrs,
-		.pos.x = num_x, .pos.y = put.pos.y, .col = put.col}, numinfo);
-	put.pos.y += Y_NEXT_LINE_BIG;
+	put.pos = ft_put_coord(" b:    ", put, numinfo, true);
+	put.pos.y += Y_HALF_LINE;
 	return (put.pos);
 }
 
-t_vec2i	ft_put_float_value(t_putinfo put, float value)
+t_vec2i	ft_put_single_float_value(char *name, t_putinfo put, float value)
 {
 	t_numinfo	numinfo;
-	const int	num_x = put.pos.x + 30;
+	const int	offset = 30;
 
+	ft_put_str(put, name);
+	put.pos.y += Y_NEXT_LINE;
 	numinfo.pad = 5;
 	numinfo.prec = 2;
 	numinfo.numf = value;
-	ft_put_float((t_putinfo){.mlx_ptrs = put.mlx_ptrs,
-		.pos.x = num_x, .pos.y = put.pos.y, .col = put.col}, numinfo);
+	put.pos.x += offset;
+	ft_put_float(put, numinfo);
+	put.pos.x -= offset;
 	put.pos.y += Y_NEXT_LINE_BIG;
 	return (put.pos);
 }

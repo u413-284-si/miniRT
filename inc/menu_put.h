@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 14:26:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/07 12:39:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 /* ====== MACROS ====== */
 
+# define Y_HALF_LINE 10
 # define Y_NEXT_LINE 20
 # define Y_NEXT_LINE_BIG 30
 # define NUMLEN 10
@@ -98,11 +99,12 @@ void	ft_put_float(t_putinfo put, t_numinfo numinfo);
  * For each coordinate (x, y, z) writes the name of the coordinate and the
  * value of the coordinate, with 5 digits padding and 2 digits
  * after the decimal point. Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG.
+ * @param name		Name of the point.
  * @param put		t_putinfo struct.
  * @param point		Point to be put on screen.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_3d_point(t_putinfo put, t_vec3 point);
+t_vec2i	ft_put_3d_point(char *name, t_putinfo put, t_vec3 point);
 
 /**
  * @brief Puts a unit vector on the screen.
@@ -110,11 +112,12 @@ t_vec2i	ft_put_3d_point(t_putinfo put, t_vec3 point);
  * For each coordinate (x, y, z) writes the name of the coordinate and the
  * value of the coordinate, with 2 digits padding and 5 digits
  * after the decimal point. Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG.
+ * @param name		Name of the vector.
  * @param put		t_putinfo struct.
  * @param vec		Unit vector to be put on screen.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_unit_vec(t_putinfo put, t_vec3 vec);
+t_vec2i	ft_put_unit_vec(char *name, t_putinfo put, t_vec3 vec);
 
 /**
  * @brief Puts a colour on the screen.
@@ -132,11 +135,12 @@ t_vec2i	ft_put_colour(t_putinfo put, t_colour colour);
  *
  * Writes the value with 5 digits padding and 2 digits
  * after the decimal point. Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG.
+ * @param name		Name of the value.
  * @param put		t_putinfo struct.
  * @param value		Float value to be put on screen.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_float_value(t_putinfo put, float value);
+t_vec2i	ft_put_single_float_value(char *name, t_putinfo put, float value);
 
 // menu_put_hittable.c
 
