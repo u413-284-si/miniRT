@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/07 19:28:31 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/07 19:35:43 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,15 +97,9 @@ LDLIBS := -lft -lm -lmlx -lXext -lX11
 CC := cc
 CPPFLAGS := -I $(INC_DIR) -I lib/libft/include
 CFLAGS = -Wall -Werror -Wextra -gdwarf-4
-DEPFLAGS_COMMON = -MT $@ -MMD -MP -MF $(DEP_DIR_COMMON)/$*.Td
-DEPFLAGS_BASE = -MT $@ -MMD -MP -MF $(DEP_DIR_BASE)/$*.Td
-DEPFLAGS_BONUS = -MT $@ -MMD -MP -MF $(DEP_DIR_BONUS)/$*.Td
-COMPILE_COMMON = $(CC) $(DEPFLAGS_COMMON) $(CPPFLAGS) $(CFLAGS) -c
-COMPILE_BASE = $(CC) $(DEPFLAGS_BASE) $(CPPFLAGS) $(CFLAGS) -c
-COMPILE_BONUS = $(CC) $(DEPFLAGS_BONUS) $(CPPFLAGS) $(CFLAGS) -c
-POSTCOMPILE_COMMON = @mv -f $(DEP_DIR_COMMON)/$*.Td $(DEP_DIR_COMMON)/$*.d && touch $@
-POSTCOMPILE_BASE = @mv -f $(DEP_DIR_BASE)/$*.Td $(DEP_DIR_BASE)/$*.d && touch $@
-POSTCOMPILE_BONUS = @mv -f $(DEP_DIR_BONUS)/$*.Td $(DEP_DIR_BONUS)/$*.d && touch $@
+DEPFLAGS = -MT $@ -MMD -MP -MF $(DEP_DIR)/$*.Td
+COMPILE = $(CC) $(DEPFLAGS) $(CPPFLAGS) $(CFLAGS) -c
+POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
 
 # ******************************
 # *     Modifying CFLAGS       *
@@ -335,20 +329,23 @@ CURRENT_FILE := 0
 $(OBJ_DIR_COMMON)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_COMMON)/%.d | $(DEP_DIR_COMMON)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
 	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
-	$(SILENT)$(COMPILE_COMMON) $< -o $@
-	$(SILENT)$(POSTCOMPILE_COMMON)
+	$(eval DEP_DIR=$(DEP_DIR_COMMON))
+	$(SILENT)$(COMPILE) $< -o $@
+	$(SILENT)$(POSTCOMPILE)
 
 $(OBJ_DIR_BASE)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BASE)/%.d | $(DEP_DIR_BASE)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
 	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
-	$(SILENT)$(COMPILE_BASE) $< -o $@
-	$(SILENT)$(POSTCOMPILE_BASE)
+	$(eval DEP_DIR=$(DEP_DIR_BASE))
+	$(SILENT)$(COMPILE) $< -o $@
+	$(SILENT)$(POSTCOMPILE)
 
 $(OBJ_DIR_BONUS)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BONUS)/%.d | $(DEP_DIR_BONUS)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
 	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
-	$(SILENT)$(COMPILE_BONUS) $< -o $@
-	$(SILENT)$(POSTCOMPILE_BONUS)
+	$(eval DEP_DIR=$(DEP_DIR_BONUS))
+	$(SILENT)$(COMPILE) $< -o $@
+	$(SILENT)$(POSTCOMPILE)
 
 # Print message only if there are objects to compile
 .INTERMEDIATE: message
