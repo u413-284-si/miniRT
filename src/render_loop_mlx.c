@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 15:24:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/07 16:32:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_draw_scene(t_render *render)
 	if (render->is_printing)
 	{
 		mlx_string_put(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr,
-			100, 100, WHITE, "Printing - Please wait");
+			200, 20, render->menu.font_col, "Printing - Please wait");
 		ft_output_as_ppm(render->mlx_ptrs.img, &render->is_printing);
 		mlx_do_key_autorepeaton(render->mlx_ptrs.mlx_ptr);
 		return (0);
