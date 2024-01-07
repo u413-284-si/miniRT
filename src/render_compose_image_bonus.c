@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:22:40 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/07 17:58:03 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/07 18:16:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 int	ft_draw_scene(t_render *render)
 {
 	const uint64_t	starttime = ft_get_timeofday_ms();
-	//const uint32_t	fps = 1000 / (starttime - render->last_render_time);
 
 	if (render->is_printing)
 	{
@@ -33,11 +32,11 @@ int	ft_draw_scene(t_render *render)
 			render->mlx_ptrs.win_ptr, render->mlx_ptrs.img.ptr, 0, 0);
 		ft_blend_background(&render->mlx_ptrs.img, &render->mlx_ptrs.veil,
 			render->menu);
+		render->last_render_time = ft_get_timeofday_ms() - starttime;
+		printf("MS: %lu\n", render->last_render_time);
+		printf("FPS: %lu\n", 1000 / (render->last_render_time));
 		render->is_changed = false;
 	}
 	ft_menu_put_text(render);
-	printf("MS: %lu\n", starttime - render->last_render_time);
-	//printf("FPS: %u\n", fps);
-	render->last_render_time = starttime;
 	return (0);
 }
