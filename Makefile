@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/07 14:45:33 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/07 16:46:11 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,12 @@ BLUE := \033[34m
 SRC_DIR := src
 # Base directory for object files
 BASE_OBJ_DIR := obj
+# Base directory for bonus files
+BASE_BONUS_DIR := obj/bonus
+# Subdirectory for default compilation
+ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
+	BASE_OBJ_DIR := $(BASE_BONUS_DIR)
+endif
 # Subdirectory for default compilation
 OBJ_DIR_DEFAULT := $(BASE_OBJ_DIR)/default
 # Subdirectory for compilation with fsanitize leak checker
@@ -50,8 +56,6 @@ OBJ_DIR_ADDRESS := $(BASE_OBJ_DIR)/address
 OBJ_DIR_SPEED := $(BASE_OBJ_DIR)/speed
 # Subdirectory for compilation with profiling
 OBJ_DIR_PROFILE := $(BASE_OBJ_DIR)/profile
-# Subdirectory for bonus compilation
-OBJ_DIR_BONUS := $(BASE_OBJ_DIR)/bonus
 # Set default object directory
 OBJ_DIR = $(OBJ_DIR_DEFAULT)
 # Set object directory depending on target
@@ -63,8 +67,6 @@ else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
 	OBJ_DIR = $(OBJ_DIR_SPEED)
 else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
 	OBJ_DIR = $(OBJ_DIR_PROFILE)
-else ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
-	OBJ_DIR = $(OBJ_DIR_BONUS)
 endif
 LIB_DIR := lib
 LIB_DIR_FT := $(LIB_DIR)/libft
@@ -94,31 +96,35 @@ POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
 # *     Targets                *
 # ******************************
 
-# Default target
-DEFAULT := miniRT
+# Base target
+BASE := miniRT
+# Bonus target
+BONUS := miniRT_bonus
 # Target for fsanitize leak checker
-LEAK := $(DEFAULT)_leak
+LEAK := _leak
 # Target for fsanitize address checker
-ADDRESS := $(DEFAULT)_address
+ADDRESS := _address
 # Target for speed optimization
-SPEED := $(DEFAULT)_speed
+SPEED := _speed
 # Target for profiling
-PROFILE := $(DEFAULT)_profile
-# Target for bonus
-BONUS := $(DEFAULT)_bonus
-# Set default target
+PROFILE := _profile
+# Set default target name
+ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
+	DEFAULT = $(BONUS)
+else
+	DEFAULT = $(BASE)
+endif
+# Set target name to default
 NAME = $(DEFAULT)
-# Set target depending on target
+# Modify name depending on target
 ifneq (,$(findstring leak,$(MAKECMDGOALS)))
-	NAME = $(LEAK)
+	NAME = $(DEFAULT)$(LEAK)
 else ifneq (,$(findstring address,$(MAKECMDGOALS)))
-	NAME = $(ADDRESS)
+	NAME = $(DEFAULT)$(ADDRESS)
 else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
-	NAME = $(SPEED)
+	NAME = $(DEFAULT)$(SPEED)
 else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
-	NAME = $(PROFILE)
-else ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
-	NAME = $(BONUS)
+	NAME = $(DEFAULT)$(PROFILE)
 endif
 LIBFT := $(LIB_DIR_FT)/libft.a
 
@@ -282,7 +288,7 @@ bonus: $(NAME)
 # ******************************
 
 # File counter for status output
-TOTAL_FILES := $(words $(SRC))
+TOTAL_FILES := $(words $(OBJS))
 CURRENT_FILE := 0
 
 # Create object and dependency files
