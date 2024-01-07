@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: s_light Struct Reference</title>
+<title>MiniRT: s_numinfo Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structs__light.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('structs__numinfo.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,38 +91,42 @@ $(document).ready(function(){initNavTree('structs__light.html',''); initResizabl
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">s_light Struct Reference</div>  </div>
+<div class="title">s_numinfo Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents lighting in the scene.  
- <a href="structs__light.html#details">More...</a></p>
+<p>Contains info about number to be converted.  
+ <a href="structs__numinfo.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="entities_8h_source.html">entities.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="menu__put_8h_source.html">menu_put.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a7441ef0865bcb3db9b8064dd7375c1ea"><td class="memItemLeft" align="right" valign="top"><a id="a7441ef0865bcb3db9b8064dd7375c1ea"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
-<tr class="separator:a7441ef0865bcb3db9b8064dd7375c1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a001cf8f9683e5ee53029bfad8b035b47"><td class="memItemLeft" align="right" valign="top"><a id="a001cf8f9683e5ee53029bfad8b035b47"></a>
-<a class="el" href="structs__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b></td></tr>
-<tr class="separator:a001cf8f9683e5ee53029bfad8b035b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a207ad05f99cc72068a92358861ff5e71"><td class="memItemLeft" align="right" valign="top"><a id="a207ad05f99cc72068a92358861ff5e71"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>ratio</b></td></tr>
-<tr class="separator:a207ad05f99cc72068a92358861ff5e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade3aae23d19802dca4a29ac9065742a9"><td class="memItemLeft" align="right" valign="top"><a id="ade3aae23d19802dca4a29ac9065742a9"></a>
-<a class="el" href="structs__colour.html">t_colour</a>&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b></td></tr>
-<tr class="separator:ade3aae23d19802dca4a29ac9065742a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76ccb09dc41d011c836057330493e21"><td class="memItemLeft" ><a id="ae76ccb09dc41d011c836057330493e21"></a>
+union {</td></tr>
+<tr class="memitem:a6148c44d48f258a58158c5f9aea70ba8"><td class="memItemLeft" >
+&#160;&#160;&#160;int32_t&#160;&#160;&#160;<b>numi</b></td></tr>
+<tr class="separator:a6148c44d48f258a58158c5f9aea70ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7277cb8addddfada1e8cf0a16125b3fb"><td class="memItemLeft" >
+&#160;&#160;&#160;float&#160;&#160;&#160;<b>numf</b></td></tr>
+<tr class="separator:a7277cb8addddfada1e8cf0a16125b3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76ccb09dc41d011c836057330493e21"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ae76ccb09dc41d011c836057330493e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a86b4f13c0cf801df27e12ce75f046"><td class="memItemLeft" align="right" valign="top"><a id="ac1a86b4f13c0cf801df27e12ce75f046"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pad</b></td></tr>
+<tr class="separator:ac1a86b4f13c0cf801df27e12ce75f046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ae2d3b6176fa4d7f8594a83bc66c0d"><td class="memItemLeft" align="right" valign="top"><a id="a19ae2d3b6176fa4d7f8594a83bc66c0d"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>prec</b></td></tr>
+<tr class="separator:a19ae2d3b6176fa4d7f8594a83bc66c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents lighting in the scene. </p>
+<div class="textblock"><p>Contains info about number to be converted. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>ID of the light </td></tr>
-    <tr><td class="paramname">pos</td><td>Position of the light </td></tr>
-    <tr><td class="paramname">ratio</td><td>Light brightess ratio </td></tr>
-    <tr><td class="paramname">colour</td><td>Colour of the light </td></tr>
+    <tr><td class="paramname">numi</td><td>Union as Integer. </td></tr>
+    <tr><td class="paramname">numf</td><td>Union as Float. </td></tr>
+    <tr><td class="paramname">pad</td><td>Number of spaces to pad. </td></tr>
+    <tr><td class="paramname">prec</td><td>Number of digits after the decimal point. </td></tr>
   </table>
   </dd>
 </dl>
@@ -131,7 +135,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>ratio</b></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="structs__light.html">s_light</a></li>
+    <li class="navelem"><a class="el" href="structs__numinfo.html">s_numinfo</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('parse_8h_source.html',''); initResizab
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/11/25 17:56:21 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/03 17:43:02 by gwolf            ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -137,30 +137,30 @@ $(document).ready(function(){initNavTree('parse_8h_source.html',''); initResizab
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span>    ft_parse_camera(<span class="keywordtype">char</span> *line, <a class="code" href="structs__cam.html">t_cam</a> *cam);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span>    ft_parse_light(<span class="keywordtype">char</span> *line, <a class="code" href="structs__light.html">t_light</a> *light);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">// parse_entity2.c</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">void</span>    ft_parse_sphere(<span class="keywordtype">char</span> *line, <a class="code" href="structs__hittable.html">t_hittable</a> *sphere, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keywordtype">void</span>    ft_parse_plane(<span class="keywordtype">char</span> *line, <a class="code" href="structs__hittable.html">t_hittable</a> *plane, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keywordtype">void</span>    ft_parse_cylinder(<span class="keywordtype">char</span> *line, <a class="code" href="structs__hittable.html">t_hittable</a> *cylinder, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">// parse_line.c</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keywordtype">void</span>    ft_parse_colour_block(<span class="keywordtype">char</span> **line, <a class="code" href="structs__colour.html">t_colour</a> *colour);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keywordtype">void</span>    ft_parse_float(<span class="keywordtype">char</span> **line, <span class="keywordtype">float</span> *var);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keywordtype">void</span>    ft_parse_float_block(<span class="keywordtype">char</span> **line, <a class="code" href="structs__vec3.html">t_vec3</a> *vec3);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">void</span>    ft_parse_light(<span class="keywordtype">char</span> *line, <a class="code" href="structs__light.html">t_light</a> *light, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">// parse_entity2.c</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keywordtype">void</span>    ft_parse_sphere(<span class="keywordtype">char</span> *line, <a class="code" href="structs__hittable.html">t_hittable</a> *sphere, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keywordtype">void</span>    ft_parse_plane(<span class="keywordtype">char</span> *line, <a class="code" href="structs__hittable.html">t_hittable</a> *plane, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keywordtype">void</span>    ft_parse_cylinder(<span class="keywordtype">char</span> *line, <a class="code" href="structs__hittable.html">t_hittable</a> *cylinder, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">// parse_line.c</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keywordtype">void</span>    ft_parse_colour_block(<span class="keywordtype">char</span> **line, <a class="code" href="structs__colour.html">t_colour</a> *colour);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keywordtype">void</span>    ft_parse_float(<span class="keywordtype">char</span> **line, <span class="keywordtype">float</span> *var);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keywordtype">void</span>    ft_parse_float_block(<span class="keywordtype">char</span> **line, <a class="code" href="structs__vec3.html">t_vec3</a> *vec3);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="astructs__cam_html"><div class="ttname"><a href="structs__cam.html">s_cam</a></div><div class="ttdoc">Contains camera parameters.</div><div class="ttdef"><b>Definition:</b> camera.h:56</div></div>
 <div class="ttc" id="astructs__colour_html"><div class="ttname"><a href="structs__colour.html">s_colour</a></div><div class="ttdoc">Represents an RGB colour with float values from 0.0 - 1.0.</div><div class="ttdef"><b>Definition:</b> colour.h:30</div></div>
-<div class="ttc" id="astructs__entities_html"><div class="ttname"><a href="structs__entities.html">s_entities</a></div><div class="ttdoc">Contains all entities in the scene.</div><div class="ttdef"><b>Definition:</b> entities.h:148</div></div>
-<div class="ttc" id="astructs__hittable_html"><div class="ttname"><a href="structs__hittable.html">s_hittable</a></div><div class="ttdoc">Represents a hittable.</div><div class="ttdef"><b>Definition:</b> entities.h:134</div></div>
-<div class="ttc" id="astructs__light_html"><div class="ttname"><a href="structs__light.html">s_light</a></div><div class="ttdoc">Represents lighting in the scene.</div><div class="ttdef"><b>Definition:</b> entities.h:35</div></div>
+<div class="ttc" id="astructs__entities_html"><div class="ttname"><a href="structs__entities.html">s_entities</a></div><div class="ttdoc">Contains all entities in the scene.</div><div class="ttdef"><b>Definition:</b> entities.h:151</div></div>
+<div class="ttc" id="astructs__hittable_html"><div class="ttname"><a href="structs__hittable.html">s_hittable</a></div><div class="ttdoc">Represents a hittable.</div><div class="ttdef"><b>Definition:</b> entities.h:136</div></div>
+<div class="ttc" id="astructs__light_html"><div class="ttname"><a href="structs__light.html">s_light</a></div><div class="ttdoc">Represents lighting in the scene.</div><div class="ttdef"><b>Definition:</b> entities.h:36</div></div>
 <div class="ttc" id="astructs__vec3_html"><div class="ttname"><a href="structs__vec3.html">s_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> vec3.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
