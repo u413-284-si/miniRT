@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 20:12:42 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/06 19:05:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@
 # include "print.h"
 # include "ray.h"
 # include "vec2.h"
+# include "render_menu.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -42,7 +43,7 @@
  * @param line_len	Line length.
  * @param endian	Endian.
  * @param bytes		Number of bytes per pixel.
- *
+ * @param size		Size of the img as int vector.
  */
 typedef struct s_img
 {
@@ -60,13 +61,15 @@ typedef struct s_img
  *
  * @param mlx_ptr	Pointer to mlx.
  * @param win_ptr	Pointer to mlx window.
- * @param img		mlx img struct.
+ * @param img		mlx img struct for rendered image.
+ * @param veil		mlx img struct for menu overlay.
  */
 typedef struct s_mlx_ptrs
 {
 	void	*mlx_ptr;
 	void	*win_ptr;
 	t_img	img;
+	t_img	veil;
 }	t_mlx_ptrs;
 
 /**
@@ -76,11 +79,26 @@ typedef struct s_mlx_ptrs
  * @param right		Right mouse button pressed flag.
  * @param last_pos	Last mouse position.
  */
-typedef struct s_mouse {
+typedef struct s_mouse
+{
 	bool	left;
 	bool	right;
 	t_vec2i	last_pos;
 }	t_mouse;
+
+/**
+ * @brief Mode enum for different manipulation modes.
+ *
+ * CTRL_SCENE		Scene manipulation mode.
+ * CTRL_CAM			Camera manipulation mode.
+ * CTRL_LIGHT		Light manipulation mode.
+ */
+typedef enum e_mode
+{
+	CTRL_SCENE,
+	CTRL_CAM,
+	CTRL_LIGHT
+}	t_mode;
 
 /**
  * @brief Overarching render struct.
@@ -97,6 +115,13 @@ typedef struct s_render
 	t_cam		cam;
 	t_entities	scene;
 	t_mouse		mouse;
+	t_menu		menu;
+	t_mode		mode;
+	bool		show_menu;
+	bool		is_printing;
+	bool		is_changed;
+	int			active_hittable;
+	int			active_light;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
@@ -152,6 +177,19 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color);
  */
 void	ft_render_image(t_render *render);
 
+/**
+ * @brief Aplha blends current image with menu color to create overlay.
+ *
+ * For each pixel of the menu size, the menu colour is blended with the
+ * corresponding pixel of the current image.
+ * The current image pixel is multiplied with the inverse of the alpha value
+ * of the menu colour. Both are added together. To speed up the process,
+ * the alpha value is pre-calculated. Furthermore, only two variables (rb and g)
+ * are used to calc the blended colour.
+ * @param render	Pointer to render struct.
+ */
+void	ft_blend_background(t_img *img, t_img *veil, t_menu menu);
+
 // render_output_ppm.c
 
 /**
@@ -162,9 +200,9 @@ void	ft_render_image(t_render *render);
  * @param height	Height of the image.
  * @return t_err	SUCCESS, ERROR.
  */
-t_err	ft_output_as_ppm(int *img_arr, int width, int height);
+t_err	ft_output_as_ppm(const t_img img, bool *is_printing);
 
-// render_keyhook.c
+// render_keyhook_press.c
 
 /**
  * @brief Handles keypresses.
@@ -175,15 +213,39 @@ t_err	ft_output_as_ppm(int *img_arr, int width, int height);
  */
 int		ft_keyhook_press(int key, t_render *render);
 
-// render_keyhook_hittable.c
+// render_keyhook_release.c
+
+/**
+ * @brief Handles key releases.
+ *
+ * @param key		Keycode of the pressed key.
+ * @param render	Pointer to render struct.
+ * @return int		0 if successful, -1 if not.
+ */
+int		ft_keyhook_release(int key, t_render *render);
+
+// render_keyhook_scene.c
+
+/**
+ * @brief Manipulates the active hittable.
+ *
+ * Changes the active hittable or manipulates it.
+ * @param key		Keycode of the pressed key.
+ * @param scene		Pointer to scene struct.
+ * @param active	Pointer to index of active hittable.
+ */
+void	ft_manip_scene(int key, t_entities *scene, int *active);
 
 /**
  * @brief Changes the active hittable.
  *
  * @param key		Keycode of the pressed key.
  * @param scene		Pointer to scene struct.
+ * @param active	Pointer to index of active hittable.
  */
-void	ft_change_active_hittable(int key, t_entities *scene);
+void	ft_change_active_hittable(int key, t_entities *scene, int *active);
+
+// render_keyhook_hittable.c
 
 /**
  * @brief Manipulates the active hittable.
@@ -220,8 +282,21 @@ void	ft_manip_cylinder(int key, t_cylinder *cy);
 // render_keyhook_utils.c
 
 /**
+ * @brief Increases or decreases a value with a keypress.
+ *
+ * If value is negative, it is set to 0.
+ * If value is more than max, it is set to max.
+ * R or T (Decrease value)
+ * F or G (Increase value)
+ * @param key	Keycode of the pressed key.
+ * @param value	Pointer to value to change.
+ */
+void	ft_keyhook_inc_dec(int key, float *value, float max);
+
+/**
  * @brief Moves a 3D point with a keypress.
  *
+ * Movement is only applied if it is within the limits of the scene.
  * WS (Forward, Backward)
  * AD (Left, Right)
  * QE (Up, Down)
@@ -294,6 +369,18 @@ void	ft_keyhook_fov_cam(int key, t_cam *cam);
  */
 void	ft_manip_cam(int key, t_cam *cam);
 
+// render_keyhook_light.c
+
+/**
+ * @brief Manipulates the active light.
+ *
+ * Checks for keypresses and calls the corresponding function.
+ * @param key		Keycode of the pressed key.
+ * @param scene		Pointer to scene struct.
+ * @param active	Pointer to index of active light.
+ */
+void	ft_manip_light(int key, t_entities *scene, int *active);
+
 // render_mouse.c
 
 /**
@@ -357,5 +444,14 @@ void	ft_mouse_hook_rot_cam(int x, int y, t_render *render);
  * @param render	Pointer to render struct.
  */
 void	ft_render_start_loop(t_render *render);
+
+// IMPORT from render_menu.h
+
+/**
+ * @brief Puts the current menu page on the screen.
+ *
+ * @param render	Pointer to render struct.
+ */
+void	ft_menu_put_text(t_render *render);
 
 #endif

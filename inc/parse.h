@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/25 17:56:21 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/03 17:43:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,8 +104,9 @@ void	ft_parse_camera(char *line, t_cam *cam);
  * - R,G,B colors in range [0-255].
  * @param line	Pointer to current line.
  * @param light	Struct where to save.
+ * @param id	Current light id.
  */
-void	ft_parse_light(char *line, t_light *light);
+void	ft_parse_light(char *line, t_light *light, int id);
 
 // parse_entity2.c
 

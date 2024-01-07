@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:57:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/19 23:00:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/05 13:23:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,11 @@
 
 static void	ft_write_pixel(int col, int fd)
 {
-	t_colour	colour;
-
-	colour = ft_convert_int2colour(col);
-	ft_putnbr_fd(colour.r, fd);
+	ft_putnbr_fd(col >> 16 & 0xFF, fd);
 	ft_putchar_fd(' ', fd);
-	ft_putnbr_fd(colour.g, fd);
+	ft_putnbr_fd(col >> 8 & 0xFF, fd);
 	ft_putchar_fd(' ', fd);
-	ft_putnbr_fd(colour.b, fd);
+	ft_putnbr_fd(col & 0xFF, fd);
 	ft_putchar_fd('\n', fd);
 }
 
@@ -37,21 +34,47 @@ static void	ft_write_ppm_header(int width, int height, int fd)
 	ft_putchar_fd('\n', fd);
 }
 
-t_err	ft_output_as_ppm(int *img_arr, int width, int height)
+static void	ft_write_to_file(int fd, int *pix_arr, int pixel_sum)
 {
-	int	fd;
-	int	pixel_sum;
 	int	i;
 
-	fd = 0;
-	if (ft_err_open("outfile.ppm", O_CREAT | O_WRONLY | O_TRUNC, &fd))
-		return (ERROR);
-	ft_write_ppm_header(width, height, fd);
-	pixel_sum = width * height;
 	i = 0;
 	while (i < pixel_sum)
-		ft_write_pixel(img_arr[i++], fd);
+	{
+		ft_write_pixel(pix_arr[i++], fd);
+		if (i % 100 == 0)
+			printf("\r%d%%", (i * 100) / pixel_sum);
+	}
+	printf("\r100%%\nFinished printing\n");
+}
+
+static void	ft_create_filename(char outfile[14])
+{
+	static int	i;
+	char		num[3];
+
+	if (i++ > 99)
+		i = 0;
+	ft_strlcpy(outfile, "outfile_", 8);
+	ft_itoa_in_place(i, num);
+	ft_strlcat(outfile, num, 14);
+	ft_strlcat(outfile, ".ppm", 14);
+}
+
+t_err	ft_output_as_ppm(const t_img img, bool *is_printing)
+{
+	int		fd;
+	char	outfile[14];
+
+	ft_create_filename(outfile);
+	fd = 0;
+	if (ft_err_open(outfile, O_CREAT | O_WRONLY | O_TRUNC, &fd))
+		return (ERROR);
+	ft_write_ppm_header(img.size.x, img.size.y, fd);
+	printf("Printing scene to %s...\n", outfile);
+	ft_write_to_file(fd, (int *)img.addr, img.size.x * img.size.y);
 	if (ft_err_close(fd))
 		return (ERROR);
+	*is_printing = false;
 	return (SUCCESS);
 }

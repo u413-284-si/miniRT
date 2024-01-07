@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/25 19:30:23 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/06 16:06:52 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -141,6 +141,17 @@ SRC :=	camera_movement.c \
 		mat4_rotation.c \
 		mat4_vec3_rotate.c \
 		mat4.c \
+		menu_init.c \
+		menu_put_cam_light_ctrl.c \
+		menu_put_cam_light.c \
+		menu_put_general_info.c \
+		menu_put_hittable_ctrl.c \
+		menu_put_hittable.c \
+		menu_put_page.c \
+		menu_put_str_num.c \
+		menu_put_utils_ctrl.c \
+		menu_put_utils.c \
+		menu_put.c \
 		parse_entity_ACL.c \
 		parse_entity_sp_pl_cy.c \
 		parse_line.c \
@@ -152,8 +163,11 @@ SRC :=	camera_movement.c \
 		render_init_mlx.c \
 		render_keyhook_camera.c \
 		render_keyhook_hittable.c \
+		render_keyhook_light.c \
+		render_keyhook_press.c \
+		render_keyhook_release.c \
+		render_keyhook_scene.c \
 		render_keyhook_utils.c \
-		render_keyhook.c \
 		render_loop_mlx.c \
 		render_mouse.c \
 		render_output_ppm.c \
