@@ -9,12 +9,7 @@
 *.a
 
 # Executables
-miniRT
-miniRT_leak
-miniRT_address
-miniRT_speed
-miniRT_profile
-miniRT_bonus
+miniRT*
 
 # Log files
 *.log
