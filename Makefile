@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2023/12/25 19:30:23 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/07 14:45:33 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,8 @@ OBJ_DIR_ADDRESS := $(BASE_OBJ_DIR)/address
 OBJ_DIR_SPEED := $(BASE_OBJ_DIR)/speed
 # Subdirectory for compilation with profiling
 OBJ_DIR_PROFILE := $(BASE_OBJ_DIR)/profile
+# Subdirectory for bonus compilation
+OBJ_DIR_BONUS := $(BASE_OBJ_DIR)/bonus
 # Set default object directory
 OBJ_DIR = $(OBJ_DIR_DEFAULT)
 # Set object directory depending on target
@@ -61,6 +63,8 @@ else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
 	OBJ_DIR = $(OBJ_DIR_SPEED)
 else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
 	OBJ_DIR = $(OBJ_DIR_PROFILE)
+else ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
+	OBJ_DIR = $(OBJ_DIR_BONUS)
 endif
 LIB_DIR := lib
 LIB_DIR_FT := $(LIB_DIR)/libft
@@ -100,6 +104,8 @@ ADDRESS := $(DEFAULT)_address
 SPEED := $(DEFAULT)_speed
 # Target for profiling
 PROFILE := $(DEFAULT)_profile
+# Target for bonus
+BONUS := $(DEFAULT)_bonus
 # Set default target
 NAME = $(DEFAULT)
 # Set target depending on target
@@ -111,6 +117,8 @@ else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
 	NAME = $(SPEED)
 else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
 	NAME = $(PROFILE)
+else ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
+	NAME = $(BONUS)
 endif
 LIBFT := $(LIB_DIR_FT)/libft.a
 
@@ -118,68 +126,79 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC :=	camera_movement.c \
-		camera.c \
-		check_entity_ACL.c \
-		check_entity_sp_pl_cy.c \
-		check_line.c \
-		check.c \
-		cleanup.c \
-		colour.c \
-		error_mlx.c \
-		error_msg_check.c \
-		error_msg_generic.c \
-		error_syscall.c \
-		ft_strtod.c \
-		hit_cylinder.c \
-		hit_plane.c \
-		hit_sphere.c \
-		hit.c \
-		import_file_buffer.c \
-		import_file.c \
-		main.c \
-		mat4_rotation.c \
-		mat4_vec3_rotate.c \
-		mat4.c \
-		parse_entity_ACL.c \
-		parse_entity_sp_pl_cy.c \
-		parse_line.c \
-		parse.c \
-		print_entity.c \
-		print_struct.c \
-		ray.c \
-		render_draw.c \
-		render_init_mlx.c \
-		render_keyhook_camera.c \
-		render_keyhook_hittable.c \
-		render_keyhook_utils.c \
-		render_keyhook.c \
-		render_loop_mlx.c \
-		render_mouse.c \
-		render_output_ppm.c \
-		scene_init.c \
-		scene_light.c \
-		scene_shadow.c \
-		utils_entities.c \
-		utils_cylinder.c \
-		utils.c \
-		vec3_arithmetics.c \
-		vec3_linalgebra.c
+SRC_COMMON :=	camera_movement.c \
+				camera.c \
+				check_entity_ACL.c \
+				check_entity_sp_pl_cy.c \
+				check_line.c \
+				check.c \
+				cleanup.c \
+				colour.c \
+				error_mlx.c \
+				error_msg_check.c \
+				error_msg_generic.c \
+				error_syscall.c \
+				ft_strtod.c \
+				hit_cylinder.c \
+				hit_plane.c \
+				hit_sphere.c \
+				hit.c \
+				import_file_buffer.c \
+				import_file.c \
+				main.c \
+				mat4_rotation.c \
+				mat4_vec3_rotate.c \
+				mat4.c \
+				parse_entity_ACL.c \
+				parse_entity_sp_pl_cy.c \
+				parse_line.c \
+				parse.c \
+				print_entity.c \
+				print_struct.c \
+				ray.c \
+				render_draw.c \
+				render_init_mlx.c \
+				render_keyhook_camera.c \
+				render_keyhook_hittable.c \
+				render_keyhook_utils.c \
+				render_keyhook.c \
+				render_loop_mlx.c \
+				render_mouse.c \
+				render_output_ppm.c \
+				scene_init.c \
+				scene_light.c \
+				scene_shadow.c \
+				utils_entities.c \
+				utils_cylinder.c \
+				utils.c \
+				vec3_arithmetics.c \
+				vec3_linalgebra.c
 
-SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
+SRC_BASE := 	render_compose_image.c
+
+SRC_BONUS :=	render_compose_image_bonus.c \
+				time_bonus.c
+
 
 # ******************************
 # *     Object files           *
 # ******************************
 
-OBJ := $(SRC:.c=.o)
-OBJS := $(addprefix $(OBJ_DIR)/, $(OBJ))
+OBJ = $(SRC_COMMON:.c=.o)
+ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
+	OBJ += $(SRC_BONUS:.c=.o)
+else
+	OBJ += $(SRC_BASE:.c=.o)
+endif
+OBJS = $(addprefix $(OBJ_DIR)/, $(OBJ))
 
 # ******************************
 # *     Dependency files       *
 # ******************************
 
-DEPFILES = $(SRC:%.c=$(DEP_DIR)/%.d)
+DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR)/%.d) \
+			$(SRC_BASE:%.c=$(DEP_DIR)/%.d) \
+			$(SRC_BONUS:%.c=$(DEP_DIR)/%.d)
 
 # ******************************
 # *     Log files              *
@@ -252,6 +271,10 @@ valgr: $(NAME) | $(LOG_DIR)
 						--log-file=$(LOG_VALGRIND)\
 						./$(NAME) $(DEFAULT_SCENE)
 	$(SILENT)ls -dt1 $(LOG_DIR)/* | head -n 1 | xargs less
+
+# This target compiles with bonus objects.
+.PHONY: bonus
+bonus: $(NAME)
 
 # ******************************
 # *     Object compiling and   *
