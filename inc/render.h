@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 20:12:42 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/07 14:23:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ typedef struct s_render
 	t_cam		cam;
 	t_entities	scene;
 	t_mouse		mouse;
+	uint64_t	last_render_time;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
@@ -357,5 +358,7 @@ void	ft_mouse_hook_rot_cam(int x, int y, t_render *render);
  * @param render	Pointer to render struct.
  */
 void	ft_render_start_loop(t_render *render);
+
+int	ft_draw_scene(t_render *render);
 
 #endif

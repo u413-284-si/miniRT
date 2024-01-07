@@ -6,17 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 08:41:26 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/07 14:22:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
-
-int	ft_draw_scene(t_render *render)
-{
-	ft_render_image(render);
-	return (0);
-}
 
 void	ft_render_start_loop(t_render *render)
 {
