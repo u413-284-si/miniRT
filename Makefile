@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/07 16:46:11 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/07 17:51:19 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,13 +59,13 @@ OBJ_DIR_PROFILE := $(BASE_OBJ_DIR)/profile
 # Set default object directory
 OBJ_DIR = $(OBJ_DIR_DEFAULT)
 # Set object directory depending on target
-ifneq (,$(findstring leak,$(MAKECMDGOALS)))
+ifeq ($(MODE), leak)
 	OBJ_DIR = $(OBJ_DIR_LEAK)
-else ifneq (,$(findstring address,$(MAKECMDGOALS)))
+else ifeq ($(MODE), address)
 	OBJ_DIR = $(OBJ_DIR_ADDRESS)
-else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
+else ifeq ($(MODE), speed)
 	OBJ_DIR = $(OBJ_DIR_SPEED)
-else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
+else ifeq ($(MODE), profile)
 	OBJ_DIR = $(OBJ_DIR_PROFILE)
 endif
 LIB_DIR := lib
@@ -93,6 +93,25 @@ COMPILE = $(CC) $(DEPFLAGS) $(CPPFLAGS) $(CFLAGS) -c
 POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
 
 # ******************************
+# *     Modifying CFLAGS       *
+# *     and LDFLAGS            *
+# ******************************
+
+ifeq ($(MODE), leak)
+	CFLAGS += -fsanitize=leak
+	LDFLAGS += -fsanitize=leak
+else ifeq ($(MODE), address)
+	CFLAGS += -fsanitize=address
+	LDFLAGS += -fsanitize=address
+else ifeq ($(MODE), speed)
+	CFLAGS = -Ofast -march=native
+	LDFLAGS += -flto
+else ifeq ($(MODE), profile)
+	CFLAGS += -pg
+	LDFLAGS += -pg
+endif
+
+# ******************************
 # *     Targets                *
 # ******************************
 
@@ -100,30 +119,33 @@ POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
 BASE := miniRT
 # Bonus target
 BONUS := miniRT_bonus
-# Target for fsanitize leak checker
+
+# Append for fsanitize leak checker
 LEAK := _leak
-# Target for fsanitize address checker
+# Append for fsanitize address checker
 ADDRESS := _address
-# Target for speed optimization
+# Append for speed optimization
 SPEED := _speed
-# Target for profiling
+# Append for profiling
 PROFILE := _profile
+
 # Set default target name
 ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
 	DEFAULT = $(BONUS)
 else
 	DEFAULT = $(BASE)
 endif
+
 # Set target name to default
 NAME = $(DEFAULT)
 # Modify name depending on target
-ifneq (,$(findstring leak,$(MAKECMDGOALS)))
+ifeq ($(MODE), leak)
 	NAME = $(DEFAULT)$(LEAK)
-else ifneq (,$(findstring address,$(MAKECMDGOALS)))
+else ifeq ($(MODE), address)
 	NAME = $(DEFAULT)$(ADDRESS)
-else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
+else ifeq ($(MODE), speed)
 	NAME = $(DEFAULT)$(SPEED)
-else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
+else ifeq ($(MODE), profile)
 	NAME = $(DEFAULT)$(PROFILE)
 endif
 LIBFT := $(LIB_DIR_FT)/libft.a
@@ -237,28 +259,12 @@ $(NAME): $(LIBFT) $(OBJS)
 # *     Special targets        *
 # ******************************
 
-# This target adds fsanitize leak checker to the flags.
-.PHONY: leak
-leak: CFLAGS += -fsanitize=leak
-leak: LDFLAGS += -fsanitize=leak
-leak: $(NAME)
-
-# This target adds fsanitize address checker to the flags.
-.PHONY: address
-address: CFLAGS += -fsanitize=address
-address: LDFLAGS += -fsanitize=address
-address: $(NAME)
-
-# This target adds flags which optimize the program for speed.
-.PHONY: speed
-speed: CFLAGS = -Ofast -march=native
-speed: LDFLAGS += -flto
-speed: $(NAME)
+# This target compiles with bonus objects.
+.PHONY: bonus
+bonus: $(NAME)
 
 # This target adds flags which enable profiling.
 .PHONY: profile
-profile: CFLAGS += -pg
-profile: LDFLAGS += -pg
 profile: $(NAME) | $(LOG_DIR)
 	@printf "\n$(YELLOW)$(BOLD)Run for profiling$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@printf "Profile scene: $(DEFAULT_SCENE)\n"
@@ -277,10 +283,6 @@ valgr: $(NAME) | $(LOG_DIR)
 						--log-file=$(LOG_VALGRIND)\
 						./$(NAME) $(DEFAULT_SCENE)
 	$(SILENT)ls -dt1 $(LOG_DIR)/* | head -n 1 | xargs less
-
-# This target compiles with bonus objects.
-.PHONY: bonus
-bonus: $(NAME)
 
 # ******************************
 # *     Object compiling and   *
