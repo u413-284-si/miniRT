@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/07 17:53:39 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/07 19:28:31 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,40 +38,49 @@ BLUE := \033[34m
 # ******************************
 
 SRC_DIR := src
+
 # Base directory for object files
 BASE_OBJ_DIR := obj
-# Base directory for bonus files
-BASE_BONUS_DIR := obj/bonus
-# Subdirectory for default compilation
-ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
-	BASE_OBJ_DIR := $(BASE_BONUS_DIR)
-endif
-# Subdirectory for default compilation
-OBJ_DIR_DEFAULT := $(BASE_OBJ_DIR)/default
-# Subdirectory for compilation with fsanitize leak checker
-OBJ_DIR_LEAK := $(BASE_OBJ_DIR)/leak
-# Subdirectory for compilation with fsanitize address checker
-OBJ_DIR_ADDRESS := $(BASE_OBJ_DIR)/address
-# Subdirectory for compilation with speed optimization
-OBJ_DIR_SPEED := $(BASE_OBJ_DIR)/speed
-# Subdirectory for compilation with profiling
-OBJ_DIR_PROFILE := $(BASE_OBJ_DIR)/profile
-# Set default object directory
-OBJ_DIR = $(OBJ_DIR_DEFAULT)
-# Set object directory depending on target
+# Subdirectories for common, base, and bonus object files
+OBJ_DIR_COMMON := $(BASE_OBJ_DIR)/common
+OBJ_DIR_BASE := $(BASE_OBJ_DIR)/base
+OBJ_DIR_BONUS := $(BASE_OBJ_DIR)/bonus
+# Adjust directory based on MODE
 ifeq ($(MODE), leak)
-	OBJ_DIR = $(OBJ_DIR_LEAK)
+	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/leak
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/leak
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/leak
 else ifeq ($(MODE), address)
-	OBJ_DIR = $(OBJ_DIR_ADDRESS)
+	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/address
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/address
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/address
 else ifeq ($(MODE), speed)
-	OBJ_DIR = $(OBJ_DIR_SPEED)
+	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/speed
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/speed
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/speed
 else ifeq ($(MODE), profile)
-	OBJ_DIR = $(OBJ_DIR_PROFILE)
+	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/profile
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/profile
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/profile
+else
+	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/default
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/default
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/default
 endif
+
+# Subdirectory for library files
 LIB_DIR := lib
 LIB_DIR_FT := $(LIB_DIR)/libft
+
+# Subdirectory for header files
 INC_DIR := inc
-DEP_DIR = $(OBJ_DIR)/dep
+
+# Subdirectories for dependency files
+DEP_DIR_COMMON := $(OBJ_DIR_COMMON)/dep
+DEP_DIR_BASE := $(OBJ_DIR_BASE)/dep
+DEP_DIR_BONUS := $(OBJ_DIR_BONUS)/dep
+
+# Subdirectory for log files
 LOG_DIR := log
 
 # ******************************
@@ -88,9 +97,15 @@ LDLIBS := -lft -lm -lmlx -lXext -lX11
 CC := cc
 CPPFLAGS := -I $(INC_DIR) -I lib/libft/include
 CFLAGS = -Wall -Werror -Wextra -gdwarf-4
-DEPFLAGS = -MT $@ -MMD -MP -MF $(DEP_DIR)/$*.Td
-COMPILE = $(CC) $(DEPFLAGS) $(CPPFLAGS) $(CFLAGS) -c
-POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
+DEPFLAGS_COMMON = -MT $@ -MMD -MP -MF $(DEP_DIR_COMMON)/$*.Td
+DEPFLAGS_BASE = -MT $@ -MMD -MP -MF $(DEP_DIR_BASE)/$*.Td
+DEPFLAGS_BONUS = -MT $@ -MMD -MP -MF $(DEP_DIR_BONUS)/$*.Td
+COMPILE_COMMON = $(CC) $(DEPFLAGS_COMMON) $(CPPFLAGS) $(CFLAGS) -c
+COMPILE_BASE = $(CC) $(DEPFLAGS_BASE) $(CPPFLAGS) $(CFLAGS) -c
+COMPILE_BONUS = $(CC) $(DEPFLAGS_BONUS) $(CPPFLAGS) $(CFLAGS) -c
+POSTCOMPILE_COMMON = @mv -f $(DEP_DIR_COMMON)/$*.Td $(DEP_DIR_COMMON)/$*.d && touch $@
+POSTCOMPILE_BASE = @mv -f $(DEP_DIR_BASE)/$*.Td $(DEP_DIR_BASE)/$*.d && touch $@
+POSTCOMPILE_BONUS = @mv -f $(DEP_DIR_BONUS)/$*.Td $(DEP_DIR_BONUS)/$*.d && touch $@
 
 # ******************************
 # *     Modifying CFLAGS       *
@@ -119,6 +134,14 @@ endif
 BASE := miniRT
 # Bonus target
 BONUS := miniRT_bonus
+# Set default target name
+ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
+	DEFAULT = $(BONUS)
+else
+	DEFAULT = $(BASE)
+endif
+# Set target name to default
+NAME = $(DEFAULT)
 
 # Append for fsanitize leak checker
 LEAK := _leak
@@ -129,15 +152,6 @@ SPEED := _speed
 # Append for profiling
 PROFILE := _profile
 
-# Set default target name
-ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
-	DEFAULT = $(BONUS)
-else
-	DEFAULT = $(BASE)
-endif
-
-# Set target name to default
-NAME = $(DEFAULT)
 # Modify name depending on target
 ifeq ($(MODE), leak)
 	NAME = $(DEFAULT)$(LEAK)
@@ -148,6 +162,7 @@ else ifeq ($(MODE), speed)
 else ifeq ($(MODE), profile)
 	NAME = $(DEFAULT)$(PROFILE)
 endif
+
 LIBFT := $(LIB_DIR_FT)/libft.a
 
 # ******************************
@@ -226,21 +241,24 @@ SRC_BONUS :=	render_compose_image_bonus.c \
 # *     Object files           *
 # ******************************
 
-OBJ = $(SRC_COMMON:.c=.o)
+OBJ_COMMON = $(addprefix $(OBJ_DIR_COMMON)/, $(SRC_COMMON:.c=.o))
+OBJ_BASE = $(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o))
+OBJ_BONUS = $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_BONUS:.c=.o))
+
+# Depending on whether 'bonus' is a make target, include base or bonus objects
 ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
-	OBJ += $(SRC_BONUS:.c=.o)
+	OBJS = $(OBJ_COMMON) $(OBJ_BONUS)
 else
-	OBJ += $(SRC_BASE:.c=.o)
+	OBJS = $(OBJ_COMMON) $(OBJ_BASE)
 endif
-OBJS = $(addprefix $(OBJ_DIR)/, $(OBJ))
 
 # ******************************
 # *     Dependency files       *
 # ******************************
 
-DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR)/%.d) \
-			$(SRC_BASE:%.c=$(DEP_DIR)/%.d) \
-			$(SRC_BONUS:%.c=$(DEP_DIR)/%.d)
+DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR_COMMON)/%.d) \
+			$(SRC_BASE:%.c=$(DEP_DIR_BASE)/%.d) \
+			$(SRC_BONUS:%.c=$(DEP_DIR_BONUS)/%.d)
 
 # ******************************
 # *     Log files              *
@@ -314,11 +332,23 @@ CURRENT_FILE := 0
 # 					so that it will be created when needed.
 # $(eval ...) =		Increment file counter.
 # $(POSTCOMPILE) =	Move temp dependency file and touch object to ensure right timestamps.
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(DEP_DIR)/%.d message | $(DEP_DIR)
+$(OBJ_DIR_COMMON)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_COMMON)/%.d | $(DEP_DIR_COMMON)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
 	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
-	$(SILENT)$(COMPILE) $< -o $@
-	$(SILENT)$(POSTCOMPILE)
+	$(SILENT)$(COMPILE_COMMON) $< -o $@
+	$(SILENT)$(POSTCOMPILE_COMMON)
+
+$(OBJ_DIR_BASE)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BASE)/%.d | $(DEP_DIR_BASE)
+	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
+	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
+	$(SILENT)$(COMPILE_BASE) $< -o $@
+	$(SILENT)$(POSTCOMPILE_BASE)
+
+$(OBJ_DIR_BONUS)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BONUS)/%.d | $(DEP_DIR_BONUS)
+	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
+	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
+	$(SILENT)$(COMPILE_BONUS) $< -o $@
+	$(SILENT)$(POSTCOMPILE_BONUS)
 
 # Print message only if there are objects to compile
 .INTERMEDIATE: message
@@ -326,7 +356,7 @@ message:
 	@printf "$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 
 # Create obj and dep subdirectory if it doesn't exist
-$(DEP_DIR):
+$(DEP_DIR_COMMON) $(DEP_DIR_BASE) $(DEP_DIR_BONUS):
 	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@echo $@
 	$(SILENT)mkdir -p $@
