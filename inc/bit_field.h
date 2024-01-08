@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:06:03 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 13:29:28 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/08 13:30:34 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ bool	ft_bit_is_set(uint8_t bit_field, uint8_t bit);
  * @param bit		Bit to set
  * @return uint8_t	Bit field with set bit
  */
-uint8_t	ft_bit_set(uint8_t *bit_field, uint8_t bit);
+uint8_t	ft_bit_set(uint8_t bit_field, uint8_t bit);
 
 /**
  * @brief Clears bit in bit field
@@ -46,7 +46,7 @@ uint8_t	ft_bit_set(uint8_t *bit_field, uint8_t bit);
  * @param bit		Bit to clear
  * @return uint8_t	Bit field with cleared bit
  */
-uint8_t	ft_bit_clear(uint8_t *bit_field, uint8_t bit);
+uint8_t	ft_bit_clear(uint8_t bit_field, uint8_t bit);
 
 /**
  * @brief Toggles bit in bit field
@@ -55,6 +55,6 @@ uint8_t	ft_bit_clear(uint8_t *bit_field, uint8_t bit);
  * @param bit		Bit to toggle
  * @return uint8_t	Bit field with toggled bit
  */
-uint8_t	ft_bit_toggle(uint8_t *bit_field, uint8_t bit);
+uint8_t	ft_bit_toggle(uint8_t bit_field, uint8_t bit);
 
 #endif
