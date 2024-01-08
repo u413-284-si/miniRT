@@ -6,16 +6,16 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 13:22:22 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/07 14:06:24 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/08 10:27:23 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "time_bonus.h"
 
-uint64_t	ft_get_timeofday_ms(void)
+uint64_t	ft_get_time_ms(void)
 {
-	static struct timeval	tv;
+	static struct timespec	spec;
 
-	gettimeofday(&tv, NULL);
-	return ((tv.tv_sec * (uint64_t)1000) + (tv.tv_usec / 1000));
+	clock_gettime(CLOCK_MONOTONIC, &spec);
+	return ((spec.tv_sec * 1000) + (spec.tv_nsec / 1e6));
 }
