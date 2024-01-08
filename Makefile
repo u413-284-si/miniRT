@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/08 15:17:13 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/08 15:21:15 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,8 @@ LIB_DIR_FT := $(LIB_DIR)/libft
 
 # Subdirectory for header files
 INC_DIR := inc
+# Subdirectory for bonus header files
+INC_DIR_BONUS := $(INC_DIR)/bonus
 
 # Subdirectories for dependency files
 DEP_DIR_COMMON := $(OBJ_DIR_COMMON)/dep
@@ -286,6 +288,7 @@ $(NAME): $(LIBFT) $(OBJS)
 
 # This target compiles with bonus objects.
 .PHONY: bonus
+bonus: CPPFLAGS += -I $(INC_DIR_BONUS)
 bonus: $(NAME)
 
 # This target uses perf for profiling.
