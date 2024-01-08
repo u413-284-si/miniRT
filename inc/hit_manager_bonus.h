@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/06 16:01:43 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/08 17:22:06 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,13 +187,20 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec);
  * 
  * Takes potential hits and verifies that they lie within the
  * boundaries defined by ray_d
- * @param eq		Equation holding values one and two
- * @param ray_d		Interval of min and max defining area of visibility
- * @param d3		Distance of ray indicating potential hit with one cap
- * @param d4		Distance of ray indicating potential hit with other cap
+ * @param ray_d				Interval of min and max defining area of visibility
+ * @param potential_hits	Float array for four potential hits
  */
-bool	ft_cy_visible(t_equation eq, t_interval ray_d, float d3, \
-	float d4);
+bool	ft_cy_visible(t_interval ray_d, float potential_hits[4]);
+
+/**
+ * @brief 
+ * 
+ * @param cy 
+ * @param rec 
+ * @param tmp 
+ */
+void	ft_cy_set_hitrecord(t_cylinder cy, t_hitrecord *rec, t_hitrecord tmp);
+
 
 // CONE
 
