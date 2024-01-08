@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/04 11:42:36 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/08 17:04:31 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	ft_init_hitrecord(t_hitrecord *rec)
 	rec->checkered = false;
 	rec->u = 0.0;
 	rec->v = 0.0;
+	rec->wall_hit = false;
+	rec->cap_hit = false;
 }
 
 t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam)

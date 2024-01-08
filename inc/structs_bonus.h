@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 15:22:00 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/04 11:40:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/08 17:04:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,8 @@ typedef struct s_hitrecord
 	bool		checkered;
 	float		u;
 	float		v;
+	bool		wall_hit;
+	bool		cap_hit;
 }	t_hitrecord;
 
 /**
