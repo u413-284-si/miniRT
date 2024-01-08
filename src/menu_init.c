@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 16:34:39 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 19:09:37 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/08 14:40:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,4 @@ void	ft_menu_init(t_menu *menu, uint8_t alpha, uint32_t colour,
 	menu->rb = (colour & 0xFF00FF) * alpha;
 	menu->g = (colour & 0x00FF00) * alpha;
 	menu->font_col = font_col;
-	menu->cur_page = PAGE_SCENE;
 }

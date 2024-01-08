@@ -6,40 +6,34 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:15:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 14:08:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/08 14:41:16 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
 
-static void	ft_change_mode(uint8_t *options, t_pages *cur_page)
+static void	ft_change_mode(uint8_t *options)
 {
 	if (ft_bit_is_set(*options, O_MODE_SCENE))
 	{
 		ft_bit_clear(options, O_MODE_SCENE);
 		ft_bit_set(options, O_MODE_LIGHT);
-		(*cur_page)++;
 	}
 	else if (ft_bit_is_set(*options, O_MODE_LIGHT))
 	{
 		ft_bit_clear(options, O_MODE_LIGHT);
 		ft_bit_set(options, O_MODE_CAM);
-		(*cur_page)++;
 	}
 	else if (ft_bit_is_set(*options, O_MODE_CAM))
 	{
 		ft_bit_clear(options, O_MODE_CAM);
 		ft_bit_set(options, O_MODE_SCENE);
-		(*cur_page) -= 2;
 	}
 }
 
-static void	ft_toggle_menu_page(t_pages *cur_page)
+static void	ft_toggle_menu_page(uint8_t *options)
 {
-	if (*cur_page <= PAGE_CAM)
-		*cur_page += 3;
-	else
-		*cur_page -= 3;
+	ft_bit_toggle(options, O_SHOW_CTRL);
 }
 
 static void	ft_toggle_menu(uint8_t *options, const t_mlx_ptrs mlx_ptrs)
@@ -59,7 +53,7 @@ void	ft_change_options(int key, t_render *render)
 	else if (key == XK_i)
 		ft_toggle_menu(&render->options, render->mlx_ptrs);
 	else if (key == XK_Control_L)
-		ft_change_mode(&render->options, &render->menu.cur_page);
+		ft_change_mode(&render->options);
 	else if (key == XK_Shift_L)
-		ft_toggle_menu_page(&render->menu.cur_page);
+		ft_toggle_menu_page(&render->options);
 }
