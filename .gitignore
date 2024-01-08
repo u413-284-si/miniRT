@@ -13,3 +13,4 @@ miniRT*
 
 # Log files
 *.log
+*perf.data

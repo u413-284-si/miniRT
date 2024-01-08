@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/07 19:35:43 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/08 09:36:08 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,10 +58,6 @@ else ifeq ($(MODE), speed)
 	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/speed
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/speed
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/speed
-else ifeq ($(MODE), profile)
-	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/profile
-	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/profile
-	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/profile
 else
 	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/default
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/default
@@ -115,9 +111,6 @@ else ifeq ($(MODE), address)
 else ifeq ($(MODE), speed)
 	CFLAGS = -Ofast -march=native
 	LDFLAGS += -flto
-else ifeq ($(MODE), profile)
-	CFLAGS += -pg
-	LDFLAGS += -pg
 endif
 
 # ******************************
@@ -146,15 +139,13 @@ SPEED := _speed
 # Append for profiling
 PROFILE := _profile
 
-# Modify name depending on target
+# Modify name depending on MODE variable
 ifeq ($(MODE), leak)
 	NAME = $(DEFAULT)$(LEAK)
 else ifeq ($(MODE), address)
 	NAME = $(DEFAULT)$(ADDRESS)
 else ifeq ($(MODE), speed)
 	NAME = $(DEFAULT)$(SPEED)
-else ifeq ($(MODE), profile)
-	NAME = $(DEFAULT)$(PROFILE)
 endif
 
 LIBFT := $(LIB_DIR_FT)/libft.a
@@ -261,7 +252,7 @@ DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR_COMMON)/%.d) \
 DEFAULT_SCENE = scenes/basic_spheres.rt
 LOG_FILE_BASE = $(LOG_DIR)/$(shell date "+%Y-%m-%d-%H-%M-%S")
 LOG_VALGRIND = $(LOG_FILE_BASE)_valgrind.log
-LOG_GPROF = $(LOG_FILE_BASE)_gprof.log
+LOG_PERF = $(LOG_FILE_BASE)_perf.data
 
 # ******************************
 # *     Default target         *
@@ -289,16 +280,24 @@ $(NAME): $(LIBFT) $(OBJS)
 .PHONY: bonus
 bonus: $(NAME)
 
-# This target adds flags which enable profiling.
+# This target uses perf for profiling.
 .PHONY: profile
-profile: $(NAME) | $(LOG_DIR)
-	@printf "\n$(YELLOW)$(BOLD)Run for profiling$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+profile: check_perf_installed $(NAME) | $(LOG_DIR)
+	@printf "$(YELLOW)$(BOLD)Run for profiling with perf$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@printf "Profile scene: $(DEFAULT_SCENE)\n"
-	$(SILENT)./$(NAME) $(DEFAULT_SCENE)
-	$(SILENT)gprof $(NAME) gmon.out > $(LOG_GPROF)
-	@printf "\n$(YELLOW)$(BOLD)Saved log file$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	$(SILENT)rm gmon.out
-	$(SILENT)ls -dt1 $(LOG_DIR)/* | head -n 1 | xargs less
+	$(eval NEW_LOG_FILE=$(LOG_PERF))
+	$(SILENT)perf record -g -o $(NEW_LOG_FILE) ./$(NAME) $(DEFAULT_SCENE)
+	@printf "$(YELLOW)$(BOLD)Saved log file$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(NEW_LOG_FILE)\n"
+	@printf "$(YELLOW)$(BOLD)Run perf report$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	$(SILENT)perf report -g -i $(NEW_LOG_FILE)
+
+# Check if perf is installed. If not exit with error.
+.PHONY: check_perf_installed
+check_perf_installed:
+	@command -v perf >/dev/null 2>&1 || { \
+		echo >&2 "perf is not installed. Please install perf to continue."; exit 1; \
+	}
 
 # Perform memory check on NAME.
 .PHONY: valgr
