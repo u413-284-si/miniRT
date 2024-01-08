@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/07 12:39:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/08 14:51:06 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,13 @@
 # include "miniRT_config.h"
 # include "render.h"
 # include "vec2.h"
+# include "render_options.h"
 
 /* ====== MACROS ====== */
 
+# define X_MENU_OFFSET 20
+# define Y_MENU_TOP 20
+# define Y_MENU_INFO_POS 490
 # define Y_HALF_LINE 10
 # define Y_NEXT_LINE 20
 # define Y_NEXT_LINE_BIG 30
@@ -224,10 +228,10 @@ void	ft_put_light(t_putinfo put, t_light light);
  * Is printed bold.
  * Control mode is always at the top of the menu.
  * @param put		t_putinfo struct.
- * @param mode		Current control mode.
+ * @param options	Bit field with info about current control mode.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_mode(t_putinfo put, t_mode mode);
+t_vec2i	ft_put_mode(t_putinfo put, uint8_t options);
 
 /**
  * @brief Puts generic info on the screen.
@@ -363,43 +367,52 @@ t_vec2i	ft_put_ctrl_light(t_putinfo put, uint32_t active);
 // menu_put_page.c
 
 /**
+ * @brief Puts the main page of menu on the screen.
+ *
+ * Differentiates between SCENE, LIGHT and CAM.
+ * @param put		t_putinfo struct.
+ * @param render	t_render struct.
+ */
+void	ft_put_main_page(t_putinfo put, t_render *render);
+
+/**
  * @brief Puts a scene page on the screen.
  *
  * Differentiates between normal and control mode.
  * @param put		t_putinfo struct.
- * @param cur_page	Current page.
+ * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_scene(t_putinfo put, t_hittable active, t_pages cur_page);
+void	ft_put_page_scene(t_putinfo put, t_hittable active, uint8_t options);
 
 /**
  * @brief Puts an ambient page on the screen.
  *
  * Differentiates between normal and control mode.
  * @param put		t_putinfo struct.
- * @param cur_page	Current page.
+ * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_ambient(t_putinfo put, t_light ambient, t_pages cur_page);
+void	ft_put_page_ambient(t_putinfo put, t_light ambient, uint8_t options);
 
 /**
  * @brief Puts a light page on the screen.
  *
  * Differentiates between normal and control mode.
  * @param put		t_putinfo struct.
- * @param cur_page	Current page.
+ * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_light(t_putinfo put, t_light light, t_pages cur_page);
+void	ft_put_page_light(t_putinfo put, t_light light, uint8_t options);
 
 /**
  * @brief Puts a camera page on the screen.
  *
  * Differentiates between normal and control mode.
  * @param put		t_putinfo struct.
- * @param cur_page	Current page.
+ * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_cam(t_putinfo put, t_cam cam, t_pages cur_page);
+void	ft_put_page_cam(t_putinfo put, t_cam cam, uint8_t options);
 
 #endif

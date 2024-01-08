@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/08 12:35:24 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/08 14:53:36 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -154,7 +154,8 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC_COMMON :=	camera_movement.c \
+SRC_COMMON :=	bit_field.c \
+				camera_movement.c \
 				camera.c \
 				check_entity_ACL.c \
 				check_entity_sp_pl_cy.c \
@@ -187,7 +188,6 @@ SRC_COMMON :=	camera_movement.c \
 				menu_put_str_num.c \
 				menu_put_utils_ctrl.c \
 				menu_put_utils.c \
-				menu_put.c \
 				parse_entity_ACL.c \
 				parse_entity_sp_pl_cy.c \
 				parse_line.c \
@@ -217,10 +217,12 @@ SRC_COMMON :=	camera_movement.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c
 
-SRC_BASE := 	render_compose_image.c
+SRC_BASE := 	render_compose_image.c \
+				menu_put_text.c \
 
 SRC_BONUS :=	render_compose_image_bonus.c \
 				time_bonus.c \
+				menu_put_text_bonus.c \
 				menu_put_time_bonus.c
 
 
