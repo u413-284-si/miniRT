@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/08 09:36:08 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/08 12:35:24 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -178,17 +178,17 @@ SRC_COMMON :=	camera_movement.c \
 				mat4_vec3_rotate.c \
 				mat4.c \
 				menu_init.c \
-		menu_put_cam_light_ctrl.c \
-		menu_put_cam_light.c \
-		menu_put_general_info.c \
-		menu_put_hittable_ctrl.c \
-		menu_put_hittable.c \
-		menu_put_page.c \
-		menu_put_str_num.c \
-		menu_put_utils_ctrl.c \
-		menu_put_utils.c \
-		menu_put.c \
-		parse_entity_ACL.c \
+				menu_put_cam_light_ctrl.c \
+				menu_put_cam_light.c \
+				menu_put_general_info.c \
+				menu_put_hittable_ctrl.c \
+				menu_put_hittable.c \
+				menu_put_page.c \
+				menu_put_str_num.c \
+				menu_put_utils_ctrl.c \
+				menu_put_utils.c \
+				menu_put.c \
+				parse_entity_ACL.c \
 				parse_entity_sp_pl_cy.c \
 				parse_line.c \
 				parse.c \
@@ -200,11 +200,12 @@ SRC_COMMON :=	camera_movement.c \
 				render_keyhook_camera.c \
 				render_keyhook_hittable.c \
 				render_keyhook_light.c \
-		render_keyhook_press.c \
-		render_keyhook_release.c \
-		render_keyhook_scene.c \
-		render_keyhook_utils.c \
-						render_loop_mlx.c \
+				render_keyhook_options.c \
+				render_keyhook_press.c \
+				render_keyhook_release.c \
+				render_keyhook_scene.c \
+				render_keyhook_utils.c \
+				render_loop_mlx.c \
 				render_mouse.c \
 				render_output_ppm.c \
 				scene_init.c \
@@ -219,7 +220,8 @@ SRC_COMMON :=	camera_movement.c \
 SRC_BASE := 	render_compose_image.c
 
 SRC_BONUS :=	render_compose_image_bonus.c \
-				time_bonus.c
+				time_bonus.c \
+				menu_put_time_bonus.c
 
 
 # ******************************
