@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:05:49 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 13:25:10 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/08 13:40:12 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,17 @@ bool	ft_bit_is_set(uint8_t bit_field, uint8_t bit)
 	return (bit_field & bit);
 }
 
-uint8_t	ft_bit_set(uint8_t bit_field, uint8_t bit)
+void	ft_bit_set(uint8_t *bit_field, uint8_t bit)
 {
-	bit_field |= bit;
-	return (bit_field);
+	*bit_field |= bit;
 }
 
-uint8_t	ft_bit_clear(uint8_t bit_field, uint8_t bit)
+void	ft_bit_clear(uint8_t *bit_field, uint8_t bit)
 {
-	bit_field &= ~bit;
-	return (bit_field);
+	*bit_field &= ~bit;
 }
 
-uint8_t	ft_bit_toggle(uint8_t bit_field, uint8_t bit)
+void	ft_bit_toggle(uint8_t *bit_field, uint8_t bit)
 {
-	bit_field ^= bit;
-	return (bit_field);
+	*bit_field ^= bit;
 }
