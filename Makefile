@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/08 15:21:15 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/08 15:33:11 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -421,3 +421,37 @@ re: fclean all
 # Include the dependency files that exist. Use wildcard to avoid failing on non-existent files.
 # Needs to be last target
 include $(wildcard $(DEPFILES))
+
+# ******************************
+# *     Help Target            *
+# ******************************
+
+.PHONY: help
+help:
+	@echo "$(GREEN)$(BOLD)miniRT Makefile Help$(RESET)"
+	@echo "This Makefile automates the compilation and cleaning processes for miniRT."
+	@echo "It supports various targets and can be customized with different variables."
+	@echo "Below are the available targets and variables you can use."
+	@echo ""
+	@echo "$(YELLOW)Targets:$(RESET)"
+	@echo "  all         - Compiles the default version of the miniRT program."
+	@echo "  bonus       - Compiles the bonus version of miniRT with extra features."
+	@echo "  clean       - Removes object files and dependency files."
+	@echo "  fclean      - Performs 'clean' and also removes binaries and log files."
+	@echo "  re          - Performs 'fclean' and then 'all'."
+	@echo "  valgr       - Runs the program with Valgrind to check for memory leaks."
+	@echo "  profile     - Profiles the program using 'perf'."
+	@echo ""
+	@echo "$(YELLOW)Variables:$(RESET)"
+	@echo "  VERBOSE=1   - Echoes all commands if set to 1."
+	@echo "  MODE        - Changes compilation for specific purposes. Options: leak, address, speed."
+	@echo "                leak: Enables fsanitize leak checker."
+	@echo "                address: Enables fsanitize address checker."
+	@echo "                speed: Compiles for speed optimization."
+	@echo ""
+	@echo "$(YELLOW)Examples:$(RESET)"
+	@echo "  make all VERBOSE=1   - Compiles the default target with command echoing."
+	@echo "  make bonus MODE=leak - Compiles the bonus version with leak sanitation."
+	@echo ""
+	@echo "For more detailed information, read the comments within the Makefile itself."
+	
