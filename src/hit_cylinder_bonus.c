@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/04 15:23:22 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/08 17:20:06 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,12 @@ bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d)
 	tmp.ray = rec->ray;
 	if (!ft_cy_calc_pot_hits(cy, rec->ray, ray_d, potential_hits))
 		return (false);
+	if (!ft_cy_visible(ray_d, potential_hits))
+		return (false);
 	ft_cy_identify_hits(cy, potential_hits, &tmp);
 	if (tmp.d >= EPSILON && tmp.d < rec->d)
 	{
-		rec->d = tmp.d;
-		rec->axis_hit = tmp.axis_hit;
-		rec->point = ft_ray(rec->ray, rec->d);
-		rec->normal = ft_vec3_norm(ft_cy_normal(*rec, cy));
-		ft_get_cy_uvcoords(rec, cy);
-		rec->colour = cy.colour;
+		ft_cy_set_hitrecord(cy, rec, tmp);
 		return (true);
 	}
 	return (false);
@@ -60,8 +57,6 @@ bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
 		return (false);
 	ft_cy_hit_cap(cy, ray, cy.cap1, &cap_hit1);
 	ft_cy_hit_cap(cy, ray, cy.cap2, &cap_hit2);
-	if (!ft_cy_visible(eq, ray_d, cap_hit1, cap_hit2))
-		return (false);
 	potential_hits[0] = eq.d1;
 	potential_hits[1] = eq.d2;
 	potential_hits[2] = cap_hit1;
@@ -100,4 +95,21 @@ void	ft_cy_identify_hits(t_cylinder cy, float potential_hits[4], \
 		rec->d = potential_hits[3];
 	if (rec->d == INFINITY)
 		rec->d = 0;
+}
+
+void	ft_cy_set_hitrecord(t_cylinder cy, t_hitrecord *rec, t_hitrecord tmp)
+{
+	rec->d = tmp.d;
+	rec->axis_hit = tmp.axis_hit;
+	rec->point = ft_ray(rec->ray, rec->d);
+	rec->normal = ft_vec3_norm(ft_cy_normal(*rec, cy));
+	if (tmp.wall_hit)
+		ft_get_cy_uvcoords(rec, cy);
+	else
+	{
+		ft_get_pl_uvcoords(rec);
+		rec->u *= 2;
+		rec->v *= 2;
+	}
+	rec->colour = cy.colour;
 }

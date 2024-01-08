@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/06 16:40:26 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/08 17:19:42 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ bool	ft_cy_check_wall(t_cylinder cy, float d, t_hitrecord *rec)
 	if (m >= 0 && m <= cy.h && len <= (cy.d / 2.0) && d > EPSILON && d < rec->d)
 	{
 		rec->axis_hit = axis_hit;
+		rec->wall_hit = true;
+		rec->cap_hit = false;
 		return (true);
 	}
 	return (false);
@@ -61,20 +63,19 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec)
 	if (len <= (cy.d / 2.0) && d > EPSILON && d < rec->d)
 	{
 		rec->axis_hit = cap;
-/* 		rec->u = hit.x;
-		rec->v = hit.y; */
+		rec->wall_hit = false;
+		rec->cap_hit = true;
 		return (true);
 	}
 	return (false);
 }
 
-bool	ft_cy_visible(t_equation eq, t_interval ray_d, float d3, \
-	float d4)
+bool	ft_cy_visible(t_interval ray_d, float potential_hits[4])
 {
-	if (!ft_surrounds(eq.d1, ray_d))
-		if (!ft_surrounds(eq.d2, ray_d))
-			if (!ft_surrounds(d3, ray_d))
-				if (!ft_surrounds(d4, ray_d))
+	if (!ft_surrounds(potential_hits[0], ray_d))
+		if (!ft_surrounds(potential_hits[1], ray_d))
+			if (!ft_surrounds(potential_hits[2], ray_d))
+				if (!ft_surrounds(potential_hits[3], ray_d))
 					return (false);
 	return (true);
 }
@@ -86,13 +87,13 @@ void	ft_get_cy_uvcoords(t_hitrecord *rec, t_cylinder cy)
 	float	rotation;
 
 	centre_hit = ft_vec3_sub(rec->point, cy.centre);
-/* 	if (!((cy.axis.y + EPSILON >= 1.0) && (cy.axis.y - EPSILON <= 1.0)))
+	if (!((cy.axis.y + EPSILON >= 1.0) && (cy.axis.y - EPSILON <= 1.0)))
 	{
 		rotation = acos(cy.axis.y);
-		centre_hit = quaternionf_rotate_vector3f(-rotation,
-				vector3f_unit(vector3f_cross(vector3f_create(0, 1, 0), \
-				cy.axis)), centre_hit);
-	} */
+		centre_hit = ft_quaternion_rot(centre_hit,
+				ft_vec3_norm(ft_vec3_cross((t_vec3){0, 1, 0}, \
+				cy.axis)), -rotation);
+	}
 	theta = atan2(centre_hit.x / (cy.d / 2.0),
 			centre_hit.z / (cy.d / 2.0));
 	rec->u = 1.0 - (theta / (2.0 * M_PI) + 0.5);
