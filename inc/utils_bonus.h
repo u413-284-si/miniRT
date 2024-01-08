@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 15:29:22 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/08 16:38:12 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@
 
 /* ====== TYPEDEFS ====== */
 
+typedef struct s_quaternion
+{
+	float	scalar;
+	t_vec3	vector;
+}	t_quaternion;
+
 /* ====== FUNCTIONS ====== */
 
 /**
@@ -37,7 +43,7 @@
  * @param degrees 	Angle in degrees
  * @return float 	Angle in radians
  */
-float	ft_degree_to_radian(float degrees);
+float			ft_degree_to_radian(float degrees);
 
 /**
  * @brief Determines if value is inside the interval
@@ -47,7 +53,7 @@ float	ft_degree_to_radian(float degrees);
  * @return true 		Value is inside the interval
  * @return false 		Value is outside the interval
  */
-bool	ft_contains(float x, t_interval interval);
+bool			ft_contains(float x, t_interval interval);
 
 /**
  * @brief Determines if value is surrounded by the interval
@@ -57,7 +63,7 @@ bool	ft_contains(float x, t_interval interval);
  * @return true 		Value is surrounded by the interval
  * @return false 		Value is not surrounded by the interval
  */
-bool	ft_surrounds(float x, t_interval interval);
+bool			ft_surrounds(float x, t_interval interval);
 
 /**
  * @brief Solves the given equation
@@ -73,7 +79,7 @@ bool	ft_surrounds(float x, t_interval interval);
  * @param eq 		Equation to solve
  * @return float
  */
-float	ft_solve(t_equation *eq);
+float			ft_solve(t_equation *eq);
 
 /**
  * @brief Checks if two floats are (almost) equal
@@ -85,14 +91,14 @@ float	ft_solve(t_equation *eq);
  * @return true 	If both floats are (almost) equal
  * @return false 	If they are not equal
  */
-bool	ft_nearly_equal_flt(float one, float two);
+bool			ft_nearly_equal_flt(float one, float two);
 
 /**
  * @brief Return a random float
  * 
  * @return float 
  */
-float	ft_random_float(void);
+float			ft_random_float(void);
 
 /**
  * @brief Return a random float within min and max
@@ -101,7 +107,7 @@ float	ft_random_float(void);
  * @param max 		Upper bounder
  * @return float 
  */
-float	ft_random_float_in(float min, float max);
+float			ft_random_float_in(float min, float max);
 
 /**
  * @brief Ensure that the returned float lies within the interval
@@ -110,13 +116,33 @@ float	ft_random_float_in(float min, float max);
  * @param interval 		Interval with min and max value
  * @return float 
  */
-float	ft_clamp(float x, t_interval interval);
+float			ft_clamp(float x, t_interval interval);
 
 /**
  * @brief Initiates interval
  * 
  * @param interval 			Interval to be initiated
  */
-void	ft_init_interval(t_interval *interval);
+void			ft_init_interval(t_interval *interval);
+
+
+/**
+ * @brief 
+ * 
+ * @param q1 
+ * @param q2 
+ * @return t_quaternion 
+ */
+t_quaternion	ft_quaternion_mult(t_quaternion q1, t_quaternion q2);
+
+/**
+ * @brief 
+ * 
+ * @param vec 
+ * @param axis 
+ * @param angle 
+ * @return t_vec3 
+ */
+t_vec3			ft_quaternion_rot(t_vec3 vec, t_vec3 axis, float angle);
 
 #endif
