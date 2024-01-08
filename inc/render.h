@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/07 17:54:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/08 14:25:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 # include "ray.h"
 # include "vec2.h"
 # include "render_menu.h"
+# include "render_options.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -87,20 +88,6 @@ typedef struct s_mouse
 }	t_mouse;
 
 /**
- * @brief Mode enum for different manipulation modes.
- *
- * CTRL_SCENE		Scene manipulation mode.
- * CTRL_CAM			Camera manipulation mode.
- * CTRL_LIGHT		Light manipulation mode.
- */
-typedef enum e_mode
-{
-	CTRL_SCENE,
-	CTRL_CAM,
-	CTRL_LIGHT
-}	t_mode;
-
-/**
  * @brief Overarching render struct.
  *
  * @param mlx_ptrs		mlx pointers struct.
@@ -115,14 +102,12 @@ typedef struct s_render
 	t_cam		cam;
 	t_entities	scene;
 	t_mouse		mouse;
-	uint64_t	last_render_time;
 	t_menu		menu;
-	t_mode		mode;
-	bool		show_menu;
+	uint8_t		options;
 	bool		is_printing;
-	bool		is_changed;
 	int			active_hittable;
 	int			active_light;
+	uint64_t	last_render_time;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
@@ -456,5 +441,6 @@ void	ft_render_start_loop(t_render *render);
 void	ft_menu_put_text(t_render *render);
 
 int	ft_draw_scene(t_render *render);
+void	ft_change_options(int key, t_render *render);
 
 #endif
