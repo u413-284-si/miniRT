@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:54:31 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 14:06:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/08 11:35:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ t_vec2i	ft_put_id(t_putinfo put, int id)
 
 t_vec2i	ft_put_info(t_putinfo put)
 {
+	put.pos = (t_vec2i){X_MENU_OFFSET, Y_MENU_INFO_POS};
 	put.pos.x -= 15;
 	ft_put_str(put, "------------------------");
 	put.pos.x += 15;
