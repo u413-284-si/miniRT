@@ -11,6 +11,7 @@
 		"ray.h": "c",
 		"camera.h": "c",
 		"structs.h": "c",
-		"minirt_config.h": "c"
+		"minirt_config.h": "c",
+		"structs_bonus.h": "c"
 	}
 }
