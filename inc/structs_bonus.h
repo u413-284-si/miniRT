@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 15:22:00 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/08 17:04:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/08 17:37:31 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ typedef struct s_colour
  * @param checkered			Indicates whether the hittable has a checkered texture
  * @param u					U-coordinate of hittable at intersection point
  * @param v					V-coordinate of hittable at intersection point
+ * @param wall_hit			Bool to differentiate between a wall or cap hit with cylinders/cones
  */
 typedef struct s_hitrecord
 {
@@ -104,7 +105,6 @@ typedef struct s_hitrecord
 	float		u;
 	float		v;
 	bool		wall_hit;
-	bool		cap_hit;
 }	t_hitrecord;
 
 /**

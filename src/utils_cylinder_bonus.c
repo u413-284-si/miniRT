@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/08 17:19:42 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/08 17:37:46 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ bool	ft_cy_check_wall(t_cylinder cy, float d, t_hitrecord *rec)
 	{
 		rec->axis_hit = axis_hit;
 		rec->wall_hit = true;
-		rec->cap_hit = false;
 		return (true);
 	}
 	return (false);
@@ -64,7 +63,6 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec)
 	{
 		rec->axis_hit = cap;
 		rec->wall_hit = false;
-		rec->cap_hit = true;
 		return (true);
 	}
 	return (false);
