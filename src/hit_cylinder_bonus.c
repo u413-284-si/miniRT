@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/09 11:24:54 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/09 11:35:10 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d)
 	potential_hits[3] = 0;
 	ft_init_hitrecord(&tmp);
 	tmp.ray = rec->ray;
-	if (!ft_cy_calc_pot_hits(cy, rec->ray, ray_d, potential_hits))
+	if (!ft_cy_calc_pot_hits(cy, rec->ray, potential_hits))
 		return (false);
 	if (!ft_cy_visible(ray_d, potential_hits))
 		return (false);
@@ -36,8 +36,7 @@ bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d)
 	return (false);
 }
 
-bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
-	float potential_hits[4])
+bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, float potential_hits[4])
 {
 	t_equation	eq;
 	t_vec3		cap1_ray;
