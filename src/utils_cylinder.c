@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/31 13:05:28 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/09 11:32:22 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,13 +67,12 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec)
 	return (false);
 }
 
-bool	ft_cy_visible(t_equation eq, t_interval ray_d, float d3, \
-	float d4)
+bool	ft_cy_visible(t_interval ray_d, float potential_hits[4])
 {
-	if (!ft_surrounds(eq.d1, ray_d))
-		if (!ft_surrounds(eq.d2, ray_d))
-			if (!ft_surrounds(d3, ray_d))
-				if (!ft_surrounds(d4, ray_d))
+	if (!ft_surrounds(potential_hits[0], ray_d))
+		if (!ft_surrounds(potential_hits[1], ray_d))
+			if (!ft_surrounds(potential_hits[2], ray_d))
+				if (!ft_surrounds(potential_hits[3], ray_d))
 					return (false);
 	return (true);
 }

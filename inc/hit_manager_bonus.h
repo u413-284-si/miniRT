@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/09 11:18:40 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/09 11:35:29 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,13 +126,11 @@ void	ft_get_cy_uvcoords(t_hitrecord *rec, t_cylinder cy);
  * 
  * @param cy				Cylinder
  * @param ray				Ray shot into scene
- * @param ray_d				Interval of accepted values of the ray distance for a hit
  * @param potential_hits	Array holding the values of the potential hits
  * @return true 			If cylinder is hit
  * @return false 			If cylinder is missed
  */
-bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
-	float potential_hits[4]);
+bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, float potential_hits[4]);
 
 /**
  * @brief Calculates the hit point of the ray with the cylinder cap
@@ -142,9 +140,8 @@ bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, t_interval ray_d, \
  * @param cy 		Cylinder
  * @param ray 		Ray shot into scene
  * @param cap 		Cap in question
- * @param d 		Distance of ray, if a hit was detected
  */
-void	ft_cy_hit_cap(t_cylinder cy, t_ray ray, t_vec3 cap, float *d);
+float	ft_cy_cap_hit(t_cylinder cy, t_ray ray, t_vec3 cap);
 
 /**
  * @brief Determines if the potential hits are accurate
