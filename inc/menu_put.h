@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 14:51:06 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/09 16:20:05 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 # define X_MENU_OFFSET 20
 # define Y_MENU_TOP 20
-# define Y_MENU_INFO_POS 490
+# define Y_MENU_INFO_POS 470
 # define Y_HALF_LINE 10
 # define Y_NEXT_LINE 20
 # define Y_NEXT_LINE_BIG 30
@@ -241,7 +241,7 @@ t_vec2i	ft_put_mode(t_putinfo put, uint8_t options);
  * @param put
  * @return t_vec2i
  */
-t_vec2i	ft_put_info(t_putinfo put);
+t_vec2i	ft_put_info(t_putinfo put, bool show_ctrl);
 
 /**
  * @brief Puts the ID of a hittable or a light on the screen.

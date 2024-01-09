@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:54:31 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 14:11:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/09 16:23:16 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,20 +60,30 @@ t_vec2i	ft_put_id(t_putinfo put, int id)
 	return (put.pos);
 }
 
-t_vec2i	ft_put_info(t_putinfo put)
+t_vec2i	ft_put_info(t_putinfo put, bool show_ctrl)
 {
-	put.pos = (t_vec2i){X_MENU_OFFSET, Y_MENU_INFO_POS};
+	if (show_ctrl == true)
+		put.pos = (t_vec2i){X_MENU_OFFSET, Y_MENU_INFO_POS};
+	else
+		put.pos = (t_vec2i){X_MENU_OFFSET, 550};
 	put.pos.x -= 15;
-	ft_put_str(put, "------------------------");
+	ft_put_str(put, "-------General----------");
 	put.pos.x += 15;
 	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, "Ctrl:  Switch mode");
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, "Shift: Toggle controls");
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, "I:     Toggle menu");
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, "P:     Print scene");
+	if (show_ctrl == true)
+	{
+		ft_put_str(put, "Ctrl:  Switch mode");
+		put.pos.y += Y_NEXT_LINE;
+		ft_put_str(put, "I:     Toggle menu");
+		put.pos.y += Y_NEXT_LINE;
+		ft_put_str(put, "O:     Toggle FPS");
+		put.pos.y += Y_NEXT_LINE;
+		ft_put_str(put, "P:     Print scene");
+		put.pos.y += Y_NEXT_LINE;
+		ft_put_str(put, "Shift: Show info");
+	}
+	else
+		ft_put_str(put, "Shift: Show controls");
 	put.pos.y += Y_NEXT_LINE;
 	ft_put_str(put, "ESC:   Exit");
 	return (put.pos);
