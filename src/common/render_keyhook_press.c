@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 14:09:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/09 16:11:32 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static bool	ft_is_option_key(int key)
 {
 	return (key == XK_Escape || key == XK_Shift_L || key == XK_Control_L
-		|| key == XK_i);
+		|| key == XK_i || key == XK_o);
 }
 
 static bool	ft_is_manip_key(int key)

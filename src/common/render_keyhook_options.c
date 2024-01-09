@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:15:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 14:41:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/09 16:11:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,6 @@ static void	ft_change_mode(uint8_t *options)
 	}
 }
 
-static void	ft_toggle_menu_page(uint8_t *options)
-{
-	ft_bit_toggle(options, O_SHOW_CTRL);
-}
-
 static void	ft_toggle_menu(uint8_t *options, const t_mlx_ptrs mlx_ptrs)
 {
 	ft_bit_toggle(options, O_SHOW_MENU);
@@ -55,5 +50,7 @@ void	ft_change_options(int key, t_render *render)
 	else if (key == XK_Control_L)
 		ft_change_mode(&render->options);
 	else if (key == XK_Shift_L)
-		ft_toggle_menu_page(&render->options);
+		ft_bit_toggle(&render->options, O_SHOW_CTRL);
+	else if (key == XK_o)
+		ft_bit_toggle(&render->options, O_SHOW_FPS);
 }
