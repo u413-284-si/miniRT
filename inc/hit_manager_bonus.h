@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/08 17:22:06 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/09 11:18:40 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,11 @@ bool	ft_hit_hittable(t_hittable obj, t_hitrecord *rec, t_interval ray_d);
 bool	ft_hit_sphere(t_sphere sp, t_hitrecord *rec, t_interval ray_d);
 
 /**
- * @brief 
+ * @brief Transforms the Cartesian coordinates of a hit point on a sphere
+ * into 2D texture UV-coordinates in the range {0, 1}.
  * 
- * @param rec 
+ * @param rec 	Hit record of ray containing most recent hit
+ * @param sp	Sphere struct containing its parameters
  */
 void	ft_get_sp_uvcoords(t_hitrecord *rec, t_sphere sp);
 
@@ -85,9 +87,13 @@ void	ft_get_sp_uvcoords(t_hitrecord *rec, t_sphere sp);
  */
 bool	ft_hit_plane(t_plane pl, t_hitrecord *rec, t_interval ray_d);
 
-
+/**
+ * @brief Transforms the Cartesian coordinates of a hit point on a plane
+ * into 2D texture UV-coordinates in the range {0, 1}.
+ * 
+ * @param rec 	Hit record of ray containing most recent hit
+ */
 void	ft_get_pl_uvcoords(t_hitrecord *rec);
-
 
 // CYLINDER
 /**
@@ -106,8 +112,14 @@ void	ft_get_pl_uvcoords(t_hitrecord *rec);
  */
 bool	ft_hit_cylinder(t_cylinder cy, t_hitrecord *rec, t_interval ray_d);
 
+/**
+ * @brief Transforms the Cartesian coordinates of a hit point on a cylinder wall
+ * into 2D texture UV-coordinates in the range {0, 1}.
+ * 
+ * @param rec 	Hit record of ray containing most recent hit
+ * @param cy 	Cylinder struct containing its parameters
+ */
 void	ft_get_cy_uvcoords(t_hitrecord *rec, t_cylinder cy);
-
 
 /**
  * @brief Calculates all four potential hits of a cylinder
@@ -193,11 +205,12 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec);
 bool	ft_cy_visible(t_interval ray_d, float potential_hits[4]);
 
 /**
- * @brief 
+ * @brief Overwrites the hit record "rec" with the new hit data found in the "tmp" hit
+ * record
  * 
- * @param cy 
- * @param rec 
- * @param tmp 
+ * @param cy 	Cylinder struct containing its parameters
+ * @param rec 	Main hit record responsible for colour definition
+ * @param tmp 	Temporary hit record to identify the closest hit point
  */
 void	ft_cy_set_hitrecord(t_cylinder cy, t_hitrecord *rec, t_hitrecord tmp);
 
@@ -292,5 +305,24 @@ t_vec3	ft_co_normal(t_hitrecord rec, t_cone co);
  * @return false 			If the cone is blocked
  */
 bool	ft_co_visible(t_interval ray_d, float potential_hits[3]);
+
+/**
+ * @brief Transforms the Cartesian coordinates of a hit point on a cone wall
+ * into 2D texture UV-coordinates in the range {0, 1}.
+ * 
+ * @param rec 	Hit record of ray containing most recent hit
+ * @param co 	Cone struct containing its parameters
+ */
+void	ft_get_co_uvcoords(t_hitrecord *rec, t_cone co);
+
+/**
+ * @brief Overwrites the hit record "rec" with the new hit data found in the "tmp" hit
+ * record
+ * 
+ * @param co 	Cone struct containing its parameters
+ * @param rec 	Main hit record responsible for colour definition
+ * @param tmp 	Temporary hit record to identify the closest hit point
+ */
+void	ft_co_set_hitrecord(t_cone co, t_hitrecord *rec, t_hitrecord tmp);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 13:42:46 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/04 00:55:00 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/09 11:02:26 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ bool	ft_co_check_wall(t_cone co, float d, t_hitrecord *rec)
 		&& d < rec->d)
 	{
 		rec->axis_hit = ft_vec3_add(co.apex, ft_vec3_scale(co.axis, m));
-		rec->u = atan2(hit.y, hit.x) / M_PI;
-		rec->v = hit.z * 2.0 + 1.0;
+		rec->wall_hit = true;
 		return (true);
 	}
 	return (false);
@@ -48,9 +47,8 @@ bool	ft_co_check_cap(t_cone co, float d, t_hitrecord *rec)
 	len -= EPSILON;
 	if (len >= 0 && len <= co.r && d > EPSILON && d < rec->d)
 	{
-		rec->axis_hit = co.axis;
-		rec->u = hit.x;
-		rec->v = hit.y;
+		rec->axis_hit = co.base;
+		rec->wall_hit = false;
 		return (true);
 	}
 	return (false);
@@ -63,9 +61,9 @@ t_vec3	ft_co_normal(t_hitrecord rec, t_cone co)
 	double	adj;
 	double	hip;
 
-	if (ft_vec3_equal(rec.axis_hit, co.axis))
+	if (ft_vec3_equal(rec.axis_hit, co.base))
 		normal = co.axis;
-	else if (ft_vec3_equal(rec.point, co.apex))
+	else if (ft_vec3_equal(rec.axis_hit, co.apex))
 		normal = ft_vec3_scale(co.axis, -1);
 	else
 	{
@@ -84,4 +82,25 @@ bool	ft_co_visible(t_interval ray_d, float potential_hits[3])
 			if (!ft_surrounds(potential_hits[2], ray_d))
 				return (false);
 	return (true);
+}
+
+void	ft_get_co_uvcoords(t_hitrecord *rec, t_cone co)
+{
+	t_vec3	centre_hit;
+	float	theta;
+	float	rotation;
+
+	centre_hit = ft_vec3_sub(rec->point, co.apex);
+	if (!((co.axis.y + EPSILON >= 1.0) && (co.axis.y - EPSILON <= 1.0)))
+	{
+		rotation = acos(co.axis.y);
+		centre_hit = ft_quaternion_rot(centre_hit,
+				ft_vec3_norm(ft_vec3_cross((t_vec3){0, 1, 0}, \
+				co.axis)), -rotation);
+	}
+	theta = atan2(centre_hit.x / co.r, centre_hit.z / co.r);
+	rec->u = 1.0 - (theta / (2.0 * M_PI) + 0.5);
+	rec->v = (0.5 + centre_hit.y / co.h);
+	rec->u *= CHECKER_SCALE;
+	rec->v *= CHECKER_SCALE;
 }
