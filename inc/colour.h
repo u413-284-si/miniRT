@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/10 18:15:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/10 18:16:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ typedef enum e_col_name
 }	t_col_name;
 
 /* ====== FUNCTIONS ====== */
-
-void		ft_write_colour(t_colour pixel);
 
 /**
  * @brief Add two colours
