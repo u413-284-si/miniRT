@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 21:19:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/09 17:17:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/10 18:11:05 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,23 +63,23 @@ void	ft_keyhook_change_col(int key, t_colour *col, float inc)
 	if (key == XK_1)
 		*col = ft_get_colour(RED);
 	else if (key == XK_2)
-		*col = ft_get_colour(GREEN);
+		*col = ft_get_colour(ORANGE);
 	else if (key == XK_3)
-		*col = ft_get_colour(BLUE);
-	else if (key == XK_4)
 		*col = ft_get_colour(YELLOW);
+	else if (key == XK_4)
+		*col = ft_get_colour(GREEN);
 	else if (key == XK_5)
-		*col = ft_get_colour(PURPLE);
+		*col = ft_get_colour(BLUE);
 	else if (key == XK_6)
-		*col = ft_get_colour(CYAN);
+		*col = ft_get_colour(INDIGO);
 	else if (key == XK_7)
-		*col = ft_get_colour(WHITE);
+		*col = ft_get_colour(PURPLE);
 	else if (key == XK_8)
 		*col = ft_get_colour(BLACK);
 	else if (key == XK_9)
-		ft_rainbow(col, inc * 0.05);
+		ft_static_interpolate(col, inc);
 	else if (key == XK_0)
-		ft_rainbow(col, -(inc * 0.1));
+		ft_static_interpolate(col, -inc);
 }
 
 float	ft_get_increment(bool is_high)
