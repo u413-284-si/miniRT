@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:10:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/07 12:39:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/10 19:45:05 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	ft_put_cam(t_putinfo put, t_cam cam)
 {
 	put.pos = ft_put_3d_point("Centre", put, cam.centre);
 	put.pos = ft_put_unit_vec("View direction", put, cam.direction);
-	put.pos = ft_put_single_float_value("FOV", put, ft_radian_to_degree(cam.hfov));
+	put.pos = ft_put_single_float_value("FOV", put,
+			ft_radian_to_degree(cam.hfov));
 }
 
 void	ft_put_ambient(t_putinfo put, t_light ambient)

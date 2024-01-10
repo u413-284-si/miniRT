@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/09 16:20:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/10 19:44:18 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_menu_put_text(t_render *render)
 		render->mlx_ptrs.win_ptr, render->mlx_ptrs.veil.ptr, 0, 0);
 	put.pos = ft_put_mode(put, render->options);
 	put.pos = ft_put_time(put, render->last_render_time,
-		ft_bit_is_set(render->options, O_SHOW_FPS));
+			ft_bit_is_set(render->options, O_SHOW_FPS));
 	ft_put_main_page(put, render);
 	ft_put_info(put, ft_bit_is_set(render->options, O_SHOW_CTRL));
 }
