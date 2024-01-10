@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:31:38 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 14:14:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/09 16:30:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@
 # define O_SHOW_MENU		0x10	// 00010000
 # define O_SHOW_FPS			0x20	// 00100000
 # define O_SHOW_CTRL		0x40	// 01000000
+# define O_MANIP_HIGH		0x80	// 10000000
 
 #endif

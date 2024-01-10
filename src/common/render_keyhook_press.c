@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/09 16:11:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/09 16:39:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,19 @@ static bool	ft_is_manip_key(int key)
 
 int	ft_keyhook_press(int key, t_render *render)
 {
+	float	inc;
+
 	if (ft_is_option_key(key))
 		ft_change_options(key, render);
 	else if (ft_is_manip_key(key))
 	{
+		inc = ft_get_increment(ft_bit_is_set(render->options, O_MANIP_HIGH));
 		if (ft_bit_is_set(render->options, O_MODE_SCENE))
-			ft_manip_scene(key, &render->scene, &render->active_hittable);
+			ft_manip_scene(key, &render->scene, &render->active_hittable, inc);
 		else if (ft_bit_is_set(render->options, O_MODE_LIGHT))
-			ft_manip_light(key, &render->scene, &render->active_light);
+			ft_manip_light(key, &render->scene, &render->active_light, inc);
 		else if (ft_bit_is_set(render->options, O_MODE_CAM))
-			ft_manip_cam(key, &render->cam);
+			ft_manip_cam(key, &render->cam, inc);
 		ft_bit_set(&render->options, O_SCENE_CHANGED);
 	}
 	return (0);
