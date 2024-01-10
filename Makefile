@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/08 15:33:11 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/10 18:18:17 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,12 +37,7 @@ BLUE := \033[34m
 # *     Directories            *
 # ******************************
 
-# Base directory for source files
-BASE_SRC_DIR := src
-# Subdirectories for common, base, and bonus source files
-SRC_DIR_COMMON := $(BASE_SRC_DIR)/common
-SRC_DIR_BASE := $(BASE_SRC_DIR)/base
-SRC_DIR_BONUS := $(BASE_SRC_DIR)/bonus
+SRC_DIR := src
 
 # Base directory for object files
 BASE_OBJ_DIR := obj
@@ -232,13 +227,14 @@ SRC_BONUS :=	render_compose_image_bonus.c \
 				menu_put_text_bonus.c \
 				menu_put_time_bonus.c
 
+
 # ******************************
 # *     Object files           *
 # ******************************
 
-OBJ_COMMON := $(addprefix $(OBJ_DIR_COMMON)/, $(SRC_COMMON:.c=.o))
-OBJ_BASE := $(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o))
-OBJ_BONUS := $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_BONUS:.c=.o))
+OBJ_COMMON = $(addprefix $(OBJ_DIR_COMMON)/, $(SRC_COMMON:.c=.o))
+OBJ_BASE = $(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o))
+OBJ_BONUS = $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_BONUS:.c=.o))
 
 # Depending on whether 'bonus' is a make target, include base or bonus objects
 ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
@@ -251,9 +247,9 @@ endif
 # *     Dependency files       *
 # ******************************
 
-DEPFILES =	$(addprefix $(DEP_DIR_COMMON)/, $(SRC_COMMON:.c=.d)) \
-			$(addprefix $(DEP_DIR_BASE)/, $(SRC_BASE:.c=.d)) \
-			$(addprefix $(DEP_DIR_BONUS)/, $(SRC_BONUS:.c=.d))
+DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR_COMMON)/%.d) \
+			$(SRC_BASE:%.c=$(DEP_DIR_BASE)/%.d) \
+			$(SRC_BONUS:%.c=$(DEP_DIR_BONUS)/%.d)
 
 # ******************************
 # *     Log files              *
@@ -336,21 +332,21 @@ CURRENT_FILE := 0
 # 					so that it will be created when needed.
 # $(eval ...) =		Increment file counter.
 # $(POSTCOMPILE) =	Move temp dependency file and touch object to ensure right timestamps.
-$(OBJ_DIR_COMMON)/%.o: $(SRC_DIR_COMMON)/%.c message $(DEP_DIR_COMMON)/%.d | $(DEP_DIR_COMMON)
+$(OBJ_DIR_COMMON)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_COMMON)/%.d | $(DEP_DIR_COMMON)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
 	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
 	$(eval DEP_DIR=$(DEP_DIR_COMMON))
 	$(SILENT)$(COMPILE) $< -o $@
 	$(SILENT)$(POSTCOMPILE)
 
-$(OBJ_DIR_BASE)/%.o: $(SRC_DIR_BASE)/%.c message $(DEP_DIR_BASE)/%.d | $(DEP_DIR_BASE)
+$(OBJ_DIR_BASE)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BASE)/%.d | $(DEP_DIR_BASE)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
 	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
 	$(eval DEP_DIR=$(DEP_DIR_BASE))
 	$(SILENT)$(COMPILE) $< -o $@
 	$(SILENT)$(POSTCOMPILE)
 
-$(OBJ_DIR_BONUS)/%.o: $(SRC_DIR_BONUS)/%.c message $(DEP_DIR_BONUS)/%.d | $(DEP_DIR_BONUS)
+$(OBJ_DIR_BONUS)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BONUS)/%.d | $(DEP_DIR_BONUS)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
 	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
 	$(eval DEP_DIR=$(DEP_DIR_BONUS))
@@ -454,4 +450,3 @@ help:
 	@echo "  make bonus MODE=leak - Compiles the bonus version with leak sanitation."
 	@echo ""
 	@echo "For more detailed information, read the comments within the Makefile itself."
-	
