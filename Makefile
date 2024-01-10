@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/10 18:18:54 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/10 19:50:21 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -198,6 +198,7 @@ SRC_COMMON :=	bit_field.c \
 				render_draw.c \
 				render_init_mlx.c \
 				render_keyhook_camera.c \
+				render_keyhook_colour.c \
 				render_keyhook_hittable.c \
 				render_keyhook_light.c \
 				render_keyhook_options.c \

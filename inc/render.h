@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/09 16:47:06 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/10 19:49:52 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -311,6 +311,16 @@ void	ft_keyhook_mv_point(int key, t_vec3 *point, float inc);
 void	ft_keyhook_rot_vec(int key, t_vec3 *vector, float inc);
 
 /**
+ * @brief Get the current increment value
+ *
+ * @param is_high	If true doubles value.
+ * @return float	Increment value.
+ */
+float	ft_get_increment(bool is_high);
+
+//render_keyhook_colour.c
+
+/**
  * @brief Changes the colour with a keypress.
  *
  * Number keys have predefined colors associated.
@@ -321,12 +331,33 @@ void	ft_keyhook_rot_vec(int key, t_vec3 *vector, float inc);
 void	ft_keyhook_change_col(int key, t_colour *col, float inc);
 
 /**
- * @brief Get the current increment value
+ * @brief Returns a colour based on the given colour name.
  *
- * @param is_high	If true doubles value.
- * @return float	Increment value.
+ * @param col_name	Colour name.
+ * @return t_colour	Colour.
  */
-float	ft_get_increment(bool is_high);
+t_colour	ft_get_colour(t_col_name col_name);
+
+/**
+ * @brief Interpolates between two colours.
+ *
+ * Uses ft_get_colour() to get seven colours of rainbow.
+ * @param result	Pointer to the resulting colour.
+ * @param progress	A float between 0 and 1, indicating the position
+ * 					in the color transition.
+ */
+void		ft_interpolate_colour(t_colour *result, float progress);
+
+/**
+ * @brief Interpolates between two colours while keeping track of progress.
+ *
+ * The progress of interpolation is stored in a static variable.
+ * If it reaches 1.0, it is reset to 0.0, and vice versa.
+ * Calls ft_interpolate_colour() to do the actual interpolation.
+ * @param result	Pointer to the resulting colour.
+ * @param inc		Interpolation increment.
+ */
+void		ft_static_interpolate(t_colour *result, float inc);
 
 // render_keyhook_camera.c
 

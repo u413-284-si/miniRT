@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/10 18:16:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/10 19:48:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,34 +88,5 @@ int32_t		ft_convert_colour2int(t_colour colour);
  * @return t_colour	Converted t_colour.
  */
 t_colour	ft_convert_int2colour(int colour);
-
-/**
- * @brief Returns a colour based on the given colour name.
- *
- * @param col_name	Colour name.
- * @return t_colour	Colour.
- */
-t_colour	ft_get_colour(t_col_name col_name);
-
-/**
- * @brief Interpolates between two colours.
- *
- * Uses ft_get_colour() to get seven colours of rainbow.
- * @param result	Pointer to the resulting colour.
- * @param progress	A float between 0 and 1, indicating the position
- * 					in the color transition.
- */
-void		ft_interpolate_colour(t_colour *result, float progress);
-
-/**
- * @brief Interpolates between two colours while keeping track of progress.
- *
- * The progress of interpolation is stored in a static variable.
- * If it reaches 1.0, it is reset to 0.0, and vice versa.
- * Calls ft_interpolate_colour() to do the actual interpolation.
- * @param result	Pointer to the resulting colour.
- * @param inc		Interpolation increment.
- */
-void		ft_static_interpolate(t_colour *result, float inc);
 
 #endif
