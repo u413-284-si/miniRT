@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:25:28 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 13:38:45 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/09 17:57:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_perror_count(t_type type, int max, int count, bool high)
 	[SPHERE] = "sphere (sp)",
 	[PLANE] = "plane (pl)",
 	[CYLINDER] = "cylinder (cy)",
+	[CONE] = "cone (co)",
 	[AMBIENT] = "ambient light (A)",
 	[CAMERA] = "camera (C)",
 	[LIGHT] = "light (L)"

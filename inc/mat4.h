@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 12:59:14 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/29 19:11:30 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/09 17:42:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "utils_bonus.h"
+# include "utils.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -83,23 +83,5 @@ t_mat4	ft_mat4_create_rotate_y(float pitch);
  * @return t_mat4	4x4 rotation matrix.
  */
 t_mat4	ft_mat4_create_rotate_z(float yaw);
-
-/**
- * @brief 
- * 
- * @param matrix 
- * @param i 
- * @param j 
- * @param factor 
- */
-void	ft_row_operation(t_mat4 *matrix, int i, int j, float factor);
-
-/**
- * @brief 
- * 
- * @param matrix 
- * @param inverse 
- */
-void	ft_invert_matrix(t_mat4 matrix, t_mat4 *inverse);
 
 #endif

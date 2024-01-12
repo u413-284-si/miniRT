@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 11:49:58 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/09 17:42:55 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 # include <X11/X.h>
 # include <X11/keysym.h>
 
-# include "error_mlx_bonus.h"
+# include "error_mlx.h"
 # include "camera_bonus.h"
 # include "ft_print.h"
-# include "cleanup_bonus.h"
+# include "cleanup.h"
 # include "entities_bonus.h"
 # include "miniRT_config_bonus.h"
 

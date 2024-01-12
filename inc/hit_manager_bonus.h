@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/09 11:35:29 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 15:38:22 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,8 @@ bool	ft_hit_sphere(t_sphere sp, t_hitrecord *rec, t_interval ray_d);
  * into 2D texture UV-coordinates in the range {0, 1}.
  * 
  * @param rec 	Hit record of ray containing most recent hit
- * @param sp	Sphere struct containing its parameters
  */
-void	ft_get_sp_uvcoords(t_hitrecord *rec, t_sphere sp);
+void	ft_get_sp_uvcoords(t_hitrecord *rec);
 
 /**
  * @brief Calculates if a plane was hit by a ray

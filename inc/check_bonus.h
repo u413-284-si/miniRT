@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 00:32:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 15:36:59 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "error_type_bonus.h"
-# include "error_msg_bonus.h"
+# include "error_type.h"
+# include "error_msg.h"
 # include "ft_char.h"
 # include "ft_strtod.h"
 # include "entities_bonus.h"
@@ -161,7 +161,7 @@ bool		ft_isvalid_rgb_block(char **line);
  * @param line Pointer to current line.
  * @return t_type AMBIENT on success, UNKNOWN if fail.
  */
-t_type	ft_check_ambient(char *line);
+t_type		ft_check_ambient(char *line);
 
 /**
  * @brief Checks if camera line is correct.
@@ -174,7 +174,7 @@ t_type	ft_check_ambient(char *line);
  * @param line Pointer to current line.
  * @return t_type CAMERA on success, UNKNOWN if fail.
  */
-t_type	ft_check_camera(char *line);
+t_type		ft_check_camera(char *line);
 
 /**
  * @brief Checks if light line is correct.
@@ -187,7 +187,7 @@ t_type	ft_check_camera(char *line);
  * @param line Pointer to current line.
  * @return t_type LIGHT on success, UNKNOWN if fail.
  */
-t_type	ft_check_light(char *line);
+t_type		ft_check_light(char *line);
 
 // check_entity2.c
 
@@ -198,11 +198,14 @@ t_type	ft_check_light(char *line);
  * Check if following is true:
  * - x,y,z coordinates of the sphere center.
  * - the sphere diameter.
+ * - the shininess value.
+ * - the reflectivity value.
+ * - whether it is checkered.
  * - R,G,B colors in range [0-255].
  * @param line Pointer to current line.
  * @return t_type SPHERE on success, UNKNOWN if fail.
  */
-t_type	ft_check_sphere(char *line);
+t_type		ft_check_sphere(char *line);
 
 /**
  * @brief Checks if plane line is correct.
@@ -211,11 +214,14 @@ t_type	ft_check_sphere(char *line);
  * Check if following is true:
  * - x,y,z coordinates of a point in the plane.
  * - 3d normalized normal vector. In range [-1,1] for each x,y,z axis.
+ * - the shininess value.
+ * - the reflectivity value.
+ * - whether it is checkered.
  * - R,G,B colors in range [0-255].
  * @param line Pointer to current line.
  * @return t_type PLANE on success, UNKNOWN if fail.
  */
-t_type	ft_check_plane(char *line);
+t_type		ft_check_plane(char *line);
 
 /**
  * @brief Checks if cylinder line is correct.
@@ -226,18 +232,31 @@ t_type	ft_check_plane(char *line);
  * - 3d normalized axis vector of cylinder. In range [-1,1] for each x,y,z axis.
  * - the cylinder diameter.
  * - the cylinder height.
+ * - the shininess value.
+ * - the reflectivity value.
+ * - whether it is checkered.
  * - R,G,B colors in range [0,255].
  * @param line Pointer to current line.
  * @return t_type CYLINDER on success, UNKNOWN if fail.
  */
-t_type	ft_check_cylinder(char *line);
+t_type		ft_check_cylinder(char *line);
 
 /**
- * @brief 
- * 
+ * @brief Checks if cone line is correct.
+ *
+ * Function gets called if line has identifier "co".
+ * Check if following is true:
+ * - x,y,z coordinates of the apex of the cone.
+ * - 3d normalized axis vector of cone. In range [-1,1] for each x,y,z axis.
+ * - the cone radius.
+ * - the cone height.
+ * - the shininess value.
+ * - the reflectivity value.
+ * - whether it is checkered.
+ * - R,G,B colors in range [0,255].
  * @param line 
  * @return t_type 
  */
-t_type	ft_check_cone(char *line);
+t_type		ft_check_cone(char *line);
 
 #endif

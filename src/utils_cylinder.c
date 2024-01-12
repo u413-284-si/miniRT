@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/09 11:32:22 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/10 00:45:26 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 t_vec3	ft_cy_normal(t_hitrecord rec, t_cylinder cy)
 {
-	t_vec3	hit;
 	t_vec3	normal;
 
-	hit = ft_ray(rec.ray, rec.d);
 	if (ft_vec3_equal(rec.axis_hit, cy.cap1))
 		normal = ft_vec3_scale(cy.axis, -1);
 	else if (ft_vec3_equal(rec.axis_hit, cy.cap2))
 		normal = cy.axis;
 	else
-		normal = ft_vec3_sub(hit, rec.axis_hit);
+		normal = ft_vec3_sub(rec.point, rec.axis_hit);
 	return (normal);
 }
 

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/30 00:24:54 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/09 17:34:25 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "error_syscall_bonus.h"
-# include "cleanup_bonus.h"
+# include "error_syscall.h"
+# include "cleanup.h"
 # include "ft_strtod.h"
 # include "entities_bonus.h"
 # include "camera_bonus.h"

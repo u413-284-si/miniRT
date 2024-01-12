@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 15:32:39 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 13:58:57 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "ray.h"
 # include "utils.h"
 # include "miniRT_config.h"
-# include "structs.h"
+# include "structs_bonus.h"
 
 /* ====== TYPEDEFS ====== */
 

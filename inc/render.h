@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/22 00:54:57 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/12 15:29:29 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 # include "camera.h"
 # include "ft_print.h"
 # include "cleanup.h"
-# include "entities.h"
 # include "miniRT_config.h"
 
 /* ====== TYPEDEFS ====== */

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 20:36:33 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 13:59:23 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdint.h>
 
 //home-grown libs
-# include "structs.h"
+# include "structs_bonus.h"
 # include "utils.h"
 
 /* ====== TYPEDEFS ====== */

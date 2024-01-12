@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 20:37:08 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 14:02:10 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdbool.h>
 
 //home-grown libs
-# include "structs.h"
+# include "structs_bonus.h"
 
 /* ====== MACROS ====== */
 

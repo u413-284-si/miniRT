@@ -6,12 +6,12 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:48:18 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/08 16:36:13 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/10 00:46:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils_bonus.h"
-#include "vec3_bonus.h"
+#include "vec3.h"
 
 float	ft_degree_to_radian(float degrees)
 {

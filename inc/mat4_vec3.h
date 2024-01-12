@@ -6,16 +6,18 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 13:00:57 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/28 13:02:06 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/09 17:41:24 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MAT4_VEC3_H
 # define MAT4_VEC3_H
 /* ====== LIBRARIES ====== */
+
 // Home-grown libs
-# include "vec3_bonus.h"
+# include "vec3.h"
 # include "mat4.h"
+
 /* ====== FUNCTIONS ====== */
 
 // mat4_vec3_rotate.c
