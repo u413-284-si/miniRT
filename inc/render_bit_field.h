@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bit_field.h                                        :+:      :+:    :+:   */
+/*   render_bit_field.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:06:03 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 13:40:57 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/12 19:13:05 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BIT_FIELD_H
-# define BIT_FIELD_H
+#ifndef RENDER_BIT_FIELD_H
+# define RENDER_BIT_FIELD_H
 
 /* ====== LIBRARIES ====== */
 
 # include <stdint.h>
 # include <stdbool.h>
+
+# ifdef IS_BONUS
+#  include "render_options_bonus.h"
+# else
+#  include "render_options.h"
+# endif
 
 /* ====== FUNCTIONS ====== */
 
@@ -28,7 +34,7 @@
  * @return true		Bit is set
  * @return false	Bit is not set
  */
-bool	ft_bit_is_set(uint8_t bit_field, uint8_t bit);
+bool	ft_option_isset(uint32_t bit_field, t_options option);
 
 /**
  * @brief Sets bit in bit field
@@ -36,7 +42,7 @@ bool	ft_bit_is_set(uint8_t bit_field, uint8_t bit);
  * @param bit_field	Bit field where bit to set
  * @param bit		Bit to set
  */
-void	ft_bit_set(uint8_t *bit_field, uint8_t bit);
+void	ft_option_set(uint32_t *bit_field, t_options option);
 
 /**
  * @brief Clears bit in bit field
@@ -44,7 +50,7 @@ void	ft_bit_set(uint8_t *bit_field, uint8_t bit);
  * @param bit_field	Bit field where bit to clear
  * @param bit		Bit to clear
  */
-void	ft_bit_clear(uint8_t *bit_field, uint8_t bit);
+void	ft_option_clear(uint32_t *bit_field, t_options option);
 
 /**
  * @brief Toggles bit in bit field
@@ -52,6 +58,6 @@ void	ft_bit_clear(uint8_t *bit_field, uint8_t bit);
  * @param bit_field	Bit field where bit to toggle
  * @param bit		Bit to toggle
  */
-void	ft_bit_toggle(uint8_t *bit_field, uint8_t bit);
+void	ft_option_toggle(uint32_t *bit_field, t_options option);
 
 #endif
