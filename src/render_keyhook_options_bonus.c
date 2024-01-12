@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:15:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 19:15:11 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/12 19:05:03 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,6 @@ void	ft_change_options(int key, t_render *render)
 		ft_change_mode(&render->options);
 	else if (key == XK_Shift_L)
 		ft_option_toggle(&render->options, O_SHOW_CTRL);
+	else if (key == XK_o)
+		ft_option_toggle(&render->options, O_SHOW_FPS);
 }

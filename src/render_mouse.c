@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 08:30:26 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/10 19:46:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/12 19:04:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,5 @@ void	ft_mouse_hook_rot_cam(int x, int y, t_render *render)
 	render->mouse.last_pos.y = y;
 	ft_cam_calc_base_vectors(&render->cam);
 	ft_cam_calc_pixel_grid(&render->cam);
-	ft_bit_set(&render->options, O_SCENE_CHANGED);
+	ft_option_set(&render->options, O_SCENE_CHANGED);
 }

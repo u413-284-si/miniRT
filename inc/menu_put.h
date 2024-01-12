@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/09 16:20:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/12 19:31:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,11 @@
 # include "miniRT_config.h"
 # include "render.h"
 # include "vec2.h"
-# include "render_options.h"
+# ifdef IS_BONUS
+#  include "render_options_bonus.h"
+# else
+#  include "render_options.h"
+# endif
 
 /* ====== MACROS ====== */
 
@@ -231,17 +235,7 @@ void	ft_put_light(t_putinfo put, t_light light);
  * @param options	Bit field with info about current control mode.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_mode(t_putinfo put, uint8_t options);
-
-/**
- * @brief Puts generic info on the screen.
- *
- * Switch mode, show controls, close menu, print scene, exit.
- * Generic info is always at the bottom of the menu.
- * @param put
- * @return t_vec2i
- */
-t_vec2i	ft_put_info(t_putinfo put, bool show_ctrl);
+t_vec2i	ft_put_mode(t_putinfo put, uint32_t options);
 
 /**
  * @brief Puts the ID of a hittable or a light on the screen.
@@ -383,7 +377,7 @@ void	ft_put_main_page(t_putinfo put, t_render *render);
  * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_scene(t_putinfo put, t_hittable active, uint8_t options);
+void	ft_put_page_scene(t_putinfo put, t_hittable active, uint32_t options);
 
 /**
  * @brief Puts an ambient page on the screen.
@@ -393,7 +387,7 @@ void	ft_put_page_scene(t_putinfo put, t_hittable active, uint8_t options);
  * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_ambient(t_putinfo put, t_light ambient, uint8_t options);
+void	ft_put_page_ambient(t_putinfo put, t_light ambient, uint32_t options);
 
 /**
  * @brief Puts a light page on the screen.
@@ -403,7 +397,7 @@ void	ft_put_page_ambient(t_putinfo put, t_light ambient, uint8_t options);
  * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_light(t_putinfo put, t_light light, uint8_t options);
+void	ft_put_page_light(t_putinfo put, t_light light, uint32_t options);
 
 /**
  * @brief Puts a camera page on the screen.
@@ -413,6 +407,6 @@ void	ft_put_page_light(t_putinfo put, t_light light, uint8_t options);
  * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_cam(t_putinfo put, t_cam cam, uint8_t options);
+void	ft_put_page_cam(t_putinfo put, t_cam cam, uint32_t options);
 
 #endif

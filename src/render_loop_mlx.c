@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 14:15:26 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/12 19:04:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	ft_render_start_loop(t_render *render)
 		mlx_loop_end, render->mlx_ptrs.mlx_ptr);
 	mlx_loop_hook(render->mlx_ptrs.mlx_ptr, ft_draw_scene, render);
 	mlx_set_font(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr, REGULAR);
-	ft_bit_set(&render->options, O_MODE_SCENE);
-	ft_bit_set(&render->options, O_SCENE_CHANGED);
+	ft_option_set(&render->options, O_MODE_SCENE);
+	ft_option_set(&render->options, O_SCENE_CHANGED);
 	mlx_loop(render->mlx_ptrs.mlx_ptr);
 	ft_free_mlx(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr,
 		render->mlx_ptrs.img.ptr, render->mlx_ptrs.veil.ptr);

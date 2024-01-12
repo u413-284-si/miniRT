@@ -6,22 +6,22 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:54:31 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/09 16:23:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/12 19:27:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
 
-t_vec2i	ft_put_mode(t_putinfo put, uint8_t options)
+t_vec2i	ft_put_mode(t_putinfo put, uint32_t options)
 {
 	mlx_set_font(put.mlx_ptrs.mlx_ptr, put.mlx_ptrs.win_ptr, BOLD);
 	ft_put_str(put, "Mode:");
 	put.pos.x += 50;
-	if (ft_bit_is_set(options, O_MODE_SCENE))
+	if (ft_option_isset(options, O_MODE_SCENE))
 		ft_put_str(put, "Scene");
-	else if (ft_bit_is_set(options, O_MODE_LIGHT))
+	else if (ft_option_isset(options, O_MODE_LIGHT))
 		ft_put_str(put, "Light");
-	else if (ft_bit_is_set(options, O_MODE_CAM))
+	else if (ft_option_isset(options, O_MODE_CAM))
 		ft_put_str(put, "Camera");
 	mlx_set_font(put.mlx_ptrs.mlx_ptr, put.mlx_ptrs.win_ptr, REGULAR);
 	put.pos.x -= 50;
@@ -57,34 +57,5 @@ t_vec2i	ft_put_id(t_putinfo put, int id)
 	mlx_set_font(put.mlx_ptrs.mlx_ptr, put.mlx_ptrs.win_ptr, REGULAR);
 	put.pos.x -= 50;
 	put.pos.y += Y_NEXT_LINE;
-	return (put.pos);
-}
-
-t_vec2i	ft_put_info(t_putinfo put, bool show_ctrl)
-{
-	if (show_ctrl == true)
-		put.pos = (t_vec2i){X_MENU_OFFSET, Y_MENU_INFO_POS};
-	else
-		put.pos = (t_vec2i){X_MENU_OFFSET, 550};
-	put.pos.x -= 15;
-	ft_put_str(put, "-------General----------");
-	put.pos.x += 15;
-	put.pos.y += Y_NEXT_LINE;
-	if (show_ctrl == true)
-	{
-		ft_put_str(put, "Ctrl:  Switch mode");
-		put.pos.y += Y_NEXT_LINE;
-		ft_put_str(put, "I:     Toggle menu");
-		put.pos.y += Y_NEXT_LINE;
-		ft_put_str(put, "O:     Toggle FPS");
-		put.pos.y += Y_NEXT_LINE;
-		ft_put_str(put, "P:     Print scene");
-		put.pos.y += Y_NEXT_LINE;
-		ft_put_str(put, "Shift: Show info");
-	}
-	else
-		ft_put_str(put, "Shift: Show controls");
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, "ESC:   Exit");
 	return (put.pos);
 }

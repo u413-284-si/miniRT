@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/10 19:50:21 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/12 19:17:26 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -154,8 +154,7 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC_COMMON :=	bit_field.c \
-				camera_movement.c \
+SRC_COMMON :=	camera_movement.c \
 				camera.c \
 				check_entity_ACL.c \
 				check_entity_sp_pl_cy.c \
@@ -195,13 +194,13 @@ SRC_COMMON :=	bit_field.c \
 				print_entity.c \
 				print_struct.c \
 				ray.c \
+				render_bit_field.c \
 				render_draw.c \
 				render_init_mlx.c \
 				render_keyhook_camera.c \
 				render_keyhook_colour.c \
 				render_keyhook_hittable.c \
 				render_keyhook_light.c \
-				render_keyhook_options.c \
 				render_keyhook_press.c \
 				render_keyhook_release.c \
 				render_keyhook_scene.c \
@@ -220,34 +219,38 @@ SRC_COMMON :=	bit_field.c \
 
 SRC_BASE := 	render_compose_image.c \
 				menu_put_text.c \
+				render_keyhook_options.c
 
 SRC_BONUS :=	render_compose_image_bonus.c \
 				time_bonus.c \
 				menu_put_text_bonus.c \
-				menu_put_time_bonus.c
+				menu_put_time_bonus.c \
+				render_keyhook_options_bonus.c
 
 
 # ******************************
 # *     Object files           *
 # ******************************
 
-OBJ_COMMON = $(addprefix $(OBJ_DIR_COMMON)/, $(SRC_COMMON:.c=.o))
-OBJ_BASE = $(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o))
-OBJ_BONUS = $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_BONUS:.c=.o))
+OBJ_BASE = 	$(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o) ) \
+			$(addprefix $(OBJ_DIR_BASE)/, $(SRC_COMMON:.c=.o))
+OBJ_BONUS = $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_BONUS:.c=.o)) \
+			$(addprefix $(OBJ_DIR_BONUS)/, $(SRC_COMMON:.c=.o))
 
 # Depending on whether 'bonus' is a make target, include base or bonus objects
 ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
-	OBJS = $(OBJ_COMMON) $(OBJ_BONUS)
+	OBJS = $(OBJ_BONUS)
 else
-	OBJS = $(OBJ_COMMON) $(OBJ_BASE)
+	OBJS = $(OBJ_BASE)
 endif
 
 # ******************************
 # *     Dependency files       *
 # ******************************
 
-DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR_COMMON)/%.d) \
+DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR_BASE)/%.d) \
 			$(SRC_BASE:%.c=$(DEP_DIR_BASE)/%.d) \
+			$(SRC_COMMON:%.c=$(DEP_DIR_BONUS)/%.d) \
 			$(SRC_BONUS:%.c=$(DEP_DIR_BONUS)/%.d)
 
 # ******************************
@@ -283,6 +286,7 @@ $(NAME): $(LIBFT) $(OBJS)
 
 # This target compiles with bonus objects.
 .PHONY: bonus
+bonus: CFLAGS += -D IS_BONUS
 bonus: $(NAME)
 
 # This target uses perf for profiling.

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/10 19:49:52 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/12 19:06:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 # include "ray.h"
 # include "vec2.h"
 # include "render_menu.h"
-# include "render_options.h"
+# include "render_bit_field.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -103,7 +103,7 @@ typedef struct s_render
 	t_entities	scene;
 	t_mouse		mouse;
 	t_menu		menu;
-	uint8_t		options;
+	uint32_t	options;
 	bool		is_printing;
 	int			active_hittable;
 	int			active_light;

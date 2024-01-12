@@ -6,11 +6,44 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/09 16:21:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/12 19:30:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
+
+static t_vec2i	ft_put_header(t_putinfo put, uint32_t options)
+{
+	put.pos = ft_put_mode(put, options);
+	return (put.pos);
+}
+
+static t_vec2i	ft_put_footer(t_putinfo put, bool show_ctrl)
+{
+	if (show_ctrl == true)
+		put.pos = (t_vec2i){X_MENU_OFFSET, Y_MENU_INFO_POS};
+	else
+		put.pos = (t_vec2i){X_MENU_OFFSET, 550};
+	put.pos.x -= 15;
+	ft_put_str(put, "-------General----------");
+	put.pos.x += 15;
+	put.pos.y += Y_NEXT_LINE;
+	if (show_ctrl == true)
+	{
+		ft_put_str(put, "Ctrl:  Switch mode");
+		put.pos.y += Y_NEXT_LINE;
+		ft_put_str(put, "I:     Toggle menu");
+		put.pos.y += Y_NEXT_LINE;
+		ft_put_str(put, "P:     Print scene");
+		put.pos.y += Y_NEXT_LINE;
+		ft_put_str(put, "Shift: Show info");
+	}
+	else
+		ft_put_str(put, "Shift: Show controls");
+	put.pos.y += Y_NEXT_LINE;
+	ft_put_str(put, "ESC:   Exit");
+	return (put.pos);
+}
 
 void	ft_menu_put_text(t_render *render)
 {
@@ -19,11 +52,11 @@ void	ft_menu_put_text(t_render *render)
 	put.mlx_ptrs = render->mlx_ptrs;
 	put.pos = (t_vec2i){X_MENU_OFFSET, Y_MENU_TOP};
 	put.col = render->menu.font_col;
-	if (!ft_bit_is_set(render->options, O_SHOW_MENU))
+	if (!ft_option_isset(render->options, O_SHOW_MENU))
 		return (ft_put_str(put, "Press I to show menu"));
 	mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
 		render->mlx_ptrs.win_ptr, render->mlx_ptrs.veil.ptr, 0, 0);
-	put.pos = ft_put_mode(put, render->options);
+	put.pos = ft_put_header(put, render->options);
 	ft_put_main_page(put, render);
-	ft_put_info(put, ft_bit_is_set(render->options, O_SHOW_CTRL));
+	ft_put_footer(put, ft_option_isset(render->options, O_SHOW_CTRL));
 }
