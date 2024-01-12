@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/12 15:29:15 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 20:37:01 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,19 @@
 # endif
 
 /* ====== TYPEDEFS ====== */
+
+/**
+ * @brief Represents a ray
+ * @param origin	point of ray origin
+ * @param direction	vector of ray direction
+ * @param d			distance into ray direction
+ */
+typedef struct s_ray
+{
+	t_vec3	origin;
+	t_vec3	direction;
+	float	d;
+}	t_ray;
 
 /* ====== FUNCTIONS ====== */
 
@@ -52,12 +65,5 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene);
  * @return t_colour
  */
 t_colour	ft_background_colour(t_ray ray);
-
-/**
- * @brief Initiates hitrecord struct
- * 
- * @param rec 		Hitrecord to be initiated
- */
-void		ft_init_hitrecord(t_hitrecord *rec);
 
 #endif

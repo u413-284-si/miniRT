@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 14:08:39 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 20:38:13 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,6 @@
 t_vec3	ft_ray(t_ray ray, float d)
 {
 	return (ft_vec3_add(ray.origin, ft_vec3_scale(ray.direction, d)));
-}
-
-void	ft_init_hitrecord(t_hitrecord *rec)
-{
-	rec->axis_hit = (t_vec3){.x = 0, .y = 0, .z = 0};
-	rec->colour = (t_colour){.b = 0, .g = 0, .r = 0};
-	rec->d = INFINITY;
-	rec->normal = (t_vec3){.x = 0, .y = 0, .z = 0};
-	rec->point = (t_vec3){.x = 0, .y = 0, .z = 0};
-	rec->ray = (t_ray){.origin = {0}, .direction = {0}, .d = 0};
 }
 
 t_colour	ft_ray_colour(t_ray ray, t_entities scene)

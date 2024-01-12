@@ -6,11 +6,27 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:32:23 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/30 00:39:38 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 20:38:58 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hit_manager_bonus.h"
+
+void	ft_init_hitrecord(t_hitrecord *rec)
+{
+	rec->axis_hit = (t_vec3){.x = 0, .y = 0, .z = 0};
+	rec->colour = (t_colour){.b = 0, .g = 0, .r = 0};
+	rec->d = INFINITY;
+	rec->normal = (t_vec3){.x = 0, .y = 0, .z = 0};
+	rec->point = (t_vec3){.x = 0, .y = 0, .z = 0};
+	rec->ray = (t_ray){.origin = {0}, .direction = {0}, .d = 0};
+	rec->shininess = 0.0;
+	rec->reflectivity = 0.0;
+	rec->checkered = false;
+	rec->u = 0.0;
+	rec->v = 0.0;
+	rec->wall_hit = false;
+}
 
 bool	ft_hit_hittable(t_hittable obj, t_hitrecord *rec, t_interval ray_d)
 {

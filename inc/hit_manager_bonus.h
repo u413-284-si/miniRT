@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/12 15:38:22 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 20:37:24 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,51 @@
 
 /* ====== TYPEDEFS ====== */
 
+/**
+ * @brief Shows point of intersection
+ * 
+ * @param ray				Intersecting ray
+ * @param point				Point of intersection
+ * @param normal			Normal vector at point of intersection
+ * @param axis_hit			Point of intersection with a cylinders axis
+ * @param d					Distance into ray direction when point is hit
+ * @param colour			Colour of object at intersection
+ * @param shininess			Material property of point of intersection
+ * 							on the breadth of the angle of specular reflection 
+ * 							(the higher, the smoother the surface appears)
+ * @param reflectivity		Material property of point of intersection
+ * 							on share of reflected light 
+ * @param reflection_count	Amount of reflections performed
+ * @param checkered			Indicates whether the hittable has a checkered texture
+ * @param u					U-coordinate of hittable at intersection point
+ * @param v					V-coordinate of hittable at intersection point
+ * @param wall_hit			Bool to differentiate between a wall or cap hit with cylinders/cones
+ */
+typedef struct s_hitrecord
+{
+	t_ray		ray;
+	t_vec3		point;
+	t_vec3		normal;
+	t_vec3		axis_hit;
+	float		d;
+	t_colour	colour;
+	float		shininess;
+	float		reflectivity;
+	int			reflection_count;
+	bool		checkered;
+	float		u;
+	float		v;
+	bool		wall_hit;
+}	t_hitrecord;
+
 /* ====== FUNCTIONS ====== */
+
+/**
+ * @brief Initiates hitrecord struct
+ * 
+ * @param rec 		Hitrecord to be initiated
+ */
+void		ft_init_hitrecord(t_hitrecord *rec);
 
 /**
  * @brief Investigate a hittable and returns whether a hit

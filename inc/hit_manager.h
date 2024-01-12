@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/09 11:33:29 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 20:37:10 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,34 @@
 
 /* ====== TYPEDEFS ====== */
 
+/**
+ * @brief Shows point of intersection
+ * 
+ * @param ray		Intersecting ray
+ * @param point		Point of intersection
+ * @param normal	Normal vector at point of intersection
+ * @param axis_hit	Point of intersection with a cylinders axis
+ * @param d			Distance into ray direction when point is hit
+ * @param colour	Colour of object at intersection
+ */
+typedef struct s_hitrecord
+{
+	t_ray		ray;
+	t_vec3		point;
+	t_vec3		normal;
+	t_vec3		axis_hit;
+	float		d;
+	t_colour	colour;
+}	t_hitrecord;
+
 /* ====== FUNCTIONS ====== */
+
+/**
+ * @brief Initiates hitrecord struct
+ * 
+ * @param rec 		Hitrecord to be initiated
+ */
+void		ft_init_hitrecord(t_hitrecord *rec);
 
 /**
  * @brief Investigate a hittable and returns whether a hit
