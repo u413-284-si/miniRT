@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:45:53 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/12 20:10:30 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 20:27:12 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,23 @@
 # include <stdbool.h>
 
 //home-grown libs
-# include "structs_bonus.h"
 
 /* ====== MACROS ====== */
 
 /* ====== TYPEDEFS ====== */
+
+/**
+ * @brief Represents a tridimensional vector
+ * @param x	The x coordinate
+ * @param y	The y coordinate
+ * @param z	The z coordinate
+ */
+typedef struct s_vec3
+{
+	float	x;
+	float	y;
+	float	z;
+}	t_vec3;
 
 /* ====== FUNCTIONS ====== */
 

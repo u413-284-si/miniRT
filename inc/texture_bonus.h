@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 01:07:37 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/06 15:59:43 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 20:34:40 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <math.h>
 
 // Home-grown libs
-# include "structs_bonus.h"
+# include "hit_manager_bonus.h"
 
 /* ====== FUNCTIONS ====== */
 

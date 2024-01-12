@@ -6,11 +6,11 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/26 17:32:58 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 20:42:58 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "camera_bonus.h"
+#include "ray_bonus.h"
 
 void	ft_initiate_camera(t_cam *cam)
 {

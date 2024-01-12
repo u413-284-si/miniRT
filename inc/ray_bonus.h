@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/12 20:37:41 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 20:41:32 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 /* ====== LIBRARIES ====== */
 
 # include "entities_bonus.h"
+# include "camera_bonus.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -62,5 +63,18 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam);
  * @return t_colour 
  */
 t_colour	ft_background_colour(t_ray ray);
+
+/**
+ * @brief Creates a random sample ray in a square surrounding the current pixel
+ * 
+ * Square size is the distance to the next pixel. Therefore it extends halfway
+ * to each neighbouring pixel.
+ * @param i 		Current pixel position within a row
+ * @param j 		Current pixel position within a column
+ * @param vp 		Viewport
+ * @param cam 		Camera
+ * @return t_ray 
+ */
+t_ray		ft_create_sample_ray(int i, int j, t_viewport vp, t_cam cam);
 
 #endif

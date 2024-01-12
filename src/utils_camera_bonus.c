@@ -6,11 +6,11 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 21:41:38 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 11:29:42 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/12 20:45:30 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "camera_bonus.h"
+#include "ray_bonus.h"
 
 t_ray	ft_create_sample_ray(int i, int j, t_viewport vp, t_cam cam)
 {
