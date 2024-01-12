@@ -12,6 +12,7 @@
 		"camera.h": "c",
 		"structs.h": "c",
 		"minirt_config.h": "c",
-		"structs_bonus.h": "c"
+		"structs_bonus.h": "c",
+		"colour_bonus.h": "c"
 	}
 }
