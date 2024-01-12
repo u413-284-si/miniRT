@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/12 15:45:51 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/12 20:19:37 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -228,22 +228,25 @@ SRC_BONUS :=	camera_bonus.c \
 # ******************************
 
 OBJ_COMMON = $(addprefix $(OBJ_DIR_COMMON)/, $(SRC_COMMON:.c=.o))
-OBJ_BASE = $(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o))
-OBJ_BONUS = $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_BONUS:.c=.o))
+OBJ_BASE = $(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o)) \
+           $(addprefix $(OBJ_DIR_BASE)/, $(SRC_COMMON:.c=.o))
+OBJ_BONUS = $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_BONUS:.c=.o)) \
+            $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_COMMON:.c=.o))
 
 # Depending on whether 'bonus' is a make target, include base or bonus objects
 ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
-	OBJS = $(OBJ_COMMON) $(OBJ_BONUS)
+	OBJS = $(OBJ_BONUS)
 else
-	OBJS = $(OBJ_COMMON) $(OBJ_BASE)
+	OBJS = $(OBJ_BASE)
 endif
 
 # ******************************
 # *     Dependency files       *
 # ******************************
 
-DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR_COMMON)/%.d) \
+DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR_BASE)/%.d) \
 			$(SRC_BASE:%.c=$(DEP_DIR_BASE)/%.d) \
+		    $(SRC_COMMON:%.c=$(DEP_DIR_BONUS)/%.d) \
 			$(SRC_BONUS:%.c=$(DEP_DIR_BONUS)/%.d)
 
 # ******************************
