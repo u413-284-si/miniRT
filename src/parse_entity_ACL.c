@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:23:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 17:44:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 11:00:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_parse_ambient(char *line, t_light *ambient)
 {
+	ambient->id = 0;
 	ft_parse_float(&line, &ambient->ratio);
 	ft_parse_colour_block(&line, &ambient->colour);
 }
