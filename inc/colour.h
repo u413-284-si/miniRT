@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/10 19:48:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 08:45:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,6 @@
 
 # include <stdio.h>
 # include <stdint.h>
-# include <math.h>
-
-/* ====== MACROS ========*/
-
-# define NUM_COLOURS 9
-# define NUM_RAINBOW_COLOURS 7
 
 /* ====== TYPEDEFS ====== */
 
@@ -38,19 +32,6 @@ typedef struct s_colour
 	float	g;
 	float	b;
 }	t_colour;
-
-typedef enum e_col_name
-{
-	RED = 0,
-	ORANGE,
-	YELLOW,
-	GREEN,
-	BLUE,
-	INDIGO,
-	PURPLE,
-	WHITE,
-	BLACK
-}	t_col_name;
 
 /* ====== FUNCTIONS ====== */
 

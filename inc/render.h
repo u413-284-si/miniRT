@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 19:06:14 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 08:47:42 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <X11/Xlib.h>
 # include <X11/X.h>
 # include <X11/keysym.h>
+# include <math.h>
 
 # include "error_mlx.h"
 # include "camera.h"
@@ -32,6 +33,12 @@
 # include "vec2.h"
 # include "render_menu.h"
 # include "render_bit_field.h"
+
+
+/* ====== MACROS ========*/
+
+# define NUM_COLOURS 9
+# define NUM_RAINBOW_COLOURS 7
 
 /* ====== TYPEDEFS ====== */
 
@@ -109,6 +116,24 @@ typedef struct s_render
 	int			active_light;
 	uint64_t	last_render_time;
 }	t_render;
+
+/**
+ * @brief Enumeration of colour names.
+ *
+ * Used to get predefined colours.
+ */
+typedef enum e_col_name
+{
+	RED = 0,
+	ORANGE,
+	YELLOW,
+	GREEN,
+	BLUE,
+	INDIGO,
+	PURPLE,
+	WHITE,
+	BLACK
+}	t_col_name;
 
 /* ====== FUNCTIONS ====== */
 
