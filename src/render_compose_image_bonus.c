@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:22:40 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 08:58:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/12 19:04:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,9 @@ int	ft_draw_scene(t_render *render)
 			render->mlx_ptrs.win_ptr, render->mlx_ptrs.img.ptr, 0, 0);
 		ft_blend_background(&render->mlx_ptrs.img, &render->mlx_ptrs.veil,
 			render->menu);
-		ft_menu_put_text(render);
 		render->last_render_time = ft_get_time_ms() - starttime;
 		ft_option_clear(&render->options, O_SCENE_CHANGED);
 	}
-	else
-		ft_menu_put_text(render);
+	ft_menu_put_text(render);
 	return (0);
 }
