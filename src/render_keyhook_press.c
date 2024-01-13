@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 19:04:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 09:34:18 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static bool	ft_is_option_key(int key)
 {
 	return (key == XK_Escape || key == XK_Shift_L || key == XK_Control_L
-		|| key == XK_i || key == XK_o);
+		|| key == XK_i || key == XK_o || key == XK_u);
 }
 
 static bool	ft_is_manip_key(int key)
@@ -35,7 +35,7 @@ int	ft_keyhook_press(int key, t_render *render)
 		ft_change_options(key, render);
 	else if (ft_is_manip_key(key))
 	{
-		inc = ft_get_increment(ft_option_isset(render->options, O_MANIP_HIGH));
+		inc = ft_get_increment(render->options);
 		if (ft_option_isset(render->options, O_MODE_SCENE))
 			ft_manip_scene(key, &render->scene, &render->active_hittable, inc);
 		else if (ft_option_isset(render->options, O_MODE_LIGHT))

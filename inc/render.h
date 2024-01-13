@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 08:47:42 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 09:30:29 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -338,10 +338,10 @@ void	ft_keyhook_rot_vec(int key, t_vec3 *vector, float inc);
 /**
  * @brief Get the current increment value
  *
- * @param is_high	If true doubles value.
+ * @param options	Options bit field.
  * @return float	Increment value.
  */
-float	ft_get_increment(bool is_high);
+float	ft_get_increment(uint32_t options);
 
 //render_keyhook_colour.c
 

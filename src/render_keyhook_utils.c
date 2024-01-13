@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 21:19:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/10 19:47:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 09:49:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,12 @@ void	ft_keyhook_rot_vec(int key, t_vec3 *vector, float inc)
 		*vector = ft_vec3_rotate_y(*vector, -inc);
 }
 
-float	ft_get_increment(bool is_high)
+float	ft_get_increment(uint32_t options)
 {
-	if (is_high)
-		return (MV_UNIT * 2);
+	if (ft_option_isset(options, O_MANIP_HIGH))
+		return (INC_HIGH);
+	else if (ft_option_isset(options, O_MANIP_MID))
+		return (INC_MID);
 	else
-		return (MV_UNIT);
+		return (INC_LOW);
 }
