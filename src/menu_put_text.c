@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 08:32:35 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 09:47:59 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 static t_vec2i	ft_put_header(t_putinfo put, uint32_t options)
 {
 	put.pos = ft_put_mode(put, options);
+	if (!ft_option_isset(options, O_SHOW_CTRL))
+	{
+		put.pos = ft_put_inc(put, options);
+		put.pos.y += Y_HALF_LINE;
+	}
 	return (put.pos);
 }
 
@@ -30,6 +35,7 @@ static t_vec2i	ft_put_footer(t_putinfo put, bool show_ctrl, int img_height)
 	if (show_ctrl == true)
 	{
 		put.pos = ft_put_str_and_advance(put, "Ctrl:  Switch mode");
+		put.pos = ft_put_str_and_advance(put, "U:     Change inc");
 		put.pos = ft_put_str_and_advance(put, "I:     Toggle menu");
 		put.pos = ft_put_str_and_advance(put, "P:     Print scene");
 		put.pos = ft_put_str_and_advance(put, "Shift: Show info");

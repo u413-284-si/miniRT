@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:54:31 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 19:27:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 09:59:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,25 @@ t_vec2i	ft_put_id(t_putinfo put, int id)
 	ft_put_int(put, (t_numinfo){.numi = id, .pad = 3, .prec = 0});
 	mlx_set_font(put.mlx_ptrs.mlx_ptr, put.mlx_ptrs.win_ptr, REGULAR);
 	put.pos.x -= 50;
+	put.pos.y += Y_NEXT_LINE;
+	return (put.pos);
+}
+
+t_vec2i	ft_put_inc(t_putinfo put, uint32_t options)
+{
+	t_numinfo	num;
+
+	num = (t_numinfo){.numf = 0.0, .pad = 0, .prec = 2};
+	if (ft_option_isset(options, O_MANIP_LOW))
+		num.numf = INC_LOW;
+	else if (ft_option_isset(options, O_MANIP_MID))
+		num.numf = INC_MID;
+	else if (ft_option_isset(options, O_MANIP_HIGH))
+		num.numf = INC_HIGH;
+	ft_put_str(put, "Inc:");
+	put.pos.x += 40;
+	ft_put_float(put, num);
+	put.pos.x -= 40;
 	put.pos.y += Y_NEXT_LINE;
 	return (put.pos);
 }

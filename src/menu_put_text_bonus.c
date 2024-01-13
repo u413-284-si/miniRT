@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 08:33:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 09:46:59 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,13 @@ static t_vec2i	ft_put_header(t_putinfo put, uint32_t options,
 		uint64_t last_render_time)
 {
 	put.pos = ft_put_mode(put, options);
-	put.pos = ft_put_time(put, last_render_time,
+	if (!ft_option_isset(options, O_SHOW_CTRL))
+	{
+		put.pos = ft_put_inc(put, options);
+		put.pos = ft_put_time(put, last_render_time,
 			ft_option_isset(options, O_SHOW_FPS));
+		put.pos.y += Y_HALF_LINE;
+	}
 	return (put.pos);
 }
 
@@ -33,6 +38,7 @@ static t_vec2i	ft_put_footer(t_putinfo put, bool show_ctrl, int img_height)
 	if (show_ctrl == true)
 	{
 		put.pos = ft_put_str_and_advance(put, "Ctrl:  Switch mode");
+		put.pos = ft_put_str_and_advance(put, "U:     Change inc");
 		put.pos = ft_put_str_and_advance(put, "I:     Toggle menu");
 		put.pos = ft_put_str_and_advance(put, "O:     Toggle FPS");
 		put.pos = ft_put_str_and_advance(put, "P:     Print scene");

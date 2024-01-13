@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 08:32:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 10:01:51 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ typedef struct s_numinfo
 		int32_t	numi;
 		float	numf;
 	};
-	uint8_t		pad;
+	int8_t		pad;
 	uint8_t		prec;
 }	t_numinfo;
 
@@ -271,6 +271,15 @@ t_vec2i	ft_put_id(t_putinfo put, int id);
  * @return t_vec2i	Next position of text.
  */
 t_vec2i	ft_put_type(t_putinfo put, t_type type);
+
+/**
+ * @brief Puts the current increment mode on the screen.
+ *
+ * @param put		t_putinfo struct.
+ * @param options	Bit field with info about current increment mode.
+ * @return t_vec2i	Next position of text.
+ */
+t_vec2i	ft_put_inc(t_putinfo put, uint32_t options);
 
 // menu_put_utils_ctrl.c
 
