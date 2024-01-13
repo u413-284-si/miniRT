@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 07:49:38 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 08:33:56 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ static t_vec2i	ft_put_header(t_putinfo put, uint32_t options,
 	return (put.pos);
 }
 
-static t_vec2i	ft_put_footer(t_putinfo put, bool show_ctrl)
+static t_vec2i	ft_put_footer(t_putinfo put, bool show_ctrl, int img_height)
 {
 	if (show_ctrl == true)
-		put.pos = (t_vec2i){X_MENU_OFFSET, Y_MENU_INFO_POS};
+		put.pos.y = img_height - Y_MENU_BOTTOM_BIG;
 	else
-		put.pos = (t_vec2i){X_MENU_OFFSET, 550};
+		put.pos.y = img_height - Y_MENU_BOTTOM_SMALL;
 	put.pos.x -= 15;
 	put.pos = ft_put_str_and_advance(put, "-------General----------");
 	put.pos.x += 15;
@@ -57,5 +57,6 @@ void	ft_menu_put_text(t_render *render)
 		render->mlx_ptrs.win_ptr, render->mlx_ptrs.veil.ptr, 0, 0);
 	put.pos = ft_put_header(put, render->options, render->last_render_time);
 	ft_put_main_page(put, render);
-	ft_put_footer(put, ft_option_isset(render->options, O_SHOW_CTRL));
+	ft_put_footer(put, ft_option_isset(render->options, O_SHOW_CTRL),
+		render->mlx_ptrs.img.size.y);
 }
