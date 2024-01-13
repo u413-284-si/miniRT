@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 13:30:56 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 13:43:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 07:43:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@ void	ft_put_str(t_putinfo put, char *str)
 {
 	mlx_string_put(put.mlx_ptrs.mlx_ptr, put.mlx_ptrs.win_ptr,
 		put.pos.x, put.pos.y, put.col, str);
+}
+
+t_vec2i	ft_put_str_and_advance(t_putinfo put, char *str)
+{
+	ft_put_str(put, str);
+	put.pos.y += Y_NEXT_LINE;
+	return (put.pos);
 }
 
 void	ft_put_int(t_putinfo put, t_numinfo numinfo)

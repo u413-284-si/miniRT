@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 19:30:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 07:49:38 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,32 +21,26 @@ static t_vec2i	ft_put_header(t_putinfo put, uint32_t options,
 	return (put.pos);
 }
 
-static t_vec2i ft_put_footer(t_putinfo put, bool show_ctrl)
+static t_vec2i	ft_put_footer(t_putinfo put, bool show_ctrl)
 {
 	if (show_ctrl == true)
 		put.pos = (t_vec2i){X_MENU_OFFSET, Y_MENU_INFO_POS};
 	else
 		put.pos = (t_vec2i){X_MENU_OFFSET, 550};
 	put.pos.x -= 15;
-	ft_put_str(put, "-------General----------");
+	put.pos = ft_put_str_and_advance(put, "-------General----------");
 	put.pos.x += 15;
-	put.pos.y += Y_NEXT_LINE;
 	if (show_ctrl == true)
 	{
-		ft_put_str(put, "Ctrl:  Switch mode");
-		put.pos.y += Y_NEXT_LINE;
-		ft_put_str(put, "I:     Toggle menu");
-		put.pos.y += Y_NEXT_LINE;
-		ft_put_str(put, "O:     Toggle FPS");
-		put.pos.y += Y_NEXT_LINE;
-		ft_put_str(put, "P:     Print scene");
-		put.pos.y += Y_NEXT_LINE;
-		ft_put_str(put, "Shift: Show info");
+		put.pos = ft_put_str_and_advance(put, "Ctrl:  Switch mode");
+		put.pos = ft_put_str_and_advance(put, "I:     Toggle menu");
+		put.pos = ft_put_str_and_advance(put, "O:     Toggle FPS");
+		put.pos = ft_put_str_and_advance(put, "P:     Print scene");
+		put.pos = ft_put_str_and_advance(put, "Shift: Show info");
 	}
 	else
-		ft_put_str(put, "Shift: Show controls");
-	put.pos.y += Y_NEXT_LINE;
-	ft_put_str(put, "ESC:   Exit");
+		put.pos = ft_put_str_and_advance(put, "Shift: Show controls");
+	put.pos = ft_put_str_and_advance(put, "ESC:   Exit");
 	return (put.pos);
 }
 

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 19:31:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 08:09:52 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,17 @@ typedef struct s_numinfo
  * @param str	String to be put on the screen.
  */
 void	ft_put_str(t_putinfo put, char *str);
+
+/**
+ * @brief Puts a string and moves to next line.
+ *
+ * Calls ft_put_str().
+ * Increases pos.y by Y_NEXT_LINE.
+ * @param put		t_putinfo struct.
+ * @param str		String to be put on the screen.
+ * @return t_vec2i	Next position of text.
+ */
+t_vec2i	ft_put_str_and_advance(t_putinfo put, char *str);
 
 /**
  * @brief Converts integer to string and puts it on the screen.
@@ -288,6 +299,23 @@ t_vec2i	ft_put_ctrl_rot(t_putinfo put, char *name);
  * @return t_vec2i	Next position of text.
  */
 t_vec2i	ft_put_ctrl_inc_dec(t_putinfo put, char *name, bool first);
+
+/**
+ * @brief Puts control scheme for changing colour on the screen.
+ *
+ * @param put		t_putinfo struct.
+ * @return t_vec2i	Next position of text.
+ */
+t_vec2i	ft_put_ctrl_colour(t_putinfo put);
+
+/**
+ * @brief Puts control scheme for changing active entity on the screen.
+ *
+ * @param put		t_putinfo struct.
+ * @param name		Name of the active entity to change.
+ * @return t_vec2i	Next position of text.
+ */
+t_vec2i	ft_put_ctrl_change_ent(t_putinfo put, char *name);
 
 // menu_put_hittable_ctrl.c
 
