@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/12 19:17:26 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/13 08:39:20 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,25 +41,20 @@ SRC_DIR := src
 
 # Base directory for object files
 BASE_OBJ_DIR := obj
-# Subdirectories for common, base, and bonus object files
-OBJ_DIR_COMMON := $(BASE_OBJ_DIR)/common
+# Subdirectories for base, and bonus object files
 OBJ_DIR_BASE := $(BASE_OBJ_DIR)/base
 OBJ_DIR_BONUS := $(BASE_OBJ_DIR)/bonus
 # Adjust directory based on MODE
 ifeq ($(MODE), leak)
-	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/leak
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/leak
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/leak
 else ifeq ($(MODE), address)
-	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/address
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/address
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/address
 else ifeq ($(MODE), speed)
-	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/speed
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/speed
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/speed
 else
-	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/default
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/default
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/default
 endif
@@ -72,7 +67,6 @@ LIB_DIR_FT := $(LIB_DIR)/libft
 INC_DIR := inc
 
 # Subdirectories for dependency files
-DEP_DIR_COMMON := $(OBJ_DIR_COMMON)/dep
 DEP_DIR_BASE := $(OBJ_DIR_BASE)/dep
 DEP_DIR_BONUS := $(OBJ_DIR_BONUS)/dep
 
@@ -136,8 +130,6 @@ LEAK := _leak
 ADDRESS := _address
 # Append for speed optimization
 SPEED := _speed
-# Append for profiling
-PROFILE := _profile
 
 # Modify name depending on MODE variable
 ifeq ($(MODE), leak)
@@ -148,6 +140,7 @@ else ifeq ($(MODE), speed)
 	NAME = $(DEFAULT)$(SPEED)
 endif
 
+# Library target libft
 LIBFT := $(LIB_DIR_FT)/libft.a
 
 # ******************************
@@ -334,12 +327,6 @@ CURRENT_FILE := 0
 # 					so that it will be created when needed.
 # $(eval ...) =		Increment file counter.
 # $(POSTCOMPILE) =	Move temp dependency file and touch object to ensure right timestamps.
-$(OBJ_DIR_COMMON)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_COMMON)/%.d | $(DEP_DIR_COMMON)
-	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
-	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
-	$(eval DEP_DIR=$(DEP_DIR_COMMON))
-	$(SILENT)$(COMPILE) $< -o $@
-	$(SILENT)$(POSTCOMPILE)
 
 $(OBJ_DIR_BASE)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BASE)/%.d | $(DEP_DIR_BASE)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
@@ -360,13 +347,8 @@ $(OBJ_DIR_BONUS)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BONUS)/%.d | $(DEP_DIR_BO
 message:
 	@printf "$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 
-# Create obj and dep subdirectory if it doesn't exist
-$(DEP_DIR_COMMON) $(DEP_DIR_BASE) $(DEP_DIR_BONUS):
-	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	@echo $@
-	$(SILENT)mkdir -p $@
-
-$(LOG_DIR):
+# Create subdirectory if it doesn't exist
+$(DEP_DIR_BASE) $(DEP_DIR_BONUS) $(LOG_DIR):
 	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@echo $@
 	$(SILENT)mkdir -p $@
