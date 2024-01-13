@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 10:01:51 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 10:21:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,8 +175,9 @@ t_vec2i	ft_put_single_float_value(char *name, t_putinfo put, float value);
  * Then calls the appropriate function for the hittable type.
  * @param put		t_putinfo struct.
  * @param hittable	Hittable to be put on screen.
+ * @param total		Total number of hittables.
  */
-void	ft_put_hittable(t_putinfo put, t_hittable hittable);
+void	ft_put_hittable(t_putinfo put, t_hittable hittable, int total);
 
 /**
  * @brief Puts sphere info on the screen.
@@ -227,8 +228,9 @@ void	ft_put_cam(t_putinfo put, t_cam cam);
  * Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG.
  * @param put		t_putinfo struct.
  * @param ambient	Ambient light to be put on screen.
+ * @param total		Total number of lights.
  */
-void	ft_put_ambient(t_putinfo put, t_light ambient);
+void	ft_put_ambient(t_putinfo put, t_light ambient, int total);
 
 /**
  * @brief Puts light info on the screen.
@@ -237,8 +239,9 @@ void	ft_put_ambient(t_putinfo put, t_light ambient);
  * Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG.
  * @param put		t_putinfo struct.
  * @param light		Light to be put on screen.
+ * @param total		Total number of lights.
  */
-void	ft_put_light(t_putinfo put, t_light light);
+void	ft_put_light(t_putinfo put, t_light light, int total);
 
 // menu_put_general_info.c
 
@@ -259,9 +262,10 @@ t_vec2i	ft_put_mode(t_putinfo put, uint32_t options);
  * ID is printed bold.
  * @param put		t_putinfo struct.
  * @param id		ID of the hittable or light.
+ * @param total		Total number of hittables or lights.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_id(t_putinfo put, int id);
+t_vec2i	ft_put_id(t_putinfo put, int id, int total);
 
 /**
  * @brief Puts the type of a hittable or a light on the screen.
@@ -340,9 +344,10 @@ t_vec2i	ft_put_ctrl_change_ent(t_putinfo put, char *name);
  * Then calls the appropriate function for the hittable type.
  * @param put		t_putinfo struct.
  * @param hittable	Hittable to be put on screen.
+ * @param total		Total number of hittables.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_ctrl_hittable(t_putinfo put, t_hittable hittable);
+t_vec2i	ft_put_ctrl_hittable(t_putinfo put, t_hittable hittable, int total);
 
 /**
  * @brief Puts control scheme for sphere on the screen.
@@ -396,9 +401,10 @@ t_vec2i	ft_put_ctrl_cam(t_putinfo put);
  * Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG.
  * @param put		t_putinfo struct.
  * @param active	ID of the passed light.
+ * @param total		Total number of lights.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_ctrl_light(t_putinfo put, uint32_t active);
+t_vec2i	ft_put_ctrl_light(t_putinfo put, uint32_t active, int total);
 
 // menu_put_page.c
 
@@ -416,30 +422,39 @@ void	ft_put_main_page(t_putinfo put, t_render *render);
  *
  * Differentiates between normal and control mode.
  * @param put		t_putinfo struct.
+ * @param active	Active hittable.
+ * @param total		Total number of hittables.
  * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_scene(t_putinfo put, t_hittable active, uint32_t options);
+void	ft_put_page_scene(t_putinfo put, t_hittable active, int total,
+			uint32_t options);
 
 /**
  * @brief Puts an ambient page on the screen.
  *
  * Differentiates between normal and control mode.
  * @param put		t_putinfo struct.
+ * @param ambient	Ambient light.
+ * @param total		Total number of lights.
  * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_ambient(t_putinfo put, t_light ambient, uint32_t options);
+void	ft_put_page_ambient(t_putinfo put, t_light ambient, int total,
+			uint32_t options);
 
 /**
  * @brief Puts a light page on the screen.
  *
  * Differentiates between normal and control mode.
  * @param put		t_putinfo struct.
+ * @param light		Active Light.
+ * @param total		Total number of lights.
  * @param options	Bit field with info about current menu mode.
  * @return t_vec2i	Next position of text.
  */
-void	ft_put_page_light(t_putinfo put, t_light light, uint32_t options);
+void	ft_put_page_light(t_putinfo put, t_light light, int total,
+			uint32_t options);
 
 /**
  * @brief Puts a camera page on the screen.

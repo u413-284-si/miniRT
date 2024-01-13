@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:56:30 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 08:10:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 10:20:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ t_vec2i	ft_put_ctrl_cam(t_putinfo put)
 	return (put.pos);
 }
 
-t_vec2i	ft_put_ctrl_light(t_putinfo put, uint32_t active)
+t_vec2i	ft_put_ctrl_light(t_putinfo put, uint32_t active, int total)
 {
-	put.pos = ft_put_id(put, active);
+	put.pos = ft_put_id(put, active, total);
 	if (active == 0)
 		put.pos = ft_put_type(put, AMBIENT);
 	else

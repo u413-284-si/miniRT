@@ -6,15 +6,15 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:55:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/07 12:39:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 10:18:26 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
 
-void	ft_put_hittable(t_putinfo put, t_hittable hittable)
+void	ft_put_hittable(t_putinfo put, t_hittable hittable, int total)
 {
-	put.pos = ft_put_id(put, hittable.id);
+	put.pos = ft_put_id(put, hittable.id, total);
 	put.pos = ft_put_type(put, hittable.type);
 	if (hittable.type == SPHERE)
 		ft_put_sp(put, hittable.params.sp);
