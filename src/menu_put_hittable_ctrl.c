@@ -6,22 +6,21 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:09:14 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 10:21:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 11:14:36 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
 
-t_vec2i	ft_put_ctrl_hittable(t_putinfo put,
-			t_hittable hittable, int total)
+t_vec2i	ft_put_ctrl_hittable(t_putinfo put, t_type type)
 {
-	put.pos = ft_put_id(put, hittable.id, total);
-	put.pos = ft_put_type(put, hittable.type);
-	if (hittable.type == SPHERE)
+	put.pos = ft_put_str_and_advance(put, "Controls");
+	put.pos = ft_put_type(put, type);
+	if (type == SPHERE)
 		put.pos = ft_put_ctrl_sp(put);
-	else if (hittable.type == PLANE)
+	else if (type == PLANE)
 		put.pos = ft_put_ctrl_pl(put);
-	else if (hittable.type == CYLINDER)
+	else if (type == CYLINDER)
 		put.pos = ft_put_ctrl_cy(put);
 	return (put.pos);
 }

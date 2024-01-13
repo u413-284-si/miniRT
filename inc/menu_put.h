@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 10:21:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 11:27:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -343,11 +343,10 @@ t_vec2i	ft_put_ctrl_change_ent(t_putinfo put, char *name);
  * Writes the id and type of the hittable.
  * Then calls the appropriate function for the hittable type.
  * @param put		t_putinfo struct.
- * @param hittable	Hittable to be put on screen.
- * @param total		Total number of hittables.
+ * @param type		Type of the hittable.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_ctrl_hittable(t_putinfo put, t_hittable hittable, int total);
+t_vec2i	ft_put_ctrl_hittable(t_putinfo put, t_type type);
 
 /**
  * @brief Puts control scheme for sphere on the screen.
@@ -404,7 +403,7 @@ t_vec2i	ft_put_ctrl_cam(t_putinfo put);
  * @param total		Total number of lights.
  * @return t_vec2i	Next position of text.
  */
-t_vec2i	ft_put_ctrl_light(t_putinfo put, uint32_t active, int total);
+t_vec2i	ft_put_ctrl_light(t_putinfo put, uint32_t active);
 
 // menu_put_page.c
 
@@ -428,19 +427,6 @@ void	ft_put_main_page(t_putinfo put, t_render *render);
  * @return t_vec2i	Next position of text.
  */
 void	ft_put_page_scene(t_putinfo put, t_hittable active, int total,
-			uint32_t options);
-
-/**
- * @brief Puts an ambient page on the screen.
- *
- * Differentiates between normal and control mode.
- * @param put		t_putinfo struct.
- * @param ambient	Ambient light.
- * @param total		Total number of lights.
- * @param options	Bit field with info about current menu mode.
- * @return t_vec2i	Next position of text.
- */
-void	ft_put_page_ambient(t_putinfo put, t_light ambient, int total,
 			uint32_t options);
 
 /**

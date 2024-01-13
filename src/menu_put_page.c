@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 14:16:43 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 11:02:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 11:26:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,7 @@ void	ft_put_page_scene(t_putinfo put, t_hittable active, int total, uint32_t opt
 	if (!ft_option_isset(options, O_SHOW_CTRL))
 		ft_put_hittable(put, active, total);
 	else
-		ft_put_ctrl_hittable(put, active, total);
-}
-
-void	ft_put_page_ambient(t_putinfo put, t_light ambient, int total, uint32_t options)
-{
-	if (!ft_option_isset(options, O_SHOW_CTRL))
-		ft_put_ambient(put, ambient, total);
-	else
-		ft_put_ctrl_light(put, 0, total);
+		ft_put_ctrl_hittable(put, active.type);
 }
 
 void	ft_put_page_light(t_putinfo put, t_light light, int total, uint32_t options)
@@ -51,7 +43,7 @@ void	ft_put_page_light(t_putinfo put, t_light light, int total, uint32_t options
 	if (!ft_option_isset(options, O_SHOW_CTRL))
 		ft_put_light(put, light, total);
 	else
-		ft_put_ctrl_light(put, light.id, total);
+		ft_put_ctrl_light(put, light.id);
 }
 
 void	ft_put_page_cam(t_putinfo put, t_cam cam, uint32_t options)
