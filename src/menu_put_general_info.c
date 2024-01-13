@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:54:31 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 10:38:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 10:53:03 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_vec2i	ft_put_mode(t_putinfo put, uint32_t options)
 		ft_put_str(put, "Camera");
 	mlx_set_font(put.mlx_ptrs.mlx_ptr, put.mlx_ptrs.win_ptr, REGULAR);
 	put.pos.x -= 50;
-	put.pos.y += Y_NEXT_LINE_BIG;
+	put.pos.y += Y_NEXT_LINE;
 	return (put.pos);
 }
 

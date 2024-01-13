@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 09:46:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 10:56:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ static t_vec2i	ft_put_header(t_putinfo put, uint32_t options,
 		put.pos = ft_put_inc(put, options);
 		put.pos = ft_put_time(put, last_render_time,
 			ft_option_isset(options, O_SHOW_FPS));
-		put.pos.y += Y_HALF_LINE;
 	}
+	put.pos.x -= 15;
+	put.pos = ft_put_str_and_advance(put, "------------------------");
+	put.pos.x += 15;
+	put.pos.y += Y_HALF_LINE;
 	return (put.pos);
 }
 
