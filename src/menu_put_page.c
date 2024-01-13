@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 14:16:43 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 10:29:53 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 11:02:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_put_main_page(t_putinfo put, t_render *render)
 	else if (ft_option_isset(render->options, O_MODE_LIGHT))
 	{
 		if (render->active_light == 0)
-			ft_put_page_ambient(put, render->scene.ambient,
+			ft_put_page_light(put, render->scene.ambient,
 				render->scene.lsrc_count, render->options);
 		else
 			ft_put_page_light(put, render->scene.lsrc[render->active_light - 1],

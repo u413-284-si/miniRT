@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:10:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 10:19:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 11:01:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,13 @@ void	ft_put_ambient(t_putinfo put, t_light ambient, int total)
 void	ft_put_light(t_putinfo put, t_light light, int total)
 {
 	put.pos = ft_put_id(put, light.id, total);
-	put.pos = ft_put_type(put, LIGHT);
-	put.pos = ft_put_3d_point("Position", put, light.pos);
+	if (light.id == 0)
+		put.pos = ft_put_type(put, AMBIENT);
+	else
+	{
+		put.pos = ft_put_type(put, LIGHT);
+		put.pos = ft_put_3d_point("Position", put, light.pos);
+	}
 	put.pos = ft_put_single_float_value("Brightness", put, light.ratio);
 	put.pos = ft_put_colour(put, light.colour);
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:54:31 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 10:53:03 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/13 11:08:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ t_vec2i	ft_put_mode(t_putinfo put, uint32_t options)
 t_vec2i	ft_put_type(t_putinfo put, t_type type)
 {
 	ft_put_str(put, "Type:");
-	put.pos.x += 50;
+	put.pos.x += 70;
 	if (type == SPHERE)
 		ft_put_str(put, "Sphere");
 	else if (type == PLANE)
@@ -43,21 +43,22 @@ t_vec2i	ft_put_type(t_putinfo put, t_type type)
 		ft_put_str(put, "Ambient");
 	else if (type == LIGHT)
 		ft_put_str(put, "Light");
-	put.pos.x -= 50;
+	put.pos.x -= 70;
 	put.pos.y += Y_NEXT_LINE_BIG;
 	return (put.pos);
 }
 
 t_vec2i	ft_put_id(t_putinfo put, int id, int total)
 {
-	ft_put_str(put, "Active ID:");
-	put.pos.x += 90;
-	ft_put_int(put, (t_numinfo){.numi = id, .pad = 0, .prec = 0});
-	put.pos.x += (ft_numlen(id) * 10);
-	ft_put_str(put, " / ");
-	put.pos.x += 30;
-	ft_put_int(put, (t_numinfo){.numi = total, .pad = 0, .prec = 0});
-	put.pos.x -= 120 + (ft_numlen(id) * 10);
+	ft_put_str(put, "Total:");
+	put.pos.x += 70;
+	ft_put_int(put, (t_numinfo){.numi = total, .pad = 3, .prec = 0});
+	put.pos.y += Y_NEXT_LINE;
+	put.pos.x -= 70;
+	ft_put_str(put, "Active:");
+	put.pos.x += 70;
+	ft_put_int(put, (t_numinfo){.numi = id, .pad = 3, .prec = 0});
+	put.pos.x -= 70;
 	put.pos.y += Y_NEXT_LINE;
 	return (put.pos);
 }
