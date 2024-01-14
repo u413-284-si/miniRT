@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 19:05:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/14 10:21:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 # include "ray.h"
 # include "vec2.h"
 # include "render_menu.h"
+# include "miniRT_threads.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -453,5 +454,7 @@ void	ft_render_start_loop(t_render *render);
  * @param render	Pointer to render struct.
  */
 void	ft_menu_put_text(t_render *render);
+
+void	*ft_render_image_threaded(void *arg);
 
 #endif

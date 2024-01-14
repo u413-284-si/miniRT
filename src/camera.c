@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/14 08:33:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/14 10:30:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	ft_cam_update(t_cam *cam)
 		ft_vec3_scale(viewport_v, 0.5));
 	cam->pixels.pos00 = ft_vec3_add(viewport_upper_left, ft_vec3_scale(\
 		ft_vec3_add(cam->pixels.delta_u, cam->pixels.delta_v), 0.5));
-	ft_cam_calc_rays(cam);
+	ft_spin_threads(cam, ft_cam_calc_rays_threaded);
 }
 
 void	ft_cam_calc_rays(t_cam *cam)

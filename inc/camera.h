@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/14 08:36:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/14 10:29:40 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include "vec3.h"
 # include "utils.h"
 # include "error_syscall.h"
+# include "miniRT_threads.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -170,5 +171,7 @@ void	ft_cam_move_right(t_cam *cam, float distance);
  * @param distance	Distance to move the camera.
  */
 void	ft_cam_move_up(t_cam *cam, float distance);
+
+void	*ft_cam_calc_rays_threaded(void *arg);
 
 #endif

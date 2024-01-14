@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/07 16:32:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/14 10:22:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ int	ft_draw_scene(t_render *render)
 	}
 	if (render->is_changed)
 	{
-		ft_render_image(render);
+		//ft_render_image(render);
+		ft_spin_threads(render, ft_render_image_threaded);
 		mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
 			render->mlx_ptrs.win_ptr, render->mlx_ptrs.img.ptr, 0, 0);
 		ft_blend_background(&render->mlx_ptrs.img, &render->mlx_ptrs.veil,
