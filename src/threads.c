@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:28:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 10:21:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/14 11:19:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@ t_err	ft_create_threads(void *arg, void *(*routine)(void *),
 			t_thread_data threads[NUM_THREADS])
 {
 	int	i;
+	int	ret;
 
-	i = -1;
-	while (++i < NUM_THREADS)
-		threads[i].id = -1;
 	i = -1;
 	while (++i < NUM_THREADS)
 	{
 		threads[i].id = i;
 		threads[i].arg = arg;
-		errno = pthread_create(&threads[i].t_id, NULL, routine, &threads[i]);
+		ret = pthread_create(&threads[i].t_id, NULL, routine, &threads[i]);
+		errno = ret;
 		if (errno)
 		{
+			threads[i].id = -1;
 			ft_perror("pthread_create() failed", errno);
 			return (ERROR);
 		}
@@ -53,7 +53,7 @@ void	ft_join_threads(t_thread_data threads[NUM_THREADS], bool join_all)
 	while (++i < NUM_THREADS)
 	{
 		if (threads[i].id == -1)
-			continue ;
+			break ;
 		errno = pthread_join(threads[i].t_id, NULL);
 		if (errno)
 			ft_perror("pthread_join() failed", errno);
