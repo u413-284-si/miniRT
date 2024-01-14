@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 19:21:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/14 08:40:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,26 +69,24 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color)
 void	ft_render_image(t_render *render)
 {
 	t_ray		ray;
-	int			y;
-	int			x;
-	t_vec3		pix_centre;
+	t_vec2i		pos;
 	t_colour	pixel_colour;
 	int			colour;
+	int			line;
 
 	ray.origin = render->cam.centre;
 	ray.d = 1.0;
-	y = -1;
-	while (++y < render->cam.image.y)
+	pos.y = -1;
+	while (++pos.y < render->cam.image.y)
 	{
-		x = -1;
-		while (++x < render->cam.image.x)
+		pos.x = -1;
+		line = pos.y * render->cam.image.x;
+		while (++pos.x < render->cam.image.x)
 		{
-			pix_centre = ft_vec3_add(ft_vec3_add(render->cam.pixels.pos00, \
-				ft_vec3_scale(render->cam.pixels.delta_u, x)), ft_vec3_scale(render->cam.pixels.delta_v, y));
-			ray.direction = ft_vec3_norm(ft_vec3_sub(pix_centre, render->cam.centre));
+			ray.direction = render->cam.ray_cache[line + pos.x];
 			pixel_colour = ft_ray_colour(ray, render->scene);
 			colour = ft_convert_colour2int(pixel_colour);
-			ft_put_pix_to_image(&render->mlx_ptrs.img, x, y, colour);
+			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, pos.y, colour);
 		}
 	}
 }

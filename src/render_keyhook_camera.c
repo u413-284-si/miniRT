@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 19:22:27 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/14 08:33:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,5 @@ void	ft_manip_cam(int key, t_cam *cam)
 	}
 	else
 		ft_keyhook_move_cam(key, cam);
-	ft_cam_calc_pixel_grid(cam);
+	ft_cam_update(cam);
 }

@@ -6,19 +6,23 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/01 18:58:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/14 08:33:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "camera.h"
 
-void	ft_cam_init(t_cam *cam, t_vec2i img_size)
+t_err	ft_cam_init(t_cam *cam, t_vec2i img_size)
 {
+	if (ft_err_malloc((void **)&cam->ray_cache,
+			sizeof(*cam->ray_cache) * img_size.x * img_size.y))
+		return (ERROR);
 	ft_cam_calc_base_vectors(cam);
 	cam->focal_length = 1.0;
 	cam->image = img_size;
 	ft_cam_calc_viewport_dimensions(cam);
-	ft_cam_calc_pixel_grid(cam);
+	ft_cam_update(cam);
+	return (SUCCESS);
 }
 
 void	ft_cam_calc_base_vectors(t_cam *cam)
@@ -41,7 +45,7 @@ void	ft_cam_calc_viewport_dimensions(t_cam *cam)
 	cam->viewport.y = cam->viewport.x / cam->image.x * cam->image.y;
 }
 
-void	ft_cam_calc_pixel_grid(t_cam *cam)
+void	ft_cam_update(t_cam *cam)
 {
 	t_vec3	viewport_u;
 	t_vec3	viewport_v;
@@ -57,4 +61,26 @@ void	ft_cam_calc_pixel_grid(t_cam *cam)
 		ft_vec3_scale(viewport_v, 0.5));
 	cam->pixels.pos00 = ft_vec3_add(viewport_upper_left, ft_vec3_scale(\
 		ft_vec3_add(cam->pixels.delta_u, cam->pixels.delta_v), 0.5));
+	ft_cam_calc_rays(cam);
+}
+
+void	ft_cam_calc_rays(t_cam *cam)
+{
+	t_vec2i		pos;
+	t_vec3		pixel_pos;
+	t_vec3		direction;
+
+	pos.y = -1;
+	while (++pos.y < cam->image.y)
+	{
+		pos.x = -1;
+		while (++pos.x < cam->image.x)
+		{
+			pixel_pos = ft_vec3_add(cam->pixels.pos00, ft_vec3_add(\
+				ft_vec3_scale(cam->pixels.delta_u, pos.x), \
+				ft_vec3_scale(cam->pixels.delta_v, pos.y)));
+			direction = ft_vec3_norm(ft_vec3_sub(pixel_pos, cam->centre));
+			cam->ray_cache[pos.y * cam->image.x + pos.x] = direction;
+		}
+	}
 }

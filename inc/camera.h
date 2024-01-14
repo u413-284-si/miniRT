@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/01 18:55:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/14 08:36:56 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "vec2.h"
 # include "vec3.h"
 # include "utils.h"
+# include "error_syscall.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -51,6 +52,7 @@ typedef struct s_pixel_grid
  * @param viewport			Width and height of viewport rectangle
  * @param image				Width and height of image in pixels
  * @param pixels			Pixel grid parameters.
+ * @param ray_cache			Array of ray directions for each pixel.
  */
 typedef struct s_cam
 {
@@ -64,6 +66,7 @@ typedef struct s_cam
 	t_vec2f			viewport;
 	t_vec2i			image;
 	t_pixel_grid	pixels;
+	t_vec3			*ray_cache;
 }	t_cam;
 
 /* ====== FUNCTIONS ====== */
@@ -71,15 +74,17 @@ typedef struct s_cam
 /**
  * @brief Initializes camera parameters.
  *
+ * Malloc ray_cache.
  * Calculates the base vectors.
  * Sets the focal length to 1.
  * Sets the image size to the given size.
  * Calculates the viewport dimensions.
- * Calculates the pixel grid parameters.
+ * Calculates the pixel ray directions.
  * @param cam 		Struct containing camera parameters
  * @param img_size	Width and height of image in pixels
+ * @return t_err	ERROR if Malloc fails, else SUCCESS
  */
-void	ft_cam_init(t_cam *cam, t_vec2i img_size);
+t_err	ft_cam_init(t_cam *cam, t_vec2i img_size);
 
 /**
  * @brief Calculates basis vectors u, v, w
@@ -127,7 +132,15 @@ void	ft_cam_calc_viewport_dimensions(t_cam *cam);
  * The position of the first pixel is then calculated from the upper left corner.
  * @param cam		Struct containing camera parameters.
  */
-void	ft_cam_calc_pixel_grid(t_cam *cam);
+void	ft_cam_update(t_cam *cam);
+
+/**
+ * @brief Calculates all pixel ray directions.
+ *
+ * Uses the calculated pixel grid parameters to calculate the ray direction.
+ * @param cam	Struct containing camera parameters.
+ */
+void	ft_cam_calc_rays(t_cam *cam);
 
 // camera_movement.c
 
