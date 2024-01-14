@@ -6,15 +6,24 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:48:18 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 20:34:40 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 19:54:37 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#if IS_BONUS==1
+# include "utils_bonus.h"
+#else
+# include "utils.h"
+#endif
 
 float	ft_degree_to_radian(float degrees)
 {
 	return (degrees * RAD);
+}
+
+float	ft_radian_to_degree(float radians)
+{
+	return (radians * DEG);
 }
 
 float	ft_solve(t_equation *eq)

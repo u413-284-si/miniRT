@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 20:30:39 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 17:12:52 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,30 @@ t_colour	ft_convert_int2colour(int colour)
 	ret.g = colour >> 8 & 0xFF;
 	ret.b = colour & 0xFF;
 	return (ret);
+}
+
+t_colour	ft_get_colour(t_col_name col_name)
+{
+	if (col_name == RED)
+		return ((t_colour){1.0, 0.0, 0.0});
+	else if (col_name == GREEN)
+		return ((t_colour){0.0, 1.0, 0.0});
+	else if (col_name == BLUE)
+		return ((t_colour){0.0, 0.0, 1.0});
+	else if (col_name == YELLOW)
+		return ((t_colour){1.0, 1.0, 0.0});
+	else if (col_name == PURPLE)
+		return ((t_colour){1.0, 0.0, 1.0});
+	else if (col_name == CYAN)
+		return ((t_colour){0.0, 1.0, 1.0});
+	else if (col_name == WHITE)
+		return ((t_colour){1.0, 1.0, 1.0});
+	else if (col_name == BLACK)
+		return ((t_colour){0.0, 0.0, 0.0});
+	else if (col_name == ORANGE)
+		return ((t_colour){1.0, 0.5, 0.0});
+	else if (col_name == PINK)
+		return ((t_colour){1.0, 0.0, 0.5});
+	else
+		return ((t_colour){0.0, 0.0, 0.0});
 }

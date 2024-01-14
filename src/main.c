@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/25 14:05:20 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 17:14:02 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ int	main(int argc, char **argv)
 		ft_free_scene(&render.scene);
 		return (1);
 	}
-	ft_initiate_camera(&render.cam);
-	ft_initiate_viewport(&render.vp, render.cam, render.mlx_ptrs.img.width, \
-		render.mlx_ptrs.img.height);
+	ft_cam_init(&render.cam, render.mlx_ptrs.img.size);
+	ft_menu_init(&render.menu, MENU_OPACITY, MENU_BACK, MENU_FONT);
 	ft_render_start_loop(&render);
 	ft_free_scene(&render.scene);
 	return (0);

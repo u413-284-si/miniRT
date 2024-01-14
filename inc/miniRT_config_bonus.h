@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 16:01:15 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 18:49:55 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,17 @@
 // standard window size
 # define WIN_SIZE_X 800
 # define WIN_SIZE_Y 600
+
+// standard movement speed
+# define MV_UNIT 0.5f
+
+// menu parameters
+# define MENU_WIDTH 200
+# define REGULAR "-schumacher-*-medium-r-normal-*-*-160-*-*-*-*-*-*"
+# define BOLD "-schumacher-*-bold-r-normal-*-*-160-*-*-*-*-*-*"
+# define MENU_OPACITY 100
+# define MENU_BACK 0x000000
+# define MENU_FONT 0xFFFFFF
 
 // sample size
 

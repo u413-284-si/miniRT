@@ -6,12 +6,17 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:52:25 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/12 20:10:53 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 19:50:43 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec3.h"
-#include "utils.h"
+
+#if IS_BONUS==1
+# include "utils_bonus.h"
+#else
+# include "utils.h"
+#endif
 
 float	ft_vec3_abs(t_vec3 v)
 {

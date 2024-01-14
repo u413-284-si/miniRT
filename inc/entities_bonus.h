@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/09 17:39:27 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 17:48:08 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@
 /**
  * @brief Represents lighting in the scene
  * 
+ * @param id		ID of the light
  * @param pos		Position of the light
  * @param ratio		Light brightess ratio
  * @param colour	Colour of the light
  */
 typedef struct s_light
 {
+	int			id;
 	t_vec3		pos;
 	float		ratio;
 	t_colour	colour;
@@ -191,5 +193,16 @@ typedef struct s_entities
 	int			lsrc_count;
 	int			total;
 }	t_entities;
+
+/* ====== FUNCTIONS ====== */
+
+// utils_entities.c
+
+/**
+ * @brief Calculates the planes of the caps of a cylinder.
+ *
+ * @param cy	Pointer to cylinder struct.
+ */
+void	ft_cy_calc_caps(t_cylinder *cy);
 
 #endif

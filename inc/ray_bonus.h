@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/12 20:41:32 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 17:36:16 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,11 @@ t_colour	ft_background_colour(t_ray ray);
  * to each neighbouring pixel.
  * @param i 		Current pixel position within a row
  * @param j 		Current pixel position within a column
- * @param vp 		Viewport
+ * @param pixels	Pixel grid defining its starting position and
+ * 					horizontal/vertical distances
  * @param cam 		Camera
  * @return t_ray 
  */
-t_ray		ft_create_sample_ray(int i, int j, t_viewport vp, t_cam cam);
+t_ray		ft_create_sample_ray(int i, int j, t_pixel_grid pixels, t_cam cam);
 
 #endif

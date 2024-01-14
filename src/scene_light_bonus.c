@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:15:24 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/04 11:43:05 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 19:58:43 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ t_colour	ft_specular_light(t_light cur, t_hitrecord rec, t_cam cam)
 	t_vec3	light_direction;
 
 	specular_strength = 0.5;
-	view_direction = ft_vec3_norm(ft_vec3_sub(cam.camera_centre, rec.point));
+	view_direction = ft_vec3_norm(ft_vec3_sub(cam.centre, rec.point));
 	light_direction = ft_vec3_norm(ft_vec3_scale(\
 		ft_vec3_sub(cur.pos, rec.point), -1));
 	reflect_direction = ft_vec3_norm(ft_vec3_sub(light_direction, \

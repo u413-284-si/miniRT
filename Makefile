@@ -6,9 +6,20 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/12 20:19:37 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/14 20:03:41 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+# ******************************
+# *     Verbosity              *
+# ******************************
+
+# Set VERBOSE=1 to echo all commands
+ifeq ($(VERBOSE),1)
+	SILENT =
+else
+	SILENT = @
+endif
 
 # ******************************
 # *     Verbosity              *
@@ -70,6 +81,8 @@ LIB_DIR_FT := $(LIB_DIR)/libft
 
 # Subdirectory for header files
 INC_DIR := inc
+DEP_DIR = $(OBJ_DIR)/dep
+LOG_DIR := log
 
 # Subdirectories for dependency files
 DEP_DIR_COMMON := $(OBJ_DIR_COMMON)/dep
@@ -92,6 +105,7 @@ LDLIBS := -lft -lm -lmlx -lXext -lX11
 
 CC := cc
 CPPFLAGS := -I $(INC_DIR) -I lib/libft/include
+CFLAGS = -Wall -Werror -Wextra -gdwarf-4
 CFLAGS = -Wall -Werror -Wextra -gdwarf-4
 DEPFLAGS = -MT $@ -MMD -MP -MF $(DEP_DIR)/$*.Td
 COMPILE = $(CC) $(DEPFLAGS) $(CPPFLAGS) $(CFLAGS) -c
@@ -158,7 +172,8 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC_COMMON := 	check_entity_ACL.c \
+SRC_COMMON := 	camera_movement.c \
+				check_entity_ACL.c \
 				check_line.c \
 				cleanup.c \
 				error_mlx.c \
@@ -171,14 +186,35 @@ SRC_COMMON := 	check_entity_ACL.c \
 				mat4_rotation.c \
 				mat4_vec3_rotate.c \
 				mat4.c \
+				menu_init.c \
+				menu_put_cam_light_ctrl.c \
+				menu_put_cam_light.c \
+				menu_put_general_info.c \
+				menu_put_hittable_ctrl.c \
+				menu_put_hittable.c \
+				menu_put_page.c \
+				menu_put_str_num.c \
+				menu_put_utils_ctrl.c \
+				menu_put_utils.c \
+				menu_put.c \
 				parse_entity_ACL.c \
 				parse_line.c \
+				print_entity.c \
+				print_struct.c \
 				render_init_mlx.c \
-				render_keyhook.c \
+				render_keyhook_camera.c \
+				render_keyhook_hittable.c \
+				render_keyhook_light.c \
+				render_keyhook_press.c \
+				render_keyhook_release.c \
+				render_keyhook_scene.c \
+				render_keyhook_utils.c \
 				render_loop_mlx.c \
+				render_mouse.c \
 				render_output_ppm.c \
 				scene_init.c \
 				scene_shadow.c \
+				utils_entities.c \
 				utils_interval.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c
@@ -328,6 +364,7 @@ CURRENT_FILE := 0
 # | $(DEPDIR) = 	Declare the dependency directory as an order-only prerequisite of the target,
 # 					so that it will be created when needed.
 # $(eval ...) =		Increment file counter.
+# $(eval ...) =		Increment file counter.
 # $(POSTCOMPILE) =	Move temp dependency file and touch object to ensure right timestamps.
 $(OBJ_DIR_COMMON)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_COMMON)/%.d | $(DEP_DIR_COMMON)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
@@ -353,6 +390,7 @@ $(OBJ_DIR_BONUS)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BONUS)/%.d | $(DEP_DIR_BO
 # Print message only if there are objects to compile
 .INTERMEDIATE: message
 message:
+	@printf "$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@printf "$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 
 # Create obj and dep subdirectory if it doesn't exist
@@ -383,15 +421,23 @@ $(LIBFT):
 # ******************************
 
 # Remove all object files and dependency files
+# Remove all object files and dependency files
 .PHONY: clean
 clean:
 	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@rm -rf $(BASE_OBJ_DIR)
 	@printf "$(RED)removed subdir $(BASE_OBJ_DIR)$(RESET)\n"
+	@rm -rf $(BASE_OBJ_DIR)
+	@printf "$(RED)removed subdir $(BASE_OBJ_DIR)$(RESET)\n"
 
+# Remove all object, dependency, binaries and log files
 # Remove all object, dependency, binaries and log files
 .PHONY: fclean
 fclean: clean
+	@rm -rf $(NAME)*
+	@printf "$(RED)removed binaries $(NAME)*$(RESET)\n"
+	@rm -rf $(LOG_DIR)
+	@printf "$(RED)removed subdir $(LOG_DIR)$(RESET)\n"
 	@rm -rf $(NAME)*
 	@printf "$(RED)removed binaries $(NAME)*$(RESET)\n"
 	@rm -rf $(LOG_DIR)

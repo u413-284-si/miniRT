@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/12 20:37:10 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 19:18:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "ray.h"
-# include "utils.h"
+# if IS_BONUS==1
+#  include "ray_bonus.h"
+#  include "utils_bonus.h"
+# else
+#  include "ray.h"
+#  include "utils.h"
+# endif
 
 /* ====== MACROS ====== */
 

@@ -6,11 +6,15 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 15:52:42 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/12 20:09:46 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 19:50:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#if IS_BONUS==1
+# include "utils_bonus.h"
+#else
+# include "utils.h"
+#endif
 
 void	ft_init_interval(t_interval *interval)
 {

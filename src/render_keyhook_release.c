@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_keyhook.c                                   :+:      :+:    :+:   */
+/*   render_keyhook_release.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 14:52:32 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 17:20:22 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
 
-int	ft_keyhook_press(int key, t_render *render)
+int	ft_keyhook_release(int key, t_render *render)
 {
-	static bool	print;
-
-	if (key == XK_Escape)
-		mlx_loop_end(render->mlx_ptrs.mlx_ptr);
-	else if (key == XK_c && !print)
+	if (key == XK_p)
 	{
-		print = true;
-		ft_output_as_ppm((int *)render->mlx_ptrs.img.addr,
-			render->mlx_ptrs.img.width, render->mlx_ptrs.img.height);
-		print = false;
+		mlx_do_key_autorepeatoff(render->mlx_ptrs.mlx_ptr);
+		render->is_printing = true;
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/09 17:34:25 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 18:55:16 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,8 +104,9 @@ void	ft_parse_camera(char *line, t_cam *cam);
  * - R,G,B colors in range [0-255].
  * @param line	Pointer to current line.
  * @param light	Struct where to save.
+ * @param id	Current light id.
  */
-void	ft_parse_light(char *line, t_light *light);
+void	ft_parse_light(char *line, t_light *light, int id);
 
 // parse_entity2.c
 
@@ -116,6 +117,9 @@ void	ft_parse_light(char *line, t_light *light);
  * Parse the following:
  * - x,y,z coordinates of the sphere center.
  * - the sphere diameter.
+ * - the shininess.
+ * - the reflectivity.
+ * - whether it's checkered.
  * - R,G,B colors in range [0-255].
  * Also sets type and id.
  * @param line		Pointer to current line.
@@ -131,6 +135,9 @@ void	ft_parse_sphere(char *line, t_hittable *sphere, size_t id);
  * Parse the following:
  * - x,y,z coordinates of a point in the plane.
  * - 3d normalized normal vector. In range [-1,1] for each x,y,z axis.
+ * - the shininess.
+ * - the reflectivity.
+ * - whether it's checkered.
  * - R,G,B colors in range [0-255].
  * Also sets type and id.
  * @param line	Pointer to current line.
@@ -148,6 +155,9 @@ void	ft_parse_plane(char *line, t_hittable *plane, size_t id);
  * - 3d normalized axis vector of cylinder. In range [-1,1] for each x,y,z axis.
  * - the cylinder diameter.
  * - the cylinder height.
+ * - the shininess.
+ * - the reflectivity.
+ * - whether it's checkered.
  * - R,G,B colors in range [0,255].
  * Also sets type and id.
  * @param line		Pointer to current line.
@@ -157,8 +167,19 @@ void	ft_parse_plane(char *line, t_hittable *plane, size_t id);
 void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id);
 
 /**
- * @brief 
+ * @brief Parse cone line.
  * 
+ * Function gets called if line has identifier "co".
+ * Parse the following:
+ * - x,y,z coordinates of the apex of the cone.
+ * - 3d normalized axis vector of cone. In range [-1,1] for each x,y,z axis.
+ * - the cone radius.
+ * - the cone height.
+ * - the shininess.
+ * - the reflectivity.
+ * - whether it's checkered.
+ * - R,G,B colors in range [0,255].
+ * Also sets type and id.
  * @param line 
  * @param cone 
  * @param id 

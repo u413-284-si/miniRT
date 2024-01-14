@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:48:18 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/10 00:46:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 19:54:56 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 float	ft_degree_to_radian(float degrees)
 {
 	return (degrees * RAD);
+}
+
+float	ft_radian_to_degree(float radians)
+{
+	return (radians * DEG);
 }
 
 float	ft_solve(t_equation *eq)

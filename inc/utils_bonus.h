@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/12 20:33:37 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/14 19:06:46 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 /* ====== MACROS ====== */
 
 # define RAD 0.01745329251
+# define DEG 57.2957795131
 # define EPSILON 1e-3
 
 /* ====== TYPEDEFS ====== */
@@ -85,6 +86,14 @@ typedef struct s_quaternion
  * @return float 	Angle in radians
  */
 float			ft_degree_to_radian(float degrees);
+
+/**
+ * @brief Transforms radians into degrees
+ *
+ * @param radians 	Angle in radians
+ * @return float 	Angle in degrees
+ */
+float			ft_radian_to_degree(float radians);
 
 /**
  * @brief Determines if value is inside the interval
