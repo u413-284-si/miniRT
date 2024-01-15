@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:33:09 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/09 11:07:06 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:05:57 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,17 +89,17 @@ void	ft_co_identify_hits(t_cone co, t_hitrecord *rec, \
 
 void	ft_co_set_hitrecord(t_cone co, t_hitrecord *rec, t_hitrecord tmp)
 {
-		rec->d = tmp.d;
-		rec->axis_hit = tmp.axis_hit;
-		rec->point = ft_ray(rec->ray, rec->d);
-		rec->normal = ft_vec3_norm(ft_co_normal(*rec, co));
-		if (tmp.wall_hit)
-			ft_get_co_uvcoords(rec, co);
-		else
-		{
-			ft_get_pl_uvcoords(rec);
-			rec->u *= 4;
-			rec->v *= 4;
-		}
-		rec->colour = co.colour;
+	rec->d = tmp.d;
+	rec->axis_hit = tmp.axis_hit;
+	rec->point = ft_ray(rec->ray, rec->d);
+	rec->normal = ft_vec3_norm(ft_co_normal(*rec, co));
+	if (tmp.wall_hit)
+		ft_get_co_uvcoords(rec, co);
+	else
+	{
+		ft_get_pl_uvcoords(rec);
+		rec->u *= 4;
+		rec->v *= 4;
+	}
+	rec->colour = co.colour;
 }

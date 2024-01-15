@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 14:04:04 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 17:13:33 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 11:48:56 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ t_err	ft_err_mlx_init(void **ptr)
 	return (SUCCESS);
 }
 
-t_err	ft_err_mlx_new_window(void **ptr, void *mlx_ptr, t_vec2i size, char *title)
+t_err	ft_err_mlx_new_window(void **ptr, void *mlx_ptr, t_vec2i size, \
+	char *title)
 {
 	errno = 0;
 	*ptr = mlx_new_window(mlx_ptr, size.x, size.y, title);

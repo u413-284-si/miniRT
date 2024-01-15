@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/12 20:03:41 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:17:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 // Home-grown libs
 # include "ft_print.h"
 # include "init.h"
-
 
 # if IS_BONUS == 1
 #  include "parse_bonus.h"

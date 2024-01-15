@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_error.c                                      :+:      :+:    :+:   */
+/*   error_msg_check.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:25:28 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/20 10:55:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/15 11:38:07 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,11 @@ bool	ft_perror_convert(char *line, bool is_float)
 	ft_putstr_fd("Conversion failed here: -->", 2);
 	ft_putendl_fd(line, 2);
 	if (is_float)
-		ft_putendl_fd("Expected: float (1.2 or 3) with maximum of 15 digits", 2);
+		ft_putendl_fd("Expected: float (1.2 or 3) with maximum of \
+		15 digits", 2);
 	else
-		ft_putendl_fd("Expected: positive int (1 or 23) with maximum of 3 digits", 2);
+		ft_putendl_fd("Expected: positive int (1 or 23) with maximum of \
+		3 digits", 2);
 	return (false);
 }
 

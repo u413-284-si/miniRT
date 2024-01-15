@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 18:55:16 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:18:13 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,7 +185,6 @@ void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id);
  * @param id 
  */
 void	ft_parse_cone(char *line, t_hittable *cone, size_t id);
-
 
 // parse_line.c
 

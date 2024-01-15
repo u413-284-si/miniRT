@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/14 20:03:41 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/15 12:15:08 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -233,6 +233,7 @@ SRC_BASE :=		camera.c \
 				ray.c \
 				render_draw.c \
 				scene_light.c \
+				utils_colour.c \
 				utils_cylinder.c \
 				utils_math.c
 
@@ -254,9 +255,11 @@ SRC_BONUS :=	camera_bonus.c \
 				scene_reflection_bonus.c \
 				texture_bonus.c \
 				utils_camera_bonus.c \
+				utils_colour_bonus.c \
 				utils_cone_bonus.c \
 				utils_cylinder_bonus.c \
 				utils_math_bonus.c \
+				utils_quaternion_bonus.c \
 				utils_random_bonus.c
 
 # ******************************

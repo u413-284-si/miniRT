@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/14 19:06:46 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:18:50 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -174,7 +174,6 @@ float			ft_clamp(float x, t_interval interval);
  * @param interval 			Interval to be initiated
  */
 void			ft_init_interval(t_interval *interval);
-
 
 /**
  * @brief 

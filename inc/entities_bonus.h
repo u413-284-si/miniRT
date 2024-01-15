@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/14 17:48:08 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:19:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,6 @@ typedef struct s_cone
 	float		angle;
 	t_colour	colour;
 }	t_cone;
-
 
 /**
  * @brief Enumeration of all different entity types.

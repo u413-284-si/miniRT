@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/14 19:18:15 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:18:27 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ typedef struct s_hitrecord
  * 
  * @param rec 		Hitrecord to be initiated
  */
-void		ft_init_hitrecord(t_hitrecord *rec);
+void	ft_init_hitrecord(t_hitrecord *rec);
 
 /**
  * @brief Investigate a hittable and returns whether a hit

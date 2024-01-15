@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 14:06:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 22:55:19 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:17:48 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ t_err	ft_err_mlx_init(void **ptr);
  * @param title		Window title.
  * @return t_err	SUCCESS, ERROR.
  */
-t_err	ft_err_mlx_new_window(void **ptr, void *mlx_ptr, t_vec2i size, char *title);
+t_err	ft_err_mlx_new_window(void **ptr, void *mlx_ptr, t_vec2i size, \
+	char *title);
 
 /**
  * @brief Wrapper function for mlx_new_image() to print errno.

@@ -6,11 +6,11 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 01:11:24 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/06 15:59:30 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:12:59 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "texture_bonus.h"
+#include "texture_bonus.h"
 
 void	ft_apply_checker_texture(t_hitrecord *rec)
 {

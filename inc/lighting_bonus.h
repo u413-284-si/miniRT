@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:18:23 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/04 01:24:56 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:16:51 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@
 void		ft_enlighten(t_colour *ray_colour, t_hitrecord rec, \
 	t_entities scene, t_cam cam);
 
-
 /**
  * @brief Computes the colour of light interacting with different
  * material properties
@@ -57,7 +56,6 @@ t_colour	ft_compute_colour(t_light cur, t_hitrecord rec, \
  * @return t_colour 
  */
 t_colour	ft_ambient_light(t_light ambient);
-
 
 /**
  * @brief Create diffuse lighting
