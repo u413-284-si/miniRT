@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:32:23 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/12 20:38:58 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:02:17 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,14 @@ bool	ft_hit_hittable(t_hittable obj, t_hitrecord *rec, t_interval ray_d)
 		return (ft_hit_cone(obj.params.co, rec, ray_d));
 	else
 		return (false);
+}
+
+void	ft_set_hitrecord_features(t_hitrecord *rec, t_hittable cur, \
+	t_interval *ray_d)
+{
+	ray_d->max = rec->d;
+	rec->shininess = cur.shininess;
+	rec->reflectivity = cur.reflectivity;
+	if (cur.checkered)
+		rec->checkered = true;
 }

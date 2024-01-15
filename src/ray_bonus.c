@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/12 20:38:48 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:02:10 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,8 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam)
 	{
 		cur = scene.obj[i];
 		if (ft_hit_hittable(cur, &rec, ray_d))
-		{
 			if (rec.d < ray_d.max)
-			{
-				ray_d.max = rec.d;
-				rec.shininess = cur.shininess;
-				rec.reflectivity = cur.reflectivity;
-				if (cur.checkered)
-					rec.checkered = true;
-			}
-		}
+				ft_set_hitrecord_features(&rec, cur, &ray_d);
 	}
 	if (ray_d.max < INFINITY)
 	{
@@ -67,7 +59,6 @@ t_colour	ft_background_colour(t_ray ray)
 	blue.r = 0.5;
 	blue.g = 0.7;
 	blue.b = 1.0;
-
 	unit_direction = ft_vec3_norm(ray.direction);
 	a = 0.5 * (unit_direction.y + 1.0);
 	ray_colour.r = (1.0 - a) * white.r + a * blue.r;

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/12 20:37:24 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/15 12:01:11 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@
  * @param checkered			Indicates whether the hittable has a checkered texture
  * @param u					U-coordinate of hittable at intersection point
  * @param v					V-coordinate of hittable at intersection point
- * @param wall_hit			Bool to differentiate between a wall or cap hit with cylinders/cones
+ * @param wall_hit			Bool to differentiate between a wall or cap hit
+ * 							with cylinders/cones
  */
 typedef struct s_hitrecord
 {
@@ -67,7 +68,21 @@ typedef struct s_hitrecord
  * 
  * @param rec 		Hitrecord to be initiated
  */
-void		ft_init_hitrecord(t_hitrecord *rec);
+void	ft_init_hitrecord(t_hitrecord *rec);
+
+/**
+ * @brief Sets hit record values after a valid hit has been found
+ * 
+ * - Sets max interval value ray_d.max to rec.d
+ * - Sets shininess
+ * - Sets reflectivity
+ * - Sets checkered if given
+ * @param rec	Hit record to be updated
+ * @param cur	Hittable providing the values
+ * @param ray_d	Interval in which a hit is considered valid
+ */
+void	ft_set_hitrecord_features(t_hitrecord *rec, t_hittable cur, \
+	t_interval *ray_d);
 
 /**
  * @brief Investigate a hittable and returns whether a hit
@@ -356,8 +371,8 @@ bool	ft_co_visible(t_interval ray_d, float potential_hits[3]);
 void	ft_get_co_uvcoords(t_hitrecord *rec, t_cone co);
 
 /**
- * @brief Overwrites the hit record "rec" with the new hit data found in the "tmp" hit
- * record
+ * @brief Overwrites the hit record "rec" with the new hit data found in 
+ * the "tmp" hit record
  * 
  * @param co 	Cone struct containing its parameters
  * @param rec 	Main hit record responsible for colour definition
