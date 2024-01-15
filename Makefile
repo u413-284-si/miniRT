@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/14 10:34:18 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/15 11:49:28 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -165,7 +165,6 @@ SRC :=	camera_movement.c \
 		render_keyhook_hittable.c \
 		render_keyhook_light.c \
 		render_keyhook_press.c \
-		render_keyhook_release.c \
 		render_keyhook_scene.c \
 		render_keyhook_utils.c \
 		render_loop_mlx.c \

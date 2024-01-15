@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 15:18:18 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/15 11:47:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,16 @@ static void	ft_toggle_menu(t_render *render)
 
 int	ft_keyhook_press(int key, t_render *render)
 {
-	if (key == XK_Escape)
-		return (mlx_loop_end(render->mlx_ptrs.mlx_ptr));
-	else if (render->is_printing)
+	if (ft_is_printing(render))
 		return (0);
+	else if (key == XK_Escape)
+		return (mlx_loop_end(render->mlx_ptrs.mlx_ptr));
+	if (key == XK_p)
+	{
+		ft_toggle_is_printing(render);
+		ft_spin_detached_thread(render, ft_output_threaded);
+		return (0);
+	}
 	else if (key == XK_i)
 		ft_toggle_menu(render);
 	else if (key == XK_Control_L)

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 10:21:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/15 11:18:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,17 +112,18 @@ typedef enum e_mode
  */
 typedef struct s_render
 {
-	t_mlx_ptrs	mlx_ptrs;
-	t_cam		cam;
-	t_entities	scene;
-	t_mouse		mouse;
-	t_menu		menu;
-	t_mode		mode;
-	bool		show_menu;
-	bool		is_printing;
-	bool		is_changed;
-	int			active_hittable;
-	int			active_light;
+	t_mlx_ptrs		mlx_ptrs;
+	t_cam			cam;
+	t_entities		scene;
+	t_mouse			mouse;
+	t_menu			menu;
+	t_mode			mode;
+	bool			show_menu;
+	bool			is_printing;
+	bool			is_changed;
+	int				active_hittable;
+	int				active_light;
+	pthread_mutex_t	mut_print;
 }	t_render;
 
 /* ====== FUNCTIONS ====== */
@@ -196,12 +197,10 @@ void	ft_blend_background(t_img *img, t_img *veil, t_menu menu);
 /**
  * @brief Outputs the current mlx img as a ppm file.
  *
- * @param img_arr	Pointer to mlx img array, cast into int.
- * @param width		Width of the image.
- * @param height	Height of the image.
+ * @param img		Pointer to mlx img struct.
  * @return t_err	SUCCESS, ERROR.
  */
-t_err	ft_output_as_ppm(const t_img img, bool *is_printing);
+t_err	ft_output_as_ppm(const t_img img);
 
 // render_keyhook_press.c
 
@@ -456,5 +455,9 @@ void	ft_render_start_loop(t_render *render);
 void	ft_menu_put_text(t_render *render);
 
 void	*ft_render_image_threaded(void *arg);
+
+void	*ft_output_threaded(void *arg);
+bool	ft_is_printing(t_render *render);
+void	ft_toggle_is_printing(t_render *render);
 
 #endif
