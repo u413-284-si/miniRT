@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:28:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 10:02:26 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/15 11:35:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ t_err	ft_spin_threads(void *arg, void *(*routine)(void *))
 
 t_err	ft_spin_detached_thread(void *arg, void *(*routine)(void *))
 {
-	t_thread_data	thread;
+	static t_thread_data	thread;
 
 	thread.id = 1;
 	thread.arg = arg;

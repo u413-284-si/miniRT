@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:57:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 13:23:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/15 11:27:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static void	ft_create_filename(char outfile[14])
 	ft_strlcat(outfile, ".ppm", 14);
 }
 
-t_err	ft_output_as_ppm(const t_img img, bool *is_printing)
+t_err	ft_output_as_ppm(const t_img img)
 {
 	int		fd;
 	char	outfile[14];
@@ -75,6 +75,32 @@ t_err	ft_output_as_ppm(const t_img img, bool *is_printing)
 	ft_write_to_file(fd, (int *)img.addr, img.size.x * img.size.y);
 	if (ft_err_close(fd))
 		return (ERROR);
-	*is_printing = false;
 	return (SUCCESS);
+}
+
+bool	ft_is_printing(t_render *render)
+{
+	bool	ret;
+
+	pthread_mutex_lock(&render->mut_print);
+	ret = render->is_printing;
+	pthread_mutex_unlock(&render->mut_print);
+	return (ret);
+}
+
+void	ft_toggle_is_printing(t_render *render)
+{
+	pthread_mutex_lock(&render->mut_print);
+	render->is_printing = !render->is_printing;
+	pthread_mutex_unlock(&render->mut_print);
+}
+
+void	*ft_output_threaded(void *arg)
+{
+	t_render		*render;
+
+	render = ((t_thread_data *)arg)->arg;
+	ft_output_as_ppm(render->mlx_ptrs.img);
+	ft_toggle_is_printing(render);
+	return (NULL);
 }
