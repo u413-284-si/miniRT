@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:47:04 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/10 19:48:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/15 22:22:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,16 @@ void	ft_interpolate_colour(t_colour *result, float progress)
 {
 	const int		index = (int)(progress * (NUM_RAINBOW_COLOURS - 1));
 	const float		frac = fmod(progress * (NUM_RAINBOW_COLOURS - 1), 1.0);
-	const t_colour	color1 = ft_get_colour(index);
-	t_colour		color2;
+	const t_colour	colour1 = ft_get_colour(index);
+	t_colour		colour2;
 
 	if (index + 1 < NUM_RAINBOW_COLOURS)
-		color2 = ft_get_colour(index + 1);
+		colour2 = ft_get_colour(index + 1);
 	else
-		color2 = ft_get_colour(0);
-	result->r = color1.r + frac * (color2.r - color1.r);
-	result->g = color1.g + frac * (color2.g - color1.g);
-	result->b = color1.b + frac * (color2.b - color1.b);
+		colour2 = ft_get_colour(0);
+	result->r = colour1.r + frac * (colour2.r - colour1.r);
+	result->g = colour1.g + frac * (colour2.g - colour1.g);
+	result->b = colour1.b + frac * (colour2.b - colour1.b);
 }
 
 void	ft_static_interpolate(t_colour *result, float inc)
