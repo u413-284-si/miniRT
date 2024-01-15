@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:28:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 10:21:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/15 10:02:26 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,23 @@ t_err	ft_spin_threads(void *arg, void *(*routine)(void *))
 		return (ERROR);
 	}
 	ft_join_threads(threads, true);
+	return (SUCCESS);
+}
+
+t_err	ft_spin_detached_thread(void *arg, void *(*routine)(void *))
+{
+	t_thread_data	thread;
+
+	thread.id = 1;
+	thread.arg = arg;
+	errno = pthread_create(&thread.t_id, NULL, routine, &thread);
+	if (errno)
+	{
+		ft_perror("pthread_create() failed", errno);
+		return (ERROR);
+	}
+	errno = pthread_detach(thread.t_id);
+	if (errno)
+		ft_perror("pthread_detach() failed", errno);
 	return (SUCCESS);
 }

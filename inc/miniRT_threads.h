@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:34:50 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 10:14:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/15 10:03:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,17 @@ t_err	ft_create_threads(void *arg, void *(*routine)(void *),
  * 					been created
  */
 void	ft_join_threads(t_thread_data threads[NUM_THREADS], bool join_all);
+
+/**
+ * @brief Creates a single thread, which is detached.
+ *
+ * If thread_create() fails, sets errno, ft_perror()s the error message and
+ * returns ERROR.
+ * If thread_create() succeeds, detaches the thread and returns SUCCESS.
+ * @param arg		Argument to pass to routine
+ * @param routine	Function to call
+ * @return t_err	ERROR, if thread_create() fails or SUCCESS
+ */
+t_err	ft_spin_detached_thread(void *arg, void *(*routine)(void *));
 
 #endif
