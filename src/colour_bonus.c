@@ -6,31 +6,11 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/15 11:46:19 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 00:04:55 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "colour_bonus.h"
-
-void	ft_write_colour(t_colour pixel, int samples)
-{
-	int			ir;
-	int			ig;
-	int			ib;
-	float		scale;
-	t_interval	interval;
-
-	scale = 1.0 / samples;
-	interval.max = 0.999;
-	interval.min = 0.0;
-	pixel.r *= scale;
-	pixel.g *= scale;
-	pixel.b *= scale;
-	ir = (int)(256 * ft_clamp(pixel.r, interval));
-	ig = (int)(256 * ft_clamp(pixel.g, interval));
-	ib = (int)(256 * ft_clamp(pixel.b, interval));
-	printf("%d %d %d\n", ir, ig, ib);
-}
 
 t_colour	ft_add_colour(t_colour c1, t_colour c2)
 {

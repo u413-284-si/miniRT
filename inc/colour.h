@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/14 19:45:02 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 00:05:10 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,6 @@ typedef enum e_col_name
  * @param colour 	Colour to be initiated	
  */
 void		ft_init_colour(t_colour *colour);
-
-/**
- * @brief Write a colour to std out
- * 
- * @param pixel 	Pixel containing the RBG values
- */
-void		ft_write_colour(t_colour pixel);
 
 /**
  * @brief Add two colours

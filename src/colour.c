@@ -6,23 +6,11 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/15 11:44:11 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 00:04:44 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "colour.h"
-
-void	ft_write_colour(t_colour pixel)
-{
-	int		ir;
-	int		ig;
-	int		ib;
-
-	ir = (int)(255.99 * pixel.r);
-	ig = (int)(255.99 * pixel.g);
-	ib = (int)(255.99 * pixel.b);
-	printf("%d %d %d\n", ir, ig, ib);
-}
 
 t_colour	ft_add_colour(t_colour c1, t_colour c2)
 {
@@ -35,10 +23,8 @@ t_colour	ft_add_colour(t_colour c1, t_colour c2)
 
 t_colour	ft_hadamard_colour(t_colour c1, t_colour c2)
 {
-	t_interval	interval;
+	const t_interval	interval = (t_interval){.min = 0.0, .max = 1.0};
 
-	interval.min = 0.0;
-	interval.max = 1.0;
 	return ((t_colour){
 		.r = ft_clamp(c1.r * c2.r, interval),
 		.b = ft_clamp(c1.b * c2.b, interval),
