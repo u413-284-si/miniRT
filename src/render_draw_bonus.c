@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 19:29:05 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/16 17:47:37 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,23 +68,44 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color)
 
 void	ft_render_image(t_render *render)
 {
-	int			iterate[2];
+	t_vec2i		iterate;
 	t_colour	pixel_colour;
 	int			colour;
 
-	iterate[1] = -1;
-	while (++iterate[1] < render->cam.image.y)
+	iterate.y = -1;
+	while (++iterate.y < render->cam.image.y)
 	{
-		iterate[0] = -1;
-		while (++iterate[0] < render->cam.image.x)
+		iterate.x = -1;
+		while (++iterate.x < render->cam.image.x)
 		{
 			pixel_colour = ft_anti_aliase_colour(iterate, \
 				render->cam.pixels, render->cam, render->scene);
 			colour = ft_convert_colour2int(pixel_colour);
-			ft_put_pix_to_image(&render->mlx_ptrs.img, iterate[0], \
-				iterate[1], colour);
+			ft_put_pix_to_image(&render->mlx_ptrs.img, iterate.x, \
+				iterate.y, colour);
 		}
 	}
 	mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr,
 		render->mlx_ptrs.img.ptr, 0, 0);
+}
+
+t_colour	ft_anti_aliase_colour(t_vec2i iterate, t_pixel_grid pixels, \
+	t_cam cam, t_entities scene)
+{
+	int			curr_sample;
+	t_ray		ray;
+	t_colour	pixel_colour;
+
+	curr_sample = -1;
+	ft_init_colour(&pixel_colour);
+	while (++curr_sample < SAMPLE_SIZE)
+	{
+		ray = ft_create_sample_ray(iterate.x, iterate.y, pixels, cam);
+		pixel_colour = ft_add_colour(pixel_colour, \
+			ft_ray_colour(ray, scene, cam));
+	}
+	pixel_colour.r /= SAMPLE_SIZE;
+	pixel_colour.g /= SAMPLE_SIZE;
+	pixel_colour.b /= SAMPLE_SIZE;
+	return (pixel_colour);
 }
