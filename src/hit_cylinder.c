@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/09 11:33:37 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 00:26:47 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,11 @@ bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, float potential_hits[4])
 
 float	ft_cy_cap_hit(t_cylinder cy, t_ray ray, t_vec3 cap)
 {
-	t_plane		pl;
-	t_hitrecord	rec;
-	t_interval	ray_d;
+	const t_plane	pl = (t_plane){.point = cap, .normal = cy.axis, \
+		.colour = cy.colour};
+	t_hitrecord		rec;
+	t_interval		ray_d;
 
-	pl.point = cap;
-	pl.normal = cy.axis;
-	pl.colour = cy.colour;
 	ft_init_hitrecord(&rec);
 	rec.ray = ray;
 	ft_init_interval(&ray_d);

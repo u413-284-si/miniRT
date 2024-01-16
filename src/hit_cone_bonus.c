@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:33:09 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/15 12:05:57 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 00:22:50 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,11 @@ bool	ft_co_calc_pot_hits(t_cone co, t_ray ray, float potential_hits[3])
 
 float	ft_co_cap_hit(t_cone co, t_ray ray)
 {
-	t_plane		pl;
-	t_hitrecord	rec;
-	t_interval	ray_d;
+	const t_plane	pl = (t_plane){.point = co.base, .normal = co.axis, \
+		.colour = co.colour};
+	t_hitrecord		rec;
+	t_interval		ray_d;
 
-	pl.point = co.base;
-	pl.normal = co.axis;
-	pl.colour = co.colour;
 	ft_init_hitrecord(&rec);
 	rec.ray = ray;
 	ft_init_interval(&ray_d);
