@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 12:18:13 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/16 17:28:53 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include "cleanup.h"
 # include "ft_strtod.h"
 # include "entities_bonus.h"
-# include "camera_bonus.h"
+# include "camera.h"
 
 /* ====== FUNCTIONS ====== */
 

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:18:23 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/15 12:16:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/16 17:28:45 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /* ====== LIBRARIES ====== */
 
 # include "hit_manager_bonus.h"
-# include "camera_bonus.h"
+# include "camera.h"
 # include "texture_bonus.h"
 
 /* ====== TYPEDEFS ====== */

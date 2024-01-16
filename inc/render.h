@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 19:02:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/16 17:29:40 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,14 @@
 # include "print.h"
 # include "vec2.h"
 # include "render_menu.h"
+# include "camera.h"
 
 # if IS_BONUS==1
 #  include "miniRT_config_bonus.h"
-#  include "camera_bonus.h"
 #  include "ray_bonus.h"
 #  include "entities_bonus.h"
 # else
 #  include "miniRT_config.h"
-#  include "camera.h"
 #  include "ray.h"
 #  include "entities.h"
 # endif

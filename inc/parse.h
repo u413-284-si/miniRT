@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 16:54:15 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/16 17:29:57 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@
 # include "error_syscall.h"
 # include "cleanup.h"
 # include "ft_strtod.h"
+# include "camera.h"
 
 # if IS_BONUS == 1
 #  include "entities_bonus.h"
-#  include "camera_bonus.h"
 # else
 #  include "entities.h"
-#  include "camera.h"
 # endif
 
 /* ====== FUNCTIONS ====== */

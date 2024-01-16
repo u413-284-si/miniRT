@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/15 12:17:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/16 17:30:12 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,14 @@
 // Home-grown libs
 # include "ft_print.h"
 # include "init.h"
+# include "camera.h"
 
 # if IS_BONUS == 1
 #  include "parse_bonus.h"
 #  include "render_bonus.h"
-#  include "camera_bonus.h"
 # else
 #  include "parse.h"
 #  include "render.h"
-#  include "camera.h"
 # endif
 
 #endif

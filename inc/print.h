@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 11:26:06 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 19:13:39 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/16 17:29:16 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,14 @@
 // Home-grown libs
 # include "vec3.h"
 # include "mat4.h"
+# include "camera.h"
 
 # if IS_BONUS==1
 #  include "colour_bonus.h"
 #  include "entities_bonus.h"
-#  include "camera_bonus.h"
 # else
 #  include "colour.h"
 #  include "entities.h"
-#  include "camera.h"
 # endif
 
 /* ====== FUNCTIONS ====== */

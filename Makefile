@@ -6,20 +6,9 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/15 12:15:08 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/16 17:42:07 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-# ******************************
-# *     Verbosity              *
-# ******************************
-
-# Set VERBOSE=1 to echo all commands
-ifeq ($(VERBOSE),1)
-	SILENT =
-else
-	SILENT = @
-endif
 
 # ******************************
 # *     Verbosity              *
@@ -106,7 +95,6 @@ LDLIBS := -lft -lm -lmlx -lXext -lX11
 CC := cc
 CPPFLAGS := -I $(INC_DIR) -I lib/libft/include
 CFLAGS = -Wall -Werror -Wextra -gdwarf-4
-CFLAGS = -Wall -Werror -Wextra -gdwarf-4
 DEPFLAGS = -MT $@ -MMD -MP -MF $(DEP_DIR)/$*.Td
 COMPILE = $(CC) $(DEPFLAGS) $(CPPFLAGS) $(CFLAGS) -c
 POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
@@ -173,6 +161,7 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # ******************************
 
 SRC_COMMON := 	camera_movement.c \
+				camera.c \
 				check_entity_ACL.c \
 				check_line.c \
 				cleanup.c \
@@ -219,8 +208,7 @@ SRC_COMMON := 	camera_movement.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c
 
-SRC_BASE :=		camera.c \
-				check.c \
+SRC_BASE :=		check.c \
 				check_entity_sp_pl_cy.c \
 				colour.c \
 				error_msg_check.c \
@@ -237,8 +225,7 @@ SRC_BASE :=		camera.c \
 				utils_cylinder.c \
 				utils_math.c
 
-SRC_BONUS :=	camera_bonus.c \
-				check_bonus.c \
+SRC_BONUS :=	check_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
 				colour_bonus.c \
 				error_msg_check_bonus.c \
@@ -254,7 +241,6 @@ SRC_BONUS :=	camera_bonus.c \
 				scene_light_bonus.c \
 				scene_reflection_bonus.c \
 				texture_bonus.c \
-				utils_camera_bonus.c \
 				utils_colour_bonus.c \
 				utils_cone_bonus.c \
 				utils_cylinder_bonus.c \
