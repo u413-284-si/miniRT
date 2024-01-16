@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/17 00:26:47 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 00:38:40 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,18 @@ bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, float potential_hits[4])
 {
 	t_equation	eq;
 	t_vec3		cap1_ray;
+	float		dot_product_ray_axis;
+	float		dot_product_cap_axis;
 
 	cap1_ray = ft_vec3_sub(ray.origin, cy.cap1);
+	dot_product_ray_axis = ft_vec3_dot(ray.direction, cy.axis);
+	dot_product_cap_axis = ft_vec3_dot(cap1_ray, cy.axis);
 	eq.a = ft_vec3_dot(ray.direction, ray.direction) - \
-		pow(ft_vec3_dot(ray.direction, cy.axis), 2);
+		pow(dot_product_ray_axis, 2);
 	eq.b = 2.0 * (ft_vec3_dot(ray.direction, cap1_ray) - \
-		(ft_vec3_dot(ray.direction, cy.axis) * ft_vec3_dot(cap1_ray, cy.axis)));
+		(dot_product_ray_axis * dot_product_cap_axis));
 	eq.c = ft_vec3_dot(cap1_ray, cap1_ray) - \
-		pow(ft_vec3_dot(cap1_ray, cy.axis), 2) - pow(cy.d / 2.0, 2);
+		pow(dot_product_cap_axis, 2) - pow(cy.d / 2.0, 2);
 	if (ft_solve(&eq) < 0)
 		return (false);
 	potential_hits[0] = eq.d1;
