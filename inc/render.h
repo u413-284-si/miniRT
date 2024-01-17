@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 10:57:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 11:27:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,6 +123,7 @@ typedef struct s_render
 	bool			is_changed;
 	int				active_hittable;
 	int				active_light;
+	bool			is_threaded;
 	pthread_mutex_t	mut_print;
 }	t_render;
 
@@ -178,6 +179,23 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color);
  * @param render	Pointer to render struct.
  */
 void	ft_render_image(t_render *render);
+
+/**
+ * @brief Creates a blended colour from colour and menu colour.
+ *
+ * Uses formula ColC = alpha{ColA} * ColA + (1 - alpha{ColA} ) * ColB.
+ * The color of menu is pre-calculated to speed up the process.
+ * Also makes use of two simplifications:
+ * 1: less variables
+ * 2: less precision for division
+ * Ad 1: the channels R and B are stored in the same variable. They are
+ * far enough apart in memory.
+ * Ad 2: Instead of dividing by 255.99 we bit shift by >>8 == 256.
+ * @param bg_color
+ * @param menu
+ * @return uint32_t
+ */
+uint32_t	ft_fast_alpha_blend(uint32_t bg_color, t_menu menu);
 
 /**
  * @brief Aplha blends current image with menu color to create overlay.

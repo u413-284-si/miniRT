@@ -6,13 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 08:40:21 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 11:20:11 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
 
-static uint32_t	ft_fast_alpha_blend(uint32_t bg_color, t_menu menu)
+uint32_t	ft_fast_alpha_blend(uint32_t bg_color, t_menu menu)
 {
 	uint32_t	bg_rb;
 	uint32_t	bg_g;
