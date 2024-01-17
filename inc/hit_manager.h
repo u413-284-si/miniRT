@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/15 12:18:27 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 12:56:35 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -205,5 +205,16 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec);
  * @param potential_hits	Float array for four potential hits
  */
 bool	ft_cy_visible(t_interval ray_d, float potential_hits[4]);
+
+/**
+ * @brief Overwrites the hit record "rec" with the new hit data found 
+ * in the "tmp" hit record
+ * 
+ * @param cy 	Cylinder struct containing its parameters
+ * @param rec 	Main hit record responsible for colour definition
+ * @param tmp 	Temporary hit record to identify the closest hit point
+ */
+void	ft_cy_set_hitrecord(t_cylinder cy, t_hitrecord *rec, t_hitrecord tmp);
+
 
 #endif
