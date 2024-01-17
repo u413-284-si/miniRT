@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 13:34:23 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 16:27:21 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +67,12 @@ t_colour	ft_background_colour(t_ray ray)
 	return (ray_colour);
 }
 
-t_ray	ft_create_sample_ray(int i, int j, t_pixel_grid pixels, t_cam cam)
+t_ray	ft_create_sample_ray(t_vec3 pixel_centre, t_pixel_grid pixels, \
+	t_cam cam)
 {
-	t_vec3	pixel_centre;
 	t_vec3	pixel_sample;
 	t_ray	ray;
 
-	pixel_centre = ft_vec3_add(ft_vec3_add(pixels.pos00, \
-		ft_vec3_scale(pixels.delta_u, i)), ft_vec3_scale(pixels.delta_v, j));
 	pixel_sample = ft_vec3_add(pixel_centre, ft_pixel_sample(pixels));
 	ray.origin = cam.centre;
 	ray.direction = ft_vec3_norm(ft_vec3_sub(pixel_sample, ray.origin));

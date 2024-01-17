@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 13:30:59 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 16:26:57 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,14 @@ t_colour	ft_background_colour(t_ray ray);
  * 
  * Square size is the distance to the next pixel. Therefore it extends halfway
  * to each neighbouring pixel.
- * @param i 		Current pixel position within a row
- * @param j 		Current pixel position within a column
- * @param pixels	Pixel grid defining its starting position and
- * 					horizontal/vertical distances
- * @param cam 		Camera
+ * @param pixel_centre	Position of current pixel 
+ * @param pixels		Pixel grid defining its starting position and
+ * 						horizontal/vertical distances
+ * @param cam 			Camera
  * @return t_ray 
  */
-t_ray		ft_create_sample_ray(int i, int j, t_pixel_grid pixels, t_cam cam);
+t_ray		ft_create_sample_ray(t_vec3 pixel_centre, t_pixel_grid pixels, \
+	t_cam cam);
 
 /**
  * @brief Generate a random vector that is confined within the square
