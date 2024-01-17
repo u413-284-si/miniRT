@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   threads.c                                          :+:      :+:    :+:   */
+/*   threads_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:28:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 22:19:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 10:57:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT_threads.h"
+#include "threads_bonus.h"
 
 t_err	ft_create_threads(void *arg, void *(*routine)(void *),
 			t_thread_data threads[NUM_THREADS])

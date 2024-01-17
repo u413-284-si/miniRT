@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   miniRT_threads.h                                   :+:      :+:    :+:   */
+/*   threads_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:34:50 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 22:19:03 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 10:56:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_THREADS_H
-# define MINIRT_THREADS_H
+#ifndef THREADS_BONUS_H
+# define THREADS_BONUS_H
 
 /* ====== LIBRARIES ====== */
 
 # include <pthread.h>
 # include "error_type.h"
 # include "error_msg.h"
-
-/* ====== MACROS ====== */
-
-# define NUM_THREADS 16
+# include "miniRT_config.h"
 
 /* ====== STRUCTS ====== */
 
@@ -51,7 +48,7 @@ t_err	ft_spin_threads(void *arg, void *(*routine)(void *));
  * Catches return of thread_create() in errno. If it fails, ft_perror()s
  * the error message and sets current thread id to -1.
  * This way, ft_join_threads() can be called with join_all = false to join
- * only the threads which have been created. Then returns ERROR.
+ * only the threads which have been created.
  * @param arg		Argument to pass to routine
  * @param routine	Function to call
  * @param threads	Array of t_thread_data
@@ -67,7 +64,7 @@ t_err	ft_create_threads(void *arg, void *(*routine)(void *),
  * the threads which have been created.
  * @param threads	Array of t_thread_data
  * @param join_all	Whether to join all threads or only the ones which have
- * 					been created
+ * 					been created (error case)
  */
 void	ft_join_threads(t_thread_data threads[NUM_THREADS], bool join_all);
 
@@ -76,7 +73,7 @@ void	ft_join_threads(t_thread_data threads[NUM_THREADS], bool join_all);
  *
  * If thread_create() fails, sets errno, ft_perror()s the error message and
  * returns ERROR.
- * If thread_create() succeeds, detaches the thread and returns SUCCESS.
+ * If thread_create() succeeds detaches the thread.
  * @param arg		Argument to pass to routine
  * @param routine	Function to call
  * @return t_err	ERROR, if thread_create() fails or SUCCESS

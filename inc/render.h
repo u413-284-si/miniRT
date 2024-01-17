@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 11:18:27 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 10:57:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 # include "ray.h"
 # include "vec2.h"
 # include "render_menu.h"
-# include "miniRT_threads.h"
+# include "threads_bonus.h"
 
 /* ====== TYPEDEFS ====== */
 

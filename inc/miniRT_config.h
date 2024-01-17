@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 11:37:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 10:54:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,8 @@
 # define MENU_OPACITY 100
 # define MENU_BACK 0x000000
 # define MENU_FONT 0xFFFFFF
+
+// number of threads to use
+# define NUM_THREADS 16
 
 #endif
