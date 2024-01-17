@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/16 17:47:07 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:30:59 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct s_ray
  * @param d 			Distance traveled upon hit
  * @return t_vec3 		Ray vector to hit
  */
-t_vec3		ft_ray(t_ray ray, float d);
+t_vec3		ft_scale_ray(t_ray ray, float d);
 
 /**
  * @brief Returns the colour of a ray

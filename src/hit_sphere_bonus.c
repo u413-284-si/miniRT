@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:39:35 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 13:21:24 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:30:59 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ bool	ft_hit_sphere(t_sphere sp, t_hitrecord *rec, t_interval ray_d)
 			return (false);
 	}
 	rec->d = closest_d;
-	rec->point = ft_ray(rec->ray, closest_d);
+	rec->point = ft_scale_ray(rec->ray, closest_d);
 	rec->normal = ft_vec3_norm(ft_vec3_scale(\
 		ft_vec3_sub(rec->point, sp.centre), (1.0 / sp.r)));
 	rec->colour = sp.colour;

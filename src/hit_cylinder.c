@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/17 12:57:06 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:30:59 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void	ft_cy_set_hitrecord(t_cylinder cy, t_hitrecord *rec, t_hitrecord tmp)
 {
 	rec->d = tmp.d;
 	rec->axis_hit = tmp.axis_hit;
-	rec->point = ft_ray(rec->ray, rec->d);
+	rec->point = ft_scale_ray(rec->ray, rec->d);
 	rec->normal = ft_vec3_norm(ft_cy_normal(*rec, cy));
 	rec->colour = cy.colour;
 }

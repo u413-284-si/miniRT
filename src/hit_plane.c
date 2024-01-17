@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:47:49 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/17 13:08:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:30:59 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ bool	ft_hit_plane(t_plane pl, t_hitrecord *rec, t_interval ray_d)
 		rec->normal = ft_vec3_scale(pl.normal, -1);
 	else
 		rec->normal = pl.normal;
-	rec->point = ft_ray(rec->ray, eq.d1);
+	rec->point = ft_scale_ray(rec->ray, eq.d1);
 	rec->colour = pl.colour;
 	return (true);
 }

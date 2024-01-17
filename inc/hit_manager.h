@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 12:56:35 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:31:36 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,6 +215,5 @@ bool	ft_cy_visible(t_interval ray_d, float potential_hits[4]);
  * @param tmp 	Temporary hit record to identify the closest hit point
  */
 void	ft_cy_set_hitrecord(t_cylinder cy, t_hitrecord *rec, t_hitrecord tmp);
-
 
 #endif
