@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 16:50:40 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 17:06:21 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,20 +178,27 @@ float			ft_clamp(float x, t_interval interval);
 void			ft_init_interval(t_interval *interval);
 
 /**
- * @brief 
+ * @brief Performs quaternion multiplication
  * 
- * @param q1 
- * @param q2 
+ * @param q1	First quaternion 
+ * @param q2 	Second quaternion
  * @return t_quaternion 
  */
 t_quaternion	ft_quaternion_mult(t_quaternion q1, t_quaternion q2);
 
 /**
- * @brief 
+ * @brief Performs a rotation of a given vector around an axis by
+ * a given angle
  * 
- * @param vec 
- * @param axis 
- * @param angle 
+ * The vector is transformed into a quaternion p. A quaternion q is
+ * created with the axis and the given angle. The inverse of q is
+ * calculated by setting the vector of q_inv as the vector of q 
+ * scaled by -1. 
+ * The rotation is effected by multiplying q with p, and thereafter
+ * the result with q_inv (lefthand multiplication).
+ * @param vec 		Vector to be rotated
+ * @param axis 		Axis around which to rotate
+ * @param angle 	Amount of rotation
  * @return t_vec3 
  */
 t_vec3			ft_quaternion_rot(t_vec3 vec, t_vec3 axis, float angle);
