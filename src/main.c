@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/14 07:41:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 15:05:26 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,11 @@ int	main(int argc, char **argv)
 	}
 	if (ft_parse_file(argv[1], &render.scene, &render.cam))
 		return (1);
-	if (ft_init_mlx_ptrs(&render.mlx_ptrs, false))
+	if (ft_render_init(&render))
 	{
 		ft_free_scene(&render.scene);
 		return (1);
 	}
-	if (ft_cam_init(&render.cam, render.mlx_ptrs.img.size))
-	{
-		ft_free_mlx(render.mlx_ptrs.mlx_ptr, render.mlx_ptrs.win_ptr,
-			render.mlx_ptrs.img.ptr, render.mlx_ptrs.veil.ptr);
-		ft_free_scene(&render.scene);
-		return (1);
-	}
-	ft_menu_init(&render.menu, MENU_OPACITY, MENU_BACK, MENU_FONT);
 	ft_render_start_loop(&render);
 	ft_free_scene(&render.scene);
 	free(render.cam.ray_cache);

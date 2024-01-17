@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 12:16:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 15:04:56 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,16 @@ typedef struct s_render
 /* ====== FUNCTIONS ====== */
 
 // render_init.c
+
+/**
+ * @brief Initializes the render struct.
+ *
+ * Initializes the mlx_ptrs struct, the cam struct and the menu struct.
+ * Initializes options.
+ * @param render	Pointer to render struct.
+ * @return t_err	SUCCESS, ERROR.
+ */
+t_err	ft_render_init(t_render *render);
 
 /**
  * @brief Initializes the mlx_ptrs struct.
