@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   threaded_render.c                                  :+:      :+:    :+:   */
+/*   threads_alt_versions.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 10:14:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 10:30:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 12:17:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,35 @@ void	*ft_render_image_threaded(void *arg)
 			pixel_colour = ft_ray_colour(ray, render->scene);
 			colour = ft_convert_colour2int(pixel_colour);
 			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, pos.y, colour);
+		}
+		pos.y += NUM_THREADS;
+	}
+	return (NULL);
+}
+
+void	*ft_blend_background_threaded(void *arg)
+{
+	t_render	*render;
+	t_vec2i		pos;
+	uint32_t	*img_pixel;
+	uint32_t	*veil_pixel;
+	uint32_t	blend_colour;
+
+	render = ((t_thread_data *)arg)->arg;
+	pos.y = ((t_thread_data *)arg)->id;
+	while (pos.y < render->mlx_ptrs.veil.size.y)
+	{
+		pos.x = -1;
+		while (++pos.x < render->mlx_ptrs.veil.size.x)
+		{
+			img_pixel = (uint32_t *)(render->mlx_ptrs.img.addr
+					+ (pos.y * render->mlx_ptrs.img.line_len
+						+ pos.x * render->mlx_ptrs.img.bytes));
+			blend_colour = ft_fast_alpha_blend(*img_pixel, render->menu);
+			veil_pixel = (uint32_t *)(render->mlx_ptrs.veil.addr
+					+ (pos.y * render->mlx_ptrs.veil.line_len
+						+ pos.x * render->mlx_ptrs.veil.bytes));
+			*veil_pixel = blend_colour;
 		}
 		pos.y += NUM_THREADS;
 	}
