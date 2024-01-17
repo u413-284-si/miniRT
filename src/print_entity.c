@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:16:27 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 19:42:08 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:22:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_print_sphere(const t_sphere sp)
 	printf("Sphere:\n");
 	printf("Centre: ");
 	ft_print_vec3(sp.centre);
-	printf("Radius: %f\n", sp.d / 2.0);
+	printf("Radius: %f\n", sp.r);
 	printf("Colour: ");
 	ft_print_colour(sp.colour);
 }

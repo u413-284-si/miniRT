@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:55:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 19:39:14 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:22:05 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_put_hittable(t_putinfo put, t_hittable hittable)
 void	ft_put_sp(t_putinfo put, t_sphere sp)
 {
 	put.pos = ft_put_3d_point("Centre", put, sp.centre);
-	put.pos = ft_put_single_float_value("Diameter", put, sp.d / 2.0);
+	put.pos = ft_put_single_float_value("Radius", put, sp.r);
 	put.pos = ft_put_colour(put, sp.colour);
 }
 

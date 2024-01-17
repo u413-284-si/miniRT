@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 19:42:54 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:22:38 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_manip_sphere(int key, t_sphere *sp)
 	if (key >= XK_0 && key <= XK_9)
 		ft_keyhook_change_col(key, &sp->colour);
 	else if (key == XK_r || key == XK_f)
-		ft_keyhook_inc_dec(key, &sp->d, FLOAT_MAX);
+		ft_keyhook_inc_dec(key, &sp->r, FLOAT_MAX);
 	else
 		ft_keyhook_mv_point(key, &sp->centre);
 }

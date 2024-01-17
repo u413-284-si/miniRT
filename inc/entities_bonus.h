@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/15 12:19:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:20:46 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,13 @@ typedef struct s_light
  * @brief Represents a sphere
  * 
  * @param centre	Centre of the sphere
- * @param d			Diameter of the sphere
+ * @param r			Radius of the sphere
  * @param colour	Colour of the sphere
  */
 typedef struct s_sphere
 {
 	t_vec3		centre;
-	float		d;
+	float		r;
 	t_colour	colour;
 }	t_sphere;
 

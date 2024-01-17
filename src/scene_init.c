@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:08:13 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/24 18:28:02 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:22:26 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	ft_initiate_spheres(t_hittable *obj)
 	obj[0].params.sp.centre.x = -cos(M_PI / 4);
 	obj[0].params.sp.centre.y = 0.0;
 	obj[0].params.sp.centre.z = -1.0;
-	obj[0].params.sp.d = cos(M_PI / 4) * 2;
+	obj[0].params.sp.r = cos(M_PI / 4) * 2;
 	obj[0].params.sp.colour.r = 0.0;
 	obj[0].params.sp.colour.g = 0.0;
 	obj[0].params.sp.colour.b = 1.0;
@@ -63,7 +63,7 @@ void	ft_initiate_spheres(t_hittable *obj)
 	obj[1].params.sp.centre.x = cos(M_PI / 4);
 	obj[1].params.sp.centre.y = 0;
 	obj[1].params.sp.centre.z = -1.0;
-	obj[1].params.sp.d = cos(M_PI / 4) * 2;
+	obj[1].params.sp.r = cos(M_PI / 4) * 2;
 	obj[1].params.sp.colour.r = 1.0;
 	obj[1].params.sp.colour.g = 0.0;
 	obj[1].params.sp.colour.b = 0.0;

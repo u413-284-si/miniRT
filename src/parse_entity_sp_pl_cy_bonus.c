@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:34:38 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 19:21:07 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:23:41 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ void	ft_parse_sphere(char *line, t_hittable *sphere, size_t id)
 	sphere->type = SPHERE;
 	params = &sphere->params.sp;
 	ft_parse_float_block(&line, &params->centre);
-	ft_parse_float(&line, &params->d);
+	ft_parse_float(&line, &params->r);
+	params->r = params->r / 2.0;
 	ft_parse_float(&line, &sphere->shininess);
 	ft_parse_float(&line, &sphere->reflectivity);
 	ft_parse_float(&line, &sphere->checkered);
