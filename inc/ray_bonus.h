@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 16:26:57 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 17:08:34 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ t_colour	ft_background_colour(t_ray ray);
 /**
  * @brief Creates a random sample ray in a square surrounding the current pixel
  * 
- * Square size is the distance to the next pixel. Therefore it extends halfway
- * to each neighbouring pixel.
+ * Square side length is the distance to the next pixel.
+ * Therefore it extends halfway to each neighbouring pixel.
  * @param pixel_centre	Position of current pixel 
  * @param pixels		Pixel grid defining its starting position and
  * 						horizontal/vertical distances
