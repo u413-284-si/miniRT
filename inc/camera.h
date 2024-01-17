@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 10:56:44 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 10:59:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,7 +133,7 @@ void	ft_cam_calc_viewport_dimensions(t_cam *cam);
  * The position of the first pixel is then calculated from the upper left corner.
  * @param cam		Struct containing camera parameters.
  */
-void	ft_cam_update(t_cam *cam);
+void	ft_cam_calc_pixel_grid(t_cam *cam);
 
 /**
  * @brief Calculates all pixel ray directions.
