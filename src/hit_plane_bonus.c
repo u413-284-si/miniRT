@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:47:49 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/17 13:08:22 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 13:15:16 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ void	ft_get_pl_uvcoords(t_hitrecord *rec)
 	t_vec3	base1;
 	t_vec3	base2;
 
-	base1 = ft_vec3_norm(ft_vec3_cross(rec->normal, (t_vec3){1, 0, 0}));
+	base1 = ft_vec3_cross(rec->normal, (t_vec3){1, 0, 0});
 	if (ft_vec3_equal(base1, (t_vec3){0, 0, 0}))
-		base1 = ft_vec3_norm(ft_vec3_cross(rec->normal, (t_vec3){0, 0, 1}));
-	base2 = ft_vec3_norm(ft_vec3_cross(rec->normal, base1));
+		base1 = ft_vec3_cross(rec->normal, (t_vec3){0, 0, 1});
+	base2 = ft_vec3_cross(rec->normal, base1);
 	rec->u = ft_vec3_dot(base1, rec->point);
 	rec->v = ft_vec3_dot(base2, rec->point);
 }
