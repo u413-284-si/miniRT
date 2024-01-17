@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/15 12:18:50 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 16:50:40 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <math.h>
 # include <stdbool.h>
 # include <stdlib.h>		// required for rand()
+# include <time.h>
 
 //home-grown libs
 # include "vec3.h"
@@ -126,6 +127,7 @@ bool			ft_surrounds(float x, t_interval interval);
  * Discriminant < 0: no real solution, return -1
  * Discriminant = 0: one solution, return 0
  * Discriminant > 0: two solutions, return > 0
+ * Two solutions are stored in d1 and d2.
  * @param eq 		Equation to solve
  * @return float
  */
