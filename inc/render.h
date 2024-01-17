@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 16:51:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 17:26:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -391,10 +391,12 @@ void	ft_keyhook_fov_cam(int key, t_cam *cam);
  * Checks for keypresses and calls the corresponding function.
  * Re-calculates different aspects of camera (viewport dimensions,
  * base vectors, pixel grid) if necessary.
- * @param key	Keycode of the pressed key.
- * @param cam	Pointer to camera struct.
+ * @param key			Keycode of the pressed key.
+ * @param cam			Pointer to camera struct.
+ * @param is_threaded	Flag if rendering is threaded.
+ * @param is_changed	Flag if scene was changed.
  */
-void	ft_manip_cam(int key, t_cam *cam);
+void	ft_manip_cam(int key, t_cam *cam, bool *is_threaded, bool *is_changed);
 
 // render_keyhook_light.c
 
@@ -481,13 +483,6 @@ void	ft_render_start_loop(t_render *render);
  */
 void	ft_menu_put_text(t_render *render);
 
-void	*ft_render_image_threaded(void *arg);
-void	*ft_blend_background_threaded(void *arg);
-
-void	*ft_output_threaded(void *arg);
-bool	ft_is_printing(t_render *render);
-void	ft_toggle_is_printing(t_render *render);
-
 /**
  * @brief Frees ressources allocated for mlx.
  *
@@ -508,5 +503,13 @@ void	ft_free_scene(t_entities *scene);
  * @param render	Pointer to render struct.
  */
 void	ft_render_cleanup(t_render *render);
+
+void	*ft_cam_calc_rays_threaded(void *arg);
+void	*ft_render_image_threaded(void *arg);
+void	*ft_blend_background_threaded(void *arg);
+
+void	*ft_output_threaded(void *arg);
+bool	ft_is_printing(t_render *render);
+void	ft_toggle_is_printing(t_render *render);
 
 #endif

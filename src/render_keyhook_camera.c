@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 10:59:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 17:27:32 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	ft_keyhook_fov_cam(int key, t_cam *cam)
 	cam->hfov = ft_degree_to_radian(fov_in_degree);
 }
 
-void	ft_manip_cam(int key, t_cam *cam)
+void	ft_manip_cam(int key, t_cam *cam, bool *is_threaded, bool *is_changed)
 {
 	if (key == XK_r || key == XK_f)
 	{
@@ -77,4 +77,14 @@ void	ft_manip_cam(int key, t_cam *cam)
 	else
 		ft_keyhook_move_cam(key, cam);
 	ft_cam_calc_pixel_grid(cam);
+	if (is_threaded)
+	{
+		if (ft_spin_threads(cam, ft_cam_calc_rays_threaded))
+		{
+			*is_threaded = false;
+			*is_changed = false;
+		}
+	}
+	else
+		ft_cam_calc_rays(cam);
 }

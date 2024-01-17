@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 10:59:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 17:23:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,7 +171,5 @@ void	ft_cam_move_right(t_cam *cam, float distance);
  * @param distance	Distance to move the camera.
  */
 void	ft_cam_move_up(t_cam *cam, float distance);
-
-void	*ft_cam_calc_rays_threaded(void *arg);
 
 #endif

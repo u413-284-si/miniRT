@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 15:27:10 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 17:27:54 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	ft_keyhook_press(int key, t_render *render)
 		if (render->mode == CTRL_SCENE)
 			ft_manip_scene(key, &render->scene, &render->active_hittable);
 		else if (render->mode == CTRL_CAM)
-			ft_manip_cam(key, &render->cam);
+			ft_manip_cam(key, &render->cam, &render->is_threaded, &render->is_changed);
 		else if (render->mode == CTRL_LIGHT)
 			ft_manip_light(key, &render->scene, &render->active_light);
 		render->is_changed = true;
