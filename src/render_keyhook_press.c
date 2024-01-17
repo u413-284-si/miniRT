@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 11:47:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 15:27:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ int	ft_keyhook_press(int key, t_render *render)
 		ft_spin_detached_thread(render, ft_output_threaded);
 		return (0);
 	}
+	else if (key == XK_j)
+		render->is_threaded = !render->is_threaded;
 	else if (key == XK_i)
 		ft_toggle_menu(render);
 	else if (key == XK_Control_L)

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 15:04:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 16:51:59 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 # include "error_mlx.h"
 # include "camera.h"
 # include "ft_print.h"
-# include "cleanup.h"
 # include "entities.h"
 # include "miniRT_config.h"
 # include "mat4_vec3.h"
@@ -488,5 +487,26 @@ void	*ft_blend_background_threaded(void *arg);
 void	*ft_output_threaded(void *arg);
 bool	ft_is_printing(t_render *render);
 void	ft_toggle_is_printing(t_render *render);
+
+/**
+ * @brief Frees ressources allocated for mlx.
+ *
+ * @param mlx_ptrs	Pointer to mlx_ptrs struct.
+ */
+void	ft_free_mlx(t_mlx_ptrs *mlx_ptrs);
+
+/**
+ * @brief Frees ressources allocated for scene.
+ *
+ * @param scene	Pointer to scene struct.
+ */
+void	ft_free_scene(t_entities *scene);
+
+/**
+ * @brief Frees ressources allocated for render.
+ *
+ * @param render	Pointer to render struct.
+ */
+void	ft_render_cleanup(t_render *render);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 14:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 15:05:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 16:53:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ t_err	ft_render_init(t_render *render)
 		return (ERROR);
 	if (ft_cam_init(&render->cam, render->mlx_ptrs.img.size))
 	{
-		ft_free_mlx(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr,
-			render->mlx_ptrs.img.ptr, render->mlx_ptrs.veil.ptr);
+		ft_free_mlx(&render->mlx_ptrs);
 		return (ERROR);
 	}
 	ft_menu_init(&render->menu, MENU_OPACITY, MENU_BACK, MENU_FONT);
