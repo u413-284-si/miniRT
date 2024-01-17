@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 11:27:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/17 12:16:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -208,7 +208,7 @@ uint32_t	ft_fast_alpha_blend(uint32_t bg_color, t_menu menu);
  * are used to calc the blended colour.
  * @param render	Pointer to render struct.
  */
-void	ft_blend_background(t_img *img, t_img *veil, t_menu menu);
+void	ft_blend_background(t_render *render);
 
 // render_output_ppm.c
 
@@ -473,6 +473,7 @@ void	ft_render_start_loop(t_render *render);
 void	ft_menu_put_text(t_render *render);
 
 void	*ft_render_image_threaded(void *arg);
+void	*ft_blend_background_threaded(void *arg);
 
 void	*ft_output_threaded(void *arg);
 bool	ft_is_printing(t_render *render);
