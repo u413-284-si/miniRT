@@ -6,18 +6,11 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:41:43 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/15 11:46:08 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 16:31:13 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "colour_bonus.h"
-
-void	ft_init_colour(t_colour *colour)
-{
-	colour->b = 0;
-	colour->g = 0;
-	colour->r = 0;
-}
 
 int32_t	ft_convert_colour2int(t_colour colour)
 {

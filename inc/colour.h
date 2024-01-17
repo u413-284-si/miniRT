@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 00:05:10 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 16:31:24 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,6 @@ typedef enum e_col_name
 }	t_col_name;
 
 /* ====== FUNCTIONS ====== */
-
-/**
- * @brief Initiates colour
- * 
- * @param colour 	Colour to be initiated	
- */
-void		ft_init_colour(t_colour *colour);
 
 /**
  * @brief Add two colours

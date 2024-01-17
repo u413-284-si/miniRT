@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 23:15:28 by sqiu              #+#    #+#             */
-/*   Updated: 2023/12/27 13:22:58 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 16:33:45 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_colour	ft_reflective_light(t_light cur, t_hitrecord rec, \
 	t_interval	interval;
 	t_colour	reflective_colour;
 
-	ft_init_colour(&reflective_colour);
+	reflective_colour = (t_colour){0};
 	reflect_direction = ft_vec3_sub(rec.ray.direction, ft_vec3_scale(\
 		rec.normal, 2 * ft_vec3_dot(rec.ray.direction, rec.normal)));
 	reflect_ray.origin = rec.point;

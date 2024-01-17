@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:15:24 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/14 19:58:43 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 16:33:33 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ t_colour	ft_compute_colour(t_light cur, t_hitrecord rec, \
 	t_colour	refl;
 	t_colour	light;
 
-	ft_init_colour(&refl);
+	refl = (t_colour){0};
 	diff = ft_diffuse_light(cur, rec);
 	if (rec.reflectivity > 0.0)
 		refl = ft_reflective_light(cur, rec, scene, cam);

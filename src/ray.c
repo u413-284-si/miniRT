@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 13:34:06 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 16:32:37 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 	t_interval	ray_d;
 	int			i;
 
-	ft_init_colour(&ray_colour);
+	ray_colour = (t_colour){0};
 	ft_init_hitrecord(&rec);
 	rec.ray = ray;
 	ft_init_interval(&ray_d);
