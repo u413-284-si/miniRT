@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:33:09 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/17 13:30:59 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 16:41:18 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void	ft_co_set_hitrecord(t_cone co, t_hitrecord *rec, t_hitrecord tmp)
 	rec->d = tmp.d;
 	rec->axis_hit = tmp.axis_hit;
 	rec->point = ft_scale_ray(rec->ray, rec->d);
-	rec->normal = ft_vec3_norm(ft_co_normal(*rec, co));
+	rec->normal = ft_co_normal(*rec, co);
 	if (tmp.wall_hit)
 		ft_get_co_uvcoords(rec, co);
 	else

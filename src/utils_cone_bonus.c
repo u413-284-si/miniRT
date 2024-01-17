@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 13:42:46 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/17 13:30:59 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/17 16:41:02 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ t_vec3	ft_co_normal(t_hitrecord rec, t_cone co)
 		adj = ft_vec3_abs(ft_vec3_sub(rec.point, co.apex));
 		hip = adj / cos(co.angle);
 		tmp = ft_vec3_add(co.apex, ft_vec3_scale(co.axis, hip));
-		normal = ft_vec3_sub(rec.point, tmp);
+		normal = ft_vec3_norm(ft_vec3_sub(rec.point, tmp));
 	}
 	return (normal);
 }
