@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:15:24 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 16:33:33 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:06:56 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,13 +77,11 @@ t_colour	ft_diffuse_light(t_light cur, t_hitrecord rec)
 
 t_colour	ft_specular_light(t_light cur, t_hitrecord rec, t_cam cam)
 {
-	float	specular_strength;
 	float	specular_factor;
 	t_vec3	view_direction;
 	t_vec3	reflect_direction;
 	t_vec3	light_direction;
 
-	specular_strength = 0.5;
 	view_direction = ft_vec3_norm(ft_vec3_sub(cam.centre, rec.point));
 	light_direction = ft_vec3_norm(ft_vec3_scale(\
 		ft_vec3_sub(cur.pos, rec.point), -1));
@@ -93,8 +91,8 @@ t_colour	ft_specular_light(t_light cur, t_hitrecord rec, t_cam cam)
 	specular_factor = pow(fmaxf(0.0, ft_vec3_dot(view_direction, \
 		reflect_direction)), rec.shininess);
 	return ((t_colour){
-		.r = specular_factor * specular_strength * cur.ratio * cur.colour.r,
-		.b = specular_factor * specular_strength * cur.ratio * cur.colour.b,
-		.g = specular_factor * specular_strength * cur.ratio * cur.colour.g,
+		.r = specular_factor * SPECULAR_STRENGTH * cur.ratio * cur.colour.r,
+		.b = specular_factor * SPECULAR_STRENGTH * cur.ratio * cur.colour.b,
+		.g = specular_factor * SPECULAR_STRENGTH * cur.ratio * cur.colour.g,
 	});
 }
