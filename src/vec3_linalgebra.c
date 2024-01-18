@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3_linalgebra.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u413q <u413q@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:52:25 by u413q             #+#    #+#             */
-/*   Updated: 2023/11/18 15:26:08 by u413q            ###   ########.fr       */
+/*   Updated: 2024/01/18 09:37:00 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ float	ft_vec3_abs(t_vec3 v)
 
 t_vec3	ft_vec3_norm(t_vec3 v)
 {
-	return (ft_vec3_scale(v, 1.0 / ft_vec3_abs(v)));
+	const float	len = ft_vec3_abs(v);
+
+	if (len == 0.0)
+		return (v);
+	return (ft_vec3_scale(v, 1.0 / len));
 }
 
 float	ft_vec3_angle(t_vec3 v1, t_vec3 v2)
