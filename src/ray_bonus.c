@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 16:32:12 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/18 23:50:27 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam)
 	ray_colour = (t_colour){0};
 	ft_init_hitrecord(&rec);
 	rec.ray = ray;
-	ft_init_interval(&ray_d);
+	ray_d = (t_interval){.max = INFINITY, .min = 0};
 	i = -1;
 	while (++i < scene.total)
 	{

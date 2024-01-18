@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:33:09 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/17 16:41:18 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/18 23:49:58 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ float	ft_co_cap_hit(t_cone co, t_ray ray)
 
 	ft_init_hitrecord(&rec);
 	rec.ray = ray;
-	ft_init_interval(&ray_d);
+	ray_d = (t_interval){.max = INFINITY, .min = 0};
 	if (ft_hit_plane(pl, &rec, ray_d))
 		return (rec.d);
 	else

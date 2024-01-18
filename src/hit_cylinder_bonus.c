@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/17 16:40:04 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/18 23:50:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ float	ft_cy_cap_hit(t_cylinder cy, t_ray ray, t_vec3 cap)
 
 	ft_init_hitrecord(&rec);
 	rec.ray = ray;
-	ft_init_interval(&ray_d);
+	ray_d = (t_interval){.max = INFINITY, .min = 0};
 	if (ft_hit_plane(pl, &rec, ray_d))
 		return (rec.d);
 	else

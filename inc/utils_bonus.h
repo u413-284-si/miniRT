@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 17:06:21 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/18 23:50:53 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,13 +169,6 @@ float			ft_random_float_in(float min, float max);
  * @return float 
  */
 float			ft_clamp(float x, t_interval interval);
-
-/**
- * @brief Initiates interval
- * 
- * @param interval 			Interval to be initiated
- */
-void			ft_init_interval(t_interval *interval);
 
 /**
  * @brief Performs quaternion multiplication

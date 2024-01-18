@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/14 17:06:47 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/18 23:50:46 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,13 +128,6 @@ float	ft_solve(t_equation *eq);
  * @return false 	If they are not equal
  */
 bool	ft_nearly_equal_flt(float one, float two);
-
-/**
- * @brief Initiates interval
- * 
- * @param interval 	Interval to be initiated
- */
-void	ft_init_interval(t_interval *interval);
 
 /**
  * @brief Ensure that the returned float lies within the interval
