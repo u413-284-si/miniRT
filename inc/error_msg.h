@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:44:43 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/25 18:19:00 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/18 09:31:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,20 @@ bool	ft_perror_separator(char *line, bool comma);
  * @return t_type Always returns UNKNOWN to chain msg and UNKNOWN in return.
  */
 t_type	ft_perror_end(char *line);
+
+/**
+ * @brief Error message if vector is not a unit vector.
+ *
+ * @param line		Line with position, where vector starts.
+ * @return false	Always returns false to chain msg and false in return.
+ */
+bool	ft_perror_not_unit(char *line);
+
+/**
+ * @brief Warning message if vector is not a unit vector.
+ *
+ * @param line		Line with position, where vector starts.
+ */
+void	ft_pwarning_not_unit(char *line);
 
 #endif
