@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render_keyhook_hittable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 16:05:53 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 12:53:48 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	ft_manip_cylinder(int key, t_cylinder *cy)
 	else if (key >= XK_Left && key <= XK_Down)
 		ft_keyhook_rot_vec(key, &cy->axis);
 	else if (key == XK_r || key == XK_f)
-		ft_keyhook_inc_dec(key, &cy->d, FLOAT_MAX);
+		ft_keyhook_inc_dec(key, &cy->r, FLOAT_MAX);
 	else if (key == XK_t || key == XK_g)
 		ft_keyhook_inc_dec(key, &cy->h, FLOAT_MAX);
 	else

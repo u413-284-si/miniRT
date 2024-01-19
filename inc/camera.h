@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/01 18:55:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 00:16:48 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,14 @@
 
 # include "vec2.h"
 # include "vec3.h"
-# include "utils.h"
 
+# if IS_BONUS
+#  include "utils_bonus.h"
+#  include "miniRT_config_bonus.h"
+# else
+#  include "utils.h"
+#  include "miniRT_config.h"
+# endif
 /* ====== TYPEDEFS ====== */
 
 /**

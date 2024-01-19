@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 15:43:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/15 11:40:11 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 {
-	t_type	type;
+	t_type		type;
 	static int	ent_count[SUM_ENTS];
 	size_t		i;
 
@@ -24,8 +24,7 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 		type = ft_check_line_type(lines[i++]);
 		if (type == COMMENT)
 			continue ;
-		if (type == UNKNOWN
-		|| ft_incr_ent_count(ent_count, type))
+		if (type == UNKNOWN || ft_incr_ent_count(ent_count, type))
 		{
 			ft_perror_number("Line number [ignoring empty lines]", i - 1);
 			return (ERROR);

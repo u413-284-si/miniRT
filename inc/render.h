@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 19:05:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 00:20:17 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,23 @@
 # include <X11/keysym.h>
 
 # include "error_mlx.h"
-# include "camera.h"
 # include "ft_print.h"
 # include "cleanup.h"
-# include "entities.h"
-# include "miniRT_config.h"
 # include "mat4_vec3.h"
 # include "print.h"
-# include "ray.h"
 # include "vec2.h"
 # include "render_menu.h"
+# include "camera.h"
+
+# if IS_BONUS
+#  include "miniRT_config_bonus.h"
+#  include "ray_bonus.h"
+#  include "entities_bonus.h"
+# else
+#  include "miniRT_config.h"
+#  include "ray.h"
+#  include "entities.h"
+# endif
 
 /* ====== TYPEDEFS ====== */
 
@@ -106,8 +113,6 @@ typedef enum e_mode
  * @param mlx_ptrs		mlx pointers struct.
  * @param cam			Camera struct.
  * @param scene			Scene struct.
- * @param image			Image struct.
- * @param vp			Viewport struct.
  */
 typedef struct s_render
 {

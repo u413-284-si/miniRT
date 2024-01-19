@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   entities.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/03 17:33:40 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 12:48:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,12 @@
 
 // Home-grown libs
 # include "vec3.h"
-# include "colour.h"
+
+# if IS_BONUS
+#  include "colour_bonus.h"
+# else
+#  include "colour.h"
+# endif
 
 /* ====== TYPEDEFS ====== */
 
@@ -70,7 +75,7 @@ typedef struct s_plane
  * @brief Represents a cylinder
  * @param centre	Centre of the cylinder
  * @param axis		Normalised [-1, 1] axis of the cylinder
- * @param d			Diameter of the cylinder
+ * @param r			Radius of the cylinder
  * @param h			Height of the cylinder
  * @param colour	Colour of the cylinder
  * @param cap1		Centre of first cap = centre - h/2 * axis
@@ -80,7 +85,7 @@ typedef struct s_cylinder
 {
 	t_vec3		centre;
 	t_vec3		axis;
-	float		d;
+	float		r;
 	float		h;
 	t_colour	colour;
 	t_vec3		cap1;

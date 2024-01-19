@@ -33,7 +33,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/miniRT",
-			"args": ["scenes/minimalist.rt"],
+			"args": ["scenes/cylinder.rt"],
 			"stopAtEntry": true,
 			"cwd": "${workspaceFolder}",
 			"environment": [],
@@ -52,6 +52,31 @@
 				}
 			],
 			"preLaunchTask": "make"
+		},
+		{
+			"name": "Bonus",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/miniRT_supreme",
+			"args": ["scenes/cone.rt"],
+			"stopAtEntry": true,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "make bonus"
 		}
 	]
 }

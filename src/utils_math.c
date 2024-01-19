@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   utils_math.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:48:18 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 07:30:35 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 00:20:27 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#if IS_BONUS
+# include "utils_bonus.h"
+#else
+# include "utils.h"
+#endif
 
 float	ft_degree_to_radian(float degrees)
 {
@@ -20,16 +24,6 @@ float	ft_degree_to_radian(float degrees)
 float	ft_radian_to_degree(float radians)
 {
 	return (radians * DEG);
-}
-
-bool	ft_contains(float x, t_interval interval)
-{
-	return (interval.min <= x && interval.max >= x);
-}
-
-bool	ft_surrounds(float x, t_interval interval)
-{
-	return (interval.min < x && interval.max > x);
 }
 
 float	ft_solve(t_equation *eq)
