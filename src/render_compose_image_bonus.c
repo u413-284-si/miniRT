@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:22:40 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:40:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 18:42:54 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_draw_scene(t_render *render)
 			if (ft_spin_threads(render, ft_render_image_threaded)
 				|| ft_spin_threads(render, ft_blend_background_threaded))
 			{
-				ft_option_set(&render->options, O_IS_THREADED);
+				ft_option_clear(&render->options, O_IS_THREADED);
 				ft_option_set(&render->options, O_SCENE_CHANGED);
 				return (1);
 			}
