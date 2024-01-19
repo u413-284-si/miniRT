@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 17:43:38 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:53:46 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parse.h"
+
+#ifndef IS_BONUS
 
 t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam)
 {
@@ -34,6 +36,7 @@ t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam)
 	ft_free_char_arr(lines);
 	return (SUCCESS);
 }
+#endif
 
 t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total)
 {
