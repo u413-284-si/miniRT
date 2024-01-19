@@ -6,13 +6,13 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:52:25 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/14 19:50:43 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:20:32 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec3.h"
 
-#if IS_BONUS==1
+#if IS_BONUS
 # include "utils_bonus.h"
 #else
 # include "utils.h"

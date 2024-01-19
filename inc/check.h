@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 19:16:18 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include "ft_char.h"
 # include "ft_strtod.h"
 
-# if IS_BONUS == 1
+# if IS_BONUS
 #  include "entities_bonus.h"
 #  include "miniRT_config_bonus.h"
 # else

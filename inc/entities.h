@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 13:20:30 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:14 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 // Home-grown libs
 # include "vec3.h"
 
-# if IS_BONUS == 1
+# if IS_BONUS
 #  include "colour_bonus.h"
 # else
 #  include "colour.h"

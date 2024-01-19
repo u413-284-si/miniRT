@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/16 17:30:12 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:48 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 # include "init.h"
 # include "camera.h"
 
-# if IS_BONUS == 1
+# if IS_BONUS
 #  include "parse_bonus.h"
 #  include "render_bonus.h"
 # else

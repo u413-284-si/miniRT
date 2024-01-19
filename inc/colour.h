@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 16:31:24 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:11 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdint.h>
 
 //home-grown libs
-# if IS_BONUS==1
+# if IS_BONUS
 #  include "utils_bonus.h"
 # else
 #  include "utils.h"

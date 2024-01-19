@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 19:12:29 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:43 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 # include "vec2.h"
 
-# if IS_BONUS==1
+# if IS_BONUS
 #  include "miniRT_config_bonus.h"
 #  include "render_bonus.h"
 # else

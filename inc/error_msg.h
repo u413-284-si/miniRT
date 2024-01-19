@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:44:43 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 12:17:16 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:18 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 // Home-grown libs
 # include "ft_fd.h"
 
-# if IS_BONUS == 1
+# if IS_BONUS
 #  include "entities_bonus.h"
 # else
 #  include "entities.h"

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:30:12 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 20:01:13 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:27 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "error_syscall.h"
 # include "cleanup.h"
 
-# if IS_BONUS == 1
+# if IS_BONUS
 #  include "miniRT_config_bonus.h"
 # else
 #  include "miniRT_config.h"

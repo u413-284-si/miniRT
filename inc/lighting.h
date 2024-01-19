@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:18:23 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/15 12:17:31 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:35 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 /* ====== LIBRARIES ====== */
 
-# if IS_BONUS==1
+# if IS_BONUS
 #  include "hit_manager_bonus.h"
 # else
 #  include "hit_manager.h"

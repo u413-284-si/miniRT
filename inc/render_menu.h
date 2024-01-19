@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 19:14:16 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:20:12 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 # include <stdint.h>
 
-# if IS_BONUS==1
+# if IS_BONUS
 #  include "miniRT_config_bonus.h"
 # else
 #  include "miniRT_config.h"

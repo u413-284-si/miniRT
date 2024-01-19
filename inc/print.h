@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 11:26:06 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/16 17:29:16 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:20:01 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # include "mat4.h"
 # include "camera.h"
 
-# if IS_BONUS==1
+# if IS_BONUS
 #  include "colour_bonus.h"
 #  include "entities_bonus.h"
 # else
