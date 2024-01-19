@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 16:15:35 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:12:32 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@
 # include "camera.h"
 # include "cleanup.h"
 # include "mat4_vec3.h"
-# include "print.h"
 # include "vec2.h"
 # include "render_menu.h"
 # include "render_bit_field.h"
@@ -34,7 +33,8 @@
 # include "miniRT_config_bonus.h"
 # include "ray_bonus.h"
 # include "entities_bonus.h"
-#include "time_bonus.h"
+# include "time_bonus.h"
+# include "threads_bonus.h"
 
 /* ====== MACROS ========*/
 
@@ -104,16 +104,17 @@ typedef struct s_mouse
  */
 typedef struct s_render
 {
-	t_mlx_ptrs	mlx_ptrs;
-	t_cam		cam;
-	t_entities	scene;
-	t_mouse		mouse;
-	t_menu		menu;
-	uint32_t	options;
-	bool		is_printing;
-	int			active_hittable;
-	int			active_light;
-	uint64_t	last_render_time;
+	t_mlx_ptrs		mlx_ptrs;
+	t_cam			cam;
+	t_entities		scene;
+	t_mouse			mouse;
+	t_menu			menu;
+	uint32_t		options;
+	int				active_hittable;
+	int				active_light;
+	uint64_t		last_render_time;
+	bool			is_printing;
+	pthread_mutex_t	mut_print;
 }	t_render;
 
 /**

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:09:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:12:40 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <X11/Xlib.h>
 # include <X11/X.h>
 # include <X11/keysym.h>
-# include <math.h>
 
 # include "libft.h"
 
@@ -35,6 +34,7 @@
 #  include "miniRT_config_bonus.h"
 #  include "ray_bonus.h"
 #  include "entities_bonus.h"
+#  include "threads_bonus.h"
 # else
 #  include "miniRT_config.h"
 #  include "ray.h"
@@ -115,13 +115,8 @@ typedef struct s_render
 	t_mouse			mouse;
 	t_menu			menu;
 	uint32_t		options;
-	bool			show_menu;
-	bool			is_printing;
-	bool			is_changed;
 	int				active_hittable;
 	int				active_light;
-	bool			is_threaded;
-	pthread_mutex_t	mut_print;
 }	t_render;
 
 /**
