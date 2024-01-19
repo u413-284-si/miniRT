@@ -1,0 +1,4 @@
+<map id="ft_err_mlx_new_image" name="ft_err_mlx_new_image">
+<area shape="rect" id="node1" title="Wrapper function for mlx_new_image() to print errno." alt="" coords="160,5,331,32"/>
+<area shape="rect" id="node2" href="$render_8h.html#a0af0fd19adc919c3966816890c89f291" title="Initializes the mlx img struct." alt="" coords="5,5,112,32"/>
+</map>

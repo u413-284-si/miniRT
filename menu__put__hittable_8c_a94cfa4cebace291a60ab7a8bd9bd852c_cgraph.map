@@ -1,0 +1,9 @@
+<map id="ft_put_sp" name="ft_put_sp">
+<area shape="rect" id="node1" title="Puts sphere info on the screen." alt="" coords="5,56,87,83"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a250c5483eff2fa1f225b6a16dab45481" title="Puts a 3D point on the screen." alt="" coords="144,5,267,32"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7" title="Puts a colour on the screen." alt="" coords="152,56,259,83"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03" title="Puts a single float value on the screen." alt="" coords="135,107,276,149"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="330,56,413,83"/>
+<area shape="rect" id="node6" href="$menu__put_8h.html#abba80f1bfc48c436f54f5a0740683a75" title="Converts float to string and puts it on the screen." alt="" coords="324,115,419,141"/>
+<area shape="rect" id="node7" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="467,115,549,141"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="ft_err_close" name="ft_err_close">
+<area shape="rect" id="node1" title="Wrapper function for close() to print errno." alt="" coords="413,5,511,32"/>
+<area shape="rect" id="node2" href="$import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111" title="Check file extension, import file and prepare for use." alt="" coords="257,5,365,32"/>
+<area shape="rect" id="node3" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,5,209,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
+</map>

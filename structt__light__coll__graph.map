@@ -1,0 +1,5 @@
+<map id="t_light" name="t_light">
+<area shape="rect" id="node1" title="Represents lighting in the scene." alt="" coords="58,95,121,121"/>
+<area shape="rect" id="node2" href="$structt__colour.html" title="Represents an RGB colour with float values from 0.0 &#45; 1.0." alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node3" href="$structt__vec3.html" title="Represents a tridimensional vector." alt="" coords="105,5,170,32"/>
+</map>

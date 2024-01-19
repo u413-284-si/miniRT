@@ -1,0 +1,4 @@
+<map id="ft_err_close" name="ft_err_close">
+<area shape="rect" id="node1" title="Wrapper function for close() to print errno." alt="" coords="5,5,103,32"/>
+<area shape="rect" id="node2" href="$error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" title="Print generic error message." alt="" coords="151,5,228,32"/>
+</map>

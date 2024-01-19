@@ -1,0 +1,5 @@
+<map id="ft_vec3_norm" name="ft_vec3_norm">
+<area shape="rect" id="node1" title="Normalise a vector." alt="" coords="5,31,116,57"/>
+<area shape="rect" id="node2" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="170,5,269,32"/>
+<area shape="rect" id="node3" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="164,56,275,83"/>
+</map>

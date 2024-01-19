@@ -1,0 +1,11 @@
+<map id="inc/colour_bonus.h" name="inc/colour_bonus.h">
+<area shape="rect" id="node1" title=" " alt="" coords="61,5,203,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,72,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="97,80,167,107"/>
+<area shape="rect" id="node4" href="$utils__bonus_8h.html" title=" " alt="" coords="191,80,299,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="83,229,151,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="271,229,353,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="210,155,281,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="305,155,369,181"/>
+<area shape="rect" id="node9" href="$vec3_8h.html" title=" " alt="" coords="121,155,186,181"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="ft_put_page_light" name="ft_put_page_light">
+<area shape="rect" id="node1" title="Puts a light page on the screen." alt="" coords="5,211,140,238"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#acb49d711643bd638023d9317cd528174" title="Puts control scheme for light on the screen." alt="" coords="188,237,311,263"/>
+<area shape="rect" id="node10" href="$menu__put_8h.html#aeacc1ffd9a704a9c1dc92fafc65597d1" title="Puts light info on the screen." alt="" coords="202,161,297,187"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a0dd38606280deb85fca8f3d4db628552" title="Puts control scheme for incrementing and decrementing a value on the screen." alt="" coords="359,375,501,402"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="555,198,638,225"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#a6387702d64aea5e1908a16e2baf024c0" title="Puts control scheme for movement on the screen." alt="" coords="365,274,495,301"/>
+<area shape="rect" id="node6" href="$menu__put_8h.html#a3d812757fc50aadab47e468736eafb73" title="Puts the ID of a hittable or a light on the screen." alt="" coords="391,122,469,149"/>
+<area shape="rect" id="node9" href="$menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724" title="Puts the type of a hittable or a light on the screen." alt="" coords="383,223,477,250"/>
+<area shape="rect" id="node7" href="$menu__put_8h.html#afdfa5611d84fa2c8cbb73cb66a339c98" title="Converts integer to string and puts it on the screen." alt="" coords="555,107,638,134"/>
+<area shape="rect" id="node8" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="692,67,775,94"/>
+<area shape="rect" id="node11" href="$menu__put_8h.html#a250c5483eff2fa1f225b6a16dab45481" title="Puts a 3D point on the screen." alt="" coords="369,173,491,199"/>
+<area shape="rect" id="node12" href="$menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7" title="Puts a colour on the screen." alt="" coords="377,71,483,98"/>
+<area shape="rect" id="node13" href="$menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03" title="Puts a single float value on the screen." alt="" coords="359,5,501,47"/>
+<area shape="rect" id="node14" href="$menu__put_8h.html#abba80f1bfc48c436f54f5a0740683a75" title="Converts float to string and puts it on the screen." alt="" coords="549,27,644,54"/>
+</map>

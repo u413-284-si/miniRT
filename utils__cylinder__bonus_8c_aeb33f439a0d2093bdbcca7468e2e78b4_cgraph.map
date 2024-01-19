@@ -1,0 +1,10 @@
+<map id="ft_get_cy_uvcoords" name="ft_get_cy_uvcoords">
+<area shape="rect" id="node1" title="Transforms the Cartesian coordinates of a hit point on a cylinder wall into 2D texture UV&#45;coordinates..." alt="" coords="5,81,152,108"/>
+<area shape="rect" id="node2" href="$utils__bonus_8h.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="200,5,333,32"/>
+<area shape="rect" id="node5" href="$vec3_8h.html#a19bc1d17592698776e89a5093110320c" title="Calculate the cross product of two vectors." alt="" coords="211,56,322,83"/>
+<area shape="rect" id="node6" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="211,107,322,133"/>
+<area shape="rect" id="node8" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="217,157,316,184"/>
+<area shape="rect" id="node3" href="$utils__quaternion__bonus_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" title="Performs quaternion multiplication." alt="" coords="381,5,527,32"/>
+<area shape="rect" id="node4" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="399,56,509,83"/>
+<area shape="rect" id="node7" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="405,107,503,133"/>
+</map>

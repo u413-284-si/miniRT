@@ -26,17 +26,32 @@ var NAVTREE =
 [
   [ "MiniRT", "index.html", [
     [ "Data Structures", "annotated.html", [
-      [ "Data Structures", "annotated.html", "annotated_dup" ]
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Fields", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", "globals_dup" ],
+        [ "Functions", "globals_func.html", "globals_func" ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"error__msg__generic_8c.html",
+"menu__put_8h.html#a6f5886ed0d2e8de8f0df680db3535336",
+"render_8h.html#a7b4f1510b7e7eecfb0520b0765d5c9de",
+"structt__mouse.html#acd047173db926d54ee91589f7ab53492"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

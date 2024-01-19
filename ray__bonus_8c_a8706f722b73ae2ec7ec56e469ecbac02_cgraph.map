@@ -1,0 +1,6 @@
+<map id="ft_pixel_sample" name="ft_pixel_sample">
+<area shape="rect" id="node1" title="Generate a random vector that is confined within the square surrounding a pixel. The vector lies in t..." alt="" coords="5,56,129,83"/>
+<area shape="rect" id="node2" href="$utils__bonus_8h.html#ad2506d7ff542ccee53d1ff751d7ed217" title="Return a random float." alt="" coords="177,5,301,32"/>
+<area shape="rect" id="node3" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="189,56,289,83"/>
+<area shape="rect" id="node4" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="184,107,295,133"/>
+</map>

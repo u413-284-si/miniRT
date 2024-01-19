@@ -1,0 +1,18 @@
+<map id="ft_put_float" name="ft_put_float">
+<area shape="rect" id="node1" title="Converts float to string and puts it on the screen." alt="" coords="1401,107,1496,133"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03" title="Puts a single float value on the screen." alt="" coords="1212,99,1353,141"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a77a2ed2d37b91adb0fe09dd2db3e8618" title="Puts ambient info on the screen." alt="" coords="1044,5,1164,32"/>
+<area shape="rect" id="node9" href="$menu__put_8h.html#a86f02d860bd5b9a3795b20ba72f8e359" title="Puts camera info on the screen." alt="" coords="1057,56,1151,83"/>
+<area shape="rect" id="node11" href="$menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b" title="Puts cylinder info on the screen." alt="" coords="1063,107,1145,133"/>
+<area shape="rect" id="node14" href="$menu__put_8h.html#aeacc1ffd9a704a9c1dc92fafc65597d1" title="Puts light info on the screen." alt="" coords="1057,208,1151,235"/>
+<area shape="rect" id="node16" href="$menu__put_8h.html#a94cfa4cebace291a60ab7a8bd9bd852c" title="Puts sphere info on the screen." alt="" coords="1063,157,1145,184"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a588aec662fefad0f2ddbf36c3828de25" title="Puts an ambient page on the screen." alt="" coords="655,5,813,32"/>
+<area shape="rect" id="node5" href="$render_8h.html#a735dfeb13434c88e3b4a76990386763b" title="Puts the current menu page on the screen." alt="" coords="471,81,607,108"/>
+<area shape="rect" id="node6" href="$render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,81,423,108"/>
+<area shape="rect" id="node7" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,81,260,108"/>
+<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,81,60,108"/>
+<area shape="rect" id="node10" href="$menu__put_8h.html#a33000f70f8d23d70b515e38109c63917" title="Puts a camera page on the screen." alt="" coords="667,56,801,83"/>
+<area shape="rect" id="node12" href="$menu__put_8h.html#ae3322e0fef7cdf8e68982fbd93f687e2" title="Puts hittable info on the screen." alt="" coords="871,107,987,133"/>
+<area shape="rect" id="node13" href="$menu__put_8h.html#ab175cf6607817105e92bd541f28a11a6" title="Puts a scene page on the screen." alt="" coords="663,107,805,133"/>
+<area shape="rect" id="node15" href="$menu__put_8h.html#a0358e73d3f7165a9dc25c5b8a029fefb" title="Puts a light page on the screen." alt="" coords="861,183,996,209"/>
+</map>

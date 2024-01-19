@@ -1,0 +1,11 @@
+<map id="ft_co_normal" name="ft_co_normal">
+<area shape="rect" id="node1" title="Calculates the normal on the point of intersection of the cone." alt="" coords="5,132,112,159"/>
+<area shape="rect" id="node2" href="$vec3_8h.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="167,5,265,32"/>
+<area shape="rect" id="node3" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="166,56,266,83"/>
+<area shape="rect" id="node4" href="$vec3_8h.html#add7f4f27ee8cadcbf62ffbfecb98f64f" title="Determines if two vectors are equal." alt="" coords="160,107,272,133"/>
+<area shape="rect" id="node6" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="161,157,271,184"/>
+<area shape="rect" id="node8" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="336,208,447,235"/>
+<area shape="rect" id="node9" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="167,259,265,285"/>
+<area shape="rect" id="node5" href="$utils_8h.html#a518be72ffbfd90cedf995e72dde0aff6" title="Checks if two floats are (almost) equal." alt="" coords="320,107,463,133"/>
+<area shape="rect" id="node7" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="342,157,441,184"/>
+</map>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: lighting.h Source File</title>
+<title>MiniRT: inc/lighting.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('lighting_8h_source.html',''); initResi
 <div class="title">lighting.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<a href="lighting_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*   lighting.h                                         :+:      :+:    :+:   */</span></div>
@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('lighting_8h_source.html',''); initResi
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: sqiu &lt;sqiu@student.42vienna.com&gt;           +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/11/03 13:18:23 by sqiu              #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/11/03 13:20:29 by sqiu             ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/19 00:19:35 by sqiu             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -109,41 +109,51 @@ $(document).ready(function(){initNavTree('lighting_8h_source.html',''); initResi
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/* ====== LIBRARIES ====== */</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"># include &quot;hit_manager.h&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/* ====== TYPEDEFS ====== */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"># if IS_BONUS</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="hit__manager__bonus_8h.html">hit_manager_bonus.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"># else</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="hit__manager_8h.html">hit_manager.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"># endif</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Lighting</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>        ft_enlighten(<a class="code" href="structs__colour.html">t_colour</a> *ray_colour, <a class="code" href="structs__hitrecord.html">t_hitrecord</a> rec, \</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="structs__entities.html">t_entities</a> scene);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="structs__colour.html">t_colour</a>    ft_ambient_light(<a class="code" href="structs__light.html">t_light</a> ambient);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<a class="code" href="structs__colour.html">t_colour</a>    ft_diffuse_light(<a class="code" href="structs__light.html">t_light</a> cur, <a class="code" href="structs__hitrecord.html">t_hitrecord</a> rec);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// Shadow realm</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">bool</span>        ft_in_shadow(<a class="code" href="structs__light.html">t_light</a> cur, <a class="code" href="structs__hitrecord.html">t_hitrecord</a> rec, <a class="code" href="structs__entities.html">t_entities</a> scene);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">bool</span>        ft_shadow_ray_blocked(<a class="code" href="structs__entities.html">t_entities</a> scene, <a class="code" href="structs__ray.html">t_ray</a> shadow_ray, \</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="structs__interval.html">t_interval</a> ray_d);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructs__colour_html"><div class="ttname"><a href="structs__colour.html">s_colour</a></div><div class="ttdoc">Represents an RGB colour with float values from 0.0 - 1.0.</div><div class="ttdef"><b>Definition:</b> colour.h:30</div></div>
-<div class="ttc" id="astructs__entities_html"><div class="ttname"><a href="structs__entities.html">s_entities</a></div><div class="ttdoc">Contains all entities in the scene.</div><div class="ttdef"><b>Definition:</b> entities.h:151</div></div>
-<div class="ttc" id="astructs__hitrecord_html"><div class="ttname"><a href="structs__hitrecord.html">s_hitrecord</a></div><div class="ttdoc">Shows point of intersection.</div><div class="ttdef"><b>Definition:</b> ray.h:44</div></div>
-<div class="ttc" id="astructs__interval_html"><div class="ttname"><a href="structs__interval.html">s_interval</a></div><div class="ttdoc">Interval of accepted values.</div><div class="ttdef"><b>Definition:</b> utils.h:36</div></div>
-<div class="ttc" id="astructs__light_html"><div class="ttname"><a href="structs__light.html">s_light</a></div><div class="ttdoc">Represents lighting in the scene.</div><div class="ttdef"><b>Definition:</b> entities.h:36</div></div>
-<div class="ttc" id="astructs__ray_html"><div class="ttname"><a href="structs__ray.html">s_ray</a></div><div class="ttdoc">Represents a ray.</div><div class="ttdef"><b>Definition:</b> ray.h:29</div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* ====== TYPEDEFS ====== */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// Lighting</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"></span><span class="keywordtype">void</span>        <a class="code" href="lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8">ft_enlighten</a>(<a class="code" href="structt__colour.html">t_colour</a> *ray_colour, <a class="code" href="structt__hitrecord.html">t_hitrecord</a> rec, \</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="structt__entities.html">t_entities</a> scene);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<a class="code" href="structt__colour.html">t_colour</a>    <a class="code" href="lighting_8h.html#a691cc177466ad1a6b1ababe4272dca1b">ft_ambient_light</a>(<a class="code" href="structt__light.html">t_light</a> ambient);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="structt__colour.html">t_colour</a>    <a class="code" href="lighting_8h.html#ae50a6e06925c764b3caad3f805bc4c8a">ft_diffuse_light</a>(<a class="code" href="structt__light.html">t_light</a> cur, <a class="code" href="structt__hitrecord.html">t_hitrecord</a> rec);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// Shadow realm</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">bool</span>        <a class="code" href="lighting_8h.html#a382179d88a3a971b5853322389bacf04">ft_in_shadow</a>(<a class="code" href="structt__light.html">t_light</a> cur, <a class="code" href="structt__hitrecord.html">t_hitrecord</a> rec, <a class="code" href="structt__entities.html">t_entities</a> scene);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">bool</span>        <a class="code" href="lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d">ft_shadow_ray_blocked</a>(<a class="code" href="structt__entities.html">t_entities</a> scene, <a class="code" href="structt__ray.html">t_ray</a> shadow_ray, \</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="structt__interval.html">t_interval</a> ray_d);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="ahit__manager_8h_html"><div class="ttname"><a href="hit__manager_8h.html">hit_manager.h</a></div></div>
+<div class="ttc" id="ahit__manager__bonus_8h_html"><div class="ttname"><a href="hit__manager__bonus_8h.html">hit_manager_bonus.h</a></div></div>
+<div class="ttc" id="alighting_8h_html_a382179d88a3a971b5853322389bacf04"><div class="ttname"><a href="lighting_8h.html#a382179d88a3a971b5853322389bacf04">ft_in_shadow</a></div><div class="ttdeci">bool ft_in_shadow(t_light cur, t_hitrecord rec, t_entities scene)</div><div class="ttdoc">Determines whether the point of intersection lies in a shadow regarding the current light source.</div><div class="ttdef"><b>Definition:</b> <a href="scene__shadow_8c_source.html#l00015">scene_shadow.c:15</a></div></div>
+<div class="ttc" id="alighting_8h_html_a3d54436a3f695a60b1c2d9e504a61de8"><div class="ttname"><a href="lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8">ft_enlighten</a></div><div class="ttdeci">void ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene)</div><div class="ttdoc">Calculate the effect of different lighting on perception.</div><div class="ttdef"><b>Definition:</b> <a href="scene__light_8c_source.html#l00015">scene_light.c:15</a></div></div>
+<div class="ttc" id="alighting_8h_html_a691cc177466ad1a6b1ababe4272dca1b"><div class="ttname"><a href="lighting_8h.html#a691cc177466ad1a6b1ababe4272dca1b">ft_ambient_light</a></div><div class="ttdeci">t_colour ft_ambient_light(t_light ambient)</div><div class="ttdoc">Create ambient lighting.</div><div class="ttdef"><b>Definition:</b> <a href="scene__light_8c_source.html#l00033">scene_light.c:33</a></div></div>
+<div class="ttc" id="alighting_8h_html_a931177e8edb2dd5393cef7a468389a4d"><div class="ttname"><a href="lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d">ft_shadow_ray_blocked</a></div><div class="ttdeci">bool ft_shadow_ray_blocked(t_entities scene, t_ray shadow_ray, t_interval ray_d)</div><div class="ttdoc">Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the...</div><div class="ttdef"><b>Definition:</b> <a href="scene__shadow_8c_source.html#l00029">scene_shadow.c:29</a></div></div>
+<div class="ttc" id="alighting_8h_html_ae50a6e06925c764b3caad3f805bc4c8a"><div class="ttname"><a href="lighting_8h.html#ae50a6e06925c764b3caad3f805bc4c8a">ft_diffuse_light</a></div><div class="ttdeci">t_colour ft_diffuse_light(t_light cur, t_hitrecord rec)</div><div class="ttdoc">Create diffuse lighting.</div><div class="ttdef"><b>Definition:</b> <a href="scene__light_8c_source.html#l00042">scene_light.c:42</a></div></div>
+<div class="ttc" id="astructt__colour_html"><div class="ttname"><a href="structt__colour.html">t_colour</a></div><div class="ttdoc">Represents an RGB colour with float values from 0.0 - 1.0.</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00036">colour.h:37</a></div></div>
+<div class="ttc" id="astructt__entities_html"><div class="ttname"><a href="structt__entities.html">t_entities</a></div><div class="ttdoc">Contains all entities in the scene.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00155">entities.h:156</a></div></div>
+<div class="ttc" id="astructt__hitrecord_html"><div class="ttname"><a href="structt__hitrecord.html">t_hitrecord</a></div><div class="ttdoc">Shows point of intersection.</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00040">hit_manager.h:41</a></div></div>
+<div class="ttc" id="astructt__interval_html"><div class="ttname"><a href="structt__interval.html">t_interval</a></div><div class="ttdoc">Interval of accepted values.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00037">utils.h:38</a></div></div>
+<div class="ttc" id="astructt__light_html"><div class="ttname"><a href="structt__light.html">t_light</a></div><div class="ttdoc">Represents lighting in the scene.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00040">entities.h:41</a></div></div>
+<div class="ttc" id="astructt__ray_html"><div class="ttname"><a href="structt__ray.html">t_ray</a></div><div class="ttdoc">Represents a ray.</div><div class="ttdef"><b>Definition:</b> <a href="ray_8h_source.html#l00032">ray.h:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><b>lighting.h</b></li>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="lighting_8h.html">lighting.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

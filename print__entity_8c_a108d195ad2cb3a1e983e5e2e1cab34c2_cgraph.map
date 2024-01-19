@@ -1,0 +1,5 @@
+<map id="ft_print_cam" name="ft_print_cam">
+<area shape="rect" id="node1" title="Prints parameters of camera struct." alt="" coords="5,31,108,57"/>
+<area shape="rect" id="node2" href="$print_8h.html#a99a90f3ee5487824a003c2196bf2f56c" title="Prints variables of a vec3." alt="" coords="178,5,285,32"/>
+<area shape="rect" id="node3" href="$utils_8h.html#a49f519544f51627ced8238dfd72ce20a" title="Transforms radians into degrees." alt="" coords="156,56,307,83"/>
+</map>

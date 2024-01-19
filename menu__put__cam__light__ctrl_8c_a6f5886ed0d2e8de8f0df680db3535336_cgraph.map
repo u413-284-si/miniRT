@@ -1,0 +1,7 @@
+<map id="ft_put_ctrl_cam" name="ft_put_ctrl_cam">
+<area shape="rect" id="node1" title="Puts control scheme for camera on the screen." alt="" coords="5,81,128,108"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a0dd38606280deb85fca8f3d4db628552" title="Puts control scheme for incrementing and decrementing a value on the screen." alt="" coords="176,5,319,32"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="367,81,449,108"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a6387702d64aea5e1908a16e2baf024c0" title="Puts control scheme for movement on the screen." alt="" coords="182,107,313,133"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#aa437add454e160d93213f33176c86b9f" title="Puts control scheme for rotation on the screen." alt="" coords="191,157,303,184"/>
+</map>

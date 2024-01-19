@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: mat4.h Source File</title>
+<title>MiniRT: inc/mat4.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,15 +92,15 @@ $(document).ready(function(){initNavTree('mat4_8h_source.html',''); initResizabl
 <div class="title">mat4.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<a href="mat4_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*   mat4.h                                             :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: sqiu &lt;sqiu@student.42vienna.com&gt;           +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/11/29 12:53:31 by gwolf             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/12/25 16:12:16 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/12/28 12:59:14 by sqiu              #+#    #+#             */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/19 00:19:39 by sqiu             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -109,41 +109,52 @@ $(document).ready(function(){initNavTree('mat4_8h_source.html',''); initResizabl
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/* ====== LIBRARIES ====== */</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"># include &quot;utils.h&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/* ====== TYPEDEFS ====== */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structs__mat4.html">   28</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__mat4.html">s_mat4</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span>   mat[4][4];</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}   <a class="code" href="structs__mat4.html">t_mat4</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// mat4.c</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="structs__mat4.html">t_mat4</a>  ft_mat4_set_identity(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="structs__mat4.html">t_mat4</a>  ft_mat4_copy(<span class="keyword">const</span> <a class="code" href="structs__mat4.html">t_mat4</a> src);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="structs__mat4.html">t_mat4</a>  ft_mat4_mult_mat4(<span class="keyword">const</span> <a class="code" href="structs__mat4.html">t_mat4</a> left, <span class="keyword">const</span> <a class="code" href="structs__mat4.html">t_mat4</a> right);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">// mat4_rotation.c</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<a class="code" href="structs__mat4.html">t_mat4</a>  ft_mat4_create_rotate_x(<span class="keywordtype">float</span> roll);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<a class="code" href="structs__mat4.html">t_mat4</a>  ft_mat4_create_rotate_y(<span class="keywordtype">float</span> pitch);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<a class="code" href="structs__mat4.html">t_mat4</a>  ft_mat4_create_rotate_z(<span class="keywordtype">float</span> yaw);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructs__mat4_html"><div class="ttname"><a href="structs__mat4.html">s_mat4</a></div><div class="ttdoc">4x4 matrix of floats.</div><div class="ttdef"><b>Definition:</b> mat4.h:29</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"># if IS_BONUS</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="utils__bonus_8h.html">utils_bonus.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"># else</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"># endif</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* ====== TYPEDEFS ====== */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structt__mat4.html">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>s_mat4</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structt__mat4.html#ad447502f46f46373269e15636e049f7f">   35</a></span>&#160;    <span class="keywordtype">float</span>   mat[4][4];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}   <a class="code" href="structt__mat4.html">t_mat4</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// mat4.c</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<a class="code" href="structt__mat4.html">t_mat4</a>  <a class="code" href="mat4_8h.html#ad20d2d0fd3d7862225345a79b062f03a">ft_mat4_set_identity</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<a class="code" href="structt__mat4.html">t_mat4</a>  <a class="code" href="mat4_8h.html#a0a799c90e0577c0c33024f4dbe4e2af3">ft_mat4_copy</a>(<span class="keyword">const</span> <a class="code" href="structt__mat4.html">t_mat4</a> src);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="code" href="structt__mat4.html">t_mat4</a>  <a class="code" href="mat4_8h.html#a42385e5c54051be7bcefd8e7d81ea711">ft_mat4_mult_mat4</a>(<span class="keyword">const</span> <a class="code" href="structt__mat4.html">t_mat4</a> left, <span class="keyword">const</span> <a class="code" href="structt__mat4.html">t_mat4</a> right);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">// mat4_rotation.c</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<a class="code" href="structt__mat4.html">t_mat4</a>  <a class="code" href="mat4_8h.html#a96153e828811e816c64e7d0e19fcf654">ft_mat4_create_rotate_x</a>(<span class="keywordtype">float</span> roll);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<a class="code" href="structt__mat4.html">t_mat4</a>  <a class="code" href="mat4_8h.html#a3f33a47cb6e2a560791c9be852f27b35">ft_mat4_create_rotate_y</a>(<span class="keywordtype">float</span> pitch);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="code" href="structt__mat4.html">t_mat4</a>  <a class="code" href="mat4_8h.html#a104dcf3f153038933ffa4f22b3d192a6">ft_mat4_create_rotate_z</a>(<span class="keywordtype">float</span> yaw);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="amat4_8h_html_a0a799c90e0577c0c33024f4dbe4e2af3"><div class="ttname"><a href="mat4_8h.html#a0a799c90e0577c0c33024f4dbe4e2af3">ft_mat4_copy</a></div><div class="ttdeci">t_mat4 ft_mat4_copy(const t_mat4 src)</div><div class="ttdoc">Copies a 4x4 matrix.</div><div class="ttdef"><b>Definition:</b> <a href="mat4_8c_source.html#l00028">mat4.c:28</a></div></div>
+<div class="ttc" id="amat4_8h_html_a104dcf3f153038933ffa4f22b3d192a6"><div class="ttname"><a href="mat4_8h.html#a104dcf3f153038933ffa4f22b3d192a6">ft_mat4_create_rotate_z</a></div><div class="ttdeci">t_mat4 ft_mat4_create_rotate_z(float yaw)</div><div class="ttdoc">Creates a 4x4 transformation matrix for z-axis rotation.</div><div class="ttdef"><b>Definition:</b> <a href="mat4__rotation_8c_source.html#l00051">mat4_rotation.c:51</a></div></div>
+<div class="ttc" id="amat4_8h_html_a3f33a47cb6e2a560791c9be852f27b35"><div class="ttname"><a href="mat4_8h.html#a3f33a47cb6e2a560791c9be852f27b35">ft_mat4_create_rotate_y</a></div><div class="ttdeci">t_mat4 ft_mat4_create_rotate_y(float pitch)</div><div class="ttdoc">Creates a 4x4 transformation matrix for y-axis rotation.</div><div class="ttdef"><b>Definition:</b> <a href="mat4__rotation_8c_source.html#l00033">mat4_rotation.c:33</a></div></div>
+<div class="ttc" id="amat4_8h_html_a42385e5c54051be7bcefd8e7d81ea711"><div class="ttname"><a href="mat4_8h.html#a42385e5c54051be7bcefd8e7d81ea711">ft_mat4_mult_mat4</a></div><div class="ttdeci">t_mat4 ft_mat4_mult_mat4(const t_mat4 left, const t_mat4 right)</div><div class="ttdoc">Multiplies two 4x4 matrices.</div><div class="ttdef"><b>Definition:</b> <a href="mat4_8c_source.html#l00048">mat4.c:48</a></div></div>
+<div class="ttc" id="amat4_8h_html_a96153e828811e816c64e7d0e19fcf654"><div class="ttname"><a href="mat4_8h.html#a96153e828811e816c64e7d0e19fcf654">ft_mat4_create_rotate_x</a></div><div class="ttdeci">t_mat4 ft_mat4_create_rotate_x(float roll)</div><div class="ttdoc">Creates a 4x4 transformation matrix for x-axis rotation.</div><div class="ttdef"><b>Definition:</b> <a href="mat4__rotation_8c_source.html#l00015">mat4_rotation.c:15</a></div></div>
+<div class="ttc" id="amat4_8h_html_ad20d2d0fd3d7862225345a79b062f03a"><div class="ttname"><a href="mat4_8h.html#ad20d2d0fd3d7862225345a79b062f03a">ft_mat4_set_identity</a></div><div class="ttdeci">t_mat4 ft_mat4_set_identity(void)</div><div class="ttdoc">Returns a 4x4 identity matrix.</div><div class="ttdef"><b>Definition:</b> <a href="mat4_8c_source.html#l00016">mat4.c:16</a></div></div>
+<div class="ttc" id="astructt__mat4_html"><div class="ttname"><a href="structt__mat4.html">t_mat4</a></div><div class="ttdoc">4x4 matrix of floats.</div><div class="ttdef"><b>Definition:</b> <a href="mat4_8h_source.html#l00033">mat4.h:34</a></div></div>
+<div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="autils__bonus_8h_html"><div class="ttname"><a href="utils__bonus_8h.html">utils_bonus.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><b>mat4.h</b></li>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="mat4_8h.html">mat4.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

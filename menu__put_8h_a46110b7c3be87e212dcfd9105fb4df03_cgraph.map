@@ -1,0 +1,6 @@
+<map id="ft_put_single_float_value" name="ft_put_single_float_value">
+<area shape="rect" id="node1" title="Puts a single float value on the screen." alt="" coords="5,23,147,65"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#abba80f1bfc48c436f54f5a0740683a75" title="Converts float to string and puts it on the screen." alt="" coords="195,5,289,32"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="201,56,283,83"/>
+<area shape="rect" id="node3" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="337,5,420,32"/>
+</map>

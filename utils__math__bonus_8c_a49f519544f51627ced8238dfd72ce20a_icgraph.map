@@ -1,0 +1,11 @@
+<map id="ft_radian_to_degree" name="ft_radian_to_degree">
+<area shape="rect" id="node1" title="Transforms radians into degrees." alt="" coords="1040,56,1191,83"/>
+<area shape="rect" id="node2" href="$render_8h.html#a7115c14e651aaf8ebd1f08679ecba38c" title="Changes the camera FOV with a keypress." alt="" coords="836,5,992,32"/>
+<area shape="rect" id="node3" href="$print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2" title="Prints parameters of camera struct." alt="" coords="863,56,965,83"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a86f02d860bd5b9a3795b20ba72f8e359" title="Puts camera info on the screen." alt="" coords="867,107,961,133"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#a33000f70f8d23d70b515e38109c63917" title="Puts a camera page on the screen." alt="" coords="655,107,788,133"/>
+<area shape="rect" id="node6" href="$render_8h.html#a735dfeb13434c88e3b4a76990386763b" title="Puts the current menu page on the screen." alt="" coords="471,107,607,133"/>
+<area shape="rect" id="node7" href="$render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,107,423,133"/>
+<area shape="rect" id="node8" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,107,260,133"/>
+<area shape="rect" id="node9" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,107,60,133"/>
+</map>

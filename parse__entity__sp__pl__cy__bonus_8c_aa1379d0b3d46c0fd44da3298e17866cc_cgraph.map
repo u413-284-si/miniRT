@@ -1,0 +1,8 @@
+<map id="ft_parse_sphere" name="ft_parse_sphere">
+<area shape="rect" id="node1" title="Parse sphere line." alt="" coords="5,56,131,83"/>
+<area shape="rect" id="node2" href="$parse_8h.html#a2bb654728a666a68ad6b6627cd27e918" title="Parses values of a rgb colour block." alt="" coords="379,5,541,32"/>
+<area shape="rect" id="node4" href="$parse_8h.html#a4df2d6a5cd30a4f3ca3a1283c7afaafa" title="Parse a single float." alt="" coords="199,56,310,83"/>
+<area shape="rect" id="node5" href="$parse_8h.html#ad1918f45b6a322a21c3541825b405eb6" title="Parse values of a float block." alt="" coords="179,107,331,133"/>
+<area shape="rect" id="node3" href="$ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e" title="Converts a String to a double." alt="" coords="589,56,665,83"/>
+<area shape="rect" id="node6" href="$parse__line_8c.html#a4df2d6a5cd30a4f3ca3a1283c7afaafa" title="Parse a single float." alt="" coords="405,107,515,133"/>
+</map>

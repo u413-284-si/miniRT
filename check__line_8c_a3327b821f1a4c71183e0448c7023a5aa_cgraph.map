@@ -1,0 +1,7 @@
+<map id="ft_isvalid_rgb_block" name="ft_isvalid_rgb_block">
+<area shape="rect" id="node1" title="Checks three rgb values, separated by &#39;,&#39;." alt="" coords="5,56,156,83"/>
+<area shape="rect" id="node2" href="$check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4" title="Tries to convert str into rgb int and checks range." alt="" coords="204,56,340,83"/>
+<area shape="rect" id="node3" href="$error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" title="Error message if conversion failed." alt="" coords="395,5,528,32"/>
+<area shape="rect" id="node4" href="$error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" title="Error message if converted number is out of range." alt="" coords="401,56,522,83"/>
+<area shape="rect" id="node5" href="$error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" title="Error message if wrong separator was encountered." alt="" coords="388,107,535,133"/>
+</map>

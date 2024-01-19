@@ -1,0 +1,4 @@
+<map id="ft_parse_float" name="ft_parse_float">
+<area shape="rect" id="node1" title="Parse a single float." alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e" title="Converts a String to a double." alt="" coords="164,5,240,32"/>
+</map>

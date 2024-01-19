@@ -1,0 +1,5 @@
+<map id="ft_cy_calc_caps" name="ft_cy_calc_caps">
+<area shape="rect" id="node1" title="Calculates the planes of the caps of a cylinder." alt="" coords="5,31,128,57"/>
+<area shape="rect" id="node2" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="181,5,281,32"/>
+<area shape="rect" id="node3" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="176,56,287,83"/>
+</map>

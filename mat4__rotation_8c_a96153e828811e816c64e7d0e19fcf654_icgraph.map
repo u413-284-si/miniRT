@@ -1,0 +1,9 @@
+<map id="ft_mat4_create_rotate_x" name="ft_mat4_create_rotate_x">
+<area shape="rect" id="node1" title="Creates a 4x4 transformation matrix for x&#45;axis rotation." alt="" coords="600,56,781,83"/>
+<area shape="rect" id="node2" href="$mat4__vec3_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" title="Rotates a 3D vector around the x&#45;axis." alt="" coords="421,56,552,83"/>
+<area shape="rect" id="node3" href="$render_8h.html#a220fefa62b26f8c0940a1e4a4a7c934f" title="Rotates the camera with a keypress." alt="" coords="206,5,359,32"/>
+<area shape="rect" id="node4" href="$render_8h.html#adf1bfe4072ecc554c2084447411db434" title="Rotates a 3D vector with a keypress." alt="" coords="209,56,357,83"/>
+<area shape="rect" id="node7" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="192,107,373,133"/>
+<area shape="rect" id="node5" href="$render_8h.html#af500a65a1e441d08240efa30fa8c1e27" title="Manipulates the active cylinder." alt="" coords="5,31,144,57"/>
+<area shape="rect" id="node6" href="$render_8h.html#a5fcb632e750265c23a4a6cd3fe090d35" title="Manipulates the active plane." alt="" coords="13,81,136,108"/>
+</map>

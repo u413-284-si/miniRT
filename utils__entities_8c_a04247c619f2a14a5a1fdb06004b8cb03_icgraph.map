@@ -1,0 +1,7 @@
+<map id="ft_cy_calc_caps" name="ft_cy_calc_caps">
+<area shape="rect" id="node1" title="Calculates the planes of the caps of a cylinder." alt="" coords="519,31,641,57"/>
+<area shape="rect" id="node2" href="$render_8h.html#af500a65a1e441d08240efa30fa8c1e27" title="Manipulates the active cylinder." alt="" coords="332,5,471,32"/>
+<area shape="rect" id="node3" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="335,56,468,83"/>
+<area shape="rect" id="node4" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="165,56,284,83"/>
+<area shape="rect" id="node5" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="5,56,117,83"/>
+</map>

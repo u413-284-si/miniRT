@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: import_file.h Source File</title>
+<title>MiniRT: inc/import_file.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,15 +92,15 @@ $(document).ready(function(){initNavTree('import__file_8h_source.html',''); init
 <div class="title">import_file.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<a href="import__file_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*   import_file.h                                      :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: sqiu &lt;sqiu@student.42vienna.com&gt;           +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/11/14 07:30:12 by gwolf             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/11/25 18:19:50 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/19 00:19:27 by sqiu             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -109,49 +109,70 @@ $(document).ready(function(){initNavTree('import__file_8h_source.html',''); init
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/* ====== LIBRARIES ====== */</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"># include &quot;error_syscall.h&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"># include &quot;cleanup.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"># include &quot;miniRT_config.h&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/* ====== TYPEDEFS ====== */</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structs__buf.html">   30</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__buf.html">s_buf</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">char</span>    *str;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">size_t</span>  size;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">size_t</span>  cur_pos;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}   <a class="code" href="structs__buf.html">t_buf</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// import_file.c</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;t_err       ft_import_file(<span class="keywordtype">char</span> *filename, <span class="keywordtype">char</span> ***lines);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">bool</span>        ft_isvalid_filename(<span class="keywordtype">char</span> *filename);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;t_err       ft_read_and_split(<span class="keywordtype">int</span> fd, <span class="keywordtype">char</span> ***lines);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// import_file_buffer.c</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;t_err       ft_buf_init(<a class="code" href="structs__buf.html">t_buf</a> *buf);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span>        ft_buf_destroy(<a class="code" href="structs__buf.html">t_buf</a> *buf);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span>        ft_buf_clear(<a class="code" href="structs__buf.html">t_buf</a> *buf);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;t_err       ft_buf_double(<a class="code" href="structs__buf.html">t_buf</a> *buf);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;t_err       ft_buf_read_file(<a class="code" href="structs__buf.html">t_buf</a> *buf, <span class="keywordtype">int</span> fd);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructs__buf_html"><div class="ttname"><a href="structs__buf.html">s_buf</a></div><div class="ttdoc">Simple implementation of a buffer.</div><div class="ttdef"><b>Definition:</b> import_file.h:31</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="error__syscall_8h.html">error_syscall.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="cleanup_8h.html">cleanup.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"># if IS_BONUS</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="mini_r_t__config__bonus_8h.html">miniRT_config_bonus.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"># else</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="mini_r_t__config_8h.html">miniRT_config.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"># endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/* ====== TYPEDEFS ====== */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structt__buf.html">   35</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>s_buf</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structt__buf.html#ab50d783982593ef993ea0b68f7ad8b80">   37</a></span>&#160;    <span class="keywordtype">char</span>    *<a class="code" href="structt__buf.html#ab50d783982593ef993ea0b68f7ad8b80">str</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structt__buf.html#a854352f53b148adc24983a58a1866d66">   38</a></span>&#160;    <span class="keywordtype">size_t</span>  <a class="code" href="structt__buf.html#a854352f53b148adc24983a58a1866d66">size</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structt__buf.html#a81cc23fe6b0f6df6286f28725f5d05d1">   39</a></span>&#160;    <span class="keywordtype">size_t</span>  <a class="code" href="structt__buf.html#a81cc23fe6b0f6df6286f28725f5d05d1">cur_pos</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}   <a class="code" href="structt__buf.html">t_buf</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// import_file.c</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>       <a class="code" href="import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111">ft_import_file</a>(<span class="keywordtype">char</span> *filename, <span class="keywordtype">char</span> ***lines);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">bool</span>        <a class="code" href="import__file_8h.html#ab0b327c549706e7478db9544c25886a5">ft_isvalid_filename</a>(<span class="keywordtype">char</span> *filename);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>       <a class="code" href="import__file_8h.html#a9260f4680d33314ef51e7096426acdae">ft_read_and_split</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">char</span> ***lines);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// import_file_buffer.c</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>       <a class="code" href="import__file_8h.html#a738f6fd9290967f972da877e935cb8d8">ft_buf_init</a>(<a class="code" href="structt__buf.html">t_buf</a> *buf);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">void</span>        <a class="code" href="import__file_8h.html#af1a4fd87c14e1f5d0b126bfc848d4761">ft_buf_destroy</a>(<a class="code" href="structt__buf.html">t_buf</a> *buf);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">void</span>        <a class="code" href="import__file_8h.html#a99b094d3ffec975b672948cc9f681af9">ft_buf_clear</a>(<a class="code" href="structt__buf.html">t_buf</a> *buf);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>       <a class="code" href="import__file_8h.html#abdf4c7ee723013cce62274cf29be648d">ft_buf_double</a>(<a class="code" href="structt__buf.html">t_buf</a> *buf);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>       <a class="code" href="import__file_8h.html#af0392d80791e758ec536af492c9cfe07">ft_buf_read_file</a>(<a class="code" href="structt__buf.html">t_buf</a> *buf, <span class="keywordtype">int</span> fd);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acleanup_8h_html"><div class="ttname"><a href="cleanup_8h.html">cleanup.h</a></div></div>
+<div class="ttc" id="aerror__syscall_8h_html"><div class="ttname"><a href="error__syscall_8h.html">error_syscall.h</a></div></div>
+<div class="ttc" id="aerror__type_8h_html_a1302176c6f5df85cc624eb5f5594a933"><div class="ttname"><a href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a></div><div class="ttdeci">t_err</div><div class="ttdoc">Gives return of function explicit meaning with SUCCESS or ERROR.</div><div class="ttdef"><b>Definition:</b> <a href="error__type_8h_source.html#l00022">error_type.h:22</a></div></div>
+<div class="ttc" id="aimport__file_8h_html_a738f6fd9290967f972da877e935cb8d8"><div class="ttname"><a href="import__file_8h.html#a738f6fd9290967f972da877e935cb8d8">ft_buf_init</a></div><div class="ttdeci">t_err ft_buf_init(t_buf *buf)</div><div class="ttdoc">Initiates a t_buf buffer.</div><div class="ttdef"><b>Definition:</b> <a href="import__file__buffer_8c_source.html#l00015">import_file_buffer.c:15</a></div></div>
+<div class="ttc" id="aimport__file_8h_html_a9260f4680d33314ef51e7096426acdae"><div class="ttname"><a href="import__file_8h.html#a9260f4680d33314ef51e7096426acdae">ft_read_and_split</a></div><div class="ttdeci">t_err ft_read_and_split(int fd, char ***lines)</div><div class="ttdoc">Import file and split it into lines.</div><div class="ttdef"><b>Definition:</b> <a href="import__file_8c_source.html#l00034">import_file.c:34</a></div></div>
+<div class="ttc" id="aimport__file_8h_html_a996e353fb1cf0ba1e9706f5d0c12e111"><div class="ttname"><a href="import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111">ft_import_file</a></div><div class="ttdeci">t_err ft_import_file(char *filename, char ***lines)</div><div class="ttdoc">Check file extension, import file and prepare for use.</div><div class="ttdef"><b>Definition:</b> <a href="import__file_8c_source.html#l00015">import_file.c:15</a></div></div>
+<div class="ttc" id="aimport__file_8h_html_a99b094d3ffec975b672948cc9f681af9"><div class="ttname"><a href="import__file_8h.html#a99b094d3ffec975b672948cc9f681af9">ft_buf_clear</a></div><div class="ttdeci">void ft_buf_clear(t_buf *buf)</div><div class="ttdoc">Set buffer to zero.</div><div class="ttdef"><b>Definition:</b> <a href="import__file__buffer_8c_source.html#l00030">import_file_buffer.c:30</a></div></div>
+<div class="ttc" id="aimport__file_8h_html_ab0b327c549706e7478db9544c25886a5"><div class="ttname"><a href="import__file_8h.html#ab0b327c549706e7478db9544c25886a5">ft_isvalid_filename</a></div><div class="ttdeci">bool ft_isvalid_filename(char *filename)</div><div class="ttdoc">Check if valid file extension.</div><div class="ttdef"><b>Definition:</b> <a href="import__file_8c_source.html#l00055">import_file.c:55</a></div></div>
+<div class="ttc" id="aimport__file_8h_html_abdf4c7ee723013cce62274cf29be648d"><div class="ttname"><a href="import__file_8h.html#abdf4c7ee723013cce62274cf29be648d">ft_buf_double</a></div><div class="ttdeci">t_err ft_buf_double(t_buf *buf)</div><div class="ttdoc">Doubles buffer size and copies content into new malloc'd buffer.</div><div class="ttdef"><b>Definition:</b> <a href="import__file__buffer_8c_source.html#l00036">import_file_buffer.c:36</a></div></div>
+<div class="ttc" id="aimport__file_8h_html_af0392d80791e758ec536af492c9cfe07"><div class="ttname"><a href="import__file_8h.html#af0392d80791e758ec536af492c9cfe07">ft_buf_read_file</a></div><div class="ttdeci">t_err ft_buf_read_file(t_buf *buf, int fd)</div><div class="ttdoc">Reads provided file into buffer.</div><div class="ttdef"><b>Definition:</b> <a href="import__file__buffer_8c_source.html#l00056">import_file_buffer.c:56</a></div></div>
+<div class="ttc" id="aimport__file_8h_html_af1a4fd87c14e1f5d0b126bfc848d4761"><div class="ttname"><a href="import__file_8h.html#af1a4fd87c14e1f5d0b126bfc848d4761">ft_buf_destroy</a></div><div class="ttdeci">void ft_buf_destroy(t_buf *buf)</div><div class="ttdoc">Destroy malloced buffer.</div><div class="ttdef"><b>Definition:</b> <a href="import__file__buffer_8c_source.html#l00024">import_file_buffer.c:24</a></div></div>
+<div class="ttc" id="amini_r_t__config_8h_html"><div class="ttname"><a href="mini_r_t__config_8h.html">miniRT_config.h</a></div></div>
+<div class="ttc" id="amini_r_t__config__bonus_8h_html"><div class="ttname"><a href="mini_r_t__config__bonus_8h.html">miniRT_config_bonus.h</a></div></div>
+<div class="ttc" id="astructt__buf_html"><div class="ttname"><a href="structt__buf.html">t_buf</a></div><div class="ttdoc">Simple implementation of a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="import__file_8h_source.html#l00035">import_file.h:36</a></div></div>
+<div class="ttc" id="astructt__buf_html_a81cc23fe6b0f6df6286f28725f5d05d1"><div class="ttname"><a href="structt__buf.html#a81cc23fe6b0f6df6286f28725f5d05d1">t_buf::cur_pos</a></div><div class="ttdeci">size_t cur_pos</div><div class="ttdef"><b>Definition:</b> <a href="import__file_8h_source.html#l00039">import_file.h:39</a></div></div>
+<div class="ttc" id="astructt__buf_html_a854352f53b148adc24983a58a1866d66"><div class="ttname"><a href="structt__buf.html#a854352f53b148adc24983a58a1866d66">t_buf::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="import__file_8h_source.html#l00038">import_file.h:38</a></div></div>
+<div class="ttc" id="astructt__buf_html_ab50d783982593ef993ea0b68f7ad8b80"><div class="ttname"><a href="structt__buf.html#ab50d783982593ef993ea0b68f7ad8b80">t_buf::str</a></div><div class="ttdeci">char * str</div><div class="ttdef"><b>Definition:</b> <a href="import__file_8h_source.html#l00037">import_file.h:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><b>import_file.h</b></li>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="import__file_8h.html">import_file.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

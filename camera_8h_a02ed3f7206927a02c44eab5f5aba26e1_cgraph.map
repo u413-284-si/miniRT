@@ -1,0 +1,5 @@
+<map id="ft_cam_calc_base_vectors" name="ft_cam_calc_base_vectors">
+<area shape="rect" id="node1" title="Calculates basis vectors u, v, w." alt="" coords="5,31,197,57"/>
+<area shape="rect" id="node2" href="$vec3_8h.html#a19bc1d17592698776e89a5093110320c" title="Calculate the cross product of two vectors." alt="" coords="245,5,356,32"/>
+<area shape="rect" id="node3" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="245,56,356,83"/>
+</map>

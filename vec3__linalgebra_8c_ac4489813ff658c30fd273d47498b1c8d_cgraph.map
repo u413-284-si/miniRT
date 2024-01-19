@@ -1,0 +1,5 @@
+<map id="ft_vec3_angle" name="ft_vec3_angle">
+<area shape="rect" id="node1" title="Calculate the angle betwee two vectors." alt="" coords="5,31,117,57"/>
+<area shape="rect" id="node2" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="165,5,264,32"/>
+<area shape="rect" id="node3" href="$vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91" title="Calculate the scalar product of two vectors." alt="" coords="166,56,263,83"/>
+</map>

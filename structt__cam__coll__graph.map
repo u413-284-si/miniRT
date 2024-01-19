@@ -1,0 +1,7 @@
+<map id="t_cam" name="t_cam">
+<area shape="rect" id="node1" title="Contains camera parameters." alt="" coords="145,260,208,287"/>
+<area shape="rect" id="node2" href="$structt__vec2f.html" title="2D vector with float." alt="" coords="5,147,76,174"/>
+<area shape="rect" id="node3" href="$structt__vec2i.html" title="2D vector with int." alt="" coords="101,147,170,174"/>
+<area shape="rect" id="node4" href="$structt__pixel__grid.html" title="Pixel grid is a virtual grid of equispaced pixels in the viewport." alt="" coords="300,147,397,174"/>
+<area shape="rect" id="node5" href="$structt__vec3.html" title="Represents a tridimensional vector." alt="" coords="207,5,272,32"/>
+</map>

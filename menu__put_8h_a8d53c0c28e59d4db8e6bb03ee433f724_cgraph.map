@@ -1,0 +1,4 @@
+<map id="ft_put_type" name="ft_put_type">
+<area shape="rect" id="node1" title="Puts the type of a hittable or a light on the screen." alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="148,5,231,32"/>
+</map>

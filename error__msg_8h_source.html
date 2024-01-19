@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: error_msg.h Source File</title>
+<title>MiniRT: inc/error_msg.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,15 +92,15 @@ $(document).ready(function(){initNavTree('error__msg_8h_source.html',''); initRe
 <div class="title">error_msg.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<a href="error__msg_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*   error_msg.h                                        :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: sqiu &lt;sqiu@student.42vienna.com&gt;           +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/11/20 11:44:43 by gwolf             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/11/25 18:19:00 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/19 00:19:18 by sqiu             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -115,35 +115,50 @@ $(document).ready(function(){initNavTree('error__msg_8h_source.html',''); initRe
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Home-grown libs</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"># include &quot;ft_fd.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"># include &quot;entities.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// error_msg_generic.c</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span>    ft_perror(<span class="keywordtype">char</span> *msg, <span class="keywordtype">int</span> save_errno);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span>    ft_perror_number(<span class="keywordtype">char</span> *msg, <span class="keywordtype">int</span> number);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// error_msg_check.c</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span>    ft_perror_count(t_type type, <span class="keywordtype">int</span> max, <span class="keywordtype">int</span> count, <span class="keywordtype">bool</span> high);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">bool</span>    ft_perror_range(<span class="keywordtype">char</span> *line, <span class="keywordtype">size_t</span> offset, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">bool</span>    ft_perror_convert(<span class="keywordtype">char</span> *line, <span class="keywordtype">bool</span> is_float);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">bool</span>    ft_perror_separator(<span class="keywordtype">char</span> *line, <span class="keywordtype">bool</span> comma);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;t_type  ft_perror_end(<span class="keywordtype">char</span> *line);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"># if IS_BONUS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="entities__bonus_8h.html">entities_bonus.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"># else</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="entities_8h.html">entities.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"># endif</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// error_msg_generic.c</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a>(<span class="keywordtype">char</span> *msg, <span class="keywordtype">int</span> save_errno);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="error__msg_8h.html#a278f4b45a52fcddd1925e2b9c50266ed">ft_perror_number</a>(<span class="keywordtype">char</span> *msg, <span class="keywordtype">int</span> number);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// error_msg_check.c</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="error__msg_8h.html#a55f805a774b02619d20d73cba9e90de3">ft_perror_count</a>(<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a> type, <span class="keywordtype">int</span> max, <span class="keywordtype">int</span> count, <span class="keywordtype">bool</span> high);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a>(<span class="keywordtype">char</span> *line, <span class="keywordtype">size_t</span> offset, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe">ft_perror_convert</a>(<span class="keywordtype">char</span> *line, <span class="keywordtype">bool</span> is_float);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(<span class="keywordtype">char</span> *line, <span class="keywordtype">bool</span> comma);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a>  <a class="code" href="error__msg_8h.html#a0a61f85709f3119ca9086f591705f294">ft_perror_end</a>(<span class="keywordtype">char</span> *line);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aentities_8h_html"><div class="ttname"><a href="entities_8h.html">entities.h</a></div></div>
+<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a></div><div class="ttdeci">t_type</div><div class="ttdoc">Enumeration of all different entity types.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00102">entities.h:103</a></div></div>
+<div class="ttc" id="aentities__bonus_8h_html"><div class="ttname"><a href="entities__bonus_8h.html">entities_bonus.h</a></div></div>
+<div class="ttc" id="aerror__msg_8h_html_a0a61f85709f3119ca9086f591705f294"><div class="ttname"><a href="error__msg_8h.html#a0a61f85709f3119ca9086f591705f294">ft_perror_end</a></div><div class="ttdeci">t_type ft_perror_end(char *line)</div><div class="ttdoc">Error message if line doesn't end with space or zero terminator.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__check_8c_source.html#l00084">error_msg_check.c:84</a></div></div>
+<div class="ttc" id="aerror__msg_8h_html_a207347473e8d1cf324c6b70fca7155fe"><div class="ttname"><a href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe">ft_perror_convert</a></div><div class="ttdeci">bool ft_perror_convert(char *line, bool is_float)</div><div class="ttdoc">Error message if conversion failed.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__check_8c_source.html#l00058">error_msg_check.c:58</a></div></div>
+<div class="ttc" id="aerror__msg_8h_html_a278f4b45a52fcddd1925e2b9c50266ed"><div class="ttname"><a href="error__msg_8h.html#a278f4b45a52fcddd1925e2b9c50266ed">ft_perror_number</a></div><div class="ttdeci">void ft_perror_number(char *msg, int number)</div><div class="ttdoc">Print error message with a number.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__generic_8c_source.html#l00027">error_msg_generic.c:27</a></div></div>
+<div class="ttc" id="aerror__msg_8h_html_a55f805a774b02619d20d73cba9e90de3"><div class="ttname"><a href="error__msg_8h.html#a55f805a774b02619d20d73cba9e90de3">ft_perror_count</a></div><div class="ttdeci">void ft_perror_count(t_type type, int max, int count, bool high)</div><div class="ttdoc">Error message if entity count is not correct.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__check_8c_source.html#l00015">error_msg_check.c:15</a></div></div>
+<div class="ttc" id="aerror__msg_8h_html_a66c0aad31fa186667840a2c0a5004099"><div class="ttname"><a href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a></div><div class="ttdeci">bool ft_perror_separator(char *line, bool comma)</div><div class="ttdoc">Error message if wrong separator was encountered.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__check_8c_source.html#l00072">error_msg_check.c:72</a></div></div>
+<div class="ttc" id="aerror__msg_8h_html_ae79c226d26bf8b2dbd74bf7440eefa7d"><div class="ttname"><a href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a></div><div class="ttdeci">bool ft_perror_range(char *line, size_t offset, int min, int max)</div><div class="ttdoc">Error message if converted number is out of range.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__check_8c_source.html#l00043">error_msg_check.c:43</a></div></div>
+<div class="ttc" id="aerror__msg_8h_html_aee5d10b82b6780869c9cc69cd64e44cc"><div class="ttname"><a href="error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a></div><div class="ttdeci">void ft_perror(char *msg, int save_errno)</div><div class="ttdoc">Print generic error message.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__generic_8c_source.html#l00015">error_msg_generic.c:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><b>error_msg.h</b></li>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="error__msg_8h.html">error_msg.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

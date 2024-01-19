@@ -1,0 +1,4 @@
+<map id="t_ray" name="t_ray">
+<area shape="rect" id="node1" title="Represents a ray." alt="" coords="11,109,65,136"/>
+<area shape="rect" id="node2" href="$structt__vec3.html" title="Represents a tridimensional vector." alt="" coords="5,5,71,32"/>
+</map>

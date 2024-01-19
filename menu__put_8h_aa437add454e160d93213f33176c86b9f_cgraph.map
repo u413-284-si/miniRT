@@ -1,0 +1,4 @@
+<map id="ft_put_ctrl_rot" name="ft_put_ctrl_rot">
+<area shape="rect" id="node1" title="Puts control scheme for rotation on the screen." alt="" coords="5,5,117,32"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="165,5,248,32"/>
+</map>

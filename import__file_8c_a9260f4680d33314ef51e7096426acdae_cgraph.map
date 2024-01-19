@@ -1,0 +1,11 @@
+<map id="ft_read_and_split" name="ft_read_and_split">
+<area shape="rect" id="node1" title="Import file and split it into lines." alt="" coords="5,81,139,108"/>
+<area shape="rect" id="node2" href="$import__file_8h.html#af1a4fd87c14e1f5d0b126bfc848d4761" title="Destroy malloced buffer." alt="" coords="191,5,305,32"/>
+<area shape="rect" id="node3" href="$import__file_8h.html#a738f6fd9290967f972da877e935cb8d8" title="Initiates a t_buf buffer." alt="" coords="205,107,291,133"/>
+<area shape="rect" id="node6" href="$error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" title="Print generic error message." alt="" coords="671,183,748,209"/>
+<area shape="rect" id="node7" href="$import__file_8h.html#af0392d80791e758ec536af492c9cfe07" title="Reads provided file into buffer." alt="" coords="187,208,309,235"/>
+<area shape="rect" id="node4" href="$import__file__buffer_8c.html#a99b094d3ffec975b672948cc9f681af9" title="Set buffer to zero." alt="" coords="363,107,462,133"/>
+<area shape="rect" id="node5" href="$error__syscall_8h.html#a1ab50ff4af961d85a53bf12a8f398ba3" title="Wrapper function for malloc() to print errno." alt="" coords="516,183,623,209"/>
+<area shape="rect" id="node8" href="$import__file__buffer_8c.html#abdf4c7ee723013cce62274cf29be648d" title="Doubles buffer size and copies content into new malloc&#39;d buffer." alt="" coords="357,208,468,235"/>
+<area shape="rect" id="node9" href="$error__syscall_8h.html#af521961510b5af3e286f0ccd77cd691d" title="Wrapper function for read() to print errno." alt="" coords="523,245,615,272"/>
+</map>

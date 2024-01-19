@@ -1,0 +1,8 @@
+<map id="ft_print_hittable" name="ft_print_hittable">
+<area shape="rect" id="node1" title="Prints parameters of a hittable." alt="" coords="5,56,131,83"/>
+<area shape="rect" id="node2" href="$print__entity_8c.html#a27665e112e02a635b975a5b0a4965a24" title="Prints parameters of a cylinder." alt="" coords="179,5,305,32"/>
+<area shape="rect" id="node5" href="$print__entity_8c.html#ab5b1469cabf3343b24c4393e236d4533" title="Prints parameters of a plane." alt="" coords="187,56,297,83"/>
+<area shape="rect" id="node6" href="$print__entity_8c.html#aa206b35a5459e0b87ec959f729bf1ab8" title="Prints parameters of a sphere." alt="" coords="183,107,301,133"/>
+<area shape="rect" id="node3" href="$print_8h.html#a8bb33051bca60d0890928ecd90b5ef29" title="Prints variables of a colour." alt="" coords="353,31,468,57"/>
+<area shape="rect" id="node4" href="$print_8h.html#a99a90f3ee5487824a003c2196bf2f56c" title="Prints variables of a vec3." alt="" coords="357,81,464,108"/>
+</map>

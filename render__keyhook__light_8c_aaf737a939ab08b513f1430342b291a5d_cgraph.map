@@ -1,0 +1,7 @@
+<map id="ft_manip_light_src" name="ft_manip_light_src">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,147,83"/>
+<area shape="rect" id="node2" href="$render_8h.html#ae38e8dc9d9b53b672eab499e211c6d9a" title="Changes the colour with a keypress." alt="" coords="195,5,368,32"/>
+<area shape="rect" id="node4" href="$render_8h.html#a4887ea4bfcf40faaa9be3002ec25d5ee" title="Increases or decreases a value with a keypress." alt="" coords="207,56,356,83"/>
+<area shape="rect" id="node5" href="$render_8h.html#a7b4f1510b7e7eecfb0520b0765d5c9de" title="Moves a 3D point with a keypress." alt="" coords="201,107,362,133"/>
+<area shape="rect" id="node3" href="$colour_8h.html#a5d187c5314483276ba15560dcf620e39" title="Returns a colour based on the given colour name." alt="" coords="416,5,523,32"/>
+</map>

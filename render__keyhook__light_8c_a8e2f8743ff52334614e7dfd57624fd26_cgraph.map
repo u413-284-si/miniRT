@@ -1,0 +1,10 @@
+<map id="ft_manip_light" name="ft_manip_light">
+<area shape="rect" id="node1" title="Manipulates the active light." alt="" coords="5,56,120,83"/>
+<area shape="rect" id="node2" href="$render__keyhook__light_8c.html#a31f05b252db0e611f0a6e6a07d355dc1" title=" " alt="" coords="168,5,336,32"/>
+<area shape="rect" id="node3" href="$render__keyhook__light_8c.html#ae2de0183906701c2578d6bade8368e22" title=" " alt="" coords="182,56,322,83"/>
+<area shape="rect" id="node7" href="$render__keyhook__light_8c.html#aaf737a939ab08b513f1430342b291a5d" title=" " alt="" coords="181,107,323,133"/>
+<area shape="rect" id="node4" href="$render_8h.html#ae38e8dc9d9b53b672eab499e211c6d9a" title="Changes the colour with a keypress." alt="" coords="384,107,557,133"/>
+<area shape="rect" id="node6" href="$render_8h.html#a4887ea4bfcf40faaa9be3002ec25d5ee" title="Increases or decreases a value with a keypress." alt="" coords="396,56,545,83"/>
+<area shape="rect" id="node5" href="$colour_8h.html#a5d187c5314483276ba15560dcf620e39" title="Returns a colour based on the given colour name." alt="" coords="605,107,712,133"/>
+<area shape="rect" id="node8" href="$render_8h.html#a7b4f1510b7e7eecfb0520b0765d5c9de" title="Moves a 3D point with a keypress." alt="" coords="390,157,551,184"/>
+</map>

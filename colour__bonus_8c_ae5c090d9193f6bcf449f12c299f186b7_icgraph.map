@@ -1,0 +1,14 @@
+<map id="ft_add_colour" name="ft_add_colour">
+<area shape="rect" id="node1" title="Add two colours." alt="" coords="1224,81,1333,107"/>
+<area shape="rect" id="node2" href="$ray__bonus_8h.html#af9c073d2966aa21738e1d2083762055f" title="Returns the colour of a pixel by means of anti&#45;aliasing." alt="" coords="647,81,803,107"/>
+<area shape="rect" id="node7" href="$lighting__bonus_8h.html#ac85883d276b27394b86511c7eaa4d4ae" title="Computes the colour of light interacting with different material properties." alt="" coords="1033,81,1176,107"/>
+<area shape="rect" id="node10" href="$lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="1055,131,1154,158"/>
+<area shape="rect" id="node3" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="471,81,599,107"/>
+<area shape="rect" id="node4" href="$render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,106,423,133"/>
+<area shape="rect" id="node5" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,106,260,133"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,106,60,133"/>
+<area shape="rect" id="node8" href="$lighting__bonus_8h.html#a7a7ed2ff6f725c296f088c0f2f0d0843" title="Calculate the effect of different lighting on perception." alt="" coords="869,30,967,57"/>
+<area shape="rect" id="node9" href="$lighting__bonus_8h.html#a72c122146878dc126a6472d159526c14" title="Create reflective lighting by recursion." alt="" coords="851,81,985,107"/>
+<area shape="rect" id="node11" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="865,131,971,158"/>
+<area shape="rect" id="node12" href="$render_8h.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="471,131,599,158"/>
+</map>

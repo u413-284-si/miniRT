@@ -1,0 +1,8 @@
+<map id="ft_keyhook_mv_point" name="ft_keyhook_mv_point">
+<area shape="rect" id="node1" title="Moves a 3D point with a keypress." alt="" coords="357,81,519,108"/>
+<area shape="rect" id="node2" href="$render_8h.html#af500a65a1e441d08240efa30fa8c1e27" title="Manipulates the active cylinder." alt="" coords="169,5,308,32"/>
+<area shape="rect" id="node3" href="$render__keyhook__light_8c.html#aaf737a939ab08b513f1430342b291a5d" title=" " alt="" coords="168,56,309,83"/>
+<area shape="rect" id="node5" href="$render_8h.html#a5fcb632e750265c23a4a6cd3fe090d35" title="Manipulates the active plane." alt="" coords="177,107,300,133"/>
+<area shape="rect" id="node6" href="$render_8h.html#ad16e4429a179a680b2bbf187f659f269" title="Manipulates the active sphere." alt="" coords="173,157,304,184"/>
+<area shape="rect" id="node4" href="$render_8h.html#a8e2f8743ff52334614e7dfd57624fd26" title="Manipulates the active light." alt="" coords="5,56,120,83"/>
+</map>

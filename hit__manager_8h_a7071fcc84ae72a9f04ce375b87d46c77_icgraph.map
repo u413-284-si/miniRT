@@ -1,0 +1,4 @@
+<map id="ft_cy_check_wall" name="ft_cy_check_wall">
+<area shape="rect" id="node1" title="Checks if the ray actually hit the cylinder wall." alt="" coords="193,5,325,32"/>
+<area shape="rect" id="node2" href="$hit__manager_8h.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="5,5,145,32"/>
+</map>

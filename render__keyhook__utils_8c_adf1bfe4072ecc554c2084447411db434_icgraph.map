@@ -1,0 +1,5 @@
+<map id="ft_keyhook_rot_vec" name="ft_keyhook_rot_vec">
+<area shape="rect" id="node1" title="Rotates a 3D vector with a keypress." alt="" coords="192,31,340,57"/>
+<area shape="rect" id="node2" href="$render_8h.html#af500a65a1e441d08240efa30fa8c1e27" title="Manipulates the active cylinder." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node3" href="$render_8h.html#a5fcb632e750265c23a4a6cd3fe090d35" title="Manipulates the active plane." alt="" coords="13,56,136,83"/>
+</map>

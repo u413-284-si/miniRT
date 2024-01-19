@@ -1,0 +1,7 @@
+<map id="ft_check_lines" name="ft_check_lines">
+<area shape="rect" id="node1" title="Check array of imported lines." alt="" coords="5,81,120,108"/>
+<area shape="rect" id="node2" href="$check_8c.html#a4560f2d54698ffbfb8262bc7cad02768" title="Check if minimum number of specific entities was found." alt="" coords="168,5,332,32"/>
+<area shape="rect" id="node3" href="$check_8c.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="179,56,321,83"/>
+<area shape="rect" id="node4" href="$check_8c.html#a3a2c8238788feab0a8d61cb6ef42d121" title="Increase entity count, and check if too many." alt="" coords="183,107,317,133"/>
+<area shape="rect" id="node5" href="$error__msg_8h.html#a278f4b45a52fcddd1925e2b9c50266ed" title="Print error message with a number." alt="" coords="183,157,317,184"/>
+</map>

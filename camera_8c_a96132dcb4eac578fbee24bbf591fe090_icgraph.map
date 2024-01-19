@@ -1,0 +1,7 @@
+<map id="ft_cam_calc_pixel_grid" name="ft_cam_calc_pixel_grid">
+<area shape="rect" id="node1" title="Calculates the pixel grid parameters of the viewport." alt="" coords="337,56,507,83"/>
+<area shape="rect" id="node2" href="$camera_8h.html#af7d021ad81a192b9ae379a76210706aa" title="Initializes camera parameters." alt="" coords="151,5,246,32"/>
+<area shape="rect" id="node4" href="$render_8h.html#a1509258bd6eb6bea810a0ac7bb6e1e70" title="Manipulates the camera with a keypress." alt="" coords="141,56,256,83"/>
+<area shape="rect" id="node5" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="108,107,289,133"/>
+<area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
+</map>

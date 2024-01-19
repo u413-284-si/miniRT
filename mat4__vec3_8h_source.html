@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: mat4_vec3.h Source File</title>
+<title>MiniRT: inc/mat4_vec3.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,15 +92,15 @@ $(document).ready(function(){initNavTree('mat4__vec3_8h_source.html',''); initRe
 <div class="title">mat4_vec3.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<a href="mat4__vec3_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*   mat4_vec3.h                                        :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: sqiu &lt;sqiu@student.42vienna.com&gt;           +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/12/20 11:33:46 by gwolf             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/12/25 16:15:51 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/14 16:52:13 by sqiu             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -110,30 +110,36 @@ $(document).ready(function(){initNavTree('mat4__vec3_8h_source.html',''); initRe
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/* ====== LIBRARIES ====== */</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Home-grown libs</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"># include &quot;vec3.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"># include &quot;mat4.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="vec3_8h.html">vec3.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="mat4_8h.html">mat4.h</a>&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// mat4_vec3_rotate.c</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_mult_mat4(<span class="keyword">const</span> <a class="code" href="structs__mat4.html">t_mat4</a> mat, <span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="structt__vec3.html">t_vec3</a>  <a class="code" href="mat4__vec3_8h.html#a53ea797ed37dea591e9e86121a849aca">ft_vec3_mult_mat4</a>(<span class="keyword">const</span> <a class="code" href="structt__mat4.html">t_mat4</a> mat, <span class="keyword">const</span> <a class="code" href="structt__vec3.html">t_vec3</a> vec);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_rotate_x(<span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> roll);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="structt__vec3.html">t_vec3</a>  <a class="code" href="mat4__vec3_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0">ft_vec3_rotate_x</a>(<span class="keyword">const</span> <a class="code" href="structt__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> roll);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_rotate_y(<span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> pitch);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="structt__vec3.html">t_vec3</a>  <a class="code" href="mat4__vec3_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46">ft_vec3_rotate_y</a>(<span class="keyword">const</span> <a class="code" href="structt__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> pitch);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<a class="code" href="structs__vec3.html">t_vec3</a>  ft_vec3_rotate_z(<span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> yaw);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<a class="code" href="structt__vec3.html">t_vec3</a>  <a class="code" href="mat4__vec3_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc">ft_vec3_rotate_z</a>(<span class="keyword">const</span> <a class="code" href="structt__vec3.html">t_vec3</a> vec, <span class="keywordtype">float</span> yaw);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructs__mat4_html"><div class="ttname"><a href="structs__mat4.html">s_mat4</a></div><div class="ttdoc">4x4 matrix of floats.</div><div class="ttdef"><b>Definition:</b> mat4.h:29</div></div>
-<div class="ttc" id="astructs__vec3_html"><div class="ttname"><a href="structs__vec3.html">s_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> vec3.h:33</div></div>
+<div class="ttc" id="amat4_8h_html"><div class="ttname"><a href="mat4_8h.html">mat4.h</a></div></div>
+<div class="ttc" id="amat4__vec3_8h_html_a211f9d6535bb54bea2299ee5ea8a54a0"><div class="ttname"><a href="mat4__vec3_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0">ft_vec3_rotate_x</a></div><div class="ttdeci">t_vec3 ft_vec3_rotate_x(const t_vec3 vec, float roll)</div><div class="ttdoc">Rotates a 3D vector around the x-axis.</div><div class="ttdef"><b>Definition:</b> <a href="mat4__vec3__rotate_8c_source.html#l00037">mat4_vec3_rotate.c:37</a></div></div>
+<div class="ttc" id="amat4__vec3_8h_html_a53ea797ed37dea591e9e86121a849aca"><div class="ttname"><a href="mat4__vec3_8h.html#a53ea797ed37dea591e9e86121a849aca">ft_vec3_mult_mat4</a></div><div class="ttdeci">t_vec3 ft_vec3_mult_mat4(const t_mat4 mat, const t_vec3 vec)</div><div class="ttdoc">Multiplies a 4x4 matrix with a 3D vector.</div><div class="ttdef"><b>Definition:</b> <a href="mat4__vec3__rotate_8c_source.html#l00015">mat4_vec3_rotate.c:15</a></div></div>
+<div class="ttc" id="amat4__vec3_8h_html_ac8a4ca6fb927e3746e7129f8eb04aa46"><div class="ttname"><a href="mat4__vec3_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46">ft_vec3_rotate_y</a></div><div class="ttdeci">t_vec3 ft_vec3_rotate_y(const t_vec3 vec, float pitch)</div><div class="ttdoc">Rotates a 3D vector around the y-axis.</div><div class="ttdef"><b>Definition:</b> <a href="mat4__vec3__rotate_8c_source.html#l00048">mat4_vec3_rotate.c:48</a></div></div>
+<div class="ttc" id="amat4__vec3_8h_html_ad39f8d1d44f9bce6c5025b87a09f7dfc"><div class="ttname"><a href="mat4__vec3_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc">ft_vec3_rotate_z</a></div><div class="ttdeci">t_vec3 ft_vec3_rotate_z(const t_vec3 vec, float yaw)</div><div class="ttdoc">Rotates a 3D vector around the z-axis.</div><div class="ttdef"><b>Definition:</b> <a href="mat4__vec3__rotate_8c_source.html#l00059">mat4_vec3_rotate.c:59</a></div></div>
+<div class="ttc" id="astructt__mat4_html"><div class="ttname"><a href="structt__mat4.html">t_mat4</a></div><div class="ttdoc">4x4 matrix of floats.</div><div class="ttdef"><b>Definition:</b> <a href="mat4_8h_source.html#l00033">mat4.h:34</a></div></div>
+<div class="ttc" id="astructt__vec3_html"><div class="ttname"><a href="structt__vec3.html">t_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00033">vec3.h:34</a></div></div>
+<div class="ttc" id="avec3_8h_html"><div class="ttname"><a href="vec3_8h.html">vec3.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><b>mat4_vec3.h</b></li>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="mat4__vec3_8h.html">mat4_vec3.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

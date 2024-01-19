@@ -1,0 +1,6 @@
+<map id="t_putinfo" name="t_putinfo">
+<area shape="rect" id="node1" title="Contains info about text for putting on the screen." alt="" coords="5,288,85,315"/>
+<area shape="rect" id="node2" href="$structt__vec2i.html" title="2D vector with int." alt="" coords="11,5,80,32"/>
+<area shape="rect" id="node4" href="$structt__img.html" title="mlx img struct." alt="" coords="69,95,128,121"/>
+<area shape="rect" id="node3" href="$structt__mlx__ptrs.html" title="mlx pointers struct." alt="" coords="61,199,152,225"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ft_manip_plane" name="ft_manip_plane">
+<area shape="rect" id="node1" title="Manipulates the active plane." alt="" coords="361,5,484,32"/>
+<area shape="rect" id="node2" href="$render_8h.html#aadc3a7a6894a18793745d24caf2ef281" title="Manipulates the active hittable." alt="" coords="177,5,313,32"/>
+<area shape="rect" id="node3" href="$render_8h.html#a2f40affff5a9aa82b3441bebf0bb1836" title="Manipulates the active hittable." alt="" coords="5,5,129,32"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="ft_parse_float" name="ft_parse_float">
+<area shape="rect" id="node1" title="Parse a single float." alt="" coords="981,183,1092,209"/>
+<area shape="rect" id="node2" href="$parse_8h.html#a43353d6bde35357648843c359e4d00a5" title="Parse ambient light line." alt="" coords="417,5,552,32"/>
+<area shape="rect" id="node4" href="$parse_8h.html#a39197067937cd8880453eed92148ee31" title="Parse camera line." alt="" coords="601,107,732,133"/>
+<area shape="rect" id="node5" href="$parse__bonus_8h.html#ae972e22d4e9386b05598736b617c2ff2" title="Parse cone line." alt="" coords="611,309,723,336"/>
+<area shape="rect" id="node10" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="600,259,733,285"/>
+<area shape="rect" id="node12" href="$parse_8h.html#ad1918f45b6a322a21c3541825b405eb6" title="Parse values of a float block." alt="" coords="781,157,933,184"/>
+<area shape="rect" id="node13" href="$parse_8h.html#a4aae05e7a38646951b318a2de0b24689" title="Parse light line." alt="" coords="611,56,722,83"/>
+<area shape="rect" id="node15" href="$parse_8h.html#aa1379d0b3d46c0fd44da3298e17866cc" title="Parse sphere line." alt="" coords="604,208,729,235"/>
+<area shape="rect" id="node16" href="$parse__entity__sp__pl__cy__bonus_8c.html#a64877aac0d88b33e1bb87b3c9a3496dc" title="Parse plane line." alt="" coords="799,360,916,387"/>
+<area shape="rect" id="node3" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="257,81,369,108"/>
+<area shape="rect" id="node6" href="$parse__bonus_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="425,309,544,336"/>
+<area shape="rect" id="node7" href="$parse__bonus_8c.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="257,309,369,336"/>
+<area shape="rect" id="node8" href="$parse__bonus_8c.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,309,209,336"/>
+<area shape="rect" id="node9" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,309,60,336"/>
+<area shape="rect" id="node11" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="425,208,544,235"/>
+<area shape="rect" id="node14" href="$parse_8h.html#a64877aac0d88b33e1bb87b3c9a3496dc" title="Parse plane line." alt="" coords="608,157,725,184"/>
+</map>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: utils.h Source File</title>
+<title>MiniRT: inc/utils.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,15 +92,15 @@ $(document).ready(function(){initNavTree('utils_8h_source.html',''); initResizab
 <div class="title">utils.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<a href="utils_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*   utils.h                                            :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: sqiu &lt;sqiu@student.42vienna.com&gt;           +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/12/25 07:32:14 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/18 23:50:46 by sqiu             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -112,52 +112,70 @@ $(document).ready(function(){initNavTree('utils_8h_source.html',''); initResizab
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"># include &lt;math.h&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"># include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/* ====== MACROS ====== */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//home-grown libs</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"># define RAD 0.01745329251</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"># define DEG 57.2957795131</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"># define EPSILON 1e-4</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/* ====== TYPEDEFS ====== */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/* ====== MACROS ====== */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="utils_8h.html#ab812f1e2f95156906fcaca00bc6f490e">   25</a></span>&#160;<span class="preprocessor"># define RAD 0.01745329251</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="utils_8h.html#a536e48026a77f8365359a33a3e0eb726">   26</a></span>&#160;<span class="preprocessor"># define DEG 57.2957795131</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">   27</a></span>&#160;<span class="preprocessor"># define EPSILON 1e-3</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structs__interval.html">   35</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__interval.html">s_interval</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">float</span>   min;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">float</span>   max;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}   <a class="code" href="structs__interval.html">t_interval</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structs__equation.html">   55</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__equation.html">s_equation</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">float</span>   a;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">float</span>   b;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">float</span>   c;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">float</span>   d1;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">float</span>   d2;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}   <a class="code" href="structs__equation.html">t_equation</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">/* ====== TYPEDEFS ====== */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structt__interval.html">   37</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>s_interval</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structt__interval.html#ad2e88d75f808e6d4e78d48bceb10c336">   39</a></span>&#160;    <span class="keywordtype">float</span>   <a class="code" href="structt__interval.html#ad2e88d75f808e6d4e78d48bceb10c336">min</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">   40</a></span>&#160;    <span class="keywordtype">float</span>   <a class="code" href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">max</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}   <a class="code" href="structt__interval.html">t_interval</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structt__equation.html">   57</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>s_equation</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">   59</a></span>&#160;    <span class="keywordtype">float</span>   <a class="code" href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">   60</a></span>&#160;    <span class="keywordtype">float</span>   <a class="code" href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">b</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structt__equation.html#ae78103ab33f03590e84ff7bc735629d7">   61</a></span>&#160;    <span class="keywordtype">float</span>   <a class="code" href="structt__equation.html#ae78103ab33f03590e84ff7bc735629d7">c</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structt__equation.html#a3967641da3863c1f79e94be997341402">   62</a></span>&#160;    <span class="keywordtype">float</span>   <a class="code" href="structt__equation.html#a3967641da3863c1f79e94be997341402">d1</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structt__equation.html#aac1777fc7cfc528c03b3e8c38f14e2b9">   63</a></span>&#160;    <span class="keywordtype">float</span>   <a class="code" href="structt__equation.html#aac1777fc7cfc528c03b3e8c38f14e2b9">d2</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}   <a class="code" href="structt__equation.html">t_equation</a>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">float</span>   ft_degree_to_radian(<span class="keywordtype">float</span> degrees);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">float</span>   ft_radian_to_degree(<span class="keywordtype">float</span> radians);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">bool</span>    ft_contains(<span class="keywordtype">float</span> x, <a class="code" href="structs__interval.html">t_interval</a> interval);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">bool</span>    ft_surrounds(<span class="keywordtype">float</span> x, <a class="code" href="structs__interval.html">t_interval</a> interval);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keywordtype">float</span>   ft_solve(<a class="code" href="structs__equation.html">t_equation</a> *eq);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keywordtype">bool</span>    ft_nearly_equal_flt(<span class="keywordtype">float</span> one, <span class="keywordtype">float</span> two);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructs__equation_html"><div class="ttname"><a href="structs__equation.html">s_equation</a></div><div class="ttdoc">Contains factors to solve linear and quadratic equations.</div><div class="ttdef"><b>Definition:</b> utils.h:56</div></div>
-<div class="ttc" id="astructs__interval_html"><div class="ttname"><a href="structs__interval.html">s_interval</a></div><div class="ttdoc">Interval of accepted values.</div><div class="ttdef"><b>Definition:</b> utils.h:36</div></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">float</span>   <a class="code" href="utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9">ft_degree_to_radian</a>(<span class="keywordtype">float</span> degrees);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">float</span>   <a class="code" href="utils_8h.html#a49f519544f51627ced8238dfd72ce20a">ft_radian_to_degree</a>(<span class="keywordtype">float</span> radians);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="utils_8h.html#a6dd7e1d91f9eba773bbc84ee1768e27a">ft_contains</a>(<span class="keywordtype">float</span> x, <a class="code" href="structt__interval.html">t_interval</a> interval);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa">ft_surrounds</a>(<span class="keywordtype">float</span> x, <a class="code" href="structt__interval.html">t_interval</a> interval);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keywordtype">float</span>   <a class="code" href="utils_8h.html#ae65513c75ce8a8538c22393e0af3ab1f">ft_solve</a>(<a class="code" href="structt__equation.html">t_equation</a> *eq);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="utils_8h.html#a518be72ffbfd90cedf995e72dde0aff6">ft_nearly_equal_flt</a>(<span class="keywordtype">float</span> one, <span class="keywordtype">float</span> two);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keywordtype">float</span>   <a class="code" href="utils_8h.html#a241b2b1d75c68c1eefd36b569901c9f9">ft_clamp</a>(<span class="keywordtype">float</span> x, <a class="code" href="structt__interval.html">t_interval</a> interval);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astructt__equation_html"><div class="ttname"><a href="structt__equation.html">t_equation</a></div><div class="ttdoc">Contains factors to solve linear and quadratic equations.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00057">utils.h:58</a></div></div>
+<div class="ttc" id="astructt__equation_html_a3967641da3863c1f79e94be997341402"><div class="ttname"><a href="structt__equation.html#a3967641da3863c1f79e94be997341402">t_equation::d1</a></div><div class="ttdeci">float d1</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00062">utils.h:62</a></div></div>
+<div class="ttc" id="astructt__equation_html_a4aec1a5be9d9a4a394a2e49e9744286e"><div class="ttname"><a href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">t_equation::a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00059">utils.h:59</a></div></div>
+<div class="ttc" id="astructt__equation_html_a83fc1af92e29717b4513d121b0c72c7d"><div class="ttname"><a href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">t_equation::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00060">utils.h:60</a></div></div>
+<div class="ttc" id="astructt__equation_html_aac1777fc7cfc528c03b3e8c38f14e2b9"><div class="ttname"><a href="structt__equation.html#aac1777fc7cfc528c03b3e8c38f14e2b9">t_equation::d2</a></div><div class="ttdeci">float d2</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00063">utils.h:63</a></div></div>
+<div class="ttc" id="astructt__equation_html_ae78103ab33f03590e84ff7bc735629d7"><div class="ttname"><a href="structt__equation.html#ae78103ab33f03590e84ff7bc735629d7">t_equation::c</a></div><div class="ttdeci">float c</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00061">utils.h:61</a></div></div>
+<div class="ttc" id="astructt__interval_html"><div class="ttname"><a href="structt__interval.html">t_interval</a></div><div class="ttdoc">Interval of accepted values.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00037">utils.h:38</a></div></div>
+<div class="ttc" id="astructt__interval_html_a306b5ca364bf842a8ff5bbfc0b4d4a4b"><div class="ttname"><a href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">t_interval::max</a></div><div class="ttdeci">float max</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00040">utils.h:40</a></div></div>
+<div class="ttc" id="astructt__interval_html_ad2e88d75f808e6d4e78d48bceb10c336"><div class="ttname"><a href="structt__interval.html#ad2e88d75f808e6d4e78d48bceb10c336">t_interval::min</a></div><div class="ttdeci">float min</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00039">utils.h:39</a></div></div>
+<div class="ttc" id="autils_8h_html_a241b2b1d75c68c1eefd36b569901c9f9"><div class="ttname"><a href="utils_8h.html#a241b2b1d75c68c1eefd36b569901c9f9">ft_clamp</a></div><div class="ttdeci">float ft_clamp(float x, t_interval interval)</div><div class="ttdoc">Ensure that the returned float lies within the interval.</div><div class="ttdef"><b>Definition:</b> <a href="utils__interval_8c_source.html#l00029">utils_interval.c:29</a></div></div>
+<div class="ttc" id="autils_8h_html_a49f519544f51627ced8238dfd72ce20a"><div class="ttname"><a href="utils_8h.html#a49f519544f51627ced8238dfd72ce20a">ft_radian_to_degree</a></div><div class="ttdeci">float ft_radian_to_degree(float radians)</div><div class="ttdoc">Transforms radians into degrees.</div><div class="ttdef"><b>Definition:</b> <a href="utils__math_8c_source.html#l00024">utils_math.c:24</a></div></div>
+<div class="ttc" id="autils_8h_html_a518be72ffbfd90cedf995e72dde0aff6"><div class="ttname"><a href="utils_8h.html#a518be72ffbfd90cedf995e72dde0aff6">ft_nearly_equal_flt</a></div><div class="ttdeci">bool ft_nearly_equal_flt(float one, float two)</div><div class="ttdoc">Checks if two floats are (almost) equal.</div><div class="ttdef"><b>Definition:</b> <a href="utils__math_8c_source.html#l00046">utils_math.c:46</a></div></div>
+<div class="ttc" id="autils_8h_html_a6dd7e1d91f9eba773bbc84ee1768e27a"><div class="ttname"><a href="utils_8h.html#a6dd7e1d91f9eba773bbc84ee1768e27a">ft_contains</a></div><div class="ttdeci">bool ft_contains(float x, t_interval interval)</div><div class="ttdoc">Determines if value is inside the interval.</div><div class="ttdef"><b>Definition:</b> <a href="utils__interval_8c_source.html#l00019">utils_interval.c:19</a></div></div>
+<div class="ttc" id="autils_8h_html_a7d1328722f9dc6edd652f7c732856ae9"><div class="ttname"><a href="utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9">ft_degree_to_radian</a></div><div class="ttdeci">float ft_degree_to_radian(float degrees)</div><div class="ttdoc">Transforms degrees into radian.</div><div class="ttdef"><b>Definition:</b> <a href="utils__math_8c_source.html#l00019">utils_math.c:19</a></div></div>
+<div class="ttc" id="autils_8h_html_add4de5ba94d3f8475d0a1c4ce8abd3aa"><div class="ttname"><a href="utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa">ft_surrounds</a></div><div class="ttdeci">bool ft_surrounds(float x, t_interval interval)</div><div class="ttdoc">Determines if value is surrounded by the interval.</div><div class="ttdef"><b>Definition:</b> <a href="utils__interval_8c_source.html#l00024">utils_interval.c:24</a></div></div>
+<div class="ttc" id="autils_8h_html_ae65513c75ce8a8538c22393e0af3ab1f"><div class="ttname"><a href="utils_8h.html#ae65513c75ce8a8538c22393e0af3ab1f">ft_solve</a></div><div class="ttdeci">float ft_solve(t_equation *eq)</div><div class="ttdoc">Solves the given equation.</div><div class="ttdef"><b>Definition:</b> <a href="utils__math_8c_source.html#l00029">utils_math.c:29</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><b>utils.h</b></li>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="utils_8h.html">utils.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

@@ -1,0 +1,12 @@
+<map id="t_entities" name="t_entities">
+<area shape="rect" id="node1" title="Contains all entities in the scene." alt="" coords="161,421,244,448"/>
+<area shape="rect" id="node2" href="$structt__light.html" title="Represents lighting in the scene." alt="" coords="106,139,169,165"/>
+<area shape="rect" id="node3" href="$structt__colour.html" title="Represents an RGB colour with float values from 0.0 &#45; 1.0." alt="" coords="176,5,251,32"/>
+<area shape="rect" id="node7" href="$structt__plane.html" title="Represents a plane." alt="" coords="495,139,566,165"/>
+<area shape="rect" id="node8" href="$structt__sphere.html" title="Represents a sphere." alt="" coords="303,139,382,165"/>
+<area shape="rect" id="node9" href="$structt__cylinder.html" title="Represents a cylinder." alt="" coords="193,139,279,165"/>
+<area shape="rect" id="node10" href="$structt__cone.html" title="Represents a cone." alt="" coords="406,139,471,165"/>
+<area shape="rect" id="node4" href="$structt__vec3.html" title="Represents a tridimensional vector." alt="" coords="405,5,470,32"/>
+<area shape="rect" id="node5" href="$structt__hittable.html" title="Represents a hittable." alt="" coords="254,332,338,359"/>
+<area shape="rect" id="node6" href="$uniont__shape.html" title="Contains information of the different shapes." alt="" coords="306,228,379,255"/>
+</map>

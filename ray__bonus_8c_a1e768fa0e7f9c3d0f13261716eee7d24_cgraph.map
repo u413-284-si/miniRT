@@ -1,0 +1,10 @@
+<map id="ft_create_sample_ray" name="ft_create_sample_ray">
+<area shape="rect" id="node1" title="Creates a random sample ray in a square surrounding the current pixel." alt="" coords="5,81,168,108"/>
+<area shape="rect" id="node2" href="$ray__bonus_8c.html#a8706f722b73ae2ec7ec56e469ecbac02" title="Generate a random vector that is confined within the square surrounding a pixel. The vector lies in t..." alt="" coords="216,56,340,83"/>
+<area shape="rect" id="node4" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="400,5,500,32"/>
+<area shape="rect" id="node6" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="223,107,333,133"/>
+<area shape="rect" id="node8" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="229,157,327,184"/>
+<area shape="rect" id="node3" href="$utils__bonus_8h.html#ad2506d7ff542ccee53d1ff751d7ed217" title="Return a random float." alt="" coords="388,56,512,83"/>
+<area shape="rect" id="node5" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="395,107,505,133"/>
+<area shape="rect" id="node7" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="401,157,499,184"/>
+</map>

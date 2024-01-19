@@ -1,0 +1,4 @@
+<map id="ft_put_unit_vec" name="ft_put_unit_vec">
+<area shape="rect" id="node1" title="Puts a unit vector on the screen." alt="" coords="5,5,127,32"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="175,5,257,32"/>
+</map>

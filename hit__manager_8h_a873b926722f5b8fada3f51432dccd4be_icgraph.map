@@ -1,0 +1,4 @@
+<map id="ft_cy_normal" name="ft_cy_normal">
+<area shape="rect" id="node1" title="Calculates the normal on the point of intersection of the cylinder." alt="" coords="199,5,305,32"/>
+<area shape="rect" id="node2" href="$hit__manager_8h.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="5,5,151,32"/>
+</map>

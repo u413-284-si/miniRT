@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: print.h Source File</title>
+<title>MiniRT: inc/print.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,15 +92,15 @@ $(document).ready(function(){initNavTree('print_8h_source.html',''); initResizab
 <div class="title">print.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<a href="print_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*   print.h                                            :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: sqiu &lt;sqiu@student.42vienna.com&gt;           +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/12/20 11:26:06 by gwolf             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/12/25 20:18:06 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/19 00:20:01 by sqiu             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -113,49 +113,70 @@ $(document).ready(function(){initNavTree('print_8h_source.html',''); initResizab
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"># include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Home-grown libs</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"># include &quot;vec3.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"># include &quot;mat4.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"># include &quot;colour.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"># include &quot;entities.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"># include &quot;camera.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// print_structs.c</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span>    ft_print_vec3(<span class="keyword">const</span> <a class="code" href="structs__vec3.html">t_vec3</a> vec);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span>    ft_print_mat4(<span class="keyword">const</span> <a class="code" href="structs__mat4.html">t_mat4</a> mat);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span>    ft_print_colour(<span class="keyword">const</span> <a class="code" href="structs__colour.html">t_colour</a> colour);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// print_entity.c</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span>    ft_print_cam(<span class="keyword">const</span> <a class="code" href="structs__cam.html">t_cam</a> cam);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span>    ft_print_hittable(<span class="keyword">const</span> <a class="code" href="structs__hittable.html">t_hittable</a> hittable);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span>    ft_print_sphere(<span class="keyword">const</span> <a class="code" href="structs__sphere.html">t_sphere</a> sp);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span>    ft_print_plane(<span class="keyword">const</span> <a class="code" href="structs__plane.html">t_plane</a> pl);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span>    ft_print_cylinder(<span class="keyword">const</span> <a class="code" href="structs__cylinder.html">t_cylinder</a> cy);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructs__cam_html"><div class="ttname"><a href="structs__cam.html">s_cam</a></div><div class="ttdoc">Contains camera parameters.</div><div class="ttdef"><b>Definition:</b> camera.h:56</div></div>
-<div class="ttc" id="astructs__colour_html"><div class="ttname"><a href="structs__colour.html">s_colour</a></div><div class="ttdoc">Represents an RGB colour with float values from 0.0 - 1.0.</div><div class="ttdef"><b>Definition:</b> colour.h:30</div></div>
-<div class="ttc" id="astructs__cylinder_html"><div class="ttname"><a href="structs__cylinder.html">s_cylinder</a></div><div class="ttdoc">Represents a cylinder.</div><div class="ttdef"><b>Definition:</b> entities.h:80</div></div>
-<div class="ttc" id="astructs__hittable_html"><div class="ttname"><a href="structs__hittable.html">s_hittable</a></div><div class="ttdoc">Represents a hittable.</div><div class="ttdef"><b>Definition:</b> entities.h:136</div></div>
-<div class="ttc" id="astructs__mat4_html"><div class="ttname"><a href="structs__mat4.html">s_mat4</a></div><div class="ttdoc">4x4 matrix of floats.</div><div class="ttdef"><b>Definition:</b> mat4.h:29</div></div>
-<div class="ttc" id="astructs__plane_html"><div class="ttname"><a href="structs__plane.html">s_plane</a></div><div class="ttdoc">Represents a plane.</div><div class="ttdef"><b>Definition:</b> entities.h:63</div></div>
-<div class="ttc" id="astructs__sphere_html"><div class="ttname"><a href="structs__sphere.html">s_sphere</a></div><div class="ttdoc">Represents a sphere.</div><div class="ttdef"><b>Definition:</b> entities.h:50</div></div>
-<div class="ttc" id="astructs__vec3_html"><div class="ttname"><a href="structs__vec3.html">s_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> vec3.h:33</div></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="vec3_8h.html">vec3.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="mat4_8h.html">mat4.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="camera_8h.html">camera.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"># if IS_BONUS</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="colour__bonus_8h.html">colour_bonus.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="entities__bonus_8h.html">entities_bonus.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"># else</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="colour_8h.html">colour.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="entities_8h.html">entities.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"># endif</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// print_structs.c</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="print_8h.html#a99a90f3ee5487824a003c2196bf2f56c">ft_print_vec3</a>(<span class="keyword">const</span> <a class="code" href="structt__vec3.html">t_vec3</a> vec);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="print_8h.html#a89022d200140ebc52b4f32036ab34fd2">ft_print_mat4</a>(<span class="keyword">const</span> <a class="code" href="structt__mat4.html">t_mat4</a> mat);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="print_8h.html#a8bb33051bca60d0890928ecd90b5ef29">ft_print_colour</a>(<span class="keyword">const</span> <a class="code" href="structt__colour.html">t_colour</a> colour);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// print_entity.c</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2">ft_print_cam</a>(<span class="keyword">const</span> <a class="code" href="structt__cam.html">t_cam</a> cam);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="print_8h.html#ac59921d803c46a4b1e16f0dfe0b6c50b">ft_print_hittable</a>(<span class="keyword">const</span> <a class="code" href="structt__hittable.html">t_hittable</a> hittable);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="print_8h.html#aa206b35a5459e0b87ec959f729bf1ab8">ft_print_sphere</a>(<span class="keyword">const</span> <a class="code" href="structt__sphere.html">t_sphere</a> sp);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="print_8h.html#ab5b1469cabf3343b24c4393e236d4533">ft_print_plane</a>(<span class="keyword">const</span> <a class="code" href="structt__plane.html">t_plane</a> pl);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="print_8h.html#a27665e112e02a635b975a5b0a4965a24">ft_print_cylinder</a>(<span class="keyword">const</span> <a class="code" href="structt__cylinder.html">t_cylinder</a> cy);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acamera_8h_html"><div class="ttname"><a href="camera_8h.html">camera.h</a></div></div>
+<div class="ttc" id="acolour_8h_html"><div class="ttname"><a href="colour_8h.html">colour.h</a></div></div>
+<div class="ttc" id="acolour__bonus_8h_html"><div class="ttname"><a href="colour__bonus_8h.html">colour_bonus.h</a></div></div>
+<div class="ttc" id="aentities_8h_html"><div class="ttname"><a href="entities_8h.html">entities.h</a></div></div>
+<div class="ttc" id="aentities__bonus_8h_html"><div class="ttname"><a href="entities__bonus_8h.html">entities_bonus.h</a></div></div>
+<div class="ttc" id="amat4_8h_html"><div class="ttname"><a href="mat4_8h.html">mat4.h</a></div></div>
+<div class="ttc" id="aprint_8h_html_a108d195ad2cb3a1e983e5e2e1cab34c2"><div class="ttname"><a href="print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2">ft_print_cam</a></div><div class="ttdeci">void ft_print_cam(const t_cam cam)</div><div class="ttdoc">Prints parameters of camera struct.</div><div class="ttdef"><b>Definition:</b> <a href="print__entity_8c_source.html#l00015">print_entity.c:15</a></div></div>
+<div class="ttc" id="aprint_8h_html_a27665e112e02a635b975a5b0a4965a24"><div class="ttname"><a href="print_8h.html#a27665e112e02a635b975a5b0a4965a24">ft_print_cylinder</a></div><div class="ttdeci">void ft_print_cylinder(const t_cylinder cy)</div><div class="ttdoc">Prints parameters of a cylinder.</div><div class="ttdef"><b>Definition:</b> <a href="print__entity_8c_source.html#l00059">print_entity.c:59</a></div></div>
+<div class="ttc" id="aprint_8h_html_a89022d200140ebc52b4f32036ab34fd2"><div class="ttname"><a href="print_8h.html#a89022d200140ebc52b4f32036ab34fd2">ft_print_mat4</a></div><div class="ttdeci">void ft_print_mat4(const t_mat4 mat)</div><div class="ttdoc">Prints variables of a mat4.</div><div class="ttdef"><b>Definition:</b> <a href="print__struct_8c_source.html#l00020">print_struct.c:20</a></div></div>
+<div class="ttc" id="aprint_8h_html_a8bb33051bca60d0890928ecd90b5ef29"><div class="ttname"><a href="print_8h.html#a8bb33051bca60d0890928ecd90b5ef29">ft_print_colour</a></div><div class="ttdeci">void ft_print_colour(const t_colour colour)</div><div class="ttdoc">Prints variables of a colour.</div><div class="ttdef"><b>Definition:</b> <a href="print__struct_8c_source.html#l00039">print_struct.c:39</a></div></div>
+<div class="ttc" id="aprint_8h_html_a99a90f3ee5487824a003c2196bf2f56c"><div class="ttname"><a href="print_8h.html#a99a90f3ee5487824a003c2196bf2f56c">ft_print_vec3</a></div><div class="ttdeci">void ft_print_vec3(const t_vec3 vec)</div><div class="ttdoc">Prints variables of a vec3.</div><div class="ttdef"><b>Definition:</b> <a href="print__struct_8c_source.html#l00015">print_struct.c:15</a></div></div>
+<div class="ttc" id="aprint_8h_html_aa206b35a5459e0b87ec959f729bf1ab8"><div class="ttname"><a href="print_8h.html#aa206b35a5459e0b87ec959f729bf1ab8">ft_print_sphere</a></div><div class="ttdeci">void ft_print_sphere(const t_sphere sp)</div><div class="ttdoc">Prints parameters of a sphere.</div><div class="ttdef"><b>Definition:</b> <a href="print__entity_8c_source.html#l00038">print_entity.c:38</a></div></div>
+<div class="ttc" id="aprint_8h_html_ab5b1469cabf3343b24c4393e236d4533"><div class="ttname"><a href="print_8h.html#ab5b1469cabf3343b24c4393e236d4533">ft_print_plane</a></div><div class="ttdeci">void ft_print_plane(const t_plane pl)</div><div class="ttdoc">Prints parameters of a plane.</div><div class="ttdef"><b>Definition:</b> <a href="print__entity_8c_source.html#l00048">print_entity.c:48</a></div></div>
+<div class="ttc" id="aprint_8h_html_ac59921d803c46a4b1e16f0dfe0b6c50b"><div class="ttname"><a href="print_8h.html#ac59921d803c46a4b1e16f0dfe0b6c50b">ft_print_hittable</a></div><div class="ttdeci">void ft_print_hittable(const t_hittable hittable)</div><div class="ttdoc">Prints parameters of a hittable.</div><div class="ttdef"><b>Definition:</b> <a href="print__entity_8c_source.html#l00026">print_entity.c:26</a></div></div>
+<div class="ttc" id="astructt__cam_html"><div class="ttname"><a href="structt__cam.html">t_cam</a></div><div class="ttdoc">Contains camera parameters.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00061">camera.h:62</a></div></div>
+<div class="ttc" id="astructt__colour_html"><div class="ttname"><a href="structt__colour.html">t_colour</a></div><div class="ttdoc">Represents an RGB colour with float values from 0.0 - 1.0.</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00036">colour.h:37</a></div></div>
+<div class="ttc" id="astructt__cylinder_html"><div class="ttname"><a href="structt__cylinder.html">t_cylinder</a></div><div class="ttdoc">Represents a cylinder.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00084">entities.h:85</a></div></div>
+<div class="ttc" id="astructt__hittable_html"><div class="ttname"><a href="structt__hittable.html">t_hittable</a></div><div class="ttdoc">Represents a hittable.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00140">entities.h:141</a></div></div>
+<div class="ttc" id="astructt__mat4_html"><div class="ttname"><a href="structt__mat4.html">t_mat4</a></div><div class="ttdoc">4x4 matrix of floats.</div><div class="ttdef"><b>Definition:</b> <a href="mat4_8h_source.html#l00033">mat4.h:34</a></div></div>
+<div class="ttc" id="astructt__plane_html"><div class="ttname"><a href="structt__plane.html">t_plane</a></div><div class="ttdoc">Represents a plane.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00067">entities.h:68</a></div></div>
+<div class="ttc" id="astructt__sphere_html"><div class="ttname"><a href="structt__sphere.html">t_sphere</a></div><div class="ttdoc">Represents a sphere.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00054">entities.h:55</a></div></div>
+<div class="ttc" id="astructt__vec3_html"><div class="ttname"><a href="structt__vec3.html">t_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00033">vec3.h:34</a></div></div>
+<div class="ttc" id="avec3_8h_html"><div class="ttname"><a href="vec3_8h.html">vec3.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><b>print.h</b></li>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="print_8h.html">print.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

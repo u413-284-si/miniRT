@@ -1,0 +1,13 @@
+<map id="ft_co_calc_pot_hits" name="ft_co_calc_pot_hits">
+<area shape="rect" id="node1" title="Calculates potential hits of a cone." alt="" coords="5,183,151,209"/>
+<area shape="rect" id="node2" href="$hit__cone__bonus_8c.html#aee5824df7f0e0c2698306f49f9a1c790" title="Calculates potential hit of cone cap." alt="" coords="199,107,305,133"/>
+<area shape="rect" id="node7" href="$utils_8h.html#ae65513c75ce8a8538c22393e0af3ab1f" title="Solves the given equation." alt="" coords="540,157,613,184"/>
+<area shape="rect" id="node9" href="$vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91" title="Calculate the scalar product of two vectors." alt="" coords="528,208,625,235"/>
+<area shape="rect" id="node10" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="527,259,626,285"/>
+<area shape="rect" id="node3" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="366,107,465,133"/>
+<area shape="rect" id="node11" href="$hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d" title="Initiates hitrecord struct." alt="" coords="353,56,477,83"/>
+<area shape="rect" id="node4" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="527,5,627,32"/>
+<area shape="rect" id="node6" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="676,56,787,83"/>
+<area shape="rect" id="node8" href="$utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa" title="Determines if value is surrounded by the interval." alt="" coords="525,107,628,133"/>
+<area shape="rect" id="node5" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="681,5,781,32"/>
+</map>

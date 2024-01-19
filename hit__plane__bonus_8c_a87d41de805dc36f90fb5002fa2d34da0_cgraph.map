@@ -1,0 +1,7 @@
+<map id="ft_get_pl_uvcoords" name="ft_get_pl_uvcoords">
+<area shape="rect" id="node1" title="Transforms the Cartesian coordinates of a hit point on a plane into 2D texture UV&#45;coordinates in the ..." alt="" coords="5,56,149,83"/>
+<area shape="rect" id="node2" href="$vec3_8h.html#a19bc1d17592698776e89a5093110320c" title="Calculate the cross product of two vectors." alt="" coords="198,5,309,32"/>
+<area shape="rect" id="node3" href="$vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91" title="Calculate the scalar product of two vectors." alt="" coords="205,56,302,83"/>
+<area shape="rect" id="node4" href="$vec3_8h.html#add7f4f27ee8cadcbf62ffbfecb98f64f" title="Determines if two vectors are equal." alt="" coords="197,107,309,133"/>
+<area shape="rect" id="node5" href="$utils_8h.html#a518be72ffbfd90cedf995e72dde0aff6" title="Checks if two floats are (almost) equal." alt="" coords="357,107,500,133"/>
+</map>

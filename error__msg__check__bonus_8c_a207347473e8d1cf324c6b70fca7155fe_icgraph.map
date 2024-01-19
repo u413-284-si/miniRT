@@ -1,0 +1,17 @@
+<map id="ft_perror_convert" name="ft_perror_convert">
+<area shape="rect" id="node1" title="Error message if conversion failed." alt="" coords="980,183,1113,209"/>
+<area shape="rect" id="node2" href="$check_8h.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="805,157,923,184"/>
+<area shape="rect" id="node15" href="$check_8h.html#a7884a3e9489248b242a9fb7da9607bf4" title="Tries to convert str into rgb int and checks range." alt="" coords="796,208,932,235"/>
+<area shape="rect" id="node3" href="$check_8h.html#a3a4c3e635c4a6af8ef53d70ea5e7cb44" title="Checks if ambient light line is correct." alt="" coords="611,5,748,32"/>
+<area shape="rect" id="node5" href="$check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675" title="Checks if camera line is correct." alt="" coords="613,56,745,83"/>
+<area shape="rect" id="node6" href="$check__bonus_8h.html#a4125fa15b1ac84a652409b9825a0f8e5" title="Checks if cone line is correct." alt="" coords="622,309,737,336"/>
+<area shape="rect" id="node11" href="$check_8h.html#ae60d55778d26a79bd9d60676862afcac" title="Checks if cylinder line is correct." alt="" coords="612,107,747,133"/>
+<area shape="rect" id="node12" href="$check_8h.html#a13cb8b89e2be82f5148f2dba42b550e8" title="Checks if light line is correct." alt="" coords="623,157,735,184"/>
+<area shape="rect" id="node13" href="$check__entity__sp__pl__cy__bonus_8c.html#a1e36aec7efe086076efcaf9991f28abe" title="Checks if plane line is correct." alt="" coords="620,208,739,235"/>
+<area shape="rect" id="node14" href="$check_8h.html#a2ac6387003baa37c6f8037edf453c8d0" title="Checks if sphere line is correct." alt="" coords="616,259,743,285"/>
+<area shape="rect" id="node4" href="$check_8h.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="420,132,563,159"/>
+<area shape="rect" id="node7" href="$check__bonus_8c.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="420,309,563,336"/>
+<area shape="rect" id="node8" href="$check__bonus_8c.html#a4280fd4536b3edf10a2fa02155af68a1" title="Check array of imported lines." alt="" coords="257,309,372,336"/>
+<area shape="rect" id="node9" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,309,209,336"/>
+<area shape="rect" id="node10" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,309,60,336"/>
+</map>

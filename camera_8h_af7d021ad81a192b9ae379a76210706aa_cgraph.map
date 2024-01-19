@@ -1,0 +1,10 @@
+<map id="ft_cam_init" name="ft_cam_init">
+<area shape="rect" id="node1" title="Initializes camera parameters." alt="" coords="5,107,100,133"/>
+<area shape="rect" id="node2" href="$camera_8c.html#a02ed3f7206927a02c44eab5f5aba26e1" title="Calculates basis vectors u, v, w." alt="" coords="148,56,340,83"/>
+<area shape="rect" id="node5" href="$camera_8c.html#a96132dcb4eac578fbee24bbf591fe090" title="Calculates the pixel grid parameters of the viewport." alt="" coords="159,107,329,133"/>
+<area shape="rect" id="node8" href="$camera_8c.html#acf892f39174bd3b89ad83a6e901a7b4f" title="Calculates viewport dimensions." alt="" coords="163,158,325,199"/>
+<area shape="rect" id="node3" href="$vec3_8h.html#a19bc1d17592698776e89a5093110320c" title="Calculate the cross product of two vectors." alt="" coords="388,5,499,32"/>
+<area shape="rect" id="node4" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="388,56,499,83"/>
+<area shape="rect" id="node6" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="393,107,493,133"/>
+<area shape="rect" id="node7" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="394,157,493,184"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ft_perror_count" name="ft_perror_count">
+<area shape="rect" id="node1" title="Error message if entity count is not correct." alt="" coords="217,31,337,57"/>
+<area shape="rect" id="node2" href="$check_8h.html#a4560f2d54698ffbfb8262bc7cad02768" title="Check if minimum number of specific entities was found." alt="" coords="5,5,169,32"/>
+<area shape="rect" id="node3" href="$check_8h.html#a0bde6c1dee246dd0f75201c62cf3c9f2" title="Increase entity count, and check if too many." alt="" coords="21,56,154,83"/>
+</map>
