@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:36:21 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/15 12:19:34 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 18:26:55 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@
  * @param reflectivity		Material property of point of intersection
  * 							on share of reflected light 
  * @param reflection_count	Amount of reflections performed
- * @param checkered			Indicates whether the hittable has a checkered texture
+ * @param checkered			Indicates whether the hittable has a checkered
+ * 							texture
  * @param u					U-coordinate of hittable at intersection point
  * @param v					V-coordinate of hittable at intersection point
  * @param wall_hit			Bool to differentiate between a wall or cap hit
@@ -313,7 +314,8 @@ float	ft_co_cap_hit(t_cone co, t_ray ray);
  * @brief Determines whether the potential hits are accurate
  * 
  * @param co				Cone
- * @param rec				Hit record containing all meta data of identified hits
+ * @param rec				Hit record containing all meta data of
+ * 							identified hits
  * @param potential_hits	Float array for three potential hits
  */
 void	ft_co_identify_hits(t_cone co, t_hitrecord *rec, \

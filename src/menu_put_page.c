@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_page.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 14:16:43 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 11:26:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 18:26:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ void	ft_put_main_page(t_putinfo put, t_render *render)
 		ft_put_page_cam(put, render->cam, render->options);
 }
 
-void	ft_put_page_scene(t_putinfo put, t_hittable active, int total, uint32_t options)
+void	ft_put_page_scene(t_putinfo put, t_hittable active, int total, \
+	uint32_t options)
 {
 	if (!ft_option_isset(options, O_SHOW_CTRL))
 		ft_put_hittable(put, active, total);
@@ -38,7 +39,8 @@ void	ft_put_page_scene(t_putinfo put, t_hittable active, int total, uint32_t opt
 		ft_put_ctrl_hittable(put, active.type);
 }
 
-void	ft_put_page_light(t_putinfo put, t_light light, int total, uint32_t options)
+void	ft_put_page_light(t_putinfo put, t_light light, int total, \
+	uint32_t options)
 {
 	if (!ft_option_isset(options, O_SHOW_CTRL))
 		ft_put_light(put, light, total);
