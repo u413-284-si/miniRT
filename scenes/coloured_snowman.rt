@@ -1,0 +1,39 @@
+A      0.2                           255,255,255
+
+C      0,20,-40          0,-0.4,1.0        80
+
+L      50,10,-50          1.0               255,0,0
+L      0,10,-50          1.0               0,255,0
+L      -50,10,-50          1.0               0,0,255
+
+#      Centre         Normal    Shininess   Reflectivity  Checkered      Color  
+pl     0,-10,0        0,1,0     32         0.0             0            255,255,255 
+pl     0,-10,100      0,0,-1    32          0.8             0            255,255,255 
+
+# Snowman Eyes
+#      Centre         Diameter  Shininess   Reflectivity  Checkered     Color 
+sp     -0.75,7,-2       0.7     32          0.0             0           100,100,100 
+sp     0.75,7,-2        0.7     32          0.0             0           100,100,100 
+
+# Snowman Nose
+#      Centre         Diameter  Shininess   Reflectivity  Checkered     Color 
+sp     0,6.25,-2.25     0.7     32          0.0             0           255,102,0
+
+# Snowman Smile
+#      Centre         Diameter  Shininess   Reflectivity  Checkered     Color 
+sp     -1.7,5.9,-1.6    0.7     32          0.0             0           100,100,100 
+sp     -0.85,5.6,-2.1   0.7     32          0.0             0           100,100,100
+sp     0,5.5,-2.25      0.7     32          0.0             0           100,100,100
+sp     0.85,5.6,-2.1    0.7     32          0.0             0           100,100,100
+sp     1.7,5.9,-1.6     0.7     32          0.0             0           100,100,100
+
+# Snowman Body
+#      Centre         Diameter  Shininess   Reflectivity  Checkered     Color 
+sp     0,6,0            5       32          0.0             0            255,255,255 
+sp     0,1.5,0          7       32          0.0             0            255,255,255 
+sp     0,-5,0           10      32          0.0             0            255,255,255 
+
+# Snowman Hat
+#     Centre   Axis     Diameter  Height   Shininess   Reflectivity    Checkered    Color 
+cy    0,8,0    0,1,0    5         0.1      32          0.0             0            0,255,255 
+cy    0,9,0    0,1,0    4         2        32          0.0             0            0,255,255 
