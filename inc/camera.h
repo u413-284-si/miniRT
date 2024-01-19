@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 17:23:55 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 16:53:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,15 @@
 
 # include "vec2.h"
 # include "vec3.h"
-# include "utils.h"
 # include "error_syscall.h"
-# include "threads_bonus.h"
+
+# if IS_BONUS
+#  include "utils_bonus.h"
+#  include "miniRT_config_bonus.h"
+# else
+#  include "utils.h"
+#  include "miniRT_config.h"
+# endif
 
 /* ====== TYPEDEFS ====== */
 

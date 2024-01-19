@@ -6,34 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:27:34 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 15:48:44 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 09:38:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
-
-void	ft_rm_space(char **str)
-{
-	char	*begin;
-	char	*end;
-
-	if (**str == ' ')
-		(*str)++;
-	else if (**str == '\t')
-	{
-		(*str)++;
-		*(*str - 1) = ' ';
-	}
-	begin = *str;
-	end = *str;
-	while (*end == ' ' || *end == '\t')
-		end++;
-	if (begin == end)
-		return ;
-	while (*end)
-		*begin++ = *end++;
-	*begin = '\0';
-}
 
 bool	ft_isvalid_float(char **line, float min, float max, bool comma)
 {
@@ -64,6 +41,35 @@ bool	ft_isvalid_float_block(char **line, float min, float max)
 	(*line)++;
 	if (!ft_isvalid_float(line, min, max, false))
 		return (false);
+	return (true);
+}
+
+bool	ft_isvalid_unit_vec(char **line, float min, float max)
+{
+	double	checksum;
+	double	ret;
+	size_t	offset;
+	char	*begin;
+	char	*tmp;
+
+	begin = *line;
+	if (ft_isvalid_float_block(line, min, max) == false)
+		return (false);
+	tmp = begin;
+	offset = 0;
+	checksum = 0;
+	ret = ft_strtod(tmp, &offset);
+	checksum += ret * ret;
+	tmp += offset + 1;
+	ret = ft_strtod(tmp, &offset);
+	checksum += ret * ret;
+	tmp += offset + 1;
+	ret = ft_strtod(tmp, &offset);
+	checksum += ret * ret;
+	if (checksum == 0.0)
+		return (ft_perror_not_unit(begin));
+	else if (checksum > 1.0)
+		ft_pwarning_not_unit(begin);
 	return (true);
 }
 

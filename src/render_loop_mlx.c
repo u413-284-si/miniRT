@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 16:35:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:07:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,9 @@ void	ft_render_start_loop(t_render *render)
 	mlx_hook(render->mlx_ptrs.win_ptr, DestroyNotify, StructureNotifyMask,
 		ft_end_loop, render);
 	mlx_loop_hook(render->mlx_ptrs.mlx_ptr, ft_draw_scene, render);
+	mlx_set_font(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr, REGULAR);
+	ft_option_set(&render->options, O_MODE_SCENE);
+	ft_option_set(&render->options, O_SCENE_CHANGED);
+	ft_option_set(&render->options, O_MANIP_LOW);
 	mlx_loop(render->mlx_ptrs.mlx_ptr);
 }

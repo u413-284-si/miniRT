@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/23 22:38:57 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 15:12:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@
 
 # include <stdio.h>
 # include <stdint.h>
+
+//home-grown libs
+# if IS_BONUS
+#  include "utils_bonus.h"
+# else
+#  include "utils.h"
+# endif
 
 /* ====== TYPEDEFS ====== */
 
@@ -33,23 +40,7 @@ typedef struct s_colour
 	float	b;
 }	t_colour;
 
-typedef enum e_col_name
-{
-	RED,
-	GREEN,
-	BLUE,
-	YELLOW,
-	PURPLE,
-	CYAN,
-	WHITE,
-	BLACK,
-	ORANGE,
-	PINK
-}	t_col_name;
-
 /* ====== FUNCTIONS ====== */
-
-void		ft_write_colour(t_colour pixel);
 
 /**
  * @brief Add two colours
@@ -85,13 +76,5 @@ int32_t		ft_convert_colour2int(t_colour colour);
  * @return t_colour	Converted t_colour.
  */
 t_colour	ft_convert_int2colour(int colour);
-
-/**
- * @brief Returns a colour based on the given colour name.
- *
- * @param col_name	Colour name.
- * @return t_colour	Colour.
- */
-t_colour	ft_get_colour(t_col_name col_name);
 
 #endif

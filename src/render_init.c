@@ -5,26 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 14:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 16:53:20 by gwolf            ###   ########.fr       */
+/*   Created: 2024/01/05 12:42:02 by gwolf             #+#    #+#             */
+/*   Updated: 2024/01/19 17:04:31 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
 
-t_err	ft_render_init(t_render *render)
+int	ft_keyhook_release(int key, t_render *render)
 {
-	if (ft_init_mlx_ptrs(&render->mlx_ptrs, false))
-		return (ERROR);
-	if (ft_cam_init(&render->cam, render->mlx_ptrs.img.size))
+	if (key == XK_p)
 	{
-		ft_free_mlx(&render->mlx_ptrs);
-		return (ERROR);
+		mlx_do_key_autorepeatoff(render->mlx_ptrs.mlx_ptr);
+		render->is_printing = true;
 	}
-	ft_menu_init(&render->menu, MENU_OPACITY, MENU_BACK, MENU_FONT);
-	mlx_set_font(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr, REGULAR);
-	render->is_changed = true;
-	render->is_threaded = true;
-	render->mut_print = (pthread_mutex_t)PTHREAD_MUTEX_INITIALIZER;
-	return (SUCCESS);
+	return (0);
 }

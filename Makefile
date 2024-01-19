@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/17 16:53:42 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/19 16:52:00 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,34 +38,39 @@ BLUE := \033[34m
 # ******************************
 
 SRC_DIR := src
+
 # Base directory for object files
 BASE_OBJ_DIR := obj
-# Subdirectory for default compilation
-OBJ_DIR_DEFAULT := $(BASE_OBJ_DIR)/default
-# Subdirectory for compilation with fsanitize leak checker
-OBJ_DIR_LEAK := $(BASE_OBJ_DIR)/leak
-# Subdirectory for compilation with fsanitize address checker
-OBJ_DIR_ADDRESS := $(BASE_OBJ_DIR)/address
-# Subdirectory for compilation with speed optimization
-OBJ_DIR_SPEED := $(BASE_OBJ_DIR)/speed
-# Subdirectory for compilation with profiling
-OBJ_DIR_PROFILE := $(BASE_OBJ_DIR)/profile
-# Set default object directory
-OBJ_DIR = $(OBJ_DIR_DEFAULT)
-# Set object directory depending on target
-ifneq (,$(findstring leak,$(MAKECMDGOALS)))
-	OBJ_DIR = $(OBJ_DIR_LEAK)
-else ifneq (,$(findstring address,$(MAKECMDGOALS)))
-	OBJ_DIR = $(OBJ_DIR_ADDRESS)
-else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
-	OBJ_DIR = $(OBJ_DIR_SPEED)
-else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
-	OBJ_DIR = $(OBJ_DIR_PROFILE)
+# Subdirectories for base, and bonus object files
+OBJ_DIR_BASE := $(BASE_OBJ_DIR)/base
+OBJ_DIR_BONUS := $(BASE_OBJ_DIR)/bonus
+# Adjust directory based on MODE
+ifeq ($(MODE), leak)
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/leak
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/leak
+else ifeq ($(MODE), address)
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/address
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/address
+else ifeq ($(MODE), speed)
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/speed
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/speed
+else
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/default
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/default
 endif
+
+# Subdirectory for library files
 LIB_DIR := lib
 LIB_DIR_FT := $(LIB_DIR)/libft
+
+# Subdirectory for header files
 INC_DIR := inc
-DEP_DIR = $(OBJ_DIR)/dep
+
+# Subdirectories for dependency files
+DEP_DIR_BASE := $(OBJ_DIR_BASE)/dep
+DEP_DIR_BONUS := $(OBJ_DIR_BONUS)/dep
+
+# Subdirectory for log files
 LOG_DIR := log
 
 # ******************************
@@ -87,116 +92,188 @@ COMPILE = $(CC) $(DEPFLAGS) $(CPPFLAGS) $(CFLAGS) -c
 POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
 
 # ******************************
+# *     Modifying CFLAGS       *
+# *     and LDFLAGS            *
+# ******************************
+
+ifeq ($(MODE), leak)
+	CFLAGS += -fsanitize=leak
+	LDFLAGS += -fsanitize=leak
+else ifeq ($(MODE), address)
+	CFLAGS += -fsanitize=address
+	LDFLAGS += -fsanitize=address
+else ifeq ($(MODE), speed)
+	CFLAGS = -Ofast -march=native
+	LDFLAGS += -flto
+endif
+
+# ******************************
 # *     Targets                *
 # ******************************
 
-# Default target
-DEFAULT := miniRT
-# Target for fsanitize leak checker
-LEAK := $(DEFAULT)_leak
-# Target for fsanitize address checker
-ADDRESS := $(DEFAULT)_address
-# Target for speed optimization
-SPEED := $(DEFAULT)_speed
-# Target for profiling
-PROFILE := $(DEFAULT)_profile
-# Set default target
-NAME = $(DEFAULT)
-# Set target depending on target
-ifneq (,$(findstring leak,$(MAKECMDGOALS)))
-	NAME = $(LEAK)
-else ifneq (,$(findstring address,$(MAKECMDGOALS)))
-	NAME = $(ADDRESS)
-else ifneq (,$(findstring speed,$(MAKECMDGOALS)))
-	NAME = $(SPEED)
-else ifneq (,$(findstring profile,$(MAKECMDGOALS)))
-	NAME = $(PROFILE)
+# Base target
+BASE := miniRT
+# Bonus target
+BONUS := miniRT_supreme
+# Set default target name
+ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
+	DEFAULT = $(BONUS)
+else
+	DEFAULT = $(BASE)
 endif
+
+# Set target name to default
+NAME = $(DEFAULT)
+
+# Append for fsanitize leak checker
+LEAK := _leak
+# Append for fsanitize address checker
+ADDRESS := _address
+# Append for speed optimization
+SPEED := _speed
+
+# Modify name depending on MODE variable
+ifeq ($(MODE), leak)
+	NAME = $(DEFAULT)$(LEAK)
+else ifeq ($(MODE), address)
+	NAME = $(DEFAULT)$(ADDRESS)
+else ifeq ($(MODE), speed)
+	NAME = $(DEFAULT)$(SPEED)
+endif
+
+# Library target libft
 LIBFT := $(LIB_DIR_FT)/libft.a
 
 # ******************************
 # *     Source files           *
 # ******************************
 
-SRC :=	camera_movement.c \
-		camera.c \
-		check_entity_ACL.c \
-		check_entity_sp_pl_cy.c \
-		check_line.c \
-		check.c \
-		cleanup.c \
-		colour.c \
-		error_mlx.c \
-		error_msg_check.c \
-		error_msg_generic.c \
-		error_syscall.c \
-		ft_strtod.c \
-		hit_cylinder.c \
-		hit_plane.c \
-		hit_sphere.c \
-		hit.c \
-		import_file_buffer.c \
-		import_file.c \
-		main.c \
-		mat4_rotation.c \
-		mat4_vec3_rotate.c \
-		mat4.c \
-		menu_init.c \
-		menu_put_cam_light_ctrl.c \
-		menu_put_cam_light.c \
-		menu_put_general_info.c \
-		menu_put_hittable_ctrl.c \
-		menu_put_hittable.c \
-		menu_put_page.c \
-		menu_put_str_num.c \
-		menu_put_utils_ctrl.c \
-		menu_put_utils.c \
-		menu_put.c \
-		parse_entity_ACL.c \
-		parse_entity_sp_pl_cy.c \
-		parse_line.c \
-		parse.c \
-		print_entity.c \
-		print_struct.c \
-		ray.c \
-		render_draw.c \
-		render_init_mlx.c \
-		render_keyhook_camera.c \
-		render_keyhook_hittable.c \
-		render_keyhook_light.c \
-		render_keyhook_press.c \
-		render_keyhook_scene.c \
-		render_keyhook_utils.c \
-		render_loop_mlx.c \
-		render_mouse.c \
-		render_output_ppm.c \
-		scene_init.c \
-		scene_light.c \
-		scene_shadow.c \
-		utils_entities.c \
-		utils_cylinder.c \
-		utils.c \
-		vec3_arithmetics.c \
-		vec3_linalgebra.c \
-		threads_alt_versions.c \
-		threads_bonus.c \
-		render_init.c \
-		render_cleanup.c
+SRC_COMMON := 	camera_movement.c \
+				camera.c \
+				check_entity_ACL.c \
+				check_line.c \
+				check_rm_space.c \
+				cleanup.c \
+				error_msg_check2.c \
+				error_msg_generic.c \
+				error_mlx.c \
+				error_syscall.c \
+				ft_strtod.c \
+				import_file.c \
+				import_file_buffer.c \
+				main.c \
+				mat4.c \
+				mat4_rotation.c \
+				mat4_vec3_rotate.c \
+				menu_init.c \
+				menu_put_cam_light.c \
+				menu_put_cam_light_ctrl.c \
+				menu_put_general_info.c \
+				menu_put_hittable.c \
+				menu_put_hittable_ctrl.c \
+				menu_put_page.c \
+				menu_put_str_num.c \
+				menu_put_utils.c \
+				menu_put_utils_ctrl.c \
+				parse_entity_ACL.c \
+				parse_line.c \
+				print_entity.c \
+				print_struct.c \
+				render_bit_field.c \
+				render_init_mlx.c \
+				render_keyhook_camera.c \
+				render_keyhook_colour.c \
+				render_keyhook_hittable.c \
+				render_keyhook_light.c \
+				render_keyhook_press.c \
+				render_keyhook_release.c \
+				render_keyhook_scene.c \
+				render_keyhook_utils.c \
+				render_loop_mlx.c \
+				render_mouse.c \
+				render_output_ppm.c \
+				scene_shadow.c \
+				utils_entities.c \
+				utils_interval.c \
+				vec3_arithmetics.c \
+				vec3_linalgebra.c \
 
-SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
+SRC_BASE := 	check.c \
+				check_entity_sp_pl_cy.c \
+				colour.c \
+				error_msg_check.c \
+				hit.c \
+				hit_cylinder.c \
+				hit_plane.c \
+				hit_sphere.c \
+				menu_put_text.c \
+				parse.c \
+				parse_entity_sp_pl_cy.c \
+				ray.c \
+				render_compose_image.c \
+				render_draw.c \
+				render_keyhook_options.c \
+				scene_light.c \
+				utils_colour.c \
+				utils_cylinder.c \
+				utils_math.c \
+
+SRC_BONUS :=	check_bonus.c \
+				check_entity_sp_pl_cy_bonus.c \
+				colour_bonus.c \
+				error_msg_check_bonus.c \
+				hit_bonus.c \
+				hit_cone_bonus.c \
+				hit_cylinder_bonus.c \
+				hit_plane_bonus.c \
+				hit_sphere_bonus.c \
+				menu_put_text_bonus.c \
+				menu_put_time_bonus.c \
+				parse_bonus.c \
+				parse_entity_sp_pl_cy_bonus.c \
+				ray_bonus.c \
+				render_compose_image_bonus.c \
+				render_draw_bonus.c \
+				render_keyhook_options_bonus.c \
+				scene_light_bonus.c \
+				scene_reflection_bonus.c \
+				texture_bonus.c \
+				time_bonus.c \
+				utils_colour_bonus.c \
+				utils_cone_bonus.c \
+				utils_cylinder_bonus.c \
+				utils_math_bonus.c \
+				utils_quaternion_bonus.c \
+				utils_random_bonus.c \
+				threads_alt_versions.c \
+				threads_bonus.c \
+				render_init.c \
+				render_cleanup.c
 
 # ******************************
 # *     Object files           *
 # ******************************
 
-OBJ := $(SRC:.c=.o)
-OBJS := $(addprefix $(OBJ_DIR)/, $(OBJ))
+OBJ_BASE = 	$(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o) ) \
+			$(addprefix $(OBJ_DIR_BASE)/, $(SRC_COMMON:.c=.o))
+OBJ_BONUS = $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_BONUS:.c=.o)) \
+			$(addprefix $(OBJ_DIR_BONUS)/, $(SRC_COMMON:.c=.o))
+
+# Depending on whether 'bonus' is a make target, use base or bonus objects
+ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
+	OBJS = $(OBJ_BONUS)
+else
+	OBJS = $(OBJ_BASE)
+endif
 
 # ******************************
 # *     Dependency files       *
 # ******************************
 
-DEPFILES = $(SRC:%.c=$(DEP_DIR)/%.d)
+DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR_BASE)/%.d) \
+			$(SRC_BASE:%.c=$(DEP_DIR_BASE)/%.d) \
+			$(SRC_COMMON:%.c=$(DEP_DIR_BONUS)/%.d) \
+			$(SRC_BONUS:%.c=$(DEP_DIR_BONUS)/%.d)
 
 # ******************************
 # *     Log files              *
@@ -205,7 +282,7 @@ DEPFILES = $(SRC:%.c=$(DEP_DIR)/%.d)
 DEFAULT_SCENE = scenes/basic_spheres.rt
 LOG_FILE_BASE = $(LOG_DIR)/$(shell date "+%Y-%m-%d-%H-%M-%S")
 LOG_VALGRIND = $(LOG_FILE_BASE)_valgrind.log
-LOG_GPROF = $(LOG_FILE_BASE)_gprof.log
+LOG_PERF = $(LOG_FILE_BASE)_perf.data
 
 # ******************************
 # *     Default target         *
@@ -229,36 +306,29 @@ $(NAME): $(LIBFT) $(OBJS)
 # *     Special targets        *
 # ******************************
 
-# This target adds fsanitize leak checker to the flags.
-.PHONY: leak
-leak: CFLAGS += -fsanitize=leak
-leak: LDFLAGS += -fsanitize=leak
-leak: $(NAME)
+# This target compiles with bonus objects.
+.PHONY: bonus
+bonus: CFLAGS += -D IS_BONUS
+bonus: $(NAME)
 
-# This target adds fsanitize address checker to the flags.
-.PHONY: address
-address: CFLAGS += -fsanitize=address
-address: LDFLAGS += -fsanitize=address
-address: $(NAME)
-
-# This target adds flags which optimize the program for speed.
-.PHONY: speed
-speed: CFLAGS = -Ofast -march=native
-speed: LDFLAGS += -flto
-speed: $(NAME)
-
-# This target adds flags which enable profiling.
+# This target uses perf for profiling.
 .PHONY: profile
-profile: CFLAGS += -pg
-profile: LDFLAGS += -pg
-profile: $(NAME) | $(LOG_DIR)
-	@printf "\n$(YELLOW)$(BOLD)Run for profiling$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+profile: check_perf_installed $(NAME) | $(LOG_DIR)
+	@printf "$(YELLOW)$(BOLD)Run for profiling with perf$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@printf "Profile scene: $(DEFAULT_SCENE)\n"
-	$(SILENT)./$(NAME) $(DEFAULT_SCENE)
-	$(SILENT)gprof $(NAME) gmon.out > $(LOG_GPROF)
-	@printf "\n$(YELLOW)$(BOLD)Saved log file$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	$(SILENT)rm gmon.out
-	$(SILENT)ls -dt1 $(LOG_DIR)/* | head -n 1 | xargs less
+	$(eval NEW_LOG_FILE=$(LOG_PERF))
+	$(SILENT)perf record -g -o $(NEW_LOG_FILE) ./$(NAME) $(DEFAULT_SCENE)
+	@printf "$(YELLOW)$(BOLD)Saved log file$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	@printf "$(NEW_LOG_FILE)\n"
+	@printf "$(YELLOW)$(BOLD)Run perf report$(RESET) [$(BLUE)miniRT$(RESET)]\n"
+	$(SILENT)perf report -g -i $(NEW_LOG_FILE)
+
+# Check if perf is installed. If not exit with error.
+.PHONY: check_perf_installed
+check_perf_installed:
+	@command -v perf >/dev/null 2>&1 || { \
+		echo >&2 "perf is not installed. Please install perf to continue."; exit 1; \
+	}
 
 # Perform memory check on NAME.
 .PHONY: valgr
@@ -276,7 +346,7 @@ valgr: $(NAME) | $(LOG_DIR)
 # ******************************
 
 # File counter for status output
-TOTAL_FILES := $(words $(SRC))
+TOTAL_FILES := $(words $(OBJS))
 CURRENT_FILE := 0
 
 # Create object and dependency files
@@ -285,10 +355,20 @@ CURRENT_FILE := 0
 # | $(DEPDIR) = 	Declare the dependency directory as an order-only prerequisite of the target,
 # 					so that it will be created when needed.
 # $(eval ...) =		Increment file counter.
+# $(eval ...) =		Increment file counter.
 # $(POSTCOMPILE) =	Move temp dependency file and touch object to ensure right timestamps.
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(DEP_DIR)/%.d message | $(DEP_DIR)
+
+$(OBJ_DIR_BASE)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BASE)/%.d | $(DEP_DIR_BASE)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
 	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
+	$(eval DEP_DIR=$(DEP_DIR_BASE))
+	$(SILENT)$(COMPILE) $< -o $@
+	$(SILENT)$(POSTCOMPILE)
+
+$(OBJ_DIR_BONUS)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BONUS)/%.d | $(DEP_DIR_BONUS)
+	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
+	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
+	$(eval DEP_DIR=$(DEP_DIR_BONUS))
 	$(SILENT)$(COMPILE) $< -o $@
 	$(SILENT)$(POSTCOMPILE)
 
@@ -297,13 +377,8 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(DEP_DIR)/%.d message | $(DEP_DIR)
 message:
 	@printf "$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 
-# Create obj and dep subdirectory if it doesn't exist
-$(DEP_DIR):
-	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	@echo $@
-	$(SILENT)mkdir -p $@
-
-$(LOG_DIR):
+# Create subdirectory if it doesn't exist
+$(DEP_DIR_BASE) $(DEP_DIR_BONUS) $(LOG_DIR):
 	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@echo $@
 	$(SILENT)mkdir -p $@
@@ -332,6 +407,7 @@ clean:
 	@printf "$(RED)removed subdir $(BASE_OBJ_DIR)$(RESET)\n"
 
 # Remove all object, dependency, binaries and log files
+# Remove all object, dependency, binaries and log files
 .PHONY: fclean
 fclean: clean
 	@rm -rf $(NAME)*
@@ -356,3 +432,36 @@ re: fclean all
 # Include the dependency files that exist. Use wildcard to avoid failing on non-existent files.
 # Needs to be last target
 include $(wildcard $(DEPFILES))
+
+# ******************************
+# *     Help Target            *
+# ******************************
+
+.PHONY: help
+help:
+	@echo "$(GREEN)$(BOLD)miniRT Makefile Help$(RESET)"
+	@echo "This Makefile automates the compilation and cleaning processes for miniRT."
+	@echo "It supports various targets and can be customized with different variables."
+	@echo "Below are the available targets and variables you can use."
+	@echo ""
+	@echo "$(YELLOW)Targets:$(RESET)"
+	@echo "  all         - Compiles the default version of the miniRT program."
+	@echo "  bonus       - Compiles the bonus version of miniRT with extra features."
+	@echo "  clean       - Removes object files and dependency files."
+	@echo "  fclean      - Performs 'clean' and also removes binaries and log files."
+	@echo "  re          - Performs 'fclean' and then 'all'."
+	@echo "  valgr       - Runs the program with Valgrind to check for memory leaks."
+	@echo "  profile     - Profiles the program using 'perf'."
+	@echo ""
+	@echo "$(YELLOW)Variables:$(RESET)"
+	@echo "  VERBOSE=1   - Echoes all commands if set to 1."
+	@echo "  MODE        - Changes compilation for specific purposes. Options: leak, address, speed."
+	@echo "                leak: Enables fsanitize leak checker."
+	@echo "                address: Enables fsanitize address checker."
+	@echo "                speed: Compiles for speed optimization."
+	@echo ""
+	@echo "$(YELLOW)Examples:$(RESET)"
+	@echo "  make all VERBOSE=1   - Compiles the default target with command echoing."
+	@echo "  make bonus MODE=leak - Compiles the bonus version with leak sanitation."
+	@echo ""
+	@echo "For more detailed information, read the comments within the Makefile itself."

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 10:54:53 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:03:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@
 # define WIN_SIZE_X 800
 # define WIN_SIZE_Y 600
 
-// standard movement speed
-# define MV_UNIT 0.5f
+// standard increments
+# define INC_LOW 0.1f
+# define INC_MID 0.5f
+# define INC_HIGH 1.0f
 
 // menu parameters
 # define MENU_WIDTH 200

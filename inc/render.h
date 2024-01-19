@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 17:26:58 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:09:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,32 @@
 # include <X11/Xlib.h>
 # include <X11/X.h>
 # include <X11/keysym.h>
+# include <math.h>
+
+# include "libft.h"
 
 # include "error_mlx.h"
 # include "camera.h"
-# include "ft_print.h"
-# include "entities.h"
-# include "miniRT_config.h"
+# include "cleanup.h"
 # include "mat4_vec3.h"
-# include "print.h"
-# include "ray.h"
 # include "vec2.h"
 # include "render_menu.h"
-# include "threads_bonus.h"
+# include "render_bit_field.h"
+
+# if IS_BONUS
+#  include "miniRT_config_bonus.h"
+#  include "ray_bonus.h"
+#  include "entities_bonus.h"
+# else
+#  include "miniRT_config.h"
+#  include "ray.h"
+#  include "entities.h"
+# endif
+
+/* ====== MACROS ========*/
+
+# define NUM_COLOURS 9
+# define NUM_RAINBOW_COLOURS 7
 
 /* ====== TYPEDEFS ====== */
 
@@ -87,27 +101,11 @@ typedef struct s_mouse
 }	t_mouse;
 
 /**
- * @brief Mode enum for different manipulation modes.
- *
- * CTRL_SCENE		Scene manipulation mode.
- * CTRL_CAM			Camera manipulation mode.
- * CTRL_LIGHT		Light manipulation mode.
- */
-typedef enum e_mode
-{
-	CTRL_SCENE,
-	CTRL_CAM,
-	CTRL_LIGHT
-}	t_mode;
-
-/**
  * @brief Overarching render struct.
  *
  * @param mlx_ptrs		mlx pointers struct.
  * @param cam			Camera struct.
  * @param scene			Scene struct.
- * @param image			Image struct.
- * @param vp			Viewport struct.
  */
 typedef struct s_render
 {
@@ -116,7 +114,7 @@ typedef struct s_render
 	t_entities		scene;
 	t_mouse			mouse;
 	t_menu			menu;
-	t_mode			mode;
+	uint32_t		options;
 	bool			show_menu;
 	bool			is_printing;
 	bool			is_changed;
@@ -125,6 +123,24 @@ typedef struct s_render
 	bool			is_threaded;
 	pthread_mutex_t	mut_print;
 }	t_render;
+
+/**
+ * @brief Enumeration of colour names.
+ *
+ * Used to get predefined colours.
+ */
+typedef enum e_col_name
+{
+	RED = 0,
+	ORANGE,
+	YELLOW,
+	GREEN,
+	BLUE,
+	INDIGO,
+	PURPLE,
+	WHITE,
+	BLACK
+}	t_col_name;
 
 /* ====== FUNCTIONS ====== */
 
@@ -260,8 +276,9 @@ int		ft_keyhook_release(int key, t_render *render);
  * @param key		Keycode of the pressed key.
  * @param scene		Pointer to scene struct.
  * @param active	Pointer to index of active hittable.
+ * @param inc		Increment value.
  */
-void	ft_manip_scene(int key, t_entities *scene, int *active);
+void	ft_manip_scene(int key, t_entities *scene, int *active, float inc);
 
 /**
  * @brief Changes the active hittable.
@@ -279,32 +296,36 @@ void	ft_change_active_hittable(int key, t_entities *scene, int *active);
  *
  * @param key		Keycode of the pressed key.
  * @param hittable	Pointer to hittable struct.
+ * @param inc		Increment value.
  */
-void	ft_manip_hittable(int key, t_hittable *hittable);
+void	ft_manip_hittable(int key, t_hittable *hittable, float inc);
 
 /**
  * @brief Manipulates the active sphere.
  *
  * @param key		Keycode of the pressed key.
  * @param sp		Pointer to sphere struct.
+ * @param inc		Increment value.
  */
-void	ft_manip_sphere(int key, t_sphere *sp);
+void	ft_manip_sphere(int key, t_sphere *sp, float inc);
 
 /**
  * @brief Manipulates the active plane.
  *
  * @param key		Keycode of the pressed key.
  * @param pl		Pointer to plane struct.
+ * @param inc		Increment value.
  */
-void	ft_manip_plane(int key, t_plane *pl);
+void	ft_manip_plane(int key, t_plane *pl, float inc);
 
 /**
  * @brief Manipulates the active cylinder.
  *
  * @param key		Keycode of the pressed key.
  * @param cy		Pointer to cylinder struct.
+ * @param inc		Increment value.
  */
-void	ft_manip_cylinder(int key, t_cylinder *cy);
+void	ft_manip_cylinder(int key, t_cylinder *cy, float inc);
 
 // render_keyhook_utils.c
 
@@ -317,8 +338,10 @@ void	ft_manip_cylinder(int key, t_cylinder *cy);
  * F or G (Increase value)
  * @param key	Keycode of the pressed key.
  * @param value	Pointer to value to change.
+ * @param max	Maximum value.
+ * @param inc	Increment value.
  */
-void	ft_keyhook_inc_dec(int key, float *value, float max);
+void	ft_keyhook_inc_dec(int key, float *value, float max, float inc);
 
 /**
  * @brief Moves a 3D point with a keypress.
@@ -329,8 +352,9 @@ void	ft_keyhook_inc_dec(int key, float *value, float max);
  * QE (Up, Down)
  * @param key	Keycode of the pressed key.
  * @param point	3D point to move.
+ * @param inc	Increment value.
  */
-void	ft_keyhook_mv_point(int key, t_vec3 *point);
+void	ft_keyhook_mv_point(int key, t_vec3 *point, float inc);
 
 /**
  * @brief Rotates a 3D vector with a keypress.
@@ -339,8 +363,19 @@ void	ft_keyhook_mv_point(int key, t_vec3 *point);
  * Arrow Up, Down (Rotate Y)
  * @param key		Keycode of the pressed key.
  * @param vector	3D vector to rotate.
+ * @param inc		Increment value.
  */
-void	ft_keyhook_rot_vec(int key, t_vec3 *vector);
+void	ft_keyhook_rot_vec(int key, t_vec3 *vector, float inc);
+
+/**
+ * @brief Get the current increment value
+ *
+ * @param options	Options bit field.
+ * @return float	Increment value.
+ */
+float	ft_get_increment(uint32_t options);
+
+//render_keyhook_colour.c
 
 /**
  * @brief Changes the colour with a keypress.
@@ -348,8 +383,38 @@ void	ft_keyhook_rot_vec(int key, t_vec3 *vector);
  * Number keys have predefined colors associated.
  * @param key	Keycode of the pressed key.
  * @param col	Pointer to colour struct.
+ * @param inc	Increment value.
  */
-void	ft_keyhook_change_col(int key, t_colour *col);
+void	ft_keyhook_change_col(int key, t_colour *col, float inc);
+
+/**
+ * @brief Returns a colour based on the given colour name.
+ *
+ * @param col_name	Colour name.
+ * @return t_colour	Colour.
+ */
+t_colour	ft_get_colour(t_col_name col_name);
+
+/**
+ * @brief Interpolates between two colours.
+ *
+ * Uses ft_get_colour() to get seven colours of rainbow.
+ * @param result	Pointer to the resulting colour.
+ * @param progress	A float between 0 and 1, indicating the position
+ * 					in the color transition.
+ */
+void		ft_interpolate_colour(t_colour *result, float progress);
+
+/**
+ * @brief Interpolates between two colours while keeping track of progress.
+ *
+ * The progress of interpolation is stored in a static variable.
+ * If it reaches 1.0, it is reset to 0.0, and vice versa.
+ * Calls ft_interpolate_colour() to do the actual interpolation.
+ * @param result	Pointer to the resulting colour.
+ * @param inc		Interpolation increment.
+ */
+void		ft_static_interpolate(t_colour *result, float inc);
 
 // render_keyhook_camera.c
 
@@ -360,8 +425,9 @@ void	ft_keyhook_change_col(int key, t_colour *col);
  * Arrow Up, Down (Rotate Y)
  * @param key		Keycode of the pressed key.
  * @param direction	Camera direction vector.
+ * @param inc		Increment value.
  */
-void	ft_keyhook_rot_cam(int key, t_vec3 *direction);
+void	ft_keyhook_rot_cam(int key, t_vec3 *direction, float inc);
 
 /**
  * @brief Moves the camera with a keypress.
@@ -372,8 +438,9 @@ void	ft_keyhook_rot_cam(int key, t_vec3 *direction);
  * QE (Up, Down)
  * @param key	Keycode of the pressed key.
  * @param cam	Pointer to camera struct.
+ * @param inc	Increment value.
  */
-void	ft_keyhook_move_cam(int key, t_cam *cam);
+void	ft_keyhook_move_cam(int key, t_cam *cam, float inc);
 
 /**
  * @brief Changes the camera FOV with a keypress.
@@ -382,8 +449,9 @@ void	ft_keyhook_move_cam(int key, t_cam *cam);
  * F (Increase FOV)
  * @param key	Keycode of the pressed key.
  * @param cam	Pointer to camera struct.
+ * @param inc	Increment value.
  */
-void	ft_keyhook_fov_cam(int key, t_cam *cam);
+void	ft_keyhook_fov_cam(int key, t_cam *cam, float inc);
 
 /**
  * @brief Manipulates the camera with a keypress.
@@ -395,8 +463,9 @@ void	ft_keyhook_fov_cam(int key, t_cam *cam);
  * @param cam			Pointer to camera struct.
  * @param is_threaded	Flag if rendering is threaded.
  * @param is_changed	Flag if scene was changed.
+ * @param inc	Increment value.
  */
-void	ft_manip_cam(int key, t_cam *cam, bool *is_threaded, bool *is_changed);
+void	ft_manip_cam(int key, t_cam *cam, bool *is_threaded, bool *is_changed, float inc);
 
 // render_keyhook_light.c
 
@@ -407,8 +476,9 @@ void	ft_manip_cam(int key, t_cam *cam, bool *is_threaded, bool *is_changed);
  * @param key		Keycode of the pressed key.
  * @param scene		Pointer to scene struct.
  * @param active	Pointer to index of active light.
+ * @param inc		Increment value.
  */
-void	ft_manip_light(int key, t_entities *scene, int *active);
+void	ft_manip_light(int key, t_entities *scene, int *active, float inc);
 
 // render_mouse.c
 
@@ -511,5 +581,8 @@ void	*ft_blend_background_threaded(void *arg);
 void	*ft_output_threaded(void *arg);
 bool	ft_is_printing(t_render *render);
 void	ft_toggle_is_printing(t_render *render);
+
+int	ft_draw_scene(t_render *render);
+void	ft_change_options(int key, t_render *render);
 
 #endif

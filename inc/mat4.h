@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mat4.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 12:53:31 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 16:12:16 by gwolf            ###   ########.fr       */
+/*   Created: 2023/12/28 12:59:14 by sqiu              #+#    #+#             */
+/*   Updated: 2024/01/19 00:19:39 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "utils.h"
+# if IS_BONUS
+#  include "utils_bonus.h"
+# else
+#  include "utils.h"
+# endif
 
 /* ====== TYPEDEFS ====== */
 
@@ -23,13 +27,13 @@
  * @brief 4x4 matrix of floats.
  *
  * Typedef'd to make it possible to return a matrix from a function.
+ * Column major -> matrix[column][row]
  * @param mat	4x4 matrix
  */
 typedef struct s_mat4
 {
 	float	mat[4][4];
 }	t_mat4;
-
 /* ====== FUNCTIONS ====== */
 
 // mat4.c

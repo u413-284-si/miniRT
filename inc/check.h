@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/25 15:47:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 16:33:54 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,14 @@
 # include "error_msg.h"
 # include "ft_char.h"
 # include "ft_strtod.h"
-# include "entities.h"
-# include "miniRT_config.h"
+
+# if IS_BONUS
+#  include "entities_bonus.h"
+#  include "miniRT_config_bonus.h"
+# else
+#  include "entities.h"
+#  include "miniRT_config.h"
+# endif
 
 /* ====== TYPEDEFS ====== */
 
@@ -53,7 +59,7 @@ t_err		ft_check_lines(char **lines, int *lsrc_count, int *total);
  * @param line Line to check for identifier.
  * @return t_type Specific entity type if correct, else UNKNOWN.
  */
-t_type	ft_check_line_type(char *line);
+t_type		ft_check_line_type(char *line);
 
 /**
  * @brief Increase entity count, and check if too many.
@@ -80,7 +86,7 @@ t_err		ft_incr_ent_count(int ent_count[SUM_ENTS], t_type ent_type);
  */
 t_err		ft_check_entity_count(int ent_count[SUM_ENTS]);
 
-// check_line.c
+// check_utils.c
 
 /**
  * @brief Moves line one space or htab forward and sanitizes spaces.
@@ -93,6 +99,8 @@ t_err		ft_check_entity_count(int ent_count[SUM_ENTS]);
  * @param line Pointer to current line.
  */
 void		ft_rm_space(char **line);
+
+// check_line.c
 
 /**
  * @brief Tries to convert str to float and checks range.
@@ -123,6 +131,22 @@ bool		ft_isvalid_float(char **line, float min, float max, bool comma);
  * @return false Block is not valid.
  */
 bool		ft_isvalid_float_block(char **line, float min, float max);
+
+/**
+ * @brief Checks three floats, separated by ',' and calcs checksum.
+ *
+ * Works in principle like ft_isvalid_float_block().
+ * Also keeps track of the checksum of all three numbers.
+ * If checksum is 0.0, the vector is not a unit vector, which is an error.
+ * if checksum is bigger than 1.0, the vector was not normalized.
+ * Since it can be normalized, this is only a warning.
+ * @param line		Pointer to current line.
+ * @param min		Minimum value for converted number.
+ * @param max		Maximum value for converted number.
+ * @return true		Unit vector is valid.
+ * @return false	Unit vector is not valid.
+ */
+bool		ft_isvalid_unit_vec(char **line, float min, float max);
 
 /**
  * @brief Tries to convert str into rgb int and checks range.
@@ -162,7 +186,7 @@ bool		ft_isvalid_rgb_block(char **line);
  * @param line Pointer to current line.
  * @return t_type AMBIENT on success, UNKNOWN if fail.
  */
-t_type	ft_check_ambient(char *line);
+t_type		ft_check_ambient(char *line);
 
 /**
  * @brief Checks if camera line is correct.
@@ -175,7 +199,7 @@ t_type	ft_check_ambient(char *line);
  * @param line Pointer to current line.
  * @return t_type CAMERA on success, UNKNOWN if fail.
  */
-t_type	ft_check_camera(char *line);
+t_type		ft_check_camera(char *line);
 
 /**
  * @brief Checks if light line is correct.
@@ -188,7 +212,7 @@ t_type	ft_check_camera(char *line);
  * @param line Pointer to current line.
  * @return t_type LIGHT on success, UNKNOWN if fail.
  */
-t_type	ft_check_light(char *line);
+t_type		ft_check_light(char *line);
 
 // check_entity2.c
 
@@ -203,7 +227,7 @@ t_type	ft_check_light(char *line);
  * @param line Pointer to current line.
  * @return t_type SPHERE on success, UNKNOWN if fail.
  */
-t_type	ft_check_sphere(char *line);
+t_type		ft_check_sphere(char *line);
 
 /**
  * @brief Checks if plane line is correct.
@@ -216,7 +240,7 @@ t_type	ft_check_sphere(char *line);
  * @param line Pointer to current line.
  * @return t_type PLANE on success, UNKNOWN if fail.
  */
-t_type	ft_check_plane(char *line);
+t_type		ft_check_plane(char *line);
 
 /**
  * @brief Checks if cylinder line is correct.
@@ -231,6 +255,6 @@ t_type	ft_check_plane(char *line);
  * @param line Pointer to current line.
  * @return t_type CYLINDER on success, UNKNOWN if fail.
  */
-t_type	ft_check_cylinder(char *line);
+t_type		ft_check_cylinder(char *line);
 
 #endif
