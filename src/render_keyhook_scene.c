@@ -6,18 +6,18 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:05:26 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/06 16:05:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/09 16:41:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
 
-void	ft_manip_scene(int key, t_entities *scene, int *active)
+void	ft_manip_scene(int key, t_entities *scene, int *active, float inc)
 {
 	if (key == XK_n || key == XK_m)
 		ft_change_active_hittable(key, scene, active);
 	else
-		ft_manip_hittable(key, &scene->obj[*active]);
+		ft_manip_hittable(key, &scene->obj[*active], inc);
 }
 
 void	ft_change_active_hittable(int key, t_entities *scene, int *active)

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   menu_init.c                                        :+:      :+:    :+:   */
+/*   time_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/30 16:34:39 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 14:40:10 by gwolf            ###   ########.fr       */
+/*   Created: 2024/01/07 13:22:22 by gwolf             #+#    #+#             */
+/*   Updated: 2024/01/08 10:27:23 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "render_menu.h"
+#include "time_bonus.h"
 
-void	ft_menu_init(t_menu *menu, uint8_t alpha, uint32_t colour,
-			uint32_t font_col)
+uint64_t	ft_get_time_ms(void)
 {
-	menu->inv_alpha = 255 - alpha;
-	menu->rb = (colour & 0xFF00FF) * alpha;
-	menu->g = (colour & 0x00FF00) * alpha;
-	menu->font_col = font_col;
+	static struct timespec	spec;
+
+	clock_gettime(CLOCK_MONOTONIC, &spec);
+	return ((spec.tv_sec * 1000) + (spec.tv_nsec / 1e6));
 }

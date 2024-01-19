@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_menu.h                                      :+:      :+:    :+:   */
+/*   menu_put_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 15:13:52 by gwolf            ###   ########.fr       */
+/*   Created: 2024/01/08 14:51:20 by gwolf             #+#    #+#             */
+/*   Updated: 2024/01/08 14:55:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RENDER_MENU_H
-# define RENDER_MENU_H
+#ifndef MENU_PUT_BONUS_H
+# define MENU_PUT_BONUS_H
 
 /* ====== LIBRARIES ====== */
 
-# include <stdint.h>
-
-# if IS_BONUS
-#  include "miniRT_config_bonus.h"
-# else
-#  include "miniRT_config.h"
-# endif
-
-/* ====== MACROS ====== */
-
-typedef struct s_menu
-{
-	uint8_t		inv_alpha;
-	uint32_t	rb;
-	uint32_t	g;
-	uint32_t	font_col;
-}	t_menu;
+# include "menu_put.h"
 
 /* ====== FUNCTIONS ====== */
 
-void	ft_menu_init(t_menu *menu, uint8_t alpha, uint32_t colour,
-			uint32_t font_col);
+/**
+ * @brief Puts a timestamp on the screen
+ *
+ * @param put 				Putinfo struct
+ * @param last_render_time	Last render time in ms
+ * @param show_fps			Whether to convert to FPS
+ * @return t_vec2i			Position after the timestamp
+ */
+t_vec2i	ft_put_time(t_putinfo put, uint64_t last_render_time, bool show_fps);
 
 #endif

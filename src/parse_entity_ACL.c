@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_entity_ACL.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:23:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/14 17:16:13 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 15:17:03 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_parse_ambient(char *line, t_light *ambient)
 {
+	ambient->id = 0;
 	ft_parse_float(&line, &ambient->ratio);
 	ft_parse_colour_block(&line, &ambient->colour);
 }

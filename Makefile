@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
+#    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/19 12:53:02 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/19 16:18:08 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,25 +41,20 @@ SRC_DIR := src
 
 # Base directory for object files
 BASE_OBJ_DIR := obj
-# Subdirectories for common, base, and bonus object files
-OBJ_DIR_COMMON := $(BASE_OBJ_DIR)/common
+# Subdirectories for base, and bonus object files
 OBJ_DIR_BASE := $(BASE_OBJ_DIR)/base
 OBJ_DIR_BONUS := $(BASE_OBJ_DIR)/bonus
 # Adjust directory based on MODE
 ifeq ($(MODE), leak)
-	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/leak
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/leak
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/leak
 else ifeq ($(MODE), address)
-	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/address
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/address
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/address
 else ifeq ($(MODE), speed)
-	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/speed
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/speed
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/speed
 else
-	OBJ_DIR_COMMON := $(OBJ_DIR_COMMON)/default
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/default
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/default
 endif
@@ -70,11 +65,8 @@ LIB_DIR_FT := $(LIB_DIR)/libft
 
 # Subdirectory for header files
 INC_DIR := inc
-DEP_DIR = $(OBJ_DIR)/dep
-LOG_DIR := log
 
 # Subdirectories for dependency files
-DEP_DIR_COMMON := $(OBJ_DIR_COMMON)/dep
 DEP_DIR_BASE := $(OBJ_DIR_BASE)/dep
 DEP_DIR_BONUS := $(OBJ_DIR_BONUS)/dep
 
@@ -104,10 +96,6 @@ POSTCOMPILE = @mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
 # *     and LDFLAGS            *
 # ******************************
 
-ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
-	CFLAGS += -D IS_BONUS=1
-endif
-
 ifeq ($(MODE), leak)
 	CFLAGS += -fsanitize=leak
 	LDFLAGS += -fsanitize=leak
@@ -133,6 +121,7 @@ ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
 else
 	DEFAULT = $(BASE)
 endif
+
 # Set target name to default
 NAME = $(DEFAULT)
 
@@ -142,8 +131,6 @@ LEAK := _leak
 ADDRESS := _address
 # Append for speed optimization
 SPEED := _speed
-# Append for profiling
-PROFILE := _profile
 
 # Modify name depending on MODE variable
 ifeq ($(MODE), leak)
@@ -154,6 +141,7 @@ else ifeq ($(MODE), speed)
 	NAME = $(DEFAULT)$(SPEED)
 endif
 
+# Library target libft
 LIBFT := $(LIB_DIR_FT)/libft.a
 
 # ******************************
@@ -185,7 +173,6 @@ SRC_COMMON := 	camera_movement.c \
 				menu_put_str_num.c \
 				menu_put_utils_ctrl.c \
 				menu_put_utils.c \
-				menu_put.c \
 				parse_entity_ACL.c \
 				parse_line.c \
 				print_entity.c \
@@ -205,16 +192,21 @@ SRC_COMMON := 	camera_movement.c \
 				utils_entities.c \
 				utils_interval.c \
 				vec3_arithmetics.c \
-				vec3_linalgebra.c
+				vec3_linalgebra.c \
+				render_bit_field.c \
+				render_keyhook_colour.c
 
-SRC_BASE :=		check.c \
+SRC_BASE := 	render_compose_image.c \
+				menu_put_text.c \
+				render_keyhook_options.c \
 				check_entity_sp_pl_cy.c \
+				check.c \
 				colour.c \
 				error_msg_check.c \
-				hit.c \
 				hit_cylinder.c \
 				hit_plane.c \
 				hit_sphere.c \
+				hit.c \
 				parse.c \
 				parse_entity_sp_pl_cy.c \
 				ray.c \
@@ -224,8 +216,13 @@ SRC_BASE :=		check.c \
 				utils_cylinder.c \
 				utils_math.c
 
-SRC_BONUS :=	check_bonus.c \
+SRC_BONUS :=	render_compose_image_bonus.c \
+				time_bonus.c \
+				menu_put_text_bonus.c \
+				menu_put_time_bonus.c \
+				render_keyhook_options_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
+				check_bonus.c \
 				colour_bonus.c \
 				error_msg_check_bonus.c \
 				hit_bonus.c \
@@ -247,17 +244,17 @@ SRC_BONUS :=	check_bonus.c \
 				utils_quaternion_bonus.c \
 				utils_random_bonus.c
 
+
 # ******************************
 # *     Object files           *
 # ******************************
 
-OBJ_COMMON = $(addprefix $(OBJ_DIR_COMMON)/, $(SRC_COMMON:.c=.o))
-OBJ_BASE = $(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o)) \
-           $(addprefix $(OBJ_DIR_BASE)/, $(SRC_COMMON:.c=.o))
+OBJ_BASE = 	$(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o) ) \
+			$(addprefix $(OBJ_DIR_BASE)/, $(SRC_COMMON:.c=.o))
 OBJ_BONUS = $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_BONUS:.c=.o)) \
-            $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_COMMON:.c=.o))
+			$(addprefix $(OBJ_DIR_BONUS)/, $(SRC_COMMON:.c=.o))
 
-# Depending on whether 'bonus' is a make target, include base or bonus objects
+# Depending on whether 'bonus' is a make target, use base or bonus objects
 ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
 	OBJS = $(OBJ_BONUS)
 else
@@ -270,7 +267,7 @@ endif
 
 DEPFILES =	$(SRC_COMMON:%.c=$(DEP_DIR_BASE)/%.d) \
 			$(SRC_BASE:%.c=$(DEP_DIR_BASE)/%.d) \
-		    $(SRC_COMMON:%.c=$(DEP_DIR_BONUS)/%.d) \
+			$(SRC_COMMON:%.c=$(DEP_DIR_BONUS)/%.d) \
 			$(SRC_BONUS:%.c=$(DEP_DIR_BONUS)/%.d)
 
 # ******************************
@@ -306,6 +303,7 @@ $(NAME): $(LIBFT) $(OBJS)
 
 # This target compiles with bonus objects.
 .PHONY: bonus
+bonus: CFLAGS += -D IS_BONUS
 bonus: $(NAME)
 
 # This target uses perf for profiling.
@@ -354,12 +352,6 @@ CURRENT_FILE := 0
 # $(eval ...) =		Increment file counter.
 # $(eval ...) =		Increment file counter.
 # $(POSTCOMPILE) =	Move temp dependency file and touch object to ensure right timestamps.
-$(OBJ_DIR_COMMON)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_COMMON)/%.d | $(DEP_DIR_COMMON)
-	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
-	@echo "($(CURRENT_FILE)/$(TOTAL_FILES)) Compiling $(BOLD)$< $(RESET)"
-	$(eval DEP_DIR=$(DEP_DIR_COMMON))
-	$(SILENT)$(COMPILE) $< -o $@
-	$(SILENT)$(POSTCOMPILE)
 
 $(OBJ_DIR_BASE)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BASE)/%.d | $(DEP_DIR_BASE)
 	$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
@@ -379,15 +371,9 @@ $(OBJ_DIR_BONUS)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BONUS)/%.d | $(DEP_DIR_BO
 .INTERMEDIATE: message
 message:
 	@printf "$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	@printf "$(YELLOW)$(BOLD)compile objects$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 
-# Create obj and dep subdirectory if it doesn't exist
-$(DEP_DIR_COMMON) $(DEP_DIR_BASE) $(DEP_DIR_BONUS):
-	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	@echo $@
-	$(SILENT)mkdir -p $@
-
-$(LOG_DIR):
+# Create subdirectory if it doesn't exist
+$(DEP_DIR_BASE) $(DEP_DIR_BONUS) $(LOG_DIR):
 	@printf "$(YELLOW)$(BOLD)create subdir$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	@echo $@
 	$(SILENT)mkdir -p $@
@@ -409,12 +395,9 @@ $(LIBFT):
 # ******************************
 
 # Remove all object files and dependency files
-# Remove all object files and dependency files
 .PHONY: clean
 clean:
 	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)miniRT$(RESET)]\n"
-	@rm -rf $(BASE_OBJ_DIR)
-	@printf "$(RED)removed subdir $(BASE_OBJ_DIR)$(RESET)\n"
 	@rm -rf $(BASE_OBJ_DIR)
 	@printf "$(RED)removed subdir $(BASE_OBJ_DIR)$(RESET)\n"
 
@@ -422,10 +405,6 @@ clean:
 # Remove all object, dependency, binaries and log files
 .PHONY: fclean
 fclean: clean
-	@rm -rf $(NAME)*
-	@printf "$(RED)removed binaries $(NAME)*$(RESET)\n"
-	@rm -rf $(LOG_DIR)
-	@printf "$(RED)removed subdir $(LOG_DIR)$(RESET)\n"
 	@rm -rf $(NAME)*
 	@printf "$(RED)removed binaries $(NAME)*$(RESET)\n"
 	@rm -rf $(LOG_DIR)
@@ -481,4 +460,3 @@ help:
 	@echo "  make bonus MODE=leak - Compiles the bonus version with leak sanitation."
 	@echo ""
 	@echo "For more detailed information, read the comments within the Makefile itself."
-	

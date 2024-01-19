@@ -13,6 +13,10 @@
 		"structs.h": "c",
 		"minirt_config.h": "c",
 		"structs_bonus.h": "c",
-		"colour_bonus.h": "c"
+		"colour_bonus.h": "c",
+		"menu_put_bonus.h": "c",
+		"menu_put.h": "c",
+		"render_bonus.h": "c",
+		"print.h": "c"
 	}
 }
