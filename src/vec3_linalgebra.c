@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:52:25 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/18 09:37:00 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 12:31:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,7 @@ float	ft_vec3_abs(t_vec3 v)
 
 t_vec3	ft_vec3_norm(t_vec3 v)
 {
-	const float	len = ft_vec3_abs(v);
-
-	if (len == 0.0)
-		return (v);
-	return (ft_vec3_scale(v, 1.0 / len));
+	return (ft_vec3_scale(v, 1.0 / ft_vec3_abs(v)));
 }
 
 float	ft_vec3_angle(t_vec3 v1, t_vec3 v2)
