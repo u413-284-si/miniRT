@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/18 09:29:26 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 16:33:54 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,14 @@
 # include "error_msg.h"
 # include "ft_char.h"
 # include "ft_strtod.h"
-# include "entities.h"
-# include "miniRT_config.h"
+
+# if IS_BONUS
+#  include "entities_bonus.h"
+#  include "miniRT_config_bonus.h"
+# else
+#  include "entities.h"
+#  include "miniRT_config.h"
+# endif
 
 /* ====== TYPEDEFS ====== */
 
@@ -53,7 +59,7 @@ t_err		ft_check_lines(char **lines, int *lsrc_count, int *total);
  * @param line Line to check for identifier.
  * @return t_type Specific entity type if correct, else UNKNOWN.
  */
-t_type	ft_check_line_type(char *line);
+t_type		ft_check_line_type(char *line);
 
 /**
  * @brief Increase entity count, and check if too many.
@@ -180,7 +186,7 @@ bool		ft_isvalid_rgb_block(char **line);
  * @param line Pointer to current line.
  * @return t_type AMBIENT on success, UNKNOWN if fail.
  */
-t_type	ft_check_ambient(char *line);
+t_type		ft_check_ambient(char *line);
 
 /**
  * @brief Checks if camera line is correct.
@@ -193,7 +199,7 @@ t_type	ft_check_ambient(char *line);
  * @param line Pointer to current line.
  * @return t_type CAMERA on success, UNKNOWN if fail.
  */
-t_type	ft_check_camera(char *line);
+t_type		ft_check_camera(char *line);
 
 /**
  * @brief Checks if light line is correct.
@@ -206,7 +212,7 @@ t_type	ft_check_camera(char *line);
  * @param line Pointer to current line.
  * @return t_type LIGHT on success, UNKNOWN if fail.
  */
-t_type	ft_check_light(char *line);
+t_type		ft_check_light(char *line);
 
 // check_entity2.c
 
@@ -221,7 +227,7 @@ t_type	ft_check_light(char *line);
  * @param line Pointer to current line.
  * @return t_type SPHERE on success, UNKNOWN if fail.
  */
-t_type	ft_check_sphere(char *line);
+t_type		ft_check_sphere(char *line);
 
 /**
  * @brief Checks if plane line is correct.
@@ -234,7 +240,7 @@ t_type	ft_check_sphere(char *line);
  * @param line Pointer to current line.
  * @return t_type PLANE on success, UNKNOWN if fail.
  */
-t_type	ft_check_plane(char *line);
+t_type		ft_check_plane(char *line);
 
 /**
  * @brief Checks if cylinder line is correct.
@@ -249,6 +255,6 @@ t_type	ft_check_plane(char *line);
  * @param line Pointer to current line.
  * @return t_type CYLINDER on success, UNKNOWN if fail.
  */
-t_type	ft_check_cylinder(char *line);
+t_type		ft_check_cylinder(char *line);
 
 #endif

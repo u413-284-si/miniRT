@@ -6,15 +6,21 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:52:25 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/19 12:31:58 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 16:33:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec3.h"
 
+#if IS_BONUS
+# include "utils_bonus.h"
+#else
+# include "utils.h"
+#endif
+
 float	ft_vec3_abs(t_vec3 v)
 {
-	return (sqrt(pow(v.x, 2) + pow(v.y, 2) + pow(v.z, 2)));
+	return (sqrt(v.x * v.x + v.y * v.y + v.z * v.z));
 }
 
 t_vec3	ft_vec3_norm(t_vec3 v)

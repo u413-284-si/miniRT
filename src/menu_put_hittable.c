@@ -6,15 +6,15 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:55:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/07 12:39:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 15:16:52 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
 
-void	ft_put_hittable(t_putinfo put, t_hittable hittable)
+void	ft_put_hittable(t_putinfo put, t_hittable hittable, int total)
 {
-	put.pos = ft_put_id(put, hittable.id);
+	put.pos = ft_put_id(put, hittable.id, total);
 	put.pos = ft_put_type(put, hittable.type);
 	if (hittable.type == SPHERE)
 		ft_put_sp(put, hittable.params.sp);
@@ -27,7 +27,7 @@ void	ft_put_hittable(t_putinfo put, t_hittable hittable)
 void	ft_put_sp(t_putinfo put, t_sphere sp)
 {
 	put.pos = ft_put_3d_point("Centre", put, sp.centre);
-	put.pos = ft_put_single_float_value("Diameter", put, sp.r);
+	put.pos = ft_put_single_float_value("Radius", put, sp.r);
 	put.pos = ft_put_colour(put, sp.colour);
 }
 
@@ -42,7 +42,7 @@ void	ft_put_cy(t_putinfo put, t_cylinder cy)
 {
 	put.pos = ft_put_3d_point("Centre", put, cy.centre);
 	put.pos = ft_put_unit_vec("Axis", put, cy.axis);
-	put.pos = ft_put_single_float_value("Diameter", put, cy.d);
+	put.pos = ft_put_single_float_value("Diameter", put, cy.r * 2);
 	put.pos = ft_put_single_float_value("Height", put, cy.h);
 	put.pos = ft_put_colour(put, cy.colour);
 }

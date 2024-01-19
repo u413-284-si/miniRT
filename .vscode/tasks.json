@@ -13,6 +13,19 @@
 				"$gcc"
 			],
 			"group": "build",
+		},
+		{
+			"type": "cppbuild",
+			"label": "make bonus",
+			"command": "/usr/bin/make",
+			"args": ["bonus"],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
 		}
 	]
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/03 17:43:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:56 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,13 @@
 # include "error_syscall.h"
 # include "cleanup.h"
 # include "ft_strtod.h"
-# include "entities.h"
 # include "camera.h"
+
+# if IS_BONUS
+#  include "entities_bonus.h"
+# else
+#  include "entities.h"
+# endif
 
 /* ====== FUNCTIONS ====== */
 
