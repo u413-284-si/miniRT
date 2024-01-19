@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/18 09:28:16 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/19 12:33:22 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -179,7 +179,7 @@ SRC :=	camera_movement.c \
 		utils.c \
 		vec3_arithmetics.c \
 		vec3_linalgebra.c \
-		check_utils.c \
+		check_rm_space.c \
 		error_msg_check2.c
 
 SRCS := $(addprefix $(SRC_DIR)/, $(SRC))
