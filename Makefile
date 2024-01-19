@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/16 17:42:07 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/19 12:53:02 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -201,7 +201,6 @@ SRC_COMMON := 	camera_movement.c \
 				render_loop_mlx.c \
 				render_mouse.c \
 				render_output_ppm.c \
-				scene_init.c \
 				scene_shadow.c \
 				utils_entities.c \
 				utils_interval.c \
