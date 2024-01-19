@@ -1,6 +1,7 @@
+#bonus
 A 0.2          255,255,255
 C 0,0,0          0,0,-1           60
 L 0,0,0          0.7      255,255,255
 
-#      Centre   Axis    Diameter  Height   Shininess     Color       
-cy     0,0,-50  -1,1,-1     16       20    32            255,0,0
+#      Centre      Axis     Diameter  Height   Shininess   Reflectivity    Checkered    Color         
+cy     0,0,-50     -1,1,-1     16       20       32         0.0               0        255,0,0
