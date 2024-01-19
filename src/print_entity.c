@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:16:27 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 13:22:15 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 12:51:10 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_print_cylinder(const t_cylinder cy)
 	ft_print_vec3(cy.centre);
 	printf("Axis: ");
 	ft_print_vec3(cy.axis);
-	printf("Diameter: %.6f\n", cy.d);
+	printf("Diameter: %.6f\n", cy.r * 2);
 	printf("Height: %.6f\n", cy.h);
 	printf("Colour: ");
 	ft_print_colour(cy.colour);

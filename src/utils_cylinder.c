@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:53:34 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 16:39:18 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 12:52:40 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ bool	ft_cy_check_wall(t_cylinder cy, float d, t_hitrecord *rec)
 	len = ft_vec3_abs(ft_vec3_sub(hit, axis_hit));
 	m -= EPSILON;
 	len -= EPSILON;
-	if (m >= 0 && m <= cy.h && len <= (cy.d / 2.0) && d > EPSILON && d < rec->d)
+	if (m >= 0 && m <= cy.h && len <= cy.r && d > EPSILON && d < rec->d)
 	{
 		rec->axis_hit = axis_hit;
 		return (true);
@@ -57,7 +57,7 @@ bool	ft_cy_check_cap(t_cylinder cy, t_vec3 cap, float d, t_hitrecord *rec)
 	hit = ft_scale_ray(rec->ray, d);
 	len = ft_vec3_abs(ft_vec3_sub(hit, cap));
 	len += EPSILON;
-	if (len <= (cy.d / 2.0) && d > EPSILON && d < rec->d)
+	if (len <= cy.r && d > EPSILON && d < rec->d)
 	{
 		rec->axis_hit = cap;
 		return (true);

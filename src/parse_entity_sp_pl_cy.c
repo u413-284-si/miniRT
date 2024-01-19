@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:34:38 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 13:23:18 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 12:50:03 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id)
 	ft_parse_float_block(&line, &params->centre);
 	ft_parse_float_block(&line, &params->axis);
 	params->axis = ft_vec3_norm(params->axis);
-	ft_parse_float(&line, &params->d);
+	ft_parse_float(&line, &params->r);
+	params->r = params->r / 2.0;
 	ft_parse_float(&line, &params->h);
 	ft_parse_colour_block(&line, &params->colour);
 	ft_cy_calc_caps(params);
