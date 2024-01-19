@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/19 16:53:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 18:15:25 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ typedef struct s_cam
 	t_vec2f			viewport;
 	t_vec2i			image;
 	t_pixel_grid	pixels;
-	t_vec3			*ray_cache;
+	t_vec3			*pix_cache;
 }	t_cam;
 
 /* ====== FUNCTIONS ====== */

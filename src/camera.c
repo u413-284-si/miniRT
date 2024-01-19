@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/19 17:03:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 18:29:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_err	ft_cam_init(t_cam *cam, t_vec2i img_size)
 {
-	if (ft_err_malloc((void **)&cam->ray_cache,
-			sizeof(*cam->ray_cache) * img_size.x * img_size.y))
+	if (ft_err_malloc((void **)&cam->pix_cache,
+			sizeof(*cam->pix_cache) * img_size.x * img_size.y))
 		return (ERROR);
 	ft_cam_calc_base_vectors(cam);
 	cam->focal_length = 1.0;
@@ -68,7 +68,6 @@ void	ft_cam_calc_rays(t_cam *cam)
 {
 	t_vec2i		pos;
 	t_vec3		pixel_pos;
-	t_vec3		direction;
 
 	pos.y = -1;
 	while (++pos.y < cam->image.y)
@@ -79,8 +78,7 @@ void	ft_cam_calc_rays(t_cam *cam)
 			pixel_pos = ft_vec3_add(cam->pixels.pos00, ft_vec3_add(\
 				ft_vec3_scale(cam->pixels.delta_u, pos.x), \
 				ft_vec3_scale(cam->pixels.delta_v, pos.y)));
-			direction = ft_vec3_norm(ft_vec3_sub(pixel_pos, cam->centre));
-			cam->ray_cache[pos.y * cam->image.x + pos.x] = direction;
+			cam->pix_cache[pos.y * cam->image.x + pos.x] = pixel_pos;
 		}
 	}
 }

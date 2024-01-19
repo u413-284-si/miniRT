@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:43:24 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 16:51:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 18:15:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_free_scene(t_entities *scene)
 
 static void	ft_free_cam(t_cam *cam)
 {
-	free(cam->ray_cache);
+	free(cam->pix_cache);
 }
 
 void	ft_render_cleanup(t_render *render)

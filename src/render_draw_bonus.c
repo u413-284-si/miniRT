@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 18:00:28 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 18:20:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,7 @@ t_colour	ft_anti_aliase_colour(t_vec2i iterate, t_pixel_grid pixels, \
 
 	curr_sample = -1;
 	pixel_colour = (t_colour){0};
-	pixel_centre = ft_vec3_add(ft_vec3_add(pixels.pos00, \
-		ft_vec3_scale(pixels.delta_u, iterate.x)), \
-		ft_vec3_scale(pixels.delta_v, iterate.y));
+	pixel_centre = cam.pix_cache[iterate.y * cam.image.x + iterate.x];
 	while (++curr_sample < SAMPLE_SIZE)
 	{
 		ray = ft_create_sample_ray(pixel_centre, pixels, cam);

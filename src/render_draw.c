@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:04:24 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 18:15:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	ft_render_image(t_render *render)
 		line = pos.y * render->cam.image.x;
 		while (++pos.x < render->cam.image.x)
 		{
-			ray.direction = render->cam.ray_cache[line + pos.x];
+			ray.direction = render->cam.pix_cache[line + pos.x];
 			pixel_colour = ft_ray_colour(ray, render->scene);
 			colour = ft_convert_colour2int(pixel_colour);
 			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, pos.y, colour);
