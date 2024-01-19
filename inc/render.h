@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 09:30:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 15:14:22 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,10 @@
 # include <math.h>
 
 # include "error_mlx.h"
-# include "camera.h"
 # include "ft_print.h"
 # include "cleanup.h"
-# include "entities.h"
-# include "miniRT_config.h"
 # include "mat4_vec3.h"
 # include "print.h"
-# include "ray.h"
 # include "vec2.h"
 # include "render_menu.h"
 # include "render_bit_field.h"
@@ -39,6 +35,17 @@
 
 # define NUM_COLOURS 9
 # define NUM_RAINBOW_COLOURS 7
+# include "camera.h"
+
+# if IS_BONUS
+#  include "miniRT_config_bonus.h"
+#  include "ray_bonus.h"
+#  include "entities_bonus.h"
+# else
+#  include "miniRT_config.h"
+#  include "ray.h"
+#  include "entities.h"
+# endif
 
 /* ====== TYPEDEFS ====== */
 
@@ -100,8 +107,6 @@ typedef struct s_mouse
  * @param mlx_ptrs		mlx pointers struct.
  * @param cam			Camera struct.
  * @param scene			Scene struct.
- * @param image			Image struct.
- * @param vp			Viewport struct.
  */
 typedef struct s_render
 {

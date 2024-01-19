@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2023/12/25 07:32:14 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/18 23:50:46 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@
 # include <math.h>
 # include <stdbool.h>
 
+//home-grown libs
+
 /* ====== MACROS ====== */
 
 # define RAD 0.01745329251
 # define DEG 57.2957795131
-# define EPSILON 1e-4
+# define EPSILON 1e-3
 
 /* ====== TYPEDEFS ====== */
 
@@ -126,5 +128,14 @@ float	ft_solve(t_equation *eq);
  * @return false 	If they are not equal
  */
 bool	ft_nearly_equal_flt(float one, float two);
+
+/**
+ * @brief Ensure that the returned float lies within the interval
+ * 
+ * @param x 			Float given
+ * @param interval 		Interval with min and max value
+ * @return float 
+ */
+float	ft_clamp(float x, t_interval interval);
 
 #endif

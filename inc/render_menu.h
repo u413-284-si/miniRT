@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 14:57:42 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/08 14:39:53 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 15:13:52 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@
 
 # include <stdint.h>
 
-# include "miniRT_config.h"
+# if IS_BONUS
+#  include "miniRT_config_bonus.h"
+# else
+#  include "miniRT_config.h"
+# endif
 
 /* ====== MACROS ====== */
 

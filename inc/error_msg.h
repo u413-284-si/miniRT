@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_msg.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:44:43 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/25 18:19:00 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:18 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,12 @@
 
 // Home-grown libs
 # include "ft_fd.h"
-# include "entities.h"
+
+# if IS_BONUS
+#  include "entities_bonus.h"
+# else
+#  include "entities.h"
+# endif
 
 /* ====== FUNCTIONS ====== */
 

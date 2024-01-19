@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:18:23 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/03 13:20:29 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:35 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "hit_manager.h"
+# if IS_BONUS
+#  include "hit_manager_bonus.h"
+# else
+#  include "hit_manager.h"
+# endif
 
 /* ====== TYPEDEFS ====== */
 
@@ -40,7 +44,6 @@ void		ft_enlighten(t_colour *ray_colour, t_hitrecord rec, \
  * @return t_colour 
  */
 t_colour	ft_ambient_light(t_light ambient);
-
 
 /**
  * @brief Create diffuse lighting

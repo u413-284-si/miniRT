@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cleanup.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:00:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 09:47:38 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:07 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@
 # include <stdlib.h>
 # include <mlx.h>
 
-# include "entities.h"
+// Home-grown libs
+# if IS_BONUS
+#  include "entities_bonus.h"
+# else
+#  include "entities.h"
+# endif
 
 /* ====== FUNCTIONS ====== */
 

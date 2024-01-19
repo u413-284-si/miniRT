@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 15:05:27 by sqiu              #+#    #+#             */
-/*   Updated: 2023/11/17 15:08:59 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 00:19:31 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "entities.h"
+# if IS_BONUS
+#  include "entities_bonus.h"
+# else
+#  include "entities.h"
+# endif
 
 /* ====== TYPEDEFS ====== */
 

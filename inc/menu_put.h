@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 10:10:13 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 15:13:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,19 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "miniRT_config.h"
-# include "render.h"
 # include "vec2.h"
 # if IS_BONUS
 #  include "render_options_bonus.h"
 # else
 #  include "render_options.h"
+# endif
+
+# if IS_BONUS
+#  include "miniRT_config_bonus.h"
+#  include "render_bonus.h"
+# else
+#  include "miniRT_config.h"
+#  include "render.h"
 # endif
 
 /* ====== MACROS ====== */

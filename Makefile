@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/13 08:39:20 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/19 15:12:27 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,13 +114,14 @@ endif
 # Base target
 BASE := miniRT
 # Bonus target
-BONUS := miniRT_bonus
+BONUS := miniRT_supreme
 # Set default target name
 ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
 	DEFAULT = $(BONUS)
 else
 	DEFAULT = $(BASE)
 endif
+
 # Set target name to default
 NAME = $(DEFAULT)
 
@@ -147,23 +148,15 @@ LIBFT := $(LIB_DIR_FT)/libft.a
 # *     Source files           *
 # ******************************
 
-SRC_COMMON :=	camera_movement.c \
+SRC_COMMON := 	camera_movement.c \
 				camera.c \
 				check_entity_ACL.c \
-				check_entity_sp_pl_cy.c \
 				check_line.c \
-				check.c \
 				cleanup.c \
-				colour.c \
 				error_mlx.c \
-				error_msg_check.c \
 				error_msg_generic.c \
 				error_syscall.c \
 				ft_strtod.c \
-				hit_cylinder.c \
-				hit_plane.c \
-				hit_sphere.c \
-				hit.c \
 				import_file_buffer.c \
 				import_file.c \
 				main.c \
@@ -180,18 +173,13 @@ SRC_COMMON :=	camera_movement.c \
 				menu_put_str_num.c \
 				menu_put_utils_ctrl.c \
 				menu_put_utils.c \
+				menu_put.c \
 				parse_entity_ACL.c \
-				parse_entity_sp_pl_cy.c \
 				parse_line.c \
-				parse.c \
 				print_entity.c \
 				print_struct.c \
-				ray.c \
-				render_bit_field.c \
-				render_draw.c \
 				render_init_mlx.c \
 				render_keyhook_camera.c \
-				render_keyhook_colour.c \
 				render_keyhook_hittable.c \
 				render_keyhook_light.c \
 				render_keyhook_press.c \
@@ -201,12 +189,9 @@ SRC_COMMON :=	camera_movement.c \
 				render_loop_mlx.c \
 				render_mouse.c \
 				render_output_ppm.c \
-				scene_init.c \
-				scene_light.c \
 				scene_shadow.c \
 				utils_entities.c \
-				utils_cylinder.c \
-				utils.c \
+				utils_interval.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c
 
@@ -230,7 +215,7 @@ OBJ_BASE = 	$(addprefix $(OBJ_DIR_BASE)/, $(SRC_BASE:.c=.o) ) \
 OBJ_BONUS = $(addprefix $(OBJ_DIR_BONUS)/, $(SRC_BONUS:.c=.o)) \
 			$(addprefix $(OBJ_DIR_BONUS)/, $(SRC_COMMON:.c=.o))
 
-# Depending on whether 'bonus' is a make target, include base or bonus objects
+# Depending on whether 'bonus' is a make target, use base or bonus objects
 ifneq (,$(findstring bonus,$(MAKECMDGOALS)))
 	OBJS = $(OBJ_BONUS)
 else
@@ -326,6 +311,7 @@ CURRENT_FILE := 0
 # | $(DEPDIR) = 	Declare the dependency directory as an order-only prerequisite of the target,
 # 					so that it will be created when needed.
 # $(eval ...) =		Increment file counter.
+# $(eval ...) =		Increment file counter.
 # $(POSTCOMPILE) =	Move temp dependency file and touch object to ensure right timestamps.
 
 $(OBJ_DIR_BASE)/%.o: $(SRC_DIR)/%.c message $(DEP_DIR_BASE)/%.d | $(DEP_DIR_BASE)
@@ -376,6 +362,7 @@ clean:
 	@rm -rf $(BASE_OBJ_DIR)
 	@printf "$(RED)removed subdir $(BASE_OBJ_DIR)$(RESET)\n"
 
+# Remove all object, dependency, binaries and log files
 # Remove all object, dependency, binaries and log files
 .PHONY: fclean
 fclean: clean
