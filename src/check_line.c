@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:27:34 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/18 09:27:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 09:38:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,22 +47,25 @@ bool	ft_isvalid_float_block(char **line, float min, float max)
 bool	ft_isvalid_unit_vec(char **line, float min, float max)
 {
 	double	checksum;
-	size_t	tmp;
+	double	ret;
+	size_t	offset;
 	char	*begin;
+	char	*tmp;
 
 	begin = *line;
-	tmp = 0;
-	checksum = ft_strtod(*line, &tmp);
-	if (!ft_isvalid_float(line, min, max, true))
+	if (ft_isvalid_float_block(line, min, max) == false)
 		return (false);
-	(*line)++;
-	checksum += ft_strtod(*line, &tmp);
-	if (!ft_isvalid_float(line, min, max, true))
-		return (false);
-	(*line)++;
-	checksum += ft_strtod(*line, &tmp);
-	if (!ft_isvalid_float(line, min, max, false))
-		return (false);
+	tmp = begin;
+	offset = 0;
+	checksum = 0;
+	ret = ft_strtod(tmp, &offset);
+	checksum += ret * ret;
+	tmp += offset + 1;
+	ret = ft_strtod(tmp, &offset);
+	checksum += ret * ret;
+	tmp += offset + 1;
+	ret = ft_strtod(tmp, &offset);
+	checksum += ret * ret;
 	if (checksum == 0.0)
 		return (ft_perror_not_unit(begin));
 	else if (checksum > 1.0)
