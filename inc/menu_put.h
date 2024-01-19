@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 11:27:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 10:10:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "miniRT_config.h"
 # include "render.h"
 # include "vec2.h"
-# ifdef IS_BONUS
+# if IS_BONUS
 #  include "render_options_bonus.h"
 # else
 #  include "render_options.h"
@@ -29,7 +29,7 @@
 # define X_MENU_OFFSET 20
 # define Y_MENU_TOP 20
 # define Y_MENU_BOTTOM_SMALL 50
-# ifdef IS_BONUS
+# if IS_BONUS
 #  define Y_MENU_BOTTOM_BIG 130
 # else
 #  define Y_MENU_BOTTOM_BIG 110

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:06:03 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 19:13:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 10:10:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdint.h>
 # include <stdbool.h>
 
-# ifdef IS_BONUS
+# if IS_BONUS
 #  include "render_options_bonus.h"
 # else
 #  include "render_options.h"
