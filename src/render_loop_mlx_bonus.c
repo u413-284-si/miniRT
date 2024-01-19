@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_loop_mlx.c                                  :+:      :+:    :+:   */
+/*   render_loop_mlx_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:40:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:40:02 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "render.h"
+#include "render_bonus.h"
 
 int	ft_end_loop(t_render *render)
 {
+	if (ft_is_printing(render))
+		return (0);
 	mlx_loop_end(render->mlx_ptrs.mlx_ptr);
 	return (0);
 }

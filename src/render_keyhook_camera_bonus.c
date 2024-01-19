@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_keyhook_camera.c                            :+:      :+:    :+:   */
+/*   render_keyhook_camera_bonus.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:29:11 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:29:38 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "render.h"
+#include "render_bonus.h"
 
 void	ft_keyhook_rot_cam(int key, t_vec3 *direction, float inc)
 {
@@ -77,6 +77,7 @@ void	ft_manip_cam(int key, t_cam *cam, float inc, uint32_t *options)
 	else
 		ft_keyhook_move_cam(key, cam, inc);
 	ft_cam_calc_pixel_grid(cam);
+	// if threaded
 	ft_cam_calc_rays(cam);
 	ft_option_set(options, O_SCENE_CHANGED);
 }

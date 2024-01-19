@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 19:10:43 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 09:24:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:20:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ typedef enum e_options
 	O_MANIP_LOW = 7,
 	O_MANIP_MID = 8,
 	O_MANIP_HIGH = 9,
-	O_SHOW_FPS = 10
+	O_SHOW_FPS = 10,
+	O_IS_THREADED = 11
 }	t_options;
 
 #endif

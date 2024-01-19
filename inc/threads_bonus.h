@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:34:50 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 10:56:13 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:48:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 /* ====== LIBRARIES ====== */
 
 # include <pthread.h>
+
 # include "error_type.h"
 # include "error_msg.h"
-# include "miniRT_config.h"
+# include "miniRT_config_bonus.h"
 
 /* ====== STRUCTS ====== */
 

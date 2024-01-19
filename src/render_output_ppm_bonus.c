@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_output_ppm.c                                :+:      :+:    :+:   */
+/*   render_output_ppm_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:57:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 11:27:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:44:21 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "render.h"
-#include "error_syscall.h"
+#include "render_bonus.h"
 
 static void	ft_write_pixel(int col, int fd)
 {

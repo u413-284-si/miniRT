@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:12:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 18:05:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,16 @@ typedef enum e_col_name
 // render_init.c
 
 /**
+ * @brief Initializes the render struct.
+ *
+ * Initializes the mlx_ptrs struct, the cam struct and the menu struct.
+ * Initializes options.
+ * @param render	Pointer to render struct.
+ * @return t_err	SUCCESS, ERROR.
+ */
+t_err	ft_render_init(t_render *render);
+
+/**
  * @brief Initializes the mlx_ptrs struct.
  *
  * @param mlx_ptrs		Pointer to mlx_ptrs struct.
@@ -189,6 +199,23 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color);
 void	ft_render_image(t_render *render);
 
 /**
+ * @brief Creates a blended colour from colour and menu colour.
+ *
+ * Uses formula ColC = alpha{ColA} * ColA + (1 - alpha{ColA} ) * ColB.
+ * The color of menu is pre-calculated to speed up the process.
+ * Also makes use of two simplifications:
+ * 1: less variables
+ * 2: less precision for division
+ * Ad 1: the channels R and B are stored in the same variable. They are
+ * far enough apart in memory.
+ * Ad 2: Instead of dividing by 255.99 we bit shift by >>8 == 256.
+ * @param bg_color
+ * @param menu
+ * @return uint32_t
+ */
+uint32_t	ft_fast_alpha_blend(uint32_t bg_color, t_menu menu);
+
+/**
  * @brief Aplha blends current image with menu color to create overlay.
  *
  * For each pixel of the menu size, the menu colour is blended with the
@@ -199,19 +226,17 @@ void	ft_render_image(t_render *render);
  * are used to calc the blended colour.
  * @param render	Pointer to render struct.
  */
-void	ft_blend_background(t_img *img, t_img *veil, t_menu menu);
+void	ft_blend_background(t_render *render);
 
 // render_output_ppm.c
 
 /**
  * @brief Outputs the current mlx img as a ppm file.
  *
- * @param img_arr	Pointer to mlx img array, cast into int.
- * @param width		Width of the image.
- * @param height	Height of the image.
+ * @param img		Pointer to mlx img struct.
  * @return t_err	SUCCESS, ERROR.
  */
-t_err	ft_output_as_ppm(const t_img img, bool *is_printing);
+t_err	ft_output_as_ppm(const t_img img);
 
 // render_keyhook.c
 
@@ -427,11 +452,12 @@ void	ft_keyhook_fov_cam(int key, t_cam *cam, float inc);
  * Checks for keypresses and calls the corresponding function.
  * Re-calculates different aspects of camera (viewport dimensions,
  * base vectors, pixel grid) if necessary.
- * @param key	Keycode of the pressed key.
- * @param cam	Pointer to camera struct.
- * @param inc	Increment value.
+ * @param key		Keycode of the pressed key.
+ * @param cam		Pointer to camera struct.
+ * @param inc		Increment value.
+ * @param options	Options bit field.
  */
-void	ft_manip_cam(int key, t_cam *cam, float inc);
+void	ft_manip_cam(int key, t_cam *cam, float inc, uint32_t *options);
 
 // render_keyhook_light.c
 
@@ -519,7 +545,36 @@ void	ft_render_start_loop(t_render *render);
  */
 void	ft_menu_put_text(t_render *render);
 
+/**
+ * @brief Frees ressources allocated for mlx.
+ *
+ * @param mlx_ptrs	Pointer to mlx_ptrs struct.
+ */
+void	ft_free_mlx(t_mlx_ptrs *mlx_ptrs);
+
+/**
+ * @brief Frees ressources allocated for scene.
+ *
+ * @param scene	Pointer to scene struct.
+ */
+void	ft_free_scene(t_entities *scene);
+
+/**
+ * @brief Frees ressources allocated for render.
+ *
+ * @param render	Pointer to render struct.
+ */
+void	ft_render_cleanup(t_render *render);
+
 int	ft_draw_scene(t_render *render);
 void	ft_change_options(int key, t_render *render);
+
+void	*ft_cam_calc_rays_threaded(void *arg);
+void	*ft_render_image_threaded(void *arg);
+void	*ft_blend_background_threaded(void *arg);
+
+void	*ft_output_threaded(void *arg);
+bool	ft_is_printing(t_render *render);
+void	ft_toggle_is_printing(t_render *render);
 
 #endif

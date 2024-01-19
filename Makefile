@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/19 16:52:00 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/19 18:09:53 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -180,18 +180,17 @@ SRC_COMMON := 	camera_movement.c \
 				print_entity.c \
 				print_struct.c \
 				render_bit_field.c \
+				render_cleanup.c \
 				render_init_mlx.c \
 				render_keyhook_camera.c \
 				render_keyhook_colour.c \
 				render_keyhook_hittable.c \
 				render_keyhook_light.c \
 				render_keyhook_press.c \
-				render_keyhook_release.c \
 				render_keyhook_scene.c \
 				render_keyhook_utils.c \
 				render_loop_mlx.c \
 				render_mouse.c \
-				render_output_ppm.c \
 				scene_shadow.c \
 				utils_entities.c \
 				utils_interval.c \
@@ -212,6 +211,7 @@ SRC_BASE := 	check.c \
 				ray.c \
 				render_compose_image.c \
 				render_draw.c \
+				render_init_base.c \
 				render_keyhook_options.c \
 				scene_light.c \
 				utils_colour.c \
@@ -234,7 +234,9 @@ SRC_BONUS :=	check_bonus.c \
 				ray_bonus.c \
 				render_compose_image_bonus.c \
 				render_draw_bonus.c \
+				render_init_bonus.c \
 				render_keyhook_options_bonus.c \
+				render_output_ppm_bonus.c \
 				scene_light_bonus.c \
 				scene_reflection_bonus.c \
 				texture_bonus.c \
@@ -245,10 +247,8 @@ SRC_BONUS :=	check_bonus.c \
 				utils_math_bonus.c \
 				utils_quaternion_bonus.c \
 				utils_random_bonus.c \
-				threads_alt_versions.c \
+				threads_alt_versions_bonus.c \
 				threads_bonus.c \
-				render_init.c \
-				render_cleanup.c
 
 # ******************************
 # *     Object files           *

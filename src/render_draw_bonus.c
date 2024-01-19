@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   render_draw_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 16:33:19 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 18:00:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_bonus.h"
 
-static uint32_t	ft_fast_alpha_blend(uint32_t bg_color, t_menu menu)
+uint32_t	ft_fast_alpha_blend(uint32_t bg_color, t_menu menu)
 {
 	uint32_t	bg_rb;
 	uint32_t	bg_g;
@@ -26,25 +26,27 @@ static uint32_t	ft_fast_alpha_blend(uint32_t bg_color, t_menu menu)
 	return (blend_rb | blend_g);
 }
 
-void	ft_blend_background(t_img *img, t_img *veil, t_menu menu)
+void	ft_blend_background(t_render *render)
 {
-	char		*img_pixel;
-	char		*veil_pixel;
-	uint32_t	blend_colour;
 	t_vec2i		pos;
+	uint32_t	*img_pixel;
+	uint32_t	*veil_pixel;
+	uint32_t	blend_colour;
 
 	pos.y = -1;
-	while (++pos.y < veil->size.y)
+	while (++pos.y < render->mlx_ptrs.veil.size.y)
 	{
 		pos.x = -1;
-		while (++pos.x < veil->size.x)
+		while (++pos.x < render->mlx_ptrs.veil.size.x)
 		{
-			img_pixel = img->addr
-				+ (pos.y * img->line_len + pos.x * img->bytes);
-			blend_colour = ft_fast_alpha_blend(*(uint32_t *)img_pixel, menu);
-			veil_pixel = veil->addr
-				+ (pos.y * veil->line_len + pos.x * veil->bytes);
-			*(uint32_t *)veil_pixel = blend_colour;
+			img_pixel = (uint32_t *)(render->mlx_ptrs.img.addr
+					+ (pos.y * render->mlx_ptrs.img.line_len
+						+ pos.x * render->mlx_ptrs.img.bytes));
+			blend_colour = ft_fast_alpha_blend(*img_pixel, render->menu);
+			veil_pixel = (uint32_t *)(render->mlx_ptrs.veil.addr
+					+ (pos.y * render->mlx_ptrs.veil.line_len
+						+ pos.x * render->mlx_ptrs.veil.bytes));
+			*veil_pixel = blend_colour;
 		}
 	}
 }

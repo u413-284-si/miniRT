@@ -6,11 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 10:14:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 12:17:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 18:07:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "render.h"
+#include "render_bonus.h"
 
 void	*ft_render_image_threaded(void *arg)
 {
@@ -30,7 +30,7 @@ void	*ft_render_image_threaded(void *arg)
 		while (++pos.x < render->cam.image.x)
 		{
 			ray.direction = render->cam.ray_cache[pos.y * render->cam.image.x + pos.x];
-			pixel_colour = ft_ray_colour(ray, render->scene);
+			pixel_colour = ft_ray_colour(ray, render->scene, render->cam);
 			colour = ft_convert_colour2int(pixel_colour);
 			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, pos.y, colour);
 		}

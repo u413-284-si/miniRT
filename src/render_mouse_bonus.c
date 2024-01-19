@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_mouse.c                                     :+:      :+:    :+:   */
+/*   render_mouse_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 08:30:26 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:43:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:43:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "render.h"
+#include "render_bonus.h"
 
 int	ft_mouse_hook_press(int button, int x, int y, t_render *render)
 {
+	if (ft_is_printing(render))
+		return (0);
 	if (button == Button3)
 	{
 		render->mouse.right = true;
@@ -25,6 +27,8 @@ int	ft_mouse_hook_press(int button, int x, int y, t_render *render)
 
 int	ft_mouse_hook_release(int button, int x, int y, t_render *render)
 {
+	if (ft_is_printing(render))
+		return (0);
 	(void)x;
 	(void)y;
 	if (button == Button1)
@@ -36,6 +40,8 @@ int	ft_mouse_hook_release(int button, int x, int y, t_render *render)
 
 int	ft_mouse_hook_move(int x, int y, t_render *render)
 {
+	if (ft_is_printing(render))
+		return (0);
 	if (x > render->mlx_ptrs.img.size.x || x < 0
 		|| y > render->mlx_ptrs.img.size.y || y < 0)
 		return (0);
@@ -62,6 +68,12 @@ void	ft_mouse_hook_rot_cam(int x, int y, t_render *render)
 	render->mouse.last_pos.y = y;
 	ft_cam_calc_base_vectors(&render->cam);
 	ft_cam_calc_pixel_grid(&render->cam);
-	ft_cam_calc_rays(&render->cam);
+	if (ft_option_isset(render->options, O_IS_THREADED))
+	{
+		if (ft_spin_threads(&render->cam, ft_cam_calc_rays_threaded))
+			ft_option_clear(&render->options, O_IS_THREADED);
+	}
+	else
+		ft_cam_calc_rays(&render->cam);
 	ft_option_set(&render->options, O_SCENE_CHANGED);
 }

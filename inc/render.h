@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:12:40 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:58:42 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -454,13 +454,12 @@ void	ft_keyhook_fov_cam(int key, t_cam *cam, float inc);
  * Checks for keypresses and calls the corresponding function.
  * Re-calculates different aspects of camera (viewport dimensions,
  * base vectors, pixel grid) if necessary.
- * @param key			Keycode of the pressed key.
- * @param cam			Pointer to camera struct.
- * @param is_threaded	Flag if rendering is threaded.
- * @param is_changed	Flag if scene was changed.
- * @param inc	Increment value.
+ * @param key		Keycode of the pressed key.
+ * @param cam		Pointer to camera struct.
+ * @param inc		Increment value.
+ * @param options	Options bit field.
  */
-void	ft_manip_cam(int key, t_cam *cam, bool *is_threaded, bool *is_changed, float inc);
+void	ft_manip_cam(int key, t_cam *cam, float inc, uint32_t *options);
 
 // render_keyhook_light.c
 
@@ -568,14 +567,6 @@ void	ft_free_scene(t_entities *scene);
  * @param render	Pointer to render struct.
  */
 void	ft_render_cleanup(t_render *render);
-
-void	*ft_cam_calc_rays_threaded(void *arg);
-void	*ft_render_image_threaded(void *arg);
-void	*ft_blend_background_threaded(void *arg);
-
-void	*ft_output_threaded(void *arg);
-bool	ft_is_printing(t_render *render);
-void	ft_toggle_is_printing(t_render *render);
 
 int	ft_draw_scene(t_render *render);
 void	ft_change_options(int key, t_render *render);
