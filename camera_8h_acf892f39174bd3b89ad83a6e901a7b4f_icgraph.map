@@ -1,6 +1,6 @@
 <map id="ft_cam_calc_viewport_dimensions" name="ft_cam_calc_viewport_dimensions">
 <area shape="rect" id="node1" title="Calculates viewport dimensions." alt="" coords="271,23,433,65"/>
 <area shape="rect" id="node2" href="$camera_8h.html#af7d021ad81a192b9ae379a76210706aa" title="Initializes camera parameters." alt="" coords="118,5,213,32"/>
-<area shape="rect" id="node4" href="$render_8h.html#a1509258bd6eb6bea810a0ac7bb6e1e70" title="Manipulates the camera with a keypress." alt="" coords="108,56,223,83"/>
+<area shape="rect" id="node4" href="$render_8h.html#aef0c8d431d439f9443a576ecb640e1c7" title="Manipulates the camera with a keypress." alt="" coords="108,56,223,83"/>
 <area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
 </map>

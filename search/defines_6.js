@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['light_5fmax_1063',['LIGHT_MAX',['../mini_r_t__config_8h.html#a38b06bbd397785d2ff3ace62c6a4f365',1,'LIGHT_MAX():&#160;miniRT_config.h'],['../mini_r_t__config__bonus_8h.html#a38b06bbd397785d2ff3ace62c6a4f365',1,'LIGHT_MAX():&#160;miniRT_config_bonus.h']]]
+  ['inc_5fhigh_1115',['INC_HIGH',['../mini_r_t__config_8h.html#a54ec76664820875cac178b73f9bb1c8e',1,'INC_HIGH():&#160;miniRT_config.h'],['../mini_r_t__config__bonus_8h.html#a54ec76664820875cac178b73f9bb1c8e',1,'INC_HIGH():&#160;miniRT_config_bonus.h']]],
+  ['inc_5flow_1116',['INC_LOW',['../mini_r_t__config_8h.html#a689db4c3ce7ea317fca523e20b0fe8d6',1,'INC_LOW():&#160;miniRT_config.h'],['../mini_r_t__config__bonus_8h.html#a689db4c3ce7ea317fca523e20b0fe8d6',1,'INC_LOW():&#160;miniRT_config_bonus.h']]],
+  ['inc_5fmid_1117',['INC_MID',['../mini_r_t__config_8h.html#a4a4de5faf2bb6bc37f4404227160c01b',1,'INC_MID():&#160;miniRT_config.h'],['../mini_r_t__config__bonus_8h.html#a4a4de5faf2bb6bc37f4404227160c01b',1,'INC_MID():&#160;miniRT_config_bonus.h']]]
 ];

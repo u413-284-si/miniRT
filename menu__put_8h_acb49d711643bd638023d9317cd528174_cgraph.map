@@ -1,10 +1,11 @@
 <map id="ft_put_ctrl_light" name="ft_put_ctrl_light">
-<area shape="rect" id="node1" title="Puts control scheme for light on the screen." alt="" coords="5,107,128,133"/>
-<area shape="rect" id="node2" href="$menu__put_8h.html#a0dd38606280deb85fca8f3d4db628552" title="Puts control scheme for incrementing and decrementing a value on the screen." alt="" coords="176,5,319,32"/>
-<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="367,107,449,133"/>
-<area shape="rect" id="node4" href="$menu__put_8h.html#a6387702d64aea5e1908a16e2baf024c0" title="Puts control scheme for movement on the screen." alt="" coords="182,107,313,133"/>
-<area shape="rect" id="node5" href="$menu__put_8h.html#a3d812757fc50aadab47e468736eafb73" title="Puts the ID of a hittable or a light on the screen." alt="" coords="208,208,287,235"/>
-<area shape="rect" id="node8" href="$menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724" title="Puts the type of a hittable or a light on the screen." alt="" coords="200,157,295,184"/>
-<area shape="rect" id="node6" href="$menu__put_8h.html#afdfa5611d84fa2c8cbb73cb66a339c98" title="Converts integer to string and puts it on the screen." alt="" coords="367,208,449,235"/>
-<area shape="rect" id="node7" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="497,208,580,235"/>
+<area shape="rect" id="node1" title="Puts control scheme for light on the screen." alt="" coords="5,132,128,159"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a5aceec72932738d71b7d1bbd95ce525c" title="Puts control scheme for changing active entity on the screen." alt="" coords="179,5,349,32"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a50838cd4750b34dedcc348fbdc91f908" title="Puts control scheme for changing colour on the screen." alt="" coords="197,56,331,83"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#a0dd38606280deb85fca8f3d4db628552" title="Puts control scheme for incrementing and decrementing a value on the screen." alt="" coords="193,107,335,133"/>
+<area shape="rect" id="node6" href="$menu__put_8h.html#a6387702d64aea5e1908a16e2baf024c0" title="Puts control scheme for movement on the screen." alt="" coords="199,157,329,184"/>
+<area shape="rect" id="node7" href="$menu__put_8h.html#a297dd823c51fe8c418aa75fc1cbfa0a5" title="Puts a string and moves to next line." alt="" coords="176,259,352,285"/>
+<area shape="rect" id="node9" href="$menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724" title="Puts the type of a hittable or a light on the screen." alt="" coords="217,208,311,235"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="400,107,483,133"/>
+<area shape="rect" id="node8" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="400,259,483,285"/>
 </map>

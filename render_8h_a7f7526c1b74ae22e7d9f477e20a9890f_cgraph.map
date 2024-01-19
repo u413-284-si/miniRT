@@ -1,0 +1,6 @@
+<map id="ft_keyhook_change_col" name="ft_keyhook_change_col">
+<area shape="rect" id="node1" title="Changes the colour with a keypress." alt="" coords="5,5,179,32"/>
+<area shape="rect" id="node2" href="$render__keyhook__colour_8c.html#a5d187c5314483276ba15560dcf620e39" title="Returns a colour based on the given colour name." alt="" coords="631,5,737,32"/>
+<area shape="rect" id="node3" href="$render__keyhook__colour_8c.html#a02dd1323bf99ad166e22cf0dcbef39f2" title="Interpolates between two colours while keeping track of progress." alt="" coords="227,31,379,57"/>
+<area shape="rect" id="node4" href="$render__keyhook__colour_8c.html#a41e18bc0bce27f7169b29f79e5de0423" title="Interpolates between two colours." alt="" coords="427,31,583,57"/>
+</map>

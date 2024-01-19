@@ -1,0 +1,7 @@
+<map id="ft_put_inc" name="ft_put_inc">
+<area shape="rect" id="node1" title="Puts the current increment mode on the screen." alt="" coords="5,56,91,83"/>
+<area shape="rect" id="node2" href="$render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a" title="Checks if bit is set in the bit field." alt="" coords="139,5,256,32"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#abba80f1bfc48c436f54f5a0740683a75" title="Converts float to string and puts it on the screen." alt="" coords="150,56,245,83"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="156,107,239,133"/>
+<area shape="rect" id="node4" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="304,56,387,83"/>
+</map>

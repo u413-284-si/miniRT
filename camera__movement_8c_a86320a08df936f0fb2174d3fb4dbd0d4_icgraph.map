@@ -1,4 +1,4 @@
 <map id="ft_cam_move_forward" name="ft_cam_move_forward">
 <area shape="rect" id="node1" title="Moves the camera along its direction vector." alt="" coords="225,5,392,32"/>
-<area shape="rect" id="node2" href="$render_8h.html#af1aeed53f4ca5947fd698da6f9ebc0e7" title="Moves the camera with a keypress." alt="" coords="5,5,177,32"/>
+<area shape="rect" id="node2" href="$render_8h.html#ab974018238f1a6e6a86b44e139f5d672" title="Moves the camera with a keypress." alt="" coords="5,5,177,32"/>
 </map>

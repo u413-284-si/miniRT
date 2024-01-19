@@ -1,0 +1,9 @@
+<map id="ft_put_id" name="ft_put_id">
+<area shape="rect" id="node1" title="Puts the ID of a hittable or a light on the screen." alt="" coords="551,56,629,83"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a9151e6af892c25ae1839ba30b7bd8c91" title="Puts ambient info on the screen." alt="" coords="383,5,503,32"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a893f0e65e417aaf6be0152e2f74782d1" title="Puts hittable info on the screen." alt="" coords="385,56,501,83"/>
+<area shape="rect" id="node6" href="$menu__put_8h.html#ab1aa03b80f8d7af17d305cb8b61c2b6b" title="Puts light info on the screen." alt="" coords="395,107,490,133"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a18613445d2379eca738e6cf789dfecf5" title="Puts a scene page on the screen." alt="" coords="192,56,335,83"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" title="Puts the main page of menu on the screen." alt="" coords="5,81,144,108"/>
+<area shape="rect" id="node7" href="$menu__put_8h.html#a11eed0e0d38826c89da2d71031a08593" title="Puts a light page on the screen." alt="" coords="196,107,331,133"/>
+</map>

@@ -1,10 +1,12 @@
 <map id="src/camera_movement.c" name="src/camera_movement.c">
-<area shape="rect" id="node1" title=" " alt="" coords="80,5,263,32"/>
-<area shape="rect" id="node2" href="$camera_8h.html" title=" " alt="" coords="130,80,213,107"/>
-<area shape="rect" id="node3" href="$vec2_8h.html" title=" " alt="" coords="5,155,71,181"/>
-<area shape="rect" id="node4" href="$vec3_8h.html" title=" " alt="" coords="95,155,160,181"/>
-<area shape="rect" id="node7" href="$utils_8h.html" title=" " alt="" coords="184,155,247,181"/>
-<area shape="rect" id="node8" href="$mini_r_t__config_8h.html" title=" " alt="" coords="271,155,397,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="87,229,155,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="179,229,262,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="171,5,353,32"/>
+<area shape="rect" id="node2" href="$camera_8h.html" title=" " alt="" coords="221,80,303,107"/>
+<area shape="rect" id="node3" href="$vec2_8h.html" title=" " alt="" coords="73,155,139,181"/>
+<area shape="rect" id="node4" href="$vec3_8h.html" title=" " alt="" coords="291,229,356,256"/>
+<area shape="rect" id="node7" href="$utils__bonus_8h.html" title=" " alt="" coords="163,155,271,181"/>
+<area shape="rect" id="node10" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="346,155,517,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="284,304,352,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="171,304,254,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,229,76,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="101,229,165,256"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="ft_get_increment" name="ft_get_increment">
+<area shape="rect" id="node1" title="Get the current increment value." alt="" coords="5,5,137,32"/>
+<area shape="rect" id="node2" href="$render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a" title="Checks if bit is set in the bit field." alt="" coords="185,5,303,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="ft_put_str_and_advance" name="ft_put_str_and_advance">
+<area shape="rect" id="node1" title="Puts a string and moves to next line." alt="" coords="5,5,181,32"/>
+<area shape="rect" id="node2" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="229,5,312,32"/>
+</map>

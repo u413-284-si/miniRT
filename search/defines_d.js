@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['y_5fhalf_5fline_1080',['Y_HALF_LINE',['../menu__put_8h.html#a2e8cf9e31c778314a9954a42d673fabf',1,'menu_put.h']]],
-  ['y_5fnext_5fline_1081',['Y_NEXT_LINE',['../menu__put_8h.html#a41592e1204f75b4ab89e9fbd7d4bb31a',1,'menu_put.h']]],
-  ['y_5fnext_5fline_5fbig_1082',['Y_NEXT_LINE_BIG',['../menu__put_8h.html#a22560c3a3ffaea47a717b4cd25a2f86f',1,'menu_put.h']]]
+  ['win_5fsize_5fx_1134',['WIN_SIZE_X',['../mini_r_t__config_8h.html#a6e1ad85c506456c5e54b5165173315b6',1,'WIN_SIZE_X():&#160;miniRT_config.h'],['../mini_r_t__config__bonus_8h.html#a6e1ad85c506456c5e54b5165173315b6',1,'WIN_SIZE_X():&#160;miniRT_config_bonus.h']]],
+  ['win_5fsize_5fy_1135',['WIN_SIZE_Y',['../mini_r_t__config_8h.html#a0c212361b1388494c98b2c35db58de19',1,'WIN_SIZE_Y():&#160;miniRT_config.h'],['../mini_r_t__config__bonus_8h.html#a0c212361b1388494c98b2c35db58de19',1,'WIN_SIZE_Y():&#160;miniRT_config_bonus.h']]]
 ];

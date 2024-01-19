@@ -1,0 +1,4 @@
+<map id="ft_put_ctrl_colour" name="ft_put_ctrl_colour">
+<area shape="rect" id="node1" title="Puts control scheme for changing colour on the screen." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="188,5,271,32"/>
+</map>

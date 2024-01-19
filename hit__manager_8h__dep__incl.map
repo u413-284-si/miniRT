@@ -1,12 +1,8 @@
 <map id="inc/hit_manager.h" name="inc/hit_manager.h">
-<area shape="rect" id="node1" title=" " alt="" coords="415,5,553,32"/>
-<area shape="rect" id="node2" href="$lighting_8h.html" title=" " alt="" coords="116,80,223,107"/>
-<area shape="rect" id="node6" href="$hit_8c.html" title=" " alt="" coords="247,80,321,107"/>
-<area shape="rect" id="node7" href="$hit__cylinder_8c.html" title=" " alt="" coords="345,80,476,107"/>
-<area shape="rect" id="node8" href="$hit__plane_8c.html" title=" " alt="" coords="501,80,617,107"/>
-<area shape="rect" id="node9" href="$hit__sphere_8c.html" title=" " alt="" coords="641,80,765,107"/>
-<area shape="rect" id="node10" href="$utils__cylinder_8c.html" title=" " alt="" coords="789,80,931,107"/>
-<area shape="rect" id="node3" href="$ray_8c.html" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" id="node4" href="$scene__light_8c.html" title=" " alt="" coords="104,155,235,181"/>
-<area shape="rect" id="node5" href="$scene__shadow_8c.html" title=" " alt="" coords="259,155,410,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="247,5,386,32"/>
+<area shape="rect" id="node2" href="$hit_8c.html" title=" " alt="" coords="5,80,79,107"/>
+<area shape="rect" id="node3" href="$hit__cylinder_8c.html" title=" " alt="" coords="103,80,234,107"/>
+<area shape="rect" id="node4" href="$hit__plane_8c.html" title=" " alt="" coords="259,80,375,107"/>
+<area shape="rect" id="node5" href="$hit__sphere_8c.html" title=" " alt="" coords="399,80,523,107"/>
+<area shape="rect" id="node6" href="$utils__cylinder_8c.html" title=" " alt="" coords="547,80,689,107"/>
 </map>

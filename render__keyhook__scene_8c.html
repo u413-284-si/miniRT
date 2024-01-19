@@ -106,8 +106,8 @@ Include dependency graph for render_keyhook_scene.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2f40affff5a9aa82b3441bebf0bb1836"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__keyhook__scene_8c.html#a2f40affff5a9aa82b3441bebf0bb1836">ft_manip_scene</a> (int key, <a class="el" href="structt__entities.html">t_entities</a> *scene, int *active)</td></tr>
-<tr class="separator:a2f40affff5a9aa82b3441bebf0bb1836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add5f6a250b6eb86fcd86080295083ebf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__keyhook__scene_8c.html#add5f6a250b6eb86fcd86080295083ebf">ft_manip_scene</a> (int key, <a class="el" href="structt__entities.html">t_entities</a> *scene, int *active, float inc)</td></tr>
+<tr class="separator:add5f6a250b6eb86fcd86080295083ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab531dc49f0a5aa08f0e342d3c4ea2fe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__keyhook__scene_8c.html#ab531dc49f0a5aa08f0e342d3c4ea2fe8">ft_change_active_hittable</a> (int key, <a class="el" href="structt__entities.html">t_entities</a> *scene, int *active)</td></tr>
 <tr class="separator:ab531dc49f0a5aa08f0e342d3c4ea2fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -181,8 +181,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a2f40affff5a9aa82b3441bebf0bb1836"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f40affff5a9aa82b3441bebf0bb1836">&#9670;&nbsp;</a></span>ft_manip_scene()</h2>
+<a id="add5f6a250b6eb86fcd86080295083ebf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add5f6a250b6eb86fcd86080295083ebf">&#9670;&nbsp;</a></span>ft_manip_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +203,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>active</em>&#160;</td>
+          <td class="paramname"><em>active</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>inc</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -219,6 +225,7 @@ Here is the caller graph for this function:</div>
     <tr><td class="paramname">key</td><td>Keycode of the pressed key. </td></tr>
     <tr><td class="paramname">scene</td><td>Pointer to scene struct. </td></tr>
     <tr><td class="paramname">active</td><td>Pointer to index of active hittable. </td></tr>
+    <tr><td class="paramname">inc</td><td>Increment value. </td></tr>
   </table>
   </dd>
 </dl>
@@ -228,15 +235,15 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> (key == XK_n || key == XK_m)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="render__keyhook__scene_8c.html#ab531dc49f0a5aa08f0e342d3c4ea2fe8">ft_change_active_hittable</a>(key, scene, active);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="render_8h.html#aadc3a7a6894a18793745d24caf2ef281">ft_manip_hittable</a>(key, &amp;scene-&gt;<a class="code" href="structt__entities.html#aff3b118f65a7ab1c247de6b7765f92a3">obj</a>[*active]);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005">ft_manip_hittable</a>(key, &amp;scene-&gt;<a class="code" href="structt__entities.html#aff3b118f65a7ab1c247de6b7765f92a3">obj</a>[*active], inc);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="ttc" id="arender_8h_html_aadc3a7a6894a18793745d24caf2ef281"><div class="ttname"><a href="render_8h.html#aadc3a7a6894a18793745d24caf2ef281">ft_manip_hittable</a></div><div class="ttdeci">void ft_manip_hittable(int key, t_hittable *hittable)</div><div class="ttdoc">Manipulates the active hittable.</div><div class="ttdef"><b>Definition:</b> <a href="render__keyhook__hittable_8c_source.html#l00015">render_keyhook_hittable.c:15</a></div></div>
+<div class="ttc" id="arender_8h_html_a58cfb6d04ac9120cc228cbc5411b2005"><div class="ttname"><a href="render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005">ft_manip_hittable</a></div><div class="ttdeci">void ft_manip_hittable(int key, t_hittable *hittable, float inc)</div><div class="ttdoc">Manipulates the active hittable.</div><div class="ttdef"><b>Definition:</b> <a href="render__keyhook__hittable_8c_source.html#l00015">render_keyhook_hittable.c:15</a></div></div>
 <div class="ttc" id="arender__keyhook__scene_8c_html_ab531dc49f0a5aa08f0e342d3c4ea2fe8"><div class="ttname"><a href="render__keyhook__scene_8c.html#ab531dc49f0a5aa08f0e342d3c4ea2fe8">ft_change_active_hittable</a></div><div class="ttdeci">void ft_change_active_hittable(int key, t_entities *scene, int *active)</div><div class="ttdoc">Changes the active hittable.</div><div class="ttdef"><b>Definition:</b> <a href="render__keyhook__scene_8c_source.html#l00023">render_keyhook_scene.c:23</a></div></div>
 <div class="ttc" id="astructt__entities_html_aff3b118f65a7ab1c247de6b7765f92a3"><div class="ttname"><a href="structt__entities.html#aff3b118f65a7ab1c247de6b7765f92a3">t_entities::obj</a></div><div class="ttdeci">t_hittable * obj</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00159">entities.h:159</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__keyhook__scene_8c_a2f40affff5a9aa82b3441bebf0bb1836_cgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__keyhook__scene_8c_add5f6a250b6eb86fcd86080295083ebf_cgraph.svg" width="100%" height="583"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

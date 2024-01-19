@@ -245,7 +245,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="render_8h.html#af908c05cb19e716220bc98fcf9582573" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="227,-304.5 227,-323.5 313,-323.5 313,-304.5 227,-304.5"/>
 <text text-anchor="middle" x="270" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_draw_scene</text>
 </a>
@@ -305,7 +305,7 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="render_8h.html#a1509258bd6eb6bea810a0ac7bb6e1e70" target="_top" xlink:title="Manipulates the camera with a keypress.">
+<g id="a_node9"><a xlink:href="render_8h.html#aef0c8d431d439f9443a576ecb640e1c7" target="_top" xlink:title="Manipulates the camera with a keypress.">
 <polygon fill="none" stroke="black" points="1354,-152.5 1354,-171.5 1440,-171.5 1440,-152.5 1354,-152.5"/>
 <text text-anchor="middle" x="1397" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cam</text>
 </a>
@@ -341,7 +341,7 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="render_8h.html#af1aeed53f4ca5947fd698da6f9ebc0e7" target="_top" xlink:title="Moves the camera with a keypress.">
+<g id="a_node12"><a xlink:href="render_8h.html#ab974018238f1a6e6a86b44e139f5d672" target="_top" xlink:title="Moves the camera with a keypress.">
 <polygon fill="none" stroke="black" points="1332.5,-76.5 1332.5,-95.5 1461.5,-95.5 1461.5,-76.5 1332.5,-76.5"/>
 <text text-anchor="middle" x="1397" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_move_cam</text>
 </a>
@@ -554,7 +554,7 @@
 <!-- Node30 -->
 <g id="node30" class="node">
 <title>Node30</title>
-<g id="a_node30"><a xlink:href="render_8h.html#af500a65a1e441d08240efa30fa8c1e27" target="_top" xlink:title="Manipulates the active cylinder.">
+<g id="a_node30"><a xlink:href="render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" target="_top" xlink:title="Manipulates the active cylinder.">
 <polygon fill="none" stroke="black" points="1345,-38.5 1345,-57.5 1449,-57.5 1449,-38.5 1345,-38.5"/>
 <text text-anchor="middle" x="1397" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cylinder</text>
 </a>

@@ -1,22 +1,20 @@
 <map id="src/scene_reflection_bonus.c" name="src/scene_reflection_bonus.c">
-<area shape="rect" id="node1" title=" " alt="" coords="226,5,377,47"/>
-<area shape="rect" id="node2" href="$lighting__bonus_8h.html" title=" " alt="" coords="237,95,366,121"/>
-<area shape="rect" id="node3" href="$hit__manager__bonus_8h.html" title=" " alt="" coords="169,244,332,271"/>
-<area shape="rect" id="node15" href="$camera_8h.html" title=" " alt="" coords="584,543,667,569"/>
-<area shape="rect" id="node20" href="$texture__bonus_8h.html" title=" " alt="" coords="137,169,263,196"/>
-<area shape="rect" id="node4" href="$ray__bonus_8h.html" title=" " alt="" coords="419,319,520,345"/>
-<area shape="rect" id="node13" href="$utils__bonus_8h.html" title=" " alt="" coords="113,543,221,569"/>
-<area shape="rect" id="node19" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="43,319,213,345"/>
-<area shape="rect" id="node5" href="$entities__bonus_8h.html" title=" " alt="" coords="405,393,534,420"/>
-<area shape="rect" id="node6" title=" " alt="" coords="392,692,475,719"/>
-<area shape="rect" id="node7" title=" " alt="" coords="262,617,333,644"/>
-<area shape="rect" id="node8" href="$vec3_8h.html" title=" " alt="" coords="357,617,422,644"/>
-<area shape="rect" id="node10" href="$colour__bonus_8h.html" title=" " alt="" coords="288,468,408,495"/>
-<area shape="rect" id="node9" title=" " alt="" coords="242,692,310,719"/>
-<area shape="rect" id="node11" title=" " alt="" coords="245,543,312,569"/>
-<area shape="rect" id="node12" title=" " alt="" coords="337,543,407,569"/>
-<area shape="rect" id="node14" title=" " alt="" coords="72,617,136,644"/>
-<area shape="rect" id="node16" href="$vec2_8h.html" title=" " alt="" coords="589,617,654,644"/>
-<area shape="rect" id="node17" href="$utils_8h.html" title=" " alt="" coords="446,617,509,644"/>
-<area shape="rect" id="node18" href="$mini_r_t__config_8h.html" title=" " alt="" coords="679,617,804,644"/>
+<area shape="rect" id="node1" title=" " alt="" coords="471,5,622,47"/>
+<area shape="rect" id="node2" href="$lighting__bonus_8h.html" title=" " alt="" coords="482,95,611,121"/>
+<area shape="rect" id="node3" href="$hit__manager__bonus_8h.html" title=" " alt="" coords="380,244,543,271"/>
+<area shape="rect" id="node15" href="$camera_8h.html" title=" " alt="" coords="431,393,513,420"/>
+<area shape="rect" id="node18" href="$texture__bonus_8h.html" title=" " alt="" coords="483,169,610,196"/>
+<area shape="rect" id="node4" href="$ray__bonus_8h.html" title=" " alt="" coords="411,319,512,345"/>
+<area shape="rect" id="node13" href="$utils__bonus_8h.html" title=" " alt="" coords="211,543,319,569"/>
+<area shape="rect" id="node17" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="536,468,707,495"/>
+<area shape="rect" id="node5" href="$entities__bonus_8h.html" title=" " alt="" coords="87,393,217,420"/>
+<area shape="rect" id="node6" title=" " alt="" coords="131,692,213,719"/>
+<area shape="rect" id="node7" title=" " alt="" coords="31,617,102,644"/>
+<area shape="rect" id="node8" href="$vec3_8h.html" title=" " alt="" coords="349,617,414,644"/>
+<area shape="rect" id="node10" href="$colour__bonus_8h.html" title=" " alt="" coords="92,468,212,495"/>
+<area shape="rect" id="node9" title=" " alt="" coords="347,692,415,719"/>
+<area shape="rect" id="node11" title=" " alt="" coords="25,543,92,569"/>
+<area shape="rect" id="node12" title=" " alt="" coords="117,543,187,569"/>
+<area shape="rect" id="node14" title=" " alt="" coords="209,617,273,644"/>
+<area shape="rect" id="node16" href="$vec2_8h.html" title=" " alt="" coords="446,468,511,495"/>
 </map>

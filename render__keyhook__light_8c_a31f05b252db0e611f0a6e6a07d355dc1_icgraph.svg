@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="render_8h.html#a8e2f8743ff52334614e7dfd57624fd26" target="_top" xlink:title="Manipulates the active light.">
+<g id="a_node2"><a xlink:href="render_8h.html#acff7acf5eb6145177496e67b32a74fba" target="_top" xlink:title="Manipulates the active light.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 86,-19.5 86,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="43" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_light</text>
 </a>

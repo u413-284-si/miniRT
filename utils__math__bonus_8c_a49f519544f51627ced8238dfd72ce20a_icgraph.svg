@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 897;
+var viewWidth = 550;
 var viewHeight = 104;
 var sectionId = 'dynsection-3';
 </script>
@@ -58,130 +58,85 @@ var sectionId = 'dynsection-3';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="Transforms radians into degrees.">
-<polygon fill="#bfbfbf" stroke="black" points="776,-38.5 776,-57.5 889,-57.5 889,-38.5 776,-38.5"/>
-<text text-anchor="middle" x="832.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_radian_to_degree</text>
+<polygon fill="#bfbfbf" stroke="black" points="429,-38.5 429,-57.5 542,-57.5 542,-38.5 429,-38.5"/>
+<text text-anchor="middle" x="485.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_radian_to_degree</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="render_8h.html#a7115c14e651aaf8ebd1f08679ecba38c" target="_top" xlink:title="Changes the camera FOV with a keypress.">
-<polygon fill="none" stroke="black" points="623,-76.5 623,-95.5 740,-95.5 740,-76.5 623,-76.5"/>
-<text text-anchor="middle" x="681.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_fov_cam</text>
+<g id="a_node2"><a xlink:href="render_8h.html#aafd27cf2b06772ec739aa2e97164d8b6" target="_top" xlink:title="Changes the camera FOV with a keypress.">
+<polygon fill="none" stroke="black" points="276,-76.5 276,-95.5 393,-95.5 393,-76.5 276,-76.5"/>
+<text text-anchor="middle" x="334.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_fov_cam</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M784.01,-60.11C763.26,-65.4 739.27,-71.52 719.83,-76.48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="785.08,-63.45 793.9,-57.59 783.35,-56.67 785.08,-63.45"/>
+<path fill="none" stroke="midnightblue" d="M437.01,-60.11C416.26,-65.4 392.27,-71.52 372.83,-76.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="438.08,-63.45 446.9,-57.59 436.35,-56.67 438.08,-63.45"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2" target="_top" xlink:title="Prints parameters of camera struct.">
-<polygon fill="none" stroke="black" points="643,-38.5 643,-57.5 720,-57.5 720,-38.5 643,-38.5"/>
-<text text-anchor="middle" x="681.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_print_cam</text>
+<polygon fill="none" stroke="black" points="296,-38.5 296,-57.5 373,-57.5 373,-38.5 296,-38.5"/>
+<text text-anchor="middle" x="334.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_print_cam</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M765.49,-48C749.97,-48 733.95,-48 720.17,-48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="765.59,-51.5 775.59,-48 765.59,-44.5 765.59,-51.5"/>
+<path fill="none" stroke="midnightblue" d="M418.49,-48C402.97,-48 386.95,-48 373.17,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="418.59,-51.5 428.59,-48 418.59,-44.5 418.59,-51.5"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
 <g id="a_node4"><a xlink:href="menu__put_8h.html#a86f02d860bd5b9a3795b20ba72f8e359" target="_top" xlink:title="Puts camera info on the screen.">
-<polygon fill="none" stroke="black" points="646,-0.5 646,-19.5 717,-19.5 717,-0.5 646,-0.5"/>
-<text text-anchor="middle" x="681.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_cam</text>
+<polygon fill="none" stroke="black" points="299,-0.5 299,-19.5 370,-19.5 370,-0.5 299,-0.5"/>
+<text text-anchor="middle" x="334.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_cam</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M784.17,-35.93C762.37,-30.37 736.98,-23.89 717.02,-18.8"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="783.35,-39.33 793.9,-38.41 785.08,-32.55 783.35,-39.33"/>
+<path fill="none" stroke="midnightblue" d="M437.17,-35.93C415.37,-30.37 389.98,-23.89 370.02,-18.8"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="436.35,-39.33 446.9,-38.41 438.08,-32.55 436.35,-39.33"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="menu__put_8h.html#a33000f70f8d23d70b515e38109c63917" target="_top" xlink:title="Puts a camera page on the screen.">
-<polygon fill="none" stroke="black" points="487,-0.5 487,-19.5 587,-19.5 587,-0.5 487,-0.5"/>
-<text text-anchor="middle" x="537" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_page_cam</text>
+<g id="a_node5"><a xlink:href="menu__put_8h.html#a6466842cb9367072865c07608f1e4c7d" target="_top" xlink:title="Puts a camera page on the screen.">
+<polygon fill="none" stroke="black" points="140,-0.5 140,-19.5 240,-19.5 240,-0.5 140,-0.5"/>
+<text text-anchor="middle" x="190" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_page_cam</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M635.34,-10C619.96,-10 602.69,-10 587.03,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="635.64,-13.5 645.64,-10 635.64,-6.5 635.64,-13.5"/>
+<path fill="none" stroke="midnightblue" d="M288.34,-10C272.96,-10 255.69,-10 240.03,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="288.64,-13.5 298.64,-10 288.64,-6.5 288.64,-13.5"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="render_8h.html#a735dfeb13434c88e3b4a76990386763b" target="_top" xlink:title="Puts the current menu page on the screen.">
-<polygon fill="none" stroke="black" points="349,-0.5 349,-19.5 451,-19.5 451,-0.5 349,-0.5"/>
-<text text-anchor="middle" x="400" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_menu_put_text</text>
+<g id="a_node6"><a xlink:href="menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" target="_top" xlink:title="Puts the main page of menu on the screen.">
+<polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 104,-19.5 104,-0.5 0,-0.5"/>
+<text text-anchor="middle" x="52" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_main_page</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M476.65,-10C468.17,-10 459.5,-10 451.22,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="476.88,-13.5 486.88,-10 476.88,-6.5 476.88,-13.5"/>
-</g>
-<!-- Node7 -->
-<g id="node7" class="node">
-<title>Node7</title>
-<g id="a_node7"><a xlink:href="render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="227,-0.5 227,-19.5 313,-19.5 313,-0.5 227,-0.5"/>
-<text text-anchor="middle" x="270" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_draw_scene</text>
-</a>
-</g>
-</g>
-<!-- Node6&#45;&gt;Node7 -->
-<g id="edge6" class="edge">
-<title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M338.73,-10C330.11,-10 321.39,-10 313.22,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="338.78,-13.5 348.78,-10 338.78,-6.5 338.78,-13.5"/>
-</g>
-<!-- Node8 -->
-<g id="node8" class="node">
-<title>Node8</title>
-<g id="a_node8"><a xlink:href="render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" target="_top" xlink:title="Starts the mlx loop.">
-<polygon fill="none" stroke="black" points="77,-0.5 77,-19.5 191,-19.5 191,-0.5 77,-0.5"/>
-<text text-anchor="middle" x="134" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_render_start_loop</text>
-</a>
-</g>
-</g>
-<!-- Node7&#45;&gt;Node8 -->
-<g id="edge7" class="edge">
-<title>Node7&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M216.88,-10C208.44,-10 199.66,-10 191.13,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="216.97,-13.5 226.97,-10 216.97,-6.5 216.97,-13.5"/>
-</g>
-<!-- Node9 -->
-<g id="node9" class="node">
-<title>Node9</title>
-<g id="a_node9"><a xlink:href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 41,-19.5 41,-0.5 0,-0.5"/>
-<text text-anchor="middle" x="20.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
-</a>
-</g>
-</g>
-<!-- Node8&#45;&gt;Node9 -->
-<g id="edge8" class="edge">
-<title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M66.7,-10C57.37,-10 48.45,-10 41.04,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="66.92,-13.5 76.92,-10 66.92,-6.5 66.92,-13.5"/>
+<path fill="none" stroke="midnightblue" d="M129.71,-10C121.25,-10 112.61,-10 104.32,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="129.9,-13.5 139.9,-10 129.9,-6.5 129.9,-13.5"/>
 </g>
 </g>
 </svg>

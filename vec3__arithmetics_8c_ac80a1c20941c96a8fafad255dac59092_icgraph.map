@@ -22,14 +22,14 @@
 <area shape="rect" id="node43" href="$lighting__bonus_8h.html#af5be68420f313176423a79d2df7d1b51" title="Create specular lighting." alt="" coords="609,1221,739,1248"/>
 <area shape="rect" id="node44" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="849,867,959,893"/>
 <area shape="rect" id="node3" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="175,613,303,640"/>
-<area shape="rect" id="node4" href="$render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="5,639,120,665"/>
+<area shape="rect" id="node4" href="$render_8h.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="5,639,120,665"/>
 <area shape="rect" id="node6" href="$camera_8h.html#af7d021ad81a192b9ae379a76210706aa" title="Initializes camera parameters." alt="" coords="627,1424,721,1451"/>
-<area shape="rect" id="node7" href="$render_8h.html#a1509258bd6eb6bea810a0ac7bb6e1e70" title="Manipulates the camera with a keypress." alt="" coords="617,1475,731,1501"/>
+<area shape="rect" id="node7" href="$render_8h.html#aef0c8d431d439f9443a576ecb640e1c7" title="Manipulates the camera with a keypress." alt="" coords="617,1475,731,1501"/>
 <area shape="rect" id="node8" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="359,1373,540,1400"/>
-<area shape="rect" id="node11" href="$render_8h.html#af1aeed53f4ca5947fd698da6f9ebc0e7" title="Moves the camera with a keypress." alt="" coords="588,1576,760,1603"/>
+<area shape="rect" id="node11" href="$render_8h.html#ab974018238f1a6e6a86b44e139f5d672" title="Moves the camera with a keypress." alt="" coords="588,1576,760,1603"/>
 <area shape="rect" id="node15" href="$hit__manager__bonus_8h.html#a049d2a1135caa57d1d9ed8845f229620" title="Determines whether the potential hits are accurate." alt="" coords="379,44,519,71"/>
 <area shape="rect" id="node17" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="377,715,522,741"/>
-<area shape="rect" id="node19" href="$render_8h.html#af500a65a1e441d08240efa30fa8c1e27" title="Manipulates the active cylinder." alt="" coords="605,512,743,539"/>
+<area shape="rect" id="node19" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="605,512,743,539"/>
 <area shape="rect" id="node20" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="607,563,741,589"/>
 <area shape="rect" id="node22" href="$hit__manager_8h.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="379,132,519,159"/>
 <area shape="rect" id="node24" href="$hit__manager_8h.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="377,372,522,399"/>

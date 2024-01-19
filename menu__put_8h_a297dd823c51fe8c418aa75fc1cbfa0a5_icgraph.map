@@ -1,0 +1,10 @@
+<map id="ft_put_str_and_advance" name="ft_put_str_and_advance">
+<area shape="rect" id="node1" title="Puts a string and moves to next line." alt="" coords="575,56,751,83"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a6f5886ed0d2e8de8f0df680db3535336" title="Puts control scheme for camera on the screen." alt="" coords="393,5,516,32"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#a4297546f5daae0553e8fb746134a720d" title="Puts control scheme for hittable on the screen." alt="" coords="383,56,527,83"/>
+<area shape="rect" id="node7" href="$menu__put_8h.html#acb49d711643bd638023d9317cd528174" title="Puts control scheme for light on the screen." alt="" coords="393,107,516,133"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a6466842cb9367072865c07608f1e4c7d" title="Puts a camera page on the screen." alt="" coords="197,5,330,32"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" title="Puts the main page of menu on the screen." alt="" coords="5,56,144,83"/>
+<area shape="rect" id="node6" href="$menu__put_8h.html#a18613445d2379eca738e6cf789dfecf5" title="Puts a scene page on the screen." alt="" coords="192,56,335,83"/>
+<area shape="rect" id="node8" href="$menu__put_8h.html#a11eed0e0d38826c89da2d71031a08593" title="Puts a light page on the screen." alt="" coords="196,107,331,133"/>
+</map>

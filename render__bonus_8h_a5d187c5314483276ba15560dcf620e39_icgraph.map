@@ -1,0 +1,11 @@
+<map id="ft_get_colour" name="ft_get_colour">
+<area shape="rect" id="node1" title="Returns a colour based on the given colour name." alt="" coords="579,81,685,108"/>
+<area shape="rect" id="node2" href="$render_8h.html#a41e18bc0bce27f7169b29f79e5de0423" title="Interpolates between two colours." alt="" coords="366,56,522,83"/>
+<area shape="rect" id="node3" href="$render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f" title="Changes the colour with a keypress." alt="" coords="357,107,531,133"/>
+<area shape="rect" id="node4" href="$render__keyhook__light_8c.html#a597d35b7bd3aa66272e3c2ff3a1e8f78" title=" " alt="" coords="169,5,309,32"/>
+<area shape="rect" id="node6" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="169,56,308,83"/>
+<area shape="rect" id="node7" href="$render__keyhook__light_8c.html#a16d57d13773703e93274caef6b5ccde1" title=" " alt="" coords="168,107,309,133"/>
+<area shape="rect" id="node8" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="177,157,300,184"/>
+<area shape="rect" id="node9" href="$render_8h.html#a3af9cb325ad292f339446b63917a9ea2" title="Manipulates the active sphere." alt="" coords="173,208,304,235"/>
+<area shape="rect" id="node5" href="$render_8h.html#acff7acf5eb6145177496e67b32a74fba" title="Manipulates the active light." alt="" coords="5,56,120,83"/>
+</map>

@@ -1,6 +1,0 @@
-<map id="ft_menu_put_text" name="ft_menu_put_text">
-<area shape="rect" id="node1" title="Puts the current menu page on the screen." alt="" coords="471,5,607,32"/>
-<area shape="rect" id="node2" href="$render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,5,423,32"/>
-<area shape="rect" id="node3" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,5,260,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
-</map>

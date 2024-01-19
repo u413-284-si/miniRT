@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orange_1033',['ORANGE',['../colour_8h.html#a19a1d8fdbc63aaafd4498a3d973a46f2ace9ee4c1a6b777940c7f3a766a9a88d4',1,'ORANGE():&#160;colour.h'],['../colour__bonus_8h.html#a19a1d8fdbc63aaafd4498a3d973a46f2ace9ee4c1a6b777940c7f3a766a9a88d4',1,'ORANGE():&#160;colour_bonus.h']]]
+  ['light_1083',['LIGHT',['../entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb',1,'LIGHT():&#160;entities.h'],['../entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb',1,'LIGHT():&#160;entities_bonus.h']]]
 ];

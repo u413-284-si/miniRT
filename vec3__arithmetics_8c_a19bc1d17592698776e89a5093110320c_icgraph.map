@@ -5,7 +5,7 @@
 <area shape="rect" id="node22" href="$hit__manager__bonus_8h.html#aeb33f439a0d2093bdbcca7468e2e78b4" title="Transforms the Cartesian coordinates of a hit point on a cylinder wall into 2D texture UV&#45;coordinates..." alt="" coords="1996,183,2143,209"/>
 <area shape="rect" id="node26" href="$hit__manager__bonus_8h.html#a87d41de805dc36f90fb5002fa2d34da0" title="Transforms the Cartesian coordinates of a hit point on a plane into 2D texture UV&#45;coordinates in the ..." alt="" coords="1997,233,2141,260"/>
 <area shape="rect" id="node3" href="$camera_8h.html#af7d021ad81a192b9ae379a76210706aa" title="Initializes camera parameters." alt="" coords="1413,107,1508,133"/>
-<area shape="rect" id="node5" href="$render_8h.html#a1509258bd6eb6bea810a0ac7bb6e1e70" title="Manipulates the camera with a keypress." alt="" coords="1777,5,1892,32"/>
+<area shape="rect" id="node5" href="$render_8h.html#aef0c8d431d439f9443a576ecb640e1c7" title="Manipulates the camera with a keypress." alt="" coords="1777,5,1892,32"/>
 <area shape="rect" id="node6" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="1744,56,1925,83"/>
 <area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,132,60,159"/>
 <area shape="rect" id="node8" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="1762,284,1907,311"/>
@@ -20,7 +20,7 @@
 <area shape="rect" id="node16" href="$ray__bonus_8h.html#af9c073d2966aa21738e1d2083762055f" title="Returns the colour of a pixel by means of anti&#45;aliasing." alt="" coords="661,157,817,184"/>
 <area shape="rect" id="node20" href="$render_8h.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="478,208,606,235"/>
 <area shape="rect" id="node17" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="478,157,606,184"/>
-<area shape="rect" id="node18" href="$render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,157,423,184"/>
+<area shape="rect" id="node18" href="$render_8h.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,157,423,184"/>
 <area shape="rect" id="node19" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,157,260,184"/>
 <area shape="rect" id="node23" href="$hit__cylinder__bonus_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="1762,183,1907,209"/>
 <area shape="rect" id="node24" href="$hit__cylinder__bonus_8c.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="1581,157,1696,184"/>

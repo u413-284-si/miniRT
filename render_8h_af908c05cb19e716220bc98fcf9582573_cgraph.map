@@ -1,0 +1,41 @@
+<map id="ft_draw_scene" name="ft_draw_scene">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,120,159"/>
+<area shape="rect" id="node2" href="$render_8h.html#aef5f4f911a32ea5cc0ee9666358c049d" title="Aplha blends current image with menu color to create overlay." alt="" coords="168,5,325,32"/>
+<area shape="rect" id="node3" href="$render_8h.html#a735dfeb13434c88e3b4a76990386763b" title="Puts the current menu page on the screen." alt="" coords="179,107,315,133"/>
+<area shape="rect" id="node4" href="$render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a" title="Checks if bit is set in the bit field." alt="" coords="394,56,511,83"/>
+<area shape="rect" id="node6" href="$render__bit__field_8h.html#a0e353bbefbfd549ad2ebb5b821fc7900" title="Clears bit in bit field." alt="" coords="187,157,306,184"/>
+<area shape="rect" id="node7" href="$render_8h.html#ac6bbab3b2e39615661f011a484a5251e" title="Outputs the current mlx img as a ppm file." alt="" coords="177,208,316,235"/>
+<area shape="rect" id="node8" href="$render_8h.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="183,284,311,311"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="411,107,494,133"/>
+<area shape="rect" id="node9" href="$colour_8h.html#a884b9301b7c2999806766ea5e00b76ba" title="Converts a t_colour struct to an int32_t." alt="" coords="373,715,532,741"/>
+<area shape="rect" id="node10" href="$render__draw_8c.html#ad11267674572960fef12f2c501dd7373" title="Draws a single pixel to the mlx img." alt="" coords="375,157,530,184"/>
+<area shape="rect" id="node11" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="399,664,506,691"/>
+<area shape="rect" id="node31" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="1731,284,1831,311"/>
+<area shape="rect" id="node32" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="1725,512,1836,539"/>
+<area shape="rect" id="node35" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="1555,461,1654,488"/>
+<area shape="rect" id="node37" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="1549,411,1660,437"/>
+<area shape="rect" id="node12" href="$ray_8c.html#a165a4eb7af65fda20a69dfd50b9ed119" title="Returns the background colour." alt="" coords="580,664,741,691"/>
+<area shape="rect" id="node13" href="$lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="611,487,710,513"/>
+<area shape="rect" id="node21" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="1209,715,1321,741"/>
+<area shape="rect" id="node28" href="$hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d" title="Initiates hitrecord struct." alt="" coords="1543,867,1667,893"/>
+<area shape="rect" id="node14" href="$colour_8h.html#ae5c090d9193f6bcf449f12c299f186b7" title="Add two colours." alt="" coords="810,461,919,488"/>
+<area shape="rect" id="node15" href="$scene__light_8c.html#a691cc177466ad1a6b1ababe4272dca1b" title="Create ambient lighting." alt="" coords="801,512,929,539"/>
+<area shape="rect" id="node16" href="$scene__light_8c.html#ae50a6e06925c764b3caad3f805bc4c8a" title="Create diffuse lighting." alt="" coords="805,411,924,437"/>
+<area shape="rect" id="node17" href="$colour_8h.html#a9e6968b360ba0fa607a8571c262995ea" title="Calculates the Hadamard product of two colours." alt="" coords="789,360,940,387"/>
+<area shape="rect" id="node19" href="$lighting_8h.html#a382179d88a3a971b5853322389bacf04" title="Determines whether the point of intersection lies in a shadow regarding the current light source." alt="" coords="811,563,918,589"/>
+<area shape="rect" id="node18" href="$utils_8h.html#a241b2b1d75c68c1eefd36b569901c9f9" title="Ensure that the returned float lies within the interval." alt="" coords="1035,360,1114,387"/>
+<area shape="rect" id="node20" href="$scene__shadow_8c.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="988,765,1161,792"/>
+<area shape="rect" id="node39" href="$vec3_8h.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="1025,563,1124,589"/>
+<area shape="rect" id="node22" href="$hit__manager_8h.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="1369,943,1484,969"/>
+<area shape="rect" id="node29" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="1377,715,1476,741"/>
+<area shape="rect" id="node36" href="$hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" title="Calculates if a sphere was hit by a ray." alt="" coords="1373,664,1480,691"/>
+<area shape="rect" id="node23" href="$hit__cylinder_8c.html#afb7b50ad2f9161c61fc1065975ec7cbf" title="Calculates all four potential hits of a cylinder." alt="" coords="1532,968,1677,995"/>
+<area shape="rect" id="node24" href="$hit__cylinder_8c.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="1535,1069,1675,1096"/>
+<area shape="rect" id="node25" href="$hit__cylinder_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="1532,1019,1677,1045"/>
+<area shape="rect" id="node26" href="$hit__manager_8h.html#a55af5b9bdf1ed07d3128dd3e15dd3e6b" title="Checks if cylinder is not blocked by another object." alt="" coords="1553,917,1656,944"/>
+<area shape="rect" id="node27" href="$utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa" title="Determines if value is surrounded by the interval." alt="" coords="1729,816,1832,843"/>
+<area shape="rect" id="node30" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="1555,563,1655,589"/>
+<area shape="rect" id="node33" href="$utils_8h.html#ae65513c75ce8a8538c22393e0af3ab1f" title="Solves the given equation." alt="" coords="1568,715,1641,741"/>
+<area shape="rect" id="node34" href="$vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91" title="Calculate the scalar product of two vectors." alt="" coords="1556,664,1653,691"/>
+<area shape="rect" id="node38" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="1731,411,1830,437"/>
+</map>

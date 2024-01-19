@@ -1,0 +1,8 @@
+<map id="ft_manip_ambient" name="ft_manip_ambient">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,145,57"/>
+<area shape="rect" id="node2" href="$render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f" title="Changes the colour with a keypress." alt="" coords="193,5,367,32"/>
+<area shape="rect" id="node6" href="$render_8h.html#a7b262237fcbe352cb4ef79235666956b" title="Increases or decreases a value with a keypress." alt="" coords="205,56,355,83"/>
+<area shape="rect" id="node3" href="$render__keyhook__colour_8c.html#a5d187c5314483276ba15560dcf620e39" title="Returns a colour based on the given colour name." alt="" coords="819,5,925,32"/>
+<area shape="rect" id="node4" href="$render__keyhook__colour_8c.html#a02dd1323bf99ad166e22cf0dcbef39f2" title="Interpolates between two colours while keeping track of progress." alt="" coords="415,31,567,57"/>
+<area shape="rect" id="node5" href="$render__keyhook__colour_8c.html#a41e18bc0bce27f7169b29f79e5de0423" title="Interpolates between two colours." alt="" coords="615,31,771,57"/>
+</map>

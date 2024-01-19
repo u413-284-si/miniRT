@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="render_8h.html#a2f40affff5a9aa82b3441bebf0bb1836" target="_top" xlink:title="Manipulates the active hittable.">
+<g id="a_node2"><a xlink:href="render_8h.html#add5f6a250b6eb86fcd86080295083ebf" target="_top" xlink:title="Manipulates the active hittable.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 93,-19.5 93,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="46.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_scene</text>
 </a>

@@ -5,7 +5,7 @@
 <area shape="rect" id="node3" href="$ray__bonus_8h.html#a1e768fa0e7f9c3d0f13261716eee7d24" title="Creates a random sample ray in a square surrounding the current pixel." alt="" coords="851,5,1013,32"/>
 <area shape="rect" id="node4" href="$ray__bonus_8h.html#af9c073d2966aa21738e1d2083762055f" title="Returns the colour of a pixel by means of anti&#45;aliasing." alt="" coords="647,5,803,32"/>
 <area shape="rect" id="node5" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="471,5,599,32"/>
-<area shape="rect" id="node6" href="$render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,5,423,32"/>
+<area shape="rect" id="node6" href="$render_8h.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,5,423,32"/>
 <area shape="rect" id="node7" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,5,260,32"/>
 <area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
 </map>

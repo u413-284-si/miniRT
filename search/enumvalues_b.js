@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['white_1050',['WHITE',['../colour_8h.html#a19a1d8fdbc63aaafd4498a3d973a46f2a283fc479650da98250635b9c3c0e7e50',1,'WHITE():&#160;colour.h'],['../colour__bonus_8h.html#a19a1d8fdbc63aaafd4498a3d973a46f2a283fc479650da98250635b9c3c0e7e50',1,'WHITE():&#160;colour_bonus.h']]]
+  ['unknown_1101',['UNKNOWN',['../entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c',1,'UNKNOWN():&#160;entities.h'],['../entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c',1,'UNKNOWN():&#160;entities_bonus.h']]]
 ];

@@ -366,7 +366,7 @@ var sectionId = 'dynsection-12';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="render_8h.html#a1509258bd6eb6bea810a0ac7bb6e1e70" target="_top" xlink:title="Manipulates the camera with a keypress.">
+<g id="a_node5"><a xlink:href="render_8h.html#aef0c8d431d439f9443a576ecb640e1c7" target="_top" xlink:title="Manipulates the camera with a keypress.">
 <polygon fill="none" stroke="black" points="1272,-724.75 1272,-743.75 1358,-743.75 1358,-724.75 1272,-724.75"/>
 <text text-anchor="middle" x="1315" y="-731.75" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cam</text>
 </a>
@@ -564,7 +564,7 @@ var sectionId = 'dynsection-12';
 <!-- Node17 -->
 <g id="node17" class="node">
 <title>Node17</title>
-<g id="a_node17"><a xlink:href="render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="render_8h.html#af908c05cb19e716220bc98fcf9582573" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="227,-639.75 227,-658.75 313,-658.75 313,-639.75 227,-639.75"/>
 <text text-anchor="middle" x="270" y="-646.75" font-family="Helvetica,sans-Serif" font-size="10.00">ft_draw_scene</text>
 </a>

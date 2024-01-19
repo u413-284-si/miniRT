@@ -1,6 +1,8 @@
 <map id="ft_put_ctrl_sp" name="ft_put_ctrl_sp">
-<area shape="rect" id="node1" title="Puts control scheme for sphere on the screen." alt="" coords="5,56,115,83"/>
-<area shape="rect" id="node2" href="$menu__put_8h.html#a0dd38606280deb85fca8f3d4db628552" title="Puts control scheme for incrementing and decrementing a value on the screen." alt="" coords="163,5,305,32"/>
-<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="353,56,436,83"/>
-<area shape="rect" id="node4" href="$menu__put_8h.html#a6387702d64aea5e1908a16e2baf024c0" title="Puts control scheme for movement on the screen." alt="" coords="169,107,299,133"/>
+<area shape="rect" id="node1" title="Puts control scheme for sphere on the screen." alt="" coords="5,81,115,108"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a5aceec72932738d71b7d1bbd95ce525c" title="Puts control scheme for changing active entity on the screen." alt="" coords="163,5,332,32"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a50838cd4750b34dedcc348fbdc91f908" title="Puts control scheme for changing colour on the screen." alt="" coords="180,56,315,83"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#a0dd38606280deb85fca8f3d4db628552" title="Puts control scheme for incrementing and decrementing a value on the screen." alt="" coords="176,107,319,133"/>
+<area shape="rect" id="node6" href="$menu__put_8h.html#a6387702d64aea5e1908a16e2baf024c0" title="Puts control scheme for movement on the screen." alt="" coords="182,157,313,184"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="380,81,463,108"/>
 </map>

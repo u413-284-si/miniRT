@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="render_8h.html#af1aeed53f4ca5947fd698da6f9ebc0e7" target="_top" xlink:title="Moves the camera with a keypress.">
+<g id="a_node2"><a xlink:href="render_8h.html#ab974018238f1a6e6a86b44e139f5d672" target="_top" xlink:title="Moves the camera with a keypress.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 129,-19.5 129,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="64.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_move_cam</text>
 </a>

@@ -1,18 +1,19 @@
 <map id="ft_mouse_hook_rot_cam" name="ft_mouse_hook_rot_cam">
-<area shape="rect" id="node1" title="Rotates the camera with the mouse." alt="" coords="5,220,187,247"/>
+<area shape="rect" id="node1" title="Rotates the camera with the mouse." alt="" coords="5,284,187,311"/>
 <area shape="rect" id="node2" href="$camera_8h.html#a02ed3f7206927a02c44eab5f5aba26e1" title="Calculates basis vectors u, v, w." alt="" coords="235,56,427,83"/>
 <area shape="rect" id="node5" href="$camera_8h.html#a96132dcb4eac578fbee24bbf591fe090" title="Calculates the pixel grid parameters of the viewport." alt="" coords="246,183,415,209"/>
-<area shape="rect" id="node8" href="$mat4__vec3_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" title="Rotates a 3D vector around the x&#45;axis." alt="" coords="265,347,396,373"/>
-<area shape="rect" id="node15" href="$mat4__vec3_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46" title="Rotates a 3D vector around the y&#45;axis." alt="" coords="265,271,396,297"/>
+<area shape="rect" id="node8" href="$render__bit__field_8h.html#ab984d9cbc7c648ef4481b9158b27da30" title="Sets bit in bit field." alt="" coords="277,385,384,412"/>
+<area shape="rect" id="node9" href="$mat4__vec3_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" title="Rotates a 3D vector around the x&#45;axis." alt="" coords="265,335,396,361"/>
+<area shape="rect" id="node16" href="$mat4__vec3_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46" title="Rotates a 3D vector around the y&#45;axis." alt="" coords="265,284,396,311"/>
 <area shape="rect" id="node3" href="$vec3_8h.html#a19bc1d17592698776e89a5093110320c" title="Calculate the cross product of two vectors." alt="" coords="510,5,621,32"/>
 <area shape="rect" id="node4" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="727,107,837,133"/>
 <area shape="rect" id="node6" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="515,157,615,184"/>
 <area shape="rect" id="node7" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="516,208,615,235"/>
-<area shape="rect" id="node9" href="$mat4_8h.html#a96153e828811e816c64e7d0e19fcf654" title="Creates a 4x4 transformation matrix for x&#45;axis rotation." alt="" coords="475,411,656,437"/>
-<area shape="rect" id="node12" href="$mat4__vec3__rotate_8c.html#a53ea797ed37dea591e9e86121a849aca" title="Multiplies a 4x4 matrix with a 3D vector." alt="" coords="492,360,639,387"/>
-<area shape="rect" id="node13" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="510,259,621,285"/>
-<area shape="rect" id="node10" href="$utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9" title="Transforms degrees into radian." alt="" coords="707,321,857,348"/>
-<area shape="rect" id="node11" href="$mat4_8h.html#ad20d2d0fd3d7862225345a79b062f03a" title="Returns a 4x4 identity matrix." alt="" coords="704,397,860,424"/>
-<area shape="rect" id="node14" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="733,259,831,285"/>
-<area shape="rect" id="node16" href="$mat4_8h.html#a3f33a47cb6e2a560791c9be852f27b35" title="Creates a 4x4 transformation matrix for y&#45;axis rotation." alt="" coords="475,309,656,336"/>
+<area shape="rect" id="node10" href="$mat4_8h.html#a96153e828811e816c64e7d0e19fcf654" title="Creates a 4x4 transformation matrix for x&#45;axis rotation." alt="" coords="475,411,656,437"/>
+<area shape="rect" id="node13" href="$mat4__vec3__rotate_8c.html#a53ea797ed37dea591e9e86121a849aca" title="Multiplies a 4x4 matrix with a 3D vector." alt="" coords="492,360,639,387"/>
+<area shape="rect" id="node14" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="510,259,621,285"/>
+<area shape="rect" id="node11" href="$utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9" title="Transforms degrees into radian." alt="" coords="707,321,857,348"/>
+<area shape="rect" id="node12" href="$mat4_8h.html#ad20d2d0fd3d7862225345a79b062f03a" title="Returns a 4x4 identity matrix." alt="" coords="704,397,860,424"/>
+<area shape="rect" id="node15" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="733,259,831,285"/>
+<area shape="rect" id="node17" href="$mat4_8h.html#a3f33a47cb6e2a560791c9be852f27b35" title="Creates a 4x4 transformation matrix for y&#45;axis rotation." alt="" coords="475,309,656,336"/>
 </map>

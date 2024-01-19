@@ -126,7 +126,7 @@ var sectionId = 'dynsection-4';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="render_8h.html#af908c05cb19e716220bc98fcf9582573" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="227,-19.5 227,-38.5 313,-38.5 313,-19.5 227,-19.5"/>
 <text text-anchor="middle" x="270" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_draw_scene</text>
 </a>

@@ -489,7 +489,7 @@ var sectionId = 'dynsection-10';
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="render__loop__mlx_8c.html#af908c05cb19e716220bc98fcf9582573" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="render_8h.html#af908c05cb19e716220bc98fcf9582573" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="227,-381.5 227,-400.5 313,-400.5 313,-381.5 227,-381.5"/>
 <text text-anchor="middle" x="270" y="-388.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_draw_scene</text>
 </a>
@@ -756,7 +756,7 @@ var sectionId = 'dynsection-10';
 <!-- Node40 -->
 <g id="node40" class="node">
 <title>Node40</title>
-<g id="a_node40"><a xlink:href="render_8h.html#a220fefa62b26f8c0940a1e4a4a7c934f" target="_top" xlink:title="Rotates the camera with a keypress.">
+<g id="a_node40"><a xlink:href="render_8h.html#a492035e87e08c0c7a9e93a3fe4605cc2" target="_top" xlink:title="Rotates the camera with a keypress.">
 <polygon fill="none" stroke="black" points="1119.5,-2.5 1119.5,-21.5 1234.5,-21.5 1234.5,-2.5 1119.5,-2.5"/>
 <text text-anchor="middle" x="1177" y="-9.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_rot_cam</text>
 </a>
@@ -771,7 +771,7 @@ var sectionId = 'dynsection-10';
 <!-- Node41 -->
 <g id="node41" class="node">
 <title>Node41</title>
-<g id="a_node41"><a xlink:href="render_8h.html#adf1bfe4072ecc554c2084447411db434" target="_top" xlink:title="Rotates a 3D vector with a keypress.">
+<g id="a_node41"><a xlink:href="render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed" target="_top" xlink:title="Rotates a 3D vector with a keypress.">
 <polygon fill="none" stroke="black" points="1121.5,-78.5 1121.5,-97.5 1232.5,-97.5 1232.5,-78.5 1121.5,-78.5"/>
 <text text-anchor="middle" x="1177" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_rot_vec</text>
 </a>
@@ -801,7 +801,7 @@ var sectionId = 'dynsection-10';
 <!-- Node42 -->
 <g id="node42" class="node">
 <title>Node42</title>
-<g id="a_node42"><a xlink:href="render_8h.html#af500a65a1e441d08240efa30fa8c1e27" target="_top" xlink:title="Manipulates the active cylinder.">
+<g id="a_node42"><a xlink:href="render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" target="_top" xlink:title="Manipulates the active cylinder.">
 <polygon fill="none" stroke="black" points="969,-81.5 969,-100.5 1073,-100.5 1073,-81.5 969,-81.5"/>
 <text text-anchor="middle" x="1021" y="-88.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cylinder</text>
 </a>
@@ -816,7 +816,7 @@ var sectionId = 'dynsection-10';
 <!-- Node43 -->
 <g id="node43" class="node">
 <title>Node43</title>
-<g id="a_node43"><a xlink:href="render_8h.html#a5fcb632e750265c23a4a6cd3fe090d35" target="_top" xlink:title="Manipulates the active plane.">
+<g id="a_node43"><a xlink:href="render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" target="_top" xlink:title="Manipulates the active plane.">
 <polygon fill="none" stroke="black" points="975,-43.5 975,-62.5 1067,-62.5 1067,-43.5 975,-43.5"/>
 <text text-anchor="middle" x="1021" y="-50.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_plane</text>
 </a>

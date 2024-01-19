@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sample_5fsize_1075',['SAMPLE_SIZE',['../mini_r_t__config__bonus_8h.html#ae25e0da7cdb20c758a56dc6aece92ba7',1,'miniRT_config_bonus.h']]],
-  ['specular_5fstrength_1076',['SPECULAR_STRENGTH',['../lighting__bonus_8h.html#a474f07e098e112d4c64018aef97cf633',1,'lighting_bonus.h']]],
-  ['sphere_5fmax_1077',['SPHERE_MAX',['../mini_r_t__config_8h.html#a57075825dcedf2cbc21ae369e0b85ed2',1,'SPHERE_MAX():&#160;miniRT_config.h'],['../mini_r_t__config__bonus_8h.html#a57075825dcedf2cbc21ae369e0b85ed2',1,'SPHERE_MAX():&#160;miniRT_config_bonus.h']]]
+  ['rad_1128',['RAD',['../utils_8h.html#ab812f1e2f95156906fcaca00bc6f490e',1,'RAD():&#160;utils.h'],['../utils__bonus_8h.html#ab812f1e2f95156906fcaca00bc6f490e',1,'RAD():&#160;utils_bonus.h']]],
+  ['reflection_5fmax_1129',['REFLECTION_MAX',['../mini_r_t__config__bonus_8h.html#a387d9d8c183953f922357e446fc3545a',1,'miniRT_config_bonus.h']]],
+  ['regular_1130',['REGULAR',['../mini_r_t__config_8h.html#a9988ccc764be87fa1a8280b60d9e28c6',1,'REGULAR():&#160;miniRT_config.h'],['../mini_r_t__config__bonus_8h.html#a9988ccc764be87fa1a8280b60d9e28c6',1,'REGULAR():&#160;miniRT_config_bonus.h']]]
 ];
