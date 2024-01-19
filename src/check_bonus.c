@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   check_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 15:29:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 17:59:23 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check_bonus.h"
 
-t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
+t_err	ft_check_lines_bonus(char **lines, int *lsrc_c, int *total)
 {
 	t_type		type;
 	static int	ent_count[SUM_ENTS];
@@ -21,11 +21,11 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 	i = 0;
 	while (lines[i])
 	{
-		type = ft_check_line_type(lines[i++]);
+		type = ft_check_line_type_bonus(lines[i++]);
 		if (type == COMMENT)
 			continue ;
 		if (type == UNKNOWN
-			|| ft_incr_ent_count(ent_count, type))
+			|| ft_incr_ent_count_bonus(ent_count, type))
 		{
 			ft_perror_number("Line number [ignoring empty lines]", i - 1);
 			return (ERROR);
@@ -39,7 +39,7 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 	return (SUCCESS);
 }
 
-t_type	ft_check_line_type(char *line)
+t_type	ft_check_line_type_bonus(char *line)
 {
 	if (*line == 'A')
 		return (ft_check_ambient(line + 1));
@@ -48,13 +48,13 @@ t_type	ft_check_line_type(char *line)
 	else if (*line == 'L')
 		return (ft_check_light(line + 1));
 	else if (!ft_strncmp(line, "sp", 2))
-		return (ft_check_sphere(line + 2));
+		return (ft_check_sphere_bonus(line + 2));
 	else if (!ft_strncmp(line, "pl", 2))
-		return (ft_check_plane(line + 2));
+		return (ft_check_plane_bonus(line + 2));
 	else if (!ft_strncmp(line, "cy", 2))
-		return (ft_check_cylinder(line + 2));
+		return (ft_check_cylinder_bonus(line + 2));
 	else if (!ft_strncmp(line, "co ", 3))
-		return (ft_check_cone(line + 2));
+		return (ft_check_cone_bonus(line + 2));
 	else if (*line == '#')
 		return (COMMENT);
 	else
@@ -62,7 +62,7 @@ t_type	ft_check_line_type(char *line)
 	return (UNKNOWN);
 }
 
-t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_type type)
+t_err	ft_incr_ent_count_bonus(int ent_count[SUM_ENTS], t_type type)
 {
 	static const int	ent_max[SUM_ENTS] = {
 	[SPHERE] = SPHERE_MAX,
@@ -81,20 +81,4 @@ t_err	ft_incr_ent_count(int ent_count[SUM_ENTS], t_type type)
 		return (ERROR);
 	}
 	return (SUCCESS);
-}
-
-t_err	ft_check_entity_count(int ent_count[SUM_ENTS])
-{
-	t_type	missing;
-
-	if (!ent_count[AMBIENT])
-		missing = AMBIENT;
-	else if (!ent_count[CAMERA])
-		missing = CAMERA;
-	else if (!ent_count[LIGHT])
-		missing = LIGHT;
-	else
-		return (SUCCESS);
-	ft_perror_count(missing, 0, 0, false);
-	return (ERROR);
 }

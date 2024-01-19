@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/16 17:28:53 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 18:16:18 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,21 +29,51 @@ t_err	ft_import_file(char *filename, char ***lines);
 // import from check.h
 t_err	ft_check_lines(char **lines, int *lsrc_c, int *total);
 
+// import from check_bonus.h
+t_err	ft_check_lines_bonus(char **lines, int *lsrc_c, int *total);
+
+// import from parse.h
+void	ft_parse_lines(t_entities *scene, t_cam *cam, char **lines);
+
 // parse.c
 
 /**
  * @brief Imports, checks, and parses the provided file.
  *
  * Import with ft_import_file().
- * Check with ft_check_lines().
+ * Check with ft_check_lines_bonus().
  * Allocate memory with ft_malloc_ents().
- * Parse with ft_parse_lines().
+ * Parse with ft_parse_lines_bonus().
  * @param filename	Provided filename.
  * @param scene		Where entities are stored.
  * @param cam		Camera used in program.
  * @return t_err SUCCESS, ERROR if subfunction fails.
  */
 t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam);
+
+/**
+ * @brief Mallocs storage space and writes data into storage
+ * 
+ * @param scene		Where entities are stored.
+ * @param lines		Content of read file.
+ * @param is_bonus	Boolean to determine whether bonus functions are used.
+ * @param cam		Camera used in program.
+ * @return t_err SUCCESS, ERROR if subfunction fails.
+ */
+t_err	ft_store_data(t_entities *scene, char **lines, bool is_bonus, \
+	t_cam *cam);
+
+/**
+ * @brief Initialises the bonus parameters of all entities
+ * to zero when reading a base file
+ * 
+ * Bonus parameters:
+ * - Shininess
+ * - Reflectivity
+ * - Checkered
+ * @param scene Where entities are stored.
+ */
+void	ft_initialise_non_parsed(t_entities *scene);
 
 /**
  * @brief Allocates memory for lights and hittable array.
@@ -65,7 +95,7 @@ t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total);
  * @param cam	Camera used in program.
  * @param lines	Imported file in sanitized array.
  */
-void	ft_parse_lines(t_entities *scene, t_cam *cam, char **lines);
+void	ft_parse_lines_bonus(t_entities *scene, t_cam *cam, char **lines);
 
 // parse_entity1.c
 
@@ -126,7 +156,7 @@ void	ft_parse_light(char *line, t_light *light, int id);
  * @param sphere	Struct where to save.
  * @param id		Current shape id.
  */
-void	ft_parse_sphere(char *line, t_hittable *sphere, size_t id);
+void	ft_parse_sphere_bonus(char *line, t_hittable *sphere, size_t id);
 
 /**
  * @brief Parse plane line.
@@ -144,7 +174,7 @@ void	ft_parse_sphere(char *line, t_hittable *sphere, size_t id);
  * @param plane	Struct where to save.
  * @param id	Current shape id.
  */
-void	ft_parse_plane(char *line, t_hittable *plane, size_t id);
+void	ft_parse_plane_bonus(char *line, t_hittable *plane, size_t id);
 
 /**
  * @brief Parse cylinder line.
@@ -164,7 +194,7 @@ void	ft_parse_plane(char *line, t_hittable *plane, size_t id);
  * @param cylinder	Struct where to save.
  * @param id		Current shape id.
  */
-void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id);
+void	ft_parse_cylinder_bonus(char *line, t_hittable *cylinder, size_t id);
 
 /**
  * @brief Parse cone line.
@@ -184,7 +214,7 @@ void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id);
  * @param cone 
  * @param id 
  */
-void	ft_parse_cone(char *line, t_hittable *cone, size_t id);
+void	ft_parse_cone_bonus(char *line, t_hittable *cone, size_t id);
 
 // parse_line.c
 

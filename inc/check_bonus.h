@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 15:36:59 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 17:59:23 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@
  * @brief Check array of imported lines.
  *
  * Loop through lines array:
- * - Check the type of a line with ft_check_line_type().
- * - Increment entity counter with ft_incr_ent_count().
+ * - Check the type of a line with ft_check_line_type_bonus().
+ * - Increment entity counter with ft_incr_ent_count_bonus().
  * - If ERROR print line number.
  * After loop check entity count with ft_check_entity_count().
  * Set the provided ints with the calculated values.
@@ -42,7 +42,7 @@
  * @param total Count of found entities sphere + plane + cylinder.
  * @return t_err ERROR if any subfunction fails.
  */
-t_err		ft_check_lines(char **lines, int *lsrc_count, int *total);
+t_err		ft_check_lines_bonus(char **lines, int *lsrc_count, int *total);
 
 /**
  * @brief Dispatch function for different line types.
@@ -53,7 +53,7 @@ t_err		ft_check_lines(char **lines, int *lsrc_count, int *total);
  * @param line Line to check for identifier.
  * @return t_type Specific entity type if correct, else UNKNOWN.
  */
-t_type		ft_check_line_type(char *line);
+t_type		ft_check_line_type_bonus(char *line);
 
 /**
  * @brief Increase entity count, and check if too many.
@@ -65,7 +65,7 @@ t_type		ft_check_line_type(char *line);
  * @param ent_type Specific type which should be increased.
  * @return t_err ERROR if increased count is bigger than specific max.
  */
-t_err		ft_incr_ent_count(int ent_count[SUM_ENTS], t_type ent_type);
+t_err		ft_incr_ent_count_bonus(int ent_count[SUM_ENTS], t_type ent_type);
 
 /**
  * @brief Check if minimum number of specific entities was found.
@@ -205,7 +205,7 @@ t_type		ft_check_light(char *line);
  * @param line Pointer to current line.
  * @return t_type SPHERE on success, UNKNOWN if fail.
  */
-t_type		ft_check_sphere(char *line);
+t_type		ft_check_sphere_bonus(char *line);
 
 /**
  * @brief Checks if plane line is correct.
@@ -221,7 +221,7 @@ t_type		ft_check_sphere(char *line);
  * @param line Pointer to current line.
  * @return t_type PLANE on success, UNKNOWN if fail.
  */
-t_type		ft_check_plane(char *line);
+t_type		ft_check_plane_bonus(char *line);
 
 /**
  * @brief Checks if cylinder line is correct.
@@ -239,7 +239,7 @@ t_type		ft_check_plane(char *line);
  * @param line Pointer to current line.
  * @return t_type CYLINDER on success, UNKNOWN if fail.
  */
-t_type		ft_check_cylinder(char *line);
+t_type		ft_check_cylinder_bonus(char *line);
 
 /**
  * @brief Checks if cone line is correct.
@@ -257,6 +257,6 @@ t_type		ft_check_cylinder(char *line);
  * @param line 
  * @return t_type 
  */
-t_type		ft_check_cone(char *line);
+t_type		ft_check_cone_bonus(char *line);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:17:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/16 17:53:13 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 17:59:26 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check_bonus.h"
 
-t_type	ft_check_sphere(char *line)
+t_type	ft_check_sphere_bonus(char *line)
 {
 	int	i;
 
@@ -35,7 +35,7 @@ t_type	ft_check_sphere(char *line)
 	return (SPHERE);
 }
 
-t_type	ft_check_plane(char *line)
+t_type	ft_check_plane_bonus(char *line)
 {
 	int	i;
 
@@ -61,7 +61,7 @@ t_type	ft_check_plane(char *line)
 	return (PLANE);
 }
 
-t_type	ft_check_cylinder(char *line)
+t_type	ft_check_cylinder_bonus(char *line)
 {
 	int	i;
 
@@ -87,7 +87,7 @@ t_type	ft_check_cylinder(char *line)
 	return (CYLINDER);
 }
 
-t_type	ft_check_cone(char *line)
+t_type	ft_check_cone_bonus(char *line)
 {
 	int	i;
 
