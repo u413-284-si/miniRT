@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/18 23:50:53 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 12:39:04 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,7 +159,7 @@ float			ft_random_float(void);
  * @param max 		Upper bounder
  * @return float 
  */
-float			ft_random_float_in(float min, float max);
+float			ft_random_float_within(float min, float max);
 
 /**
  * @brief Ensure that the returned float lies within the interval
