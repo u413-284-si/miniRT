@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/19 16:34:45 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/19 16:43:11 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -152,33 +152,37 @@ SRC_COMMON := 	camera_movement.c \
 				camera.c \
 				check_entity_ACL.c \
 				check_line.c \
+				check_rm_space.c \
 				cleanup.c \
-				error_mlx.c \
+				error_msg_check2.c \
 				error_msg_generic.c \
+				error_mlx.c \
 				error_syscall.c \
 				ft_strtod.c \
-				import_file_buffer.c \
 				import_file.c \
+				import_file_buffer.c \
 				main.c \
+				mat4.c \
 				mat4_rotation.c \
 				mat4_vec3_rotate.c \
-				mat4.c \
 				menu_init.c \
-				menu_put_cam_light_ctrl.c \
 				menu_put_cam_light.c \
+				menu_put_cam_light_ctrl.c \
 				menu_put_general_info.c \
-				menu_put_hittable_ctrl.c \
 				menu_put_hittable.c \
+				menu_put_hittable_ctrl.c \
 				menu_put_page.c \
 				menu_put_str_num.c \
-				menu_put_utils_ctrl.c \
 				menu_put_utils.c \
+				menu_put_utils_ctrl.c \
 				parse_entity_ACL.c \
 				parse_line.c \
 				print_entity.c \
 				print_struct.c \
+				render_bit_field.c \
 				render_init_mlx.c \
 				render_keyhook_camera.c \
+				render_keyhook_colour.c \
 				render_keyhook_hittable.c \
 				render_keyhook_light.c \
 				render_keyhook_press.c \
@@ -193,36 +197,29 @@ SRC_COMMON := 	camera_movement.c \
 				utils_interval.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c \
-				render_bit_field.c \
-				render_keyhook_colour.c
 
-SRC_BASE := 	render_compose_image.c \
-				menu_put_text.c \
-				render_keyhook_options.c \
+SRC_BASE := 	check.c \
 				check_entity_sp_pl_cy.c \
-				check.c \
 				colour.c \
 				error_msg_check.c \
+				hit.c \
 				hit_cylinder.c \
 				hit_plane.c \
 				hit_sphere.c \
-				hit.c \
+				menu_put_text.c \
 				parse.c \
 				parse_entity_sp_pl_cy.c \
 				ray.c \
+				render_compose_image.c \
 				render_draw.c \
+				render_keyhook_options.c \
 				scene_light.c \
 				utils_colour.c \
 				utils_cylinder.c \
-				utils_math.c
+				utils_math.c \
 
-SRC_BONUS :=	render_compose_image_bonus.c \
-				time_bonus.c \
-				menu_put_text_bonus.c \
-				menu_put_time_bonus.c \
-				render_keyhook_options_bonus.c \
+SRC_BONUS :=	check_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
-				check_bonus.c \
 				colour_bonus.c \
 				error_msg_check_bonus.c \
 				hit_bonus.c \
@@ -230,20 +227,24 @@ SRC_BONUS :=	render_compose_image_bonus.c \
 				hit_cylinder_bonus.c \
 				hit_plane_bonus.c \
 				hit_sphere_bonus.c \
+				menu_put_text_bonus.c \
+				menu_put_time_bonus.c \
 				parse_bonus.c \
 				parse_entity_sp_pl_cy_bonus.c \
 				ray_bonus.c \
+				render_compose_image_bonus.c \
 				render_draw_bonus.c \
+				render_keyhook_options_bonus.c \
 				scene_light_bonus.c \
 				scene_reflection_bonus.c \
 				texture_bonus.c \
+				time_bonus.c \
 				utils_colour_bonus.c \
 				utils_cone_bonus.c \
 				utils_cylinder_bonus.c \
 				utils_math_bonus.c \
 				utils_quaternion_bonus.c \
 				utils_random_bonus.c
-
 
 # ******************************
 # *     Object files           *
