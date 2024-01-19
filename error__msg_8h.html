@@ -107,7 +107,7 @@ Include dependency graph for error_msg.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="error__msg_8h__dep__incl.svg" width="100%" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="error__msg_8h__dep__incl.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div>
@@ -129,6 +129,10 @@ Functions</h2></td></tr>
 <tr class="separator:a66c0aad31fa186667840a2c0a5004099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a61f85709f3119ca9086f591705f294"><td class="memItemLeft" align="right" valign="top"><a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__msg_8h.html#a0a61f85709f3119ca9086f591705f294">ft_perror_end</a> (char *line)</td></tr>
 <tr class="separator:a0a61f85709f3119ca9086f591705f294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eafb62e253f9202b5cb80f4d005ed93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__msg_8h.html#a2eafb62e253f9202b5cb80f4d005ed93">ft_perror_not_unit</a> (char *line)</td></tr>
+<tr class="separator:a2eafb62e253f9202b5cb80f4d005ed93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd82c129e1342b28d5e8111cf24304f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__msg_8h.html#abd82c129e1342b28d5e8111cf24304f3">ft_pwarning_not_unit</a> (char *line)</td></tr>
+<tr class="separator:abd82c129e1342b28d5e8111cf24304f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aee5d10b82b6780869c9cc69cd64e44cc"></a>
@@ -383,6 +387,48 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a2eafb62e253f9202b5cb80f4d005ed93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eafb62e253f9202b5cb80f4d005ed93">&#9670;&nbsp;</a></span>ft_perror_not_unit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ft_perror_not_unit </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Error message if vector is not a unit vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Line with position, where vector starts. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>false Always returns false to chain msg and false in return. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="error__msg__check2_8c_source.html#l00015">15</a> of file <a class="el" href="error__msg__check2_8c_source.html">error_msg_check2.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ft_putendl_fd(<span class="stringliteral">&quot;Error&quot;</span>, 2);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    ft_putstr_fd(<span class="stringliteral">&quot;No possible unit vector: --&gt;&quot;</span>, 2);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ft_putendl_fd(line, 2);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    ft_putendl_fd(<span class="stringliteral">&quot;Expected: Not the zero vector {0,0,0}&quot;</span>, 2);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="error__msg_8h_a2eafb62e253f9202b5cb80f4d005ed93_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a278f4b45a52fcddd1925e2b9c50266ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a278f4b45a52fcddd1925e2b9c50266ed">&#9670;&nbsp;</a></span>ft_perror_number()</h2>
 
@@ -558,6 +604,46 @@ Here is the caller graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="error__msg_8h_a66c0aad31fa186667840a2c0a5004099_icgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abd82c129e1342b28d5e8111cf24304f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd82c129e1342b28d5e8111cf24304f3">&#9670;&nbsp;</a></span>ft_pwarning_not_unit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_pwarning_not_unit </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Warning message if vector is not a unit vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Line with position, where vector starts. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="error__msg__check2_8c_source.html#l00024">24</a> of file <a class="el" href="error__msg__check2_8c_source.html">error_msg_check2.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ft_putendl_fd(<span class="stringliteral">&quot;Warning&quot;</span>, 2);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    ft_putstr_fd(<span class="stringliteral">&quot;Not a unit vector: --&gt;&quot;</span>, 2);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    ft_putendl_fd(line, 2);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ft_putendl_fd(<span class="stringliteral">&quot;Vector was successfully normalized.&quot;</span>, 2);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="error__msg_8h_abd82c129e1342b28d5e8111cf24304f3_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

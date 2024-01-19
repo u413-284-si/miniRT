@@ -1,0 +1,11 @@
+<map id="ft_isvalid_unit_vec" name="ft_isvalid_unit_vec">
+<area shape="rect" id="node1" title="Checks three floats, separated by &#39;,&#39; and calcs checksum." alt="" coords="5,183,148,209"/>
+<area shape="rect" id="node2" href="$check__line_8c.html#a399912478dc865909526aa87e6c333df" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="196,107,355,133"/>
+<area shape="rect" id="node7" href="$ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e" title="Converts a String to a double." alt="" coords="603,157,679,184"/>
+<area shape="rect" id="node8" href="$error__msg_8h.html#a2eafb62e253f9202b5cb80f4d005ed93" title="Error message if vector is not a unit vector." alt="" coords="207,208,344,235"/>
+<area shape="rect" id="node9" href="$error__msg_8h.html#abd82c129e1342b28d5e8111cf24304f3" title="Warning message if vector is not a unit vector." alt="" coords="196,259,355,285"/>
+<area shape="rect" id="node3" href="$check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="403,107,520,133"/>
+<area shape="rect" id="node4" href="$error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" title="Error message if conversion failed." alt="" coords="575,5,708,32"/>
+<area shape="rect" id="node5" href="$error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" title="Error message if converted number is out of range." alt="" coords="581,56,702,83"/>
+<area shape="rect" id="node6" href="$error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" title="Error message if wrong separator was encountered." alt="" coords="568,107,715,133"/>
+</map>

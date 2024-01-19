@@ -1,0 +1,8 @@
+<map id="ft_isvalid_float_block" name="ft_isvalid_float_block">
+<area shape="rect" id="node1" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="569,56,728,83"/>
+<area shape="rect" id="node2" href="$check_8h.html#a806133750c2b871ad705916e6d997f31" title="Checks three floats, separated by &#39;,&#39; and calcs checksum." alt="" coords="379,56,521,83"/>
+<area shape="rect" id="node3" href="$check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675" title="Checks if camera line is correct." alt="" coords="197,5,329,32"/>
+<area shape="rect" id="node5" href="$check_8h.html#ae60d55778d26a79bd9d60676862afcac" title="Checks if cylinder line is correct." alt="" coords="196,56,331,83"/>
+<area shape="rect" id="node6" href="$check_8h.html#a1e36aec7efe086076efcaf9991f28abe" title="Checks if plane line is correct." alt="" coords="204,107,323,133"/>
+<area shape="rect" id="node4" href="$check_8h.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="5,56,148,83"/>
+</map>

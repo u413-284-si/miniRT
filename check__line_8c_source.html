@@ -100,109 +100,117 @@ $(document).ready(function(){initNavTree('check__line_8c_source.html',''); initR
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/11/10 18:27:34 by gwolf             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/12/25 15:48:44 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/19 09:38:45 by gwolf            ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="check_8h.html">check.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="check_8h.html#a7a10a4efb97dd784c001f96c580d7119">   15</a></span>&#160;<span class="keywordtype">void</span>    <a class="code" href="check__line_8c.html#a424ba9e118ac2e3c3b58f333d786c939">ft_rm_space</a>(<span class="keywordtype">char</span> **str)</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="check_8h.html#a542b81308cf530edfa0a3bfdcefb6002">   15</a></span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a>(<span class="keywordtype">char</span> **line, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max, <span class="keywordtype">bool</span> comma)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">char</span>    *begin;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">char</span>    *end;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">size_t</span>  offset;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">double</span>  num;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (**str == <span class="charliteral">&#39; &#39;</span>)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        (*str)++;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (**str == <span class="charliteral">&#39;\t&#39;</span>)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        (*str)++;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        *(*str - 1) = <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    begin = *str;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    end = *str;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">while</span> (*end == <span class="charliteral">&#39; &#39;</span> || *end == <span class="charliteral">&#39;\t&#39;</span>)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        end++;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (begin == end)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        return ;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">while</span> (*end)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        *begin++ = *end++;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    *begin = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="check_8h.html#a542b81308cf530edfa0a3bfdcefb6002">   38</a></span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a>(<span class="keywordtype">char</span> **line, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max, <span class="keywordtype">bool</span> comma)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">size_t</span>  offset;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">double</span>  num;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    offset = 0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    num = <a class="code" href="ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e">ft_strtod</a>(*line, &amp;offset);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (offset == 0)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe">ft_perror_convert</a>(*line, <span class="keyword">true</span>));</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (num &lt; min || num &gt; max)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a>(*line, offset, (<span class="keywordtype">int</span>)min, (<span class="keywordtype">int</span>)max));</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    *line += offset;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (comma &amp;&amp; **line != <span class="charliteral">&#39;,&#39;</span>)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (!comma &amp;&amp; **line != <span class="charliteral">&#39; &#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\t&#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="check_8h.html#a399912478dc865909526aa87e6c333df">   57</a></span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="check__line_8c.html#a399912478dc865909526aa87e6c333df">ft_isvalid_float_block</a>(<span class="keywordtype">char</span> **line, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a>(line, min, max, <span class="keyword">true</span>))</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    (*line)++;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a>(line, min, max, <span class="keyword">true</span>))</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    (*line)++;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a>(line, min, max, <span class="keyword">false</span>))</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="check_8h.html#a7884a3e9489248b242a9fb7da9607bf4">   70</a></span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(<span class="keywordtype">char</span> **line, <span class="keywordtype">bool</span> comma)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">int</span> tmp;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    tmp = 0;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (!ft_isdigit(**line))</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe">ft_perror_convert</a>(*line, <span class="keyword">false</span>));</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">while</span> (ft_isdigit(**line) &amp;&amp; tmp &lt; 255)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        tmp *= 10;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        tmp += **line - <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        (*line)++;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (tmp &gt; 255)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a>(*line - 3, 3, 0, 255));</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (comma &amp;&amp; **line != <span class="charliteral">&#39;,&#39;</span>)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (!comma &amp;&amp; **line != <span class="charliteral">&#39; &#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\t&#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="check_8h.html#a3327b821f1a4c71183e0448c7023a5aa">   92</a></span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="check__line_8c.html#a3327b821f1a4c71183e0448c7023a5aa">ft_isvalid_rgb_block</a>(<span class="keywordtype">char</span> **line)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">true</span>))</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    (*line)++;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">true</span>))</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    (*line)++;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">false</span>))</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    offset = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    num = <a class="code" href="ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e">ft_strtod</a>(*line, &amp;offset);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (offset == 0)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe">ft_perror_convert</a>(*line, <span class="keyword">true</span>));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (num &lt; min || num &gt; max)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a>(*line, offset, (<span class="keywordtype">int</span>)min, (<span class="keywordtype">int</span>)max));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    *line += offset;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (comma &amp;&amp; **line != <span class="charliteral">&#39;,&#39;</span>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (!comma &amp;&amp; **line != <span class="charliteral">&#39; &#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\t&#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="check_8h.html#a399912478dc865909526aa87e6c333df">   34</a></span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="check__line_8c.html#a399912478dc865909526aa87e6c333df">ft_isvalid_float_block</a>(<span class="keywordtype">char</span> **line, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a>(line, min, max, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    (*line)++;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a>(line, min, max, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    (*line)++;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a>(line, min, max, <span class="keyword">false</span>))</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="check_8h.html#a806133750c2b871ad705916e6d997f31">   47</a></span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="check__line_8c.html#a806133750c2b871ad705916e6d997f31">ft_isvalid_unit_vec</a>(<span class="keywordtype">char</span> **line, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">double</span>  checksum;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">double</span>  ret;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">size_t</span>  offset;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">char</span>    *begin;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">char</span>    *tmp;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    begin = *line;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="check__line_8c.html#a399912478dc865909526aa87e6c333df">ft_isvalid_float_block</a>(line, min, max) == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    tmp = begin;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    offset = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    checksum = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    ret = <a class="code" href="ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e">ft_strtod</a>(tmp, &amp;offset);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    checksum += ret * ret;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    tmp += offset + 1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ret = <a class="code" href="ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e">ft_strtod</a>(tmp, &amp;offset);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    checksum += ret * ret;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    tmp += offset + 1;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ret = <a class="code" href="ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e">ft_strtod</a>(tmp, &amp;offset);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    checksum += ret * ret;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (checksum == 0.0)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a2eafb62e253f9202b5cb80f4d005ed93">ft_perror_not_unit</a>(begin));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (checksum &gt; 1.0)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="error__msg_8h.html#abd82c129e1342b28d5e8111cf24304f3">ft_pwarning_not_unit</a>(begin);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="check_8h.html#a7884a3e9489248b242a9fb7da9607bf4">   76</a></span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(<span class="keywordtype">char</span> **line, <span class="keywordtype">bool</span> comma)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> tmp;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    tmp = 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (!ft_isdigit(**line))</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe">ft_perror_convert</a>(*line, <span class="keyword">false</span>));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">while</span> (ft_isdigit(**line) &amp;&amp; tmp &lt; 255)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        tmp *= 10;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        tmp += **line - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        (*line)++;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (tmp &gt; 255)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a>(*line - 3, 3, 0, 255));</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (comma &amp;&amp; **line != <span class="charliteral">&#39;,&#39;</span>)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (!comma &amp;&amp; **line != <span class="charliteral">&#39; &#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\t&#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="check_8h.html#a3327b821f1a4c71183e0448c7023a5aa">   98</a></span>&#160;<span class="keywordtype">bool</span>    <a class="code" href="check__line_8c.html#a3327b821f1a4c71183e0448c7023a5aa">ft_isvalid_rgb_block</a>(<span class="keywordtype">char</span> **line)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">true</span>))</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    (*line)++;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    (*line)++;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">false</span>))</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="ttc" id="acheck_8h_html"><div class="ttname"><a href="check_8h.html">check.h</a></div></div>
-<div class="ttc" id="acheck__line_8c_html_a3327b821f1a4c71183e0448c7023a5aa"><div class="ttname"><a href="check__line_8c.html#a3327b821f1a4c71183e0448c7023a5aa">ft_isvalid_rgb_block</a></div><div class="ttdeci">bool ft_isvalid_rgb_block(char **line)</div><div class="ttdoc">Checks three rgb values, separated by ','.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00092">check_line.c:92</a></div></div>
-<div class="ttc" id="acheck__line_8c_html_a399912478dc865909526aa87e6c333df"><div class="ttname"><a href="check__line_8c.html#a399912478dc865909526aa87e6c333df">ft_isvalid_float_block</a></div><div class="ttdeci">bool ft_isvalid_float_block(char **line, float min, float max)</div><div class="ttdoc">Checks three floats, separated by ','.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00057">check_line.c:57</a></div></div>
-<div class="ttc" id="acheck__line_8c_html_a424ba9e118ac2e3c3b58f333d786c939"><div class="ttname"><a href="check__line_8c.html#a424ba9e118ac2e3c3b58f333d786c939">ft_rm_space</a></div><div class="ttdeci">void ft_rm_space(char **str)</div><div class="ttdoc">Moves line one space or htab forward and sanitizes spaces.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00015">check_line.c:15</a></div></div>
-<div class="ttc" id="acheck__line_8c_html_a542b81308cf530edfa0a3bfdcefb6002"><div class="ttname"><a href="check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a></div><div class="ttdeci">bool ft_isvalid_float(char **line, float min, float max, bool comma)</div><div class="ttdoc">Tries to convert str to float and checks range.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00038">check_line.c:38</a></div></div>
-<div class="ttc" id="acheck__line_8c_html_a7884a3e9489248b242a9fb7da9607bf4"><div class="ttname"><a href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a></div><div class="ttdeci">bool ft_isvalid_rgb_val(char **line, bool comma)</div><div class="ttdoc">Tries to convert str into rgb int and checks range.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00070">check_line.c:70</a></div></div>
+<div class="ttc" id="acheck__line_8c_html_a3327b821f1a4c71183e0448c7023a5aa"><div class="ttname"><a href="check__line_8c.html#a3327b821f1a4c71183e0448c7023a5aa">ft_isvalid_rgb_block</a></div><div class="ttdeci">bool ft_isvalid_rgb_block(char **line)</div><div class="ttdoc">Checks three rgb values, separated by ','.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00098">check_line.c:98</a></div></div>
+<div class="ttc" id="acheck__line_8c_html_a399912478dc865909526aa87e6c333df"><div class="ttname"><a href="check__line_8c.html#a399912478dc865909526aa87e6c333df">ft_isvalid_float_block</a></div><div class="ttdeci">bool ft_isvalid_float_block(char **line, float min, float max)</div><div class="ttdoc">Checks three floats, separated by ','.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00034">check_line.c:34</a></div></div>
+<div class="ttc" id="acheck__line_8c_html_a542b81308cf530edfa0a3bfdcefb6002"><div class="ttname"><a href="check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a></div><div class="ttdeci">bool ft_isvalid_float(char **line, float min, float max, bool comma)</div><div class="ttdoc">Tries to convert str to float and checks range.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00015">check_line.c:15</a></div></div>
+<div class="ttc" id="acheck__line_8c_html_a7884a3e9489248b242a9fb7da9607bf4"><div class="ttname"><a href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a></div><div class="ttdeci">bool ft_isvalid_rgb_val(char **line, bool comma)</div><div class="ttdoc">Tries to convert str into rgb int and checks range.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00076">check_line.c:76</a></div></div>
+<div class="ttc" id="acheck__line_8c_html_a806133750c2b871ad705916e6d997f31"><div class="ttname"><a href="check__line_8c.html#a806133750c2b871ad705916e6d997f31">ft_isvalid_unit_vec</a></div><div class="ttdeci">bool ft_isvalid_unit_vec(char **line, float min, float max)</div><div class="ttdoc">Checks three floats, separated by ',' and calcs checksum.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00047">check_line.c:47</a></div></div>
 <div class="ttc" id="aerror__msg_8h_html_a207347473e8d1cf324c6b70fca7155fe"><div class="ttname"><a href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe">ft_perror_convert</a></div><div class="ttdeci">bool ft_perror_convert(char *line, bool is_float)</div><div class="ttdoc">Error message if conversion failed.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__check_8c_source.html#l00058">error_msg_check.c:58</a></div></div>
+<div class="ttc" id="aerror__msg_8h_html_a2eafb62e253f9202b5cb80f4d005ed93"><div class="ttname"><a href="error__msg_8h.html#a2eafb62e253f9202b5cb80f4d005ed93">ft_perror_not_unit</a></div><div class="ttdeci">bool ft_perror_not_unit(char *line)</div><div class="ttdoc">Error message if vector is not a unit vector.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__check2_8c_source.html#l00015">error_msg_check2.c:15</a></div></div>
 <div class="ttc" id="aerror__msg_8h_html_a66c0aad31fa186667840a2c0a5004099"><div class="ttname"><a href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a></div><div class="ttdeci">bool ft_perror_separator(char *line, bool comma)</div><div class="ttdoc">Error message if wrong separator was encountered.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__check_8c_source.html#l00072">error_msg_check.c:72</a></div></div>
+<div class="ttc" id="aerror__msg_8h_html_abd82c129e1342b28d5e8111cf24304f3"><div class="ttname"><a href="error__msg_8h.html#abd82c129e1342b28d5e8111cf24304f3">ft_pwarning_not_unit</a></div><div class="ttdeci">void ft_pwarning_not_unit(char *line)</div><div class="ttdoc">Warning message if vector is not a unit vector.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__check2_8c_source.html#l00024">error_msg_check2.c:24</a></div></div>
 <div class="ttc" id="aerror__msg_8h_html_ae79c226d26bf8b2dbd74bf7440eefa7d"><div class="ttname"><a href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a></div><div class="ttdeci">bool ft_perror_range(char *line, size_t offset, int min, int max)</div><div class="ttdoc">Error message if converted number is out of range.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__check_8c_source.html#l00043">error_msg_check.c:43</a></div></div>
 <div class="ttc" id="aft__strtod_8h_html_a0a1cbf0fef2bdcf6fde79c34014bc10e"><div class="ttname"><a href="ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e">ft_strtod</a></div><div class="ttdeci">double ft_strtod(const char *str, size_t *offset)</div><div class="ttdoc">Converts a String to a double.</div><div class="ttdef"><b>Definition:</b> <a href="ft__strtod_8c_source.html#l00028">ft_strtod.c:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

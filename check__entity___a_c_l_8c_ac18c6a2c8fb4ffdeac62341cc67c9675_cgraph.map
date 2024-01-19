@@ -1,12 +1,16 @@
 <map id="ft_check_camera" name="ft_check_camera">
-<area shape="rect" id="node1" title="Checks if camera line is correct." alt="" coords="5,132,137,159"/>
-<area shape="rect" id="node2" href="$check_8h.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="392,56,509,83"/>
-<area shape="rect" id="node7" href="$check_8h.html#a399912478dc865909526aa87e6c333df" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="185,107,344,133"/>
-<area shape="rect" id="node9" href="$error__msg_8h.html#a0a61f85709f3119ca9086f591705f294" title="Error message if line doesn&#39;t end with space or zero terminator." alt="" coords="211,157,319,184"/>
-<area shape="rect" id="node10" href="$check_8h.html#a7a10a4efb97dd784c001f96c580d7119" title="Moves line one space or htab forward and sanitizes spaces." alt="" coords="214,208,315,235"/>
-<area shape="rect" id="node3" href="$error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" title="Error message if conversion failed." alt="" coords="564,107,697,133"/>
-<area shape="rect" id="node4" href="$error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" title="Error message if converted number is out of range." alt="" coords="570,157,691,184"/>
-<area shape="rect" id="node5" href="$error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" title="Error message if wrong separator was encountered." alt="" coords="557,5,704,32"/>
-<area shape="rect" id="node6" href="$ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e" title="Converts a String to a double." alt="" coords="593,56,669,83"/>
-<area shape="rect" id="node8" href="$check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="392,107,509,133"/>
+<area shape="rect" id="node1" title="Checks if camera line is correct." alt="" coords="5,145,137,172"/>
+<area shape="rect" id="node2" href="$check_8h.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="583,56,700,83"/>
+<area shape="rect" id="node7" href="$check_8h.html#a399912478dc865909526aa87e6c333df" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="376,56,535,83"/>
+<area shape="rect" id="node9" href="$check_8h.html#a806133750c2b871ad705916e6d997f31" title="Checks three floats, separated by &#39;,&#39; and calcs checksum." alt="" coords="185,145,328,172"/>
+<area shape="rect" id="node13" href="$error__msg_8h.html#a0a61f85709f3119ca9086f591705f294" title="Error message if line doesn&#39;t end with space or zero terminator." alt="" coords="203,196,311,223"/>
+<area shape="rect" id="node14" href="$check_8h.html#a7a10a4efb97dd784c001f96c580d7119" title="Moves line one space or htab forward and sanitizes spaces." alt="" coords="206,247,307,273"/>
+<area shape="rect" id="node3" href="$error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" title="Error message if conversion failed." alt="" coords="755,107,888,133"/>
+<area shape="rect" id="node4" href="$error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" title="Error message if converted number is out of range." alt="" coords="761,5,882,32"/>
+<area shape="rect" id="node5" href="$error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" title="Error message if wrong separator was encountered." alt="" coords="748,56,895,83"/>
+<area shape="rect" id="node6" href="$ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e" title="Converts a String to a double." alt="" coords="783,157,859,184"/>
+<area shape="rect" id="node8" href="$check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="583,107,700,133"/>
+<area shape="rect" id="node10" href="$check__line_8c.html#a399912478dc865909526aa87e6c333df" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="376,107,535,133"/>
+<area shape="rect" id="node11" href="$error__msg_8h.html#a2eafb62e253f9202b5cb80f4d005ed93" title="Error message if vector is not a unit vector." alt="" coords="387,208,524,235"/>
+<area shape="rect" id="node12" href="$error__msg_8h.html#abd82c129e1342b28d5e8111cf24304f3" title="Warning message if vector is not a unit vector." alt="" coords="376,259,535,285"/>
 </map>
