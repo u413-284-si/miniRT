@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/19 15:12:27 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/19 16:18:08 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -173,7 +173,6 @@ SRC_COMMON := 	camera_movement.c \
 				menu_put_str_num.c \
 				menu_put_utils_ctrl.c \
 				menu_put_utils.c \
-				menu_put.c \
 				parse_entity_ACL.c \
 				parse_line.c \
 				print_entity.c \
@@ -193,17 +192,57 @@ SRC_COMMON := 	camera_movement.c \
 				utils_entities.c \
 				utils_interval.c \
 				vec3_arithmetics.c \
-				vec3_linalgebra.c
+				vec3_linalgebra.c \
+				render_bit_field.c \
+				render_keyhook_colour.c
 
 SRC_BASE := 	render_compose_image.c \
 				menu_put_text.c \
-				render_keyhook_options.c
+				render_keyhook_options.c \
+				check_entity_sp_pl_cy.c \
+				check.c \
+				colour.c \
+				error_msg_check.c \
+				hit_cylinder.c \
+				hit_plane.c \
+				hit_sphere.c \
+				hit.c \
+				parse.c \
+				parse_entity_sp_pl_cy.c \
+				ray.c \
+				render_draw.c \
+				scene_light.c \
+				utils_colour.c \
+				utils_cylinder.c \
+				utils_math.c
 
 SRC_BONUS :=	render_compose_image_bonus.c \
 				time_bonus.c \
 				menu_put_text_bonus.c \
 				menu_put_time_bonus.c \
-				render_keyhook_options_bonus.c
+				render_keyhook_options_bonus.c \
+				check_entity_sp_pl_cy_bonus.c \
+				check_bonus.c \
+				colour_bonus.c \
+				error_msg_check_bonus.c \
+				hit_bonus.c \
+				hit_cone_bonus.c \
+				hit_cylinder_bonus.c \
+				hit_plane_bonus.c \
+				hit_sphere_bonus.c \
+				parse_bonus.c \
+				parse_entity_sp_pl_cy_bonus.c \
+				ray_bonus.c \
+				render_draw_bonus.c \
+				scene_light_bonus.c \
+				scene_reflection_bonus.c \
+				texture_bonus.c \
+				utils_colour_bonus.c \
+				utils_cone_bonus.c \
+				utils_cylinder_bonus.c \
+				utils_math_bonus.c \
+				utils_quaternion_bonus.c \
+				utils_random_bonus.c
 
 
 # ******************************

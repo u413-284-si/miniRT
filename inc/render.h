@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 15:14:22 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 16:14:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,15 @@
 # include <X11/keysym.h>
 # include <math.h>
 
+# include "libft.h"
+
 # include "error_mlx.h"
-# include "ft_print.h"
+# include "camera.h"
 # include "cleanup.h"
 # include "mat4_vec3.h"
-# include "print.h"
 # include "vec2.h"
 # include "render_menu.h"
 # include "render_bit_field.h"
-
-
-/* ====== MACROS ========*/
-
-# define NUM_COLOURS 9
-# define NUM_RAINBOW_COLOURS 7
-# include "camera.h"
 
 # if IS_BONUS
 #  include "miniRT_config_bonus.h"
@@ -46,6 +40,11 @@
 #  include "ray.h"
 #  include "entities.h"
 # endif
+
+/* ====== MACROS ========*/
+
+# define NUM_COLOURS 9
+# define NUM_RAINBOW_COLOURS 7
 
 /* ====== TYPEDEFS ====== */
 
@@ -119,7 +118,6 @@ typedef struct s_render
 	bool		is_printing;
 	int			active_hittable;
 	int			active_light;
-	uint64_t	last_render_time;
 }	t_render;
 
 /**

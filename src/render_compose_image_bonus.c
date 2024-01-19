@@ -6,12 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:22:40 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/12 19:04:57 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 16:15:38 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "render.h"
-#include "time_bonus.h"
+#include "render_bonus.h"
 
 int	ft_draw_scene(t_render *render)
 {
