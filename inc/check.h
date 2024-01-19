@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 00:19:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 16:33:54 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ t_err		ft_incr_ent_count(int ent_count[SUM_ENTS], t_type ent_type);
  */
 t_err		ft_check_entity_count(int ent_count[SUM_ENTS]);
 
-// check_line.c
+// check_utils.c
 
 /**
  * @brief Moves line one space or htab forward and sanitizes spaces.
@@ -99,6 +99,8 @@ t_err		ft_check_entity_count(int ent_count[SUM_ENTS]);
  * @param line Pointer to current line.
  */
 void		ft_rm_space(char **line);
+
+// check_line.c
 
 /**
  * @brief Tries to convert str to float and checks range.
@@ -129,6 +131,22 @@ bool		ft_isvalid_float(char **line, float min, float max, bool comma);
  * @return false Block is not valid.
  */
 bool		ft_isvalid_float_block(char **line, float min, float max);
+
+/**
+ * @brief Checks three floats, separated by ',' and calcs checksum.
+ *
+ * Works in principle like ft_isvalid_float_block().
+ * Also keeps track of the checksum of all three numbers.
+ * If checksum is 0.0, the vector is not a unit vector, which is an error.
+ * if checksum is bigger than 1.0, the vector was not normalized.
+ * Since it can be normalized, this is only a warning.
+ * @param line		Pointer to current line.
+ * @param min		Minimum value for converted number.
+ * @param max		Maximum value for converted number.
+ * @return true		Unit vector is valid.
+ * @return false	Unit vector is not valid.
+ */
+bool		ft_isvalid_unit_vec(char **line, float min, float max);
 
 /**
  * @brief Tries to convert str into rgb int and checks range.
