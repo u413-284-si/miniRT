@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   utils_colour.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:41:43 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/17 16:31:07 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/20 15:30:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "colour.h"
 
-int32_t	ft_convert_colour2int(t_colour colour)
+uint32_t	ft_convert_colour2int(t_colour colour)
 {
 	uint8_t	a;
 	uint8_t	r;
@@ -20,13 +20,13 @@ int32_t	ft_convert_colour2int(t_colour colour)
 	uint8_t	b;
 
 	a = 0;
-	r = (uint8_t)(255.0 * colour.r);
-	g = (uint8_t)(255.0 * colour.g);
-	b = (uint8_t)(255.0 * colour.b);
+	r = (uint8_t)(255.9 * colour.r);
+	g = (uint8_t)(255.9 * colour.g);
+	b = (uint8_t)(255.9 * colour.b);
 	return ((a << 24) | (r << 16) | (g << 8) | b);
 }
 
-t_colour	ft_convert_int2colour(int colour)
+t_colour	ft_convert_int2colour(uint32_t colour)
 {
 	t_colour	ret;
 
