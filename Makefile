@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/20 13:40:42 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/20 13:44:44 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -156,6 +156,8 @@ SRC_COMMON := 	camera_movement.c \
 				check_line.c \
 				check_rm_space.c \
 				cleanup.c \
+				debug_print_entity.c \
+				debug_print_struct.c \
 				error_msg_check2.c \
 				error_msg_generic.c \
 				error_mlx.c \
@@ -181,8 +183,6 @@ SRC_COMMON := 	camera_movement.c \
 				parse_entity_ACL.c \
 				parse_entity_sp_pl_cy.c \
 				parse_line.c \
-				print_entity.c \
-				print_struct.c \
 				render_bit_field.c \
 				render_cleanup.c \
 				render_init_mlx.c \
