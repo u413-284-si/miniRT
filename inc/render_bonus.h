@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/20 13:56:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/20 14:16:56 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@
 # include "mat4_vec3.h"
 # include "vec2.h"
 # include "render_menu.h"
-# include "render_bit_field.h"
 
 # include "miniRT_config_bonus.h"
 # include "ray_bonus.h"
 # include "entities_bonus.h"
 # include "time_bonus.h"
 # include "threads_bonus.h"
+# include "render_bit_field_bonus.h"
 
 /* ====== MACROS ========*/
 
