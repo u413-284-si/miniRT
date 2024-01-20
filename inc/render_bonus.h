@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/20 14:16:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/20 14:46:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -598,7 +598,6 @@ void	ft_free_scene(t_entities *scene);
  */
 void	ft_render_cleanup(t_render *render);
 
-int	ft_draw_scene(t_render *render);
 void	ft_change_options(int key, t_render *render);
 
 void	*ft_cam_calc_rays_threaded(void *arg);
