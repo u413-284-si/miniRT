@@ -6,13 +6,13 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:34:38 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 12:49:49 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/19 17:05:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parse_bonus.h"
 
-void	ft_parse_sphere(char *line, t_hittable *sphere, size_t id)
+void	ft_parse_sphere_bonus(char *line, t_hittable *sphere, size_t id)
 {
 	t_sphere	*params;
 
@@ -28,7 +28,7 @@ void	ft_parse_sphere(char *line, t_hittable *sphere, size_t id)
 	ft_parse_colour_block(&line, &params->colour);
 }
 
-void	ft_parse_plane(char *line, t_hittable *plane, size_t id)
+void	ft_parse_plane_bonus(char *line, t_hittable *plane, size_t id)
 {
 	t_plane	*params;
 
@@ -44,7 +44,7 @@ void	ft_parse_plane(char *line, t_hittable *plane, size_t id)
 	ft_parse_colour_block(&line, &params->colour);
 }
 
-void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id)
+void	ft_parse_cylinder_bonus(char *line, t_hittable *cylinder, size_t id)
 {
 	t_cylinder	*params;
 
@@ -64,7 +64,7 @@ void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id)
 	ft_cy_calc_caps(params);
 }
 
-void	ft_parse_cone(char *line, t_hittable *cone, size_t id)
+void	ft_parse_cone_bonus(char *line, t_hittable *cone, size_t id)
 {
 	t_cone	*params;
 
