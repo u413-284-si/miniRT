@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/20 15:48:24 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/20 16:02:57 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -192,7 +192,6 @@ SRC_COMMON := 	camera_movement.c \
 				render_keyhook_light.c \
 				render_keyhook_scene.c \
 				render_keyhook_utils.c \
-				render_loop_mlx.c \
 				render_mouse.c \
 				scene_shadow.c \
 				utils_entities.c \
@@ -212,6 +211,7 @@ SRC_BASE := 	colour.c \
 				render_init_base.c \
 				render_keyhook_options.c \
 				render_keyhook_press.c \
+				render_loop_mlx.c \
 				scene_light.c \
 				utils_colour.c \
 				utils_cylinder.c \
@@ -236,6 +236,7 @@ SRC_BONUS :=	anti_alias_bonus.c \
 				render_init_bonus.c \
 				render_keyhook_options_bonus.c \
 				render_keyhook_press_bonus.c \
+				render_loop_mlx_bonus.c \
 				render_output_ppm_bonus.c \
 				render_output_threaded.c \
 				scene_light_bonus.c \
