@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 18:35:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/20 15:57:23 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,13 +68,21 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color)
 	}
 }
 
+uint32_t	ft_pixel_colour(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
+{
+	t_vec3		pixel_centre;
+
+	pixel_centre = cam.pix_cache[pos.y * cam.image.x + pos.x];
+
+	ray.direction = ft_vec3_norm(ft_vec3_sub(pixel_centre, ray.origin));
+	return (ft_convert_colour2int(ft_ray_colour(ray, scene)));
+}
+
 void	ft_render_image(t_render *render)
 {
-	t_ray		ray;
 	t_vec2i		pos;
-	t_colour	pixel_colour;
+	t_ray		ray;
 	int			colour;
-	int			line;
 
 	ray.origin = render->cam.centre;
 	ray.d = 1.0;
@@ -82,13 +90,11 @@ void	ft_render_image(t_render *render)
 	while (++pos.y < render->cam.image.y)
 	{
 		pos.x = -1;
-		line = pos.y * render->cam.image.x;
 		while (++pos.x < render->cam.image.x)
 		{
-			ray.direction = ft_vec3_norm(ft_vec3_sub(render->cam.pix_cache[line + pos.x] , ray.origin));
-			pixel_colour = ft_ray_colour(ray, render->scene);
-			colour = ft_convert_colour2int(pixel_colour);
-			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, pos.y, colour);
+			colour = ft_pixel_colour(pos, ray, render->scene, render->cam);
+			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, \
+				pos.y, colour);
 		}
 	}
 }

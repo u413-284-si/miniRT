@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 18:20:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/20 15:54:03 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,48 +68,34 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color)
 	}
 }
 
+uint32_t	ft_pixel_colour(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
+{
+	t_vec3		pixel_centre;
+
+	pixel_centre = cam.pix_cache[pos.y * cam.image.x + pos.x];
+	ray.direction = ft_vec3_norm(ft_vec3_sub(pixel_centre, ray.origin));
+	return (ft_convert_colour2int(ft_ray_colour(ray, scene, cam)));
+}
+
 void	ft_render_image(t_render *render)
 {
-	t_vec2i		iterate;
-	t_colour	pixel_colour;
+	t_vec2i		pos;
+	t_ray		ray;
 	int			colour;
 
-	iterate.y = -1;
-	while (++iterate.y < render->cam.image.y)
+	ray.origin = render->cam.centre;
+	ray.d = 1.0;
+	pos.y = -1;
+	while (++pos.y < render->cam.image.y)
 	{
-		iterate.x = -1;
-		while (++iterate.x < render->cam.image.x)
+		pos.x = -1;
+		while (++pos.x < render->cam.image.x)
 		{
-			pixel_colour = ft_anti_aliase_colour(iterate, \
-				render->cam.pixels, render->cam, render->scene);
-			colour = ft_convert_colour2int(pixel_colour);
-			ft_put_pix_to_image(&render->mlx_ptrs.img, iterate.x, \
-				iterate.y, colour);
+			colour = ft_pixel_colour(pos, ray, render->scene, render->cam);
+			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, \
+				pos.y, colour);
 		}
 	}
 	mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr,
 		render->mlx_ptrs.img.ptr, 0, 0);
-}
-
-t_colour	ft_anti_aliase_colour(t_vec2i iterate, t_pixel_grid pixels, \
-	t_cam cam, t_entities scene)
-{
-	int			curr_sample;
-	t_ray		ray;
-	t_colour	pixel_colour;
-	t_vec3		pixel_centre;
-
-	curr_sample = -1;
-	pixel_colour = (t_colour){0};
-	pixel_centre = cam.pix_cache[iterate.y * cam.image.x + iterate.x];
-	while (++curr_sample < SAMPLE_SIZE)
-	{
-		ray = ft_create_sample_ray(pixel_centre, pixels, cam);
-		pixel_colour = ft_add_colour(pixel_colour, \
-			ft_ray_colour(ray, scene, cam));
-	}
-	pixel_colour.r /= SAMPLE_SIZE;
-	pixel_colour.g /= SAMPLE_SIZE;
-	pixel_colour.b /= SAMPLE_SIZE;
-	return (pixel_colour);
 }

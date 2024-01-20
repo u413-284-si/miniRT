@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/20 14:47:16 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/20 15:48:24 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -217,7 +217,8 @@ SRC_BASE := 	colour.c \
 				utils_cylinder.c \
 				utils_math.c \
 
-SRC_BONUS :=	check_bonus.c \
+SRC_BONUS :=	anti_alias_bonus.c \
+				check_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
 				colour_bonus.c \
 				error_msg_check_bonus.c \

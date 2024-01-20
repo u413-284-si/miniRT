@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 10:14:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/20 13:52:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/20 16:00:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	*ft_render_image_threaded(void *arg)
 	t_render		*render;
 	t_vec2i			pos;
 	t_ray			ray;
-	t_colour		pixel_colour;
 	int				colour;
 
 	render = ((t_thread_data *)arg)->arg;
@@ -29,8 +28,7 @@ void	*ft_render_image_threaded(void *arg)
 		pos.x = -1;
 		while (++pos.x < render->cam.image.x)
 		{
-			pixel_colour = ft_anti_aliase_colour(pos, render->cam.pixels, render->cam, render->scene);
-			colour = ft_convert_colour2int(pixel_colour);
+			colour = ft_anti_aliase_colour(pos, render->cam.pixels, render->cam, render->scene);
 			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, pos.y, colour);
 		}
 		pos.y += NUM_THREADS;
