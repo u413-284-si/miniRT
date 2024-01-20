@@ -6,11 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:15:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 09:27:13 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/20 14:05:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "render.h"
+#include "render_bonus.h"
 
 static void	ft_change_inc(uint32_t *options)
 {
@@ -60,6 +60,12 @@ static void	ft_toggle_menu(uint32_t *options, const t_mlx_ptrs mlx_ptrs)
 	}
 }
 
+static void	ft_start_printing(t_render *render)
+{
+	ft_toggle_is_printing(render);
+	ft_spin_detached_thread(render, ft_output_threaded);
+}
+
 void	ft_change_options(int key, t_render *render)
 {
 	if (key == XK_Escape)
@@ -74,4 +80,8 @@ void	ft_change_options(int key, t_render *render)
 		ft_change_inc(&render->options);
 	else if (key == XK_o)
 		ft_option_toggle(&render->options, O_SHOW_FPS);
+	else if (key == XK_p)
+		ft_start_printing(render);
+	else if (key == XK_j)
+		ft_option_toggle(&render->options, O_IS_THREADED);
 }

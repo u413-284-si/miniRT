@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:57:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:44:21 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/20 13:50:29 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,31 +75,4 @@ t_err	ft_output_as_ppm(const t_img img)
 	if (ft_err_close(fd))
 		return (ERROR);
 	return (SUCCESS);
-}
-
-bool	ft_is_printing(t_render *render)
-{
-	bool	ret;
-
-	pthread_mutex_lock(&render->mut_print);
-	ret = render->is_printing;
-	pthread_mutex_unlock(&render->mut_print);
-	return (ret);
-}
-
-void	ft_toggle_is_printing(t_render *render)
-{
-	pthread_mutex_lock(&render->mut_print);
-	render->is_printing = !render->is_printing;
-	pthread_mutex_unlock(&render->mut_print);
-}
-
-void	*ft_output_threaded(void *arg)
-{
-	t_render		*render;
-
-	render = ((t_thread_data *)arg)->arg;
-	ft_output_as_ppm(render->mlx_ptrs.img);
-	ft_toggle_is_printing(render);
-	return (NULL);
 }

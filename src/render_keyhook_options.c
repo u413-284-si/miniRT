@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:15:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 09:27:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/20 14:01:42 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,12 @@ void	ft_change_options(int key, t_render *render)
 {
 	if (key == XK_Escape)
 		mlx_loop_end(render->mlx_ptrs.mlx_ptr);
-	else if (key == XK_i)
-		ft_toggle_menu(&render->options, render->mlx_ptrs);
-	else if (key == XK_Control_L)
-		ft_change_mode(&render->options);
 	else if (key == XK_Shift_L)
 		ft_option_toggle(&render->options, O_SHOW_CTRL);
+	else if (key == XK_Control_L)
+		ft_change_mode(&render->options);
+	else if (key == XK_i)
+		ft_toggle_menu(&render->options, render->mlx_ptrs);
 	else if (key == XK_u)
 		ft_change_inc(&render->options);
 }

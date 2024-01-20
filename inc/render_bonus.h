@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 18:05:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/20 13:56:16 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -231,12 +231,44 @@ void	ft_blend_background(t_render *render);
 // render_output_ppm.c
 
 /**
- * @brief Outputs the current mlx img as a ppm file.
+ * @brief Outputs the current render as a ppm file.
  *
  * @param img		Pointer to mlx img struct.
  * @return t_err	SUCCESS, ERROR.
  */
 t_err	ft_output_as_ppm(const t_img img);
+
+// render_output_threaded.c
+
+/**
+ * @brief Wrapper function for threaded output.
+ *
+ * Calls ft_output_as_ppm() in a thread.
+ * Then switches the is_printing flag to false.
+ * @param arg		Pointer to render struct.
+ * @return void*	NULL.
+ */
+void	*ft_output_threaded(void *arg);
+
+/**
+ * @brief Helper function to check is_printing flag.
+ *
+ * Flag is_printing is protected by a mutex.
+ * This function locks the mutex, checks the flag and unlocks the mutex.
+ * @param render	Pointer to render struct.
+ * @return true		Flag is true.
+ * @return false	Flag is false.
+ */
+bool	ft_is_printing(t_render *render);
+
+/**
+ * @brief Helper function to toggle is_printing flag.
+ *
+ * Flag is_printing is protected by a mutex.
+ * This function locks the mutex, toggles the flag and unlocks the mutex.
+ * @param render	Pointer to render struct.
+ */
+void	ft_toggle_is_printing(t_render *render);
 
 // render_keyhook.c
 
@@ -572,9 +604,5 @@ void	ft_change_options(int key, t_render *render);
 void	*ft_cam_calc_rays_threaded(void *arg);
 void	*ft_render_image_threaded(void *arg);
 void	*ft_blend_background_threaded(void *arg);
-
-void	*ft_output_threaded(void *arg);
-bool	ft_is_printing(t_render *render);
-void	ft_toggle_is_printing(t_render *render);
 
 #endif
