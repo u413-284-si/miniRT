@@ -1,7 +1,13 @@
 <map id="ft_cy_calc_caps" name="ft_cy_calc_caps">
-<area shape="rect" id="node1" title="Calculates the planes of the caps of a cylinder." alt="" coords="519,31,641,57"/>
-<area shape="rect" id="node2" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="332,5,471,32"/>
-<area shape="rect" id="node3" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="335,56,468,83"/>
-<area shape="rect" id="node4" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="165,56,284,83"/>
-<area shape="rect" id="node5" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="5,56,117,83"/>
+<area shape="rect" id="node1" title="Calculates the planes of the caps of a cylinder." alt="" coords="1059,56,1181,83"/>
+<area shape="rect" id="node2" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="852,5,991,32"/>
+<area shape="rect" id="node3" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="855,56,988,83"/>
+<area shape="rect" id="node9" href="$parse__bonus_8h.html#a30041bb98ced6caf1debb5468bfb6ad4" title="Parse cylinder line." alt="" coords="832,107,1011,133"/>
+<area shape="rect" id="node4" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="642,56,761,83"/>
+<area shape="rect" id="node5" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="435,56,547,83"/>
+<area shape="rect" id="node6" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="257,81,364,108"/>
+<area shape="rect" id="node7" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,81,209,108"/>
+<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,81,60,108"/>
+<area shape="rect" id="node10" href="$parse__bonus_8c.html#a65db4c46c2af2d9b570687b3a1458f15" title=" " alt="" coords="619,107,784,133"/>
+<area shape="rect" id="node11" href="$parse__bonus_8h.html#a4ce5cad477407308f911966a9446f560" title="Dispatcher for different parsing functions." alt="" coords="412,107,571,133"/>
 </map>

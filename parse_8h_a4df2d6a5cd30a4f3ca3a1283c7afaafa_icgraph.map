@@ -1,16 +1,19 @@
 <map id="ft_parse_float" name="ft_parse_float">
-<area shape="rect" id="node1" title="Parse a single float." alt="" coords="781,157,892,184"/>
-<area shape="rect" id="node2" href="$parse_8h.html#a43353d6bde35357648843c359e4d00a5" title="Parse ambient light line." alt="" coords="417,56,552,83"/>
-<area shape="rect" id="node4" href="$parse_8h.html#a39197067937cd8880453eed92148ee31" title="Parse camera line." alt="" coords="419,107,550,133"/>
-<area shape="rect" id="node5" href="$parse__bonus_8h.html#ae972e22d4e9386b05598736b617c2ff2" title="Parse cone line." alt="" coords="611,309,723,336"/>
-<area shape="rect" id="node10" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="600,157,733,184"/>
-<area shape="rect" id="node12" href="$parse_8h.html#a4aae05e7a38646951b318a2de0b24689" title="Parse light line." alt="" coords="429,5,540,32"/>
-<area shape="rect" id="node13" href="$parse__entity__sp__pl__cy__bonus_8c.html#a64877aac0d88b33e1bb87b3c9a3496dc" title="Parse plane line." alt="" coords="608,208,725,235"/>
-<area shape="rect" id="node14" href="$parse_8h.html#aa1379d0b3d46c0fd44da3298e17866cc" title="Parse sphere line." alt="" coords="604,259,729,285"/>
-<area shape="rect" id="node3" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="257,81,369,108"/>
-<area shape="rect" id="node6" href="$parse__bonus_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="425,309,544,336"/>
-<area shape="rect" id="node7" href="$parse__bonus_8c.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="257,309,369,336"/>
-<area shape="rect" id="node8" href="$parse__bonus_8c.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,309,209,336"/>
-<area shape="rect" id="node9" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,309,60,336"/>
-<area shape="rect" id="node11" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="425,183,544,209"/>
+<area shape="rect" id="node1" title="Parse a single float." alt="" coords="1059,208,1169,235"/>
+<area shape="rect" id="node2" href="$parse_8h.html#a43353d6bde35357648843c359e4d00a5" title="Parse ambient light line." alt="" coords="634,208,769,235"/>
+<area shape="rect" id="node8" href="$parse_8h.html#a39197067937cd8880453eed92148ee31" title="Parse camera line." alt="" coords="636,107,767,133"/>
+<area shape="rect" id="node9" href="$parse__bonus_8h.html#a0ee220aca489e16d423c754b9d88e2dd" title="Parse cone line." alt="" coords="842,411,1001,437"/>
+<area shape="rect" id="node11" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="855,56,988,83"/>
+<area shape="rect" id="node13" href="$parse__bonus_8h.html#a30041bb98ced6caf1debb5468bfb6ad4" title="Parse cylinder line." alt="" coords="832,259,1011,285"/>
+<area shape="rect" id="node14" href="$parse_8h.html#a4aae05e7a38646951b318a2de0b24689" title="Parse light line." alt="" coords="646,157,757,184"/>
+<area shape="rect" id="node15" href="$parse__bonus_8h.html#a672a980c7d877d0d42971cd811541bd4" title="Parse plane line." alt="" coords="840,309,1003,336"/>
+<area shape="rect" id="node16" href="$parse_8h.html#aa1379d0b3d46c0fd44da3298e17866cc" title="Parse sphere line." alt="" coords="859,5,984,32"/>
+<area shape="rect" id="node17" href="$parse__bonus_8h.html#a756cf4a5c0b85e0c22b8fd64423850ec" title="Parse sphere line." alt="" coords="836,360,1007,387"/>
+<area shape="rect" id="node3" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="435,132,547,159"/>
+<area shape="rect" id="node7" href="$parse__bonus_8h.html#a4ce5cad477407308f911966a9446f560" title="Dispatcher for different parsing functions." alt="" coords="412,183,571,209"/>
+<area shape="rect" id="node4" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="257,157,364,184"/>
+<area shape="rect" id="node5" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,157,209,184"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,157,60,184"/>
+<area shape="rect" id="node10" href="$parse__bonus_8c.html#a65db4c46c2af2d9b570687b3a1458f15" title=" " alt="" coords="619,309,784,336"/>
+<area shape="rect" id="node12" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="642,56,761,83"/>
 </map>

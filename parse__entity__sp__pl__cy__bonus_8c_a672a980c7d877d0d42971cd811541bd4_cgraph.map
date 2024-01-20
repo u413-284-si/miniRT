@@ -1,0 +1,11 @@
+<map id="ft_parse_plane_bonus" name="ft_parse_plane_bonus">
+<area shape="rect" id="node1" title="Parse plane line." alt="" coords="5,81,168,108"/>
+<area shape="rect" id="node2" href="$parse_8h.html#a2bb654728a666a68ad6b6627cd27e918" title="Parses values of a rgb colour block." alt="" coords="416,5,579,32"/>
+<area shape="rect" id="node4" href="$parse_8h.html#a4df2d6a5cd30a4f3ca3a1283c7afaafa" title="Parse a single float." alt="" coords="237,56,347,83"/>
+<area shape="rect" id="node5" href="$parse_8h.html#ad1918f45b6a322a21c3541825b405eb6" title="Parse values of a float block." alt="" coords="216,107,368,133"/>
+<area shape="rect" id="node7" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="237,157,347,184"/>
+<area shape="rect" id="node3" href="$ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e" title="Converts a String to a double." alt="" coords="627,56,703,83"/>
+<area shape="rect" id="node6" href="$parse__line_8c.html#a4df2d6a5cd30a4f3ca3a1283c7afaafa" title="Parse a single float." alt="" coords="442,107,553,133"/>
+<area shape="rect" id="node8" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="448,157,547,184"/>
+<area shape="rect" id="node9" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="442,208,553,235"/>
+</map>

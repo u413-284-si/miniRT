@@ -1,8 +1,13 @@
 <map id="ft_perror_not_unit" name="ft_perror_not_unit">
-<area shape="rect" id="node1" title="Error message if vector is not a unit vector." alt="" coords="569,56,707,83"/>
-<area shape="rect" id="node2" href="$check_8h.html#a806133750c2b871ad705916e6d997f31" title="Checks three floats, separated by &#39;,&#39; and calcs checksum." alt="" coords="379,56,521,83"/>
-<area shape="rect" id="node3" href="$check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675" title="Checks if camera line is correct." alt="" coords="197,5,329,32"/>
-<area shape="rect" id="node5" href="$check_8h.html#ae60d55778d26a79bd9d60676862afcac" title="Checks if cylinder line is correct." alt="" coords="196,56,331,83"/>
-<area shape="rect" id="node6" href="$check_8h.html#a1e36aec7efe086076efcaf9991f28abe" title="Checks if plane line is correct." alt="" coords="204,107,323,133"/>
-<area shape="rect" id="node4" href="$check_8h.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="5,56,148,83"/>
+<area shape="rect" id="node1" title="Error message if vector is not a unit vector." alt="" coords="1029,56,1167,83"/>
+<area shape="rect" id="node2" href="$check_8h.html#a806133750c2b871ad705916e6d997f31" title="Checks three floats, separated by &#39;,&#39; and calcs checksum." alt="" coords="839,56,981,83"/>
+<area shape="rect" id="node3" href="$check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675" title="Checks if camera line is correct." alt="" coords="657,107,789,133"/>
+<area shape="rect" id="node10" href="$check_8h.html#ae60d55778d26a79bd9d60676862afcac" title="Checks if cylinder line is correct." alt="" coords="656,5,791,32"/>
+<area shape="rect" id="node11" href="$check_8h.html#a1e36aec7efe086076efcaf9991f28abe" title="Checks if plane line is correct." alt="" coords="664,56,783,83"/>
+<area shape="rect" id="node4" href="$check_8h.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="465,52,608,79"/>
+<area shape="rect" id="node8" href="$check__bonus_8h.html#ae33774d34021cd6fec6863eff3e8e3b0" title="Dispatch function for different line types." alt="" coords="465,103,608,145"/>
+<area shape="rect" id="node5" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="280,55,395,81"/>
+<area shape="rect" id="node6" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,81,209,108"/>
+<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,81,60,108"/>
+<area shape="rect" id="node9" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="257,107,417,133"/>
 </map>

@@ -1,0 +1,6 @@
+<map id="ft_check_line_type_bonus" name="ft_check_line_type_bonus">
+<area shape="rect" id="node1" title="Dispatch function for different line types." alt="" coords="465,5,608,47"/>
+<area shape="rect" id="node2" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="257,13,417,39"/>
+<area shape="rect" id="node3" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,13,209,39"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,60,39"/>
+</map>

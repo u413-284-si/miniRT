@@ -127,67 +127,88 @@ var sectionId = 'dynsection-4';
 <g id="node4" class="node">
 <title>Node4</title>
 <g id="a_node4"><a xlink:href="import__file_8h.html#a9260f4680d33314ef51e7096426acdae" target="_top" xlink:title="Import file and split it into lines.">
-<polygon fill="none" stroke="black" points="306,-57.5 306,-76.5 406,-76.5 406,-57.5 306,-57.5"/>
-<text text-anchor="middle" x="356" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_read_and_split</text>
+<polygon fill="none" stroke="black" points="306,-38.5 306,-57.5 406,-57.5 406,-38.5 306,-38.5"/>
+<text text-anchor="middle" x="356" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_read_and_split</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M431.94,-77.95C423.33,-76.69 414.48,-75.4 406.02,-74.16"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="431.5,-81.42 441.9,-79.41 432.51,-74.5 431.5,-81.42"/>
+<path fill="none" stroke="midnightblue" d="M444.12,-73.46C426.43,-68.3 406.27,-62.4 389.79,-57.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="443.62,-76.96 454.2,-76.41 445.58,-70.25 443.62,-76.96"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:href="import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111" target="_top" xlink:title="Check file extension, import file and prepare for use.">
-<polygon fill="none" stroke="black" points="189,-57.5 189,-76.5 270,-76.5 270,-57.5 189,-57.5"/>
-<text text-anchor="middle" x="229.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_import_file</text>
+<polygon fill="none" stroke="black" points="189,-38.5 189,-57.5 270,-57.5 270,-38.5 189,-38.5"/>
+<text text-anchor="middle" x="229.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_import_file</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M295.7,-67C287.04,-67 278.3,-67 270.15,-67"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="295.79,-70.5 305.79,-67 295.79,-63.5 295.79,-70.5"/>
+<path fill="none" stroke="midnightblue" d="M295.7,-48C287.04,-48 278.3,-48 270.15,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="295.79,-51.5 305.79,-48 295.79,-44.5 295.79,-51.5"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:href="parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" target="_top" xlink:title="Imports, checks, and parses the provided file.">
-<polygon fill="none" stroke="black" points="77,-57.5 77,-76.5 153,-76.5 153,-57.5 77,-57.5"/>
-<text text-anchor="middle" x="115" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_file</text>
+<polygon fill="none" stroke="black" points="77,-19.5 77,-38.5 153,-38.5 153,-19.5 77,-19.5"/>
+<text text-anchor="middle" x="115" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_file</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M178.82,-67C170.16,-67 161.29,-67 153.05,-67"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="178.84,-70.5 188.84,-67 178.84,-63.5 178.84,-70.5"/>
+<path fill="none" stroke="midnightblue" d="M178.82,-39.61C170.16,-38.15 161.29,-36.65 153.05,-35.26"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="178.39,-43.09 188.84,-41.3 179.56,-36.18 178.39,-43.09"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-57.5 0,-76.5 41,-76.5 41,-57.5 0,-57.5"/>
-<text text-anchor="middle" x="20.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
+<polygon fill="none" stroke="black" points="0,-19.5 0,-38.5 41,-38.5 41,-19.5 0,-19.5"/>
+<text text-anchor="middle" x="20.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M66.72,-67C57.65,-67 48.64,-67 41.07,-67"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="66.91,-70.5 76.91,-67 66.91,-63.5 66.91,-70.5"/>
+<path fill="none" stroke="midnightblue" d="M66.72,-29C57.65,-29 48.64,-29 41.07,-29"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="66.91,-32.5 76.91,-29 66.91,-25.5 66.91,-32.5"/>
 </g>
 <!-- Node8&#45;&gt;Node4 -->
 <g id="edge8" class="edge">
 <title>Node8&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M445.13,-54.12C432.73,-55.93 419.03,-57.93 406.21,-59.81"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="445.81,-57.56 455.2,-52.65 444.8,-50.63 445.81,-57.56"/>
+<path fill="none" stroke="midnightblue" d="M445.13,-48C432.73,-48 419.03,-48 406.21,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="445.2,-51.5 455.2,-48 445.2,-44.5 445.2,-51.5"/>
+</g>
+<!-- Node10 -->
+<g id="node10" class="node">
+<title>Node10</title>
+<g id="a_node10"><a xlink:href="parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" target="_top" xlink:title="Mallocs storage space and writes data into storage.">
+<polygon fill="none" stroke="black" points="316,-0.5 316,-19.5 396,-19.5 396,-0.5 316,-0.5"/>
+<text text-anchor="middle" x="356" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_store_data</text>
+</a>
+</g>
+</g>
+<!-- Node9&#45;&gt;Node10 -->
+<g id="edge10" class="edge">
+<title>Node9&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M559.81,-10C511.01,-10 439.87,-10 396.11,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="559.86,-13.5 569.86,-10 559.86,-6.5 559.86,-13.5"/>
+</g>
+<!-- Node10&#45;&gt;Node6 -->
+<g id="edge11" class="edge">
+<title>Node10&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M305.62,-13.93C260.33,-17.53 194.25,-22.78 153.25,-26.04"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="306.11,-17.4 315.8,-13.12 305.56,-10.42 306.11,-17.4"/>
 </g>
 </g>
 </svg>

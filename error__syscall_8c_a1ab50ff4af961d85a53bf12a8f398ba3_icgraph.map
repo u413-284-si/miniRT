@@ -4,8 +4,9 @@
 <area shape="rect" id="node8" href="$import__file_8h.html#a738f6fd9290967f972da877e935cb8d8" title="Initiates a t_buf buffer." alt="" coords="613,56,699,83"/>
 <area shape="rect" id="node9" href="$parse_8h.html#a5c7cd128e38180fcea33c559a075424e" title="Allocates memory for lights and hittable array." alt="" coords="765,107,883,133"/>
 <area shape="rect" id="node3" href="$import__file_8h.html#af0392d80791e758ec536af492c9cfe07" title="Reads provided file into buffer." alt="" coords="595,5,717,32"/>
-<area shape="rect" id="node4" href="$import__file_8h.html#a9260f4680d33314ef51e7096426acdae" title="Import file and split it into lines." alt="" coords="413,31,547,57"/>
-<area shape="rect" id="node5" href="$import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111" title="Check file extension, import file and prepare for use." alt="" coords="257,31,365,57"/>
-<area shape="rect" id="node6" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,31,209,57"/>
-<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node4" href="$import__file_8h.html#a9260f4680d33314ef51e7096426acdae" title="Import file and split it into lines." alt="" coords="413,56,547,83"/>
+<area shape="rect" id="node5" href="$import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111" title="Check file extension, import file and prepare for use." alt="" coords="257,56,365,83"/>
+<area shape="rect" id="node6" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,81,209,108"/>
+<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,81,60,108"/>
+<area shape="rect" id="node10" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="427,107,533,133"/>
 </map>

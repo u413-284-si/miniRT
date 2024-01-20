@@ -1,4 +1,0 @@
-<map id="ft_check_entity_count" name="ft_check_entity_count">
-<area shape="rect" id="node1" title="Check if minimum number of specific entities was found." alt="" coords="5,5,169,32"/>
-<area shape="rect" id="node2" href="$error__msg_8h.html#a55f805a774b02619d20d73cba9e90de3" title="Error message if entity count is not correct." alt="" coords="217,5,337,32"/>
-</map>

@@ -1,7 +1,7 @@
 var parse__entity__sp__pl__cy__bonus_8c =
 [
-    [ "ft_parse_cone", "parse__entity__sp__pl__cy__bonus_8c.html#ae972e22d4e9386b05598736b617c2ff2", null ],
-    [ "ft_parse_cylinder", "parse__entity__sp__pl__cy__bonus_8c.html#aa8d46dc12737db49e568b734cdbc614a", null ],
-    [ "ft_parse_plane", "parse__entity__sp__pl__cy__bonus_8c.html#a64877aac0d88b33e1bb87b3c9a3496dc", null ],
-    [ "ft_parse_sphere", "parse__entity__sp__pl__cy__bonus_8c.html#aa1379d0b3d46c0fd44da3298e17866cc", null ]
+    [ "ft_parse_cone_bonus", "parse__entity__sp__pl__cy__bonus_8c.html#a0ee220aca489e16d423c754b9d88e2dd", null ],
+    [ "ft_parse_cylinder_bonus", "parse__entity__sp__pl__cy__bonus_8c.html#a30041bb98ced6caf1debb5468bfb6ad4", null ],
+    [ "ft_parse_plane_bonus", "parse__entity__sp__pl__cy__bonus_8c.html#a672a980c7d877d0d42971cd811541bd4", null ],
+    [ "ft_parse_sphere_bonus", "parse__entity__sp__pl__cy__bonus_8c.html#a756cf4a5c0b85e0c22b8fd64423850ec", null ]
 ];

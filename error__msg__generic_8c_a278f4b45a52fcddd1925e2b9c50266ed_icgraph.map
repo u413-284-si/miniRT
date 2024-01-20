@@ -1,6 +1,7 @@
 <map id="ft_perror_number" name="ft_perror_number">
-<area shape="rect" id="node1" title="Print error message with a number." alt="" coords="420,5,555,32"/>
-<area shape="rect" id="node2" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="257,5,372,32"/>
-<area shape="rect" id="node3" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,5,209,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="Print error message with a number." alt="" coords="465,31,600,57"/>
+<area shape="rect" id="node2" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="280,5,395,32"/>
+<area shape="rect" id="node5" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="257,56,417,83"/>
+<area shape="rect" id="node3" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,31,209,57"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,60,57"/>
 </map>

@@ -1,0 +1,22 @@
+<map id="ft_parse_lines_bonus" name="ft_parse_lines_bonus">
+<area shape="rect" id="node1" title="Dispatcher for different parsing functions." alt="" coords="5,81,164,108"/>
+<area shape="rect" id="node2" href="$parse_8h.html#a43353d6bde35357648843c359e4d00a5" title="Parse ambient light line." alt="" coords="447,56,582,83"/>
+<area shape="rect" id="node6" href="$parse_8h.html#a39197067937cd8880453eed92148ee31" title="Parse camera line." alt="" coords="449,5,580,32"/>
+<area shape="rect" id="node10" href="$parse__bonus_8c.html#a65db4c46c2af2d9b570687b3a1458f15" title=" " alt="" coords="212,208,377,235"/>
+<area shape="rect" id="node20" href="$parse_8h.html#a4aae05e7a38646951b318a2de0b24689" title="Parse light line." alt="" coords="459,107,570,133"/>
+<area shape="rect" id="node3" href="$parse_8h.html#a2bb654728a666a68ad6b6627cd27e918" title="Parses values of a rgb colour block." alt="" coords="652,208,815,235"/>
+<area shape="rect" id="node5" href="$parse_8h.html#a4df2d6a5cd30a4f3ca3a1283c7afaafa" title="Parse a single float." alt="" coords="678,107,789,133"/>
+<area shape="rect" id="node4" href="$ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e" title="Converts a String to a double." alt="" coords="1021,157,1097,184"/>
+<area shape="rect" id="node7" href="$utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9" title="Transforms degrees into radian." alt="" coords="658,5,809,32"/>
+<area shape="rect" id="node8" href="$parse_8h.html#ad1918f45b6a322a21c3541825b405eb6" title="Parse values of a float block." alt="" coords="657,157,809,184"/>
+<area shape="rect" id="node9" href="$parse__line_8c.html#a4df2d6a5cd30a4f3ca3a1283c7afaafa" title="Parse a single float." alt="" coords="863,157,973,184"/>
+<area shape="rect" id="node11" href="$parse__bonus_8h.html#a0ee220aca489e16d423c754b9d88e2dd" title="Parse cone line." alt="" coords="435,309,594,336"/>
+<area shape="rect" id="node16" href="$parse__bonus_8h.html#a30041bb98ced6caf1debb5468bfb6ad4" title="Parse cylinder line." alt="" coords="425,259,604,285"/>
+<area shape="rect" id="node18" href="$parse__bonus_8h.html#a672a980c7d877d0d42971cd811541bd4" title="Parse plane line." alt="" coords="433,208,596,235"/>
+<area shape="rect" id="node19" href="$parse__bonus_8h.html#a756cf4a5c0b85e0c22b8fd64423850ec" title="Parse sphere line." alt="" coords="429,157,600,184"/>
+<area shape="rect" id="node12" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="868,385,968,412"/>
+<area shape="rect" id="node13" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="678,259,789,285"/>
+<area shape="rect" id="node15" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="863,309,973,336"/>
+<area shape="rect" id="node14" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="869,259,967,285"/>
+<area shape="rect" id="node17" href="$entities_8h.html#a04247c619f2a14a5a1fdb06004b8cb03" title="Calculates the planes of the caps of a cylinder." alt="" coords="672,309,795,336"/>
+</map>
