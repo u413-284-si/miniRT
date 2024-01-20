@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_text_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 10:56:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/19 18:25:48 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static t_vec2i	ft_put_header(t_putinfo put, uint32_t options,
 	if (!ft_option_isset(options, O_SHOW_CTRL))
 	{
 		put.pos = ft_put_inc(put, options);
-		put.pos = ft_put_time(put, last_render_time,
+		put.pos = ft_put_time(put, last_render_time, \
 			ft_option_isset(options, O_SHOW_FPS));
 	}
 	put.pos.x -= 15;
