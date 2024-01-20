@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_random_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 20:20:40 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/19 12:38:58 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/20 14:30:42 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 float	ft_random_float(void)
 {
-	srand(time(0));
 	return (rand() / (RAND_MAX + 1.0));
 }
 
