@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/20 14:45:27 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/21 23:30:03 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,39 +251,6 @@ t_err	ft_output_as_ppm(const t_img img);
  * @return int		0 if successful, -1 if not.
  */
 int		ft_keyhook_press(int key, t_render *render);
-
-// render_keyhook_release.c
-
-/**
- * @brief Handles key releases.
- *
- * @param key		Keycode of the pressed key.
- * @param render	Pointer to render struct.
- * @return int		0 if successful, -1 if not.
- */
-int		ft_keyhook_release(int key, t_render *render);
-
-// render_keyhook_scene.c
-
-/**
- * @brief Manipulates the active hittable.
- *
- * Changes the active hittable or manipulates it.
- * @param key		Keycode of the pressed key.
- * @param scene		Pointer to scene struct.
- * @param active	Pointer to index of active hittable.
- * @param inc		Increment value.
- */
-void	ft_manip_scene(int key, t_entities *scene, int *active, float inc);
-
-/**
- * @brief Changes the active hittable.
- *
- * @param key		Keycode of the pressed key.
- * @param scene		Pointer to scene struct.
- * @param active	Pointer to index of active hittable.
- */
-void	ft_change_active_hittable(int key, t_entities *scene, int *active);
 
 // render_keyhook_hittable.c
 
@@ -570,5 +537,6 @@ void	ft_free_scene(t_entities *scene);
 void	ft_render_cleanup(t_render *render);
 
 void	ft_change_options(int key, t_render *render);
+void	ft_change_select(int key, t_render *render);
 
 #endif
