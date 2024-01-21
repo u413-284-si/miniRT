@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 12:06:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/21 13:22:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ void	ft_blend_background(t_render *render)
 		pos.x = -1;
 		while (++pos.x < render->mlx_ptrs.veil.size.x)
 		{
-			img_pixel = ft_convert_colour2int(render->sample_buffer[pos.y * render->cam.image.x + pos.x]);
+			img_pixel = ft_convert_colour2int(
+					render->sample_buffer[pos.y * render->cam.image.x + pos.x]);
 			blend_colour = ft_fast_alpha_blend(img_pixel, render->menu);
 			veil_pixel = (uint32_t *)(render->mlx_ptrs.veil.addr
 					+ (pos.y * render->mlx_ptrs.veil.line_len
@@ -121,7 +122,8 @@ void	ft_add_sample(t_render *render)
 		while (++pos.x < render->cam.image.x)
 		{
 			colour = ft_anti_alias(pos, ray, render->scene, render->cam);
-			colour = ft_add_colour(render->sample_buffer[pos.y * render->cam.image.x + pos.x], colour);
+			colour = ft_add_colour(colour,
+					render->sample_buffer[pos.y * render->cam.image.x + pos.x]);
 			render->sample_buffer[pos.y * render->cam.image.x + pos.x] = colour;
 		}
 	}

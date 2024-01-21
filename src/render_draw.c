@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/20 15:57:23 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/21 13:20:18 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ uint32_t	ft_pixel_colour(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
 	t_vec3		pixel_centre;
 
 	pixel_centre = cam.pix_cache[pos.y * cam.image.x + pos.x];
-
 	ray.direction = ft_vec3_norm(ft_vec3_sub(pixel_centre, ray.origin));
 	return (ft_convert_colour2int(ft_ray_colour(ray, scene)));
 }
