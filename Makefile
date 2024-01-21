@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/21 23:31:18 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/21 23:54:06 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -226,6 +226,7 @@ SRC_BONUS :=	anti_alias_bonus.c \
 				hit_cylinder_bonus.c \
 				hit_plane_bonus.c \
 				hit_sphere_bonus.c \
+				menu_put_options_bonus.c \
 				menu_put_text_bonus.c \
 				menu_put_time_bonus.c \
 				parse_bonus.c \

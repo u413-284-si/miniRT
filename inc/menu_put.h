@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/20 14:17:42 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 00:11:23 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@
 
 # define X_MENU_OFFSET 20
 # define Y_MENU_TOP 20
-# define Y_MENU_BOTTOM_SMALL 50
 # if IS_BONUS
-#  define Y_MENU_BOTTOM_BIG 130
+#  define Y_MENU_BOTTOM_SMALL 70
 # else
-#  define Y_MENU_BOTTOM_BIG 110
+#  define Y_MENU_BOTTOM_SMALL 50
 # endif
+# define Y_MENU_BOTTOM_BIG 110
 # define Y_HALF_LINE 10
 # define Y_NEXT_LINE 20
 # define Y_NEXT_LINE_BIG 30

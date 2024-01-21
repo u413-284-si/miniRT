@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 23:28:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/21 23:52:45 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static bool	ft_is_bonus_key(int key)
 {
-	return (key == XK_o || key == XK_p || key == XK_j || key == XK_k);
+	return (key == XK_o || key == XK_p || key == XK_j || key == XK_k
+		|| key == XK_l);
 }
 
 static bool	ft_is_option_key(int key)

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:15:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 12:57:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/21 23:53:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,13 @@ static void	ft_toggle_anti_alias(t_render *render)
 void	ft_change_options_bonus(int key, t_render *render)
 {
 	if (key == XK_o)
-		ft_option_toggle(&render->options, O_SHOW_FPS);
+		ft_option_toggle(&render->options, O_SHOW_OPTIONS);
 	else if (key == XK_p)
 		ft_start_printing(render);
 	else if (key == XK_j)
 		ft_option_toggle(&render->options, O_IS_THREADED);
 	else if (key == XK_k)
 		ft_toggle_anti_alias(render);
+	else if (key == XK_l)
+		ft_option_toggle(&render->options, O_SHOW_FPS);
 }

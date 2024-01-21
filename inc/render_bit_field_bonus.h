@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:06:03 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 12:47:28 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/21 23:50:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ typedef enum e_options
 	O_MANIP_HIGH = 9,
 	O_SHOW_FPS = 10,
 	O_IS_THREADED = 11,
-	O_IS_ANTI_ALIAS = 12
+	O_IS_ANTI_ALIAS = 12,
+	O_SHOW_OPTIONS = 13
 }	t_options;
 
 /* ====== FUNCTIONS ====== */
