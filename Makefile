@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/21 12:59:01 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/21 13:07:49 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -213,7 +213,6 @@ SRC_BASE := 	colour.c \
 				render_keyhook_press.c \
 				render_loop_mlx.c \
 				scene_light.c \
-				utils_colour.c \
 				utils_cylinder.c \
 				utils_math.c \
 
@@ -244,7 +243,6 @@ SRC_BONUS :=	anti_alias_bonus.c \
 				scene_reflection_bonus.c \
 				texture_bonus.c \
 				time_bonus.c \
-				utils_colour_bonus.c \
 				utils_cone_bonus.c \
 				utils_cylinder_bonus.c \
 				utils_math_bonus.c \
