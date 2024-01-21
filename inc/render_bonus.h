@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/20 14:46:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/21 12:13:51 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,8 @@ typedef struct s_render
 	uint64_t		last_render_time;
 	bool			is_printing;
 	pthread_mutex_t	mut_print;
+	t_colour		*sample_buffer;
+	uint8_t			sample_goal;
 }	t_render;
 
 /**
@@ -197,6 +199,8 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color);
  * @param render	Pointer to render struct.
  */
 void	ft_render_image(t_render *render);
+
+void	ft_add_sample(t_render *render);
 
 /**
  * @brief Creates a blended colour from colour and menu colour.
@@ -602,6 +606,10 @@ void	ft_change_options(int key, t_render *render);
 
 void	*ft_cam_calc_rays_threaded(void *arg);
 void	*ft_render_image_threaded(void *arg);
+void	*ft_add_sample_threaded(void *arg);
 void	*ft_blend_background_threaded(void *arg);
+
+t_colour	ft_pixel_colour(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
+t_colour	ft_anti_alias(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
 
 #endif
