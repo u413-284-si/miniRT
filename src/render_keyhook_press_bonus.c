@@ -6,17 +6,21 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/20 14:07:54 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/21 12:57:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_bonus.h"
 
+static bool	ft_is_bonus_key(int key)
+{
+	return (key == XK_o || key == XK_p || key == XK_j || key == XK_k);
+}
+
 static bool	ft_is_option_key(int key)
 {
 	return (key == XK_Escape || key == XK_Shift_L || key == XK_Control_L
-		|| key == XK_i || key == XK_o || key == XK_u || key == XK_p
-		|| key == XK_j);
+		|| key == XK_i || key == XK_u);
 }
 
 static bool	ft_is_manip_key(int key)
@@ -36,6 +40,8 @@ int	ft_keyhook_press(int key, t_render *render)
 		return (0);
 	if (ft_is_option_key(key))
 		ft_change_options(key, render);
+	else if (ft_is_bonus_key(key))
+		ft_change_options_bonus(key, render);
 	else if (ft_is_manip_key(key))
 	{
 		inc = ft_get_increment(render->options);

@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/21 12:21:16 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/21 12:59:01 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -189,6 +189,7 @@ SRC_COMMON := 	camera_movement.c \
 				render_keyhook_colour.c \
 				render_keyhook_hittable.c \
 				render_keyhook_light.c \
+				render_keyhook_options.c \
 				render_keyhook_scene.c \
 				render_keyhook_utils.c \
 				render_mouse.c \
@@ -209,7 +210,6 @@ SRC_BASE := 	colour.c \
 				render_cleanup.c \
 				render_draw.c \
 				render_init_base.c \
-				render_keyhook_options.c \
 				render_keyhook_press.c \
 				render_loop_mlx.c \
 				scene_light.c \
