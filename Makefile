@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/22 10:48:37 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/22 13:19:19 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -205,7 +205,6 @@ SRC_COMMON := 	camera_movement.c \
 				render_keyhook_utils.c \
 				render_mouse.c \
 				scene_shadow.c \
-				utils_entities.c \
 				utils_interval.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c \
