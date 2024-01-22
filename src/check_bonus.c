@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:59:23 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 14:25:52 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_err	ft_check_lines_bonus(char **lines, int *lsrc_c, int *total)
 	while (lines[i])
 	{
 		type = ft_check_line_type_bonus(lines[i++]);
-		if (type == COMMENT)
+		if (type == COMMENT || type == WIN_SIZE)
 			continue ;
 		if (type == UNKNOWN
 			|| ft_incr_ent_count_bonus(ent_count, type))
@@ -47,6 +47,8 @@ t_type	ft_check_line_type_bonus(char *line)
 		return (ft_check_camera(line + 1));
 	else if (*line == 'L')
 		return (ft_check_light(line + 1));
+	else if (*line == 'S')
+		return (ft_check_win_size(line + 1));
 	else if (!ft_strncmp(line, "sp", 2))
 		return (ft_check_sphere_bonus(line + 2));
 	else if (!ft_strncmp(line, "pl", 2))
