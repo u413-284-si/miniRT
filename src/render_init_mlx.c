@@ -6,32 +6,24 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:19:10 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/05 10:10:54 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 15:27:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
 
-t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen)
+t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, t_vec2i *win_size)
 {
-	t_vec2i	win_size;
-
 	if (ft_err_mlx_init((void **)&mlx_ptrs->mlx_ptr))
 		return (ERROR);
-	if (fullscreen)
-		win_size = ft_set_fullscreen(mlx_ptrs->mlx_ptr);
-	else
-	{
-		win_size.x = WIN_SIZE_X;
-		win_size.y = WIN_SIZE_Y;
-	}
+	*win_size = ft_check_screen_size(mlx_ptrs->mlx_ptr, *win_size);
 	if (ft_err_mlx_new_window((void **)&mlx_ptrs->win_ptr,
-			mlx_ptrs->mlx_ptr, win_size, "miniRT"))
+			mlx_ptrs->mlx_ptr, *win_size, "miniRT"))
 	{
 		ft_free_mlx(mlx_ptrs->mlx_ptr, NULL, NULL, NULL);
 		return (ERROR);
 	}
-	if (ft_init_image(mlx_ptrs, win_size))
+	if (ft_init_image(mlx_ptrs, *win_size))
 	{
 		ft_free_mlx(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, NULL, NULL);
 		return (ERROR);
@@ -39,11 +31,15 @@ t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen)
 	return (SUCCESS);
 }
 
-t_vec2i	ft_set_fullscreen(void *mlx_ptr)
+t_vec2i	ft_check_screen_size(void *mlx_ptr, t_vec2i win_size)
 {
-	t_vec2i	win_size;
+	t_vec2i	screen_size;
 
-	mlx_get_screen_size(mlx_ptr, &win_size.x, &win_size.y);
+	mlx_get_screen_size(mlx_ptr, &screen_size.x, &screen_size.y);
+	if (win_size.x > screen_size.x)
+		win_size.x = screen_size.x;
+	if (win_size.y > screen_size.y)
+		win_size.y = screen_size.y;
 	return (win_size);
 }
 
