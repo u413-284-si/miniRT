@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/20 15:22:26 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:23:06 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ t_colour	ft_scale_colour(t_colour c, float scale);
  * @param colour	Colour to convert.
  * @return uint32_t	Converted colour.
  */
-uint32_t		ft_convert_colour2int(t_colour colour);
+uint32_t	ft_convert_colour2int(t_colour colour);
 
 /**
  * @brief Converts an int colour to a t_colour struct.
