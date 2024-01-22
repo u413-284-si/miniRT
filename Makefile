@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/22 10:27:19 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/22 10:48:37 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -251,6 +251,7 @@ SRC_BONUS :=	check_bonus.c \
 				render_output_ppm_bonus.c \
 				render_output_threaded_bonus.c \
 				render_sample_bonus.c \
+				render_threaded_fts_bonus.c \
 				scene_light_bonus.c \
 				scene_reflection_bonus.c \
 				texture_bonus.c \
@@ -260,7 +261,6 @@ SRC_BONUS :=	check_bonus.c \
 				utils_math_bonus.c \
 				utils_quaternion_bonus.c \
 				utils_random_bonus.c \
-				threads_alt_versions_bonus.c \
 				threads_bonus.c \
 
 # ******************************
