@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 16:14:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 14:36:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,7 @@ typedef struct s_render
 	t_mlx_ptrs	mlx_ptrs;
 	t_cam		cam;
 	t_entities	scene;
+	t_vec2i		win_size;
 	t_mouse		mouse;
 	t_menu		menu;
 	uint32_t	options;

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:38:32 by gwolf             #+#    #+#             */
-/*   Updated: 2023/11/13 12:02:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 15:08:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,13 @@ void	ft_parse_float_block(char **line, t_vec3 *vec3)
 	ft_parse_float(line, &vec3->x);
 	ft_parse_float(line, &vec3->y);
 	ft_parse_float(line, &vec3->z);
+}
+
+void	ft_parse_int(char **line, int *var)
+{
+	*var = ft_atoi(*line);
+	while (ft_isdigit(**line))
+		(*line)++;
+	if (*(*line + 1) != '\0')
+		(*line)++;
 }

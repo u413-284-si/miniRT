@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 18:16:18 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 15:08:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PARSE_BONUS_H
 
 /* ====== LIBRARIES ====== */
+
+# include "libft.h"
 
 # include "error_syscall.h"
 # include "cleanup.h"
@@ -33,7 +35,7 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total);
 t_err	ft_check_lines_bonus(char **lines, int *lsrc_c, int *total);
 
 // import from parse.h
-void	ft_parse_lines(t_entities *scene, t_cam *cam, char **lines);
+void	ft_parse_lines(char **lines, t_entities *scene, t_cam *cam);
 
 // parse.c
 
@@ -47,26 +49,28 @@ void	ft_parse_lines(t_entities *scene, t_cam *cam, char **lines);
  * @param filename	Provided filename.
  * @param scene		Where entities are stored.
  * @param cam		Camera used in program.
+ * @param win_size	Window size.
  * @return t_err SUCCESS, ERROR if subfunction fails.
  */
-t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam);
+t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam,
+			t_vec2i *win_size);
 
 /**
- * @brief Mallocs storage space and writes data into storage
- * 
- * @param scene		Where entities are stored.
- * @param lines		Content of read file.
- * @param is_bonus	Boolean to determine whether bonus functions are used.
- * @param cam		Camera used in program.
- * @return t_err SUCCESS, ERROR if subfunction fails.
+ * @brief Chooses the correct checker function depending on bool is_bonus.
+ *
+ * @param lines		Imported file in sanitized array.
+ * @param lsrc_c	Count of found entities light.
+ * @param total		Count of found entities sphere + plane + cylinder.
+ * @param is_bonus	True if file has "#bonus" in first line.
+ * @return t_err	ERROR if subfunction fails.
  */
-t_err	ft_store_data(t_entities *scene, char **lines, bool is_bonus, \
-	t_cam *cam);
+t_err	ft_choose_check_ft(char **lines, int *lsrc_c, int *total,
+			bool is_bonus);
 
 /**
  * @brief Initialises the bonus parameters of all entities
  * to zero when reading a base file
- * 
+ *
  * Bonus parameters:
  * - Shininess
  * - Reflectivity
@@ -91,11 +95,13 @@ t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total);
  *
  * Loops through lines and saves them according to their identifier.
  * Keeps track of lights and id to correctly address array index.
- * @param scene 	Where entities are stored.
- * @param cam	Camera used in program.
- * @param lines	Imported file in sanitized array.
+ * @param lines		Imported file in sanitized array.
+ * @param scene		Where entities are stored.
+ * @param cam		Camera used in program.
+ * @param win_size	Window size.
  */
-void	ft_parse_lines_bonus(t_entities *scene, t_cam *cam, char **lines);
+void	ft_parse_lines_bonus(char **lines, t_entities *scene, t_cam *cam,
+			t_vec2i *win_size);
 
 // parse_entity1.c
 
@@ -198,7 +204,7 @@ void	ft_parse_cylinder_bonus(char *line, t_hittable *cylinder, size_t id);
 
 /**
  * @brief Parse cone line.
- * 
+ *
  * Function gets called if line has identifier "co".
  * Parse the following:
  * - x,y,z coordinates of the apex of the cone.
@@ -210,9 +216,9 @@ void	ft_parse_cylinder_bonus(char *line, t_hittable *cylinder, size_t id);
  * - whether it's checkered.
  * - R,G,B colors in range [0,255].
  * Also sets type and id.
- * @param line 
- * @param cone 
- * @param id 
+ * @param line
+ * @param cone
+ * @param id
  */
 void	ft_parse_cone_bonus(char *line, t_hittable *cone, size_t id);
 
@@ -248,5 +254,22 @@ void	ft_parse_float(char **line, float *var);
  * @param vec3	Struct where to save.
  */
 void	ft_parse_float_block(char **line, t_vec3 *vec3);
+
+/**
+ * @brief Parses a single int.
+ *
+ * Moves the line forward.
+ * @param line	Pointer to current position of line.
+ * @param var	Variable where to save.
+ */
+void	ft_parse_int(char **line, int *var);
+
+/**
+ * @brief Parse window size line.
+ *
+ * @param line		Pointer to current line.
+ * @param win_size	Struct where to save.
+ */
+void	ft_parse_win_size(char *line, t_vec2i *win_size);
 
 #endif

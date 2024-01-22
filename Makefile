@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
+#    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/19 17:59:56 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/22 15:09:24 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -220,6 +220,7 @@ SRC_BASE := 	colour.c \
 
 SRC_BONUS :=	check_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
+				check_win_size_bonus.c \
 				colour_bonus.c \
 				error_msg_check_bonus.c \
 				hit_bonus.c \
@@ -231,6 +232,7 @@ SRC_BONUS :=	check_bonus.c \
 				menu_put_time_bonus.c \
 				parse_bonus.c \
 				parse_entity_sp_pl_cy_bonus.c \
+				parse_win_size_bonus.c \
 				ray_bonus.c \
 				render_compose_image_bonus.c \
 				render_draw_bonus.c \

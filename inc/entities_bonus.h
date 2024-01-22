@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   entities_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/19 12:48:32 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 14:17:25 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 
 /**
  * @brief Represents lighting in the scene
- * 
+ *
  * @param id		ID of the light
  * @param pos		Position of the light
  * @param ratio		Light brightess ratio
@@ -43,7 +43,7 @@ typedef struct s_light
 
 /**
  * @brief Represents a sphere
- * 
+ *
  * @param centre	Centre of the sphere
  * @param r			Radius of the sphere
  * @param colour	Colour of the sphere
@@ -57,7 +57,7 @@ typedef struct s_sphere
 
 /**
  * @brief Represents a plane
- * 
+ *
  * @param point		Point on the plane
  * @param normal	Normalised [-1, 1] normal vector of the plane
  * @param colour	Colour of the plane
@@ -71,7 +71,7 @@ typedef struct s_plane
 
 /**
  * @brief Represents a cylinder
- * 
+ *
  * @param centre	Centre of the cylinder
  * @param axis		Normalised [-1, 1] axis of the cylinder
  * @param r			Radius of the cylinder
@@ -93,7 +93,7 @@ typedef struct s_cylinder
 
 /**
  * @brief Represents a cone
- * 
+ *
  * @param apex		Apex point of the cone
  * @param base		Base of the cone
  * @param axis		Normalised [-1, 1] axis of the cone
@@ -122,6 +122,7 @@ typedef struct s_cone
  */
 typedef enum e_type
 {
+	WIN_SIZE = -3,
 	COMMENT = -2,
 	UNKNOWN = -1,
 	SPHERE,
@@ -136,10 +137,10 @@ typedef enum e_type
 
 /**
  * @brief Contains information of the different shapes
- * 
+ *
  * Each union represents one shape which can be addressed
  * by the respective member. The memory space can be interpreted
- * with different names (its members) as a variable. It 
+ * with different names (its members) as a variable. It
  * has the size of the biggest member type.
  * @param sp	Union variable addressed as sphere.
  * @param pl	Union variable addressed as plane.
@@ -154,16 +155,16 @@ typedef union u_shape
 }	t_shape;
 
 /**
- * @brief Represents a hittable 
- * 
+ * @brief Represents a hittable
+ *
  * @param id			The hittables ID
  * @param type			The hittables type
  * @param params		Required parameters to distinctly describe the hittable
  * @param shininess		Material property of point of intersection
- * 						on the breadth of the angle of specular reflection 
+ * 						on the breadth of the angle of specular reflection
  * 						(the higher, the smoother the surface appears)
  * @param reflectivity	Material property of point of intersection
- * 						on share of reflected light 
+ * 						on share of reflected light
  * @param Checkered		Indicates whether the hittable has a checker texture
  */
 typedef struct s_hittable

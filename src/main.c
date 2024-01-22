@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/14 17:14:02 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 14:55:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 		ft_perror("Usage: ./miniRT file.rt", 0);
 		exit(1);
 	}
-	if (ft_parse_file(argv[1], &render.scene, &render.cam))
+	if (ft_parse_file(argv[1], &render.scene, &render.cam, &render.win_size))
 		return (1);
 	if (ft_init_mlx_ptrs(&render.mlx_ptrs, false))
 	{

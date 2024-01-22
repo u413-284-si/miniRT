@@ -3,56 +3,57 @@
 /*                                                        :::      ::::::::   */
 /*   parse_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 18:11:15 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 15:13:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parse_bonus.h"
 
-t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam)
+t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam,
+			t_vec2i *win_size)
 {
 	char	**lines;
 	bool	is_bonus;
-	t_err	err;
 
 	lines = NULL;
-	is_bonus = false;
 	if (ft_import_file(filename, &lines))
 		return (ERROR);
-	if (!ft_strncmp(*lines, "#bonus", 6))
-		is_bonus = true;
+	is_bonus = !ft_strncmp(*lines, "#bonus", 6);
+	if (ft_choose_check_ft(lines, &scene->lsrc_count, &scene->total, is_bonus))
+		return (ERROR);
+	if (ft_malloc_ents(&scene->lsrc, &scene->obj, scene->lsrc_count,
+			scene->total))
+	{
+		ft_free_char_arr(lines);
+		return (ERROR);
+	}
 	if (is_bonus)
-		err = ft_check_lines_bonus(lines, &scene->lsrc_count, &scene->total);
+		ft_parse_lines_bonus(lines, scene, cam, win_size);
 	else
-		err = ft_check_lines(lines, &scene->lsrc_count, &scene->total);
+	{
+		ft_parse_lines(lines, scene, cam);
+		ft_initialise_non_parsed(scene);
+	}
+	ft_free_char_arr(lines);
+	return (SUCCESS);
+}
+
+t_err	ft_choose_check_ft(char **lines, int *lsrc_c, int *total, bool is_bonus)
+{
+	t_err	err;
+
+	if (is_bonus)
+		err = ft_check_lines_bonus(lines, lsrc_c, total);
+	else
+		err = ft_check_lines(lines, lsrc_c, total);
 	if (err)
 	{
 		ft_free_char_arr(lines);
 		return (ERROR);
 	}
-	return (ft_store_data(scene, lines, is_bonus, cam));
-}
-
-t_err	ft_store_data(t_entities *scene, char **lines, bool is_bonus, \
-	t_cam *cam)
-{
-	if (ft_malloc_ents(&scene->lsrc, &scene->obj,
-			scene->lsrc_count, scene->total))
-	{
-		ft_free_char_arr(lines);
-		return (ERROR);
-	}
-	if (is_bonus)
-		ft_parse_lines_bonus(scene, cam, lines);
-	else
-	{
-		ft_parse_lines(scene, cam, lines);
-		ft_initialise_non_parsed(scene);
-	}
-	ft_free_char_arr(lines);
 	return (SUCCESS);
 }
 
@@ -84,7 +85,8 @@ void	ft_parse_entity_bonus(char *line, t_hittable *obj)
 	id++;
 }
 
-void	ft_parse_lines_bonus(t_entities *scene, t_cam *cam, char **lines)
+void	ft_parse_lines_bonus(char **lines, t_entities *scene, t_cam *cam,
+			t_vec2i *win_size)
 {
 	static int	light_id = 0;
 
@@ -99,6 +101,8 @@ void	ft_parse_lines_bonus(t_entities *scene, t_cam *cam, char **lines)
 			ft_parse_light(*lines + 2, &scene->lsrc[light_id], light_id);
 			light_id++;
 		}
+		else if (**lines == 'S')
+			ft_parse_win_size(*lines + 2, win_size);
 		else if (**lines != '#')
 			ft_parse_entity_bonus(*lines, scene->obj);
 		lines++;
