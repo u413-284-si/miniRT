@@ -6,11 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 15:24:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 18:01:34 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
+
+#ifndef IS_BONUS
 
 void	ft_manip_hittable(int key, t_hittable *hittable, float inc)
 {
@@ -21,6 +23,7 @@ void	ft_manip_hittable(int key, t_hittable *hittable, float inc)
 	else if (hittable->type == CYLINDER)
 		ft_manip_cylinder(key, &hittable->params.cy, inc);
 }
+#endif
 
 void	ft_manip_sphere(int key, t_sphere *sp, float inc)
 {
@@ -45,7 +48,7 @@ void	ft_manip_plane(int key, t_plane *pl, float inc)
 void	ft_manip_cylinder(int key, t_cylinder *cy, float inc)
 {
 	if (key >= XK_0 && key <= XK_9)
-		ft_keyhook_change_col(key, &cy->colour, inc);
+		return (ft_keyhook_change_col(key, &cy->colour, inc));
 	else if (key >= XK_Left && key <= XK_Down)
 		ft_keyhook_rot_vec(key, &cy->axis, inc);
 	else if (key == XK_r || key == XK_f)
@@ -53,8 +56,7 @@ void	ft_manip_cylinder(int key, t_cylinder *cy, float inc)
 	else if (key == XK_t || key == XK_g)
 		ft_keyhook_inc_dec(key, &cy->h, FLOAT_MAX, inc);
 	else
-	{
 		ft_keyhook_mv_point(key, &cy->centre, inc);
-		ft_cy_calc_caps(cy);
-	}
+	cy->cap1 = ft_vec3_add(cy->centre, ft_vec3_scale(cy->axis, -cy->r));
+	cy->cap2 = ft_vec3_add(cy->centre, ft_vec3_scale(cy->axis, cy->r));
 }
