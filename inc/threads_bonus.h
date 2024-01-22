@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:34:50 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:48:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 17:11:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,7 @@ t_err	ft_spin_threads(void *arg, void *(*routine)(void *));
  *
  * Catches return of thread_create() in errno. If it fails, ft_perror()s
  * the error message and sets current thread id to -1.
- * This way, ft_join_threads() can be called with join_all = false to join
- * only the threads which have been created.
+ * This way, ft_join_threads() can break out of the loop.
  * @param arg		Argument to pass to routine
  * @param routine	Function to call
  * @param threads	Array of t_thread_data
@@ -61,13 +60,12 @@ t_err	ft_create_threads(void *arg, void *(*routine)(void *),
 /**
  * @brief Joins threads.
  *
- * If join_all is true, joins all threads. If join_all is false, joins only
+ * Joins created threads. If thread creation fail the last threads ID is set
+ * to -1, which breaks out of the loop.
  * the threads which have been created.
- * @param threads	Array of t_thread_data
- * @param join_all	Whether to join all threads or only the ones which have
- * 					been created (error case)
+ * @param threads	Array of t_thread_data.
  */
-void	ft_join_threads(t_thread_data threads[NUM_THREADS], bool join_all);
+void	ft_join_threads(t_thread_data threads[NUM_THREADS]);
 
 /**
  * @brief Creates a single thread, which is detached.

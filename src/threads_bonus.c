@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:28:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 16:24:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 17:10:26 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,21 +33,11 @@ t_err	ft_create_threads(void *arg, void *(*routine)(void *),
 	return (SUCCESS);
 }
 
-void	ft_join_threads(t_thread_data threads[NUM_THREADS], bool join_all)
+void	ft_join_threads(t_thread_data threads[NUM_THREADS])
 {
 	int	i;
 
 	i = -1;
-	if (join_all)
-	{
-		while (++i < NUM_THREADS)
-		{
-			errno = pthread_join(threads[i].t_id, NULL);
-			if (errno)
-				ft_perror("pthread_join() failed", errno);
-		}
-		return ;
-	}
 	while (++i < NUM_THREADS)
 	{
 		if (threads[i].id == -1)
@@ -64,10 +54,10 @@ t_err	ft_spin_threads(void *arg, void *(*routine)(void *))
 
 	if (ft_create_threads(arg, routine, threads))
 	{
-		ft_join_threads(threads, false);
+		ft_join_threads(threads);
 		return (ERROR);
 	}
-	ft_join_threads(threads, true);
+	ft_join_threads(threads);
 	return (SUCCESS);
 }
 
