@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 23:30:03 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 08:54:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,7 +199,7 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color);
  * each ray is returned and written to the mlx img.
  * @param render	Pointer to render struct.
  */
-void	ft_render_image(t_render *render);
+void	ft_raytrace_image(t_render *render);
 
 /**
  * @brief Creates a blended colour from colour and menu colour.

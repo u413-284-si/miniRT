@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/20 15:59:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 09:10:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,20 +65,6 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam);
 t_colour	ft_background_colour(t_ray ray);
 
 /**
- * @brief Creates a random sample ray in a square surrounding the current pixel
- *
- * Square side length is the distance to the next pixel.
- * Therefore it extends halfway to each neighbouring pixel.
- * @param pixel_centre	Position of current pixel
- * @param pixels		Pixel grid defining its starting position and
- * 						horizontal/vertical distances
- * @param cam 			Camera
- * @return t_ray
- */
-t_ray		ft_create_sample_ray(t_vec3 pixel_centre, t_pixel_grid pixels, \
-	t_cam cam);
-
-/**
  * @brief Generate a random vector that is confined within the square
  * surrounding a pixel. The vector lies in the same plane as the viewport.
  *
@@ -87,20 +73,5 @@ t_ray		ft_create_sample_ray(t_vec3 pixel_centre, t_pixel_grid pixels, \
  * @return t_vec3
  */
 t_vec3		ft_pixel_sample(t_pixel_grid pixels);
-
-/**
- * @brief Returns the colour of a pixel by means of anti-aliasing
- *
- * The pixel colour is generated as an average of a sample of ray colours
- * around the pixel in question.
- * @param iterate		Integer 2D vector containing current pixel position
- * @param pixels		Pixel grid defining its starting position and
- * 						horizontal/vertical distances
- * @param cam			Camera
- * @param scene			The scene containing all hittables
- * @return uint32_t		Colour of pixel.
- */
-uint32_t	ft_anti_aliase_colour(t_vec2i iterate, t_pixel_grid pixels, \
-	t_cam cam, t_entities scene);
 
 #endif
