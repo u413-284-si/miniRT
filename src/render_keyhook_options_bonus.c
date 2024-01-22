@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:15:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 23:53:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:34:03 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 static void	ft_start_printing(t_render *render)
 {
+	ft_option_set(&render->options, O_IS_PRINTING);
 	ft_toggle_is_printing(render);
 	ft_spin_detached_thread(render, ft_output_threaded);
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 00:52:36 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:36:44 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@ int	ft_programm_loop(t_render *render)
 {
 	static uint8_t	cur_sample;
 
+	if (ft_option_isset(render->options, O_IS_PRINTING))
+	{
+		if (ft_is_printing(render))
+			return (0);
+		ft_option_clear(&render->options, O_IS_PRINTING);
+	}
 	if (ft_option_isset(render->options, O_SCENE_CHANGED))
 	{
 		cur_sample = 0;
@@ -30,7 +36,7 @@ int	ft_programm_loop(t_render *render)
 
 int	ft_end_loop(t_render *render)
 {
-	if (ft_is_printing(render))
+	if (ft_option_isset(render->options, O_IS_PRINTING))
 		return (0);
 	mlx_loop_end(render->mlx_ptrs.mlx_ptr);
 	return (0);

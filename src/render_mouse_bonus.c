@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 08:30:26 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:43:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:38:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_mouse_hook_press(int button, int x, int y, t_render *render)
 {
-	if (ft_is_printing(render))
+	if (ft_option_isset(render->options, O_IS_PRINTING))
 		return (0);
 	if (button == Button3)
 	{
@@ -27,7 +27,7 @@ int	ft_mouse_hook_press(int button, int x, int y, t_render *render)
 
 int	ft_mouse_hook_release(int button, int x, int y, t_render *render)
 {
-	if (ft_is_printing(render))
+	if (ft_option_isset(render->options, O_IS_PRINTING))
 		return (0);
 	(void)x;
 	(void)y;
@@ -40,7 +40,7 @@ int	ft_mouse_hook_release(int button, int x, int y, t_render *render)
 
 int	ft_mouse_hook_move(int x, int y, t_render *render)
 {
-	if (ft_is_printing(render))
+	if (ft_option_isset(render->options, O_IS_PRINTING))
 		return (0);
 	if (x > render->mlx_ptrs.img.size.x || x < 0
 		|| y > render->mlx_ptrs.img.size.y || y < 0)

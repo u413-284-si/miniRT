@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 23:52:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:37:52 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_keyhook_press(int key, t_render *render)
 {
 	float	inc;
 
-	if (ft_is_printing(render))
+	if (ft_option_isset(render->options, O_IS_PRINTING))
 		return (0);
 	if (ft_is_option_key(key))
 		ft_change_options(key, render);

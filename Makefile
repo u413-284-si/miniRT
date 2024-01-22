@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/22 10:18:31 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/22 10:27:19 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,9 @@ ifeq ($(MODE), leak)
 else ifeq ($(MODE), address)
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/address
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/address
+else ifeq ($(MODE), thread)
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/thread
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/thread
 else ifeq ($(MODE), speed)
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/speed
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/speed
@@ -102,6 +105,9 @@ ifeq ($(MODE), leak)
 else ifeq ($(MODE), address)
 	CFLAGS += -fsanitize=address
 	LDFLAGS += -fsanitize=address
+else ifeq ($(MODE), thread)
+	CFLAGS += -fsanitize=thread
+	LDFLAGS += -fsanitize=thread
 else ifeq ($(MODE), speed)
 	CFLAGS = -Ofast -march=native
 	LDFLAGS += -flto
@@ -129,6 +135,8 @@ NAME = $(DEFAULT)
 LEAK := _leak
 # Append for fsanitize address checker
 ADDRESS := _address
+# Append for fsanitize thread checker
+THREAD := _thread
 # Append for speed optimization
 SPEED := _speed
 
@@ -137,6 +145,8 @@ ifeq ($(MODE), leak)
 	NAME = $(DEFAULT)$(LEAK)
 else ifeq ($(MODE), address)
 	NAME = $(DEFAULT)$(ADDRESS)
+else ifeq ($(MODE), thread)
+	NAME = $(DEFAULT)$(THREAD)
 else ifeq ($(MODE), speed)
 	NAME = $(DEFAULT)$(SPEED)
 endif
