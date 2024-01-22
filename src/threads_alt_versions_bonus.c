@@ -6,13 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 10:14:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 08:49:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 09:16:43 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_bonus.h"
 
-void	*ft_render_image_threaded(void *arg)
+void	*ft_raytrace_sample_threaded(void *arg)
 {
 	t_render		*render;
 	t_vec2i			pos;
@@ -28,7 +28,7 @@ void	*ft_render_image_threaded(void *arg)
 		pos.x = -1;
 		while (++pos.x < render->cam.image.x)
 		{
-			colour = ft_pixel_colour(pos, ray, render->scene, render->cam);
+			colour = ft_shoot_ray(pos, ray, render->scene, render->cam);
 			render->sample_buffer[pos.y * render->cam.image.x + pos.x] = colour;
 		}
 		pos.y += NUM_THREADS;
@@ -36,7 +36,7 @@ void	*ft_render_image_threaded(void *arg)
 	return (NULL);
 }
 
-void	*ft_add_sample_threaded(void *arg)
+void	*ft_add_raytrace_sample_threaded(void *arg)
 {
 	t_render	*render;
 	t_vec2i		pos;
@@ -52,7 +52,7 @@ void	*ft_add_sample_threaded(void *arg)
 		pos.x = -1;
 		while (++pos.x < render->cam.image.x)
 		{
-			colour = ft_anti_alias(pos, ray, render->scene, render->cam);
+			colour = ft_shoot_aa_ray(pos, ray, render->scene, render->cam);
 			colour = ft_add_colour(colour,
 					render->sample_buffer[pos.y * render->cam.image.x + pos.x]);
 			render->sample_buffer[pos.y * render->cam.image.x + pos.x] = colour;

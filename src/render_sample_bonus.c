@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 00:44:09 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 08:48:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 09:15:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_single_sample(t_render *render)
 {
 	if (ft_option_isset(render->options, O_IS_THREADED))
 	{
-		if (ft_spin_threads(render, ft_render_image_threaded))
+		if (ft_spin_threads(render, ft_raytrace_sample_threaded))
 		{
 			ft_option_clear(&render->options, O_IS_THREADED);
 			ft_option_set(&render->options, O_SCENE_CHANGED);
@@ -50,7 +50,7 @@ int	ft_single_sample(t_render *render)
 		}
 	}
 	else
-		ft_render_image(render);
+		ft_raytrace_sample(render);
 	ft_copy_buffer_to_image(render, 1);
 	if (ft_option_isset(render->options, O_IS_THREADED))
 	{
@@ -70,7 +70,7 @@ int	ft_anti_alias_sample(t_render *render, uint8_t cur_sample)
 {
 	if (ft_option_isset(render->options, O_IS_THREADED))
 	{
-		if (ft_spin_threads(render, ft_add_sample_threaded))
+		if (ft_spin_threads(render, ft_add_raytrace_sample_threaded))
 		{
 			ft_option_clear(&render->options, O_IS_THREADED);
 			ft_option_set(&render->options, O_SCENE_CHANGED);
@@ -78,7 +78,7 @@ int	ft_anti_alias_sample(t_render *render, uint8_t cur_sample)
 		}
 	}
 	else
-		ft_add_sample(render);
+		ft_add_raytrace_sample(render);
 	ft_copy_buffer_to_image(render, cur_sample);
 	if (cur_sample == 1 && ft_option_isset(render->options, O_IS_THREADED))
 	{

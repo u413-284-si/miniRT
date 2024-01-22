@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:37:57 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/20 14:45:13 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 08:59:36 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_programm_loop(t_render *render)
 {
 	if (ft_option_isset(render->options, O_SCENE_CHANGED))
 	{
-		ft_render_image(render);
+		ft_raytrace_image(render);
 		ft_blend_background(render);
 		mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
 			render->mlx_ptrs.win_ptr, render->mlx_ptrs.img.ptr, 0, 0);

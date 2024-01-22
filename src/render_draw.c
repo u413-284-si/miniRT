@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 08:43:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 09:06:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color)
 	}
 }
 
-uint32_t	ft_pixel_colour(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
+uint32_t	ft_shoot_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
 {
 	t_vec3		pixel_centre;
 
@@ -38,7 +38,7 @@ uint32_t	ft_pixel_colour(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
 	return (ft_convert_colour2int(ft_ray_colour(ray, scene)));
 }
 
-void	ft_render_image(t_render *render)
+void	ft_raytrace_image(t_render *render)
 {
 	t_vec2i		pos;
 	t_ray		ray;
@@ -52,7 +52,7 @@ void	ft_render_image(t_render *render)
 		pos.x = -1;
 		while (++pos.x < render->cam.image.x)
 		{
-			colour = ft_pixel_colour(pos, ray, render->scene, render->cam);
+			colour = ft_shoot_ray(pos, ray, render->scene, render->cam);
 			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, \
 				pos.y, colour);
 		}

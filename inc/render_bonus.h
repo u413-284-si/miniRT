@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 00:51:05 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 09:18:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,9 +198,7 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color);
  * each ray is returned and written to the mlx img.
  * @param render	Pointer to render struct.
  */
-void	ft_render_image(t_render *render);
-
-void	ft_add_sample(t_render *render);
+void	ft_raytrace_sample(t_render *render);
 
 /**
  * @brief Creates a blended colour from colour and menu colour.
@@ -574,13 +572,29 @@ void	ft_change_options_bonus(int key, t_render *render);
 void	ft_change_select(int key, t_render *render);
 
 void	*ft_cam_calc_rays_threaded(void *arg);
-void	*ft_render_image_threaded(void *arg);
-void	*ft_add_sample_threaded(void *arg);
+void	*ft_raytrace_sample_threaded(void *arg);
+void	*ft_add_raytrace_sample_threaded(void *arg);
 void	*ft_blend_background_threaded(void *arg);
 
-t_colour	ft_pixel_colour(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
-t_colour	ft_anti_alias(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
+t_colour	ft_shoot_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
+t_colour	ft_shoot_aa_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
 
 int	ft_render_sample(t_render *render, uint8_t *cur_sample);
+void	ft_add_raytrace_sample(t_render *render);
+
+/**
+ * @brief Returns the colour of a pixel by means of anti-aliasing
+ *
+ * The pixel colour is generated as an average of a sample of ray colours
+ * around the pixel in question.
+ * @param iterate		Integer 2D vector containing current pixel position
+ * @param pixels		Pixel grid defining its starting position and
+ * 						horizontal/vertical distances
+ * @param cam			Camera
+ * @param scene			The scene containing all hittables
+ * @return uint32_t		Colour of pixel.
+ */
+uint32_t	ft_anti_aliase_colour(t_vec2i iterate, t_pixel_grid pixels, \
+	t_cam cam, t_entities scene);
 
 #endif
