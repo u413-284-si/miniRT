@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
+#    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/19 17:59:56 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/22 18:00:00 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -234,6 +234,7 @@ SRC_BONUS :=	check_bonus.c \
 				ray_bonus.c \
 				render_compose_image_bonus.c \
 				render_draw_bonus.c \
+				render_keyhook_hittable_bonus.c \
 				render_keyhook_options_bonus.c \
 				scene_light_bonus.c \
 				scene_reflection_bonus.c \
