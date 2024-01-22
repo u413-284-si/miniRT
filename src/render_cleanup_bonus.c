@@ -6,42 +6,18 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:43:24 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 12:20:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 16:54:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_bonus.h"
 
-void	ft_free_mlx(t_mlx_ptrs *mlx_ptrs)
-{
-	if (mlx_ptrs->mlx_ptr)
-	{
-		if (mlx_ptrs->img.ptr)
-			mlx_destroy_image(mlx_ptrs->mlx_ptr, mlx_ptrs->img.ptr);
-		if (mlx_ptrs->veil.ptr)
-			mlx_destroy_image(mlx_ptrs->mlx_ptr, mlx_ptrs->veil.ptr);
-		if (mlx_ptrs->win_ptr)
-			mlx_destroy_window(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr);
-		mlx_destroy_display(mlx_ptrs->mlx_ptr);
-		free(mlx_ptrs->mlx_ptr);
-	}
-}
-
-void	ft_free_scene(t_entities *scene)
-{
-	free(scene->obj);
-	free(scene->lsrc);
-}
-
-static void	ft_free_cam(t_cam *cam)
-{
-	free(cam->pix_cache);
-}
-
 void	ft_render_cleanup(t_render *render)
 {
-	ft_free_scene(&render->scene);
+	free(render->scene.obj);
+	free(render->scene.lsrc);
 	ft_free_mlx(&render->mlx_ptrs);
-	ft_free_cam(&render->cam);
+	free(render->cam.pix_cache);
 	free(render->sample_buffer);
+	pthread_mutex_destroy(&render->mut_print);
 }

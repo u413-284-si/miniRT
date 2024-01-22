@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:43:24 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 18:15:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 16:48:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,13 @@ void	ft_free_mlx(t_mlx_ptrs *mlx_ptrs)
 	}
 }
 
-void	ft_free_scene(t_entities *scene)
-{
-	free(scene->obj);
-	free(scene->lsrc);
-}
-
-static void	ft_free_cam(t_cam *cam)
-{
-	free(cam->pix_cache);
-}
+#ifndef IS_BONUS
 
 void	ft_render_cleanup(t_render *render)
 {
-	ft_free_scene(&render->scene);
+	free(render->scene.obj);
+	free(render->scene.lsrc);
 	ft_free_mlx(&render->mlx_ptrs);
-	ft_free_cam(&render->cam);
+	free(render->cam.pix_cache);
 }
+#endif

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 10:20:33 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 16:48:44 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -597,14 +597,6 @@ void		ft_mouse_hook_rot_cam(int x, int y, t_render *render);
  * @param mlx_ptrs	Pointer to mlx_ptrs struct.
  */
 void		ft_free_mlx(t_mlx_ptrs *mlx_ptrs);
-
-/**
- * @brief Frees ressources allocated for scene.
- *
- * Just a wrapper around two free calls.
- * @param scene	Pointer to scene struct.
- */
-void		ft_free_scene(t_entities *scene);
 
 /**
  * @brief Frees ressources allocated for render.

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 17:21:18 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 13:01:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 16:59:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ t_err	ft_render_init(t_render *render)
 	if (ft_init_mlx_ptrs(&render->mlx_ptrs, false))
 		return (ERROR);
 	if (ft_cam_init(&render->cam, render->mlx_ptrs.img.size))
-	{
-		ft_free_mlx(&render->mlx_ptrs);
 		return (ERROR);
-	}
 	if (ft_err_malloc((void **)&render->sample_buffer,
 			sizeof(*render->sample_buffer)
 			* render->cam.image.x * render->cam.image.y))
