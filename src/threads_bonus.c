@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:28:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 10:57:17 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 16:24:59 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,13 @@ t_err	ft_create_threads(void *arg, void *(*routine)(void *),
 			t_thread_data threads[NUM_THREADS])
 {
 	int	i;
-	int	ret;
 
 	i = -1;
 	while (++i < NUM_THREADS)
 	{
 		threads[i].id = i;
 		threads[i].arg = arg;
-		ret = pthread_create(&threads[i].t_id, NULL, routine, &threads[i]);
-		errno = ret;
+		errno = pthread_create(&threads[i].t_id, NULL, routine, &threads[i]);
 		if (errno)
 		{
 			threads[i].id = -1;
