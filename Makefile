@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/22 00:51:33 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/22 08:44:21 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -184,6 +184,7 @@ SRC_COMMON := 	camera_movement.c \
 				parse_entity_sp_pl_cy.c \
 				parse_line.c \
 				render_bit_field.c \
+				render_blend_background.c \
 				render_init_mlx.c \
 				render_keyhook_camera.c \
 				render_keyhook_colour.c \

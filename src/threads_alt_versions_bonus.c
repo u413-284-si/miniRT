@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 10:14:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 13:18:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 08:49:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	*ft_blend_background_threaded(void *arg)
 {
 	t_render	*render;
 	t_vec2i		pos;
-	uint32_t	img_pixel;
+	uint32_t	*img_pixel;
 	uint32_t	*veil_pixel;
 	uint32_t	blend_colour;
 
@@ -77,9 +77,10 @@ void	*ft_blend_background_threaded(void *arg)
 		pos.x = -1;
 		while (++pos.x < render->mlx_ptrs.veil.size.x)
 		{
-			img_pixel = ft_convert_colour2int(
-					render->sample_buffer[pos.y * render->cam.image.x + pos.x]);
-			blend_colour = ft_fast_alpha_blend(img_pixel, render->menu);
+			img_pixel = (uint32_t *)(render->mlx_ptrs.img.addr
+					+ (pos.y * render->mlx_ptrs.img.line_len
+						+ pos.x * render->mlx_ptrs.img.bytes));
+			blend_colour = ft_fast_alpha_blend(*img_pixel, render->menu);
 			veil_pixel = (uint32_t *)(render->mlx_ptrs.veil.addr
 					+ (pos.y * render->mlx_ptrs.veil.line_len
 						+ pos.x * render->mlx_ptrs.veil.bytes));

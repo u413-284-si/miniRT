@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 00:44:09 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 00:57:02 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 08:48:15 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,7 @@ int	ft_single_sample(t_render *render)
 {
 	if (ft_option_isset(render->options, O_IS_THREADED))
 	{
-		if (ft_spin_threads(render, ft_render_image_threaded)
-			|| ft_spin_threads(render, ft_blend_background_threaded))
+		if (ft_spin_threads(render, ft_render_image_threaded))
 		{
 			ft_option_clear(&render->options, O_IS_THREADED);
 			ft_option_set(&render->options, O_SCENE_CHANGED);
@@ -51,11 +50,19 @@ int	ft_single_sample(t_render *render)
 		}
 	}
 	else
-	{
 		ft_render_image(render);
-		ft_blend_background(render);
-	}
 	ft_copy_buffer_to_image(render, 1);
+	if (ft_option_isset(render->options, O_IS_THREADED))
+	{
+		if (ft_spin_threads(render, ft_blend_background_threaded))
+		{
+			ft_option_clear(&render->options, O_IS_THREADED);
+			ft_option_set(&render->options, O_SCENE_CHANGED);
+			return (1);
+		}
+	}
+	else
+		ft_blend_background(render);
 	return (0);
 }
 
@@ -69,19 +76,21 @@ int	ft_anti_alias_sample(t_render *render, uint8_t cur_sample)
 			ft_option_set(&render->options, O_SCENE_CHANGED);
 			return (1);
 		}
-		if (cur_sample == 1
-			&& ft_spin_threads(render, ft_blend_background_threaded))
+	}
+	else
+		ft_add_sample(render);
+	ft_copy_buffer_to_image(render, cur_sample);
+	if (cur_sample == 1 && ft_option_isset(render->options, O_IS_THREADED))
+	{
+		if (ft_spin_threads(render, ft_blend_background_threaded))
 		{
 			ft_option_clear(&render->options, O_IS_THREADED);
 			ft_option_set(&render->options, O_SCENE_CHANGED);
 			return (1);
 		}
 	}
-	else
-		ft_add_sample(render);
-	if (cur_sample == 1)
+	else if (cur_sample == 1)
 		ft_blend_background(render);
-	ft_copy_buffer_to_image(render, cur_sample);
 	return (0);
 }
 
