@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 23:30:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 00:51:05 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -580,5 +580,7 @@ void	*ft_blend_background_threaded(void *arg);
 
 t_colour	ft_pixel_colour(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
 t_colour	ft_anti_alias(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
+
+int	ft_render_sample(t_render *render, uint8_t *cur_sample);
 
 #endif
