@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 23:39:56 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 00:15:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 13:38:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,21 @@ void	ft_menu_put_options(t_putinfo put, uint32_t options)
 	if (ft_option_isset(options, O_IS_THREADED))
 	{
 		put.pos = ft_put_str_and_advance(put, "Threading: ON");
-		put.pos = ft_put_single_float_value("Threads", put, NUM_THREADS);
+		ft_put_str(put, "Threads:");
+		put.pos.x += 70;
+		ft_put_int(put, (t_numinfo){.numi = NUM_THREADS, .pad = 3, .prec = 0});
+		put.pos.x -= 70;
 	}
 	else
 		put.pos = ft_put_str_and_advance(put, "Threading: OFF");
-	put.pos.y += Y_NEXT_LINE;
+	put.pos.y += Y_NEXT_LINE_BIG;
 	if (ft_option_isset(options, O_IS_ANTI_ALIAS))
 	{
 		put.pos = ft_put_str_and_advance(put, "Anti-Aliasing: ON");
-		put.pos = ft_put_single_float_value("Samples", put, SAMPLE_SIZE);
+		ft_put_str(put, "Samples:");
+		put.pos.x += 70;
+		ft_put_int(put, (t_numinfo){.numi = SAMPLE_SIZE, .pad = 3, .prec = 0});
+		put.pos.x -= 70;
 	}
 	else
 		put.pos = ft_put_str_and_advance(put, "Anti-Aliasing: OFF");
