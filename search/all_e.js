@@ -1,7 +1,7 @@
 var searchData=
 [
   ['r_455',['r',['../structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b',1,'t_colour::r()'],['../structt__sphere.html#a4788d82c901b9367dd5c0daff8a7616b',1,'t_sphere::r()'],['../structt__cylinder.html#a4788d82c901b9367dd5c0daff8a7616b',1,'t_cylinder::r()'],['../structt__cone.html#a4788d82c901b9367dd5c0daff8a7616b',1,'t_cone::r()']]],
-  ['rad_456',['RAD',['../utils_8h.html#ab812f1e2f95156906fcaca00bc6f490e',1,'RAD():&#160;utils.h'],['../utils__bonus_8h.html#ab812f1e2f95156906fcaca00bc6f490e',1,'RAD():&#160;utils_bonus.h']]],
+  ['rad_456',['RAD',['../utils__bonus_8h.html#ab812f1e2f95156906fcaca00bc6f490e',1,'RAD():&#160;utils_bonus.h'],['../utils_8h.html#ab812f1e2f95156906fcaca00bc6f490e',1,'RAD():&#160;utils.h']]],
   ['ratio_457',['ratio',['../structt__light.html#a207ad05f99cc72068a92358861ff5e71',1,'t_light']]],
   ['ray_458',['ray',['../structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f',1,'t_hitrecord']]],
   ['ray_2ec_459',['ray.c',['../ray_8c.html',1,'']]],
@@ -9,7 +9,7 @@ var searchData=
   ['ray_5fbonus_2ec_461',['ray_bonus.c',['../ray__bonus_8c.html',1,'']]],
   ['ray_5fbonus_2eh_462',['ray_bonus.h',['../ray__bonus_8h.html',1,'']]],
   ['rb_463',['rb',['../structt__menu.html#ac91b2b11ae96c1a44e8a2fad473771c7',1,'t_menu']]],
-  ['readme_2emd_464',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['readme_2emd_464',['README.md',['../scenes_2test_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../_r_e_a_d_m_e_8md.html',1,'(Global Namespace)']]],
   ['red_465',['RED',['../render_8h.html#a19a1d8fdbc63aaafd4498a3d973a46f2af80f9a890089d211842d59625e561f88',1,'RED():&#160;render.h'],['../render__bonus_8h.html#a19a1d8fdbc63aaafd4498a3d973a46f2af80f9a890089d211842d59625e561f88',1,'RED():&#160;render_bonus.h']]],
   ['reflection_5fcount_466',['reflection_count',['../structt__hitrecord.html#a24a9c54d4ca1a0c78f33dd2af963213f',1,'t_hitrecord']]],
   ['reflection_5fmax_467',['REFLECTION_MAX',['../mini_r_t__config__bonus_8h.html#a387d9d8c183953f922357e446fc3545a',1,'miniRT_config_bonus.h']]],
