@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/22 09:10:48 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 09:56:54 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,15 +63,5 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam);
  * @return t_colour
  */
 t_colour	ft_background_colour(t_ray ray);
-
-/**
- * @brief Generate a random vector that is confined within the square
- * surrounding a pixel. The vector lies in the same plane as the viewport.
- *
- * @param pixels		Pixel grid defining its starting position and
- * 						horizontal/vertical distances
- * @return t_vec3
- */
-t_vec3		ft_pixel_sample(t_pixel_grid pixels);
 
 #endif

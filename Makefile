@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/22 09:20:07 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/22 10:18:31 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -239,7 +239,7 @@ SRC_BONUS :=	check_bonus.c \
 				render_keyhook_press_bonus.c \
 				render_loop_mlx_bonus.c \
 				render_output_ppm_bonus.c \
-				render_output_threaded.c \
+				render_output_threaded_bonus.c \
 				render_sample_bonus.c \
 				scene_light_bonus.c \
 				scene_reflection_bonus.c \

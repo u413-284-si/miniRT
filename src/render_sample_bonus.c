@@ -6,13 +6,13 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 00:44:09 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 09:15:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:16:26 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render_bonus.h"
 
-void	ft_clear_buffer(t_render *render)
+static void	ft_clear_buffer(t_render *render)
 {
 	int	i;
 
@@ -21,7 +21,7 @@ void	ft_clear_buffer(t_render *render)
 		render->sample_buffer[i] = (t_colour){0, 0, 0};
 }
 
-void	ft_copy_buffer_to_image(t_render *render, uint8_t cur_sample)
+static void	ft_copy_buffer_to_image(t_render *render, uint8_t cur_sample)
 {
 	int			i;
 	uint32_t	*image;
