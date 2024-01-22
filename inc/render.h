@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 16:14:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 18:39:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@
 # include "error_mlx.h"
 # include "camera.h"
 # include "cleanup.h"
-# include "mat4_vec3.h"
 # include "vec2.h"
 # include "render_menu.h"
 # include "render_bit_field.h"
@@ -35,10 +34,12 @@
 #  include "miniRT_config_bonus.h"
 #  include "ray_bonus.h"
 #  include "entities_bonus.h"
+#  include "utils_bonus.h"
 # else
 #  include "miniRT_config.h"
 #  include "ray.h"
 #  include "entities.h"
+#  include "utils.h"
 # endif
 
 /* ====== MACROS ========*/

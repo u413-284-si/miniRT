@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_quaternion_bonus.c                           :+:      :+:    :+:   */
+/*   utils_quaternion.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 12:14:06 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/15 12:14:45 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 18:36:23 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils_bonus.h"
-#include "vec3.h"
+#include "utils.h"
 
 t_quaternion	ft_quaternion_mult(t_quaternion q1, t_quaternion q2)
 {
@@ -50,4 +49,25 @@ t_vec3	ft_quaternion_rot(t_vec3 vec, t_vec3 axis, float angle)
 	q_inv.vector = ft_vec3_scale(q.vector, -1);
 	p_rotated = ft_quaternion_mult(ft_quaternion_mult(q, p), q_inv);
 	return (p_rotated.vector);
+}
+
+t_vec3	ft_vec3_rotate_x(const t_vec3 vec, float roll)
+{
+	const t_vec3	x_axis = (t_vec3){1, 0, 0};
+
+	return (ft_quaternion_rot(vec, x_axis, roll));
+}
+
+t_vec3	ft_vec3_rotate_y(const t_vec3 vec, float pitch)
+{
+	const t_vec3	y_axis = (t_vec3){0, 1, 0};
+
+	return (ft_quaternion_rot(vec, y_axis, pitch));
+}
+
+t_vec3	ft_vec3_rotate_z(const t_vec3 vec, float yaw)
+{
+	const t_vec3	z_axis = (t_vec3){0, 0, 1};
+
+	return (ft_quaternion_rot(vec, z_axis, yaw));
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 17:59:30 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 18:38:51 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 # include "error_mlx.h"
 # include "camera.h"
 # include "cleanup.h"
-# include "mat4_vec3.h"
 # include "print.h"
 # include "vec2.h"
 # include "render_menu.h"

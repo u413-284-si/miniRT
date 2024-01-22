@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/22 18:00:00 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/22 18:37:41 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -164,9 +164,6 @@ SRC_COMMON := 	camera_movement.c \
 				import_file.c \
 				import_file_buffer.c \
 				main.c \
-				mat4.c \
-				mat4_rotation.c \
-				mat4_vec3_rotate.c \
 				menu_init.c \
 				menu_put_cam_light.c \
 				menu_put_cam_light_ctrl.c \
@@ -199,6 +196,7 @@ SRC_COMMON := 	camera_movement.c \
 				scene_shadow.c \
 				utils_entities.c \
 				utils_interval.c \
+				utils_quaternion.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c \
 
@@ -244,7 +242,6 @@ SRC_BONUS :=	check_bonus.c \
 				utils_cone_bonus.c \
 				utils_cylinder_bonus.c \
 				utils_math_bonus.c \
-				utils_quaternion_bonus.c \
 				utils_random_bonus.c
 
 # ******************************
