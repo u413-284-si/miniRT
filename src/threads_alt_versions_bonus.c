@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 10:14:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 09:16:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:44:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	*ft_blend_background_threaded(void *arg)
 	return (NULL);
 }
 
-void	*ft_cam_calc_rays_threaded(void *arg)
+void	*ft_cam_calc_pix_pos_threaded(void *arg)
 {
 	t_cam	*cam;
 	t_vec2i	pos;

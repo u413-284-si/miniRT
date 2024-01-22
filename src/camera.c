@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:48:56 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/19 18:29:41 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:42:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_err	ft_cam_init(t_cam *cam, t_vec2i img_size)
 	cam->image = img_size;
 	ft_cam_calc_viewport_dimensions(cam);
 	ft_cam_calc_pixel_grid(cam);
-	ft_cam_calc_rays(cam);
+	ft_cam_calc_pix_pos(cam);
 	return (SUCCESS);
 }
 
@@ -64,7 +64,7 @@ void	ft_cam_calc_pixel_grid(t_cam *cam)
 		ft_vec3_add(cam->pixels.delta_u, cam->pixels.delta_v), 0.5));
 }
 
-void	ft_cam_calc_rays(t_cam *cam)
+void	ft_cam_calc_pix_pos(t_cam *cam)
 {
 	t_vec2i		pos;
 	t_vec3		pixel_pos;

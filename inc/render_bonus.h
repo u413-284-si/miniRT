@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 10:22:00 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:45:25 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -723,12 +723,12 @@ void		*ft_add_raytrace_sample_threaded(void *arg);
 void		*ft_blend_background_threaded(void *arg);
 
 /**
- * @brief Like ft_cam_calc_rays(), but threaded.
+ * @brief Like ft_cam_calc_pix_pos(), but threaded.
  *
  * @param arg		Pointer to thread struct.
  * @return void*	NULL.
  */
-void		*ft_cam_calc_rays_threaded(void *arg);
+void		*ft_cam_calc_pix_pos_threaded(void *arg);
 
 // render_output_ppm_bonus.c
 

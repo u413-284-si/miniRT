@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:29:11 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:42:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,6 @@ void	ft_manip_cam(int key, t_cam *cam, float inc, uint32_t *options)
 	else
 		ft_keyhook_move_cam(key, cam, inc);
 	ft_cam_calc_pixel_grid(cam);
-	ft_cam_calc_rays(cam);
+	ft_cam_calc_pix_pos(cam);
 	ft_option_set(options, O_SCENE_CHANGED);
 }

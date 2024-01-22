@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 18:32:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:46:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,10 @@ void	ft_manip_cam(int key, t_cam *cam, float inc, uint32_t *options)
 	ft_cam_calc_pixel_grid(cam);
 	if (ft_option_isset(*options, O_IS_THREADED))
 	{
-		if (ft_spin_threads(&cam, ft_cam_calc_rays_threaded))
+		if (ft_spin_threads(&cam, ft_cam_calc_pix_pos_threaded))
 			ft_option_clear(options, O_IS_THREADED);
 	}
 	else
-		ft_cam_calc_rays(cam);
+		ft_cam_calc_pix_pos(cam);
 	ft_option_set(options, O_SCENE_CHANGED);
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/19 18:15:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:43:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ typedef struct s_pixel_grid
  * @param viewport			Width and height of viewport rectangle
  * @param image				Width and height of image in pixels
  * @param pixels			Pixel grid parameters.
- * @param ray_cache			Array of ray directions for each pixel.
+ * @param pix_cache			Array of pixel positions in pixel grid.
  */
 typedef struct s_cam
 {
@@ -86,7 +86,7 @@ typedef struct s_cam
  * Sets the focal length to 1.
  * Sets the image size to the given size.
  * Calculates the viewport dimensions.
- * Calculates the pixel ray directions.
+ * Calculates the pixel positions.
  * @param cam 		Struct containing camera parameters
  * @param img_size	Width and height of image in pixels
  * @return t_err	ERROR if Malloc fails, else SUCCESS
@@ -142,12 +142,12 @@ void	ft_cam_calc_viewport_dimensions(t_cam *cam);
 void	ft_cam_calc_pixel_grid(t_cam *cam);
 
 /**
- * @brief Calculates all pixel ray directions.
+ * @brief Calculates all pixel positions in pixel grid.
  *
- * Uses the calculated pixel grid parameters to calculate the ray direction.
+ * Uses the calculated pixel grid parameters to calculate every pixel position.
  * @param cam	Struct containing camera parameters.
  */
-void	ft_cam_calc_rays(t_cam *cam);
+void	ft_cam_calc_pix_pos(t_cam *cam);
 
 // camera_movement.c
 

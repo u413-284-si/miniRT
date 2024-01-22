@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 08:30:26 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 10:38:20 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:47:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,10 +70,10 @@ void	ft_mouse_hook_rot_cam(int x, int y, t_render *render)
 	ft_cam_calc_pixel_grid(&render->cam);
 	if (ft_option_isset(render->options, O_IS_THREADED))
 	{
-		if (ft_spin_threads(&render->cam, ft_cam_calc_rays_threaded))
+		if (ft_spin_threads(&render->cam, ft_cam_calc_pix_pos_threaded))
 			ft_option_clear(&render->options, O_IS_THREADED);
 	}
 	else
-		ft_cam_calc_rays(&render->cam);
+		ft_cam_calc_pix_pos(&render->cam);
 	ft_option_set(&render->options, O_SCENE_CHANGED);
 }
