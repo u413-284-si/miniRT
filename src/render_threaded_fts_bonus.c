@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   threads_alt_versions_bonus.c                       :+:      :+:    :+:   */
+/*   render_threaded_fts_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 10:14:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 10:44:53 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/23 18:48:16 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ void	*ft_add_raytrace_sample_threaded(void *arg)
 		while (++pos.x < render->cam.image.x)
 		{
 			colour = ft_shoot_aa_ray(pos, ray, render->scene, render->cam);
-			colour = ft_add_colour(colour,
-					render->sample_buffer[pos.y * render->cam.image.x + pos.x]);
-			render->sample_buffer[pos.y * render->cam.image.x + pos.x] = colour;
+			render->sample_buffer[pos.y * render->cam.image.x + pos.x]
+				= ft_add_colour(colour, render->sample_buffer[pos.y * \
+					render->cam.image.x + pos.x]);
 		}
 		pos.y += NUM_THREADS;
 	}
