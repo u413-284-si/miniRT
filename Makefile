@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/19 17:59:56 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/23 13:49:52 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -227,6 +227,9 @@ SRC_BONUS :=	check_bonus.c \
 				hit_cylinder_bonus.c \
 				hit_plane_bonus.c \
 				hit_sphere_bonus.c \
+				menu_put_general_info_bonus.c \
+				menu_put_hittable_bonus.c \
+				menu_put_hittable_ctrl_bonus.c \
 				menu_put_text_bonus.c \
 				menu_put_time_bonus.c \
 				parse_bonus.c \
