@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:02:44 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 17:08:34 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/23 14:18:15 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,9 @@ t_vec3		ft_scale_ray(t_ray ray, float d);
  *
  * @param ray 		Ray sent into the scene
  * @param scene		Scene containing all hittable entities
- * @param cam		Camera observing scene
  * @return t_colour Ray colour
  */
-t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam);
+t_colour	ft_ray_colour(t_ray ray, t_entities scene);
 
 /**
  * @brief Returns the background colour
