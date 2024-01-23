@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   menu_put_hittable_ctrl.c                           :+:      :+:    :+:   */
+/*   menu_put_hittable_ctrl_bonus.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/03 14:09:14 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 16:57:40 by sqiu             ###   ########.fr       */
+/*   Created: 2024/01/22 16:58:50 by sqiu              #+#    #+#             */
+/*   Updated: 2024/01/22 17:00:02 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
 
-#ifndef IS_BONUS
 t_vec2i	ft_put_ctrl_hittable(t_putinfo put, t_type type)
 {
 	put.pos = ft_put_str_and_advance(put, "Controls");
@@ -23,35 +22,19 @@ t_vec2i	ft_put_ctrl_hittable(t_putinfo put, t_type type)
 		put.pos = ft_put_ctrl_pl(put);
 	else if (type == CYLINDER)
 		put.pos = ft_put_ctrl_cy(put);
-	return (put.pos);
-}
-#endif
-
-t_vec2i	ft_put_ctrl_sp(t_putinfo put)
-{
-	put.pos = ft_put_ctrl_move(put, "sphere");
-	put.pos = ft_put_ctrl_inc_dec(put, "Diameter", true);
-	put.pos = ft_put_ctrl_colour(put);
-	put.pos = ft_put_ctrl_change_ent(put, "Object");
+	else if (type == CONE)
+		put.pos = ft_put_ctrl_co(put);
 	return (put.pos);
 }
 
-t_vec2i	ft_put_ctrl_pl(t_putinfo put)
+t_vec2i	ft_put_ctrl_co(t_putinfo put)
 {
-	put.pos = ft_put_ctrl_move(put, "point");
-	put.pos = ft_put_ctrl_rot(put, "normal");
-	put.pos = ft_put_ctrl_colour(put);
-	put.pos = ft_put_ctrl_change_ent(put, "Object");
-	return (put.pos);
-}
-
-t_vec2i	ft_put_ctrl_cy(t_putinfo put)
-{
-	put.pos = ft_put_ctrl_move(put, "centre");
-	put.pos = ft_put_ctrl_rot(put, "normal");
+	put.pos = ft_put_ctrl_move(put, "Apex");
+	put.pos = ft_put_ctrl_rot(put, "Normal");
 	put.pos = ft_put_ctrl_inc_dec(put, "Diameter", true);
 	put.pos = ft_put_ctrl_inc_dec(put, "Height", false);
 	put.pos = ft_put_ctrl_colour(put);
 	put.pos = ft_put_ctrl_change_ent(put, "Object");
 	return (put.pos);
 }
+

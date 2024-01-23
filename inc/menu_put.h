@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 00:11:23 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/23 18:17:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -206,6 +206,18 @@ void	ft_put_pl(t_putinfo put, t_plane pl);
  */
 void	ft_put_cy(t_putinfo put, t_cylinder cy);
 
+# if IS_BONUS
+/**
+  * @brief Puts cone info on the screen.
+ *
+ * Writes the centre, axis, diameter, height and colour of the cone.
+ * Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG.
+ * @param put		t_putinfo struct.
+ * @param co		Cone to be put on screen.
+ */
+void	ft_put_co(t_putinfo put, t_cone co);
+# endif
+
 // menu_put_cam_light.c
 
 /**
@@ -375,6 +387,18 @@ t_vec2i	ft_put_ctrl_pl(t_putinfo put);
  * @return t_vec2i	Next position of text.
  */
 t_vec2i	ft_put_ctrl_cy(t_putinfo put);
+
+/**
+ * @brief Puts control scheme for cone on the screen.
+ *
+ * Control for move, rotate, inc/dec diameter, inc/dec height and change
+ * colour of the cone.
+ * Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG.
+ * @param put		t_putinfo struct.
+ * @return t_vec2i	Next position of text.
+ */
+t_vec2i	ft_put_ctrl_co(t_putinfo put);
+
 
 // menu_put_cam_light_ctrl.c
 
