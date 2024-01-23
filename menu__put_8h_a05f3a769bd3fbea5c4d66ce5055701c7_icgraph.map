@@ -1,12 +1,13 @@
 <map id="ft_put_colour" name="ft_put_colour">
-<area shape="rect" id="node1" title="Puts a colour on the screen." alt="" coords="715,107,821,133"/>
+<area shape="rect" id="node1" title="Puts a colour on the screen." alt="" coords="715,132,821,159"/>
 <area shape="rect" id="node2" href="$menu__put_8h.html#a9151e6af892c25ae1839ba30b7bd8c91" title="Puts ambient info on the screen." alt="" coords="547,5,667,32"/>
-<area shape="rect" id="node3" href="$menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b" title="Puts cylinder info on the screen." alt="" coords="566,56,647,83"/>
-<area shape="rect" id="node7" href="$menu__put_8h.html#ab1aa03b80f8d7af17d305cb8b61c2b6b" title="Puts light info on the screen." alt="" coords="559,208,654,235"/>
-<area shape="rect" id="node9" href="$menu__put_8h.html#ac2a5de89e48dc4e914b474c744618e1f" title="Puts plane info on the screen." alt="" coords="567,107,646,133"/>
-<area shape="rect" id="node10" href="$menu__put_8h.html#a94cfa4cebace291a60ab7a8bd9bd852c" title="Puts sphere info on the screen." alt="" coords="566,157,647,184"/>
-<area shape="rect" id="node4" href="$menu__put_8h.html#a893f0e65e417aaf6be0152e2f74782d1" title="Puts hittable info on the screen." alt="" coords="383,111,499,137"/>
-<area shape="rect" id="node5" href="$menu__put_8h.html#a18613445d2379eca738e6cf789dfecf5" title="Puts a scene page on the screen." alt="" coords="192,113,335,140"/>
-<area shape="rect" id="node6" href="$menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" title="Puts the main page of menu on the screen." alt="" coords="5,145,144,172"/>
-<area shape="rect" id="node8" href="$menu__put_8h.html#a11eed0e0d38826c89da2d71031a08593" title="Puts a light page on the screen." alt="" coords="196,171,331,197"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#af86e62ade8b462c44092a160d876544e" title="Puts cone info on the screen." alt="" coords="566,56,647,83"/>
+<area shape="rect" id="node7" href="$menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b" title="Puts cylinder info on the screen." alt="" coords="566,107,647,133"/>
+<area shape="rect" id="node8" href="$menu__put_8h.html#ab1aa03b80f8d7af17d305cb8b61c2b6b" title="Puts light info on the screen." alt="" coords="559,259,654,285"/>
+<area shape="rect" id="node10" href="$menu__put_8h.html#ac2a5de89e48dc4e914b474c744618e1f" title="Puts plane info on the screen." alt="" coords="567,157,646,184"/>
+<area shape="rect" id="node11" href="$menu__put_8h.html#a94cfa4cebace291a60ab7a8bd9bd852c" title="Puts sphere info on the screen." alt="" coords="566,208,647,235"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a893f0e65e417aaf6be0152e2f74782d1" title="Puts hittable info on the screen." alt="" coords="383,157,499,184"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#a18613445d2379eca738e6cf789dfecf5" title="Puts a scene page on the screen." alt="" coords="192,164,335,191"/>
+<area shape="rect" id="node6" href="$menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" title="Puts the main page of menu on the screen." alt="" coords="5,201,144,228"/>
+<area shape="rect" id="node9" href="$menu__put_8h.html#a11eed0e0d38826c89da2d71031a08593" title="Puts a light page on the screen." alt="" coords="196,227,331,253"/>
 </map>

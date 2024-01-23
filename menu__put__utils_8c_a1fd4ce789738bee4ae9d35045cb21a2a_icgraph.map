@@ -1,10 +1,11 @@
 <map id="ft_put_unit_vec" name="ft_put_unit_vec">
-<area shape="rect" id="node1" title="Puts a unit vector on the screen." alt="" coords="689,56,811,83"/>
+<area shape="rect" id="node1" title="Puts a unit vector on the screen." alt="" coords="689,81,811,108"/>
 <area shape="rect" id="node2" href="$menu__put_8h.html#a86f02d860bd5b9a3795b20ba72f8e359" title="Puts camera info on the screen." alt="" coords="547,5,641,32"/>
-<area shape="rect" id="node5" href="$menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b" title="Puts cylinder info on the screen." alt="" coords="553,56,635,83"/>
-<area shape="rect" id="node8" href="$menu__put_8h.html#ac2a5de89e48dc4e914b474c744618e1f" title="Puts plane info on the screen." alt="" coords="555,107,633,133"/>
-<area shape="rect" id="node3" href="$menu__put_8h.html#a6466842cb9367072865c07608f1e4c7d" title="Puts a camera page on the screen." alt="" coords="197,5,330,32"/>
-<area shape="rect" id="node4" href="$menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" title="Puts the main page of menu on the screen." alt="" coords="5,31,144,57"/>
-<area shape="rect" id="node6" href="$menu__put_8h.html#a893f0e65e417aaf6be0152e2f74782d1" title="Puts hittable info on the screen." alt="" coords="383,56,499,83"/>
-<area shape="rect" id="node7" href="$menu__put_8h.html#a18613445d2379eca738e6cf789dfecf5" title="Puts a scene page on the screen." alt="" coords="192,56,335,83"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#af86e62ade8b462c44092a160d876544e" title="Puts cone info on the screen." alt="" coords="553,56,635,83"/>
+<area shape="rect" id="node8" href="$menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b" title="Puts cylinder info on the screen." alt="" coords="553,107,635,133"/>
+<area shape="rect" id="node9" href="$menu__put_8h.html#ac2a5de89e48dc4e914b474c744618e1f" title="Puts plane info on the screen." alt="" coords="555,157,633,184"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a6466842cb9367072865c07608f1e4c7d" title="Puts a camera page on the screen." alt="" coords="197,16,330,43"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" title="Puts the main page of menu on the screen." alt="" coords="5,53,144,80"/>
+<area shape="rect" id="node6" href="$menu__put_8h.html#a893f0e65e417aaf6be0152e2f74782d1" title="Puts hittable info on the screen." alt="" coords="383,104,499,131"/>
+<area shape="rect" id="node7" href="$menu__put_8h.html#a18613445d2379eca738e6cf789dfecf5" title="Puts a scene page on the screen." alt="" coords="192,79,335,105"/>
 </map>

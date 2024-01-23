@@ -733,24 +733,24 @@ var sectionId = 'dynsection-1';
 <path fill="none" stroke="midnightblue" d="M3972.19,-196.4C3952.46,-184.9 3924.81,-168.77 3908.09,-159.01"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="3970.48,-199.46 3980.89,-201.48 3974.01,-193.41 3970.48,-199.46"/>
 </g>
-<!-- Node58 -->
+<!-- Node61 -->
 <g id="node48" class="node">
-<title>Node58</title>
+<title>Node61</title>
 <g id="a_node48"><a xlink:href="mini_r_t_8h.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="red" points="3957.5,-140 3957.5,-159 4033.5,-159 4033.5,-140 3957.5,-140"/>
 <text text-anchor="middle" x="3995.5" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">inc/miniRT.h</text>
 </a>
 </g>
 </g>
-<!-- Node43&#45;&gt;Node58 -->
+<!-- Node43&#45;&gt;Node61 -->
 <g id="edge49" class="edge">
-<title>Node43&#45;&gt;Node58</title>
+<title>Node43&#45;&gt;Node61</title>
 <path fill="none" stroke="midnightblue" d="M3995.5,-191.32C3995.5,-180.5 3995.5,-167.4 3995.5,-159.01"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="3992,-191.48 3995.5,-201.48 3999,-191.48 3992,-191.48"/>
 </g>
-<!-- Node60 -->
+<!-- Node63 -->
 <g id="node49" class="node">
-<title>Node60</title>
+<title>Node63</title>
 <g id="a_node49"><a xlink:href="render__compose__image__bonus_8c.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="4052,-134.5 4052,-164.5 4167,-164.5 4167,-134.5 4052,-134.5"/>
 <text text-anchor="start" x="4060" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/render_compose</text>
@@ -758,24 +758,24 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node43&#45;&gt;Node60 -->
+<!-- Node43&#45;&gt;Node63 -->
 <g id="edge50" class="edge">
-<title>Node43&#45;&gt;Node60</title>
+<title>Node43&#45;&gt;Node63</title>
 <path fill="none" stroke="midnightblue" d="M4020.78,-196.81C4039.13,-187.23 4063.92,-174.29 4082.63,-164.52"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="4019.08,-193.75 4011.83,-201.48 4022.32,-199.95 4019.08,-193.75"/>
 </g>
-<!-- Node61 -->
+<!-- Node64 -->
 <g id="node50" class="node">
-<title>Node61</title>
+<title>Node64</title>
 <g id="a_node50"><a xlink:href="render__draw__bonus_8c.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="4185,-140 4185,-159 4322,-159 4322,-140 4185,-140"/>
 <text text-anchor="middle" x="4253.5" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">src/render_draw_bonus.c</text>
 </a>
 </g>
 </g>
-<!-- Node43&#45;&gt;Node61 -->
+<!-- Node43&#45;&gt;Node64 -->
 <g id="edge51" class="edge">
-<title>Node43&#45;&gt;Node61</title>
+<title>Node43&#45;&gt;Node64</title>
 <path fill="none" stroke="midnightblue" d="M4042.39,-199.19C4092.45,-187.64 4170.75,-169.58 4216.6,-159.01"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="4041.42,-195.82 4032.47,-201.48 4043,-202.64 4041.42,-195.82"/>
 </g>

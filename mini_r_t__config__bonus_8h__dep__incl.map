@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="2616,5,2811,32"/>
 <area shape="rect" id="node2" href="$camera_8h.html" title=" " alt="" coords="1951,80,2057,107"/>
 <area shape="rect" id="node8" href="$render__bonus_8h.html" title=" " alt="" coords="2290,244,2435,271"/>
-<area shape="rect" id="node9" href="$menu__put_8h.html" title=" " alt="" coords="2652,319,2775,345"/>
+<area shape="rect" id="node9" href="$menu__put_8h.html" title=" " alt="" coords="2649,319,2772,345"/>
 <area shape="rect" id="node22" href="$hit__manager__bonus_8h.html" title=" " alt="" coords="789,244,974,271"/>
 <area shape="rect" id="node32" href="$render_8h.html" title=" " alt="" coords="2559,244,2657,271"/>
 <area shape="rect" id="node35" href="$check_8h.html" title=" " alt="" coords="3273,80,3367,107"/>
@@ -17,17 +17,17 @@
 <area shape="rect" id="node21" href="$ray__bonus_8h.html" title=" " alt="" coords="2171,162,2295,189"/>
 <area shape="rect" id="node33" href="$camera_8c.html" title=" " alt="" coords="1783,162,1889,189"/>
 <area shape="rect" id="node34" href="$camera__movement_8c.html" title=" " alt="" coords="1913,162,2095,189"/>
-<area shape="rect" id="node10" href="$menu__put__bonus_8h.html" title=" " alt="" coords="2215,401,2383,427"/>
-<area shape="rect" id="node11" href="$menu__put__cam__light_8c.html" title=" " alt="" coords="2407,401,2599,427"/>
-<area shape="rect" id="node12" href="$menu__put__cam__light__ctrl_8c.html" title=" " alt="" coords="2623,393,2804,435"/>
-<area shape="rect" id="node13" href="$menu__put__general__info_8c.html" title=" " alt="" coords="2829,393,2995,435"/>
-<area shape="rect" id="node14" href="$menu__put__hittable_8c.html" title=" " alt="" coords="3020,401,3199,427"/>
-<area shape="rect" id="node15" href="$menu__put__hittable__ctrl_8c.html" title=" " alt="" coords="3223,393,3390,435"/>
-<area shape="rect" id="node16" href="$menu__put__page_8c.html" title=" " alt="" coords="3415,401,3575,427"/>
-<area shape="rect" id="node17" href="$menu__put__str__num_8c.html" title=" " alt="" coords="3599,401,3780,427"/>
-<area shape="rect" id="node18" href="$menu__put__text_8c.html" title=" " alt="" coords="1627,401,1781,427"/>
-<area shape="rect" id="node19" href="$menu__put__time__bonus_8c.html" title=" " alt="" coords="1806,401,2010,427"/>
-<area shape="rect" id="node20" href="$menu__put__utils_8c.html" title=" " alt="" coords="2034,401,2190,427"/>
+<area shape="rect" id="node10" href="$menu__put__bonus_8h.html" title=" " alt="" coords="2212,401,2380,427"/>
+<area shape="rect" id="node11" href="$menu__put__cam__light_8c.html" title=" " alt="" coords="2404,401,2596,427"/>
+<area shape="rect" id="node12" href="$menu__put__cam__light__ctrl_8c.html" title=" " alt="" coords="2620,393,2801,435"/>
+<area shape="rect" id="node13" href="$menu__put__general__info_8c.html" title=" " alt="" coords="2826,393,2993,435"/>
+<area shape="rect" id="node14" href="$menu__put__general__info__bonus_8c.html" title=" " alt="" coords="3017,393,3183,435"/>
+<area shape="rect" id="node15" href="$menu__put__hittable_8c.html" title=" " alt="" coords="3208,401,3387,427"/>
+<area shape="rect" id="node16" href="$menu__put__hittable__bonus_8c.html" title=" " alt="" coords="3411,393,3578,435"/>
+<area shape="rect" id="node17" href="$menu__put__hittable__ctrl_8c.html" title=" " alt="" coords="3602,393,3769,435"/>
+<area shape="rect" id="node18" href="$menu__put__hittable__ctrl__bonus_8c.html" title=" " alt="" coords="1631,393,1798,435"/>
+<area shape="rect" id="node19" href="$menu__put__page_8c.html" title=" " alt="" coords="1823,401,1983,427"/>
+<area shape="rect" id="node20" href="$menu__put__str__num_8c.html" title=" " alt="" coords="2007,401,2188,427"/>
 <area shape="rect" id="node23" href="$lighting_8h.html" title=" " alt="" coords="392,319,499,345"/>
 <area shape="rect" id="node24" href="$texture__bonus_8h.html" title=" " alt="" coords="717,319,867,345"/>
 <area shape="rect" id="node25" href="$utils__cylinder__bonus_8c.html" title=" " alt="" coords="598,393,730,435"/>
