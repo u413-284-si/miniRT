@@ -1,4 +1,4 @@
-
+#bonus
 C  0,0,0        0,0,-1      70
 A 0.3 255,255,255
 
@@ -6,9 +6,11 @@ L -9,2.4,-18       0.8        255,0,255
 L 2,3,-9      0.8         0,255,255
 L 10,3,-17      0.8        255,255,0
 
+#    	Centre		Diameter	Shininess   Reflectivity 	Checkered	Color       
+sp		-5,-1,-20	5			32			0.5				0			255,255,255
+sp		5,-1,-20	5			32			0.5				0			255,255,255
+#		Apex		Axis		Diameter	Height			Shininess	Reflectivity	Checkered	Color       
+co		0,3.5,-20	0,-1,0		5			7				32			0.5				0			255,255,255
 
-sp  -5,-1,-20           5        255,255,255
-sp  5,-1,-20           5        255,255,255
-co  0,3.5,-20   0,-1,0   5 7   255,255,255
-
-pl  0,-3.5,0   0,1,0  255,255,255
+#		Centre		Normal		Shininess	Reflectivity	Checkered	Color       
+pl		0,-3.5,0	0,1,0		32			0.5				0			255,255,255
