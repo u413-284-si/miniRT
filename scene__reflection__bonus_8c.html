@@ -106,8 +106,8 @@ Include dependency graph for scene_reflection_bonus.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a72c122146878dc126a6472d159526c14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__colour.html">t_colour</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scene__reflection__bonus_8c.html#a72c122146878dc126a6472d159526c14">ft_reflective_light</a> (<a class="el" href="structt__light.html">t_light</a> cur, <a class="el" href="structt__hitrecord.html">t_hitrecord</a> rec, <a class="el" href="structt__entities.html">t_entities</a> scene, <a class="el" href="structt__cam.html">t_cam</a> cam)</td></tr>
-<tr class="separator:a72c122146878dc126a6472d159526c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab380b8bbadc80a5a668141c8edcc4754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__colour.html">t_colour</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scene__reflection__bonus_8c.html#ab380b8bbadc80a5a668141c8edcc4754">ft_reflective_light</a> (<a class="el" href="structt__light.html">t_light</a> cur, <a class="el" href="structt__hitrecord.html">t_hitrecord</a> rec, <a class="el" href="structt__entities.html">t_entities</a> scene)</td></tr>
+<tr class="separator:ab380b8bbadc80a5a668141c8edcc4754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fe107fe556fd497ebfc4c4df70b83da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scene__reflection__bonus_8c.html#a7fe107fe556fd497ebfc4c4df70b83da">ft_get_closest_hit</a> (<a class="el" href="structt__entities.html">t_entities</a> scene, <a class="el" href="structt__ray.html">t_ray</a> ray, <a class="el" href="structt__interval.html">t_interval</a> ray_d, <a class="el" href="structt__hitrecord.html">t_hitrecord</a> *closest)</td></tr>
 <tr class="separator:a7fe107fe556fd497ebfc4c4df70b83da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -207,14 +207,14 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="scene__reflection__bonus_8c_a7fe107fe556fd497ebfc4c4df70b83da_icgraph.svg" width="667" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="scene__reflection__bonus_8c_a7fe107fe556fd497ebfc4c4df70b83da_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a72c122146878dc126a6472d159526c14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72c122146878dc126a6472d159526c14">&#9670;&nbsp;</a></span>ft_reflective_light()</h2>
+<a id="ab380b8bbadc80a5a668141c8edcc4754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab380b8bbadc80a5a668141c8edcc4754">&#9670;&nbsp;</a></span>ft_reflective_light()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,13 +235,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structt__entities.html">t_entities</a>&#160;</td>
-          <td class="paramname"><em>scene</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structt__cam.html">t_cam</a>&#160;</td>
-          <td class="paramname"><em>cam</em>&#160;</td>
+          <td class="paramname"><em>scene</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -257,7 +251,6 @@ Here is the caller graph for this function:</div>
     <tr><td class="paramname">cur</td><td>Current light source </td></tr>
     <tr><td class="paramname">rec</td><td>Hit record of current object hit </td></tr>
     <tr><td class="paramname">scene</td><td>Scene containing all entities </td></tr>
-    <tr><td class="paramname">cam</td><td>Camera looking at scene </td></tr>
   </table>
   </dd>
 </dl>
@@ -283,14 +276,14 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        rec.<a class="code" href="structt__hitrecord.html#a24a9c54d4ca1a0c78f33dd2af963213f">reflection_count</a>++;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> (rec.<a class="code" href="structt__hitrecord.html#a29a71585f81166c3775c445983d5f0b2">reflectivity</a> &gt; 0.0)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            reflective_colour = <a class="code" href="lighting__bonus_8h.html#ac85883d276b27394b86511c7eaa4d4ae">ft_compute_colour</a>(cur, rec, scene, cam);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            reflective_colour = <a class="code" href="lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73">ft_compute_colour</a>(cur, rec, scene);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            reflective_colour = <a class="code" href="lighting_8h.html#ae50a6e06925c764b3caad3f805bc4c8a">ft_diffuse_light</a>(cur, rec);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> (reflective_colour);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="ttc" id="alighting_8h_html_ae50a6e06925c764b3caad3f805bc4c8a"><div class="ttname"><a href="lighting_8h.html#ae50a6e06925c764b3caad3f805bc4c8a">ft_diffuse_light</a></div><div class="ttdeci">t_colour ft_diffuse_light(t_light cur, t_hitrecord rec)</div><div class="ttdoc">Create diffuse lighting.</div><div class="ttdef"><b>Definition:</b> <a href="scene__light_8c_source.html#l00042">scene_light.c:42</a></div></div>
-<div class="ttc" id="alighting__bonus_8h_html_ac85883d276b27394b86511c7eaa4d4ae"><div class="ttname"><a href="lighting__bonus_8h.html#ac85883d276b27394b86511c7eaa4d4ae">ft_compute_colour</a></div><div class="ttdeci">t_colour ft_compute_colour(t_light cur, t_hitrecord rec, t_entities scene, t_cam cam)</div><div class="ttdoc">Computes the colour of light interacting with different material properties.</div><div class="ttdef"><b>Definition:</b> <a href="scene__light__bonus_8c_source.html#l00037">scene_light_bonus.c:37</a></div></div>
+<div class="ttc" id="alighting__bonus_8h_html_a31af89240f5ffa2f65f1525d06121d73"><div class="ttname"><a href="lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73">ft_compute_colour</a></div><div class="ttdeci">t_colour ft_compute_colour(t_light cur, t_hitrecord rec, t_entities scene)</div><div class="ttdoc">Computes the colour of light interacting with different material properties.</div><div class="ttdef"><b>Definition:</b> <a href="scene__light__bonus_8c_source.html#l00036">scene_light_bonus.c:36</a></div></div>
 <div class="ttc" id="amini_r_t__config__bonus_8h_html_a387d9d8c183953f922357e446fc3545a"><div class="ttname"><a href="mini_r_t__config__bonus_8h.html#a387d9d8c183953f922357e446fc3545a">REFLECTION_MAX</a></div><div class="ttdeci">#define REFLECTION_MAX</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config__bonus_8h_source.html#l00059">miniRT_config_bonus.h:59</a></div></div>
 <div class="ttc" id="ascene__reflection__bonus_8c_html_a7fe107fe556fd497ebfc4c4df70b83da"><div class="ttname"><a href="scene__reflection__bonus_8c.html#a7fe107fe556fd497ebfc4c4df70b83da">ft_get_closest_hit</a></div><div class="ttdeci">bool ft_get_closest_hit(t_entities scene, t_ray ray, t_interval ray_d, t_hitrecord *closest)</div><div class="ttdoc">Looks for the closest object hit by a ray.</div><div class="ttdef"><b>Definition:</b> <a href="scene__reflection__bonus_8c_source.html#l00043">scene_reflection_bonus.c:43</a></div></div>
 <div class="ttc" id="astructt__colour_html"><div class="ttname"><a href="structt__colour.html">t_colour</a></div><div class="ttdoc">Represents an RGB colour with float values from 0.0 - 1.0.</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00036">colour.h:37</a></div></div>
@@ -313,13 +306,13 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="scene__reflection__bonus_8c_a72c122146878dc126a6472d159526c14_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="scene__reflection__bonus_8c_ab380b8bbadc80a5a668141c8edcc4754_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="scene__reflection__bonus_8c_a72c122146878dc126a6472d159526c14_icgraph.svg" width="519" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="scene__reflection__bonus_8c_ab380b8bbadc80a5a668141c8edcc4754_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

@@ -28,7 +28,7 @@
 <area shape="rect" id="node19" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="869,303,1005,330"/>
 <area shape="rect" id="node21" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="884,202,991,228"/>
 <area shape="rect" id="node23" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="851,252,1024,279"/>
-<area shape="rect" id="node20" href="$lighting__bonus_8h.html#a72c122146878dc126a6472d159526c14" title="Create reflective lighting by recursion." alt="" coords="657,303,792,330"/>
+<area shape="rect" id="node20" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="657,303,792,330"/>
 <area shape="rect" id="node25" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="1825,252,1970,279"/>
 <area shape="rect" id="node28" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="1828,860,1967,887"/>
 <area shape="rect" id="node29" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="1831,911,1964,938"/>

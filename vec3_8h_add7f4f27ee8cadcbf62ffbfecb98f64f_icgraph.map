@@ -1,29 +1,29 @@
 <map id="ft_vec3_equal" name="ft_vec3_equal">
-<area shape="rect" id="node1" title="Determines if two vectors are equal." alt="" coords="2160,74,2272,100"/>
-<area shape="rect" id="node2" href="$hit__manager__bonus_8h.html#a9874994177d1382ce3e76988ca7cee3b" title="Calculates the normal on the point of intersection of the cone." alt="" coords="1987,23,2093,50"/>
-<area shape="rect" id="node18" href="$hit__manager_8h.html#a873b926722f5b8fada3f51432dccd4be" title="Calculates the normal on the point of intersection of the cylinder." alt="" coords="1987,150,2093,176"/>
-<area shape="rect" id="node20" href="$hit__manager__bonus_8h.html#a87d41de805dc36f90fb5002fa2d34da0" title="Transforms the Cartesian coordinates of a hit point on a plane into 2D texture UV&#45;coordinates in the ..." alt="" coords="1968,74,2112,100"/>
-<area shape="rect" id="node3" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="1775,23,1920,50"/>
-<area shape="rect" id="node4" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="1247,74,1340,100"/>
-<area shape="rect" id="node5" href="$hit__bonus_8c.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="1087,74,1199,100"/>
-<area shape="rect" id="node6" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="884,48,1020,75"/>
-<area shape="rect" id="node10" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="899,99,1005,126"/>
-<area shape="rect" id="node17" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="865,150,1039,176"/>
-<area shape="rect" id="node7" href="$lighting__bonus_8h.html#a72c122146878dc126a6472d159526c14" title="Create reflective lighting by recursion." alt="" coords="672,48,807,75"/>
-<area shape="rect" id="node8" href="$lighting__bonus_8h.html#ac85883d276b27394b86511c7eaa4d4ae" title="Computes the colour of light interacting with different material properties." alt="" coords="471,48,613,75"/>
-<area shape="rect" id="node9" href="$lighting__bonus_8h.html#a7a7ed2ff6f725c296f088c0f2f0d0843" title="Calculate the effect of different lighting on perception." alt="" coords="316,48,415,75"/>
-<area shape="rect" id="node11" href="$ray__bonus_8h.html#af9c073d2966aa21738e1d2083762055f" title="Returns the colour of a pixel by means of anti&#45;aliasing." alt="" coords="661,99,817,126"/>
-<area shape="rect" id="node16" href="$render_8h.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="478,150,606,176"/>
-<area shape="rect" id="node12" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="478,99,606,126"/>
-<area shape="rect" id="node13" href="$render_8h.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,124,423,151"/>
-<area shape="rect" id="node14" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,124,260,151"/>
-<area shape="rect" id="node15" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,124,60,151"/>
-<area shape="rect" id="node19" href="$hit__manager_8h.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="1775,175,1920,202"/>
-<area shape="rect" id="node21" href="$hit__cylinder__bonus_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="1581,175,1727,202"/>
-<area shape="rect" id="node24" href="$hit__plane__bonus_8c.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="1798,74,1897,100"/>
-<area shape="rect" id="node22" href="$hit__cylinder__bonus_8c.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="1403,175,1518,202"/>
-<area shape="rect" id="node23" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="1087,124,1199,151"/>
-<area shape="rect" id="node25" href="$hit__manager__bonus_8h.html#aee5824df7f0e0c2698306f49f9a1c790" title="Calculates potential hit of cone cap." alt="" coords="1601,74,1707,100"/>
-<area shape="rect" id="node27" href="$hit__manager_8h.html#af2540784b9e01fbdfeacb544ea2c169a" title="Calculates the hit point of the ray with the cylinder cap." alt="" coords="1601,23,1707,50"/>
-<area shape="rect" id="node26" href="$hit__manager__bonus_8h.html#a9752309af1756a6360c6459ed6747f83" title="Calculates potential hits of a cone." alt="" coords="1388,74,1533,100"/>
+<area shape="rect" id="node1" title="Determines if two vectors are equal." alt="" coords="2820,74,2932,100"/>
+<area shape="rect" id="node2" href="$hit__manager__bonus_8h.html#a9874994177d1382ce3e76988ca7cee3b" title="Calculates the normal on the point of intersection of the cone." alt="" coords="2647,23,2753,50"/>
+<area shape="rect" id="node18" href="$hit__manager_8h.html#a873b926722f5b8fada3f51432dccd4be" title="Calculates the normal on the point of intersection of the cylinder." alt="" coords="2647,150,2753,176"/>
+<area shape="rect" id="node20" href="$hit__manager__bonus_8h.html#a87d41de805dc36f90fb5002fa2d34da0" title="Transforms the Cartesian coordinates of a hit point on a plane into 2D texture UV&#45;coordinates in the ..." alt="" coords="2628,74,2772,100"/>
+<area shape="rect" id="node3" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2435,23,2580,50"/>
+<area shape="rect" id="node4" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="1907,74,2000,100"/>
+<area shape="rect" id="node5" href="$hit__bonus_8c.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="1747,74,1859,100"/>
+<area shape="rect" id="node6" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="1544,74,1680,100"/>
+<area shape="rect" id="node10" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="851,74,957,100"/>
+<area shape="rect" id="node17" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="1525,124,1699,151"/>
+<area shape="rect" id="node7" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="1343,74,1477,100"/>
+<area shape="rect" id="node8" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="1152,74,1295,100"/>
+<area shape="rect" id="node9" href="$scene__light__bonus_8c.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="1005,74,1104,100"/>
+<area shape="rect" id="node11" href="$ray__bonus_8h.html#af9c073d2966aa21738e1d2083762055f" title="Returns the colour of a pixel by means of anti&#45;aliasing." alt="" coords="647,48,803,75"/>
+<area shape="rect" id="node16" href="$render_8h.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="471,99,599,126"/>
+<area shape="rect" id="node12" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="471,48,599,75"/>
+<area shape="rect" id="node13" href="$render_8h.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,74,423,100"/>
+<area shape="rect" id="node14" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,74,260,100"/>
+<area shape="rect" id="node15" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,74,60,100"/>
+<area shape="rect" id="node19" href="$hit__manager_8h.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2435,175,2580,202"/>
+<area shape="rect" id="node21" href="$hit__cylinder__bonus_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2241,175,2387,202"/>
+<area shape="rect" id="node24" href="$hit__plane__bonus_8c.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="2458,74,2557,100"/>
+<area shape="rect" id="node22" href="$hit__cylinder__bonus_8c.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="2063,175,2178,202"/>
+<area shape="rect" id="node23" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="1747,124,1859,151"/>
+<area shape="rect" id="node25" href="$hit__manager__bonus_8h.html#aee5824df7f0e0c2698306f49f9a1c790" title="Calculates potential hit of cone cap." alt="" coords="2261,74,2367,100"/>
+<area shape="rect" id="node27" href="$hit__manager_8h.html#af2540784b9e01fbdfeacb544ea2c169a" title="Calculates the hit point of the ray with the cylinder cap." alt="" coords="2261,23,2367,50"/>
+<area shape="rect" id="node26" href="$hit__manager__bonus_8h.html#a9752309af1756a6360c6459ed6747f83" title="Calculates potential hits of a cone." alt="" coords="2048,74,2193,100"/>
 </map>

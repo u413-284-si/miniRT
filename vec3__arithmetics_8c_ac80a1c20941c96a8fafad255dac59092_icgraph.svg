@@ -306,7 +306,7 @@ var sectionId = 'dynsection-4';
 <!-- Node21 -->
 <g id="node38" class="node">
 <title>Node21</title>
-<g id="a_node38"><a xlink:href="lighting__bonus_8h.html#a72c122146878dc126a6472d159526c14" target="_top" xlink:title="Create reflective lighting by recursion.">
+<g id="a_node38"><a xlink:href="lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" target="_top" xlink:title="Create reflective lighting by recursion.">
 <polygon fill="none" stroke="black" points="282.5,-551.5 282.5,-570.5 383.5,-570.5 383.5,-551.5 282.5,-551.5"/>
 <text text-anchor="middle" x="333" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_reflective_light</text>
 </a>
@@ -351,7 +351,7 @@ var sectionId = 'dynsection-4';
 <!-- Node60 -->
 <g id="node44" class="node">
 <title>Node60</title>
-<g id="a_node44"><a xlink:href="lighting__bonus_8h.html#af5be68420f313176423a79d2df7d1b51" target="_top" xlink:title="Create specular lighting.">
+<g id="a_node44"><a xlink:href="lighting__bonus_8h.html#af0db0e12e85b772afed9cdfac4c33437" target="_top" xlink:title="Create specular lighting.">
 <polygon fill="none" stroke="black" points="455.5,-418.5 455.5,-437.5 552.5,-437.5 552.5,-418.5 455.5,-418.5"/>
 <text text-anchor="middle" x="504" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_specular_light</text>
 </a>
@@ -735,7 +735,7 @@ var sectionId = 'dynsection-4';
 <!-- Node22 -->
 <g id="node39" class="node">
 <title>Node22</title>
-<g id="a_node39"><a xlink:href="lighting__bonus_8h.html#ac85883d276b27394b86511c7eaa4d4ae" target="_top" xlink:title="Computes the colour of light interacting with different material properties.">
+<g id="a_node39"><a xlink:href="lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" target="_top" xlink:title="Computes the colour of light interacting with different material properties.">
 <polygon fill="none" stroke="red" points="122,-551.5 122,-570.5 229,-570.5 229,-551.5 122,-551.5"/>
 <text text-anchor="middle" x="175.5" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_compute_colour</text>
 </a>

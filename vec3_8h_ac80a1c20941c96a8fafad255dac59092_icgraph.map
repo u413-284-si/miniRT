@@ -16,10 +16,10 @@
 <area shape="rect" id="node32" href="$parse__bonus_8h.html#a0ee220aca489e16d423c754b9d88e2dd" title="Parse cone line." alt="" coords="598,1171,757,1197"/>
 <area shape="rect" id="node33" href="$ray__bonus_8h.html#a8706f722b73ae2ec7ec56e469ecbac02" title="Generate a random vector that is confined within the square surrounding a pixel. The vector lies in t..." alt="" coords="849,512,973,539"/>
 <area shape="rect" id="node35" href="$utils__bonus_8h.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="844,715,977,741"/>
-<area shape="rect" id="node38" href="$lighting__bonus_8h.html#a72c122146878dc126a6472d159526c14" title="Create reflective lighting by recursion." alt="" coords="382,841,517,868"/>
+<area shape="rect" id="node38" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="382,841,517,868"/>
 <area shape="rect" id="node40" href="$render_8h.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="613,563,741,589"/>
 <area shape="rect" id="node41" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="861,208,961,235"/>
-<area shape="rect" id="node44" href="$lighting__bonus_8h.html#af5be68420f313176423a79d2df7d1b51" title="Create specular lighting." alt="" coords="613,1019,742,1045"/>
+<area shape="rect" id="node44" href="$lighting__bonus_8h.html#af0db0e12e85b772afed9cdfac4c33437" title="Create specular lighting." alt="" coords="613,1019,742,1045"/>
 <area shape="rect" id="node45" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="855,841,966,868"/>
 <area shape="rect" id="node3" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="175,512,303,539"/>
 <area shape="rect" id="node4" href="$render_8h.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="5,537,120,564"/>
@@ -41,7 +41,7 @@
 <area shape="rect" id="node34" href="$ray__bonus_8h.html#a1e768fa0e7f9c3d0f13261716eee7d24" title="Creates a random sample ray in a square surrounding the current pixel." alt="" coords="596,512,759,539"/>
 <area shape="rect" id="node36" href="$hit__manager__bonus_8h.html#abc28bafc00495161db9de547a9461cb1" title="Transforms the Cartesian coordinates of a hit point on a cone wall into 2D texture UV&#45;coordinates in ..." alt="" coords="604,765,751,792"/>
 <area shape="rect" id="node37" href="$hit__manager__bonus_8h.html#aeb33f439a0d2093bdbcca7468e2e78b4" title="Transforms the Cartesian coordinates of a hit point on a cylinder wall into 2D texture UV&#45;coordinates..." alt="" coords="604,715,751,741"/>
-<area shape="rect" id="node39" href="$lighting__bonus_8h.html#ac85883d276b27394b86511c7eaa4d4ae" title="Computes the colour of light interacting with different material properties." alt="" coords="168,841,311,868"/>
+<area shape="rect" id="node39" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="168,841,311,868"/>
 <area shape="rect" id="node42" href="$hit__manager__bonus_8h.html#a5daa3987cf663970a55423c4d47d2d64" title="Check if the ray actually hit the cone cap." alt="" coords="613,157,741,184"/>
 <area shape="rect" id="node43" href="$hit__manager_8h.html#a98c590ac9074c10dc7e18cfd033c0b9b" title="Checks if the ray actually hit the cylinder cap." alt="" coords="613,107,741,133"/>
 <area shape="rect" id="node46" href="$lighting_8h.html#ae50a6e06925c764b3caad3f805bc4c8a" title="Create diffuse lighting." alt="" coords="618,867,737,893"/>

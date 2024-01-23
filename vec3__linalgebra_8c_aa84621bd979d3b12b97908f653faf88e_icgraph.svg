@@ -276,7 +276,7 @@ var sectionId = 'dynsection-1';
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="lighting__bonus_8h.html#a72c122146878dc126a6472d159526c14" target="_top" xlink:title="Create reflective lighting by recursion.">
+<g id="a_node7"><a xlink:href="lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" target="_top" xlink:title="Create reflective lighting by recursion.">
 <polygon fill="none" stroke="black" points="273,-91.5 273,-110.5 374,-110.5 374,-91.5 273,-91.5"/>
 <text text-anchor="middle" x="323.5" y="-98.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_reflective_light</text>
 </a>
@@ -291,7 +291,7 @@ var sectionId = 'dynsection-1';
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="lighting__bonus_8h.html#ac85883d276b27394b86511c7eaa4d4ae" target="_top" xlink:title="Computes the colour of light interacting with different material properties.">
+<g id="a_node8"><a xlink:href="lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" target="_top" xlink:title="Computes the colour of light interacting with different material properties.">
 <polygon fill="none" stroke="red" points="122,-91.5 122,-110.5 229,-110.5 229,-91.5 122,-91.5"/>
 <text text-anchor="middle" x="175.5" y="-98.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_compute_colour</text>
 </a>
@@ -636,7 +636,7 @@ var sectionId = 'dynsection-1';
 <!-- Node49 -->
 <g id="node44" class="node">
 <title>Node49</title>
-<g id="a_node44"><a xlink:href="lighting__bonus_8h.html#af5be68420f313176423a79d2df7d1b51" target="_top" xlink:title="Create specular lighting.">
+<g id="a_node44"><a xlink:href="lighting__bonus_8h.html#af0db0e12e85b772afed9cdfac4c33437" target="_top" xlink:title="Create specular lighting.">
 <polygon fill="none" stroke="black" points="596.5,-200.5 596.5,-219.5 693.5,-219.5 693.5,-200.5 596.5,-200.5"/>
 <text text-anchor="middle" x="645" y="-207.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_specular_light</text>
 </a>

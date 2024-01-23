@@ -1,17 +1,17 @@
 <map id="ft_co_calc_pot_hits" name="ft_co_calc_pot_hits">
-<area shape="rect" id="node1" title="Calculates potential hits of a cone." alt="" coords="1388,56,1533,83"/>
-<area shape="rect" id="node2" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="1247,56,1340,83"/>
-<area shape="rect" id="node3" href="$hit__bonus_8c.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="1087,56,1199,83"/>
-<area shape="rect" id="node4" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="884,5,1020,32"/>
-<area shape="rect" id="node8" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="899,56,1005,83"/>
-<area shape="rect" id="node15" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="865,107,1039,133"/>
-<area shape="rect" id="node5" href="$lighting__bonus_8h.html#a72c122146878dc126a6472d159526c14" title="Create reflective lighting by recursion." alt="" coords="672,5,807,32"/>
-<area shape="rect" id="node6" href="$lighting__bonus_8h.html#ac85883d276b27394b86511c7eaa4d4ae" title="Computes the colour of light interacting with different material properties." alt="" coords="471,5,613,32"/>
-<area shape="rect" id="node7" href="$lighting__bonus_8h.html#a7a7ed2ff6f725c296f088c0f2f0d0843" title="Calculate the effect of different lighting on perception." alt="" coords="316,5,415,32"/>
-<area shape="rect" id="node9" href="$ray__bonus_8h.html#af9c073d2966aa21738e1d2083762055f" title="Returns the colour of a pixel by means of anti&#45;aliasing." alt="" coords="661,56,817,83"/>
-<area shape="rect" id="node14" href="$render_8h.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="478,107,606,133"/>
-<area shape="rect" id="node10" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="478,56,606,83"/>
-<area shape="rect" id="node11" href="$render_8h.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,81,423,108"/>
-<area shape="rect" id="node12" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,81,260,108"/>
-<area shape="rect" id="node13" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,81,60,108"/>
+<area shape="rect" id="node1" title="Calculates potential hits of a cone." alt="" coords="2048,56,2193,83"/>
+<area shape="rect" id="node2" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="1907,56,2000,83"/>
+<area shape="rect" id="node3" href="$hit__bonus_8c.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="1747,56,1859,83"/>
+<area shape="rect" id="node4" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="1544,5,1680,32"/>
+<area shape="rect" id="node8" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="851,31,957,57"/>
+<area shape="rect" id="node15" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="1525,107,1699,133"/>
+<area shape="rect" id="node5" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="1343,5,1477,32"/>
+<area shape="rect" id="node6" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="1152,5,1295,32"/>
+<area shape="rect" id="node7" href="$scene__light__bonus_8c.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="1005,5,1104,32"/>
+<area shape="rect" id="node9" href="$ray__bonus_8h.html#af9c073d2966aa21738e1d2083762055f" title="Returns the colour of a pixel by means of anti&#45;aliasing." alt="" coords="647,5,803,32"/>
+<area shape="rect" id="node14" href="$render_8h.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="471,56,599,83"/>
+<area shape="rect" id="node10" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="471,5,599,32"/>
+<area shape="rect" id="node11" href="$render_8h.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,31,423,57"/>
+<area shape="rect" id="node12" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,31,260,57"/>
+<area shape="rect" id="node13" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,60,57"/>
 </map>

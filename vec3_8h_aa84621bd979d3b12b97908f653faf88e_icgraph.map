@@ -14,8 +14,8 @@
 <area shape="rect" id="node6" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="581,480,717,507"/>
 <area shape="rect" id="node9" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="596,360,703,387"/>
 <area shape="rect" id="node14" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="563,531,736,557"/>
-<area shape="rect" id="node7" href="$lighting__bonus_8h.html#a72c122146878dc126a6472d159526c14" title="Create reflective lighting by recursion." alt="" coords="369,897,504,924"/>
-<area shape="rect" id="node8" href="$lighting__bonus_8h.html#ac85883d276b27394b86511c7eaa4d4ae" title="Computes the colour of light interacting with different material properties." alt="" coords="168,897,311,924"/>
+<area shape="rect" id="node7" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="369,897,504,924"/>
+<area shape="rect" id="node8" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="168,897,311,924"/>
 <area shape="rect" id="node10" href="$ray__bonus_8h.html#af9c073d2966aa21738e1d2083762055f" title="Returns the colour of a pixel by means of anti&#45;aliasing." alt="" coords="359,335,515,361"/>
 <area shape="rect" id="node13" href="$render_8h.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="373,385,501,412"/>
 <area shape="rect" id="node11" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="175,335,303,361"/>
@@ -34,7 +34,7 @@
 <area shape="rect" id="node41" href="$parse__bonus_8h.html#a30041bb98ced6caf1debb5468bfb6ad4" title="Parse cylinder line." alt="" coords="1431,309,1609,336"/>
 <area shape="rect" id="node42" href="$parse_8h.html#a64877aac0d88b33e1bb87b3c9a3496dc" title="Parse plane line." alt="" coords="1461,867,1579,893"/>
 <area shape="rect" id="node43" href="$parse__bonus_8h.html#a672a980c7d877d0d42971cd811541bd4" title="Parse plane line." alt="" coords="1439,360,1601,387"/>
-<area shape="rect" id="node44" href="$lighting__bonus_8h.html#af5be68420f313176423a79d2df7d1b51" title="Create specular lighting." alt="" coords="801,752,930,779"/>
+<area shape="rect" id="node44" href="$lighting__bonus_8h.html#af0db0e12e85b772afed9cdfac4c33437" title="Create specular lighting." alt="" coords="801,752,930,779"/>
 <area shape="rect" id="node45" href="$mat4__vec3_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" title="Rotates a 3D vector around the x&#45;axis." alt="" coords="1455,563,1585,589"/>
 <area shape="rect" id="node49" href="$mat4__vec3_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46" title="Rotates a 3D vector around the y&#45;axis." alt="" coords="1455,512,1585,539"/>
 <area shape="rect" id="node50" href="$mat4__vec3_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc" title="Rotates a 3D vector around the z&#45;axis." alt="" coords="1455,816,1585,843"/>
