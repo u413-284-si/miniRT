@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/23 18:32:37 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/23 18:33:53 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_colour	ft_shoot_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
 
 	pixel_centre = cam.pix_cache[pos.y * cam.image.x + pos.x];
 	ray.direction = ft_vec3_norm(ft_vec3_sub(pixel_centre, ray.origin));
-	return (ft_ray_colour(ray, scene, cam));
+	return (ft_ray_colour(ray, scene));
 }
 
 void	ft_raytrace_sample(t_render *render)
@@ -60,7 +60,7 @@ t_colour	ft_shoot_aa_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
 	pixel_centre = cam.pix_cache[pos.y * cam.image.x + pos.x];
 	pixel_sample = ft_vec3_add(pixel_centre, ft_pixel_sample(cam.pixels));
 	ray.direction = ft_vec3_norm(ft_vec3_sub(pixel_sample, ray.origin));
-	return (ft_ray_colour(ray, scene, cam));
+	return (ft_ray_colour(ray, scene));
 }
 
 void	ft_add_raytrace_sample(t_render *render)
