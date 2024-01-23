@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/20 15:35:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/23 18:32:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_vec3	ft_scale_ray(t_ray ray, float d)
 	return (ft_vec3_add(ray.origin, ft_vec3_scale(ray.direction, d)));
 }
 
-t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam)
+t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 {
 	t_colour	ray_colour;
 	t_hitrecord	rec;
@@ -39,7 +39,7 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene, t_cam cam)
 	}
 	if (ray_d.max < INFINITY)
 	{
-		ft_enlighten(&ray_colour, rec, scene, cam);
+		ft_enlighten(&ray_colour, rec, scene);
 		return (ray_colour);
 	}
 	return (ft_background_colour(ray));
