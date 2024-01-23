@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 17:02:57 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/23 13:47:37 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -212,6 +212,7 @@ void	ft_put_pl(t_putinfo put, t_plane pl);
  */
 void	ft_put_cy(t_putinfo put, t_cylinder cy);
 
+# if IS_BONUS
 /**
   * @brief Puts cone info on the screen.
  *
@@ -221,6 +222,7 @@ void	ft_put_cy(t_putinfo put, t_cylinder cy);
  * @param co		Cone to be put on screen.
  */
 void	ft_put_co(t_putinfo put, t_cone co);
+# endif
 
 // menu_put_cam_light.c
 
