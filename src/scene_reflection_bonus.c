@@ -6,14 +6,14 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 23:15:28 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/17 16:33:45 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/23 14:14:32 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lighting_bonus.h"
 
 t_colour	ft_reflective_light(t_light cur, t_hitrecord rec, \
-	t_entities scene, t_cam cam)
+	t_entities scene)
 {
 	t_vec3		reflect_direction;
 	t_ray		reflect_ray;
@@ -33,7 +33,7 @@ t_colour	ft_reflective_light(t_light cur, t_hitrecord rec, \
 	{
 		rec.reflection_count++;
 		if (rec.reflectivity > 0.0)
-			reflective_colour = ft_compute_colour(cur, rec, scene, cam);
+			reflective_colour = ft_compute_colour(cur, rec, scene);
 		else
 			reflective_colour = ft_diffuse_light(cur, rec);
 	}

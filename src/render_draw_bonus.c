@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/17 16:33:19 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/23 14:18:29 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ t_colour	ft_anti_aliase_colour(t_vec2i iterate, t_pixel_grid pixels, \
 	{
 		ray = ft_create_sample_ray(pixel_centre, pixels, cam);
 		pixel_colour = ft_add_colour(pixel_colour, \
-			ft_ray_colour(ray, scene, cam));
+			ft_ray_colour(ray, scene));
 	}
 	pixel_colour.r /= SAMPLE_SIZE;
 	pixel_colour.g /= SAMPLE_SIZE;

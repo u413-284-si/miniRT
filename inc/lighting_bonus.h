@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:18:23 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/19 00:07:41 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/23 14:17:56 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 /* ====== LIBRARIES ====== */
 
 # include "hit_manager_bonus.h"
-# include "camera.h"
 # include "texture_bonus.h"
 
 /* ====== TYPEDEFS ====== */
@@ -36,10 +35,9 @@
  * @param ray_colour 	Resulting colour
  * @param rec 			Hit record
  * @param scene 		Scene containing light information
- * @param cam			Camera looking at scene
  */
 void		ft_enlighten(t_colour *ray_colour, t_hitrecord rec, \
-	t_entities scene, t_cam cam);
+	t_entities scene);
 
 /**
  * @brief Computes the colour of light interacting with different
@@ -48,11 +46,10 @@ void		ft_enlighten(t_colour *ray_colour, t_hitrecord rec, \
  * @param cur 		Current light source
  * @param rec 		Hit record of current object hit
  * @param scene		Scene containing all entities
- * @param cam		Camera looking at scene
  * @return t_colour 
  */
 t_colour	ft_compute_colour(t_light cur, t_hitrecord rec, \
-	t_entities scene, t_cam cam);
+	t_entities scene);
 
 /**
  * @brief Create ambient lighting
@@ -81,10 +78,9 @@ t_colour	ft_diffuse_light(t_light cur, t_hitrecord rec);
  * Specular lighting = specular factor * specular strength * light colour
  * @param cur 			Current light source
  * @param rec 			Hit record
- * @param cam 			Camera
  * @return t_colour 
  */
-t_colour	ft_specular_light(t_light cur, t_hitrecord rec, t_cam cam);
+t_colour	ft_specular_light(t_light cur, t_hitrecord rec);
 
 /**
  * @brief Create reflective lighting by recursion
@@ -92,11 +88,10 @@ t_colour	ft_specular_light(t_light cur, t_hitrecord rec, t_cam cam);
  * @param cur 		Current light source
  * @param rec 		Hit record of current object hit
  * @param scene		Scene containing all entities
- * @param cam		Camera looking at scene
  * @return t_colour 
  */
 t_colour	ft_reflective_light(t_light cur, t_hitrecord rec, \
-	t_entities scene, t_cam cam);
+	t_entities scene);
 
 /**
  * @brief Looks for the closest object hit by a ray
