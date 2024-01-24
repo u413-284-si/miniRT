@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 18:38:51 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/24 10:56:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@
 # include "error_mlx.h"
 # include "camera.h"
 # include "cleanup.h"
-# include "print.h"
 # include "vec2.h"
 # include "render_menu.h"
-# include "render_bit_field.h"
 
 # include "miniRT_config_bonus.h"
 # include "ray_bonus.h"
 # include "entities_bonus.h"
-#include "time_bonus.h"
+# include "render_bit_field_bonus.h"
+# include "threads_bonus.h"
+# include "time_bonus.h"
 
 /* ====== MACROS ========*/
 
@@ -103,16 +103,19 @@ typedef struct s_mouse
  */
 typedef struct s_render
 {
-	t_mlx_ptrs	mlx_ptrs;
-	t_cam		cam;
-	t_entities	scene;
-	t_mouse		mouse;
-	t_menu		menu;
-	uint32_t	options;
-	bool		is_printing;
-	int			active_hittable;
-	int			active_light;
-	uint64_t	last_render_time;
+	t_mlx_ptrs		mlx_ptrs;
+	t_cam			cam;
+	t_entities		scene;
+	t_mouse			mouse;
+	t_menu			menu;
+	uint32_t		options;
+	int				active_hittable;
+	int				active_light;
+	uint64_t		last_render_time;
+	bool			is_printing;
+	pthread_mutex_t	mut_print;
+	t_colour		*sample_buffer;
+	uint8_t			sample_goal;
 }	t_render;
 
 /**
@@ -135,7 +138,19 @@ typedef enum e_col_name
 
 /* ====== FUNCTIONS ====== */
 
-// render_init.c
+// render_init_bonus.c
+
+/**
+ * @brief Initializes the render struct.
+ *
+ * Initializes the mlx_ptrs struct, the cam struct and the menu struct.
+ * Initializes options.
+ * @param render	Pointer to render struct.
+ * @return t_err	SUCCESS, ERROR.
+ */
+t_err		ft_render_init(t_render *render);
+
+// render_init_mlx.c
 
 /**
  * @brief Initializes the mlx_ptrs struct.
@@ -144,7 +159,7 @@ typedef enum e_col_name
  * @param fullscreen	Fullscreen flag.
  * @return t_err		SUCCESS, ERROR.
  */
-t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen);
+t_err		ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen);
 
 /**
  * @brief Initializes the mlx img struct.
@@ -153,7 +168,7 @@ t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen);
  * @param size			Image size as int array.
  * @return t_err		SUCCESS, ERROR.
  */
-t_err	ft_init_image(t_mlx_ptrs *mlx_ptrs, t_vec2i size);
+t_err		ft_init_image(t_mlx_ptrs *mlx_ptrs, t_vec2i size);
 
 /**
  * @brief Sets the window to fullscreen.
@@ -161,30 +176,162 @@ t_err	ft_init_image(t_mlx_ptrs *mlx_ptrs, t_vec2i size);
  * @param mlx_ptr	Mlx pointer.
  * @return t_vec2i	Window size.
  */
-t_vec2i	ft_set_fullscreen(void *mlx_ptr);
+t_vec2i		ft_set_fullscreen(void *mlx_ptr);
 
-// render_draw.c
+// render_loop_mlx_bonus.c
 
 /**
- * @brief Draws a single pixel to the mlx img.
+ * @brief Starts the mlx loop.
  *
- * Loops for the number of bytes per pixel and writes the colour to the address.
- * @param img	Pointer to mlx img struct.
- * @param x		X coordinate.
- * @param y		Y coordinate.
- * @param color	Colour to write.
+ * Registers keypresses.
+ * Renders the scene to the mlx img in a loop.
+ * @param render	Pointer to render struct.
  */
-void	ft_put_pix_to_image(t_img *img, int x, int y, int color);
+void		ft_render_start_loop(t_render *render);
 
 /**
- * @brief Renders the scene to the mlx img.
+ * @brief Main loop of the program.
+ *
+ * Checks if scene has changed. If so, the scene cur_sample is set to 0.
+ * If cur_sample is less than sample_goal, the scene is rendered.
+ * The menu text is put on top of the image. It needs to be put every
+ * loop iterations, else it disappears.
+ * @param render	Pointer to render struct.
+ * @return int		0 if successful, -1 if not.
+ */
+int			ft_programm_loop(t_render *render);
+
+/**
+ * @brief Wrapper around mlx_loop_end().
+ *
+ * Can be used to do additional cleanup.
+ * @param render	Pointer to render struct.
+ * @return int		0 if successful, -1 if not.
+ */
+int			ft_end_loop(t_render *render);
+
+// render_sample_bonus.c
+
+/**
+ * @brief Raytraces a sample of the scene to the sample buffer.
+ *
+ * Checks current sample goal. If it is 1, the scene is raytraced
+ * without anti-aliasing. If it is more than 1, the scene is raytraced
+ * with anti-aliasing.
+ * Puts the image to the window.
+ * Calcultaes the elapsed time and saves it to the render struct.
+ * Increases the current sample number.
+ * @param render		Pointer to render struct.
+ * @param cur_sample	Pointer to current sample number.
+ * @return int			0 if successful, -1 if not.
+ */
+int			ft_render_sample(t_render *render, uint8_t *cur_sample);
+
+/**
+ * @brief Raytraces a single sample of the scene to the sample buffer.
+ *
+ * Checks if threading is active.
+ * If so, it calls ft_raytrace_sample_threaded().
+ * If not, it calls ft_raytrace_sample().
+ * @param render	Pointer to render struct.
+ * @return int		0 if successful, -1 if not.
+ */
+int			ft_single_sample(t_render *render);
+
+/**
+ * @brief Raytraces a sample of the scene and adds it to the sample buffer.
+ *
+ * Checks if threading is active.
+ * If so, it calls ft_add_raytrace_sample_threaded().
+ * If not, it calls ft_add_raytrace_sample().
+ * Checks if current sample is 1. If so, it calls ft_blend_background().
+ * @param render		Pointer to render struct.
+ * @param cur_sample	Pointer to current sample number.
+ * @return int			0 if successful, -1 if not.
+ */
+int			ft_anti_alias_sample(t_render *render, uint8_t cur_sample);
+
+// render_draw_bonus.c
+
+/**
+ * @brief Constructs a ray and shoots it through the pixel.
+ *
+ * Takes the precalculated pixel centre from the camera pixel grid.
+ * Shoots a ray from the camera centre through the pixel centre.
+ * @param pos		Position of the pixel in the image.
+ * @param ray		Partly build Ray struct.
+ * @param scene		Scene struct.
+ * @param cam		Camera struct.
+ * @return uint32_t	Colour of the pixel.
+ */
+t_colour	ft_shoot_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
+
+/**
+ * @brief Raytraces the scene to the sample buffer.
  *
  * Creates rays for each pixel of the image and "shoots" them
  * through the corresponding pixel in the viewport. The colour of
- * each ray is returned and written to the mlx img.
+ * each ray is returned and written to the sample buffer.
  * @param render	Pointer to render struct.
  */
-void	ft_render_image(t_render *render);
+void		ft_raytrace_sample(t_render *render);
+
+/**
+ * @brief Generate a random vector that is confined within the square
+ * surrounding a pixel. The vector lies in the same plane as the viewport.
+ *
+ * @param pixels		Pixel grid defining its starting position and
+ * 						horizontal/vertical distances
+ * @return t_vec3
+ */
+t_vec3		ft_pixel_sample(t_pixel_grid pixels);
+
+/**
+ * @brief Constructs a random sample ray for anti-aliasing.
+ *
+ * Takes the precalculated pixel centre from the camera pixel grid.
+ * Ray is constructed in a square surrounding the current pixel
+ * Square side length is the distance to the next pixel.
+ * Therefore it extends halfway to each neighbouring pixel.
+ * Then shoots ray and returns it's colour.
+ * @param pos		Position of the pixel in the image.
+ * @param ray		Partly build Ray struct.
+ * @param scene		Scene struct.
+ * @param cam		Camera struct.
+ * @return t_colour	Colour of the pixel.
+ */
+t_colour	ft_shoot_aa_ray(t_vec2i pos, t_ray ray, t_entities scene,
+				t_cam cam);
+
+/**
+ * @brief Raytraces the scene and adds it to the sample buffer.
+ *
+ * Works like ft_raytrace_sample(), but the current buffer is not
+ * overwritten. The sample is added to it. Then the buffer is
+ * divided by the current sample number to get the average colour.
+ * Shoots random rays via ft_shoot_aa_ray().
+ * @param render	Pointer to render struct.
+ */
+void		ft_add_raytrace_sample(t_render *render);
+
+// render_blend_background.c
+
+/**
+ * @brief Creates a blended colour from colour and menu colour.
+ *
+ * Uses formula ColC = alpha{ColA} * ColA + (1 - alpha{ColA} ) * ColB.
+ * The color of menu is pre-calculated to speed up the process.
+ * Also makes use of two simplifications:
+ * 1: less variables
+ * 2: less precision for division
+ * Ad 1: the channels R and B are stored in the same variable. They are
+ * far enough apart in memory.
+ * Ad 2: Instead of dividing by 255.99 we bit shift by >>8 == 256.
+ * @param bg_color
+ * @param menu
+ * @return uint32_t
+ */
+uint32_t	ft_fast_alpha_blend(uint32_t bg_color, t_menu menu);
 
 /**
  * @brief Aplha blends current image with menu color to create overlay.
@@ -197,63 +344,69 @@ void	ft_render_image(t_render *render);
  * are used to calc the blended colour.
  * @param render	Pointer to render struct.
  */
-void	ft_blend_background(t_img *img, t_img *veil, t_menu menu);
+void		ft_blend_background(t_render *render);
 
-// render_output_ppm.c
+// menu_put_text.c
 
 /**
- * @brief Outputs the current mlx img as a ppm file.
+ * @brief Puts the current menu page on the screen.
  *
- * @param img_arr	Pointer to mlx img array, cast into int.
- * @param width		Width of the image.
- * @param height	Height of the image.
- * @return t_err	SUCCESS, ERROR.
+ * @param render	Pointer to render struct.
  */
-t_err	ft_output_as_ppm(const t_img img, bool *is_printing);
+void		ft_menu_put_text(t_render *render);
 
-// render_keyhook.c
+// render_keyhook_press_bonus.c
 
 /**
  * @brief Handles keypresses.
  *
+ * Checks for keypresses and calls the corresponding function.
+ * Differentiates between option, bonus, select and manipulation keys.
  * @param key		Keycode of the pressed key.
  * @param render	Pointer to render struct.
  * @return int		0 if successful, -1 if not.
  */
-int		ft_keyhook_press(int key, t_render *render);
+int			ft_keyhook_press(int key, t_render *render);
 
-// render_keyhook_release.c
+// render_keyhook_options.c
 
 /**
- * @brief Handles key releases.
+ * @brief Handles option keys.
+ *
+ * Escape: Exit program.
+ * Shift: Show controls.
+ * Control: Change mode.
+ * 'I': Toggle menu.
+ * 'U': Change increment value.
+ * @param key		Keycode of the pressed key.
+ * @param render	Pointer to render struct.
+ */
+void		ft_change_options(int key, t_render *render);
+
+// render_keyhook_select.c
+
+/**
+ * @brief Changes the active hittable or light source.
  *
  * @param key		Keycode of the pressed key.
  * @param render	Pointer to render struct.
- * @return int		0 if successful, -1 if not.
  */
-int		ft_keyhook_release(int key, t_render *render);
+void		ft_change_select(int key, t_render *render);
 
-// render_keyhook_scene.c
-
-/**
- * @brief Manipulates the active hittable.
- *
- * Changes the active hittable or manipulates it.
- * @param key		Keycode of the pressed key.
- * @param scene		Pointer to scene struct.
- * @param active	Pointer to index of active hittable.
- * @param inc		Increment value.
- */
-void	ft_manip_scene(int key, t_entities *scene, int *active, float inc);
+// render_keyhook_options_bonus.c
 
 /**
- * @brief Changes the active hittable.
+ * @brief Handles bonus option keys.
  *
+ * 'O': Show options.
+ * 'P': Start printing.
+ * 'J': Toggle threading.
+ * 'K': Toggle anti-aliasing.
+ * 'L': Toggle time unit.
  * @param key		Keycode of the pressed key.
- * @param scene		Pointer to scene struct.
- * @param active	Pointer to index of active hittable.
+ * @param render	Pointer to render struct.
  */
-void	ft_change_active_hittable(int key, t_entities *scene, int *active);
+void		ft_change_options_bonus(int key, t_render *render);
 
 // render_keyhook_hittable.c
 
@@ -264,7 +417,7 @@ void	ft_change_active_hittable(int key, t_entities *scene, int *active);
  * @param hittable	Pointer to hittable struct.
  * @param inc		Increment value.
  */
-void	ft_manip_hittable(int key, t_hittable *hittable, float inc);
+void		ft_manip_hittable(int key, t_hittable *hittable, float inc);
 
 /**
  * @brief Manipulates the active sphere.
@@ -273,7 +426,7 @@ void	ft_manip_hittable(int key, t_hittable *hittable, float inc);
  * @param sp		Pointer to sphere struct.
  * @param inc		Increment value.
  */
-void	ft_manip_sphere(int key, t_sphere *sp, float inc);
+void		ft_manip_sphere(int key, t_sphere *sp, float inc);
 
 /**
  * @brief Manipulates the active plane.
@@ -282,7 +435,7 @@ void	ft_manip_sphere(int key, t_sphere *sp, float inc);
  * @param pl		Pointer to plane struct.
 * @param inc		Increment value.
  */
-void	ft_manip_plane(int key, t_plane *pl, float inc);
+void		ft_manip_plane(int key, t_plane *pl, float inc);
 
 /**
  * @brief Manipulates the active cylinder.
@@ -291,18 +444,91 @@ void	ft_manip_plane(int key, t_plane *pl, float inc);
  * @param cy		Pointer to cylinder struct.
  * @param inc		Increment value.
  */
-void	ft_manip_cylinder(int key, t_cylinder *cy, float inc);
+void		ft_manip_cylinder(int key, t_cylinder *cy, float inc);
 
-// render_keyhook_hittable_bonus.c
+// render_keyhook_camera.c
 
 /**
- * @brief Manipulates the active cone.
+ * @brief Rotates the camera with a keypress.
  *
+ * Arrow Left, Right (Rotate X)
+ * Arrow Up, Down (Rotate Y)
+ * @param key		Keycode of the pressed key.
+ * @param direction	Camera direction vector.
+ * @param inc		Increment value.
+ */
+void		ft_keyhook_rot_cam(int key, t_vec3 *direction, float inc);
+
+/**
+ * @brief Moves the camera with a keypress.
+ *
+ * The camera moves along its orthonormal basis.
+ * WS (Forward, Backward)
+ * AD (Left, Right)
+ * QE (Up, Down)
  * @param key	Keycode of the pressed key.
- * @param co	Pointer to cone struct.
+ * @param cam	Pointer to camera struct.
  * @param inc	Increment value.
  */
-void	ft_manip_cone(int key, t_cone *co, float inc);
+void		ft_keyhook_move_cam(int key, t_cam *cam, float inc);
+
+/**
+ * @brief Changes the camera FOV with a keypress.
+ *
+ * R (Decrease FOV)
+ * F (Increase FOV)
+ * @param key	Keycode of the pressed key.
+ * @param cam	Pointer to camera struct.
+ * @param inc	Increment value.
+ */
+void		ft_keyhook_fov_cam(int key, t_cam *cam, float inc);
+
+/**
+ * @brief Manipulates the camera with a keypress.
+ *
+ * Checks for keypresses and calls the corresponding function.
+ * Re-calculates different aspects of camera (viewport dimensions,
+ * base vectors, pixel grid) if necessary.
+ * Can also use a threaded function to calculate the pixel grid.
+ * @param key		Keycode of the pressed key.
+ * @param cam		Pointer to camera struct.
+ * @param inc		Increment value.
+ * @param options	Options bit field.
+ */
+void		ft_manip_cam(int key, t_cam *cam, float inc, uint32_t *options);
+
+// render_keyhook_light.c
+
+/**
+ * @brief Manipulates the active light.
+ *
+ * Checks for keypresses and calls the corresponding function.
+ * @param key		Keycode of the pressed key.
+ * @param scene		Pointer to scene struct.
+ * @param active	Pointer to index of active light.
+ * @param inc		Increment value.
+ */
+void		ft_manip_light(int key, t_entities *scene, int *active, float inc);
+
+/**
+ * @brief Manipulates the ambient light.
+ *
+ * Changes colour and ratio of ambient light.
+ * @param key		Keycode of the pressed key.
+ * @param ambient	Pointer to ambient light struct.
+ * @param inc		Increment value.
+ */
+void		ft_manip_ambient(int key, t_light *ambient, float inc);
+
+/**
+ * @brief Manipulates a light source.
+ *
+ * Changes colour, ratio and position of a light source.
+ * @param key	Keycode of the pressed key.
+ * @param light	Pointer to light source struct.
+ * @param inc	Increment value.
+ */
+void		ft_manip_light_src(int key, t_light *light, float inc);
 
 // render_keyhook_utils.c
 
@@ -318,7 +544,7 @@ void	ft_manip_cone(int key, t_cone *co, float inc);
  * @param max	Maximum value.
  * @param inc	Increment value.
  */
-void	ft_keyhook_inc_dec(int key, float *value, float max, float inc);
+void		ft_keyhook_inc_dec(int key, float *value, float max, float inc);
 
 /**
  * @brief Moves a 3D point with a keypress.
@@ -331,7 +557,7 @@ void	ft_keyhook_inc_dec(int key, float *value, float max, float inc);
  * @param point	3D point to move.
  * @param inc	Increment value.
  */
-void	ft_keyhook_mv_point(int key, t_vec3 *point, float inc);
+void		ft_keyhook_mv_point(int key, t_vec3 *point, float inc);
 
 /**
  * @brief Rotates a 3D vector with a keypress.
@@ -342,7 +568,7 @@ void	ft_keyhook_mv_point(int key, t_vec3 *point, float inc);
  * @param vector	3D vector to rotate.
  * @param inc		Increment value.
  */
-void	ft_keyhook_rot_vec(int key, t_vec3 *vector, float inc);
+void		ft_keyhook_rot_vec(int key, t_vec3 *vector, float inc);
 
 /**
  * @brief Get the current increment value
@@ -350,7 +576,7 @@ void	ft_keyhook_rot_vec(int key, t_vec3 *vector, float inc);
  * @param options	Options bit field.
  * @return float	Increment value.
  */
-float	ft_get_increment(uint32_t options);
+float		ft_get_increment(uint32_t options);
 
 // render_keyhook_colour.c
 
@@ -362,7 +588,7 @@ float	ft_get_increment(uint32_t options);
  * @param col	Pointer to colour struct.
  * @param inc	Increment value.
  */
-void	ft_keyhook_change_col(int key, t_colour *col, float inc);
+void		ft_keyhook_change_col(int key, t_colour *col, float inc);
 
 /**
  * @brief Returns a colour based on the given colour name.
@@ -393,68 +619,6 @@ void		ft_interpolate_colour(t_colour *result, float progress);
  */
 void		ft_static_interpolate(t_colour *result, float inc);
 
-// render_keyhook_camera.c
-
-/**
- * @brief Rotates the camera with a keypress.
- *
- * Arrow Left, Right (Rotate X)
- * Arrow Up, Down (Rotate Y)
- * @param key		Keycode of the pressed key.
- * @param direction	Camera direction vector.
- * @param inc		Increment value.
- */
-void	ft_keyhook_rot_cam(int key, t_vec3 *direction, float inc);
-
-/**
- * @brief Moves the camera with a keypress.
- *
- * The camera moves along its orthonormal basis.
- * WS (Forward, Backward)
- * AD (Left, Right)
- * QE (Up, Down)
- * @param key	Keycode of the pressed key.
- * @param cam	Pointer to camera struct.
- * @param inc	Increment value.
- */
-void	ft_keyhook_move_cam(int key, t_cam *cam, float inc);
-
-/**
- * @brief Changes the camera FOV with a keypress.
- *
- * R (Decrease FOV)
- * F (Increase FOV)
- * @param key	Keycode of the pressed key.
- * @param cam	Pointer to camera struct.
- * @param inc	Increment value.
- */
-void	ft_keyhook_fov_cam(int key, t_cam *cam, float inc);
-
-/**
- * @brief Manipulates the camera with a keypress.
- *
- * Checks for keypresses and calls the corresponding function.
- * Re-calculates different aspects of camera (viewport dimensions,
- * base vectors, pixel grid) if necessary.
- * @param key	Keycode of the pressed key.
- * @param cam	Pointer to camera struct.
- * @param inc	Increment value.
- */
-void	ft_manip_cam(int key, t_cam *cam, float inc);
-
-// render_keyhook_light.c
-
-/**
- * @brief Manipulates the active light.
- *
- * Checks for keypresses and calls the corresponding function.
- * @param key		Keycode of the pressed key.
- * @param scene		Pointer to scene struct.
- * @param active	Pointer to index of active light.
- * @param inc		Increment value.
- */
-void	ft_manip_light(int key, t_entities *scene, int *active, float inc);
-
 // render_mouse.c
 
 /**
@@ -468,7 +632,7 @@ void	ft_manip_light(int key, t_entities *scene, int *active, float inc);
  * @param render	Pointer to render struct.
  * @return int		0 if successful, -1 if not.
  */
-int		ft_mouse_hook_press(int button, int x, int y, t_render *render);
+int			ft_mouse_hook_press(int button, int x, int y, t_render *render);
 
 /**
  * @brief Handles mouse button releases.
@@ -481,7 +645,7 @@ int		ft_mouse_hook_press(int button, int x, int y, t_render *render);
  * @param render	Pointer to render struct.
  * @return int		0 if successful, -1 if not.
  */
-int		ft_mouse_hook_release(int button, int x, int y, t_render *render);
+int			ft_mouse_hook_release(int button, int x, int y, t_render *render);
 
 /**
  * @brief Handles mouse movement.
@@ -493,7 +657,7 @@ int		ft_mouse_hook_release(int button, int x, int y, t_render *render);
  * @param render	Pointer to render struct.
  * @return int		0 if successful, -1 if not.
  */
-int		ft_mouse_hook_move(int x, int y, t_render *render);
+int			ft_mouse_hook_move(int x, int y, t_render *render);
 
 /**
  * @brief Rotates the camera with the mouse.
@@ -506,29 +670,100 @@ int		ft_mouse_hook_move(int x, int y, t_render *render);
  * @param y			Y coordinate.
  * @param render	Pointer to render struct.
  */
-void	ft_mouse_hook_rot_cam(int x, int y, t_render *render);
+void		ft_mouse_hook_rot_cam(int x, int y, t_render *render);
 
-// render_loop_mlx.c
+// render_cleanup.c
 
 /**
- * @brief Starts the mlx loop.
+ * @brief Frees ressources allocated for mlx.
  *
- * Registers keypresses.
- * Renders the scene to the mlx img in a loop.
- * @param render	Pointer to render struct.
+ * @param mlx_ptrs	Pointer to mlx_ptrs struct.
  */
-void	ft_render_start_loop(t_render *render);
-
-// IMPORT from render_menu.h
+void		ft_free_mlx(t_mlx_ptrs *mlx_ptrs);
 
 /**
- * @brief Puts the current menu page on the screen.
+ * @brief Frees ressources allocated for render.
  *
  * @param render	Pointer to render struct.
  */
-void	ft_menu_put_text(t_render *render);
+void		ft_render_cleanup(t_render *render);
 
-int	ft_draw_scene(t_render *render);
-void	ft_change_options(int key, t_render *render);
+// threads_alt_versions_bonus.c
+
+/**
+ * @brief Like ft_raytrace_sample(), but threaded.
+ *
+ * @param arg		Pointer to thread struct.
+ * @return void*	NULL.
+ */
+void		*ft_raytrace_sample_threaded(void *arg);
+
+/**
+ * @brief Like ft_add_raytrace_sample(), but threaded.
+ *
+ * @param arg		Pointer to thread struct.
+ * @return void*	NULL.
+ */
+void		*ft_add_raytrace_sample_threaded(void *arg);
+
+/**
+ * @brief Like ft_blend_background(), but threaded.
+ *
+ * @param arg		Pointer to thread struct.
+ * @return void*	NULL.
+ */
+void		*ft_blend_background_threaded(void *arg);
+
+/**
+ * @brief Like ft_cam_calc_pix_pos(), but threaded.
+ *
+ * @param arg		Pointer to thread struct.
+ * @return void*	NULL.
+ */
+void		*ft_cam_calc_pix_pos_threaded(void *arg);
+
+// render_output_ppm_bonus.c
+
+/**
+ * @brief Outputs the current render as a ppm file.
+ *
+ * The file is in binary format (P6).
+ * Creates a temporary buffer and writes the image to it.
+ * @param img		Pointer to mlx img struct.
+ * @return t_err	SUCCESS, ERROR.
+ */
+t_err		ft_output_as_ppm(const t_img img);
+
+// render_output_threaded_bonus.c
+
+/**
+ * @brief Wrapper function for threaded output.
+ *
+ * Calls ft_output_as_ppm() in a detached thread.
+ * Then switches the is_printing flag to false.
+ * @param arg		Pointer to render struct.
+ * @return void*	NULL.
+ */
+void		*ft_output_threaded(void *arg);
+
+/**
+ * @brief Helper function to check is_printing flag.
+ *
+ * Flag is_printing is protected by a mutex.
+ * This function locks the mutex, checks the flag and unlocks the mutex.
+ * @param render	Pointer to render struct.
+ * @return true		Flag is true.
+ * @return false	Flag is false.
+ */
+bool		ft_is_printing(t_render *render);
+
+/**
+ * @brief Helper function to toggle is_printing flag.
+ *
+ * Flag is_printing is protected by a mutex.
+ * This function locks the mutex, toggles the flag and unlocks the mutex.
+ * @param render	Pointer to render struct.
+ */
+void		ft_toggle_is_printing(t_render *render);
 
 #endif

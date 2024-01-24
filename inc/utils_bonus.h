@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/22 18:40:13 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/24 10:57:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <math.h>
 # include <stdbool.h>
 # include <stdlib.h>		// required for rand()
-# include <time.h>
 
 //home-grown libs
 # include "vec3.h"

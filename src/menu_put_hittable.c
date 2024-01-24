@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_hittable.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:55:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 15:16:52 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 16:54:10 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
 
+#ifndef IS_BONUS
 void	ft_put_hittable(t_putinfo put, t_hittable hittable, int total)
 {
 	put.pos = ft_put_id(put, hittable.id, total);
@@ -23,6 +24,7 @@ void	ft_put_hittable(t_putinfo put, t_hittable hittable, int total)
 	else if (hittable.type == CYLINDER)
 		ft_put_cy(put, hittable.params.cy);
 }
+#endif
 
 void	ft_put_sp(t_putinfo put, t_sphere sp)
 {

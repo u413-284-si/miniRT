@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:59:23 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/24 00:07:28 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ t_type	ft_check_line_type_bonus(char *line)
 		return (ft_check_plane_bonus(line + 2));
 	else if (!ft_strncmp(line, "cy", 2))
 		return (ft_check_cylinder_bonus(line + 2));
-	else if (!ft_strncmp(line, "co ", 3))
+	else if (!ft_strncmp(line, "co", 2))
 		return (ft_check_cone_bonus(line + 2));
 	else if (*line == '#')
 		return (COMMENT);
