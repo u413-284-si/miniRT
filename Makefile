@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/24 10:54:59 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/24 11:03:52 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -243,6 +243,7 @@ SRC_BONUS :=	check_bonus.c \
 				parse_entity_sp_pl_cy_bonus.c \
 				render_cleanup_bonus.c \
 				render_draw_bonus.c \
+				render_init_bonus.c \
 				render_keyhook_hittable_bonus.c \
 				render_keyhook_options_bonus.c \
 				render_keyhook_press_bonus.c \
@@ -258,7 +259,6 @@ SRC_BONUS :=	check_bonus.c \
 				utils_cone_bonus.c \
 				utils_cylinder_bonus.c \
 				utils_math_bonus.c \
-				utils_quaternion_bonus.c \
 				utils_random_bonus.c \
 				threads_bonus.c \
 

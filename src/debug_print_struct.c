@@ -6,34 +6,15 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 11:25:48 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/24 10:57:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/24 10:59:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print.h"
+#include "debug_print.h"
 
 void	ft_print_vec3(const t_vec3 vec)
 {
 	printf("x: %.6f, y: %.6f, z: %.6f\n", vec.x, vec.y, vec.z);
-}
-
-void	ft_print_mat4(const t_mat4 mat)
-{
-	int	col;
-	int	row;
-
-	col = 0;
-	while (col < 4)
-	{
-		row = 0;
-		while (row < 4)
-		{
-			printf("%.2f\t", mat.mat[row][col]);
-			row++;
-		}
-		printf("\n");
-		col++;
-	}
 }
 
 void	ft_print_colour(const t_colour col)

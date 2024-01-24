@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/24 10:57:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/24 10:58:44 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@
 #  include "miniRT_config.h"
 #  include "ray.h"
 #  include "entities.h"
+#  include "render_bit_field.h"
 #  include "utils.h"
 # endif
 

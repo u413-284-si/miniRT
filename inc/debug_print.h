@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 11:26:06 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/24 10:55:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/24 10:59:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 
 // Home-grown libs
 # include "vec3.h"
-# include "mat4.h"
 # include "camera.h"
 
 # if IS_BONUS
@@ -41,13 +40,6 @@
  * @param vec	Vec3 to print.
  */
 void	ft_print_vec3(const t_vec3 vec);
-
-/**
- * @brief Prints variables of a mat4.
- *
- * @param mat	Mat4 to print.
- */
-void	ft_print_mat4(const t_mat4 mat);
 
 /**
  * @brief Prints variables of a colour.

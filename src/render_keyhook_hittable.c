@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:50:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/24 10:57:35 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/24 11:00:34 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,6 @@ void	ft_manip_cylinder(int key, t_cylinder *cy, float inc)
 		ft_keyhook_inc_dec(key, &cy->h, FLOAT_MAX, inc);
 	else
 		ft_keyhook_mv_point(key, &cy->centre, inc);
-		cy->cap1 = ft_vec3_add(cy->centre,
-				ft_vec3_scale(cy->axis, -cy->h * 0.5));
-		cy->cap2 = ft_vec3_add(cy->centre,
-				ft_vec3_scale(cy->axis, cy->h * 0.5));
-	}
+	cy->cap1 = ft_vec3_add(cy->centre, ft_vec3_scale(cy->axis, -cy->h * 0.5));
+	cy->cap2 = ft_vec3_add(cy->centre, ft_vec3_scale(cy->axis, cy->h * 0.5));
 }
