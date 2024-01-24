@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('colour__bonus_8h.html',''); initResiza
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for colour_bonus.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="colour__bonus_8h__incl.svg" width="392" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="colour__bonus_8h__incl.svg" width="362" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -126,10 +126,10 @@ Functions</h2></td></tr>
 <tr class="separator:a9e6968b360ba0fa607a8571c262995ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe91799ffb8d0f5d46968cfdbd8918ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__colour.html">t_colour</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="colour__bonus_8h.html#afe91799ffb8d0f5d46968cfdbd8918ea">ft_scale_colour</a> (<a class="el" href="structt__colour.html">t_colour</a> c, float scale)</td></tr>
 <tr class="separator:afe91799ffb8d0f5d46968cfdbd8918ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a884b9301b7c2999806766ea5e00b76ba"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="colour__bonus_8h.html#a884b9301b7c2999806766ea5e00b76ba">ft_convert_colour2int</a> (<a class="el" href="structt__colour.html">t_colour</a> colour)</td></tr>
-<tr class="separator:a884b9301b7c2999806766ea5e00b76ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab71d2dcb6dd3441018d623aefabdf02e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__colour.html">t_colour</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="colour__bonus_8h.html#ab71d2dcb6dd3441018d623aefabdf02e">ft_convert_int2colour</a> (int colour)</td></tr>
-<tr class="separator:ab71d2dcb6dd3441018d623aefabdf02e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9b5dd0aae5d92b494eeaa001e68470"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="colour__bonus_8h.html#a9a9b5dd0aae5d92b494eeaa001e68470">ft_convert_colour2int</a> (<a class="el" href="structt__colour.html">t_colour</a> colour)</td></tr>
+<tr class="separator:a9a9b5dd0aae5d92b494eeaa001e68470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a706f4b79dc506316e17481007ef33820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__colour.html">t_colour</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="colour__bonus_8h.html#a706f4b79dc506316e17481007ef33820">ft_convert_int2colour</a> (uint32_t colour)</td></tr>
+<tr class="separator:a706f4b79dc506316e17481007ef33820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ae5c090d9193f6bcf449f12c299f186b7"></a>
@@ -183,14 +183,14 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a884b9301b7c2999806766ea5e00b76ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a884b9301b7c2999806766ea5e00b76ba">&#9670;&nbsp;</a></span>ft_convert_colour2int()</h2>
+<a id="a9a9b5dd0aae5d92b494eeaa001e68470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9b5dd0aae5d92b494eeaa001e68470">&#9670;&nbsp;</a></span>ft_convert_colour2int()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t ft_convert_colour2int </td>
+          <td class="memname">uint32_t ft_convert_colour2int </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structt__colour.html">t_colour</a>&#160;</td>
           <td class="paramname"><em>colour</em></td><td>)</td>
@@ -206,26 +206,26 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int32_t Converted colour. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>uint32_t Converted colour. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utils__colour_8c_source.html#l00015">15</a> of file <a class="el" href="utils__colour_8c_source.html">utils_colour.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    uint8_t a;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    uint8_t r;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    uint8_t g;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    uint8_t b;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    a = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    r = (uint8_t)(255.0 * colour.<a class="code" href="structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b">r</a>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    g = (uint8_t)(255.0 * colour.<a class="code" href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">g</a>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    b = (uint8_t)(255.0 * colour.<a class="code" href="structt__colour.html#a83fc1af92e29717b4513d121b0c72c7d">b</a>);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> ((a &lt;&lt; 24) | (r &lt;&lt; 16) | (g &lt;&lt; 8) | b);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="colour_8c_source.html#l00035">35</a> of file <a class="el" href="colour_8c_source.html">colour.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    uint8_t a;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    uint8_t r;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    uint8_t g;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    uint8_t b;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    a = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    r = (uint8_t)(255.9 * colour.<a class="code" href="structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b">r</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    g = (uint8_t)(255.9 * colour.<a class="code" href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">g</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    b = (uint8_t)(255.9 * colour.<a class="code" href="structt__colour.html#a83fc1af92e29717b4513d121b0c72c7d">b</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> ((a &lt;&lt; 24) | (r &lt;&lt; 16) | (g &lt;&lt; 8) | b);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ab71d2dcb6dd3441018d623aefabdf02e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab71d2dcb6dd3441018d623aefabdf02e">&#9670;&nbsp;</a></span>ft_convert_int2colour()</h2>
+<a id="a706f4b79dc506316e17481007ef33820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706f4b79dc506316e17481007ef33820">&#9670;&nbsp;</a></span>ft_convert_int2colour()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +233,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structt__colour.html">t_colour</a> ft_convert_int2colour </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>colour</em></td><td>)</td>
           <td></td>
         </tr>
@@ -249,15 +249,15 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__colour.html" title="Represents an RGB colour with float values from 0.0 - 1.0.">t_colour</a> Converted <a class="el" href="structt__colour.html" title="Represents an RGB colour with float values from 0.0 - 1.0.">t_colour</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utils__colour_8c_source.html#l00029">29</a> of file <a class="el" href="utils__colour_8c_source.html">utils_colour.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="structt__colour.html">t_colour</a>    ret;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    ret.<a class="code" href="structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b">r</a> = colour &gt;&gt; 16 &amp; 0xFF;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ret.<a class="code" href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">g</a> = colour &gt;&gt; 8 &amp; 0xFF;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ret.<a class="code" href="structt__colour.html#a83fc1af92e29717b4513d121b0c72c7d">b</a> = colour &amp; 0xFF;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> (ret);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="colour_8c_source.html#l00049">49</a> of file <a class="el" href="colour_8c_source.html">colour.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="structt__colour.html">t_colour</a>    ret;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ret.<a class="code" href="structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b">r</a> = colour &gt;&gt; 16 &amp; 0xFF;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ret.<a class="code" href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">g</a> = colour &gt;&gt; 8 &amp; 0xFF;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ret.<a class="code" href="structt__colour.html#a83fc1af92e29717b4513d121b0c72c7d">b</a> = colour &amp; 0xFF;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> (ret);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -366,7 +366,7 @@ Here is the call graph for this function:</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="colour__bonus_8h_afe91799ffb8d0f5d46968cfdbd8918ea_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="colour__bonus_8h_afe91799ffb8d0f5d46968cfdbd8918ea_icgraph.svg" width="100%" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

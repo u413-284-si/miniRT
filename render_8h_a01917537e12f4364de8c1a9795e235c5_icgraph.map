@@ -1,0 +1,4 @@
+<map id="ft_fast_alpha_blend" name="ft_fast_alpha_blend">
+<area shape="rect" id="node1" title="Creates a blended colour from colour and menu colour." alt="" coords="211,13,360,39"/>
+<area shape="rect" id="node2" href="$render__bonus_8h.html#a6831f3ff394ea0b5b817dc226f5c5b41" title="Like ft_blend_background(), but threaded." alt="" coords="5,5,163,47"/>
+</map>

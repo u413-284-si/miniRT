@@ -1,0 +1,7 @@
+<map id="ft_pixel_sample" name="ft_pixel_sample">
+<area shape="rect" id="node1" title="Generate a random vector that is confined within the square surrounding a pixel. The vector lies in t..." alt="" coords="609,35,733,61"/>
+<area shape="rect" id="node2" href="$render__bonus_8h.html#af5fa16c9ea3d6e6884604009e31c83de" title="Constructs a random sample ray for anti&#45;aliasing." alt="" coords="436,35,561,61"/>
+<area shape="rect" id="node3" href="$render__bonus_8h.html#afef92ac33f530ff1e1ca1049ffa14d23" title="Raytraces the scene and adds it to the sample buffer." alt="" coords="209,5,388,32"/>
+<area shape="rect" id="node5" href="$render__bonus_8h.html#a6f833a234cbdbc69ce5458c79d1242a1" title="Like ft_add_raytrace_sample(), but threaded." alt="" coords="209,57,388,98"/>
+<area shape="rect" id="node4" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="5,35,161,61"/>
+</map>

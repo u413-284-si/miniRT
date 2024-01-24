@@ -95,12 +95,10 @@ $(document).ready(function(){initNavTree('cleanup_8h.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;mlx.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="entities__bonus_8h_source.html">entities_bonus.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for cleanup.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="cleanup_8h__incl.svg" width="452" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="cleanup_8h__incl.svg" width="119" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -116,10 +114,6 @@ This graph shows which files directly or indirectly include this file:</div>
 Functions</h2></td></tr>
 <tr class="memitem:afd12c2961e60b6147c54c2ea99a70669"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cleanup_8h.html#afd12c2961e60b6147c54c2ea99a70669">ft_free_char_arr</a> (char **array)</td></tr>
 <tr class="separator:afd12c2961e60b6147c54c2ea99a70669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9229589988c3bd4de6a2fdcc8b22444d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cleanup_8h.html#a9229589988c3bd4de6a2fdcc8b22444d">ft_free_mlx</a> (void *mlx_ptr, void *win_ptr, void *img_ptr, void *menu_ptr)</td></tr>
-<tr class="separator:a9229589988c3bd4de6a2fdcc8b22444d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8612292955a412b88ad5dc29e381ed1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cleanup_8h.html#a8612292955a412b88ad5dc29e381ed1f">ft_free_scene</a> (<a class="el" href="structt__entities.html">t_entities</a> *scene)</td></tr>
-<tr class="separator:a8612292955a412b88ad5dc29e381ed1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="afd12c2961e60b6147c54c2ea99a70669"></a>
@@ -162,118 +156,6 @@ Functions</h2></td></tr>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="cleanup_8h_afd12c2961e60b6147c54c2ea99a70669_icgraph.svg" width="543" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a9229589988c3bd4de6a2fdcc8b22444d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9229589988c3bd4de6a2fdcc8b22444d">&#9670;&nbsp;</a></span>ft_free_mlx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ft_free_mlx </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>mlx_ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>win_ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>img_ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>menu_ptr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Frees ressources allocated for mlx. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mlx_ptr</td><td>Pointer to mlx. </td></tr>
-    <tr><td class="paramname">win_ptr</td><td>Pointer to mlx_window. </td></tr>
-    <tr><td class="paramname">img_ptr</td><td>Pointer to mlx_image. </td></tr>
-    <tr><td class="paramname">menu_ptr</td><td>Pointer to mlx_image. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="cleanup_8c_source.html#l00028">28</a> of file <a class="el" href="cleanup_8c_source.html">cleanup.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (mlx_ptr)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span> (img_ptr)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            mlx_destroy_image(mlx_ptr, img_ptr);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (menu_ptr)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            mlx_destroy_image(mlx_ptr, menu_ptr);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (win_ptr)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            mlx_destroy_window(mlx_ptr, win_ptr);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        mlx_destroy_display(mlx_ptr);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        free(mlx_ptr);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="cleanup_8h_a9229589988c3bd4de6a2fdcc8b22444d_icgraph.svg" width="410" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a8612292955a412b88ad5dc29e381ed1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8612292955a412b88ad5dc29e381ed1f">&#9670;&nbsp;</a></span>ft_free_scene()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ft_free_scene </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structt__entities.html">t_entities</a> *&#160;</td>
-          <td class="paramname"><em>scene</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Frees memory allocated for a scene. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">scene</td><td>Pointer to scene. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="cleanup_8c_source.html#l00043">43</a> of file <a class="el" href="cleanup_8c_source.html">cleanup.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    free(scene-&gt;<a class="code" href="structt__entities.html#aff3b118f65a7ab1c247de6b7765f92a3">obj</a>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    free(scene-&gt;<a class="code" href="structt__entities.html#a3185a6e624539588a9d119c918a71b03">lsrc</a>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="ttc" id="astructt__entities_html_a3185a6e624539588a9d119c918a71b03"><div class="ttname"><a href="structt__entities.html#a3185a6e624539588a9d119c918a71b03">t_entities::lsrc</a></div><div class="ttdeci">t_light * lsrc</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00158">entities.h:158</a></div></div>
-<div class="ttc" id="astructt__entities_html_aff3b118f65a7ab1c247de6b7765f92a3"><div class="ttname"><a href="structt__entities.html#aff3b118f65a7ab1c247de6b7765f92a3">t_entities::obj</a></div><div class="ttdeci">t_hittable * obj</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00159">entities.h:159</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="cleanup_8h_a8612292955a412b88ad5dc29e381ed1f_icgraph.svg" width="223" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

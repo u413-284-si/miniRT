@@ -1,0 +1,5 @@
+<map id="ft_raytrace_image" name="ft_raytrace_image">
+<area shape="rect" id="node1" title="Raytraces the scene to the mlx img." alt="" coords="5,31,145,57"/>
+<area shape="rect" id="node2" href="$render__draw_8c.html#ad11267674572960fef12f2c501dd7373" title="Draws a single pixel to the mlx img." alt="" coords="193,5,348,32"/>
+<area shape="rect" id="node3" href="$render__draw_8c.html#a2c9085ad1ae8adcd3201a501a9a4dcde" title="Constructs a ray and shoots it through the pixel." alt="" coords="219,56,322,83"/>
+</map>

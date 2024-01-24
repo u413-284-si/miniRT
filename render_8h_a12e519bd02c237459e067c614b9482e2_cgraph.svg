@@ -50,7 +50,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="cleanup_8h.html#a9229589988c3bd4de6a2fdcc8b22444d" target="_top" xlink:title="Frees ressources allocated for mlx.">
+<g id="a_node5"><a xlink:href="render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57" target="_top" xlink:title="Frees ressources allocated for mlx.">
 <polygon fill="none" stroke="black" points="140.5,-76.5 140.5,-95.5 212.5,-95.5 212.5,-76.5 140.5,-76.5"/>
 <text text-anchor="middle" x="176.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_free_mlx</text>
 </a>

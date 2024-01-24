@@ -1,0 +1,12 @@
+<map id="ft_programm_loop" name="ft_programm_loop">
+<area shape="rect" id="node1" title="Main loop of the program." alt="" coords="5,107,147,133"/>
+<area shape="rect" id="node2" href="$render_8h.html#ae04f0ec3394429ff447efb0611a8e78b" title="Aplha blends current image with menu color to create overlay." alt="" coords="195,5,352,32"/>
+<area shape="rect" id="node4" href="$render_8h.html#a735dfeb13434c88e3b4a76990386763b" title="Puts the current menu page on the screen." alt="" coords="205,107,341,133"/>
+<area shape="rect" id="node5" href="$render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a" title="Checks if bit is set in the bit field." alt="" coords="419,56,536,83"/>
+<area shape="rect" id="node7" href="$render__bit__field_8h.html#a0e353bbefbfd549ad2ebb5b821fc7900" title="Clears bit in bit field." alt="" coords="214,157,333,184"/>
+<area shape="rect" id="node8" href="$render_8h.html#aea359a55d122bd9bf57f46c73e45b268" title="Raytraces the scene to the mlx img." alt="" coords="203,208,343,235"/>
+<area shape="rect" id="node3" href="$render__blend__background_8c.html#a01917537e12f4364de8c1a9795e235c5" title="Creates a blended colour from colour and menu colour." alt="" coords="403,5,552,32"/>
+<area shape="rect" id="node6" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="436,107,519,133"/>
+<area shape="rect" id="node9" href="$render__draw_8c.html#ad11267674572960fef12f2c501dd7373" title="Draws a single pixel to the mlx img." alt="" coords="400,183,555,209"/>
+<area shape="rect" id="node10" href="$render__draw_8c.html#a2c9085ad1ae8adcd3201a501a9a4dcde" title="Constructs a ray and shoots it through the pixel." alt="" coords="426,233,529,260"/>
+</map>

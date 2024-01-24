@@ -1,30 +1,5 @@
 var searchData=
 [
-  ['main_2ec_672',['main.c',['../main_8c.html',1,'']]],
-  ['mat4_2ec_673',['mat4.c',['../mat4_8c.html',1,'']]],
-  ['mat4_2eh_674',['mat4.h',['../mat4_8h.html',1,'']]],
-  ['mat4_5frotation_2ec_675',['mat4_rotation.c',['../mat4__rotation_8c.html',1,'']]],
-  ['mat4_5fvec3_2eh_676',['mat4_vec3.h',['../mat4__vec3_8h.html',1,'']]],
-  ['mat4_5fvec3_5frotate_2ec_677',['mat4_vec3_rotate.c',['../mat4__vec3__rotate_8c.html',1,'']]],
-  ['menu_5finit_2ec_678',['menu_init.c',['../menu__init_8c.html',1,'']]],
-  ['menu_5fput_2eh_679',['menu_put.h',['../menu__put_8h.html',1,'']]],
-  ['menu_5fput_5fbonus_2eh_680',['menu_put_bonus.h',['../menu__put__bonus_8h.html',1,'']]],
-  ['menu_5fput_5fcam_5flight_2ec_681',['menu_put_cam_light.c',['../menu__put__cam__light_8c.html',1,'']]],
-  ['menu_5fput_5fcam_5flight_5fctrl_2ec_682',['menu_put_cam_light_ctrl.c',['../menu__put__cam__light__ctrl_8c.html',1,'']]],
-  ['menu_5fput_5fgeneral_5finfo_2ec_683',['menu_put_general_info.c',['../menu__put__general__info_8c.html',1,'']]],
-  ['menu_5fput_5fgeneral_5finfo_5fbonus_2ec_684',['menu_put_general_info_bonus.c',['../menu__put__general__info__bonus_8c.html',1,'']]],
-  ['menu_5fput_5fhittable_2ec_685',['menu_put_hittable.c',['../menu__put__hittable_8c.html',1,'']]],
-  ['menu_5fput_5fhittable_5fbonus_2ec_686',['menu_put_hittable_bonus.c',['../menu__put__hittable__bonus_8c.html',1,'']]],
-  ['menu_5fput_5fhittable_5fctrl_2ec_687',['menu_put_hittable_ctrl.c',['../menu__put__hittable__ctrl_8c.html',1,'']]],
-  ['menu_5fput_5fhittable_5fctrl_5fbonus_2ec_688',['menu_put_hittable_ctrl_bonus.c',['../menu__put__hittable__ctrl__bonus_8c.html',1,'']]],
-  ['menu_5fput_5fpage_2ec_689',['menu_put_page.c',['../menu__put__page_8c.html',1,'']]],
-  ['menu_5fput_5fstr_5fnum_2ec_690',['menu_put_str_num.c',['../menu__put__str__num_8c.html',1,'']]],
-  ['menu_5fput_5ftext_2ec_691',['menu_put_text.c',['../menu__put__text_8c.html',1,'']]],
-  ['menu_5fput_5ftext_5fbonus_2ec_692',['menu_put_text_bonus.c',['../menu__put__text__bonus_8c.html',1,'']]],
-  ['menu_5fput_5ftime_5fbonus_2ec_693',['menu_put_time_bonus.c',['../menu__put__time__bonus_8c.html',1,'']]],
-  ['menu_5fput_5futils_2ec_694',['menu_put_utils.c',['../menu__put__utils_8c.html',1,'']]],
-  ['menu_5fput_5futils_5fctrl_2ec_695',['menu_put_utils_ctrl.c',['../menu__put__utils__ctrl_8c.html',1,'']]],
-  ['minirt_2eh_696',['miniRT.h',['../mini_r_t_8h.html',1,'']]],
-  ['minirt_5fconfig_2eh_697',['miniRT_config.h',['../mini_r_t__config_8h.html',1,'']]],
-  ['minirt_5fconfig_5fbonus_2eh_698',['miniRT_config_bonus.h',['../mini_r_t__config__bonus_8h.html',1,'']]]
+  ['lighting_2eh_711',['lighting.h',['../lighting_8h.html',1,'']]],
+  ['lighting_5fbonus_2eh_712',['lighting_bonus.h',['../lighting__bonus_8h.html',1,'']]]
 ];

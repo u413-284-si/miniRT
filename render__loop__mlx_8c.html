@@ -106,10 +106,112 @@ Include dependency graph for render_loop_mlx.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a012503b6ad6ee8198a601dad994c09b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__loop__mlx_8c.html#a012503b6ad6ee8198a601dad994c09b7">ft_programm_loop</a> (<a class="el" href="structt__render.html">t_render</a> *render)</td></tr>
+<tr class="separator:a012503b6ad6ee8198a601dad994c09b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b9ed7edeaf796e06eeceb1874c8fbf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__loop__mlx_8c.html#aa3b9ed7edeaf796e06eeceb1874c8fbf">ft_end_loop</a> (<a class="el" href="structt__render.html">t_render</a> *render)</td></tr>
+<tr class="separator:aa3b9ed7edeaf796e06eeceb1874c8fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7a01aa5d27d2fad2942a43a31ae0d52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__loop__mlx_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52">ft_render_start_loop</a> (<a class="el" href="structt__render.html">t_render</a> *render)</td></tr>
 <tr class="separator:ab7a01aa5d27d2fad2942a43a31ae0d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aa3b9ed7edeaf796e06eeceb1874c8fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b9ed7edeaf796e06eeceb1874c8fbf">&#9670;&nbsp;</a></span>ft_end_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ft_end_loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__render.html">t_render</a> *&#160;</td>
+          <td class="paramname"><em>render</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wrapper around mlx_loop_end(). </p>
+<p>Can be used to do additional cleanup. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">render</td><td>Pointer to render struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 0 if successful, -1 if not. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="render__loop__mlx_8c_source.html#l00029">29</a> of file <a class="el" href="render__loop__mlx_8c_source.html">render_loop_mlx.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    mlx_loop_end(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> (0);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="ttc" id="astructt__mlx__ptrs_html_a36d268889cd2a32ce78029972c0445a5"><div class="ttname"><a href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">t_mlx_ptrs::mlx_ptr</a></div><div class="ttdeci">void * mlx_ptr</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00084">render.h:84</a></div></div>
+<div class="ttc" id="astructt__render_html_a9ce880ae43b7ec34ab96f0a387451285"><div class="ttname"><a href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">t_render::mlx_ptrs</a></div><div class="ttdeci">t_mlx_ptrs mlx_ptrs</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00113">render.h:113</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="render__loop__mlx_8c_aa3b9ed7edeaf796e06eeceb1874c8fbf_icgraph.svg" width="411" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a012503b6ad6ee8198a601dad994c09b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a012503b6ad6ee8198a601dad994c09b7">&#9670;&nbsp;</a></span>ft_programm_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ft_programm_loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__render.html">t_render</a> *&#160;</td>
+          <td class="paramname"><em>render</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Main loop of the program. </p>
+<p>Checks if scene has changed. If so, the scene is re-rendered. The menu text is put on top of the image. It needs to be put every loop iterations, else it disappears. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">render</td><td>Pointer to render struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 0 if successful, -1 if not. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="render__loop__mlx_8c_source.html#l00015">15</a> of file <a class="el" href="render__loop__mlx_8c_source.html">render_loop_mlx.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a">ft_option_isset</a>(render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, <a class="code" href="render__bit__field_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a5235c83a5ba87eeeb596a81d9485bcaa">O_SCENE_CHANGED</a>))</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="render_8h.html#aea359a55d122bd9bf57f46c73e45b268">ft_raytrace_image</a>(render);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="render_8h.html#ae04f0ec3394429ff447efb0611a8e78b">ft_blend_background</a>(render);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        mlx_put_image_to_window(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">ptr</a>, 0, 0);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="render__bit__field_8h.html#a0e353bbefbfd549ad2ebb5b821fc7900">ft_option_clear</a>(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, <a class="code" href="render__bit__field_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a5235c83a5ba87eeeb596a81d9485bcaa">O_SCENE_CHANGED</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="render_8h.html#a735dfeb13434c88e3b4a76990386763b">ft_menu_put_text</a>(render);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> (0);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="ttc" id="arender_8h_html_a735dfeb13434c88e3b4a76990386763b"><div class="ttname"><a href="render_8h.html#a735dfeb13434c88e3b4a76990386763b">ft_menu_put_text</a></div><div class="ttdeci">void ft_menu_put_text(t_render *render)</div><div class="ttdoc">Puts the current menu page on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__text_8c_source.html#l00050">menu_put_text.c:50</a></div></div>
+<div class="ttc" id="arender_8h_html_ae04f0ec3394429ff447efb0611a8e78b"><div class="ttname"><a href="render_8h.html#ae04f0ec3394429ff447efb0611a8e78b">ft_blend_background</a></div><div class="ttdeci">void ft_blend_background(t_render *render)</div><div class="ttdoc">Aplha blends current image with menu color to create overlay.</div><div class="ttdef"><b>Definition:</b> <a href="render__blend__background_8c_source.html#l00029">render_blend_background.c:29</a></div></div>
+<div class="ttc" id="arender_8h_html_aea359a55d122bd9bf57f46c73e45b268"><div class="ttname"><a href="render_8h.html#aea359a55d122bd9bf57f46c73e45b268">ft_raytrace_image</a></div><div class="ttdeci">void ft_raytrace_image(t_render *render)</div><div class="ttdoc">Raytraces the scene to the mlx img.</div><div class="ttdef"><b>Definition:</b> <a href="render__draw_8c_source.html#l00041">render_draw.c:41</a></div></div>
+<div class="ttc" id="arender__bit__field_8h_html_a0e353bbefbfd549ad2ebb5b821fc7900"><div class="ttname"><a href="render__bit__field_8h.html#a0e353bbefbfd549ad2ebb5b821fc7900">ft_option_clear</a></div><div class="ttdeci">void ft_option_clear(uint32_t *bit_field, t_options option)</div><div class="ttdoc">Clears bit in bit field.</div><div class="ttdef"><b>Definition:</b> <a href="render__bit__field_8c_source.html#l00029">render_bit_field.c:29</a></div></div>
+<div class="ttc" id="arender__bit__field_8h_html_a75f30b1f2676ccd6dbf96f34a95a5837a5235c83a5ba87eeeb596a81d9485bcaa"><div class="ttname"><a href="render__bit__field_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a5235c83a5ba87eeeb596a81d9485bcaa">O_SCENE_CHANGED</a></div><div class="ttdeci">@ O_SCENE_CHANGED</div><div class="ttdef"><b>Definition:</b> <a href="render__bit__field_8h_source.html#l00028">render_bit_field.h:28</a></div></div>
+<div class="ttc" id="arender__bit__field_8h_html_aea0daf263880cbf1cf1a0dd050320e7a"><div class="ttname"><a href="render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a">ft_option_isset</a></div><div class="ttdeci">bool ft_option_isset(uint32_t bit_field, t_options option)</div><div class="ttdoc">Checks if bit is set in the bit field.</div><div class="ttdef"><b>Definition:</b> <a href="render__bit__field_8c_source.html#l00015">render_bit_field.c:15</a></div></div>
+<div class="ttc" id="astructt__img_html_aaf0497a3bd20a0066017546af6bf80be"><div class="ttname"><a href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">t_img::ptr</a></div><div class="ttdeci">void * ptr</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00065">render.h:65</a></div></div>
+<div class="ttc" id="astructt__mlx__ptrs_html_a1465266e6bfd3cea90a81b747de5b7b9"><div class="ttname"><a href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">t_mlx_ptrs::win_ptr</a></div><div class="ttdeci">void * win_ptr</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00085">render.h:85</a></div></div>
+<div class="ttc" id="astructt__mlx__ptrs_html_a3f9d28a9843866e3f0f632f93063f727"><div class="ttname"><a href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">t_mlx_ptrs::img</a></div><div class="ttdeci">t_img img</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00086">render.h:86</a></div></div>
+<div class="ttc" id="astructt__render_html_a2ba60f781746d31baf29e8c5a35d07e7"><div class="ttname"><a href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">t_render::options</a></div><div class="ttdeci">uint32_t options</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00118">render.h:118</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="render__loop__mlx_8c_a012503b6ad6ee8198a601dad994c09b7_icgraph.svg" width="455" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="ab7a01aa5d27d2fad2942a43a31ae0d52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7a01aa5d27d2fad2942a43a31ae0d52">&#9670;&nbsp;</a></span>ft_render_start_loop()</h2>
 
@@ -134,61 +236,28 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="render__loop__mlx_8c_source.html#l00015">15</a> of file <a class="el" href="render__loop__mlx_8c_source.html">render_loop_mlx.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, KeyPress, KeyPressMask,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="render_8h.html#a367bbd1df5c5d7a6480f93589d027d12">ft_keyhook_press</a>, render);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, KeyRelease, KeyReleaseMask,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="render_8h.html#a2c564d8558abdc381bb98e5da40461a6">ft_keyhook_release</a>, render);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, ButtonPress, ButtonPressMask,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="render_8h.html#a187d0ce87f143b9dcd622e8d34968250">ft_mouse_hook_press</a>, render);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, ButtonRelease, ButtonReleaseMask,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="render_8h.html#aeb525488cde2bb2dd2881042a083957a">ft_mouse_hook_release</a>, render);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, MotionNotify, ButtonMotionMask,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="render_8h.html#a789550edaaab12e30e0d8c779abdc1b8">ft_mouse_hook_move</a>, render);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, DestroyNotify, StructureNotifyMask,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        mlx_loop_end, render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    mlx_loop_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, <a class="code" href="render_8h.html#af908c05cb19e716220bc98fcf9582573">ft_draw_scene</a>, render);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    mlx_set_font(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, <a class="code" href="mini_r_t__config_8h.html#a9988ccc764be87fa1a8280b60d9e28c6">REGULAR</a>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="render__bit__field_8h.html#ab984d9cbc7c648ef4481b9158b27da30">ft_option_set</a>(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, <a class="code" href="render__options_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a48f0762225e154c65761a3a0833d85a5">O_MODE_SCENE</a>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="render__bit__field_8h.html#ab984d9cbc7c648ef4481b9158b27da30">ft_option_set</a>(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, <a class="code" href="render__options_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a5235c83a5ba87eeeb596a81d9485bcaa">O_SCENE_CHANGED</a>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="render__bit__field_8h.html#ab984d9cbc7c648ef4481b9158b27da30">ft_option_set</a>(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, <a class="code" href="render__options_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a6a332cb0a56d1e6e789a2406925f12c2">O_MANIP_LOW</a>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    mlx_loop(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="cleanup_8h.html#a9229589988c3bd4de6a2fdcc8b22444d">ft_free_mlx</a>(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">ptr</a>, render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">ptr</a>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="ttc" id="acleanup_8h_html_a9229589988c3bd4de6a2fdcc8b22444d"><div class="ttname"><a href="cleanup_8h.html#a9229589988c3bd4de6a2fdcc8b22444d">ft_free_mlx</a></div><div class="ttdeci">void ft_free_mlx(void *mlx_ptr, void *win_ptr, void *img_ptr, void *menu_ptr)</div><div class="ttdoc">Frees ressources allocated for mlx.</div><div class="ttdef"><b>Definition:</b> <a href="cleanup_8c_source.html#l00028">cleanup.c:28</a></div></div>
-<div class="ttc" id="amini_r_t__config_8h_html_a9988ccc764be87fa1a8280b60d9e28c6"><div class="ttname"><a href="mini_r_t__config_8h.html#a9988ccc764be87fa1a8280b60d9e28c6">REGULAR</a></div><div class="ttdeci">#define REGULAR</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config_8h_source.html#l00044">miniRT_config.h:44</a></div></div>
+<p class="definition">Definition at line <a class="el" href="render__loop__mlx_8c_source.html#l00035">35</a> of file <a class="el" href="render__loop__mlx_8c_source.html">render_loop_mlx.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, KeyPress, KeyPressMask,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="render_8h.html#a367bbd1df5c5d7a6480f93589d027d12">ft_keyhook_press</a>, render);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, ButtonPress, ButtonPressMask,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="render_8h.html#a187d0ce87f143b9dcd622e8d34968250">ft_mouse_hook_press</a>, render);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, ButtonRelease, ButtonReleaseMask,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="render_8h.html#aeb525488cde2bb2dd2881042a083957a">ft_mouse_hook_release</a>, render);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, MotionNotify, ButtonMotionMask,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="render_8h.html#a789550edaaab12e30e0d8c779abdc1b8">ft_mouse_hook_move</a>, render);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    mlx_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>, DestroyNotify, StructureNotifyMask,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="render__loop__mlx_8c.html#aa3b9ed7edeaf796e06eeceb1874c8fbf">ft_end_loop</a>, render);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    mlx_loop_hook(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, <a class="code" href="render__loop__mlx_8c.html#a012503b6ad6ee8198a601dad994c09b7">ft_programm_loop</a>, render);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    mlx_loop(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 <div class="ttc" id="arender_8h_html_a187d0ce87f143b9dcd622e8d34968250"><div class="ttname"><a href="render_8h.html#a187d0ce87f143b9dcd622e8d34968250">ft_mouse_hook_press</a></div><div class="ttdeci">int ft_mouse_hook_press(int button, int x, int y, t_render *render)</div><div class="ttdoc">Handles mouse button presses.</div><div class="ttdef"><b>Definition:</b> <a href="render__mouse_8c_source.html#l00015">render_mouse.c:15</a></div></div>
-<div class="ttc" id="arender_8h_html_a2c564d8558abdc381bb98e5da40461a6"><div class="ttname"><a href="render_8h.html#a2c564d8558abdc381bb98e5da40461a6">ft_keyhook_release</a></div><div class="ttdeci">int ft_keyhook_release(int key, t_render *render)</div><div class="ttdoc">Handles key releases.</div><div class="ttdef"><b>Definition:</b> <a href="render__keyhook__release_8c_source.html#l00015">render_keyhook_release.c:15</a></div></div>
 <div class="ttc" id="arender_8h_html_a367bbd1df5c5d7a6480f93589d027d12"><div class="ttname"><a href="render_8h.html#a367bbd1df5c5d7a6480f93589d027d12">ft_keyhook_press</a></div><div class="ttdeci">int ft_keyhook_press(int key, t_render *render)</div><div class="ttdoc">Handles keypresses.</div><div class="ttdef"><b>Definition:</b> <a href="render__keyhook__press_8c_source.html#l00030">render_keyhook_press.c:30</a></div></div>
 <div class="ttc" id="arender_8h_html_a789550edaaab12e30e0d8c779abdc1b8"><div class="ttname"><a href="render_8h.html#a789550edaaab12e30e0d8c779abdc1b8">ft_mouse_hook_move</a></div><div class="ttdeci">int ft_mouse_hook_move(int x, int y, t_render *render)</div><div class="ttdoc">Handles mouse movement.</div><div class="ttdef"><b>Definition:</b> <a href="render__mouse_8c_source.html#l00037">render_mouse.c:37</a></div></div>
 <div class="ttc" id="arender_8h_html_aeb525488cde2bb2dd2881042a083957a"><div class="ttname"><a href="render_8h.html#aeb525488cde2bb2dd2881042a083957a">ft_mouse_hook_release</a></div><div class="ttdeci">int ft_mouse_hook_release(int button, int x, int y, t_render *render)</div><div class="ttdoc">Handles mouse button releases.</div><div class="ttdef"><b>Definition:</b> <a href="render__mouse_8c_source.html#l00026">render_mouse.c:26</a></div></div>
-<div class="ttc" id="arender_8h_html_af908c05cb19e716220bc98fcf9582573"><div class="ttname"><a href="render_8h.html#af908c05cb19e716220bc98fcf9582573">ft_draw_scene</a></div><div class="ttdeci">int ft_draw_scene(t_render *render)</div><div class="ttdef"><b>Definition:</b> <a href="render__compose__image_8c_source.html#l00015">render_compose_image.c:15</a></div></div>
-<div class="ttc" id="arender__bit__field_8h_html_ab984d9cbc7c648ef4481b9158b27da30"><div class="ttname"><a href="render__bit__field_8h.html#ab984d9cbc7c648ef4481b9158b27da30">ft_option_set</a></div><div class="ttdeci">void ft_option_set(uint32_t *bit_field, t_options option)</div><div class="ttdoc">Sets bit in bit field.</div><div class="ttdef"><b>Definition:</b> <a href="render__bit__field_8c_source.html#l00022">render_bit_field.c:22</a></div></div>
-<div class="ttc" id="arender__options_8h_html_a75f30b1f2676ccd6dbf96f34a95a5837a48f0762225e154c65761a3a0833d85a5"><div class="ttname"><a href="render__options_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a48f0762225e154c65761a3a0833d85a5">O_MODE_SCENE</a></div><div class="ttdeci">@ O_MODE_SCENE</div><div class="ttdef"><b>Definition:</b> <a href="render__options_8h_source.html#l00020">render_options.h:20</a></div></div>
-<div class="ttc" id="arender__options_8h_html_a75f30b1f2676ccd6dbf96f34a95a5837a5235c83a5ba87eeeb596a81d9485bcaa"><div class="ttname"><a href="render__options_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a5235c83a5ba87eeeb596a81d9485bcaa">O_SCENE_CHANGED</a></div><div class="ttdeci">@ O_SCENE_CHANGED</div><div class="ttdef"><b>Definition:</b> <a href="render__options_8h_source.html#l00023">render_options.h:23</a></div></div>
-<div class="ttc" id="arender__options_8h_html_a75f30b1f2676ccd6dbf96f34a95a5837a6a332cb0a56d1e6e789a2406925f12c2"><div class="ttname"><a href="render__options_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a6a332cb0a56d1e6e789a2406925f12c2">O_MANIP_LOW</a></div><div class="ttdeci">@ O_MANIP_LOW</div><div class="ttdef"><b>Definition:</b> <a href="render__options_8h_source.html#l00026">render_options.h:26</a></div></div>
-<div class="ttc" id="astructt__img_html_aaf0497a3bd20a0066017546af6bf80be"><div class="ttname"><a href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">t_img::ptr</a></div><div class="ttdeci">void * ptr</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00064">render.h:64</a></div></div>
-<div class="ttc" id="astructt__mlx__ptrs_html_a1465266e6bfd3cea90a81b747de5b7b9"><div class="ttname"><a href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">t_mlx_ptrs::win_ptr</a></div><div class="ttdeci">void * win_ptr</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00084">render.h:84</a></div></div>
-<div class="ttc" id="astructt__mlx__ptrs_html_a36d268889cd2a32ce78029972c0445a5"><div class="ttname"><a href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">t_mlx_ptrs::mlx_ptr</a></div><div class="ttdeci">void * mlx_ptr</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00083">render.h:83</a></div></div>
-<div class="ttc" id="astructt__mlx__ptrs_html_a3f9d28a9843866e3f0f632f93063f727"><div class="ttname"><a href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">t_mlx_ptrs::img</a></div><div class="ttdeci">t_img img</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00085">render.h:85</a></div></div>
-<div class="ttc" id="astructt__mlx__ptrs_html_adaf60f1c9822bb3cc2ef4df11c3fabb4"><div class="ttname"><a href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">t_mlx_ptrs::veil</a></div><div class="ttdeci">t_img veil</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00086">render.h:86</a></div></div>
-<div class="ttc" id="astructt__render_html_a2ba60f781746d31baf29e8c5a35d07e7"><div class="ttname"><a href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">t_render::options</a></div><div class="ttdeci">uint32_t options</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00117">render.h:117</a></div></div>
-<div class="ttc" id="astructt__render_html_a9ce880ae43b7ec34ab96f0a387451285"><div class="ttname"><a href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">t_render::mlx_ptrs</a></div><div class="ttdeci">t_mlx_ptrs mlx_ptrs</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00112">render.h:112</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__loop__mlx_8c_ab7a01aa5d27d2fad2942a43a31ae0d52_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="render__loop__mlx_8c_ab7a01aa5d27d2fad2942a43a31ae0d52_icgraph.svg" width="266" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
+<div class="ttc" id="arender__loop__mlx_8c_html_a012503b6ad6ee8198a601dad994c09b7"><div class="ttname"><a href="render__loop__mlx_8c.html#a012503b6ad6ee8198a601dad994c09b7">ft_programm_loop</a></div><div class="ttdeci">int ft_programm_loop(t_render *render)</div><div class="ttdoc">Main loop of the program.</div><div class="ttdef"><b>Definition:</b> <a href="render__loop__mlx_8c_source.html#l00015">render_loop_mlx.c:15</a></div></div>
+<div class="ttc" id="arender__loop__mlx_8c_html_aa3b9ed7edeaf796e06eeceb1874c8fbf"><div class="ttname"><a href="render__loop__mlx_8c.html#aa3b9ed7edeaf796e06eeceb1874c8fbf">ft_end_loop</a></div><div class="ttdeci">int ft_end_loop(t_render *render)</div><div class="ttdoc">Wrapper around mlx_loop_end().</div><div class="ttdef"><b>Definition:</b> <a href="render__loop__mlx_8c_source.html#l00029">render_loop_mlx.c:29</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

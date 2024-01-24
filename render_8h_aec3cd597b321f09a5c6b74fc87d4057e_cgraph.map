@@ -1,0 +1,4 @@
+<map id="ft_change_select" name="ft_change_select">
+<area shape="rect" id="node1" title="Changes the active hittable or light source." alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node2" href="$render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a" title="Checks if bit is set in the bit field." alt="" coords="184,5,301,32"/>
+</map>

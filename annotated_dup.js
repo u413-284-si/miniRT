@@ -25,6 +25,7 @@ var annotated_dup =
     [ "t_render", "structt__render.html", "structt__render" ],
     [ "t_shape", "uniont__shape.html", "uniont__shape" ],
     [ "t_sphere", "structt__sphere.html", "structt__sphere" ],
+    [ "t_thread_data", "structt__thread__data.html", "structt__thread__data" ],
     [ "t_vec2f", "structt__vec2f.html", "structt__vec2f" ],
     [ "t_vec2i", "structt__vec2i.html", "structt__vec2i" ],
     [ "t_vec3", "structt__vec3.html", "structt__vec3" ]

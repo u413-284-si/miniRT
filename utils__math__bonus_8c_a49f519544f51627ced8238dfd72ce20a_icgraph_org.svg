@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2" target="_top" xlink:title="Prints parameters of camera struct.">
+<g id="a_node3"><a xlink:href="debug__print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2" target="_top" xlink:title="Prints parameters of camera struct.">
 <polygon fill="none" stroke="black" points="296,-38.5 296,-57.5 373,-57.5 373,-38.5 296,-38.5"/>
 <text text-anchor="middle" x="334.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_print_cam</text>
 </a>

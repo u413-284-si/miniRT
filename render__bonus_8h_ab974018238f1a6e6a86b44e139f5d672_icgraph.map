@@ -1,4 +1,4 @@
 <map id="ft_keyhook_move_cam" name="ft_keyhook_move_cam">
 <area shape="rect" id="node1" title="Moves the camera with a keypress." alt="" coords="168,5,340,32"/>
-<area shape="rect" id="node2" href="$render_8h.html#aef0c8d431d439f9443a576ecb640e1c7" title="Manipulates the camera with a keypress." alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node2" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="5,5,120,32"/>
 </map>

@@ -1,6 +1,0 @@
-<map id="ft_free_mlx" name="ft_free_mlx">
-<area shape="rect" id="node1" title="Frees ressources allocated for mlx." alt="" coords="308,31,404,57"/>
-<area shape="rect" id="node2" href="$render_8h.html#a12e519bd02c237459e067c614b9482e2" title="Initializes the mlx_ptrs struct." alt="" coords="123,5,245,32"/>
-<area shape="rect" id="node4" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,56,260,83"/>
-<area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,60,57"/>
-</map>

@@ -1,9 +1,8 @@
 <map id="ft_keyhook_change_col" name="ft_keyhook_change_col">
-<area shape="rect" id="node1" title="Changes the colour with a keypress." alt="" coords="357,107,531,133"/>
-<area shape="rect" id="node2" href="$render__keyhook__light_8c.html#a597d35b7bd3aa66272e3c2ff3a1e8f78" title=" " alt="" coords="169,5,309,32"/>
-<area shape="rect" id="node4" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="169,56,308,83"/>
-<area shape="rect" id="node5" href="$render__keyhook__light_8c.html#a16d57d13773703e93274caef6b5ccde1" title=" " alt="" coords="168,107,309,133"/>
-<area shape="rect" id="node6" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="177,157,300,184"/>
-<area shape="rect" id="node7" href="$render_8h.html#a3af9cb325ad292f339446b63917a9ea2" title="Manipulates the active sphere." alt="" coords="173,208,304,235"/>
-<area shape="rect" id="node3" href="$render_8h.html#acff7acf5eb6145177496e67b32a74fba" title="Manipulates the active light." alt="" coords="5,56,120,83"/>
+<area shape="rect" id="node1" title="Changes the colour with a keypress." alt="" coords="195,107,368,133"/>
+<area shape="rect" id="node2" href="$render_8h.html#a597d35b7bd3aa66272e3c2ff3a1e8f78" title="Manipulates the ambient light." alt="" coords="6,5,146,32"/>
+<area shape="rect" id="node3" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="7,56,145,83"/>
+<area shape="rect" id="node4" href="$render_8h.html#a16d57d13773703e93274caef6b5ccde1" title="Manipulates a light source." alt="" coords="5,107,147,133"/>
+<area shape="rect" id="node5" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="15,157,137,184"/>
+<area shape="rect" id="node6" href="$render_8h.html#a3af9cb325ad292f339446b63917a9ea2" title="Manipulates the active sphere." alt="" coords="11,208,141,235"/>
 </map>

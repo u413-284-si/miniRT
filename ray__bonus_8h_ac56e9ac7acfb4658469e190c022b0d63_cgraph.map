@@ -1,5 +1,0 @@
-<map id="ft_scale_ray" name="ft_scale_ray">
-<area shape="rect" id="node1" title="Represents a ray." alt="" coords="5,31,105,57"/>
-<area shape="rect" id="node2" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="159,5,259,32"/>
-<area shape="rect" id="node3" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="153,56,264,83"/>
-</map>

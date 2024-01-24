@@ -48,7 +48,7 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 698;
 var viewHeight = 66;
-var sectionId = 'dynsection-2';
+var sectionId = 'dynsection-1';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
@@ -57,7 +57,7 @@ var sectionId = 'dynsection-2';
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Manipulates the ambient light.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-19.5 0,-38.5 105,-38.5 105,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="52.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_ambient</text>
 </a>

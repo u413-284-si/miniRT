@@ -1,5 +1,4 @@
 <map id="ft_manip_sphere" name="ft_manip_sphere">
-<area shape="rect" id="node1" title="Manipulates the active sphere." alt="" coords="361,5,492,32"/>
-<area shape="rect" id="node2" href="$render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="177,5,313,32"/>
-<area shape="rect" id="node3" href="$render_8h.html#add5f6a250b6eb86fcd86080295083ebf" title="Manipulates the active hittable." alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node1" title="Manipulates the active sphere." alt="" coords="189,5,320,32"/>
+<area shape="rect" id="node2" href="$render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="5,5,141,32"/>
 </map>

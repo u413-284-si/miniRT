@@ -1069,18 +1069,18 @@ var sectionId = 'dynsection-4';
 <path fill="none" stroke="midnightblue" d="M182.34,-171.37C198.4,-155.34 232.92,-123.15 268,-105 272.83,-102.5 278.04,-100.29 283.33,-98.34"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="284.53,-101.63 292.89,-95.11 282.3,-94.99 284.53,-101.63"/>
 </g>
-<!-- Node72 -->
+<!-- Node71 -->
 <g id="node49" class="node">
-<title>Node72</title>
+<title>Node71</title>
 <g id="a_node49"><a xlink:href="parse__bonus_8c.html#a4ce5cad477407308f911966a9446f560" target="_top" xlink:title="Dispatcher for different parsing functions.">
 <polygon fill="none" stroke="black" points="275.5,-114.5 275.5,-133.5 394.5,-133.5 394.5,-114.5 275.5,-114.5"/>
 <text text-anchor="middle" x="335" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_lines_bonus</text>
 </a>
 </g>
 </g>
-<!-- Node51&#45;&gt;Node72 -->
+<!-- Node51&#45;&gt;Node71 -->
 <g id="edge109" class="edge">
-<title>Node51&#45;&gt;Node72</title>
+<title>Node51&#45;&gt;Node71</title>
 <path fill="none" stroke="midnightblue" d="M195.03,-171.46C214.13,-163.36 242.63,-151.7 268,-143 274.59,-140.74 281.62,-138.52 288.53,-136.44"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="289.91,-139.68 298.52,-133.51 287.93,-132.97 289.91,-139.68"/>
 </g>
@@ -1135,51 +1135,51 @@ var sectionId = 'dynsection-4';
 <path fill="none" stroke="midnightblue" d="M350.65,-76.36C369.99,-63.99 405.39,-42.52 438,-29 443.72,-26.63 449.83,-24.45 455.94,-22.47"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="456.97,-25.82 465.5,-19.55 454.92,-19.13 456.97,-25.82"/>
 </g>
-<!-- Node71 -->
+<!-- Node70 -->
 <g id="node48" class="node">
-<title>Node71</title>
+<title>Node70</title>
 <g id="a_node48"><a xlink:href="parse_8h.html#a4aae05e7a38646951b318a2de0b24689" target="_top" xlink:title="Parse light line.">
 <polygon fill="none" stroke="red" points="464.5,-76.5 464.5,-95.5 547.5,-95.5 547.5,-76.5 464.5,-76.5"/>
 <text text-anchor="middle" x="506" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_light</text>
 </a>
 </g>
 </g>
-<!-- Node54&#45;&gt;Node71 -->
+<!-- Node54&#45;&gt;Node70 -->
 <g id="edge108" class="edge">
-<title>Node54&#45;&gt;Node71</title>
+<title>Node54&#45;&gt;Node70</title>
 <path fill="none" stroke="midnightblue" d="M377.34,-86C400.51,-86 429.6,-86 454.16,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="454.38,-89.5 464.38,-86 454.38,-82.5 454.38,-89.5"/>
 </g>
-<!-- Node72&#45;&gt;Node55 -->
+<!-- Node71&#45;&gt;Node55 -->
 <g id="edge110" class="edge">
-<title>Node72&#45;&gt;Node55</title>
+<title>Node71&#45;&gt;Node55</title>
 <path fill="none" stroke="midnightblue" d="M381.38,-114.42C388.56,-111.94 395.68,-108.84 402,-105 421.88,-92.91 418.1,-79.05 438,-67 441.61,-64.82 445.47,-62.87 449.47,-61.15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="450.86,-64.37 458.93,-57.51 448.34,-57.83 450.86,-64.37"/>
 </g>
-<!-- Node72&#45;&gt;Node58 -->
+<!-- Node71&#45;&gt;Node58 -->
 <g id="edge111" class="edge">
-<title>Node72&#45;&gt;Node58</title>
+<title>Node71&#45;&gt;Node58</title>
 <path fill="none" stroke="midnightblue" d="M394.63,-124C411.45,-124 429.78,-124 446.58,-124"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="446.82,-127.5 456.82,-124 446.82,-120.5 446.82,-127.5"/>
 </g>
-<!-- Node72&#45;&gt;Node71 -->
+<!-- Node71&#45;&gt;Node70 -->
 <g id="edge113" class="edge">
-<title>Node72&#45;&gt;Node71</title>
+<title>Node71&#45;&gt;Node70</title>
 <path fill="none" stroke="midnightblue" d="M378.65,-114.41C401.66,-109.24 430.22,-102.81 454.36,-97.39"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="455.42,-100.74 464.41,-95.13 453.88,-93.91 455.42,-100.74"/>
 </g>
-<!-- Node73 -->
+<!-- Node72 -->
 <g id="node50" class="node">
-<title>Node73</title>
+<title>Node72</title>
 <g id="a_node50"><a xlink:href="parse__bonus_8c.html#a65db4c46c2af2d9b570687b3a1458f15" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="red" points="444,-152.5 444,-171.5 568,-171.5 568,-152.5 444,-152.5"/>
 <text text-anchor="middle" x="506" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_entity_bonus</text>
 </a>
 </g>
 </g>
-<!-- Node72&#45;&gt;Node73 -->
+<!-- Node71&#45;&gt;Node72 -->
 <g id="edge112" class="edge">
-<title>Node72&#45;&gt;Node73</title>
+<title>Node71&#45;&gt;Node72</title>
 <path fill="none" stroke="midnightblue" d="M378.65,-133.59C401.15,-138.65 428.95,-144.9 452.74,-150.25"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="452.14,-153.7 462.66,-152.48 453.67,-146.87 452.14,-153.7"/>
 </g>

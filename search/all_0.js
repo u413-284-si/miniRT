@@ -9,6 +9,7 @@ var searchData=
   ['ambient_5fmax_6',['AMBIENT_MAX',['../mini_r_t__config_8h.html#aa6f7a0268bf3388557716a90bc584ed5',1,'AMBIENT_MAX():&#160;miniRT_config.h'],['../mini_r_t__config__bonus_8h.html#aa6f7a0268bf3388557716a90bc584ed5',1,'AMBIENT_MAX():&#160;miniRT_config_bonus.h']]],
   ['angle_7',['angle',['../structt__cone.html#ab8ef1bf8a70cc07c6d55823c390a7e76',1,'t_cone']]],
   ['apex_8',['apex',['../structt__cone.html#afcd43ca207d5e563d12249b1c2bf10f0',1,'t_cone']]],
-  ['axis_9',['axis',['../structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6',1,'t_cylinder::axis()'],['../structt__cone.html#a7f4ed5c02961988cdae75eb415b617a6',1,'t_cone::axis()']]],
-  ['axis_5fhit_10',['axis_hit',['../structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07',1,'t_hitrecord']]]
+  ['arg_9',['arg',['../structt__thread__data.html#a9ce2ec4812a92cb6ab39f6e81e9173a9',1,'t_thread_data']]],
+  ['axis_10',['axis',['../structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6',1,'t_cylinder::axis()'],['../structt__cone.html#a7f4ed5c02961988cdae75eb415b617a6',1,'t_cone::axis()']]],
+  ['axis_5fhit_11',['axis_hit',['../structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07',1,'t_hitrecord']]]
 ];

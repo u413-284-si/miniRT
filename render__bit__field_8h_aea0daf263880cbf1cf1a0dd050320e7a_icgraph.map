@@ -1,14 +1,28 @@
 <map id="ft_option_isset" name="ft_option_isset">
-<area shape="rect" id="node1" title="Checks if bit is set in the bit field." alt="" coords="685,190,803,216"/>
-<area shape="rect" id="node2" href="$render_8h.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="320,38,435,64"/>
-<area shape="rect" id="node5" href="$render_8h.html#a83e529cd9901f21912824cd776d5aec9" title="Get the current increment value." alt="" coords="500,38,632,64"/>
-<area shape="rect" id="node6" href="$render_8h.html#a735dfeb13434c88e3b4a76990386763b" title="Puts the current menu page on the screen." alt="" coords="498,88,634,115"/>
-<area shape="rect" id="node7" href="$menu__put_8h.html#a3f0568f8727013cd58c74a0f6e62fc34" title="Puts the current increment mode on the screen." alt="" coords="523,139,609,166"/>
-<area shape="rect" id="node8" href="$menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" title="Puts the main page of menu on the screen." alt="" coords="308,316,447,343"/>
-<area shape="rect" id="node9" href="$menu__put_8h.html#a1b38af48f27d255415119731c99f5e3a" title="Puts the current control mode on the screen." alt="" coords="515,240,617,267"/>
-<area shape="rect" id="node10" href="$menu__put_8h.html#a6466842cb9367072865c07608f1e4c7d" title="Puts a camera page on the screen." alt="" coords="499,291,633,318"/>
-<area shape="rect" id="node11" href="$menu__put_8h.html#a11eed0e0d38826c89da2d71031a08593" title="Puts a light page on the screen." alt="" coords="499,342,633,368"/>
-<area shape="rect" id="node12" href="$menu__put_8h.html#a18613445d2379eca738e6cf789dfecf5" title="Puts a scene page on the screen." alt="" coords="495,392,637,419"/>
-<area shape="rect" id="node3" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,38,260,64"/>
-<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,38,60,64"/>
+<area shape="rect" id="node1" title="Checks if bit is set in the bit field." alt="" coords="961,487,1079,513"/>
+<area shape="rect" id="node2" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="745,5,901,32"/>
+<area shape="rect" id="node3" href="$render_8h.html#aec3cd597b321f09a5c6b74fc87d4057e" title="Changes the active hittable or light source." alt="" coords="757,56,888,83"/>
+<area shape="rect" id="node4" href="$render__loop__mlx__bonus_8c.html#aa3b9ed7edeaf796e06eeceb1874c8fbf" title="Wrapper around mlx_loop_end()." alt="" coords="335,208,433,235"/>
+<area shape="rect" id="node7" href="$render_8h.html#a83e529cd9901f21912824cd776d5aec9" title="Get the current increment value." alt="" coords="757,157,889,184"/>
+<area shape="rect" id="node8" href="$render__keyhook__press__bonus_8c.html#a367bbd1df5c5d7a6480f93589d027d12" title="Handles keypresses." alt="" coords="529,929,663,956"/>
+<area shape="rect" id="node10" href="$render__keyhook__camera__bonus_8c.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="765,259,880,285"/>
+<area shape="rect" id="node11" href="$menu__put__bonus_8h.html#a364e2b6623c434fb926063c5e75699fa" title="Puts the options of renderer on the screen." alt="" coords="743,309,902,336"/>
+<area shape="rect" id="node12" href="$render_8h.html#a735dfeb13434c88e3b4a76990386763b" title="Puts the current menu page on the screen." alt="" coords="755,411,891,437"/>
+<area shape="rect" id="node13" href="$render_8h.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="525,385,667,412"/>
+<area shape="rect" id="node14" href="$render__mouse__bonus_8c.html#a789550edaaab12e30e0d8c779abdc1b8" title="Handles mouse movement." alt="" coords="513,512,679,539"/>
+<area shape="rect" id="node15" href="$render__mouse__bonus_8c.html#a187d0ce87f143b9dcd622e8d34968250" title="Handles mouse button presses." alt="" coords="515,563,677,589"/>
+<area shape="rect" id="node16" href="$render__mouse__bonus_8c.html#aeb525488cde2bb2dd2881042a083957a" title="Handles mouse button releases." alt="" coords="508,613,684,640"/>
+<area shape="rect" id="node17" href="$render__mouse__bonus_8c.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="732,461,913,488"/>
+<area shape="rect" id="node18" href="$menu__put_8h.html#a3f0568f8727013cd58c74a0f6e62fc34" title="Puts the current increment mode on the screen." alt="" coords="780,664,865,691"/>
+<area shape="rect" id="node19" href="$menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" title="Puts the main page of menu on the screen." alt="" coords="527,841,665,868"/>
+<area shape="rect" id="node20" href="$menu__put_8h.html#a1b38af48f27d255415119731c99f5e3a" title="Puts the current control mode on the screen." alt="" coords="771,765,874,792"/>
+<area shape="rect" id="node21" href="$menu__put_8h.html#a6466842cb9367072865c07608f1e4c7d" title="Puts a camera page on the screen." alt="" coords="756,715,889,741"/>
+<area shape="rect" id="node22" href="$menu__put_8h.html#a11eed0e0d38826c89da2d71031a08593" title="Puts a light page on the screen." alt="" coords="755,816,890,843"/>
+<area shape="rect" id="node23" href="$menu__put_8h.html#a18613445d2379eca738e6cf789dfecf5" title="Puts a scene page on the screen." alt="" coords="751,867,894,893"/>
+<area shape="rect" id="node24" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="757,107,889,133"/>
+<area shape="rect" id="node5" href="$render__loop__mlx__bonus_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,208,260,235"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,385,60,412"/>
+<area shape="rect" id="node9" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="308,563,460,589"/>
+<area shape="rect" id="node25" href="$render__bonus_8h.html#a9c57490cfa20448a418091aa47a49245" title="Raytraces a sample of the scene to the sample buffer." alt="" coords="529,120,663,147"/>
+<area shape="rect" id="node26" href="$render__loop__mlx__bonus_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="313,145,455,172"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="ft_radian_to_degree" name="ft_radian_to_degree">
 <area shape="rect" id="node1" title="Transforms radians into degrees." alt="" coords="577,56,728,83"/>
 <area shape="rect" id="node2" href="$render_8h.html#aafd27cf2b06772ec739aa2e97164d8b6" title="Changes the camera FOV with a keypress." alt="" coords="373,5,529,32"/>
-<area shape="rect" id="node3" href="$print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2" title="Prints parameters of camera struct." alt="" coords="400,56,503,83"/>
+<area shape="rect" id="node3" href="$debug__print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2" title="Prints parameters of camera struct." alt="" coords="400,56,503,83"/>
 <area shape="rect" id="node4" href="$menu__put_8h.html#a86f02d860bd5b9a3795b20ba72f8e359" title="Puts camera info on the screen." alt="" coords="404,107,499,133"/>
 <area shape="rect" id="node5" href="$menu__put_8h.html#a6466842cb9367072865c07608f1e4c7d" title="Puts a camera page on the screen." alt="" coords="192,107,325,133"/>
 <area shape="rect" id="node6" href="$menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" title="Puts the main page of menu on the screen." alt="" coords="5,107,144,133"/>

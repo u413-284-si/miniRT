@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('render__keyhook__options__bonus_8c.htm
 <div class="title">render_keyhook_options_bonus.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="render_8h_source.html">render.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="render__bonus_8h_source.html">render_bonus.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for render_keyhook_options_bonus.c:</div>
 <div class="dyncontent">
@@ -106,18 +106,18 @@ Include dependency graph for render_keyhook_options_bonus.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:add0526c14ef9d6085a85763d42fb901f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__keyhook__options__bonus_8c.html#add0526c14ef9d6085a85763d42fb901f">ft_change_options</a> (int key, <a class="el" href="structt__render.html">t_render</a> *render)</td></tr>
-<tr class="separator:add0526c14ef9d6085a85763d42fb901f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef117398ad110d4bd93da9edb52bd0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__keyhook__options__bonus_8c.html#afef117398ad110d4bd93da9edb52bd0b">ft_change_options_bonus</a> (int key, <a class="el" href="structt__render.html">t_render</a> *render)</td></tr>
+<tr class="separator:afef117398ad110d4bd93da9edb52bd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="add0526c14ef9d6085a85763d42fb901f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add0526c14ef9d6085a85763d42fb901f">&#9670;&nbsp;</a></span>ft_change_options()</h2>
+<a id="afef117398ad110d4bd93da9edb52bd0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef117398ad110d4bd93da9edb52bd0b">&#9670;&nbsp;</a></span>ft_change_options_bonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ft_change_options </td>
+          <td class="memname">void ft_change_options_bonus </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>key</em>, </td>
@@ -136,28 +136,40 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="render__keyhook__options__bonus_8c_source.html#l00063">63</a> of file <a class="el" href="render__keyhook__options__bonus_8c_source.html">render_keyhook_options_bonus.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (key == XK_Escape)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        mlx_loop_end(render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>.<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_i)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        ft_toggle_menu(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, render-&gt;<a class="code" href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">mlx_ptrs</a>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_Control_L)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        ft_change_mode(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_Shift_L)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="render__bit__field_8h.html#a8c60e02dabdbc0a5911c95c57284e115">ft_option_toggle</a>(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, <a class="code" href="render__options_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a9c605de914963fa61c0d7d872b31a1f7">O_SHOW_CTRL</a>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_u)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        ft_change_inc(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_o)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="render__bit__field_8h.html#a8c60e02dabdbc0a5911c95c57284e115">ft_option_toggle</a>(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, <a class="code" href="render__options__bonus_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a6701f67db46a6c3a0291d90cf82a82fc">O_SHOW_FPS</a>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<p>Handles bonus option keys. </p>
+<p>'O': Show options. 'P': Start printing. 'J': Toggle threading. 'K': Toggle anti-aliasing. 'L': Toggle time unit. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Keycode of the pressed key. </td></tr>
+    <tr><td class="paramname">render</td><td>Pointer to render struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="render__keyhook__options__bonus_8c_source.html#l00031">31</a> of file <a class="el" href="render__keyhook__options__bonus_8c_source.html">render_keyhook_options_bonus.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (key == XK_o)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="render__bit__field_8h.html#a8c60e02dabdbc0a5911c95c57284e115">ft_option_toggle</a>(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, <a class="code" href="render__bit__field__bonus_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a6607df205fbac0cc11529dd45652ae1d">O_SHOW_OPTIONS</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_p)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        ft_start_printing(render);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_j)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="render__bit__field_8h.html#a8c60e02dabdbc0a5911c95c57284e115">ft_option_toggle</a>(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, <a class="code" href="render__bit__field__bonus_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a6782b629b7bdf5d5a3abc3f00c56c1bc">O_IS_THREADED</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_k)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        ft_toggle_anti_alias(render);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_l)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="render__bit__field_8h.html#a8c60e02dabdbc0a5911c95c57284e115">ft_option_toggle</a>(&amp;render-&gt;<a class="code" href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">options</a>, <a class="code" href="render__bit__field__bonus_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a6701f67db46a6c3a0291d90cf82a82fc">O_SHOW_FPS</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
 <div class="ttc" id="arender__bit__field_8h_html_a8c60e02dabdbc0a5911c95c57284e115"><div class="ttname"><a href="render__bit__field_8h.html#a8c60e02dabdbc0a5911c95c57284e115">ft_option_toggle</a></div><div class="ttdeci">void ft_option_toggle(uint32_t *bit_field, t_options option)</div><div class="ttdoc">Toggles bit in bit field.</div><div class="ttdef"><b>Definition:</b> <a href="render__bit__field_8c_source.html#l00036">render_bit_field.c:36</a></div></div>
-<div class="ttc" id="arender__options_8h_html_a75f30b1f2676ccd6dbf96f34a95a5837a9c605de914963fa61c0d7d872b31a1f7"><div class="ttname"><a href="render__options_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a9c605de914963fa61c0d7d872b31a1f7">O_SHOW_CTRL</a></div><div class="ttdeci">@ O_SHOW_CTRL</div><div class="ttdef"><b>Definition:</b> <a href="render__options_8h_source.html#l00025">render_options.h:25</a></div></div>
-<div class="ttc" id="arender__options__bonus_8h_html_a75f30b1f2676ccd6dbf96f34a95a5837a6701f67db46a6c3a0291d90cf82a82fc"><div class="ttname"><a href="render__options__bonus_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a6701f67db46a6c3a0291d90cf82a82fc">O_SHOW_FPS</a></div><div class="ttdeci">@ O_SHOW_FPS</div><div class="ttdef"><b>Definition:</b> <a href="render__options__bonus_8h_source.html#l00030">render_options_bonus.h:29</a></div></div>
-<div class="ttc" id="astructt__mlx__ptrs_html_a36d268889cd2a32ce78029972c0445a5"><div class="ttname"><a href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">t_mlx_ptrs::mlx_ptr</a></div><div class="ttdeci">void * mlx_ptr</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00083">render.h:83</a></div></div>
-<div class="ttc" id="astructt__render_html_a2ba60f781746d31baf29e8c5a35d07e7"><div class="ttname"><a href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">t_render::options</a></div><div class="ttdeci">uint32_t options</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00117">render.h:117</a></div></div>
-<div class="ttc" id="astructt__render_html_a9ce880ae43b7ec34ab96f0a387451285"><div class="ttname"><a href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">t_render::mlx_ptrs</a></div><div class="ttdeci">t_mlx_ptrs mlx_ptrs</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00112">render.h:112</a></div></div>
-</div><!-- fragment -->
+<div class="ttc" id="arender__bit__field__bonus_8h_html_a75f30b1f2676ccd6dbf96f34a95a5837a6607df205fbac0cc11529dd45652ae1d"><div class="ttname"><a href="render__bit__field__bonus_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a6607df205fbac0cc11529dd45652ae1d">O_SHOW_OPTIONS</a></div><div class="ttdeci">@ O_SHOW_OPTIONS</div><div class="ttdef"><b>Definition:</b> <a href="render__bit__field__bonus_8h_source.html#l00037">render_bit_field_bonus.h:37</a></div></div>
+<div class="ttc" id="arender__bit__field__bonus_8h_html_a75f30b1f2676ccd6dbf96f34a95a5837a6701f67db46a6c3a0291d90cf82a82fc"><div class="ttname"><a href="render__bit__field__bonus_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a6701f67db46a6c3a0291d90cf82a82fc">O_SHOW_FPS</a></div><div class="ttdeci">@ O_SHOW_FPS</div><div class="ttdef"><b>Definition:</b> <a href="render__bit__field__bonus_8h_source.html#l00034">render_bit_field_bonus.h:34</a></div></div>
+<div class="ttc" id="arender__bit__field__bonus_8h_html_a75f30b1f2676ccd6dbf96f34a95a5837a6782b629b7bdf5d5a3abc3f00c56c1bc"><div class="ttname"><a href="render__bit__field__bonus_8h.html#a75f30b1f2676ccd6dbf96f34a95a5837a6782b629b7bdf5d5a3abc3f00c56c1bc">O_IS_THREADED</a></div><div class="ttdeci">@ O_IS_THREADED</div><div class="ttdef"><b>Definition:</b> <a href="render__bit__field__bonus_8h_source.html#l00035">render_bit_field_bonus.h:35</a></div></div>
+<div class="ttc" id="astructt__render_html_a2ba60f781746d31baf29e8c5a35d07e7"><div class="ttname"><a href="structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7">t_render::options</a></div><div class="ttdeci">uint32_t options</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00118">render.h:118</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="render__keyhook__options__bonus_8c_afef117398ad110d4bd93da9edb52bd0b_cgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->

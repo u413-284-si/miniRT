@@ -1,0 +1,8 @@
+<map id="ft_cam_calc_pix_pos_threaded" name="ft_cam_calc_pix_pos_threaded">
+<area shape="rect" id="node1" title="Like ft_cam_calc_pix_pos(), but threaded." alt="" coords="751,23,907,65"/>
+<area shape="rect" id="node2" href="$render__keyhook__camera__bonus_8c.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="555,5,669,32"/>
+<area shape="rect" id="node3" href="$render__mouse__bonus_8c.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="521,56,703,83"/>
+<area shape="rect" id="node4" href="$render__mouse__bonus_8c.html#a789550edaaab12e30e0d8c779abdc1b8" title="Handles mouse movement." alt="" coords="308,56,473,83"/>
+<area shape="rect" id="node5" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,56,260,83"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,56,60,83"/>
+</map>

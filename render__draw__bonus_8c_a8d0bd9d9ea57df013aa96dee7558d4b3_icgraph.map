@@ -1,0 +1,10 @@
+<map id="ft_shoot_ray" name="ft_shoot_ray">
+<area shape="rect" id="node1" title="Constructs a ray and shoots it through the pixel." alt="" coords="1055,35,1157,61"/>
+<area shape="rect" id="node2" href="$render__bonus_8h.html#a396a2e84d5040d414ec16ab32303c8d1" title="Raytraces the scene to the sample buffer." alt="" coords="860,5,1007,32"/>
+<area shape="rect" id="node8" href="$render__bonus_8h.html#a5d5ed6b28be3a532b4e17bd4a05df4d3" title="Like ft_raytrace_sample(), but threaded." alt="" coords="860,57,1007,98"/>
+<area shape="rect" id="node3" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="680,35,812,61"/>
+<area shape="rect" id="node4" href="$render__bonus_8h.html#a9c57490cfa20448a418091aa47a49245" title="Raytraces a sample of the scene to the sample buffer." alt="" coords="497,35,632,61"/>
+<area shape="rect" id="node5" href="$render__loop__mlx__bonus_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,35,449,61"/>
+<area shape="rect" id="node6" href="$render__loop__mlx__bonus_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,35,260,61"/>
+<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,35,60,61"/>
+</map>

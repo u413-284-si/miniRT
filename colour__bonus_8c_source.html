@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('colour__bonus_8c_source.html',''); ini
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/19 16:15:54 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/21 13:06:58 by gwolf            ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -136,6 +136,32 @@ $(document).ready(function(){initNavTree('colour__bonus_8c_source.html',''); ini
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        .g = <a class="code" href="utils_8h.html#a241b2b1d75c68c1eefd36b569901c9f9">ft_clamp</a>(c1.<a class="code" href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">g</a> * c2.<a class="code" href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">g</a>, interval)</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    });</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="colour__bonus_8c.html#a9a9b5dd0aae5d92b494eeaa001e68470">   46</a></span>&#160;uint32_t    <a class="code" href="colour__bonus_8c.html#a9a9b5dd0aae5d92b494eeaa001e68470">ft_convert_colour2int</a>(<a class="code" href="structt__colour.html">t_colour</a> colour)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    uint8_t a;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    uint8_t r;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    uint8_t g;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    uint8_t b;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    a = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    r = (uint8_t)(255.9 * colour.<a class="code" href="structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b">r</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    g = (uint8_t)(255.9 * colour.<a class="code" href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">g</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    b = (uint8_t)(255.9 * colour.<a class="code" href="structt__colour.html#a83fc1af92e29717b4513d121b0c72c7d">b</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> ((a &lt;&lt; 24) | (r &lt;&lt; 16) | (g &lt;&lt; 8) | b);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="colour__bonus_8c.html#a706f4b79dc506316e17481007ef33820">   60</a></span>&#160;<a class="code" href="structt__colour.html">t_colour</a>    <a class="code" href="colour__bonus_8c.html#a706f4b79dc506316e17481007ef33820">ft_convert_int2colour</a>(uint32_t colour)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="structt__colour.html">t_colour</a>    ret;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ret.<a class="code" href="structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b">r</a> = colour &gt;&gt; 16 &amp; 0xFF;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    ret.<a class="code" href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">g</a> = colour &gt;&gt; 8 &amp; 0xFF;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ret.<a class="code" href="structt__colour.html#a83fc1af92e29717b4513d121b0c72c7d">b</a> = colour &amp; 0xFF;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> (ret);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="ttc" id="acolour__bonus_8c_html_a706f4b79dc506316e17481007ef33820"><div class="ttname"><a href="colour__bonus_8c.html#a706f4b79dc506316e17481007ef33820">ft_convert_int2colour</a></div><div class="ttdeci">t_colour ft_convert_int2colour(uint32_t colour)</div><div class="ttdoc">Converts an int colour to a t_colour struct.</div><div class="ttdef"><b>Definition:</b> <a href="colour__bonus_8c_source.html#l00060">colour_bonus.c:60</a></div></div>
+<div class="ttc" id="acolour__bonus_8c_html_a9a9b5dd0aae5d92b494eeaa001e68470"><div class="ttname"><a href="colour__bonus_8c.html#a9a9b5dd0aae5d92b494eeaa001e68470">ft_convert_colour2int</a></div><div class="ttdeci">uint32_t ft_convert_colour2int(t_colour colour)</div><div class="ttdoc">Converts a t_colour struct to an int32_t.</div><div class="ttdef"><b>Definition:</b> <a href="colour__bonus_8c_source.html#l00046">colour_bonus.c:46</a></div></div>
 <div class="ttc" id="acolour__bonus_8c_html_a9e6968b360ba0fa607a8571c262995ea"><div class="ttname"><a href="colour__bonus_8c.html#a9e6968b360ba0fa607a8571c262995ea">ft_hadamard_colour</a></div><div class="ttdeci">t_colour ft_hadamard_colour(t_colour c1, t_colour c2)</div><div class="ttdoc">Calculates the Hadamard product of two colours.</div><div class="ttdef"><b>Definition:</b> <a href="colour__bonus_8c_source.html#l00033">colour_bonus.c:33</a></div></div>
 <div class="ttc" id="acolour__bonus_8c_html_ae5c090d9193f6bcf449f12c299f186b7"><div class="ttname"><a href="colour__bonus_8c.html#ae5c090d9193f6bcf449f12c299f186b7">ft_add_colour</a></div><div class="ttdeci">t_colour ft_add_colour(t_colour c1, t_colour c2)</div><div class="ttdoc">Add two colours.</div><div class="ttdef"><b>Definition:</b> <a href="colour__bonus_8c_source.html#l00015">colour_bonus.c:15</a></div></div>
 <div class="ttc" id="acolour__bonus_8c_html_afe91799ffb8d0f5d46968cfdbd8918ea"><div class="ttname"><a href="colour__bonus_8c.html#afe91799ffb8d0f5d46968cfdbd8918ea">ft_scale_colour</a></div><div class="ttdeci">t_colour ft_scale_colour(t_colour c, float scale)</div><div class="ttdoc">Scales the colour values.</div><div class="ttdef"><b>Definition:</b> <a href="colour__bonus_8c_source.html#l00024">colour_bonus.c:24</a></div></div>

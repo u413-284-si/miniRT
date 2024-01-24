@@ -1,11 +1,16 @@
 <map id="ft_diffuse_light" name="ft_diffuse_light">
-<area shape="rect" id="node1" title="Create diffuse lighting." alt="" coords="1152,31,1271,57"/>
-<area shape="rect" id="node2" href="$lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="1005,31,1104,57"/>
-<area shape="rect" id="node3" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="851,31,957,57"/>
-<area shape="rect" id="node4" href="$ray__bonus_8h.html#af9c073d2966aa21738e1d2083762055f" title="Returns the colour of a pixel by means of anti&#45;aliasing." alt="" coords="647,5,803,32"/>
-<area shape="rect" id="node9" href="$render_8h.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="471,56,599,83"/>
-<area shape="rect" id="node5" href="$render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" title="Renders the scene to the mlx img." alt="" coords="471,5,599,32"/>
-<area shape="rect" id="node6" href="$render_8h.html#af908c05cb19e716220bc98fcf9582573" title=" " alt="" coords="308,31,423,57"/>
-<area shape="rect" id="node7" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,31,260,57"/>
-<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node1" title="Create diffuse lighting." alt="" coords="1585,96,1704,123"/>
+<area shape="rect" id="node2" href="$lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="1439,96,1537,123"/>
+<area shape="rect" id="node3" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="1284,96,1391,123"/>
+<area shape="rect" id="node4" href="$render__bonus_8h.html#af5fa16c9ea3d6e6884604009e31c83de" title="Constructs a random sample ray for anti&#45;aliasing." alt="" coords="1111,64,1236,91"/>
+<area shape="rect" id="node8" href="$render_8h.html#a2c9085ad1ae8adcd3201a501a9a4dcde" title="Constructs a ray and shoots it through the pixel." alt="" coords="1122,121,1225,148"/>
+<area shape="rect" id="node5" href="$render__bonus_8h.html#afef92ac33f530ff1e1ca1049ffa14d23" title="Raytraces the scene and adds it to the sample buffer." alt="" coords="884,5,1063,32"/>
+<area shape="rect" id="node7" href="$render__bonus_8h.html#a6f833a234cbdbc69ce5458c79d1242a1" title="Like ft_add_raytrace_sample(), but threaded." alt="" coords="884,57,1063,98"/>
+<area shape="rect" id="node6" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="680,35,836,61"/>
+<area shape="rect" id="node9" href="$render__bonus_8h.html#a5d5ed6b28be3a532b4e17bd4a05df4d3" title="Like ft_raytrace_sample(), but threaded." alt="" coords="900,122,1047,163"/>
+<area shape="rect" id="node10" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="692,129,824,156"/>
+<area shape="rect" id="node11" href="$render__bonus_8h.html#a9c57490cfa20448a418091aa47a49245" title="Raytraces a sample of the scene to the sample buffer." alt="" coords="497,129,632,156"/>
+<area shape="rect" id="node12" href="$render__loop__mlx__bonus_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,129,449,156"/>
+<area shape="rect" id="node13" href="$render__loop__mlx__bonus_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,129,260,156"/>
+<area shape="rect" id="node14" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,129,60,156"/>
 </map>

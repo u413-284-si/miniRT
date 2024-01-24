@@ -27,6 +27,5 @@ var entities_8h =
       [ "CAMERA", "entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956", null ],
       [ "LIGHT", "entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb", null ],
       [ "SUM_ENTS", "entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b", null ]
-    ] ],
-    [ "ft_cy_calc_caps", "entities_8h.html#a04247c619f2a14a5a1fdb06004b8cb03", null ]
+    ] ]
 ];

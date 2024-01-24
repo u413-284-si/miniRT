@@ -1,8 +1,0 @@
-<map id="ft_print_vec3" name="ft_print_vec3">
-<area shape="rect" id="node1" title="Prints variables of a vec3." alt="" coords="353,81,460,108"/>
-<area shape="rect" id="node2" href="$print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2" title="Prints parameters of camera struct." alt="" coords="191,5,293,32"/>
-<area shape="rect" id="node3" href="$print_8h.html#a27665e112e02a635b975a5b0a4965a24" title="Prints parameters of a cylinder." alt="" coords="179,56,305,83"/>
-<area shape="rect" id="node5" href="$print_8h.html#ab5b1469cabf3343b24c4393e236d4533" title="Prints parameters of a plane." alt="" coords="187,107,297,133"/>
-<area shape="rect" id="node6" href="$print_8h.html#aa206b35a5459e0b87ec959f729bf1ab8" title="Prints parameters of a sphere." alt="" coords="183,157,301,184"/>
-<area shape="rect" id="node4" href="$print_8h.html#ac59921d803c46a4b1e16f0dfe0b6c50b" title="Prints parameters of a hittable." alt="" coords="5,107,131,133"/>
-</map>

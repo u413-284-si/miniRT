@@ -1,4 +1,4 @@
 var render__keyhook__options__bonus_8c =
 [
-    [ "ft_change_options", "render__keyhook__options__bonus_8c.html#add0526c14ef9d6085a85763d42fb901f", null ]
+    [ "ft_change_options_bonus", "render__keyhook__options__bonus_8c.html#afef117398ad110d4bd93da9edb52bd0b", null ]
 ];

@@ -1,0 +1,5 @@
+<map id="ft_print_plane" name="ft_print_plane">
+<area shape="rect" id="node1" title="Prints parameters of a plane." alt="" coords="5,31,116,57"/>
+<area shape="rect" id="node2" href="$debug__print_8h.html#a8bb33051bca60d0890928ecd90b5ef29" title="Prints variables of a colour." alt="" coords="164,5,279,32"/>
+<area shape="rect" id="node3" href="$debug__print_8h.html#a99a90f3ee5487824a003c2196bf2f56c" title="Prints variables of a vec3." alt="" coords="168,56,275,83"/>
+</map>

@@ -17,6 +17,7 @@ var mini_r_t__config__bonus_8h =
     [ "MENU_FONT", "mini_r_t__config__bonus_8h.html#a04d46f28d25d5b97d577aa8ddc949fee", null ],
     [ "MENU_OPACITY", "mini_r_t__config__bonus_8h.html#a0c37cd6de6f2158db40db4b9e5af14dd", null ],
     [ "MENU_WIDTH", "mini_r_t__config__bonus_8h.html#ae64f028be3d52d84433789a433ba4034", null ],
+    [ "NUM_THREADS", "mini_r_t__config__bonus_8h.html#a7735206bdfad487588bba2126b806ab7", null ],
     [ "PLANE_MAX", "mini_r_t__config__bonus_8h.html#aa05ccdf1a9806e5271d97dec8fa1a4c5", null ],
     [ "REFLECTION_MAX", "mini_r_t__config__bonus_8h.html#a387d9d8c183953f922357e446fc3545a", null ],
     [ "REGULAR", "mini_r_t__config__bonus_8h.html#a9988ccc764be87fa1a8280b60d9e28c6", null ],

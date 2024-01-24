@@ -1,0 +1,4 @@
+<map id="ft_add_raytrace_sample_threaded" name="ft_add_raytrace_sample_threaded">
+<area shape="rect" id="node1" title="Like ft_add_raytrace_sample(), but threaded." alt="" coords="209,5,388,47"/>
+<area shape="rect" id="node2" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="5,13,161,39"/>
+</map>

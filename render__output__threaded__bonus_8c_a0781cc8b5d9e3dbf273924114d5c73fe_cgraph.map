@@ -1,0 +1,5 @@
+<map id="ft_output_threaded" name="ft_output_threaded">
+<area shape="rect" id="node1" title="Wrapper function for threaded output." alt="" coords="5,31,151,57"/>
+<area shape="rect" id="node2" href="$render__bonus_8h.html#a68b534edacde73b5710a8bcc823a1c1a" title="Outputs the current render as a ppm file." alt="" coords="207,5,345,32"/>
+<area shape="rect" id="node3" href="$render__output__threaded__bonus_8c.html#af0a811069d8f0d83135af5c7a8b60c76" title="Helper function to toggle is_printing flag." alt="" coords="199,56,353,83"/>
+</map>

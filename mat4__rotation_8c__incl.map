@@ -1,10 +1,9 @@
 <map id="src/mat4_rotation.c" name="src/mat4_rotation.c">
-<area shape="rect" id="node1" title=" " alt="" coords="93,5,241,32"/>
-<area shape="rect" id="node2" href="$mat4_8h.html" title=" " alt="" coords="133,80,201,107"/>
-<area shape="rect" id="node3" href="$utils__bonus_8h.html" title=" " alt="" coords="113,155,221,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="47,5,195,32"/>
+<area shape="rect" id="node2" href="$mat4_8h.html" title=" " alt="" coords="87,80,155,107"/>
+<area shape="rect" id="node3" href="$utils__bonus_8h.html" title=" " alt="" coords="67,155,175,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,304,73,331"/>
-<area shape="rect" id="node5" title=" " alt="" coords="193,304,275,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="149,304,231,331"/>
 <area shape="rect" id="node6" title=" " alt="" coords="132,229,203,256"/>
-<area shape="rect" id="node7" title=" " alt="" coords="227,229,291,256"/>
-<area shape="rect" id="node8" href="$vec3_8h.html" title=" " alt="" coords="43,229,108,256"/>
+<area shape="rect" id="node7" href="$vec3_8h.html" title=" " alt="" coords="43,229,108,256"/>
 </map>

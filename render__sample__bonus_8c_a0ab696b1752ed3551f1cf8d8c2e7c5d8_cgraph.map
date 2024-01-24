@@ -1,0 +1,44 @@
+<map id="ft_single_sample" name="ft_single_sample">
+<area shape="rect" id="node1" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="5,453,137,480"/>
+<area shape="rect" id="node2" href="$render__bit__field_8h.html#a0e353bbefbfd549ad2ebb5b821fc7900" title="Clears bit in bit field." alt="" coords="199,327,318,353"/>
+<area shape="rect" id="node3" href="$render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a" title="Checks if bit is set in the bit field." alt="" coords="200,377,317,404"/>
+<area shape="rect" id="node4" href="$render__bit__field_8h.html#ab984d9cbc7c648ef4481b9158b27da30" title="Sets bit in bit field." alt="" coords="205,428,312,455"/>
+<area shape="rect" id="node5" href="$render__bonus_8h.html#a396a2e84d5040d414ec16ab32303c8d1" title="Raytraces the scene to the sample buffer." alt="" coords="185,479,332,505"/>
+<area shape="rect" id="node37" href="$render__bonus_8h.html#a5d5ed6b28be3a532b4e17bd4a05df4d3" title="Like ft_raytrace_sample(), but threaded." alt="" coords="185,530,332,571"/>
+<area shape="rect" id="node39" href="$threads__bonus_8h.html#a2ebd69dd0aea05d27136b23dfb779788" title="Creates NUM_THREADS threads and joins them." alt="" coords="198,613,319,640"/>
+<area shape="rect" id="node6" href="$render__draw__bonus_8c.html#a8d0bd9d9ea57df013aa96dee7558d4b3" title="Constructs a ray and shoots it through the pixel." alt="" coords="396,461,499,488"/>
+<area shape="rect" id="node7" href="$colour_8h.html#a9a9b5dd0aae5d92b494eeaa001e68470" title="Converts a t_colour struct to an int32_t." alt="" coords="563,512,721,539"/>
+<area shape="rect" id="node8" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="589,411,695,437"/>
+<area shape="rect" id="node32" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="1745,259,1843,285"/>
+<area shape="rect" id="node34" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="1739,664,1849,691"/>
+<area shape="rect" id="node9" href="$ray_8c.html#a165a4eb7af65fda20a69dfd50b9ed119" title="Returns the background colour." alt="" coords="769,411,931,437"/>
+<area shape="rect" id="node10" href="$lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="801,335,899,361"/>
+<area shape="rect" id="node18" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="1399,411,1511,437"/>
+<area shape="rect" id="node25" href="$hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d" title="Initiates hitrecord struct." alt="" coords="1732,5,1856,32"/>
+<area shape="rect" id="node11" href="$colour_8h.html#ae5c090d9193f6bcf449f12c299f186b7" title="Add two colours." alt="" coords="999,360,1109,387"/>
+<area shape="rect" id="node12" href="$scene__light_8c.html#a691cc177466ad1a6b1ababe4272dca1b" title="Create ambient lighting." alt="" coords="990,411,1118,437"/>
+<area shape="rect" id="node13" href="$scene__light_8c.html#ae50a6e06925c764b3caad3f805bc4c8a" title="Create diffuse lighting." alt="" coords="995,309,1113,336"/>
+<area shape="rect" id="node14" href="$colour_8h.html#a9e6968b360ba0fa607a8571c262995ea" title="Calculates the Hadamard product of two colours." alt="" coords="979,208,1129,235"/>
+<area shape="rect" id="node16" href="$lighting_8h.html#a382179d88a3a971b5853322389bacf04" title="Determines whether the point of intersection lies in a shadow regarding the current light source." alt="" coords="1001,259,1107,285"/>
+<area shape="rect" id="node15" href="$utils_8h.html#a241b2b1d75c68c1eefd36b569901c9f9" title="Ensure that the returned float lies within the interval." alt="" coords="1225,208,1303,235"/>
+<area shape="rect" id="node17" href="$scene__shadow_8c.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="1177,309,1351,336"/>
+<area shape="rect" id="node36" href="$vec3_8h.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="1215,360,1313,387"/>
+<area shape="rect" id="node19" href="$hit__manager_8h.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="1559,157,1673,184"/>
+<area shape="rect" id="node26" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="1567,411,1665,437"/>
+<area shape="rect" id="node33" href="$hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" title="Calculates if a sphere was hit by a ray." alt="" coords="1563,461,1669,488"/>
+<area shape="rect" id="node20" href="$hit__cylinder_8c.html#afb7b50ad2f9161c61fc1065975ec7cbf" title="Calculates all four potential hits of a cylinder." alt="" coords="1721,157,1867,184"/>
+<area shape="rect" id="node21" href="$hit__cylinder_8c.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="1724,56,1864,83"/>
+<area shape="rect" id="node22" href="$hit__cylinder_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="1721,107,1867,133"/>
+<area shape="rect" id="node23" href="$hit__manager_8h.html#a55af5b9bdf1ed07d3128dd3e15dd3e6b" title="Checks if cylinder is not blocked by another object." alt="" coords="1743,208,1845,235"/>
+<area shape="rect" id="node24" href="$utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa" title="Determines if value is surrounded by the interval." alt="" coords="1919,309,2021,336"/>
+<area shape="rect" id="node27" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="1744,563,1844,589"/>
+<area shape="rect" id="node29" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="1915,613,2025,640"/>
+<area shape="rect" id="node30" href="$utils_8h.html#ae65513c75ce8a8538c22393e0af3ab1f" title="Solves the given equation." alt="" coords="1757,461,1831,488"/>
+<area shape="rect" id="node31" href="$vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91" title="Calculate the scalar product of two vectors." alt="" coords="1745,411,1843,437"/>
+<area shape="rect" id="node28" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="1920,563,2020,589"/>
+<area shape="rect" id="node35" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="1921,664,2019,691"/>
+<area shape="rect" id="node38" href="$render_8h.html#a2c9085ad1ae8adcd3201a501a9a4dcde" title="Constructs a ray and shoots it through the pixel." alt="" coords="396,537,499,564"/>
+<area shape="rect" id="node40" href="$threads__bonus_8c.html#adef619e7d6d95dba7464efd3edac7ca0" title="Creates NUM_THREADS threads and calls routine with arg." alt="" coords="380,613,515,640"/>
+<area shape="rect" id="node42" href="$threads__bonus_8c.html#a8e3352c99f6ff37fac8b8c0f33e934ed" title="Joins threads." alt="" coords="388,664,507,691"/>
+<area shape="rect" id="node41" href="$error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" title="Print generic error message." alt="" coords="603,664,681,691"/>
+</map>

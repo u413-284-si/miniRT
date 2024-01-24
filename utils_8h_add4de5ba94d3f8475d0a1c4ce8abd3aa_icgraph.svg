@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 2014;
+var viewWidth = 2339;
 var viewHeight = 218;
 var sectionId = 'dynsection-6';
 </script>
@@ -58,8 +58,8 @@ var sectionId = 'dynsection-6';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="Determines if value is surrounded by the interval.">
-<polygon fill="#bfbfbf" stroke="black" points="1929,-85.5 1929,-104.5 2006,-104.5 2006,-85.5 1929,-85.5"/>
-<text text-anchor="middle" x="1967.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_surrounds</text>
+<polygon fill="#bfbfbf" stroke="black" points="2254,-57.5 2254,-76.5 2331,-76.5 2331,-57.5 2254,-57.5"/>
+<text text-anchor="middle" x="2292.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_surrounds</text>
 </a>
 </g>
 </g>
@@ -67,400 +67,477 @@ var sectionId = 'dynsection-6';
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="hit__manager__bonus_8h.html#ad993587b48c94f1634b1ff05b6c48d9d" target="_top" xlink:title="Checks whether the cone is blocked by another object.">
-<polygon fill="none" stroke="black" points="1562,-190.5 1562,-209.5 1639,-209.5 1639,-190.5 1562,-190.5"/>
-<text text-anchor="middle" x="1600.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_co_visible</text>
+<polygon fill="none" stroke="black" points="1887,-190.5 1887,-209.5 1964,-209.5 1964,-190.5 1887,-190.5"/>
+<text text-anchor="middle" x="1925.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_co_visible</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M1940.53,-109.62C1926.61,-117.24 1909.06,-126.51 1893,-134 1842.59,-157.51 1830.95,-167.43 1777,-181 1730.34,-192.74 1674.9,-197.22 1639,-198.94"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1942.47,-112.55 1949.53,-104.65 1939.08,-106.42 1942.47,-112.55"/>
+<path fill="none" stroke="midnightblue" d="M2272.86,-83.17C2258.45,-95.24 2237.69,-111.7 2218,-124 2169.28,-154.42 2157.17,-165 2102,-181 2055.79,-194.4 2000.25,-198.51 1964.21,-199.69"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2275.2,-85.77 2280.56,-76.63 2270.67,-80.44 2275.2,-85.77"/>
 </g>
-<!-- Node17 -->
-<g id="node17" class="node">
-<title>Node17</title>
-<g id="a_node17"><a xlink:href="hit__manager_8h.html#a55af5b9bdf1ed07d3128dd3e15dd3e6b" target="_top" xlink:title="Checks if cylinder is not blocked by another object.">
-<polygon fill="none" stroke="black" points="1814.5,-9.5 1814.5,-28.5 1891.5,-28.5 1891.5,-9.5 1814.5,-9.5"/>
-<text text-anchor="middle" x="1853" y="-16.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_cy_visible</text>
+<!-- Node22 -->
+<g id="node22" class="node">
+<title>Node22</title>
+<g id="a_node22"><a xlink:href="hit__manager_8h.html#a55af5b9bdf1ed07d3128dd3e15dd3e6b" target="_top" xlink:title="Checks if cylinder is not blocked by another object.">
+<polygon fill="none" stroke="black" points="2139.5,-0.5 2139.5,-19.5 2216.5,-19.5 2216.5,-0.5 2139.5,-0.5"/>
+<text text-anchor="middle" x="2178" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_cy_visible</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node17 -->
-<g id="edge19" class="edge">
-<title>Node1&#45;&gt;Node17</title>
-<path fill="none" stroke="midnightblue" d="M1943.91,-79.74C1921.29,-64.46 1887.18,-41.41 1868.13,-28.55"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1942.01,-82.68 1952.25,-85.37 1945.92,-76.88 1942.01,-82.68"/>
+<!-- Node1&#45;&gt;Node22 -->
+<g id="edge24" class="edge">
+<title>Node1&#45;&gt;Node22</title>
+<path fill="none" stroke="midnightblue" d="M2264.16,-52.67C2250.36,-45.48 2233.33,-36.7 2218,-29 2211.81,-25.89 2205.03,-22.56 2198.89,-19.57"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2262.65,-55.83 2273.14,-57.35 2265.89,-49.62 2262.65,-55.83"/>
 </g>
-<!-- Node20 -->
-<g id="node20" class="node">
-<title>Node20</title>
-<g id="a_node20"><a xlink:href="hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" target="_top" xlink:title="Calculates if a plane was hit by a ray.">
-<polygon fill="none" stroke="black" points="1816,-105.5 1816,-124.5 1890,-124.5 1890,-105.5 1816,-105.5"/>
-<text text-anchor="middle" x="1853" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_plane</text>
+<!-- Node25 -->
+<g id="node25" class="node">
+<title>Node25</title>
+<g id="a_node25"><a xlink:href="hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" target="_top" xlink:title="Calculates if a plane was hit by a ray.">
+<polygon fill="none" stroke="black" points="2141,-95.5 2141,-114.5 2215,-114.5 2215,-95.5 2141,-95.5"/>
+<text text-anchor="middle" x="2178" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_plane</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node20 -->
-<g id="edge25" class="edge">
-<title>Node1&#45;&gt;Node20</title>
-<path fill="none" stroke="midnightblue" d="M1918.63,-103.51C1909.15,-105.2 1899.35,-106.94 1890.34,-108.54"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1919.49,-106.91 1928.73,-101.72 1918.27,-100.02 1919.49,-106.91"/>
+<!-- Node1&#45;&gt;Node25 -->
+<g id="edge30" class="edge">
+<title>Node1&#45;&gt;Node25</title>
+<path fill="none" stroke="midnightblue" d="M2253.53,-79.83C2238.43,-84.92 2221.37,-90.69 2207.38,-95.41"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2254.76,-83.11 2263.11,-76.59 2252.52,-76.47 2254.76,-83.11"/>
 </g>
-<!-- Node24 -->
-<g id="node24" class="node">
-<title>Node24</title>
-<g id="a_node24"><a xlink:href="hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" target="_top" xlink:title="Calculates if a sphere was hit by a ray.">
-<polygon fill="none" stroke="black" points="1813,-57.5 1813,-76.5 1893,-76.5 1893,-57.5 1813,-57.5"/>
-<text text-anchor="middle" x="1853" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_sphere</text>
+<!-- Node29 -->
+<g id="node29" class="node">
+<title>Node29</title>
+<g id="a_node29"><a xlink:href="hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" target="_top" xlink:title="Calculates if a sphere was hit by a ray.">
+<polygon fill="none" stroke="black" points="2138,-38.5 2138,-57.5 2218,-57.5 2218,-38.5 2138,-38.5"/>
+<text text-anchor="middle" x="2178" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_sphere</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node24 -->
-<g id="edge31" class="edge">
-<title>Node1&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M1918.87,-83.15C1909.98,-80.93 1900.81,-78.65 1892.25,-76.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1918.18,-86.58 1928.73,-85.6 1919.87,-79.79 1918.18,-86.58"/>
+<!-- Node1&#45;&gt;Node29 -->
+<g id="edge36" class="edge">
+<title>Node1&#45;&gt;Node29</title>
+<path fill="none" stroke="midnightblue" d="M2243.81,-58.95C2235.21,-57.49 2226.34,-55.99 2218.02,-54.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2243.28,-62.41 2253.73,-60.62 2244.45,-55.5 2243.28,-62.41"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" target="_top" xlink:title="Calculates if a cone was hit by a ray.">
-<polygon fill="none" stroke="black" points="1433,-152.5 1433,-171.5 1503,-171.5 1503,-152.5 1433,-152.5"/>
-<text text-anchor="middle" x="1468" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_cone</text>
+<polygon fill="none" stroke="black" points="1758,-152.5 1758,-171.5 1828,-171.5 1828,-152.5 1758,-152.5"/>
+<text text-anchor="middle" x="1793" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_cone</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M1556.95,-187.61C1539.08,-182.41 1518.61,-176.45 1501.92,-171.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1555.99,-190.98 1566.57,-190.41 1557.95,-184.25 1555.99,-190.98"/>
+<path fill="none" stroke="midnightblue" d="M1881.95,-187.61C1864.08,-182.41 1843.61,-176.45 1826.92,-171.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1880.99,-190.98 1891.57,-190.41 1882.95,-184.25 1880.99,-190.98"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
 <g id="a_node4"><a xlink:href="hit__bonus_8c.html#a9d5972226064b0a4d0e1359d9230abec" target="_top" xlink:title="Investigate a hittable and returns whether a hit occured or not.">
-<polygon fill="none" stroke="black" points="1306,-143.5 1306,-162.5 1390,-162.5 1390,-143.5 1306,-143.5"/>
-<text text-anchor="middle" x="1348" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_hittable</text>
+<polygon fill="none" stroke="black" points="1631,-143.5 1631,-162.5 1715,-162.5 1715,-143.5 1631,-143.5"/>
+<text text-anchor="middle" x="1673" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_hittable</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M1422.86,-158.63C1412.15,-157.82 1400.73,-156.95 1390.16,-156.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1422.63,-162.13 1432.87,-159.4 1423.16,-155.15 1422.63,-162.13"/>
+<path fill="none" stroke="midnightblue" d="M1747.86,-158.63C1737.15,-157.82 1725.73,-156.95 1715.16,-156.14"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1747.63,-162.13 1757.87,-159.4 1748.16,-155.15 1747.63,-162.13"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:href="lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" target="_top" xlink:title="Looks for the closest object hit by a ray.">
-<polygon fill="none" stroke="black" points="1154,-67.5 1154,-86.5 1256,-86.5 1256,-67.5 1154,-67.5"/>
-<text text-anchor="middle" x="1205" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_get_closest_hit</text>
+<polygon fill="none" stroke="black" points="1479,-67.5 1479,-86.5 1581,-86.5 1581,-67.5 1479,-67.5"/>
+<text text-anchor="middle" x="1530" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_get_closest_hit</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M1328.43,-136.34C1313.55,-123.73 1291.65,-106.8 1270,-96 1262.53,-92.27 1254.2,-89.14 1246.09,-86.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1326.48,-139.28 1336.33,-143.18 1331.07,-133.99 1326.48,-139.28"/>
+<path fill="none" stroke="midnightblue" d="M1653.43,-136.34C1638.55,-123.73 1616.65,-106.8 1595,-96 1587.53,-92.27 1579.2,-89.14 1571.09,-86.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1651.48,-139.28 1661.33,-143.18 1656.07,-133.99 1651.48,-139.28"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
 <g id="a_node9"><a xlink:href="ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" target="_top" xlink:title="Returns the colour of a ray.">
-<polygon fill="none" stroke="black" points="634,-67.5 634,-86.5 714,-86.5 714,-67.5 634,-67.5"/>
-<text text-anchor="middle" x="674" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_ray_colour</text>
+<polygon fill="none" stroke="black" points="959,-67.5 959,-86.5 1039,-86.5 1039,-67.5 959,-67.5"/>
+<text text-anchor="middle" x="999" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_ray_colour</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node9 -->
-<g id="edge17" class="edge">
+<g id="edge22" class="edge">
 <title>Node4&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M1295.75,-153C1237.35,-153 1139.05,-153 1054.5,-153 1054.5,-153 1054.5,-153 912.5,-153 826.35,-153 730.62,-107.08 692.27,-86.63"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1295.83,-156.5 1305.83,-153 1295.83,-149.5 1295.83,-156.5"/>
+<path fill="none" stroke="midnightblue" d="M1620.75,-153C1562.35,-153 1464.05,-153 1379.5,-153 1379.5,-153 1379.5,-153 1237.5,-153 1151.35,-153 1055.62,-107.08 1017.27,-86.63"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1620.83,-156.5 1630.83,-153 1620.83,-149.5 1620.83,-156.5"/>
 </g>
-<!-- Node16 -->
-<g id="node16" class="node">
-<title>Node16</title>
-<g id="a_node16"><a xlink:href="lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" target="_top" xlink:title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the...">
-<polygon fill="none" stroke="black" points="1140,-105.5 1140,-124.5 1270,-124.5 1270,-105.5 1140,-105.5"/>
-<text text-anchor="middle" x="1205" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_shadow_ray_blocked</text>
+<!-- Node21 -->
+<g id="node21" class="node">
+<title>Node21</title>
+<g id="a_node21"><a xlink:href="lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" target="_top" xlink:title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the...">
+<polygon fill="none" stroke="black" points="1465,-105.5 1465,-124.5 1595,-124.5 1595,-105.5 1465,-105.5"/>
+<text text-anchor="middle" x="1530" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_shadow_ray_blocked</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node16 -->
-<g id="edge18" class="edge">
-<title>Node4&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M1301.56,-140.75C1282.13,-135.52 1259.77,-129.49 1241.57,-124.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1300.85,-144.19 1311.42,-143.41 1302.68,-137.43 1300.85,-144.19"/>
+<!-- Node4&#45;&gt;Node21 -->
+<g id="edge23" class="edge">
+<title>Node4&#45;&gt;Node21</title>
+<path fill="none" stroke="midnightblue" d="M1626.56,-140.75C1607.13,-135.52 1584.77,-129.49 1566.57,-124.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1625.85,-144.19 1636.42,-143.41 1627.68,-137.43 1625.85,-144.19"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:href="lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" target="_top" xlink:title="Create reflective lighting by recursion.">
-<polygon fill="none" stroke="black" points="1003,-67.5 1003,-86.5 1104,-86.5 1104,-67.5 1003,-67.5"/>
-<text text-anchor="middle" x="1053.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_reflective_light</text>
+<polygon fill="none" stroke="black" points="1328,-67.5 1328,-86.5 1429,-86.5 1429,-67.5 1328,-67.5"/>
+<text text-anchor="middle" x="1378.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_reflective_light</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M1143.46,-77C1130.37,-77 1116.67,-77 1104.06,-77"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1143.8,-80.5 1153.8,-77 1143.8,-73.5 1143.8,-80.5"/>
+<path fill="none" stroke="midnightblue" d="M1468.46,-77C1455.37,-77 1441.67,-77 1429.06,-77"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1468.8,-80.5 1478.8,-77 1468.8,-73.5 1468.8,-80.5"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:href="lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" target="_top" xlink:title="Computes the colour of light interacting with different material properties.">
-<polygon fill="none" stroke="black" points="860,-67.5 860,-86.5 967,-86.5 967,-67.5 860,-67.5"/>
-<text text-anchor="middle" x="913.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_compute_colour</text>
+<polygon fill="none" stroke="black" points="1185,-67.5 1185,-86.5 1292,-86.5 1292,-67.5 1185,-67.5"/>
+<text text-anchor="middle" x="1238.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_compute_colour</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M992.48,-70.3C984.01,-70.2 975.35,-70.25 967.04,-70.42"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="992.62,-73.8 1002.68,-70.49 992.74,-66.81 992.62,-73.8"/>
+<path fill="none" stroke="midnightblue" d="M1317.48,-70.3C1309.01,-70.2 1300.35,-70.25 1292.04,-70.42"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1317.62,-73.8 1327.68,-70.49 1317.74,-66.81 1317.62,-73.8"/>
 </g>
 <!-- Node7&#45;&gt;Node6 -->
-<g id="edge16" class="edge">
+<g id="edge21" class="edge">
 <title>Node7&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M977.31,-83.73C985.82,-83.79 994.45,-83.72 1002.68,-83.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="977.09,-80.22 967.04,-83.58 976.99,-87.22 977.09,-80.22"/>
+<path fill="none" stroke="midnightblue" d="M1302.31,-83.73C1310.82,-83.79 1319.45,-83.72 1327.68,-83.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1302.09,-80.22 1292.04,-83.58 1301.99,-87.22 1302.09,-80.22"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
 <g id="a_node8"><a xlink:href="scene__light__bonus_8c.html#a3d54436a3f695a60b1c2d9e504a61de8" target="_top" xlink:title="Calculate the effect of different lighting on perception.">
-<polygon fill="none" stroke="black" points="750,-67.5 750,-86.5 824,-86.5 824,-67.5 750,-67.5"/>
-<text text-anchor="middle" x="787" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_enlighten</text>
+<polygon fill="none" stroke="black" points="1075,-67.5 1075,-86.5 1149,-86.5 1149,-67.5 1075,-67.5"/>
+<text text-anchor="middle" x="1112" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_enlighten</text>
 </a>
 </g>
 </g>
 <!-- Node7&#45;&gt;Node8 -->
 <g id="edge7" class="edge">
 <title>Node7&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M849.56,-77C840.9,-77 832.25,-77 824.3,-77"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="849.7,-80.5 859.7,-77 849.7,-73.5 849.7,-80.5"/>
+<path fill="none" stroke="midnightblue" d="M1174.56,-77C1165.9,-77 1157.25,-77 1149.3,-77"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1174.7,-80.5 1184.7,-77 1174.7,-73.5 1174.7,-80.5"/>
 </g>
 <!-- Node8&#45;&gt;Node9 -->
 <g id="edge8" class="edge">
 <title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M739.82,-77C731.34,-77 722.56,-77 714.31,-77"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="739.96,-80.5 749.96,-77 739.96,-73.5 739.96,-80.5"/>
+<path fill="none" stroke="midnightblue" d="M1064.82,-77C1056.34,-77 1047.56,-77 1039.31,-77"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1064.96,-80.5 1074.96,-77 1064.96,-73.5 1064.96,-80.5"/>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="ray__bonus_8h.html#af9c073d2966aa21738e1d2083762055f" target="_top" xlink:title="Returns the colour of a pixel by means of anti&#45;aliasing.">
-<polygon fill="none" stroke="black" points="481,-86.5 481,-105.5 598,-105.5 598,-86.5 481,-86.5"/>
-<text text-anchor="middle" x="539.5" y="-93.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_anti_aliase_colour</text>
+<g id="a_node10"><a xlink:href="render__bonus_8h.html#af5fa16c9ea3d6e6884604009e31c83de" target="_top" xlink:title="Constructs a random sample ray for anti&#45;aliasing.">
+<polygon fill="none" stroke="black" points="829,-91.5 829,-110.5 923,-110.5 923,-91.5 829,-91.5"/>
+<text text-anchor="middle" x="876" y="-98.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_shoot_aa_ray</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node10 -->
 <g id="edge9" class="edge">
 <title>Node9&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M624.02,-84.02C615.69,-85.22 606.95,-86.47 598.41,-87.7"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="624.56,-87.48 633.96,-82.6 623.57,-80.55 624.56,-87.48"/>
+<path fill="none" stroke="midnightblue" d="M948.66,-86.79C940.26,-88.45 931.57,-90.18 923.25,-91.83"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="949.59,-90.17 958.71,-84.79 948.22,-83.3 949.59,-90.17"/>
 </g>
-<!-- Node15 -->
-<g id="node15" class="node">
-<title>Node15</title>
-<g id="a_node15"><a xlink:href="render_8h.html#a4f238596a8fca72f9af80be57cf06d34" target="_top" xlink:title="Renders the scene to the mlx img.">
-<polygon fill="none" stroke="black" points="349,-48.5 349,-67.5 445,-67.5 445,-48.5 349,-48.5"/>
-<text text-anchor="middle" x="397" y="-55.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_render_image</text>
+<!-- Node14 -->
+<g id="node14" class="node">
+<title>Node14</title>
+<g id="a_node14"><a xlink:href="render_8h.html#a2c9085ad1ae8adcd3201a501a9a4dcde" target="_top" xlink:title="Constructs a ray and shoots it through the pixel.">
+<polygon fill="none" stroke="black" points="837.5,-48.5 837.5,-67.5 914.5,-67.5 914.5,-48.5 837.5,-48.5"/>
+<text text-anchor="middle" x="876" y="-55.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_shoot_ray</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node15 -->
+<!-- Node9&#45;&gt;Node14 -->
 <g id="edge14" class="edge">
-<title>Node9&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M623.86,-73.6C573.31,-70.11 495.12,-64.71 445.27,-61.27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="623.67,-77.1 633.89,-74.3 624.16,-70.12 623.67,-77.1"/>
+<title>Node9&#45;&gt;Node14</title>
+<path fill="none" stroke="midnightblue" d="M948.57,-69.24C937.32,-67.47 925.54,-65.62 914.85,-63.94"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="948.29,-72.74 958.71,-70.83 949.38,-65.82 948.29,-72.74"/>
 </g>
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:href="render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34" target="_top" xlink:title="Renders the scene to the mlx img.">
-<polygon fill="none" stroke="black" points="349,-86.5 349,-105.5 445,-105.5 445,-86.5 349,-86.5"/>
-<text text-anchor="middle" x="397" y="-93.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_render_image</text>
+<g id="a_node11"><a xlink:href="render__bonus_8h.html#afef92ac33f530ff1e1ca1049ffa14d23" target="_top" xlink:title="Raytraces the scene and adds it to the sample buffer.">
+<polygon fill="none" stroke="black" points="659,-135.5 659,-154.5 793,-154.5 793,-135.5 659,-135.5"/>
+<text text-anchor="middle" x="726" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_add_raytrace_sample</text>
 </a>
 </g>
 </g>
 <!-- Node10&#45;&gt;Node11 -->
 <g id="edge10" class="edge">
 <title>Node10&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M470.89,-96C462.27,-96 453.6,-96 445.39,-96"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="470.95,-99.5 480.95,-96 470.95,-92.5 470.95,-99.5"/>
+<path fill="none" stroke="midnightblue" d="M834.18,-113.58C821.04,-117.6 806.42,-122.02 793,-126 782.48,-129.12 771,-132.45 760.61,-135.44"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="835.35,-116.89 843.88,-110.61 833.3,-110.19 835.35,-116.89"/>
+</g>
+<!-- Node13 -->
+<g id="node13" class="node">
+<title>Node13</title>
+<g id="a_node13"><a xlink:href="render__bonus_8h.html#a6f833a234cbdbc69ce5458c79d1242a1" target="_top" xlink:title="Like ft_add_raytrace_sample(), but threaded.">
+<polygon fill="none" stroke="black" points="659,-86 659,-116 793,-116 793,-86 659,-86"/>
+<text text-anchor="start" x="667" y="-104" font-family="Helvetica,sans-Serif" font-size="10.00">ft_add_raytrace_sample</text>
+<text text-anchor="middle" x="726" y="-93" font-family="Helvetica,sans-Serif" font-size="10.00">_threaded</text>
+</a>
+</g>
+</g>
+<!-- Node10&#45;&gt;Node13 -->
+<g id="edge12" class="edge">
+<title>Node10&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M818.9,-101C810.47,-101 801.71,-101 793.09,-101"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="818.98,-104.5 828.98,-101 818.98,-97.5 818.98,-104.5"/>
 </g>
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="render_8h.html#af908c05cb19e716220bc98fcf9582573" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="227,-67.5 227,-86.5 313,-86.5 313,-67.5 227,-67.5"/>
-<text text-anchor="middle" x="270" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_draw_scene</text>
+<g id="a_node12"><a xlink:href="render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" target="_top" xlink:title="Raytraces a sample of the scene and adds it to the sample buffer.">
+<polygon fill="none" stroke="black" points="506,-113.5 506,-132.5 623,-132.5 623,-113.5 506,-113.5"/>
+<text text-anchor="middle" x="564.5" y="-120.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_anti_alias_sample</text>
 </a>
 </g>
 </g>
 <!-- Node11&#45;&gt;Node12 -->
 <g id="edge11" class="edge">
 <title>Node11&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M338.8,-87.31C330.25,-86.01 321.57,-84.69 313.4,-83.44"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="338.33,-90.77 348.74,-88.82 339.38,-83.85 338.33,-90.77"/>
+<path fill="none" stroke="midnightblue" d="M648.7,-134.48C640.11,-133.29 631.47,-132.1 623.17,-130.95"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="648.36,-137.96 658.74,-135.86 649.32,-131.03 648.36,-137.96"/>
 </g>
-<!-- Node13 -->
-<g id="node13" class="node">
-<title>Node13</title>
-<g id="a_node13"><a xlink:href="render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" target="_top" xlink:title="Starts the mlx loop.">
-<polygon fill="none" stroke="black" points="77,-67.5 77,-86.5 191,-86.5 191,-67.5 77,-67.5"/>
-<text text-anchor="middle" x="134" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_render_start_loop</text>
-</a>
-</g>
-</g>
-<!-- Node12&#45;&gt;Node13 -->
-<g id="edge12" class="edge">
-<title>Node12&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M216.88,-77C208.44,-77 199.66,-77 191.13,-77"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="216.97,-80.5 226.97,-77 216.97,-73.5 216.97,-80.5"/>
-</g>
-<!-- Node14 -->
-<g id="node14" class="node">
-<title>Node14</title>
-<g id="a_node14"><a xlink:href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-67.5 0,-86.5 41,-86.5 41,-67.5 0,-67.5"/>
-<text text-anchor="middle" x="20.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
-</a>
-</g>
-</g>
-<!-- Node13&#45;&gt;Node14 -->
+<!-- Node13&#45;&gt;Node12 -->
 <g id="edge13" class="edge">
-<title>Node13&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M66.7,-77C57.37,-77 48.45,-77 41.04,-77"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="66.92,-80.5 76.92,-77 66.92,-73.5 66.92,-80.5"/>
+<title>Node13&#45;&gt;Node12</title>
+<path fill="none" stroke="midnightblue" d="M648.7,-111.52C640.11,-112.71 631.47,-113.9 623.17,-115.05"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="649.32,-114.97 658.74,-110.14 648.36,-108.04 649.32,-114.97"/>
 </g>
-<!-- Node15&#45;&gt;Node12 -->
+<!-- Node15 -->
+<g id="node15" class="node">
+<title>Node15</title>
+<g id="a_node15"><a xlink:href="render__bonus_8h.html#a5d5ed6b28be3a532b4e17bd4a05df4d3" target="_top" xlink:title="Like ft_raytrace_sample(), but threaded.">
+<polygon fill="none" stroke="black" points="671,-37 671,-67 781,-67 781,-37 671,-37"/>
+<text text-anchor="start" x="679" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">ft_raytrace_sample</text>
+<text text-anchor="middle" x="726" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">_threaded</text>
+</a>
+</g>
+</g>
+<!-- Node14&#45;&gt;Node15 -->
 <g id="edge15" class="edge">
-<title>Node15&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M338.8,-66.69C330.25,-67.99 321.57,-69.31 313.4,-70.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="339.38,-70.15 348.74,-65.18 338.33,-63.23 339.38,-70.15"/>
+<title>Node14&#45;&gt;Node15</title>
+<path fill="none" stroke="midnightblue" d="M826.93,-56.05C812.31,-55.46 796.13,-54.8 781.14,-54.19"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="827.14,-59.56 837.27,-56.47 827.42,-52.57 827.14,-59.56"/>
+</g>
+<!-- Node16 -->
+<g id="node16" class="node">
+<title>Node16</title>
+<g id="a_node16"><a xlink:href="render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" target="_top" xlink:title="Raytraces a single sample of the scene to the sample buffer.">
+<polygon fill="none" stroke="black" points="515,-42.5 515,-61.5 614,-61.5 614,-42.5 515,-42.5"/>
+<text text-anchor="middle" x="564.5" y="-49.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_single_sample</text>
+</a>
+</g>
+</g>
+<!-- Node15&#45;&gt;Node16 -->
+<g id="edge16" class="edge">
+<title>Node15&#45;&gt;Node16</title>
+<path fill="none" stroke="midnightblue" d="M660.51,-52C645.02,-52 628.72,-52 614.09,-52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="660.56,-55.5 670.56,-52 660.56,-48.5 660.56,-55.5"/>
+</g>
+<!-- Node17 -->
+<g id="node17" class="node">
+<title>Node17</title>
+<g id="a_node17"><a xlink:href="render__bonus_8h.html#a9c57490cfa20448a418091aa47a49245" target="_top" xlink:title="Raytraces a sample of the scene to the sample buffer.">
+<polygon fill="none" stroke="black" points="369,-42.5 369,-61.5 470,-61.5 470,-42.5 369,-42.5"/>
+<text text-anchor="middle" x="419.5" y="-49.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_render_sample</text>
+</a>
+</g>
+</g>
+<!-- Node16&#45;&gt;Node17 -->
+<g id="edge17" class="edge">
+<title>Node16&#45;&gt;Node17</title>
+<path fill="none" stroke="midnightblue" d="M504.37,-52C492.96,-52 481.13,-52 470.06,-52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="504.69,-55.5 514.69,-52 504.69,-48.5 504.69,-55.5"/>
 </g>
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:href="hit__manager_8h.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" target="_top" xlink:title="Calculates if a cylinder was hit by a ray.">
-<polygon fill="none" stroke="black" points="1691,-0.5 1691,-19.5 1777,-19.5 1777,-0.5 1691,-0.5"/>
-<text text-anchor="middle" x="1734" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_cylinder</text>
+<g id="a_node18"><a xlink:href="render__loop__mlx__bonus_8c.html#a012503b6ad6ee8198a601dad994c09b7" target="_top" xlink:title="Main loop of the program.">
+<polygon fill="none" stroke="black" points="227,-42.5 227,-61.5 333,-61.5 333,-42.5 227,-42.5"/>
+<text text-anchor="middle" x="280" y="-49.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_programm_loop</text>
 </a>
 </g>
 </g>
 <!-- Node17&#45;&gt;Node18 -->
-<g id="edge20" class="edge">
+<g id="edge18" class="edge">
 <title>Node17&#45;&gt;Node18</title>
-<path fill="none" stroke="midnightblue" d="M1804.33,-15.33C1795.3,-14.64 1785.9,-13.92 1777.06,-13.24"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1804.1,-18.83 1814.34,-16.1 1804.63,-11.85 1804.1,-18.83"/>
+<path fill="none" stroke="midnightblue" d="M358.69,-52C350.25,-52 341.63,-52 333.35,-52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="358.86,-55.5 368.86,-52 358.86,-48.5 358.86,-55.5"/>
 </g>
 <!-- Node19 -->
 <g id="node19" class="node">
 <title>Node19</title>
-<g id="a_node19"><a xlink:href="hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" target="_top" xlink:title="Investigate a hittable and returns whether a hit occured or not.">
-<polygon fill="none" stroke="black" points="1426,-57.5 1426,-76.5 1510,-76.5 1510,-57.5 1426,-57.5"/>
-<text text-anchor="middle" x="1468" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_hittable</text>
+<g id="a_node19"><a xlink:href="render__loop__mlx__bonus_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52" target="_top" xlink:title="Starts the mlx loop.">
+<polygon fill="none" stroke="black" points="77,-42.5 77,-61.5 191,-61.5 191,-42.5 77,-42.5"/>
+<text text-anchor="middle" x="134" y="-49.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_render_start_loop</text>
 </a>
 </g>
 </g>
 <!-- Node18&#45;&gt;Node19 -->
-<g id="edge21" class="edge">
+<g id="edge19" class="edge">
 <title>Node18&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M1680.46,-12.84C1642.56,-15.83 1590.45,-21.88 1546,-34 1525.23,-39.66 1502.74,-49.81 1487.46,-57.36"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1681.04,-16.31 1690.76,-12.08 1680.53,-9.33 1681.04,-16.31"/>
+<path fill="none" stroke="midnightblue" d="M216.56,-52C208.22,-52 199.71,-52 191.48,-52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="216.61,-55.5 226.61,-52 216.61,-48.5 216.61,-55.5"/>
 </g>
-<!-- Node19&#45;&gt;Node5 -->
-<g id="edge22" class="edge">
-<title>Node19&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M1415.84,-68.96C1369.65,-70.73 1302.1,-73.32 1256.21,-75.08"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1416.07,-72.45 1425.93,-68.57 1415.8,-65.46 1416.07,-72.45"/>
-</g>
-<!-- Node19&#45;&gt;Node9 -->
-<g id="edge23" class="edge">
-<title>Node19&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M1415.49,-58.19C1362.97,-49.98 1279.06,-39 1206,-39 1206,-39 1206,-39 912.5,-39 839.79,-39 821.51,-44.82 750,-58 736.39,-60.51 721.6,-64.07 708.77,-67.44"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1415.13,-61.68 1425.56,-59.79 1416.23,-54.76 1415.13,-61.68"/>
-</g>
-<!-- Node19&#45;&gt;Node16 -->
-<g id="edge24" class="edge">
-<title>Node19&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M1418.35,-78.9C1408.97,-81.05 1399.2,-83.18 1390,-85 1350.31,-92.86 1305.51,-100.2 1270.06,-105.65"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1419.39,-82.25 1428.33,-76.58 1417.8,-75.43 1419.39,-82.25"/>
-</g>
-<!-- Node20&#45;&gt;Node19 -->
-<g id="edge30" class="edge">
-<title>Node20&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M1805.69,-108.75C1796.2,-107.49 1786.28,-106.19 1777,-105 1681.61,-92.76 1569.5,-79.11 1510.37,-71.97"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1805.39,-112.24 1815.77,-110.1 1806.32,-105.31 1805.39,-112.24"/>
-</g>
-<!-- Node21 -->
-<g id="node21" class="node">
-<title>Node21</title>
-<g id="a_node21"><a xlink:href="hit__manager__bonus_8h.html#aee5824df7f0e0c2698306f49f9a1c790" target="_top" xlink:title="Calculates potential hit of cone cap.">
-<polygon fill="none" stroke="black" points="1694,-152.5 1694,-171.5 1774,-171.5 1774,-152.5 1694,-152.5"/>
-<text text-anchor="middle" x="1734" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_co_cap_hit</text>
+<!-- Node20 -->
+<g id="node20" class="node">
+<title>Node20</title>
+<g id="a_node20"><a xlink:href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="0,-42.5 0,-61.5 41,-61.5 41,-42.5 0,-42.5"/>
+<text text-anchor="middle" x="20.5" y="-49.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node21 -->
-<g id="edge26" class="edge">
-<title>Node20&#45;&gt;Node21</title>
-<path fill="none" stroke="midnightblue" d="M1818.83,-128.33C1799.78,-135.98 1776.3,-145.41 1759.04,-152.34"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1820.35,-131.49 1828.32,-124.51 1817.74,-124.99 1820.35,-131.49"/>
+<!-- Node19&#45;&gt;Node20 -->
+<g id="edge20" class="edge">
+<title>Node19&#45;&gt;Node20</title>
+<path fill="none" stroke="midnightblue" d="M66.7,-52C57.37,-52 48.45,-52 41.04,-52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="66.92,-55.5 76.92,-52 66.92,-48.5 66.92,-55.5"/>
 </g>
 <!-- Node23 -->
 <g id="node23" class="node">
 <title>Node23</title>
-<g id="a_node23"><a xlink:href="hit__manager_8h.html#af2540784b9e01fbdfeacb544ea2c169a" target="_top" xlink:title="Calculates the hit point of the ray with the cylinder cap.">
-<polygon fill="none" stroke="black" points="1694,-114.5 1694,-133.5 1774,-133.5 1774,-114.5 1694,-114.5"/>
-<text text-anchor="middle" x="1734" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_cy_cap_hit</text>
+<g id="a_node23"><a xlink:href="hit__manager_8h.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" target="_top" xlink:title="Calculates if a cylinder was hit by a ray.">
+<polygon fill="none" stroke="black" points="2016,-0.5 2016,-19.5 2102,-19.5 2102,-0.5 2016,-0.5"/>
+<text text-anchor="middle" x="2059" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_cylinder</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node23 -->
-<g id="edge29" class="edge">
-<title>Node20&#45;&gt;Node23</title>
-<path fill="none" stroke="midnightblue" d="M1805.79,-118.55C1795.4,-119.35 1784.48,-120.19 1774.4,-120.97"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1806.24,-122.03 1815.94,-117.77 1805.7,-115.05 1806.24,-122.03"/>
+<!-- Node22&#45;&gt;Node23 -->
+<g id="edge25" class="edge">
+<title>Node22&#45;&gt;Node23</title>
+<path fill="none" stroke="midnightblue" d="M2129.33,-10C2120.3,-10 2110.9,-10 2102.06,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2129.34,-13.5 2139.34,-10 2129.34,-6.5 2129.34,-13.5"/>
 </g>
-<!-- Node22 -->
-<g id="node22" class="node">
-<title>Node22</title>
-<g id="a_node22"><a xlink:href="hit__manager__bonus_8h.html#a9752309af1756a6360c6459ed6747f83" target="_top" xlink:title="Calculates potential hits of a cone.">
-<polygon fill="none" stroke="black" points="1546,-152.5 1546,-171.5 1655,-171.5 1655,-152.5 1546,-152.5"/>
-<text text-anchor="middle" x="1600.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_co_calc_pot_hits</text>
+<!-- Node24 -->
+<g id="node24" class="node">
+<title>Node24</title>
+<g id="a_node24"><a xlink:href="hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" target="_top" xlink:title="Investigate a hittable and returns whether a hit occured or not.">
+<polygon fill="none" stroke="black" points="1751,-48.5 1751,-67.5 1835,-67.5 1835,-48.5 1751,-48.5"/>
+<text text-anchor="middle" x="1793" y="-55.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_hit_hittable</text>
 </a>
 </g>
 </g>
-<!-- Node21&#45;&gt;Node22 -->
+<!-- Node23&#45;&gt;Node24 -->
+<g id="edge26" class="edge">
+<title>Node23&#45;&gt;Node24</title>
+<path fill="none" stroke="midnightblue" d="M2005.44,-14.27C1967.73,-17.94 1915.87,-24.21 1871,-34 1854.04,-37.7 1835.44,-43.45 1820.77,-48.39"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2006.05,-17.73 2015.68,-13.31 2005.39,-10.76 2006.05,-17.73"/>
+</g>
+<!-- Node24&#45;&gt;Node5 -->
 <g id="edge27" class="edge">
-<title>Node21&#45;&gt;Node22</title>
-<path fill="none" stroke="midnightblue" d="M1683.68,-162C1674.42,-162 1664.69,-162 1655.29,-162"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1683.9,-165.5 1693.9,-162 1683.9,-158.5 1683.9,-165.5"/>
+<title>Node24&#45;&gt;Node5</title>
+<path fill="none" stroke="midnightblue" d="M1740.84,-61.72C1694.65,-65.09 1627.1,-70 1581.21,-73.35"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1741.21,-65.21 1750.93,-60.99 1740.7,-58.23 1741.21,-65.21"/>
 </g>
-<!-- Node22&#45;&gt;Node3 -->
+<!-- Node24&#45;&gt;Node9 -->
 <g id="edge28" class="edge">
-<title>Node22&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M1535.51,-162C1524.39,-162 1513.23,-162 1503.3,-162"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1535.67,-165.5 1545.67,-162 1535.67,-158.5 1535.67,-165.5"/>
+<title>Node24&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M1740.85,-52.07C1688.29,-46.49 1604.05,-39 1531,-39 1531,-39 1531,-39 1237.5,-39 1164.79,-39 1146.51,-44.82 1075,-58 1061.39,-60.51 1046.6,-64.07 1033.77,-67.44"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1740.61,-55.56 1750.93,-53.16 1741.36,-48.6 1740.61,-55.56"/>
 </g>
-<!-- Node24&#45;&gt;Node19 -->
+<!-- Node24&#45;&gt;Node21 -->
+<g id="edge29" class="edge">
+<title>Node24&#45;&gt;Node21</title>
+<path fill="none" stroke="midnightblue" d="M1751.18,-70.41C1739.55,-73.74 1726.82,-77.19 1715,-80 1672.92,-89.99 1624.9,-99.05 1588.47,-105.44"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1752.45,-73.68 1761.07,-67.53 1750.49,-66.96 1752.45,-73.68"/>
+</g>
+<!-- Node25&#45;&gt;Node24 -->
+<g id="edge35" class="edge">
+<title>Node25&#45;&gt;Node24</title>
+<path fill="none" stroke="midnightblue" d="M2130.44,-99.5C2070.44,-92.38 1962.91,-79.52 1871,-68 1859.36,-66.54 1846.74,-64.92 1835.15,-63.41"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2130.37,-103.02 2140.72,-100.72 2131.2,-96.06 2130.37,-103.02"/>
+</g>
+<!-- Node26 -->
+<g id="node26" class="node">
+<title>Node26</title>
+<g id="a_node26"><a xlink:href="hit__manager__bonus_8h.html#aee5824df7f0e0c2698306f49f9a1c790" target="_top" xlink:title="Calculates potential hit of cone cap.">
+<polygon fill="none" stroke="black" points="2019,-152.5 2019,-171.5 2099,-171.5 2099,-152.5 2019,-152.5"/>
+<text text-anchor="middle" x="2059" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_co_cap_hit</text>
+</a>
+</g>
+</g>
+<!-- Node25&#45;&gt;Node26 -->
+<g id="edge31" class="edge">
+<title>Node25&#45;&gt;Node26</title>
+<path fill="none" stroke="midnightblue" d="M2149.45,-119.32C2135.34,-126.57 2117.83,-135.41 2102,-143 2095.5,-146.11 2088.39,-149.39 2081.88,-152.32"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2151.33,-122.29 2158.62,-114.6 2148.13,-116.07 2151.33,-122.29"/>
+</g>
+<!-- Node28 -->
+<g id="node28" class="node">
+<title>Node28</title>
+<g id="a_node28"><a xlink:href="hit__manager_8h.html#af2540784b9e01fbdfeacb544ea2c169a" target="_top" xlink:title="Calculates the hit point of the ray with the cylinder cap.">
+<polygon fill="none" stroke="black" points="2019,-114.5 2019,-133.5 2099,-133.5 2099,-114.5 2019,-114.5"/>
+<text text-anchor="middle" x="2059" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_cy_cap_hit</text>
+</a>
+</g>
+</g>
+<!-- Node25&#45;&gt;Node28 -->
+<g id="edge34" class="edge">
+<title>Node25&#45;&gt;Node28</title>
+<path fill="none" stroke="midnightblue" d="M2130.79,-112.5C2120.4,-114.19 2109.48,-115.97 2099.4,-117.6"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2131.63,-115.91 2140.94,-110.86 2130.51,-109 2131.63,-115.91"/>
+</g>
+<!-- Node27 -->
+<g id="node27" class="node">
+<title>Node27</title>
+<g id="a_node27"><a xlink:href="hit__manager__bonus_8h.html#a9752309af1756a6360c6459ed6747f83" target="_top" xlink:title="Calculates potential hits of a cone.">
+<polygon fill="none" stroke="black" points="1871,-152.5 1871,-171.5 1980,-171.5 1980,-152.5 1871,-152.5"/>
+<text text-anchor="middle" x="1925.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_co_calc_pot_hits</text>
+</a>
+</g>
+</g>
+<!-- Node26&#45;&gt;Node27 -->
 <g id="edge32" class="edge">
-<title>Node24&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M1802.51,-67C1726.17,-67 1581.11,-67 1510.15,-67"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1802.81,-70.5 1812.81,-67 1802.81,-63.5 1802.81,-70.5"/>
+<title>Node26&#45;&gt;Node27</title>
+<path fill="none" stroke="midnightblue" d="M2008.68,-162C1999.42,-162 1989.69,-162 1980.29,-162"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2008.9,-165.5 2018.9,-162 2008.9,-158.5 2008.9,-165.5"/>
+</g>
+<!-- Node27&#45;&gt;Node3 -->
+<g id="edge33" class="edge">
+<title>Node27&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M1860.51,-162C1849.39,-162 1838.23,-162 1828.3,-162"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1860.67,-165.5 1870.67,-162 1860.67,-158.5 1860.67,-165.5"/>
+</g>
+<!-- Node29&#45;&gt;Node24 -->
+<g id="edge37" class="edge">
+<title>Node29&#45;&gt;Node24</title>
+<path fill="none" stroke="midnightblue" d="M2127.51,-49.29C2051.17,-51.29 1906.11,-55.07 1835.15,-56.93"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2127.91,-52.78 2137.81,-49.02 2127.72,-45.79 2127.91,-52.78"/>
 </g>
 </g>
 </svg>

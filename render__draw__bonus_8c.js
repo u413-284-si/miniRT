@@ -1,7 +1,8 @@
 var render__draw__bonus_8c =
 [
-    [ "ft_anti_aliase_colour", "render__draw__bonus_8c.html#af9c073d2966aa21738e1d2083762055f", null ],
-    [ "ft_blend_background", "render__draw__bonus_8c.html#aef5f4f911a32ea5cc0ee9666358c049d", null ],
-    [ "ft_put_pix_to_image", "render__draw__bonus_8c.html#ad11267674572960fef12f2c501dd7373", null ],
-    [ "ft_render_image", "render__draw__bonus_8c.html#a4f238596a8fca72f9af80be57cf06d34", null ]
+    [ "ft_add_raytrace_sample", "render__draw__bonus_8c.html#afef92ac33f530ff1e1ca1049ffa14d23", null ],
+    [ "ft_pixel_sample", "render__draw__bonus_8c.html#a8706f722b73ae2ec7ec56e469ecbac02", null ],
+    [ "ft_raytrace_sample", "render__draw__bonus_8c.html#a396a2e84d5040d414ec16ab32303c8d1", null ],
+    [ "ft_shoot_aa_ray", "render__draw__bonus_8c.html#af5fa16c9ea3d6e6884604009e31c83de", null ],
+    [ "ft_shoot_ray", "render__draw__bonus_8c.html#a8d0bd9d9ea57df013aa96dee7558d4b3", null ]
 ];

@@ -90,8 +90,7 @@ $(document).ready(function(){initNavTree('entities__bonus_8h.html',''); initResi
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">entities_bonus.h File Reference</div>  </div>
 </div><!--header-->
@@ -103,7 +102,7 @@ $(document).ready(function(){initNavTree('entities__bonus_8h.html',''); initResi
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for entities_bonus.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="entities__bonus_8h__incl.svg" width="475" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="entities__bonus_8h__incl.svg" width="392" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -163,11 +162,6 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a61532cc2157d912259fdd9aa25ca6d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a04247c619f2a14a5a1fdb06004b8cb03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entities__bonus_8h.html#a04247c619f2a14a5a1fdb06004b8cb03">ft_cy_calc_caps</a> (<a class="el" href="structt__cylinder.html">t_cylinder</a> *cy)</td></tr>
-<tr class="separator:a04247c619f2a14a5a1fdb06004b8cb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a61532cc2157d912259fdd9aa25ca6d70"></a>
@@ -237,46 +231,6 @@ Functions</h2></td></tr>
 <div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a></div><div class="ttdeci">@ COMMENT</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00125">entities_bonus.h:125</a></div></div>
 <div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956">CAMERA</a></div><div class="ttdeci">@ CAMERA</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00132">entities_bonus.h:132</a></div></div>
 <div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb">LIGHT</a></div><div class="ttdeci">@ LIGHT</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00133">entities_bonus.h:133</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a04247c619f2a14a5a1fdb06004b8cb03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04247c619f2a14a5a1fdb06004b8cb03">&#9670;&nbsp;</a></span>ft_cy_calc_caps()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ft_cy_calc_caps </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structt__cylinder.html">t_cylinder</a> *&#160;</td>
-          <td class="paramname"><em>cy</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculates the planes of the caps of a cylinder. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cy</td><td>Pointer to cylinder struct. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="utils__entities_8c_source.html#l00015">15</a> of file <a class="el" href="utils__entities_8c_source.html">utils_entities.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    cy-&gt;<a class="code" href="structt__cylinder.html#a2df840edc410ea9564f08b4e8ada590a">cap1</a> = <a class="code" href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">centre</a>, <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>, -cy-&gt;<a class="code" href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">h</a> / 2.0));</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    cy-&gt;<a class="code" href="structt__cylinder.html#a7b26d2375d2cc500c5d7cef9d849cdab">cap2</a> = <a class="code" href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">centre</a>, <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>, cy-&gt;<a class="code" href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">h</a> / 2.0));</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="ttc" id="astructt__cylinder_html_a0f188ccfa73fd29ad62023c50c7d2a5f"><div class="ttname"><a href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">t_cylinder::centre</a></div><div class="ttdeci">t_vec3 centre</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00086">entities.h:86</a></div></div>
-<div class="ttc" id="astructt__cylinder_html_a2df840edc410ea9564f08b4e8ada590a"><div class="ttname"><a href="structt__cylinder.html#a2df840edc410ea9564f08b4e8ada590a">t_cylinder::cap1</a></div><div class="ttdeci">t_vec3 cap1</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00091">entities.h:91</a></div></div>
-<div class="ttc" id="astructt__cylinder_html_a7b26d2375d2cc500c5d7cef9d849cdab"><div class="ttname"><a href="structt__cylinder.html#a7b26d2375d2cc500c5d7cef9d849cdab">t_cylinder::cap2</a></div><div class="ttdeci">t_vec3 cap2</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00092">entities.h:92</a></div></div>
-<div class="ttc" id="astructt__cylinder_html_a7f4ed5c02961988cdae75eb415b617a6"><div class="ttname"><a href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">t_cylinder::axis</a></div><div class="ttdeci">t_vec3 axis</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00087">entities.h:87</a></div></div>
-<div class="ttc" id="astructt__cylinder_html_a85f2f1bd58b3b44ffdf3881823393959"><div class="ttname"><a href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">t_cylinder::h</a></div><div class="ttdeci">float h</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00089">entities.h:89</a></div></div>
-<div class="ttc" id="avec3_8h_html_a73e2caf4c2a51ed954b7349c6be2b3c3"><div class="ttname"><a href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a></div><div class="ttdeci">t_vec3 ft_vec3_add(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Add two vectors.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00015">vec3_arithmetics.c:15</a></div></div>
-<div class="ttc" id="avec3_8h_html_ac80a1c20941c96a8fafad255dac59092"><div class="ttname"><a href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a></div><div class="ttdeci">t_vec3 ft_vec3_scale(t_vec3 v, float a)</div><div class="ttdoc">Scale a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00033">vec3_arithmetics.c:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

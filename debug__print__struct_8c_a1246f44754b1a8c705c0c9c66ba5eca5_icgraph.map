@@ -1,0 +1,7 @@
+<map id="ft_print_colour" name="ft_print_colour">
+<area shape="rect" id="node1" title="Prints variables of a colour." alt="" coords="353,56,468,83"/>
+<area shape="rect" id="node2" href="$debug__print_8h.html#a27665e112e02a635b975a5b0a4965a24" title="Prints parameters of a cylinder." alt="" coords="179,5,305,32"/>
+<area shape="rect" id="node4" href="$debug__print_8h.html#ab5b1469cabf3343b24c4393e236d4533" title="Prints parameters of a plane." alt="" coords="187,56,297,83"/>
+<area shape="rect" id="node5" href="$debug__print_8h.html#aa206b35a5459e0b87ec959f729bf1ab8" title="Prints parameters of a sphere." alt="" coords="183,107,301,133"/>
+<area shape="rect" id="node3" href="$debug__print_8h.html#ac59921d803c46a4b1e16f0dfe0b6c50b" title="Prints parameters of a hittable." alt="" coords="5,56,131,83"/>
+</map>

@@ -1,9 +1,8 @@
 <map id="src/utils_quaternion_bonus.c" name="src/utils_quaternion_bonus.c">
-<area shape="rect" id="node1" title=" " alt="" coords="187,5,337,47"/>
-<area shape="rect" id="node2" href="$utils__bonus_8h.html" title=" " alt="" coords="163,95,271,121"/>
-<area shape="rect" id="node7" href="$vec3_8h.html" title=" " alt="" coords="291,169,356,196"/>
-<area shape="rect" id="node3" title=" " alt="" coords="284,244,352,271"/>
-<area shape="rect" id="node4" title=" " alt="" coords="171,244,254,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="113,5,264,47"/>
+<area shape="rect" id="node2" href="$utils__bonus_8h.html" title=" " alt="" coords="89,95,197,121"/>
+<area shape="rect" id="node6" href="$vec3_8h.html" title=" " alt="" coords="203,169,268,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="196,244,264,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="83,244,166,271"/>
 <area shape="rect" id="node5" title=" " alt="" coords="5,169,76,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="101,169,165,196"/>
 </map>

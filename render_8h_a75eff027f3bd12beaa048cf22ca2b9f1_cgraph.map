@@ -1,0 +1,4 @@
+<map id="ft_render_cleanup" name="ft_render_cleanup">
+<area shape="rect" id="node1" title="Frees ressources allocated for render." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node2" href="$render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57" title="Frees ressources allocated for mlx." alt="" coords="192,5,288,32"/>
+</map>

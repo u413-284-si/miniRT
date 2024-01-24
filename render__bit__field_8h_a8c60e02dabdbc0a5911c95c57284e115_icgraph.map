@@ -1,0 +1,5 @@
+<map id="ft_option_toggle" name="ft_option_toggle">
+<area shape="rect" id="node1" title="Toggles bit in bit field." alt="" coords="240,31,367,57"/>
+<area shape="rect" id="node2" href="$render_8h.html#add0526c14ef9d6085a85763d42fb901f" title="Handles option keys." alt="" coords="29,5,169,32"/>
+<area shape="rect" id="node3" href="$render__bonus_8h.html#afef117398ad110d4bd93da9edb52bd0b" title="Handles bonus option keys." alt="" coords="5,56,192,83"/>
+</map>

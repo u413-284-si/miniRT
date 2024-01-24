@@ -1,6 +1,5 @@
 <map id="inc/lighting_bonus.h" name="inc/lighting_bonus.h">
-<area shape="rect" id="node1" title=" " alt="" coords="164,5,316,32"/>
-<area shape="rect" id="node2" href="$ray__bonus_8c.html" title=" " alt="" coords="5,87,128,114"/>
-<area shape="rect" id="node3" href="$scene__light__bonus_8c.html" title=" " alt="" coords="152,87,328,114"/>
-<area shape="rect" id="node4" href="$scene__reflection__bonus_8c.html" title=" " alt="" coords="353,80,503,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="111,5,263,32"/>
+<area shape="rect" id="node2" href="$scene__light__bonus_8c.html" title=" " alt="" coords="5,87,181,114"/>
+<area shape="rect" id="node3" href="$scene__reflection__bonus_8c.html" title=" " alt="" coords="206,80,357,121"/>
 </map>

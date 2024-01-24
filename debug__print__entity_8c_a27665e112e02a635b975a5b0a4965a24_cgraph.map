@@ -1,0 +1,5 @@
+<map id="ft_print_cylinder" name="ft_print_cylinder">
+<area shape="rect" id="node1" title="Prints parameters of a cylinder." alt="" coords="5,31,132,57"/>
+<area shape="rect" id="node2" href="$debug__print_8h.html#a8bb33051bca60d0890928ecd90b5ef29" title="Prints variables of a colour." alt="" coords="180,5,295,32"/>
+<area shape="rect" id="node3" href="$debug__print_8h.html#a99a90f3ee5487824a003c2196bf2f56c" title="Prints variables of a vec3." alt="" coords="184,56,291,83"/>
+</map>

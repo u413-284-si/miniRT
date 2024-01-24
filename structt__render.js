@@ -8,6 +8,9 @@ var structt__render =
     [ "menu", "structt__render.html#a09ec586ea52e834febce30c11612d8cb", null ],
     [ "mlx_ptrs", "structt__render.html#a9ce880ae43b7ec34ab96f0a387451285", null ],
     [ "mouse", "structt__render.html#a05e7793b8f9e571d32eb579f5e4362c9", null ],
+    [ "mut_print", "structt__render.html#a198d940ac7111b0f9328e051c093b5c4", null ],
     [ "options", "structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7", null ],
+    [ "sample_buffer", "structt__render.html#a67f62f6e2cffe430aa8670ce15995b93", null ],
+    [ "sample_goal", "structt__render.html#aedba49e5858a28c81896d6278448084b", null ],
     [ "scene", "structt__render.html#ab80055edd364356489de21cdad66e875", null ]
 ];
