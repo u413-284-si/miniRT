@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/23 18:17:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/25 00:57:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -257,7 +257,6 @@ void	ft_put_light(t_putinfo put, t_light light, int total);
 /**
  * @brief Puts the current control mode on the screen.
  *
- * Is printed bold.
  * Control mode is always at the top of the menu.
  * @param put		t_putinfo struct.
  * @param options	Bit field with info about current control mode.
@@ -268,7 +267,6 @@ t_vec2i	ft_put_mode(t_putinfo put, uint32_t options);
 /**
  * @brief Puts the ID of a hittable or a light on the screen.
  *
- * ID is printed bold.
  * @param put		t_putinfo struct.
  * @param id		ID of the hittable or light.
  * @param total		Total number of hittables or lights.
