@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/24 11:27:00 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/24 11:40:33 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -194,14 +194,12 @@ SRC_COMMON := 	camera_movement.c \
 				render_blend_background.c \
 				render_cleanup.c \
 				render_init_mlx.c \
-				render_keyhook_camera.c \
 				render_keyhook_colour.c \
 				render_keyhook_hittable.c \
 				render_keyhook_light.c \
 				render_keyhook_options.c \
 				render_keyhook_select.c \
 				render_keyhook_utils.c \
-				render_mouse.c \
 				scene_shadow.c \
 				utils_interval.c \
 				utils_quaternion.c \
@@ -218,8 +216,10 @@ SRC_BASE := 	colour.c \
 				ray.c \
 				render_draw.c \
 				render_init_base.c \
+				render_keyhook_camera.c \
 				render_keyhook_press.c \
 				render_loop_mlx.c \
+				render_mouse.c \
 				scene_light.c \
 				utils_cylinder.c \
 				utils_math.c \
@@ -245,10 +245,12 @@ SRC_BONUS :=	check_bonus.c \
 				render_cleanup_bonus.c \
 				render_draw_bonus.c \
 				render_init_bonus.c \
+				render_keyhook_camera_bonus.c \
 				render_keyhook_hittable_bonus.c \
 				render_keyhook_options_bonus.c \
 				render_keyhook_press_bonus.c \
 				render_loop_mlx_bonus.c \
+				render_mouse_bonus.c \
 				render_output_ppm_bonus.c \
 				render_output_threaded_bonus.c \
 				render_sample_bonus.c \
