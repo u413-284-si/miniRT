@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/24 11:38:25 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/24 11:46:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ void	ft_keyhook_fov_cam(int key, t_cam *cam, float inc)
 	cam->hfov = ft_degree_to_radian(fov_in_degree);
 }
 
+#ifndef IS_BONUS
+
 void	ft_manip_cam(int key, t_cam *cam, float inc, uint32_t *options)
 {
 	if (key == XK_r || key == XK_f)
@@ -80,3 +82,4 @@ void	ft_manip_cam(int key, t_cam *cam, float inc, uint32_t *options)
 	ft_cam_calc_pix_pos(cam);
 	ft_option_set(options, O_SCENE_CHANGED);
 }
+#endif
