@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
+#    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/23 13:49:52 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/23 18:35:46 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,9 @@ ifeq ($(MODE), leak)
 else ifeq ($(MODE), address)
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/address
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/address
+else ifeq ($(MODE), thread)
+	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/thread
+	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/thread
 else ifeq ($(MODE), speed)
 	OBJ_DIR_BASE := $(OBJ_DIR_BASE)/speed
 	OBJ_DIR_BONUS := $(OBJ_DIR_BONUS)/speed
@@ -102,6 +105,9 @@ ifeq ($(MODE), leak)
 else ifeq ($(MODE), address)
 	CFLAGS += -fsanitize=address
 	LDFLAGS += -fsanitize=address
+else ifeq ($(MODE), thread)
+	CFLAGS += -fsanitize=thread
+	LDFLAGS += -fsanitize=thread
 else ifeq ($(MODE), speed)
 	CFLAGS = -Ofast -march=native
 	LDFLAGS += -flto
@@ -129,6 +135,8 @@ NAME = $(DEFAULT)
 LEAK := _leak
 # Append for fsanitize address checker
 ADDRESS := _address
+# Append for fsanitize thread checker
+THREAD := _thread
 # Append for speed optimization
 SPEED := _speed
 
@@ -137,6 +145,8 @@ ifeq ($(MODE), leak)
 	NAME = $(DEFAULT)$(LEAK)
 else ifeq ($(MODE), address)
 	NAME = $(DEFAULT)$(ADDRESS)
+else ifeq ($(MODE), thread)
+	NAME = $(DEFAULT)$(THREAD)
 else ifeq ($(MODE), speed)
 	NAME = $(DEFAULT)$(SPEED)
 endif
@@ -156,6 +166,8 @@ SRC_COMMON := 	camera_movement.c \
 				check_line.c \
 				check_rm_space.c \
 				cleanup.c \
+				debug_print_entity.c \
+				debug_print_struct.c \
 				error_msg_check2.c \
 				error_msg_generic.c \
 				error_mlx.c \
@@ -181,23 +193,20 @@ SRC_COMMON := 	camera_movement.c \
 				parse_entity_ACL.c \
 				parse_entity_sp_pl_cy.c \
 				parse_line.c \
-				print_entity.c \
-				print_struct.c \
+				ray.c \
 				render_bit_field.c \
+				render_blend_background.c \
+				render_cleanup.c \
 				render_init_mlx.c \
 				render_keyhook_camera.c \
 				render_keyhook_colour.c \
 				render_keyhook_hittable.c \
 				render_keyhook_light.c \
-				render_keyhook_press.c \
-				render_keyhook_release.c \
-				render_keyhook_scene.c \
+				render_keyhook_options.c \
+				render_keyhook_select.c \
 				render_keyhook_utils.c \
-				render_loop_mlx.c \
 				render_mouse.c \
-				render_output_ppm.c \
 				scene_shadow.c \
-				utils_entities.c \
 				utils_interval.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c \
@@ -209,12 +218,11 @@ SRC_BASE := 	colour.c \
 				hit_plane.c \
 				hit_sphere.c \
 				menu_put_text.c \
-				ray.c \
-				render_compose_image.c \
 				render_draw.c \
-				render_keyhook_options.c \
+				render_init_base.c \
+				render_keyhook_press.c \
+				render_loop_mlx.c \
 				scene_light.c \
-				utils_colour.c \
 				utils_cylinder.c \
 				utils_math.c \
 
@@ -230,24 +238,31 @@ SRC_BONUS :=	check_bonus.c \
 				menu_put_general_info_bonus.c \
 				menu_put_hittable_bonus.c \
 				menu_put_hittable_ctrl_bonus.c \
+				menu_put_options_bonus.c \
 				menu_put_text_bonus.c \
 				menu_put_time_bonus.c \
 				parse_bonus.c \
 				parse_entity_sp_pl_cy_bonus.c \
-				ray_bonus.c \
-				render_compose_image_bonus.c \
+				render_cleanup_bonus.c \
 				render_draw_bonus.c \
+				render_init_bonus.c \
 				render_keyhook_options_bonus.c \
+				render_keyhook_press_bonus.c \
+				render_loop_mlx_bonus.c \
+				render_output_ppm_bonus.c \
+				render_output_threaded_bonus.c \
+				render_sample_bonus.c \
+				render_threaded_fts_bonus.c \
 				scene_light_bonus.c \
 				scene_reflection_bonus.c \
 				texture_bonus.c \
 				time_bonus.c \
-				utils_colour_bonus.c \
 				utils_cone_bonus.c \
 				utils_cylinder_bonus.c \
 				utils_math_bonus.c \
 				utils_quaternion_bonus.c \
-				utils_random_bonus.c
+				utils_random_bonus.c \
+				threads_bonus.c \
 
 # ******************************
 # *     Object files           *

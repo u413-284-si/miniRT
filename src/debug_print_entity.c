@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_entity.c                                     :+:      :+:    :+:   */
+/*   debug_print_entity.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:16:27 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 12:51:10 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/20 13:44:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print.h"
+#include "debug_print.h"
 
 void	ft_print_cam(const t_cam cam)
 {

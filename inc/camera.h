@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:40:06 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/19 00:16:48 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 10:43:30 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # include "vec2.h"
 # include "vec3.h"
+# include "error_syscall.h"
 
 # if IS_BONUS
 #  include "utils_bonus.h"
@@ -25,6 +26,7 @@
 #  include "utils.h"
 #  include "miniRT_config.h"
 # endif
+
 /* ====== TYPEDEFS ====== */
 
 /**
@@ -57,6 +59,7 @@ typedef struct s_pixel_grid
  * @param viewport			Width and height of viewport rectangle
  * @param image				Width and height of image in pixels
  * @param pixels			Pixel grid parameters.
+ * @param pix_cache			Array of pixel positions in pixel grid.
  */
 typedef struct s_cam
 {
@@ -70,6 +73,7 @@ typedef struct s_cam
 	t_vec2f			viewport;
 	t_vec2i			image;
 	t_pixel_grid	pixels;
+	t_vec3			*pix_cache;
 }	t_cam;
 
 /* ====== FUNCTIONS ====== */
@@ -77,15 +81,17 @@ typedef struct s_cam
 /**
  * @brief Initializes camera parameters.
  *
+ * Malloc ray_cache.
  * Calculates the base vectors.
  * Sets the focal length to 1.
  * Sets the image size to the given size.
  * Calculates the viewport dimensions.
- * Calculates the pixel grid parameters.
+ * Calculates the pixel positions.
  * @param cam 		Struct containing camera parameters
  * @param img_size	Width and height of image in pixels
+ * @return t_err	ERROR if Malloc fails, else SUCCESS
  */
-void	ft_cam_init(t_cam *cam, t_vec2i img_size);
+t_err	ft_cam_init(t_cam *cam, t_vec2i img_size);
 
 /**
  * @brief Calculates basis vectors u, v, w
@@ -134,6 +140,14 @@ void	ft_cam_calc_viewport_dimensions(t_cam *cam);
  * @param cam		Struct containing camera parameters.
  */
 void	ft_cam_calc_pixel_grid(t_cam *cam);
+
+/**
+ * @brief Calculates all pixel positions in pixel grid.
+ *
+ * Uses the calculated pixel grid parameters to calculate every pixel position.
+ * @param cam	Struct containing camera parameters.
+ */
+void	ft_cam_calc_pix_pos(t_cam *cam);
 
 // camera_movement.c
 

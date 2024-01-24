@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_bit_field.h                                 :+:      :+:    :+:   */
+/*   render_bit_field_bonus.h                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:06:03 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/20 14:15:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:31:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RENDER_BIT_FIELD_H
-# define RENDER_BIT_FIELD_H
+#ifndef RENDER_BIT_FIELD_BONUS_H
+# define RENDER_BIT_FIELD_BONUS_H
 
 /* ====== LIBRARIES ====== */
 
@@ -30,7 +30,12 @@ typedef enum e_options
 	O_SHOW_CTRL = 6,
 	O_MANIP_LOW = 7,
 	O_MANIP_MID = 8,
-	O_MANIP_HIGH = 9
+	O_MANIP_HIGH = 9,
+	O_SHOW_FPS = 10,
+	O_IS_THREADED = 11,
+	O_IS_ANTI_ALIAS = 12,
+	O_SHOW_OPTIONS = 13,
+	O_IS_PRINTING = 14
 }	t_options;
 
 /* ====== FUNCTIONS ====== */

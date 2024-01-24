@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_general_info.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:54:31 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/23 13:49:19 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/23 18:18:10 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,10 @@ t_vec2i	ft_put_inc(t_putinfo put, uint32_t options)
 		num.numf = INC_MID;
 	else if (ft_option_isset(options, O_MANIP_HIGH))
 		num.numf = INC_HIGH;
-	ft_put_str(put, "Inc:");
-	put.pos.x += 40;
+	ft_put_str(put, "Increment:");
+	put.pos.x += 90;
 	ft_put_float(put, num);
-	put.pos.x -= 40;
+	put.pos.x -= 90;
 	put.pos.y += Y_NEXT_LINE;
 	return (put.pos);
 }

@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_entity.c                                     :+:      :+:    :+:   */
+/*   render_cleanup_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/23 21:53:58 by gwolf             #+#    #+#             */
-/*   Updated: 2023/12/23 21:54:25 by gwolf            ###   ########.fr       */
+/*   Created: 2024/01/17 16:43:24 by gwolf             #+#    #+#             */
+/*   Updated: 2024/01/22 16:54:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "entities.h"
+#include "render_bonus.h"
 
-void	ft_cy_calc_caps(t_cylinder *cy)
+void	ft_render_cleanup(t_render *render)
 {
-	cy->cap1 = ft_vec3_add(cy->centre, ft_vec3_scale(cy->axis, -cy->h / 2.0));
-	cy->cap2 = ft_vec3_add(cy->centre, ft_vec3_scale(cy->axis, cy->h / 2.0));
+	free(render->scene.obj);
+	free(render->scene.lsrc);
+	ft_free_mlx(&render->mlx_ptrs);
+	free(render->cam.pix_cache);
+	free(render->sample_buffer);
+	pthread_mutex_destroy(&render->mut_print);
 }

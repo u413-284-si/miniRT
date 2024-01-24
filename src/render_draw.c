@@ -3,51 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   render_draw.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/16 17:48:35 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 09:06:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "render.h"
-
-static uint32_t	ft_fast_alpha_blend(uint32_t bg_color, t_menu menu)
-{
-	uint32_t	bg_rb;
-	uint32_t	bg_g;
-	uint32_t	blend_rb;
-	uint32_t	blend_g;
-
-	bg_rb = (bg_color & 0xFF00FF) * menu.inv_alpha;
-	bg_g = (bg_color & 0x00FF00) * menu.inv_alpha;
-	blend_rb = (((menu.rb + bg_rb) >> 8) & 0xFF00FF);
-	blend_g = (((menu.g + bg_g) >> 8) & 0x00FF00);
-	return (blend_rb | blend_g);
-}
-
-void	ft_blend_background(t_img *img, t_img *veil, t_menu menu)
-{
-	char		*img_pixel;
-	char		*veil_pixel;
-	uint32_t	blend_colour;
-	t_vec2i		pos;
-
-	pos.y = -1;
-	while (++pos.y < veil->size.y)
-	{
-		pos.x = -1;
-		while (++pos.x < veil->size.x)
-		{
-			img_pixel = img->addr
-				+ (pos.y * img->line_len + pos.x * img->bytes);
-			blend_colour = ft_fast_alpha_blend(*(uint32_t *)img_pixel, menu);
-			veil_pixel = veil->addr
-				+ (pos.y * veil->line_len + pos.x * veil->bytes);
-			*(uint32_t *)veil_pixel = blend_colour;
-		}
-	}
-}
 
 void	ft_put_pix_to_image(t_img *img, int x, int y, int color)
 {
@@ -66,31 +29,32 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color)
 	}
 }
 
-void	ft_render_image(t_render *render)
+uint32_t	ft_shoot_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
 {
+	t_vec3		pixel_centre;
+
+	pixel_centre = cam.pix_cache[pos.y * cam.image.x + pos.x];
+	ray.direction = ft_vec3_norm(ft_vec3_sub(pixel_centre, ray.origin));
+	return (ft_convert_colour2int(ft_ray_colour(ray, scene)));
+}
+
+void	ft_raytrace_image(t_render *render)
+{
+	t_vec2i		pos;
 	t_ray		ray;
-	t_vec2i		iterate;
-	t_vec3		pix_centre;
-	t_colour	pixel_colour;
 	int			colour;
 
 	ray.origin = render->cam.centre;
 	ray.d = 1.0;
-	iterate.y = -1;
-	while (++iterate.y < render->cam.image.y)
+	pos.y = -1;
+	while (++pos.y < render->cam.image.y)
 	{
-		iterate.x = -1;
-		while (++iterate.x < render->cam.image.x)
+		pos.x = -1;
+		while (++pos.x < render->cam.image.x)
 		{
-			pix_centre = ft_vec3_add(ft_vec3_add(render->cam.pixels.pos00, \
-				ft_vec3_scale(render->cam.pixels.delta_u, iterate.x)), \
-				ft_vec3_scale(render->cam.pixels.delta_v, iterate.y));
-			ray.direction = ft_vec3_norm(ft_vec3_sub(pix_centre, \
-				render->cam.centre));
-			pixel_colour = ft_ray_colour(ray, render->scene);
-			colour = ft_convert_colour2int(pixel_colour);
-			ft_put_pix_to_image(&render->mlx_ptrs.img, iterate.x, iterate.y, \
-				colour);
+			colour = ft_shoot_ray(pos, ray, render->scene, render->cam);
+			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, \
+				pos.y, colour);
 		}
 	}
 }
