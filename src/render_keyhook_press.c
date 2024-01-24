@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/25 00:52:44 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/25 00:58:16 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,6 @@ void	ft_manip_scene(int key, t_render *render)
 
 int	ft_keyhook_press(int key, t_render *render)
 {
-	float	inc;
-
 	if (ft_is_option_key(key))
 		ft_change_options(key, render);
 	else if (key == XK_n || key == XK_m)
