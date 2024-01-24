@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:43:17 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/24 11:46:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/24 23:32:06 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	ft_keyhook_rot_cam(int key, t_vec3 *direction, float inc)
 {
 	if (key == XK_Left)
-		*direction = ft_vec3_rotate_y(*direction, inc * 0.1);
+		*direction = ft_vec3_rotate_y(*direction, inc);
 	else if (key == XK_Right)
-		*direction = ft_vec3_rotate_y(*direction, -inc * 0.1);
+		*direction = ft_vec3_rotate_y(*direction, -inc);
 	else if (key == XK_Up)
-		*direction = ft_vec3_rotate_x(*direction, inc * 0.1);
+		*direction = ft_vec3_rotate_x(*direction, inc);
 	else if (key == XK_Down)
-		*direction = ft_vec3_rotate_x(*direction, -inc * 0.1);
+		*direction = ft_vec3_rotate_x(*direction, -inc);
 }
 
 void	ft_keyhook_move_cam(int key, t_cam *cam, float inc)
