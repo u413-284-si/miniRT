@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/24 11:03:52 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/24 11:27:00 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -190,7 +190,6 @@ SRC_COMMON := 	camera_movement.c \
 				parse_entity_ACL.c \
 				parse_entity_sp_pl_cy.c \
 				parse_line.c \
-				ray.c \
 				render_bit_field.c \
 				render_blend_background.c \
 				render_cleanup.c \
@@ -216,6 +215,7 @@ SRC_BASE := 	colour.c \
 				hit_plane.c \
 				hit_sphere.c \
 				menu_put_text.c \
+				ray.c \
 				render_draw.c \
 				render_init_base.c \
 				render_keyhook_press.c \
@@ -241,6 +241,7 @@ SRC_BONUS :=	check_bonus.c \
 				menu_put_time_bonus.c \
 				parse_bonus.c \
 				parse_entity_sp_pl_cy_bonus.c \
+				ray_bonus.c \
 				render_cleanup_bonus.c \
 				render_draw_bonus.c \
 				render_init_bonus.c \
