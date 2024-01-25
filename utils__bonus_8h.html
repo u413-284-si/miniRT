@@ -157,6 +157,12 @@ Functions</h2></td></tr>
 <tr class="separator:a15b6fa9c749e827cd1d52bf1c8e0a8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b67c731c02a7ba35f27473295bfb753"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__bonus_8h.html#a4b67c731c02a7ba35f27473295bfb753">ft_quaternion_rot</a> (<a class="el" href="structt__vec3.html">t_vec3</a> vec, <a class="el" href="structt__vec3.html">t_vec3</a> axis, float angle)</td></tr>
 <tr class="separator:a4b67c731c02a7ba35f27473295bfb753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211f9d6535bb54bea2299ee5ea8a54a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__bonus_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0">ft_vec3_rotate_x</a> (const <a class="el" href="structt__vec3.html">t_vec3</a> vec, float roll)</td></tr>
+<tr class="separator:a211f9d6535bb54bea2299ee5ea8a54a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8a4ca6fb927e3746e7129f8eb04aa46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__bonus_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46">ft_vec3_rotate_y</a> (const <a class="el" href="structt__vec3.html">t_vec3</a> vec, float pitch)</td></tr>
+<tr class="separator:ac8a4ca6fb927e3746e7129f8eb04aa46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad39f8d1d44f9bce6c5025b87a09f7dfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__bonus_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc">ft_vec3_rotate_z</a> (const <a class="el" href="structt__vec3.html">t_vec3</a> vec, float yaw)</td></tr>
+<tr class="separator:ad39f8d1d44f9bce6c5025b87a09f7dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a536e48026a77f8365359a33a3e0eb726"></a>
@@ -252,8 +258,8 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> (interval.<a class="code" href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">max</a>);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> (x);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="ttc" id="astructt__interval_html_a306b5ca364bf842a8ff5bbfc0b4d4a4b"><div class="ttname"><a href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">t_interval::max</a></div><div class="ttdeci">float max</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00040">utils.h:40</a></div></div>
-<div class="ttc" id="astructt__interval_html_ad2e88d75f808e6d4e78d48bceb10c336"><div class="ttname"><a href="structt__interval.html#ad2e88d75f808e6d4e78d48bceb10c336">t_interval::min</a></div><div class="ttdeci">float min</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00039">utils.h:39</a></div></div>
+<div class="ttc" id="astructt__interval_html_a306b5ca364bf842a8ff5bbfc0b4d4a4b"><div class="ttname"><a href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">t_interval::max</a></div><div class="ttdeci">float max</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00041">utils.h:41</a></div></div>
+<div class="ttc" id="astructt__interval_html_ad2e88d75f808e6d4e78d48bceb10c336"><div class="ttname"><a href="structt__interval.html#ad2e88d75f808e6d4e78d48bceb10c336">t_interval::min</a></div><div class="ttdeci">float min</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00040">utils.h:40</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -331,7 +337,7 @@ false Value is outside the interval </dd></dl>
 <div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> (degrees * <a class="code" href="utils_8h.html#ab812f1e2f95156906fcaca00bc6f490e">RAD</a>);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="ttc" id="autils_8h_html_ab812f1e2f95156906fcaca00bc6f490e"><div class="ttname"><a href="utils_8h.html#ab812f1e2f95156906fcaca00bc6f490e">RAD</a></div><div class="ttdeci">#define RAD</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00025">utils.h:25</a></div></div>
+<div class="ttc" id="autils_8h_html_ab812f1e2f95156906fcaca00bc6f490e"><div class="ttname"><a href="utils_8h.html#ab812f1e2f95156906fcaca00bc6f490e">RAD</a></div><div class="ttdeci">#define RAD</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00026">utils.h:26</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -379,7 +385,7 @@ false If they are not equal </dd></dl>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="ttc" id="autils_8h_html_a002b2f4894492820fe708b1b7e7c5e70"><div class="ttname"><a href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a></div><div class="ttdeci">#define EPSILON</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00027">utils.h:27</a></div></div>
+<div class="ttc" id="autils_8h_html_a002b2f4894492820fe708b1b7e7c5e70"><div class="ttname"><a href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a></div><div class="ttdeci">#define EPSILON</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00028">utils.h:28</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -419,30 +425,30 @@ false If they are not equal </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__quaternion.html" title="Quaternion definition with.">t_quaternion</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utils__quaternion__bonus_8c_source.html#l00016">16</a> of file <a class="el" href="utils__quaternion__bonus_8c_source.html">utils_quaternion_bonus.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="structt__quaternion.html">t_quaternion</a>){</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        .scalar = q1.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> * q2.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        .vector.x = q1.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * q2.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a>,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        .vector.y = q1.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * q2.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a>,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        .vector.z = q1.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * q2.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    });</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="ttc" id="astructt__quaternion_html"><div class="ttname"><a href="structt__quaternion.html">t_quaternion</a></div><div class="ttdoc">Quaternion definition with.</div><div class="ttdef"><b>Definition:</b> <a href="utils__bonus_8h_source.html#l00074">utils_bonus.h:75</a></div></div>
-<div class="ttc" id="astructt__quaternion_html_a150bb6cc978607b068caf1cd22933e83"><div class="ttname"><a href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">t_quaternion::vector</a></div><div class="ttdeci">t_vec3 vector</div><div class="ttdef"><b>Definition:</b> <a href="utils__bonus_8h_source.html#l00077">utils_bonus.h:77</a></div></div>
-<div class="ttc" id="astructt__quaternion_html_abe41941d169ac3b9b693d85eee6be327"><div class="ttname"><a href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">t_quaternion::scalar</a></div><div class="ttdeci">float scalar</div><div class="ttdef"><b>Definition:</b> <a href="utils__bonus_8h_source.html#l00076">utils_bonus.h:76</a></div></div>
+<p class="definition">Definition at line <a class="el" href="utils__quaternion_8c_source.html#l00015">15</a> of file <a class="el" href="utils__quaternion_8c_source.html">utils_quaternion.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="structt__quaternion.html">t_quaternion</a>){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        .scalar = q1.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> * q2.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        .vector.x = q1.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * q2.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        .vector.y = q1.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * q2.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        .vector.z = q1.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        - q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * q2.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        + q1.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * q2.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    });</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="ttc" id="astructt__quaternion_html"><div class="ttname"><a href="structt__quaternion.html">t_quaternion</a></div><div class="ttdoc">Quaternion definition with.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00073">utils.h:74</a></div></div>
+<div class="ttc" id="astructt__quaternion_html_a150bb6cc978607b068caf1cd22933e83"><div class="ttname"><a href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">t_quaternion::vector</a></div><div class="ttdeci">t_vec3 vector</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00076">utils.h:76</a></div></div>
+<div class="ttc" id="astructt__quaternion_html_abe41941d169ac3b9b693d85eee6be327"><div class="ttname"><a href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">t_quaternion::scalar</a></div><div class="ttdeci">float scalar</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00075">utils.h:75</a></div></div>
 <div class="ttc" id="astructt__vec3_html_aa4f0d3eebc3c443f9be81bf48561a217"><div class="ttname"><a href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">t_vec3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00036">vec3.h:36</a></div></div>
 <div class="ttc" id="astructt__vec3_html_ad0da36b2558901e21e7a30f6c227a45e"><div class="ttname"><a href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">t_vec3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00035">vec3.h:35</a></div></div>
 <div class="ttc" id="astructt__vec3_html_af73583b1e980b0aa03f9884812e9fd4d"><div class="ttname"><a href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">t_vec3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00037">vec3.h:37</a></div></div>
@@ -498,34 +504,28 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utils__quaternion__bonus_8c_source.html#l00038">38</a> of file <a class="el" href="utils__quaternion__bonus_8c_source.html">utils_quaternion_bonus.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="structt__quaternion.html">t_quaternion</a>    p;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="structt__quaternion.html">t_quaternion</a>    q;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="structt__quaternion.html">t_quaternion</a>    q_inv;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="structt__quaternion.html">t_quaternion</a>    p_rotated;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    p.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> = 0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    p.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a> = vec;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    q.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> = cos(angle / 2);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    q.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a> = <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(axis, sin(angle / 2));</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    q_inv.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> = q.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    q_inv.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a> = <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(q.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>, -1);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    p_rotated = <a class="code" href="utils__quaternion__bonus_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3">ft_quaternion_mult</a>(<a class="code" href="utils__quaternion__bonus_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3">ft_quaternion_mult</a>(q, p), q_inv);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> (p_rotated.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="ttc" id="autils__quaternion__bonus_8c_html_a15b6fa9c749e827cd1d52bf1c8e0a8f3"><div class="ttname"><a href="utils__quaternion__bonus_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3">ft_quaternion_mult</a></div><div class="ttdeci">t_quaternion ft_quaternion_mult(t_quaternion q1, t_quaternion q2)</div><div class="ttdoc">Performs quaternion multiplication.</div><div class="ttdef"><b>Definition:</b> <a href="utils__quaternion__bonus_8c_source.html#l00016">utils_quaternion_bonus.c:16</a></div></div>
+<p class="definition">Definition at line <a class="el" href="utils__quaternion_8c_source.html#l00037">37</a> of file <a class="el" href="utils__quaternion_8c_source.html">utils_quaternion.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="structt__quaternion.html">t_quaternion</a>    p;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="structt__quaternion.html">t_quaternion</a>    q;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="structt__quaternion.html">t_quaternion</a>    q_inv;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="structt__quaternion.html">t_quaternion</a>    p_rotated;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    p.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    p.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a> = vec;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    q.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> = cos(angle / 2);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    q.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a> = <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(axis, sin(angle / 2));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    q_inv.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a> = q.<a class="code" href="structt__quaternion.html#abe41941d169ac3b9b693d85eee6be327">scalar</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    q_inv.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a> = <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(q.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>, -1);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    p_rotated = <a class="code" href="utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3">ft_quaternion_mult</a>(<a class="code" href="utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3">ft_quaternion_mult</a>(q, p), q_inv);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> (p_rotated.<a class="code" href="structt__quaternion.html#a150bb6cc978607b068caf1cd22933e83">vector</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="ttc" id="autils__quaternion_8c_html_a15b6fa9c749e827cd1d52bf1c8e0a8f3"><div class="ttname"><a href="utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3">ft_quaternion_mult</a></div><div class="ttdeci">t_quaternion ft_quaternion_mult(t_quaternion q1, t_quaternion q2)</div><div class="ttdoc">Performs quaternion multiplication.</div><div class="ttdef"><b>Definition:</b> <a href="utils__quaternion_8c_source.html#l00015">utils_quaternion.c:15</a></div></div>
 <div class="ttc" id="avec3_8h_html_ac80a1c20941c96a8fafad255dac59092"><div class="ttname"><a href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a></div><div class="ttdeci">t_vec3 ft_vec3_scale(t_vec3 v, float a)</div><div class="ttdoc">Scale a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00033">vec3_arithmetics.c:33</a></div></div>
 </div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="utils__bonus_8h_a4b67c731c02a7ba35f27473295bfb753_cgraph.svg" width="338" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="utils__bonus_8h_a4b67c731c02a7ba35f27473295bfb753_icgraph.svg" width="100%" height="462"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="utils__bonus_8h_a4b67c731c02a7ba35f27473295bfb753_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -560,7 +560,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> (radians * <a class="code" href="utils_8h.html#a536e48026a77f8365359a33a3e0eb726">DEG</a>);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="ttc" id="autils_8h_html_a536e48026a77f8365359a33a3e0eb726"><div class="ttname"><a href="utils_8h.html#a536e48026a77f8365359a33a3e0eb726">DEG</a></div><div class="ttdeci">#define DEG</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00026">utils.h:26</a></div></div>
+<div class="ttc" id="autils_8h_html_a536e48026a77f8365359a33a3e0eb726"><div class="ttname"><a href="utils_8h.html#a536e48026a77f8365359a33a3e0eb726">DEG</a></div><div class="ttdeci">#define DEG</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00027">utils.h:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -696,11 +696,11 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    eq-&gt;<a class="code" href="structt__equation.html#aac1777fc7cfc528c03b3e8c38f14e2b9">d2</a> = (-eq-&gt;<a class="code" href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">b</a> + sqrt(discriminant)) / (2.0 * eq-&gt;<a class="code" href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> (discriminant);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="ttc" id="astructt__equation_html_a3967641da3863c1f79e94be997341402"><div class="ttname"><a href="structt__equation.html#a3967641da3863c1f79e94be997341402">t_equation::d1</a></div><div class="ttdeci">float d1</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00062">utils.h:62</a></div></div>
-<div class="ttc" id="astructt__equation_html_a4aec1a5be9d9a4a394a2e49e9744286e"><div class="ttname"><a href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">t_equation::a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00059">utils.h:59</a></div></div>
-<div class="ttc" id="astructt__equation_html_a83fc1af92e29717b4513d121b0c72c7d"><div class="ttname"><a href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">t_equation::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00060">utils.h:60</a></div></div>
-<div class="ttc" id="astructt__equation_html_aac1777fc7cfc528c03b3e8c38f14e2b9"><div class="ttname"><a href="structt__equation.html#aac1777fc7cfc528c03b3e8c38f14e2b9">t_equation::d2</a></div><div class="ttdeci">float d2</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00063">utils.h:63</a></div></div>
-<div class="ttc" id="astructt__equation_html_ae78103ab33f03590e84ff7bc735629d7"><div class="ttname"><a href="structt__equation.html#ae78103ab33f03590e84ff7bc735629d7">t_equation::c</a></div><div class="ttdeci">float c</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00061">utils.h:61</a></div></div>
+<div class="ttc" id="astructt__equation_html_a3967641da3863c1f79e94be997341402"><div class="ttname"><a href="structt__equation.html#a3967641da3863c1f79e94be997341402">t_equation::d1</a></div><div class="ttdeci">float d1</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00063">utils.h:63</a></div></div>
+<div class="ttc" id="astructt__equation_html_a4aec1a5be9d9a4a394a2e49e9744286e"><div class="ttname"><a href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">t_equation::a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00060">utils.h:60</a></div></div>
+<div class="ttc" id="astructt__equation_html_a83fc1af92e29717b4513d121b0c72c7d"><div class="ttname"><a href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">t_equation::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00061">utils.h:61</a></div></div>
+<div class="ttc" id="astructt__equation_html_aac1777fc7cfc528c03b3e8c38f14e2b9"><div class="ttname"><a href="structt__equation.html#aac1777fc7cfc528c03b3e8c38f14e2b9">t_equation::d2</a></div><div class="ttdeci">float d2</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00064">utils.h:64</a></div></div>
+<div class="ttc" id="astructt__equation_html_ae78103ab33f03590e84ff7bc735629d7"><div class="ttname"><a href="structt__equation.html#ae78103ab33f03590e84ff7bc735629d7">t_equation::c</a></div><div class="ttdeci">float c</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00062">utils.h:62</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -746,6 +746,144 @@ false Value is not surrounded by the interval </dd></dl>
 <div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> (interval.<a class="code" href="structt__interval.html#ad2e88d75f808e6d4e78d48bceb10c336">min</a> &lt; x &amp;&amp; interval.<a class="code" href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">max</a> &gt; x);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a211f9d6535bb54bea2299ee5ea8a54a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211f9d6535bb54bea2299ee5ea8a54a0">&#9670;&nbsp;</a></span>ft_vec3_rotate_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_vec3_rotate_x </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>roll</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotates a 3D vector around the x-axis. </p>
+<p>Constructs a quaternion and multiplies it with the vector. The vector gets normalized after the rotation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>3D vector. </td></tr>
+    <tr><td class="paramname">roll</td><td>Rotation angle in degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> Rotated, normalized vector. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="utils__quaternion_8c_source.html#l00054">54</a> of file <a class="el" href="utils__quaternion_8c_source.html">utils_quaternion.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <a class="code" href="structt__vec3.html">t_vec3</a>    x_axis = (<a class="code" href="structt__vec3.html">t_vec3</a>){1, 0, 0};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="utils__quaternion_8c.html#a4b67c731c02a7ba35f27473295bfb753">ft_quaternion_rot</a>(vec, x_axis, <a class="code" href="utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9">ft_degree_to_radian</a>(roll)));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="ttc" id="astructt__vec3_html"><div class="ttname"><a href="structt__vec3.html">t_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00033">vec3.h:34</a></div></div>
+<div class="ttc" id="autils_8h_html_a7d1328722f9dc6edd652f7c732856ae9"><div class="ttname"><a href="utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9">ft_degree_to_radian</a></div><div class="ttdeci">float ft_degree_to_radian(float degrees)</div><div class="ttdoc">Transforms degrees into radian.</div><div class="ttdef"><b>Definition:</b> <a href="utils__math_8c_source.html#l00019">utils_math.c:19</a></div></div>
+<div class="ttc" id="autils__quaternion_8c_html_a4b67c731c02a7ba35f27473295bfb753"><div class="ttname"><a href="utils__quaternion_8c.html#a4b67c731c02a7ba35f27473295bfb753">ft_quaternion_rot</a></div><div class="ttdeci">t_vec3 ft_quaternion_rot(t_vec3 vec, t_vec3 axis, float angle)</div><div class="ttdoc">Performs a rotation of a given vector around an axis by a given angle.</div><div class="ttdef"><b>Definition:</b> <a href="utils__quaternion_8c_source.html#l00037">utils_quaternion.c:37</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac8a4ca6fb927e3746e7129f8eb04aa46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8a4ca6fb927e3746e7129f8eb04aa46">&#9670;&nbsp;</a></span>ft_vec3_rotate_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_vec3_rotate_y </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pitch</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotates a 3D vector around the y-axis. </p>
+<p>Constructs a quaternion and multiplies it with the vector. The vector gets normalized after the rotation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>3D vector. </td></tr>
+    <tr><td class="paramname">pitch</td><td>Rotation angle in degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> Rotated, normalized vector. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="utils__quaternion_8c_source.html#l00061">61</a> of file <a class="el" href="utils__quaternion_8c_source.html">utils_quaternion.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">const</span> <a class="code" href="structt__vec3.html">t_vec3</a>    y_axis = (<a class="code" href="structt__vec3.html">t_vec3</a>){0, 1, 0};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="utils__quaternion_8c.html#a4b67c731c02a7ba35f27473295bfb753">ft_quaternion_rot</a>(vec, y_axis, <a class="code" href="utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9">ft_degree_to_radian</a>(pitch)));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad39f8d1d44f9bce6c5025b87a09f7dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad39f8d1d44f9bce6c5025b87a09f7dfc">&#9670;&nbsp;</a></span>ft_vec3_rotate_z()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_vec3_rotate_z </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>yaw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotates a 3D vector around the z-axis. </p>
+<p>Constructs a quaternion and multiplies it with the vector. The vector gets normalized after the rotation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>3D vector. </td></tr>
+    <tr><td class="paramname">yaw</td><td>Rotation angle in degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> Rotated, normalized vector. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="utils__quaternion_8c_source.html#l00068">68</a> of file <a class="el" href="utils__quaternion_8c_source.html">utils_quaternion.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">const</span> <a class="code" href="structt__vec3.html">t_vec3</a>    z_axis = (<a class="code" href="structt__vec3.html">t_vec3</a>){0, 0, 1};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="utils__quaternion_8c.html#a4b67c731c02a7ba35f27473295bfb753">ft_quaternion_rot</a>(vec, z_axis, <a class="code" href="utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9">ft_degree_to_radian</a>(yaw)));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -1,52 +1,52 @@
 <map id="ft_vec3_add" name="ft_vec3_add">
-<area shape="rect" id="node1" title="Add two vectors." alt="" coords="1377,448,1477,475"/>
-<area shape="rect" id="node2" href="$camera_8h.html#a525b3073d8f263afa7d81f70fa4b491d" title="Calculates all pixel positions in pixel grid." alt="" coords="1162,52,1318,79"/>
-<area shape="rect" id="node8" href="$render__bonus_8h.html#ab23f44f179d8be5ae75128694b1b0133" title="Like ft_cam_calc_pix_pos(), but threaded." alt="" coords="1162,154,1318,195"/>
-<area shape="rect" id="node13" href="$camera_8h.html#a96132dcb4eac578fbee24bbf591fe090" title="Calculates the pixel grid parameters of the viewport." alt="" coords="1155,103,1325,129"/>
-<area shape="rect" id="node14" href="$camera_8h.html#a86320a08df936f0fb2174d3fb4dbd0d4" title="Moves the camera along its direction vector." alt="" coords="1157,220,1323,247"/>
-<area shape="rect" id="node16" href="$camera_8h.html#a06b571f6e8edf474da02fa605c074c12" title="Moves the camera along its right vector." alt="" coords="1167,271,1313,297"/>
-<area shape="rect" id="node17" href="$camera_8h.html#a9cfc7dcbb8ce4312ff22dcc43f3c4019" title="Moves the camera along the world up vector." alt="" coords="1173,321,1307,348"/>
-<area shape="rect" id="node18" href="$hit__manager__bonus_8h.html#ac1c274bfe31accc081355bdd98133056" title="Check if the ray actually hit the cone wall." alt="" coords="946,663,1078,689"/>
-<area shape="rect" id="node23" href="$hit__manager__bonus_8h.html#a9874994177d1382ce3e76988ca7cee3b" title="Calculates the normal on the point of intersection of the cone." alt="" coords="1187,727,1293,753"/>
-<area shape="rect" id="node25" href="$hit__manager_8h.html#a7071fcc84ae72a9f04ce375b87d46c77" title="Checks if the ray actually hit the cylinder wall." alt="" coords="946,1017,1078,1044"/>
-<area shape="rect" id="node27" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="1171,524,1309,551"/>
-<area shape="rect" id="node28" href="$parse__bonus_8h.html#a0ee220aca489e16d423c754b9d88e2dd" title="Parse cone line." alt="" coords="1161,473,1319,500"/>
-<area shape="rect" id="node32" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="1173,372,1307,399"/>
-<area shape="rect" id="node35" href="$parse__bonus_8h.html#a30041bb98ced6caf1debb5468bfb6ad4" title="Parse cylinder line." alt="" coords="1151,423,1329,449"/>
-<area shape="rect" id="node36" href="$render__bonus_8h.html#a8706f722b73ae2ec7ec56e469ecbac02" title="Generate a random vector that is confined within the square surrounding a pixel. The vector lies in t..." alt="" coords="1178,575,1302,601"/>
-<area shape="rect" id="node37" href="$render__bonus_8h.html#af5fa16c9ea3d6e6884604009e31c83de" title="Constructs a random sample ray for anti&#45;aliasing." alt="" coords="949,587,1075,613"/>
-<area shape="rect" id="node41" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="1190,815,1290,841"/>
-<area shape="rect" id="node3" href="$camera_8h.html#a283b142012bbcea27c39f49e270d8780" title="Initializes camera parameters." alt="" coords="965,56,1059,83"/>
-<area shape="rect" id="node6" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="955,107,1069,133"/>
-<area shape="rect" id="node7" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="921,5,1103,32"/>
-<area shape="rect" id="node4" href="$render_8h.html#a5ffbfa92a6da595a38ba795014ee593c" title="Initializes the render struct." alt="" coords="515,85,623,112"/>
-<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="369,117,423,144"/>
-<area shape="rect" id="node9" href="$render__keyhook__camera__bonus_8c.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="955,208,1069,235"/>
-<area shape="rect" id="node10" href="$render__mouse__bonus_8c.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="921,157,1103,184"/>
-<area shape="rect" id="node11" href="$render__mouse__bonus_8c.html#a789550edaaab12e30e0d8c779abdc1b8" title="Handles mouse movement." alt="" coords="701,155,867,181"/>
-<area shape="rect" id="node12" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="493,148,645,175"/>
-<area shape="rect" id="node15" href="$render_8h.html#ab974018238f1a6e6a86b44e139f5d672" title="Moves the camera with a keypress." alt="" coords="926,271,1098,297"/>
-<area shape="rect" id="node19" href="$hit__manager__bonus_8h.html#a049d2a1135caa57d1d9ed8845f229620" title="Determines whether the potential hits are accurate." alt="" coords="714,663,854,689"/>
-<area shape="rect" id="node20" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="349,739,443,765"/>
-<area shape="rect" id="node21" href="$hit__bonus_8c.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="189,769,301,796"/>
-<area shape="rect" id="node22" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="5,801,141,828"/>
-<area shape="rect" id="node24" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="939,713,1085,740"/>
-<area shape="rect" id="node26" href="$hit__manager_8h.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="714,992,854,1019"/>
-<area shape="rect" id="node29" href="$parse__bonus_8c.html#a65db4c46c2af2d9b570687b3a1458f15" title=" " alt="" coords="929,423,1095,449"/>
-<area shape="rect" id="node30" href="$parse__bonus_8h.html#a4ce5cad477407308f911966a9446f560" title="Dispatcher for different parsing functions." alt="" coords="705,423,863,449"/>
-<area shape="rect" id="node31" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="515,397,622,424"/>
-<area shape="rect" id="node33" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="953,372,1071,399"/>
-<area shape="rect" id="node34" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="728,372,840,399"/>
-<area shape="rect" id="node38" href="$render__bonus_8h.html#afef92ac33f530ff1e1ca1049ffa14d23" title="Raytraces the scene and adds it to the sample buffer." alt="" coords="695,600,873,627"/>
-<area shape="rect" id="node40" href="$render__bonus_8h.html#a6f833a234cbdbc69ce5458c79d1242a1" title="Like ft_add_raytrace_sample(), but threaded." alt="" coords="695,534,873,575"/>
-<area shape="rect" id="node39" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="491,571,647,597"/>
-<area shape="rect" id="node42" href="$hit__manager__bonus_8h.html#a5daa3987cf663970a55423c4d47d2d64" title="Check if the ray actually hit the cone cap." alt="" coords="948,764,1076,791"/>
-<area shape="rect" id="node43" href="$hit__manager_8h.html#a98c590ac9074c10dc7e18cfd033c0b9b" title="Checks if the ray actually hit the cylinder cap." alt="" coords="948,967,1076,993"/>
-<area shape="rect" id="node44" href="$hit__manager_8h.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="939,916,1085,943"/>
-<area shape="rect" id="node45" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="963,815,1061,841"/>
-<area shape="rect" id="node50" href="$hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" title="Calculates if a sphere was hit by a ray." alt="" coords="959,865,1065,892"/>
-<area shape="rect" id="node46" href="$hit__manager__bonus_8h.html#aee5824df7f0e0c2698306f49f9a1c790" title="Calculates potential hit of cone cap." alt="" coords="731,815,837,841"/>
-<area shape="rect" id="node48" href="$hit__manager_8h.html#af2540784b9e01fbdfeacb544ea2c169a" title="Calculates the hit point of the ray with the cylinder cap." alt="" coords="731,764,837,791"/>
-<area shape="rect" id="node49" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="728,865,840,892"/>
-<area shape="rect" id="node47" href="$hit__manager__bonus_8h.html#a9752309af1756a6360c6459ed6747f83" title="Calculates potential hits of a cone." alt="" coords="496,776,641,803"/>
+<area shape="rect" id="node1" title="Add two vectors." alt="" coords="1196,461,1296,488"/>
+<area shape="rect" id="node2" href="$camera_8h.html#a525b3073d8f263afa7d81f70fa4b491d" title="Calculates all pixel positions in pixel grid." alt="" coords="753,5,909,32"/>
+<area shape="rect" id="node8" href="$render__bonus_8h.html#ab23f44f179d8be5ae75128694b1b0133" title="Like ft_cam_calc_pix_pos(), but threaded." alt="" coords="981,142,1137,183"/>
+<area shape="rect" id="node12" href="$camera_8h.html#a96132dcb4eac578fbee24bbf591fe090" title="Calculates the pixel grid parameters of the viewport." alt="" coords="746,56,915,83"/>
+<area shape="rect" id="node13" href="$camera_8h.html#a86320a08df936f0fb2174d3fb4dbd0d4" title="Moves the camera along its direction vector." alt="" coords="975,208,1142,235"/>
+<area shape="rect" id="node15" href="$camera_8h.html#a06b571f6e8edf474da02fa605c074c12" title="Moves the camera along its right vector." alt="" coords="985,259,1132,285"/>
+<area shape="rect" id="node16" href="$camera_8h.html#a9cfc7dcbb8ce4312ff22dcc43f3c4019" title="Moves the camera along the world up vector." alt="" coords="992,309,1125,336"/>
+<area shape="rect" id="node17" href="$hit__manager__bonus_8h.html#ac1c274bfe31accc081355bdd98133056" title="Check if the ray actually hit the cone wall." alt="" coords="765,259,897,285"/>
+<area shape="rect" id="node21" href="$hit__manager__bonus_8h.html#a9874994177d1382ce3e76988ca7cee3b" title="Calculates the normal on the point of intersection of the cone." alt="" coords="1005,411,1112,437"/>
+<area shape="rect" id="node23" href="$hit__manager_8h.html#a7071fcc84ae72a9f04ce375b87d46c77" title="Checks if the ray actually hit the cylinder wall." alt="" coords="765,613,897,640"/>
+<area shape="rect" id="node25" href="$render__bonus_8h.html#a81fa5494e17be06ab12b226ff9dd7c2a" title="Manipulates the active cone." alt="" coords="1000,563,1117,589"/>
+<area shape="rect" id="node27" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="989,613,1128,640"/>
+<area shape="rect" id="node28" href="$parse__bonus_8h.html#a0ee220aca489e16d423c754b9d88e2dd" title="Parse cone line." alt="" coords="979,664,1138,691"/>
+<area shape="rect" id="node32" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="992,765,1125,792"/>
+<area shape="rect" id="node35" href="$parse__bonus_8h.html#a30041bb98ced6caf1debb5468bfb6ad4" title="Parse cylinder line." alt="" coords="969,715,1148,741"/>
+<area shape="rect" id="node36" href="$render__bonus_8h.html#a8706f722b73ae2ec7ec56e469ecbac02" title="Generate a random vector that is confined within the square surrounding a pixel. The vector lies in t..." alt="" coords="997,867,1121,893"/>
+<area shape="rect" id="node37" href="$render__bonus_8h.html#af5fa16c9ea3d6e6884604009e31c83de" title="Constructs a random sample ray for anti&#45;aliasing." alt="" coords="768,841,893,868"/>
+<area shape="rect" id="node41" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="1009,461,1109,488"/>
+<area shape="rect" id="node3" href="$camera_8h.html#a283b142012bbcea27c39f49e270d8780" title="Initializes camera parameters." alt="" coords="554,5,649,32"/>
+<area shape="rect" id="node6" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="544,107,659,133"/>
+<area shape="rect" id="node7" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="511,56,692,83"/>
+<area shape="rect" id="node4" href="$render_8h.html#a5ffbfa92a6da595a38ba795014ee593c" title="Initializes the render struct." alt="" coords="331,31,439,57"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="185,81,239,108"/>
+<area shape="rect" id="node9" href="$render__mouse__bonus_8c.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="740,157,921,184"/>
+<area shape="rect" id="node10" href="$render__mouse__bonus_8c.html#a789550edaaab12e30e0d8c779abdc1b8" title="Handles mouse movement." alt="" coords="519,157,684,184"/>
+<area shape="rect" id="node11" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="309,132,461,159"/>
+<area shape="rect" id="node14" href="$render_8h.html#ab974018238f1a6e6a86b44e139f5d672" title="Moves the camera with a keypress." alt="" coords="745,208,917,235"/>
+<area shape="rect" id="node18" href="$hit__manager__bonus_8h.html#a049d2a1135caa57d1d9ed8845f229620" title="Determines whether the potential hits are accurate." alt="" coords="531,385,671,412"/>
+<area shape="rect" id="node19" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="165,385,259,412"/>
+<area shape="rect" id="node20" href="$hit__bonus_8c.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="5,385,117,412"/>
+<area shape="rect" id="node22" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="758,309,903,336"/>
+<area shape="rect" id="node24" href="$hit__manager_8h.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="531,613,671,640"/>
+<area shape="rect" id="node26" href="$render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="763,664,899,691"/>
+<area shape="rect" id="node29" href="$parse__bonus_8c.html#a65db4c46c2af2d9b570687b3a1458f15" title=" " alt="" coords="748,715,913,741"/>
+<area shape="rect" id="node30" href="$parse__bonus_8h.html#a4ce5cad477407308f911966a9446f560" title="Dispatcher for different parsing functions." alt="" coords="522,715,681,741"/>
+<area shape="rect" id="node31" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="331,757,438,784"/>
+<area shape="rect" id="node33" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="771,765,890,792"/>
+<area shape="rect" id="node34" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="545,765,657,792"/>
+<area shape="rect" id="node38" href="$render__bonus_8h.html#afef92ac33f530ff1e1ca1049ffa14d23" title="Raytraces the scene and adds it to the sample buffer." alt="" coords="512,828,691,855"/>
+<area shape="rect" id="node40" href="$render__bonus_8h.html#a6f833a234cbdbc69ce5458c79d1242a1" title="Like ft_add_raytrace_sample(), but threaded." alt="" coords="512,879,691,921"/>
+<area shape="rect" id="node39" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="307,837,463,864"/>
+<area shape="rect" id="node42" href="$hit__manager__bonus_8h.html#a5daa3987cf663970a55423c4d47d2d64" title="Check if the ray actually hit the cone cap." alt="" coords="767,411,895,437"/>
+<area shape="rect" id="node43" href="$hit__manager_8h.html#a98c590ac9074c10dc7e18cfd033c0b9b" title="Checks if the ray actually hit the cylinder cap." alt="" coords="767,563,895,589"/>
+<area shape="rect" id="node44" href="$hit__manager_8h.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="758,360,903,387"/>
+<area shape="rect" id="node45" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="781,512,880,539"/>
+<area shape="rect" id="node50" href="$hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" title="Calculates if a sphere was hit by a ray." alt="" coords="777,461,884,488"/>
+<area shape="rect" id="node46" href="$hit__manager__bonus_8h.html#aee5824df7f0e0c2698306f49f9a1c790" title="Calculates potential hit of cone cap." alt="" coords="548,563,655,589"/>
+<area shape="rect" id="node48" href="$hit__manager_8h.html#af2540784b9e01fbdfeacb544ea2c169a" title="Calculates the hit point of the ray with the cylinder cap." alt="" coords="548,512,655,539"/>
+<area shape="rect" id="node49" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="545,461,657,488"/>
+<area shape="rect" id="node47" href="$hit__manager__bonus_8h.html#a9752309af1756a6360c6459ed6747f83" title="Calculates potential hits of a cone." alt="" coords="312,487,457,513"/>
 </map>

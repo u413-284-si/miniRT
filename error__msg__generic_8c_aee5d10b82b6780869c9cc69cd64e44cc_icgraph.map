@@ -20,7 +20,7 @@
 <area shape="rect" id="node7" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="308,192,468,219"/>
 <area shape="rect" id="node9" href="$threads__bonus_8h.html#a2ebd69dd0aea05d27136b23dfb779788" title="Creates NUM_THREADS threads and joins them." alt="" coords="959,738,1081,764"/>
 <area shape="rect" id="node10" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="742,738,898,764"/>
-<area shape="rect" id="node11" href="$render__keyhook__camera__bonus_8c.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="763,687,877,714"/>
+<area shape="rect" id="node11" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="763,687,877,714"/>
 <area shape="rect" id="node12" href="$render__mouse__bonus_8c.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="729,788,911,815"/>
 <area shape="rect" id="node15" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="754,839,886,866"/>
 <area shape="rect" id="node13" href="$render__mouse__bonus_8c.html#a789550edaaab12e30e0d8c779abdc1b8" title="Handles mouse movement." alt="" coords="516,756,681,783"/>

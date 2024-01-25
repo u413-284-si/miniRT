@@ -234,7 +234,7 @@ var sectionId = 'dynsection-7';
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="utils__bonus_8h.html#a4b67c731c02a7ba35f27473295bfb753" target="_top" xlink:title="Performs a rotation of a given vector around an axis by a given angle.">
+<g id="a_node10"><a xlink:href="utils_8h.html#a4b67c731c02a7ba35f27473295bfb753" target="_top" xlink:title="Performs a rotation of a given vector around an axis by a given angle.">
 <polygon fill="none" stroke="black" points="291,-76.5 291,-95.5 391,-95.5 391,-76.5 291,-76.5"/>
 <text text-anchor="middle" x="341" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_quaternion_rot</text>
 </a>
@@ -270,7 +270,7 @@ var sectionId = 'dynsection-7';
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:href="utils__quaternion__bonus_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" target="_top" xlink:title="Performs quaternion multiplication.">
+<g id="a_node11"><a xlink:href="utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" target="_top" xlink:title="Performs quaternion multiplication.">
 <polygon fill="none" stroke="black" points="427,-57.5 427,-76.5 536,-76.5 536,-57.5 427,-57.5"/>
 <text text-anchor="middle" x="481.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_quaternion_mult</text>
 </a>

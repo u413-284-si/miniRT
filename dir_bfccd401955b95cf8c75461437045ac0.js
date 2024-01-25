@@ -20,8 +20,6 @@ var dir_bfccd401955b95cf8c75461437045ac0 =
     [ "init.h", "init_8h.html", "init_8h" ],
     [ "lighting.h", "lighting_8h.html", "lighting_8h" ],
     [ "lighting_bonus.h", "lighting__bonus_8h.html", "lighting__bonus_8h" ],
-    [ "mat4.h", "mat4_8h.html", "mat4_8h" ],
-    [ "mat4_vec3.h", "mat4__vec3_8h.html", "mat4__vec3_8h" ],
     [ "menu_put.h", "menu__put_8h.html", "menu__put_8h" ],
     [ "menu_put_bonus.h", "menu__put__bonus_8h.html", "menu__put__bonus_8h" ],
     [ "miniRT.h", "mini_r_t_8h.html", null ],

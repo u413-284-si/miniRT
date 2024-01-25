@@ -218,7 +218,7 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="utils__bonus_8h.html#a4b67c731c02a7ba35f27473295bfb753" target="_top" xlink:title="Performs a rotation of a given vector around an axis by a given angle.">
+<g id="a_node12"><a xlink:href="utils_8h.html#a4b67c731c02a7ba35f27473295bfb753" target="_top" xlink:title="Performs a rotation of a given vector around an axis by a given angle.">
 <polygon fill="none" stroke="black" points="291,-114.5 291,-133.5 391,-133.5 391,-114.5 291,-114.5"/>
 <text text-anchor="middle" x="341" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_quaternion_rot</text>
 </a>
@@ -254,7 +254,7 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="utils__quaternion__bonus_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" target="_top" xlink:title="Performs quaternion multiplication.">
+<g id="a_node13"><a xlink:href="utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" target="_top" xlink:title="Performs quaternion multiplication.">
 <polygon fill="none" stroke="black" points="427,-114.5 427,-133.5 536,-133.5 536,-114.5 427,-114.5"/>
 <text text-anchor="middle" x="481.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_quaternion_mult</text>
 </a>

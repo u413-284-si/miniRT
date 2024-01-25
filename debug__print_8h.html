@@ -96,7 +96,6 @@ $(document).ready(function(){initNavTree('debug__print_8h.html',''); initResizab
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="vec3_8h_source.html">vec3.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="mat4_8h_source.html">mat4.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="camera_8h_source.html">camera.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="colour__bonus_8h_source.html">colour_bonus.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="entities__bonus_8h_source.html">entities_bonus.h</a>&quot;</code><br />
@@ -119,8 +118,6 @@ This graph shows which files directly or indirectly include this file:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a99a90f3ee5487824a003c2196bf2f56c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__print_8h.html#a99a90f3ee5487824a003c2196bf2f56c">ft_print_vec3</a> (const <a class="el" href="structt__vec3.html">t_vec3</a> vec)</td></tr>
 <tr class="separator:a99a90f3ee5487824a003c2196bf2f56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89022d200140ebc52b4f32036ab34fd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__print_8h.html#a89022d200140ebc52b4f32036ab34fd2">ft_print_mat4</a> (const <a class="el" href="structt__mat4.html">t_mat4</a> mat)</td></tr>
-<tr class="separator:a89022d200140ebc52b4f32036ab34fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bb33051bca60d0890928ecd90b5ef29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__print_8h.html#a8bb33051bca60d0890928ecd90b5ef29">ft_print_colour</a> (const <a class="el" href="structt__colour.html">t_colour</a> colour)</td></tr>
 <tr class="separator:a8bb33051bca60d0890928ecd90b5ef29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a108d195ad2cb3a1e983e5e2e1cab34c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2">ft_print_cam</a> (const <a class="el" href="structt__cam.html">t_cam</a> cam)</td></tr>
@@ -207,10 +204,10 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="debug__print__struct_8c_source.html#l00039">39</a> of file <a class="el" href="debug__print__struct_8c_source.html">debug_print_struct.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    printf(<span class="stringliteral">&quot;r: %.6f, g: %.6f, b: %.6f\n&quot;</span>, col.r, col.g, col.b);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="debug__print__struct_8c_source.html#l00020">20</a> of file <a class="el" href="debug__print__struct_8c_source.html">debug_print_struct.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    printf(<span class="stringliteral">&quot;r: %.6f, g: %.6f, b: %.6f\n&quot;</span>, col.r, col.g, col.b);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -256,7 +253,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    printf(<span class="stringliteral">&quot;Colour: &quot;</span>);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="debug__print_8h.html#a8bb33051bca60d0890928ecd90b5ef29">ft_print_colour</a>(cy.<a class="code" href="structt__cylinder.html#ade3aae23d19802dca4a29ac9065742a9">colour</a>);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="ttc" id="adebug__print_8h_html_a8bb33051bca60d0890928ecd90b5ef29"><div class="ttname"><a href="debug__print_8h.html#a8bb33051bca60d0890928ecd90b5ef29">ft_print_colour</a></div><div class="ttdeci">void ft_print_colour(const t_colour colour)</div><div class="ttdoc">Prints variables of a colour.</div><div class="ttdef"><b>Definition:</b> <a href="debug__print__struct_8c_source.html#l00039">debug_print_struct.c:39</a></div></div>
+<div class="ttc" id="adebug__print_8h_html_a8bb33051bca60d0890928ecd90b5ef29"><div class="ttname"><a href="debug__print_8h.html#a8bb33051bca60d0890928ecd90b5ef29">ft_print_colour</a></div><div class="ttdeci">void ft_print_colour(const t_colour colour)</div><div class="ttdoc">Prints variables of a colour.</div><div class="ttdef"><b>Definition:</b> <a href="debug__print__struct_8c_source.html#l00020">debug_print_struct.c:20</a></div></div>
 <div class="ttc" id="astructt__cylinder_html_a0f188ccfa73fd29ad62023c50c7d2a5f"><div class="ttname"><a href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">t_cylinder::centre</a></div><div class="ttdeci">t_vec3 centre</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00086">entities.h:86</a></div></div>
 <div class="ttc" id="astructt__cylinder_html_a4788d82c901b9367dd5c0daff8a7616b"><div class="ttname"><a href="structt__cylinder.html#a4788d82c901b9367dd5c0daff8a7616b">t_cylinder::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00088">entities.h:88</a></div></div>
 <div class="ttc" id="astructt__cylinder_html_a7f4ed5c02961988cdae75eb415b617a6"><div class="ttname"><a href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">t_cylinder::axis</a></div><div class="ttdeci">t_vec3 axis</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00087">entities.h:87</a></div></div>
@@ -331,52 +328,6 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 
-</div>
-</div>
-<a id="a89022d200140ebc52b4f32036ab34fd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89022d200140ebc52b4f32036ab34fd2">&#9670;&nbsp;</a></span>ft_print_mat4()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ft_print_mat4 </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structt__mat4.html">t_mat4</a>&#160;</td>
-          <td class="paramname"><em>mat</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Prints variables of a mat4. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mat</td><td>Mat4 to print. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="debug__print__struct_8c_source.html#l00020">20</a> of file <a class="el" href="debug__print__struct_8c_source.html">debug_print_struct.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> col;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> row;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    col = 0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">while</span> (col &lt; 4)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        row = 0;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">while</span> (row &lt; 4)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            printf(<span class="stringliteral">&quot;%.2f\t&quot;</span>, mat.<a class="code" href="structt__mat4.html#ad447502f46f46373269e15636e049f7f">mat</a>[row][col]);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            row++;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        col++;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="ttc" id="astructt__mat4_html_ad447502f46f46373269e15636e049f7f"><div class="ttname"><a href="structt__mat4.html#ad447502f46f46373269e15636e049f7f">t_mat4::mat</a></div><div class="ttdeci">float mat[4][4]</div><div class="ttdef"><b>Definition:</b> <a href="mat4_8h_source.html#l00035">mat4.h:35</a></div></div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="ab5b1469cabf3343b24c4393e236d4533"></a>

@@ -54,6 +54,7 @@ var render__bonus_8h =
     [ "ft_keyhook_rot_vec", "render__bonus_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed", null ],
     [ "ft_manip_ambient", "render__bonus_8h.html#a597d35b7bd3aa66272e3c2ff3a1e8f78", null ],
     [ "ft_manip_cam", "render__bonus_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33", null ],
+    [ "ft_manip_cone", "render__bonus_8h.html#a81fa5494e17be06ab12b226ff9dd7c2a", null ],
     [ "ft_manip_cylinder", "render__bonus_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9", null ],
     [ "ft_manip_hittable", "render__bonus_8h.html#a58cfb6d04ac9120cc228cbc5411b2005", null ],
     [ "ft_manip_light", "render__bonus_8h.html#acff7acf5eb6145177496e67b32a74fba", null ],

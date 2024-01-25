@@ -27,9 +27,9 @@
 <area shape="rect" id="node22" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="899,157,1010,184"/>
 <area shape="rect" id="node21" href="$utils_8h.html#a518be72ffbfd90cedf995e72dde0aff6" title="Checks if two floats are (almost) equal." alt="" coords="1071,56,1213,83"/>
 <area shape="rect" id="node23" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="1093,157,1191,184"/>
-<area shape="rect" id="node25" href="$utils__bonus_8h.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="888,107,1021,133"/>
+<area shape="rect" id="node25" href="$utils_8h.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="888,107,1021,133"/>
 <area shape="rect" id="node27" href="$vec3_8h.html#a19bc1d17592698776e89a5093110320c" title="Calculate the cross product of two vectors." alt="" coords="899,5,1010,32"/>
-<area shape="rect" id="node26" href="$utils__quaternion__bonus_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" title="Performs quaternion multiplication." alt="" coords="1069,107,1215,133"/>
+<area shape="rect" id="node26" href="$utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" title="Performs quaternion multiplication." alt="" coords="1069,107,1215,133"/>
 <area shape="rect" id="node31" href="$hit__cylinder_8c.html#afb7b50ad2f9161c61fc1065975ec7cbf" title="Calculates all four potential hits of a cylinder." alt="" coords="694,855,839,881"/>
 <area shape="rect" id="node32" href="$hit__cylinder_8c.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="697,905,837,932"/>
 <area shape="rect" id="node33" href="$hit__cylinder_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="694,956,839,983"/>

@@ -141,7 +141,7 @@ var sectionId = 'dynsection-3';
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="render__keyhook__camera__bonus_8c.html#a0225ca8a98c8d5cfe2e9d259b5788e33" target="_top" xlink:title="Manipulates the camera with a keypress.">
+<g id="a_node10"><a xlink:href="render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" target="_top" xlink:title="Manipulates the camera with a keypress.">
 <polygon fill="none" stroke="black" points="570,-520.68 570,-539.68 656,-539.68 656,-520.68 570,-520.68"/>
 <text text-anchor="middle" x="613" y="-527.68" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cam</text>
 </a>

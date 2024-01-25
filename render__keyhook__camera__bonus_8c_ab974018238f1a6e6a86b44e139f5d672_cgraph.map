@@ -1,8 +1,0 @@
-<map id="ft_keyhook_move_cam" name="ft_keyhook_move_cam">
-<area shape="rect" id="node1" title="Moves the camera with a keypress." alt="" coords="5,56,177,83"/>
-<area shape="rect" id="node2" href="$camera_8h.html#a86320a08df936f0fb2174d3fb4dbd0d4" title="Moves the camera along its direction vector." alt="" coords="225,5,392,32"/>
-<area shape="rect" id="node5" href="$camera_8h.html#a06b571f6e8edf474da02fa605c074c12" title="Moves the camera along its right vector." alt="" coords="235,56,382,83"/>
-<area shape="rect" id="node6" href="$camera_8h.html#a9cfc7dcbb8ce4312ff22dcc43f3c4019" title="Moves the camera along the world up vector." alt="" coords="242,107,375,133"/>
-<area shape="rect" id="node3" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="445,31,545,57"/>
-<area shape="rect" id="node4" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="440,81,551,108"/>
-</map>

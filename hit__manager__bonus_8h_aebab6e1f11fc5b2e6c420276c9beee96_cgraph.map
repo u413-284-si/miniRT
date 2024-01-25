@@ -24,7 +24,7 @@
 <area shape="rect" id="node21" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="739,613,850,640"/>
 <area shape="rect" id="node20" href="$utils_8h.html#a518be72ffbfd90cedf995e72dde0aff6" title="Checks if two floats are (almost) equal." alt="" coords="911,563,1053,589"/>
 <area shape="rect" id="node22" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="933,613,1031,640"/>
-<area shape="rect" id="node24" href="$utils__bonus_8h.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="728,715,861,741"/>
+<area shape="rect" id="node24" href="$utils_8h.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="728,715,861,741"/>
 <area shape="rect" id="node26" href="$vec3_8h.html#a19bc1d17592698776e89a5093110320c" title="Calculate the cross product of two vectors." alt="" coords="739,664,850,691"/>
-<area shape="rect" id="node25" href="$utils__quaternion__bonus_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" title="Performs quaternion multiplication." alt="" coords="909,715,1055,741"/>
+<area shape="rect" id="node25" href="$utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" title="Performs quaternion multiplication." alt="" coords="909,715,1055,741"/>
 </map>

@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 837;
+var viewWidth = 801;
 var viewHeight = 218;
 var sectionId = 'dynsection-1';
 </script>
@@ -58,8 +58,8 @@ var sectionId = 'dynsection-1';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="Transforms degrees into radian.">
-<polygon fill="#bfbfbf" stroke="black" points="716,-114.5 716,-133.5 829,-133.5 829,-114.5 716,-114.5"/>
-<text text-anchor="middle" x="772.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_degree_to_radian</text>
+<polygon fill="#bfbfbf" stroke="black" points="680,-76.5 680,-95.5 793,-95.5 793,-76.5 680,-76.5"/>
+<text text-anchor="middle" x="736.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_degree_to_radian</text>
 </a>
 </g>
 </g>
@@ -67,295 +67,313 @@ var sectionId = 'dynsection-1';
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="render_8h.html#aafd27cf2b06772ec739aa2e97164d8b6" target="_top" xlink:title="Changes the camera FOV with a keypress.">
-<polygon fill="none" stroke="black" points="553.5,-190.5 553.5,-209.5 670.5,-209.5 670.5,-190.5 553.5,-190.5"/>
-<text text-anchor="middle" x="612" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_fov_cam</text>
+<polygon fill="none" stroke="black" points="527,-171.5 527,-190.5 644,-190.5 644,-171.5 527,-171.5"/>
+<text text-anchor="middle" x="585.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_fov_cam</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M750.28,-139.63C732.32,-152.25 705.5,-169.71 680,-181 671.71,-184.67 662.52,-187.82 653.68,-190.44"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="752.71,-142.19 758.81,-133.53 748.64,-136.5 752.71,-142.19"/>
-</g>
-<!-- Node3 -->
-<g id="node3" class="node">
-<title>Node3</title>
-<g id="a_node3"><a xlink:href="mat4_8h.html#a96153e828811e816c64e7d0e19fcf654" target="_top" xlink:title="Creates a 4x4 transformation matrix for x&#45;axis rotation.">
-<polygon fill="none" stroke="black" points="544,-114.5 544,-133.5 680,-133.5 680,-114.5 544,-114.5"/>
-<text text-anchor="middle" x="612" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_mat4_create_rotate_x</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
-<title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M705.49,-124C697.09,-124 688.48,-124 680.06,-124"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="705.62,-127.5 715.62,-124 705.62,-120.5 705.62,-127.5"/>
-</g>
-<!-- Node10 -->
-<g id="node10" class="node">
-<title>Node10</title>
-<g id="a_node10"><a xlink:href="mat4_8h.html#a3f33a47cb6e2a560791c9be852f27b35" target="_top" xlink:title="Creates a 4x4 transformation matrix for y&#45;axis rotation.">
-<polygon fill="none" stroke="black" points="544,-152.5 544,-171.5 680,-171.5 680,-152.5 544,-152.5"/>
-<text text-anchor="middle" x="612" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_mat4_create_rotate_y</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node10 -->
-<g id="edge9" class="edge">
-<title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M721.58,-135.97C699.37,-141.29 673.58,-147.48 652.71,-152.48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="722.6,-139.32 731.5,-133.59 720.96,-132.52 722.6,-139.32"/>
-</g>
-<!-- Node12 -->
-<g id="node12" class="node">
-<title>Node12</title>
-<g id="a_node12"><a xlink:href="mat4_8h.html#a104dcf3f153038933ffa4f22b3d192a6" target="_top" xlink:title="Creates a 4x4 transformation matrix for z&#45;axis rotation.">
-<polygon fill="none" stroke="black" points="544.5,-76.5 544.5,-95.5 679.5,-95.5 679.5,-76.5 544.5,-76.5"/>
-<text text-anchor="middle" x="612" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_mat4_create_rotate_z</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node12 -->
-<g id="edge14" class="edge">
-<title>Node1&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M721.58,-112.03C699.37,-106.71 673.58,-100.52 652.71,-95.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="720.96,-115.48 731.5,-114.41 722.6,-108.68 720.96,-115.48"/>
-</g>
-<!-- Node14 -->
-<g id="node14" class="node">
-<title>Node14</title>
-<g id="a_node14"><a xlink:href="parse_8h.html#a39197067937cd8880453eed92148ee31" target="_top" xlink:title="Parse camera line.">
-<polygon fill="none" stroke="black" points="563,-38.5 563,-57.5 661,-57.5 661,-38.5 563,-38.5"/>
-<text text-anchor="middle" x="612" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_camera</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node14 -->
-<g id="edge16" class="edge">
-<title>Node1&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M750.28,-108.37C732.32,-95.75 705.5,-78.29 680,-67 671.71,-63.33 662.52,-60.18 653.68,-57.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="748.64,-111.5 758.81,-114.47 752.71,-105.81 748.64,-111.5"/>
+<path fill="none" stroke="midnightblue" d="M711.94,-101.02C681.03,-120.73 627.67,-154.75 601.65,-171.34"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="713.84,-103.96 720.39,-95.63 710.08,-98.06 713.84,-103.96"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="mat4__vec3_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" target="_top" xlink:title="Rotates a 3D vector around the x&#45;axis.">
-<polygon fill="none" stroke="black" points="399.5,-114.5 399.5,-133.5 497.5,-133.5 497.5,-114.5 399.5,-114.5"/>
-<text text-anchor="middle" x="448.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_vec3_rotate_x</text>
+<g id="a_node4"><a xlink:href="parse_8h.html#a39197067937cd8880453eed92148ee31" target="_top" xlink:title="Parse camera line.">
+<polygon fill="none" stroke="black" points="536.5,-38.5 536.5,-57.5 634.5,-57.5 634.5,-38.5 536.5,-38.5"/>
+<text text-anchor="middle" x="585.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_camera</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node4 -->
+<!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
-<title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M533.72,-124C521.52,-124 509.21,-124 497.92,-124"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="533.91,-127.5 543.91,-124 533.91,-120.5 533.91,-127.5"/>
+<title>Node1&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M688.01,-73.89C667.26,-68.6 643.27,-62.48 623.83,-57.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="687.35,-77.33 697.9,-76.41 689.08,-70.55 687.35,-77.33"/>
+</g>
+<!-- Node10 -->
+<g id="node10" class="node">
+<title>Node10</title>
+<g id="a_node10"><a xlink:href="utils_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" target="_top" xlink:title="Rotates a 3D vector around the x&#45;axis.">
+<polygon fill="none" stroke="black" points="536.5,-76.5 536.5,-95.5 634.5,-95.5 634.5,-76.5 536.5,-76.5"/>
+<text text-anchor="middle" x="585.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_vec3_rotate_x</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node10 -->
+<g id="edge10" class="edge">
+<title>Node1&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M669.47,-86C657.84,-86 645.93,-86 634.9,-86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="669.59,-89.5 679.59,-86 669.59,-82.5 669.59,-89.5"/>
+</g>
+<!-- Node18 -->
+<g id="node18" class="node">
+<title>Node18</title>
+<g id="a_node18"><a xlink:href="utils_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46" target="_top" xlink:title="Rotates a 3D vector around the y&#45;axis.">
+<polygon fill="none" stroke="black" points="536.5,-114.5 536.5,-133.5 634.5,-133.5 634.5,-114.5 536.5,-114.5"/>
+<text text-anchor="middle" x="585.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_vec3_rotate_y</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node18 -->
+<g id="edge21" class="edge">
+<title>Node1&#45;&gt;Node18</title>
+<path fill="none" stroke="midnightblue" d="M688.01,-98.11C667.26,-103.4 643.27,-109.52 623.83,-114.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="689.08,-101.45 697.9,-95.59 687.35,-94.67 689.08,-101.45"/>
+</g>
+<!-- Node19 -->
+<g id="node19" class="node">
+<title>Node19</title>
+<g id="a_node19"><a xlink:href="utils_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc" target="_top" xlink:title="Rotates a 3D vector around the z&#45;axis.">
+<polygon fill="none" stroke="black" points="537,-0.5 537,-19.5 634,-19.5 634,-0.5 537,-0.5"/>
+<text text-anchor="middle" x="585.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_vec3_rotate_z</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node19 -->
+<g id="edge25" class="edge">
+<title>Node1&#45;&gt;Node19</title>
+<path fill="none" stroke="midnightblue" d="M713.84,-70.44C695.81,-58.01 669.11,-40.76 644,-29 636.38,-25.43 627.91,-22.24 619.86,-19.53"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="712.23,-73.59 722.43,-76.45 716.24,-67.85 712.23,-73.59"/>
+</g>
+<!-- Node3 -->
+<g id="node3" class="node">
+<title>Node3</title>
+<g id="a_node3"><a xlink:href="render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" target="_top" xlink:title="Manipulates the camera with a keypress.">
+<polygon fill="none" stroke="black" points="224,-190.5 224,-209.5 310,-209.5 310,-190.5 224,-190.5"/>
+<text text-anchor="middle" x="267" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cam</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge2" class="edge">
+<title>Node2&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M516.63,-185.07C453.97,-188.84 362.88,-194.3 310.12,-197.47"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="517.04,-188.56 526.82,-184.46 516.63,-181.57 517.04,-188.56"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="render_8h.html#a492035e87e08c0c7a9e93a3fe4605cc2" target="_top" xlink:title="Rotates the camera with a keypress.">
-<polygon fill="none" stroke="black" points="227.5,-152.5 227.5,-171.5 342.5,-171.5 342.5,-152.5 227.5,-152.5"/>
-<text text-anchor="middle" x="285" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_rot_cam</text>
+<g id="a_node5"><a xlink:href="parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" target="_top" xlink:title="Dispatcher for different parsing functions.">
+<polygon fill="none" stroke="black" points="381,-38.5 381,-57.5 465,-57.5 465,-38.5 381,-38.5"/>
+<text text-anchor="middle" x="423" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_lines</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M396.94,-135.9C374.24,-141.24 347.82,-147.45 326.46,-152.48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="397.81,-139.29 406.75,-133.59 396.21,-132.47 397.81,-139.29"/>
-</g>
-<!-- Node6 -->
-<g id="node6" class="node">
-<title>Node6</title>
-<g id="a_node6"><a xlink:href="render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed" target="_top" xlink:title="Rotates a 3D vector with a keypress.">
-<polygon fill="none" stroke="black" points="229.5,-114.5 229.5,-133.5 340.5,-133.5 340.5,-114.5 229.5,-114.5"/>
-<text text-anchor="middle" x="285" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_rot_vec</text>
-</a>
-</g>
-</g>
-<!-- Node4&#45;&gt;Node6 -->
-<g id="edge5" class="edge">
-<title>Node4&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M389.27,-124C373.41,-124 356.29,-124 340.63,-124"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="389.48,-127.5 399.48,-124 389.48,-120.5 389.48,-127.5"/>
+<path fill="none" stroke="midnightblue" d="M526.27,-48C505.98,-48 483.67,-48 465.07,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="526.34,-51.5 536.34,-48 526.34,-44.5 526.34,-51.5"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="render_8h.html#a8b0cab63a8053d366bbefead351d039a" target="_top" xlink:title="Rotates the camera with the mouse.">
-<polygon fill="none" stroke="black" points="217,-76.5 217,-95.5 353,-95.5 353,-76.5 217,-76.5"/>
-<text text-anchor="middle" x="285" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_mouse_hook_rot_cam</text>
+<g id="a_node9"><a xlink:href="parse__bonus_8h.html#a4ce5cad477407308f911966a9446f560" target="_top" xlink:title="Dispatcher for different parsing functions.">
+<polygon fill="none" stroke="black" points="363.5,-0.5 363.5,-19.5 482.5,-19.5 482.5,-0.5 363.5,-0.5"/>
+<text text-anchor="middle" x="423" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_lines_bonus</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node9 -->
 <g id="edge8" class="edge">
 <title>Node4&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M396.94,-112.1C374.24,-106.76 347.82,-100.55 326.46,-95.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="396.21,-115.53 406.75,-114.41 397.81,-108.71 396.21,-115.53"/>
+<path fill="none" stroke="midnightblue" d="M534.25,-36.1C511.69,-30.76 485.44,-24.55 464.21,-19.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="533.46,-39.51 544,-38.41 535.07,-32.7 533.46,-39.51"/>
+</g>
+<!-- Node6 -->
+<g id="node6" class="node">
+<title>Node6</title>
+<g id="a_node6"><a xlink:href="parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" target="_top" xlink:title="Mallocs storage space and writes data into storage.">
+<polygon fill="none" stroke="black" points="227,-19.5 227,-38.5 307,-38.5 307,-19.5 227,-19.5"/>
+<text text-anchor="middle" x="267" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_store_data</text>
+</a>
+</g>
+</g>
+<!-- Node5&#45;&gt;Node6 -->
+<g id="edge5" class="edge">
+<title>Node5&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M370.54,-41.65C349.9,-39.1 326.49,-36.22 307.26,-33.84"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="370.38,-45.16 380.73,-42.91 371.23,-38.21 370.38,-45.16"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" target="_top" xlink:title="Manipulates the active cylinder.">
-<polygon fill="none" stroke="black" points="77,-95.5 77,-114.5 181,-114.5 181,-95.5 77,-95.5"/>
-<text text-anchor="middle" x="129" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cylinder</text>
+<g id="a_node7"><a xlink:href="parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" target="_top" xlink:title="Imports, checks, and parses the provided file.">
+<polygon fill="none" stroke="black" points="90,-19.5 90,-38.5 166,-38.5 166,-19.5 90,-19.5"/>
+<text text-anchor="middle" x="128" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_file</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M219.22,-116.01C206.53,-114.44 193.38,-112.82 181.2,-111.32"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="218.92,-119.5 229.27,-117.25 219.78,-112.55 218.92,-119.5"/>
+<path fill="none" stroke="midnightblue" d="M216.67,-29C200.09,-29 181.88,-29 166.38,-29"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="216.74,-32.5 226.74,-29 216.74,-25.5 216.74,-32.5"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" target="_top" xlink:title="Manipulates the active plane.">
-<polygon fill="none" stroke="black" points="83,-133.5 83,-152.5 175,-152.5 175,-133.5 83,-133.5"/>
-<text text-anchor="middle" x="129" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_plane</text>
-</a>
-</g>
-</g>
-<!-- Node6&#45;&gt;Node8 -->
-<g id="edge7" class="edge">
-<title>Node6&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M219.2,-131.99C204.47,-133.81 189.13,-135.71 175.4,-137.4"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="219.78,-135.45 229.27,-130.75 218.92,-128.5 219.78,-135.45"/>
-</g>
-<!-- Node11 -->
-<g id="node11" class="node">
-<title>Node11</title>
-<g id="a_node11"><a xlink:href="mat4__vec3_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46" target="_top" xlink:title="Rotates a 3D vector around the y&#45;axis.">
-<polygon fill="none" stroke="black" points="399.5,-152.5 399.5,-171.5 497.5,-171.5 497.5,-152.5 399.5,-152.5"/>
-<text text-anchor="middle" x="448.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_vec3_rotate_y</text>
-</a>
-</g>
-</g>
-<!-- Node10&#45;&gt;Node11 -->
-<g id="edge10" class="edge">
-<title>Node10&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M533.72,-162C521.52,-162 509.21,-162 497.92,-162"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="533.91,-165.5 543.91,-162 533.91,-158.5 533.91,-165.5"/>
-</g>
-<!-- Node11&#45;&gt;Node5 -->
-<g id="edge11" class="edge">
-<title>Node11&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M389.2,-162C374.04,-162 357.73,-162 342.66,-162"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="389.48,-165.5 399.48,-162 389.48,-158.5 389.48,-165.5"/>
-</g>
-<!-- Node11&#45;&gt;Node6 -->
-<g id="edge12" class="edge">
-<title>Node11&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M396.94,-150.1C374.24,-144.76 347.82,-138.55 326.46,-133.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="396.21,-153.53 406.75,-152.41 397.81,-146.71 396.21,-153.53"/>
-</g>
-<!-- Node11&#45;&gt;Node9 -->
-<g id="edge13" class="edge">
-<title>Node11&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M399.54,-148.66C395.87,-146.97 392.31,-145.09 389,-143 369.33,-130.58 372.9,-117.05 353,-105 346.59,-101.12 339.35,-98 332.07,-95.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="398.24,-151.91 408.82,-152.47 400.9,-145.43 398.24,-151.91"/>
-</g>
-<!-- Node13 -->
-<g id="node13" class="node">
-<title>Node13</title>
-<g id="a_node13"><a xlink:href="mat4__vec3_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc" target="_top" xlink:title="Rotates a 3D vector around the z&#45;axis.">
-<polygon fill="none" stroke="black" points="400,-76.5 400,-95.5 497,-95.5 497,-76.5 400,-76.5"/>
-<text text-anchor="middle" x="448.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_vec3_rotate_z</text>
-</a>
-</g>
-</g>
-<!-- Node12&#45;&gt;Node13 -->
-<g id="edge15" class="edge">
-<title>Node12&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M534.3,-86C521.66,-86 508.89,-86 497.23,-86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="534.38,-89.5 544.38,-86 534.38,-82.5 534.38,-89.5"/>
-</g>
-<!-- Node15 -->
-<g id="node15" class="node">
-<title>Node15</title>
-<g id="a_node15"><a xlink:href="parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" target="_top" xlink:title="Dispatcher for different parsing functions.">
-<polygon fill="none" stroke="black" points="406.5,-38.5 406.5,-57.5 490.5,-57.5 490.5,-38.5 406.5,-38.5"/>
-<text text-anchor="middle" x="448.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_lines</text>
-</a>
-</g>
-</g>
-<!-- Node14&#45;&gt;Node15 -->
-<g id="edge17" class="edge">
-<title>Node14&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M552.74,-48C532.13,-48 509.39,-48 490.51,-48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="552.98,-51.5 562.98,-48 552.98,-44.5 552.98,-51.5"/>
-</g>
-<!-- Node19 -->
-<g id="node19" class="node">
-<title>Node19</title>
-<g id="a_node19"><a xlink:href="parse__bonus_8h.html#a4ce5cad477407308f911966a9446f560" target="_top" xlink:title="Dispatcher for different parsing functions.">
-<polygon fill="none" stroke="black" points="389,-0.5 389,-19.5 508,-19.5 508,-0.5 389,-0.5"/>
-<text text-anchor="middle" x="448.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_lines_bonus</text>
-</a>
-</g>
-</g>
-<!-- Node14&#45;&gt;Node19 -->
-<g id="edge21" class="edge">
-<title>Node14&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M560.44,-36.1C537.74,-30.76 511.32,-24.55 489.96,-19.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="559.71,-39.53 570.25,-38.41 561.31,-32.71 559.71,-39.53"/>
-</g>
-<!-- Node16 -->
-<g id="node16" class="node">
-<title>Node16</title>
-<g id="a_node16"><a xlink:href="parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" target="_top" xlink:title="Mallocs storage space and writes data into storage.">
-<polygon fill="none" stroke="black" points="245,-19.5 245,-38.5 325,-38.5 325,-19.5 245,-19.5"/>
-<text text-anchor="middle" x="285" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_store_data</text>
-</a>
-</g>
-</g>
-<!-- Node15&#45;&gt;Node16 -->
-<g id="edge18" class="edge">
-<title>Node15&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M396.37,-41.99C373.33,-39.27 346.56,-36.12 325.15,-33.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="395.99,-45.46 406.33,-43.16 396.81,-38.51 395.99,-45.46"/>
-</g>
-<!-- Node17 -->
-<g id="node17" class="node">
-<title>Node17</title>
-<g id="a_node17"><a xlink:href="parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" target="_top" xlink:title="Imports, checks, and parses the provided file.">
-<polygon fill="none" stroke="black" points="91,-19.5 91,-38.5 167,-38.5 167,-19.5 91,-19.5"/>
-<text text-anchor="middle" x="129" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_file</text>
-</a>
-</g>
-</g>
-<!-- Node16&#45;&gt;Node17 -->
-<g id="edge19" class="edge">
-<title>Node16&#45;&gt;Node17</title>
-<path fill="none" stroke="midnightblue" d="M234.62,-29C212.7,-29 187.33,-29 167.07,-29"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="234.74,-32.5 244.74,-29 234.74,-25.5 234.74,-32.5"/>
-</g>
-<!-- Node18 -->
-<g id="node18" class="node">
-<title>Node18</title>
-<g id="a_node18"><a xlink:href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-19.5 0,-38.5 41,-38.5 41,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="20.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node17&#45;&gt;Node18 -->
-<g id="edge20" class="edge">
-<title>Node17&#45;&gt;Node18</title>
-<path fill="none" stroke="midnightblue" d="M80.37,-29C66.58,-29 52.28,-29 41.22,-29"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="80.75,-32.5 90.75,-29 80.75,-25.5 80.75,-32.5"/>
+<!-- Node7&#45;&gt;Node8 -->
+<g id="edge7" class="edge">
+<title>Node7&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M79.61,-29C66.09,-29 52.09,-29 41.22,-29"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="79.8,-32.5 89.8,-29 79.8,-25.5 79.8,-32.5"/>
 </g>
-<!-- Node19&#45;&gt;Node16 -->
+<!-- Node9&#45;&gt;Node6 -->
+<g id="edge9" class="edge">
+<title>Node9&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M353.14,-18.5C337.47,-20.43 321.35,-22.42 307.41,-24.14"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="353.84,-21.94 363.34,-17.24 352.99,-14.99 353.84,-21.94"/>
+</g>
+<!-- Node11 -->
+<g id="node11" class="node">
+<title>Node11</title>
+<g id="a_node11"><a xlink:href="render_8h.html#a492035e87e08c0c7a9e93a3fe4605cc2" target="_top" xlink:title="Rotates the camera with a keypress.">
+<polygon fill="none" stroke="black" points="365.5,-152.5 365.5,-171.5 480.5,-171.5 480.5,-152.5 365.5,-152.5"/>
+<text text-anchor="middle" x="423" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_rot_cam</text>
+</a>
+</g>
+</g>
+<!-- Node10&#45;&gt;Node11 -->
+<g id="edge11" class="edge">
+<title>Node10&#45;&gt;Node11</title>
+<path fill="none" stroke="midnightblue" d="M537.05,-99.54C533.55,-101.18 530.16,-102.99 527,-105 507.36,-117.47 510.9,-130.95 491,-143 484.59,-146.88 477.35,-150 470.07,-152.49"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="538.6,-102.69 546.48,-95.6 535.9,-96.23 538.6,-102.69"/>
+</g>
+<!-- Node12 -->
+<g id="node12" class="node">
+<title>Node12</title>
+<g id="a_node12"><a xlink:href="render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed" target="_top" xlink:title="Rotates a 3D vector with a keypress.">
+<polygon fill="none" stroke="black" points="367.5,-114.5 367.5,-133.5 478.5,-133.5 478.5,-114.5 367.5,-114.5"/>
+<text text-anchor="middle" x="423" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_rot_vec</text>
+</a>
+</g>
+</g>
+<!-- Node10&#45;&gt;Node12 -->
+<g id="edge13" class="edge">
+<title>Node10&#45;&gt;Node12</title>
+<path fill="none" stroke="midnightblue" d="M534.25,-97.9C511.69,-103.24 485.44,-109.45 464.21,-114.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="535.07,-101.3 544,-95.59 533.46,-94.49 535.07,-101.3"/>
+</g>
+<!-- Node17 -->
+<g id="node17" class="node">
+<title>Node17</title>
+<g id="a_node17"><a xlink:href="render_8h.html#a8b0cab63a8053d366bbefead351d039a" target="_top" xlink:title="Rotates the camera with the mouse.">
+<polygon fill="none" stroke="black" points="355,-76.5 355,-95.5 491,-95.5 491,-76.5 355,-76.5"/>
+<text text-anchor="middle" x="423" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_mouse_hook_rot_cam</text>
+</a>
+</g>
+</g>
+<!-- Node10&#45;&gt;Node17 -->
+<g id="edge20" class="edge">
+<title>Node10&#45;&gt;Node17</title>
+<path fill="none" stroke="midnightblue" d="M526.11,-86C514.74,-86 502.74,-86 491.11,-86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="526.34,-89.5 536.34,-86 526.34,-82.5 526.34,-89.5"/>
+</g>
+<!-- Node11&#45;&gt;Node3 -->
+<g id="edge12" class="edge">
+<title>Node11&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M373.21,-174.04C351.69,-179.35 326.77,-185.5 306.58,-190.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="374.27,-177.38 383.14,-171.59 372.59,-170.59 374.27,-177.38"/>
+</g>
+<!-- Node13 -->
+<g id="node13" class="node">
+<title>Node13</title>
+<g id="a_node13"><a xlink:href="render__bonus_8h.html#a81fa5494e17be06ab12b226ff9dd7c2a" target="_top" xlink:title="Manipulates the active cone.">
+<polygon fill="none" stroke="black" points="223,-152.5 223,-171.5 311,-171.5 311,-152.5 223,-152.5"/>
+<text text-anchor="middle" x="267" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cone</text>
+</a>
+</g>
+</g>
+<!-- Node12&#45;&gt;Node13 -->
+<g id="edge14" class="edge">
+<title>Node12&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M373.21,-136.04C351.69,-141.35 326.77,-147.5 306.58,-152.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="374.27,-139.38 383.14,-133.59 372.59,-132.59 374.27,-139.38"/>
+</g>
+<!-- Node15 -->
+<g id="node15" class="node">
+<title>Node15</title>
+<g id="a_node15"><a xlink:href="render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" target="_top" xlink:title="Manipulates the active cylinder.">
+<polygon fill="none" stroke="black" points="215,-114.5 215,-133.5 319,-133.5 319,-114.5 215,-114.5"/>
+<text text-anchor="middle" x="267" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cylinder</text>
+</a>
+</g>
+</g>
+<!-- Node12&#45;&gt;Node15 -->
+<g id="edge16" class="edge">
+<title>Node12&#45;&gt;Node15</title>
+<path fill="none" stroke="midnightblue" d="M357.22,-124C344.53,-124 331.38,-124 319.2,-124"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="357.27,-127.5 367.27,-124 357.27,-120.5 357.27,-127.5"/>
+</g>
+<!-- Node16 -->
+<g id="node16" class="node">
+<title>Node16</title>
+<g id="a_node16"><a xlink:href="render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" target="_top" xlink:title="Manipulates the active plane.">
+<polygon fill="none" stroke="black" points="221,-76.5 221,-95.5 313,-95.5 313,-76.5 221,-76.5"/>
+<text text-anchor="middle" x="267" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_plane</text>
+</a>
+</g>
+</g>
+<!-- Node12&#45;&gt;Node16 -->
+<g id="edge18" class="edge">
+<title>Node12&#45;&gt;Node16</title>
+<path fill="none" stroke="midnightblue" d="M373.21,-111.96C351.69,-106.65 326.77,-100.5 306.58,-95.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="372.59,-115.41 383.14,-114.41 374.27,-108.62 372.59,-115.41"/>
+</g>
+<!-- Node14 -->
+<g id="node14" class="node">
+<title>Node14</title>
+<g id="a_node14"><a xlink:href="render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" target="_top" xlink:title="Manipulates the active hittable.">
+<polygon fill="none" stroke="black" points="77,-114.5 77,-133.5 179,-133.5 179,-114.5 77,-114.5"/>
+<text text-anchor="middle" x="128" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_hittable</text>
+</a>
+</g>
+</g>
+<!-- Node13&#45;&gt;Node14 -->
+<g id="edge15" class="edge">
+<title>Node13&#45;&gt;Node14</title>
+<path fill="none" stroke="midnightblue" d="M221.59,-149.68C202.77,-144.46 181.16,-138.47 163.56,-133.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="220.86,-153.11 231.43,-152.41 222.73,-146.37 220.86,-153.11"/>
+</g>
+<!-- Node15&#45;&gt;Node14 -->
+<g id="edge17" class="edge">
+<title>Node15&#45;&gt;Node14</title>
+<path fill="none" stroke="midnightblue" d="M204.96,-124C196.33,-124 187.54,-124 179.14,-124"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="204.99,-127.5 214.99,-124 204.99,-120.5 204.99,-127.5"/>
+</g>
+<!-- Node16&#45;&gt;Node14 -->
+<g id="edge19" class="edge">
+<title>Node16&#45;&gt;Node14</title>
+<path fill="none" stroke="midnightblue" d="M221.59,-98.32C202.77,-103.54 181.16,-109.53 163.56,-114.41"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="222.73,-101.63 231.43,-95.59 220.86,-94.89 222.73,-101.63"/>
+</g>
+<!-- Node18&#45;&gt;Node11 -->
 <g id="edge22" class="edge">
-<title>Node19&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M378.71,-18.09C360.46,-20.24 341.38,-22.48 325.31,-24.38"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="379.22,-21.56 388.74,-16.91 378.4,-14.61 379.22,-21.56"/>
+<title>Node18&#45;&gt;Node11</title>
+<path fill="none" stroke="midnightblue" d="M534.25,-135.9C511.69,-141.24 485.44,-147.45 464.21,-152.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="535.07,-139.3 544,-133.59 533.46,-132.49 535.07,-139.3"/>
+</g>
+<!-- Node18&#45;&gt;Node12 -->
+<g id="edge23" class="edge">
+<title>Node18&#45;&gt;Node12</title>
+<path fill="none" stroke="midnightblue" d="M526.31,-124C510.74,-124 493.96,-124 478.59,-124"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="526.34,-127.5 536.34,-124 526.34,-120.5 526.34,-127.5"/>
+</g>
+<!-- Node18&#45;&gt;Node17 -->
+<g id="edge24" class="edge">
+<title>Node18&#45;&gt;Node17</title>
+<path fill="none" stroke="midnightblue" d="M534.25,-112.1C511.69,-106.76 485.44,-100.55 464.21,-95.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="533.46,-115.51 544,-114.41 535.07,-108.7 533.46,-115.51"/>
 </g>
 </g>
 </svg>

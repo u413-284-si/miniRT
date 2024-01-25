@@ -12,7 +12,6 @@ var annotated_dup =
     [ "t_img", "structt__img.html", "structt__img" ],
     [ "t_interval", "structt__interval.html", "structt__interval" ],
     [ "t_light", "structt__light.html", "structt__light" ],
-    [ "t_mat4", "structt__mat4.html", "structt__mat4" ],
     [ "t_menu", "structt__menu.html", "structt__menu" ],
     [ "t_mlx_ptrs", "structt__mlx__ptrs.html", "structt__mlx__ptrs" ],
     [ "t_mouse", "structt__mouse.html", "structt__mouse" ],

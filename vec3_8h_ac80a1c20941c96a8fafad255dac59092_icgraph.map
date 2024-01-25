@@ -1,52 +1,52 @@
 <map id="ft_vec3_scale" name="ft_vec3_scale">
-<area shape="rect" id="node1" title="Scale a vector." alt="" coords="879,664,989,691"/>
-<area shape="rect" id="node2" href="$camera_8h.html#a02ed3f7206927a02c44eab5f5aba26e1" title="Calculates basis vectors u, v, w." alt="" coords="639,23,831,49"/>
-<area shape="rect" id="node6" href="$camera_8h.html#a525b3073d8f263afa7d81f70fa4b491d" title="Calculates all pixel positions in pixel grid." alt="" coords="657,73,813,100"/>
-<area shape="rect" id="node7" href="$render__bonus_8h.html#ab23f44f179d8be5ae75128694b1b0133" title="Like ft_cam_calc_pix_pos(), but threaded." alt="" coords="657,197,813,238"/>
-<area shape="rect" id="node10" href="$camera_8h.html#a96132dcb4eac578fbee24bbf591fe090" title="Calculates the pixel grid parameters of the viewport." alt="" coords="650,124,819,151"/>
-<area shape="rect" id="node11" href="$camera_8h.html#a86320a08df936f0fb2174d3fb4dbd0d4" title="Moves the camera along its direction vector." alt="" coords="651,364,818,391"/>
-<area shape="rect" id="node13" href="$camera_8h.html#a06b571f6e8edf474da02fa605c074c12" title="Moves the camera along its right vector." alt="" coords="661,263,808,289"/>
-<area shape="rect" id="node14" href="$camera_8h.html#a9cfc7dcbb8ce4312ff22dcc43f3c4019" title="Moves the camera along the world up vector." alt="" coords="668,313,801,340"/>
-<area shape="rect" id="node15" href="$hit__manager__bonus_8h.html#ac1c274bfe31accc081355bdd98133056" title="Check if the ray actually hit the cone wall." alt="" coords="434,309,566,336"/>
-<area shape="rect" id="node17" href="$hit__manager__bonus_8h.html#a9874994177d1382ce3e76988ca7cee3b" title="Calculates the normal on the point of intersection of the cone." alt="" coords="447,765,553,792"/>
-<area shape="rect" id="node19" href="$hit__manager_8h.html#a7071fcc84ae72a9f04ce375b87d46c77" title="Checks if the ray actually hit the cylinder wall." alt="" coords="434,563,566,589"/>
-<area shape="rect" id="node21" href="$hit__manager_8h.html#a873b926722f5b8fada3f51432dccd4be" title="Calculates the normal on the point of intersection of the cylinder." alt="" coords="447,715,553,741"/>
-<area shape="rect" id="node23" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="451,411,549,437"/>
-<area shape="rect" id="node27" href="$hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" title="Calculates if a sphere was hit by a ray." alt="" coords="447,664,553,691"/>
-<area shape="rect" id="node28" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="665,1525,804,1552"/>
-<area shape="rect" id="node29" href="$parse__bonus_8h.html#a0ee220aca489e16d423c754b9d88e2dd" title="Parse cone line." alt="" coords="421,917,579,944"/>
-<area shape="rect" id="node31" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="433,1221,567,1248"/>
-<area shape="rect" id="node33" href="$parse__bonus_8h.html#a30041bb98ced6caf1debb5468bfb6ad4" title="Parse cylinder line." alt="" coords="411,968,589,995"/>
-<area shape="rect" id="node34" href="$render__bonus_8h.html#a8706f722b73ae2ec7ec56e469ecbac02" title="Generate a random vector that is confined within the square surrounding a pixel. The vector lies in t..." alt="" coords="673,1336,797,1363"/>
-<area shape="rect" id="node36" href="$utils__bonus_8h.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="668,816,801,843"/>
-<area shape="rect" id="node39" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="211,1323,346,1349"/>
-<area shape="rect" id="node41" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="685,516,785,543"/>
-<area shape="rect" id="node44" href="$lighting__bonus_8h.html#af0db0e12e85b772afed9cdfac4c33437" title="Create specular lighting." alt="" coords="435,1373,565,1400"/>
-<area shape="rect" id="node45" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="679,1019,790,1045"/>
-<area shape="rect" id="node3" href="$camera_8h.html#a283b142012bbcea27c39f49e270d8780" title="Initializes camera parameters." alt="" coords="453,56,547,83"/>
-<area shape="rect" id="node4" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="443,107,557,133"/>
-<area shape="rect" id="node5" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="409,5,591,32"/>
-<area shape="rect" id="node8" href="$render__keyhook__camera__bonus_8c.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="443,157,557,184"/>
-<area shape="rect" id="node9" href="$render__mouse__bonus_8c.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="409,208,591,235"/>
-<area shape="rect" id="node12" href="$render_8h.html#ab974018238f1a6e6a86b44e139f5d672" title="Moves the camera with a keypress." alt="" coords="414,259,586,285"/>
-<area shape="rect" id="node16" href="$hit__manager__bonus_8h.html#a049d2a1135caa57d1d9ed8845f229620" title="Determines whether the potential hits are accurate." alt="" coords="209,323,349,349"/>
-<area shape="rect" id="node18" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="206,765,351,792"/>
-<area shape="rect" id="node20" href="$hit__manager_8h.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="209,551,349,577"/>
-<area shape="rect" id="node22" href="$hit__manager_8h.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="206,652,351,679"/>
-<area shape="rect" id="node24" href="$hit__manager__bonus_8h.html#aee5824df7f0e0c2698306f49f9a1c790" title="Calculates potential hit of cone cap." alt="" coords="225,449,332,476"/>
-<area shape="rect" id="node25" href="$hit__manager_8h.html#af2540784b9e01fbdfeacb544ea2c169a" title="Calculates the hit point of the ray with the cylinder cap." alt="" coords="225,399,332,425"/>
-<area shape="rect" id="node26" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="223,500,335,527"/>
-<area shape="rect" id="node30" href="$parse__bonus_8c.html#a65db4c46c2af2d9b570687b3a1458f15" title=" " alt="" coords="196,968,361,995"/>
-<area shape="rect" id="node32" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="219,1196,338,1223"/>
-<area shape="rect" id="node35" href="$render__bonus_8h.html#af5fa16c9ea3d6e6884604009e31c83de" title="Constructs a random sample ray for anti&#45;aliasing." alt="" coords="437,1424,563,1451"/>
-<area shape="rect" id="node37" href="$hit__manager__bonus_8h.html#abc28bafc00495161db9de547a9461cb1" title="Transforms the Cartesian coordinates of a hit point on a cone wall into 2D texture UV&#45;coordinates in ..." alt="" coords="427,816,573,843"/>
-<area shape="rect" id="node38" href="$hit__manager__bonus_8h.html#aeb33f439a0d2093bdbcca7468e2e78b4" title="Transforms the Cartesian coordinates of a hit point on a cylinder wall into 2D texture UV&#45;coordinates..." alt="" coords="427,867,573,893"/>
-<area shape="rect" id="node40" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="5,1323,148,1349"/>
-<area shape="rect" id="node42" href="$hit__manager__bonus_8h.html#a5daa3987cf663970a55423c4d47d2d64" title="Check if the ray actually hit the cone cap." alt="" coords="436,360,564,387"/>
-<area shape="rect" id="node43" href="$hit__manager_8h.html#a98c590ac9074c10dc7e18cfd033c0b9b" title="Checks if the ray actually hit the cylinder cap." alt="" coords="436,461,564,488"/>
-<area shape="rect" id="node46" href="$lighting_8h.html#ae50a6e06925c764b3caad3f805bc4c8a" title="Create diffuse lighting." alt="" coords="441,1272,559,1299"/>
-<area shape="rect" id="node47" href="$lighting_8h.html#a382179d88a3a971b5853322389bacf04" title="Determines whether the point of intersection lies in a shadow regarding the current light source." alt="" coords="447,1120,553,1147"/>
-<area shape="rect" id="node48" href="$parse_8h.html#a64877aac0d88b33e1bb87b3c9a3496dc" title="Parse plane line." alt="" coords="441,1171,559,1197"/>
-<area shape="rect" id="node49" href="$parse__bonus_8h.html#a672a980c7d877d0d42971cd811541bd4" title="Parse plane line." alt="" coords="419,1019,581,1045"/>
-<area shape="rect" id="node50" href="$render_8h.html#a2c9085ad1ae8adcd3201a501a9a4dcde" title="Constructs a ray and shoots it through the pixel." alt="" coords="449,1069,551,1096"/>
+<area shape="rect" id="node1" title="Scale a vector." alt="" coords="879,791,989,817"/>
+<area shape="rect" id="node2" href="$camera_8h.html#a02ed3f7206927a02c44eab5f5aba26e1" title="Calculates basis vectors u, v, w." alt="" coords="639,309,831,336"/>
+<area shape="rect" id="node6" href="$camera_8h.html#a525b3073d8f263afa7d81f70fa4b491d" title="Calculates all pixel positions in pixel grid." alt="" coords="657,360,813,387"/>
+<area shape="rect" id="node7" href="$render__bonus_8h.html#ab23f44f179d8be5ae75128694b1b0133" title="Like ft_cam_calc_pix_pos(), but threaded." alt="" coords="657,41,813,82"/>
+<area shape="rect" id="node9" href="$camera_8h.html#a96132dcb4eac578fbee24bbf591fe090" title="Calculates the pixel grid parameters of the viewport." alt="" coords="650,259,819,285"/>
+<area shape="rect" id="node10" href="$camera_8h.html#a86320a08df936f0fb2174d3fb4dbd0d4" title="Moves the camera along its direction vector." alt="" coords="651,208,818,235"/>
+<area shape="rect" id="node12" href="$camera_8h.html#a06b571f6e8edf474da02fa605c074c12" title="Moves the camera along its right vector." alt="" coords="661,107,808,133"/>
+<area shape="rect" id="node13" href="$camera_8h.html#a9cfc7dcbb8ce4312ff22dcc43f3c4019" title="Moves the camera along the world up vector." alt="" coords="668,157,801,184"/>
+<area shape="rect" id="node14" href="$hit__manager__bonus_8h.html#ac1c274bfe31accc081355bdd98133056" title="Check if the ray actually hit the cone wall." alt="" coords="434,461,566,488"/>
+<area shape="rect" id="node16" href="$hit__manager__bonus_8h.html#a9874994177d1382ce3e76988ca7cee3b" title="Calculates the normal on the point of intersection of the cone." alt="" coords="447,816,553,843"/>
+<area shape="rect" id="node18" href="$hit__manager_8h.html#a7071fcc84ae72a9f04ce375b87d46c77" title="Checks if the ray actually hit the cylinder wall." alt="" coords="434,765,566,792"/>
+<area shape="rect" id="node20" href="$hit__manager_8h.html#a873b926722f5b8fada3f51432dccd4be" title="Calculates the normal on the point of intersection of the cylinder." alt="" coords="447,968,553,995"/>
+<area shape="rect" id="node22" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="451,411,549,437"/>
+<area shape="rect" id="node26" href="$hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" title="Calculates if a sphere was hit by a ray." alt="" coords="447,715,553,741"/>
+<area shape="rect" id="node27" href="$render__bonus_8h.html#a81fa5494e17be06ab12b226ff9dd7c2a" title="Manipulates the active cone." alt="" coords="676,1576,793,1603"/>
+<area shape="rect" id="node29" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="665,1627,804,1653"/>
+<area shape="rect" id="node30" href="$parse__bonus_8h.html#a0ee220aca489e16d423c754b9d88e2dd" title="Parse cone line." alt="" coords="421,1373,579,1400"/>
+<area shape="rect" id="node32" href="$parse_8h.html#aa8d46dc12737db49e568b734cdbc614a" title="Parse cylinder line." alt="" coords="433,1019,567,1045"/>
+<area shape="rect" id="node34" href="$parse__bonus_8h.html#a30041bb98ced6caf1debb5468bfb6ad4" title="Parse cylinder line." alt="" coords="411,1475,589,1501"/>
+<area shape="rect" id="node35" href="$render__bonus_8h.html#a8706f722b73ae2ec7ec56e469ecbac02" title="Generate a random vector that is confined within the square surrounding a pixel. The vector lies in t..." alt="" coords="673,1424,797,1451"/>
+<area shape="rect" id="node37" href="$utils_8h.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="668,867,801,893"/>
+<area shape="rect" id="node40" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="211,1272,346,1299"/>
+<area shape="rect" id="node42" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="685,613,785,640"/>
+<area shape="rect" id="node45" href="$lighting__bonus_8h.html#af0db0e12e85b772afed9cdfac4c33437" title="Create specular lighting." alt="" coords="435,1525,565,1552"/>
+<area shape="rect" id="node46" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="679,1095,790,1121"/>
+<area shape="rect" id="node3" href="$camera_8h.html#a283b142012bbcea27c39f49e270d8780" title="Initializes camera parameters." alt="" coords="453,309,547,336"/>
+<area shape="rect" id="node4" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="221,157,336,184"/>
+<area shape="rect" id="node5" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="409,208,591,235"/>
+<area shape="rect" id="node8" href="$render__mouse__bonus_8c.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="409,5,591,32"/>
+<area shape="rect" id="node11" href="$render_8h.html#ab974018238f1a6e6a86b44e139f5d672" title="Moves the camera with a keypress." alt="" coords="414,107,586,133"/>
+<area shape="rect" id="node15" href="$hit__manager__bonus_8h.html#a049d2a1135caa57d1d9ed8845f229620" title="Determines whether the potential hits are accurate." alt="" coords="209,512,349,539"/>
+<area shape="rect" id="node17" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="206,816,351,843"/>
+<area shape="rect" id="node19" href="$hit__manager_8h.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="209,664,349,691"/>
+<area shape="rect" id="node21" href="$hit__manager_8h.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="206,917,351,944"/>
+<area shape="rect" id="node23" href="$hit__manager__bonus_8h.html#aee5824df7f0e0c2698306f49f9a1c790" title="Calculates potential hit of cone cap." alt="" coords="225,360,332,387"/>
+<area shape="rect" id="node24" href="$hit__manager_8h.html#af2540784b9e01fbdfeacb544ea2c169a" title="Calculates the hit point of the ray with the cylinder cap." alt="" coords="225,411,332,437"/>
+<area shape="rect" id="node25" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="223,461,335,488"/>
+<area shape="rect" id="node28" href="$render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="432,1601,568,1628"/>
+<area shape="rect" id="node31" href="$parse__bonus_8c.html#a65db4c46c2af2d9b570687b3a1458f15" title=" " alt="" coords="196,1373,361,1400"/>
+<area shape="rect" id="node33" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="219,1069,338,1096"/>
+<area shape="rect" id="node36" href="$render__bonus_8h.html#af5fa16c9ea3d6e6884604009e31c83de" title="Constructs a random sample ray for anti&#45;aliasing." alt="" coords="437,1424,563,1451"/>
+<area shape="rect" id="node38" href="$hit__manager__bonus_8h.html#abc28bafc00495161db9de547a9461cb1" title="Transforms the Cartesian coordinates of a hit point on a cone wall into 2D texture UV&#45;coordinates in ..." alt="" coords="427,867,573,893"/>
+<area shape="rect" id="node39" href="$hit__manager__bonus_8h.html#aeb33f439a0d2093bdbcca7468e2e78b4" title="Transforms the Cartesian coordinates of a hit point on a cylinder wall into 2D texture UV&#45;coordinates..." alt="" coords="427,917,573,944"/>
+<area shape="rect" id="node41" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="5,1272,148,1299"/>
+<area shape="rect" id="node43" href="$hit__manager__bonus_8h.html#a5daa3987cf663970a55423c4d47d2d64" title="Check if the ray actually hit the cone cap." alt="" coords="436,512,564,539"/>
+<area shape="rect" id="node44" href="$hit__manager_8h.html#a98c590ac9074c10dc7e18cfd033c0b9b" title="Checks if the ray actually hit the cylinder cap." alt="" coords="436,563,564,589"/>
+<area shape="rect" id="node47" href="$lighting_8h.html#ae50a6e06925c764b3caad3f805bc4c8a" title="Create diffuse lighting." alt="" coords="441,1171,559,1197"/>
+<area shape="rect" id="node48" href="$lighting_8h.html#a382179d88a3a971b5853322389bacf04" title="Determines whether the point of intersection lies in a shadow regarding the current light source." alt="" coords="447,1069,553,1096"/>
+<area shape="rect" id="node49" href="$parse_8h.html#a64877aac0d88b33e1bb87b3c9a3496dc" title="Parse plane line." alt="" coords="441,1120,559,1147"/>
+<area shape="rect" id="node50" href="$parse__bonus_8h.html#a672a980c7d877d0d42971cd811541bd4" title="Parse plane line." alt="" coords="419,1272,581,1299"/>
 </map>

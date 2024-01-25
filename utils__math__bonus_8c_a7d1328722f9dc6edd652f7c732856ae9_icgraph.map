@@ -1,21 +1,21 @@
 <map id="ft_degree_to_radian" name="ft_degree_to_radian">
-<area shape="rect" id="node1" title="Transforms degrees into radian." alt="" coords="960,107,1111,133"/>
-<area shape="rect" id="node2" href="$render_8h.html#aafd27cf2b06772ec739aa2e97164d8b6" title="Changes the camera FOV with a keypress." alt="" coords="743,5,899,32"/>
-<area shape="rect" id="node3" href="$mat4_8h.html#a96153e828811e816c64e7d0e19fcf654" title="Creates a 4x4 transformation matrix for x&#45;axis rotation." alt="" coords="731,107,912,133"/>
-<area shape="rect" id="node10" href="$mat4_8h.html#a3f33a47cb6e2a560791c9be852f27b35" title="Creates a 4x4 transformation matrix for y&#45;axis rotation." alt="" coords="731,56,912,83"/>
-<area shape="rect" id="node12" href="$mat4_8h.html#a104dcf3f153038933ffa4f22b3d192a6" title="Creates a 4x4 transformation matrix for z&#45;axis rotation." alt="" coords="731,157,911,184"/>
-<area shape="rect" id="node14" href="$parse_8h.html#a39197067937cd8880453eed92148ee31" title="Parse camera line." alt="" coords="756,208,887,235"/>
-<area shape="rect" id="node4" href="$mat4__vec3_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" title="Rotates a 3D vector around the x&#45;axis." alt="" coords="538,107,669,133"/>
-<area shape="rect" id="node5" href="$render_8h.html#a492035e87e08c0c7a9e93a3fe4605cc2" title="Rotates the camera with a keypress." alt="" coords="309,56,462,83"/>
-<area shape="rect" id="node6" href="$render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed" title="Rotates a 3D vector with a keypress." alt="" coords="311,107,459,133"/>
-<area shape="rect" id="node9" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="295,157,476,184"/>
-<area shape="rect" id="node7" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="108,132,247,159"/>
-<area shape="rect" id="node8" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="116,81,239,108"/>
-<area shape="rect" id="node11" href="$mat4__vec3_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46" title="Rotates a 3D vector around the y&#45;axis." alt="" coords="538,56,669,83"/>
-<area shape="rect" id="node13" href="$mat4__vec3_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc" title="Rotates a 3D vector around the z&#45;axis." alt="" coords="539,157,668,184"/>
-<area shape="rect" id="node15" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="547,208,659,235"/>
-<area shape="rect" id="node19" href="$parse__bonus_8h.html#a4ce5cad477407308f911966a9446f560" title="Dispatcher for different parsing functions." alt="" coords="524,259,683,285"/>
-<area shape="rect" id="node16" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="332,233,439,260"/>
-<area shape="rect" id="node17" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="127,233,228,260"/>
-<area shape="rect" id="node18" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,233,60,260"/>
+<area shape="rect" id="node1" title="Transforms degrees into radian." alt="" coords="912,157,1063,184"/>
+<area shape="rect" id="node2" href="$render_8h.html#aafd27cf2b06772ec739aa2e97164d8b6" title="Changes the camera FOV with a keypress." alt="" coords="708,31,864,57"/>
+<area shape="rect" id="node4" href="$parse_8h.html#a39197067937cd8880453eed92148ee31" title="Parse camera line." alt="" coords="721,208,851,235"/>
+<area shape="rect" id="node10" href="$utils_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" title="Rotates a 3D vector around the x&#45;axis." alt="" coords="721,157,851,184"/>
+<area shape="rect" id="node18" href="$utils_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46" title="Rotates a 3D vector around the y&#45;axis." alt="" coords="721,107,851,133"/>
+<area shape="rect" id="node19" href="$utils_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc" title="Rotates a 3D vector around the z&#45;axis." alt="" coords="721,259,851,285"/>
+<area shape="rect" id="node3" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="304,5,419,32"/>
+<area shape="rect" id="node5" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="513,208,625,235"/>
+<area shape="rect" id="node9" href="$parse__bonus_8h.html#a4ce5cad477407308f911966a9446f560" title="Dispatcher for different parsing functions." alt="" coords="490,259,649,285"/>
+<area shape="rect" id="node6" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="308,233,415,260"/>
+<area shape="rect" id="node7" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="125,233,227,260"/>
+<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,233,60,260"/>
+<area shape="rect" id="node11" href="$render_8h.html#a492035e87e08c0c7a9e93a3fe4605cc2" title="Rotates the camera with a keypress." alt="" coords="493,56,646,83"/>
+<area shape="rect" id="node12" href="$render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed" title="Rotates a 3D vector with a keypress." alt="" coords="495,107,643,133"/>
+<area shape="rect" id="node17" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="479,157,660,184"/>
+<area shape="rect" id="node13" href="$render__bonus_8h.html#a81fa5494e17be06ab12b226ff9dd7c2a" title="Manipulates the active cone." alt="" coords="303,56,420,83"/>
+<area shape="rect" id="node15" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="292,107,431,133"/>
+<area shape="rect" id="node16" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="300,157,423,184"/>
+<area shape="rect" id="node14" href="$render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="108,107,244,133"/>
 </map>

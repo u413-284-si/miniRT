@@ -1,7 +1,7 @@
 <map id="ft_option_clear" name="ft_option_clear">
 <area shape="rect" id="node1" title="Clears bit in bit field." alt="" coords="940,107,1059,133"/>
 <area shape="rect" id="node2" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="723,5,879,32"/>
-<area shape="rect" id="node3" href="$render__keyhook__camera__bonus_8c.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="744,56,859,83"/>
+<area shape="rect" id="node3" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="744,56,859,83"/>
 <area shape="rect" id="node4" href="$render__mouse__bonus_8c.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="711,107,892,133"/>
 <area shape="rect" id="node8" href="$render_8h.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="731,157,872,184"/>
 <area shape="rect" id="node9" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="735,208,867,235"/>

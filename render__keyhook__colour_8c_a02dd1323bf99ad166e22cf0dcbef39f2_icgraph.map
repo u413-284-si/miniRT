@@ -1,9 +1,11 @@
 <map id="ft_static_interpolate" name="ft_static_interpolate">
-<area shape="rect" id="node1" title="Interpolates between two colours while keeping track of progress." alt="" coords="416,107,568,133"/>
-<area shape="rect" id="node2" href="$render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f" title="Changes the colour with a keypress." alt="" coords="195,107,368,133"/>
-<area shape="rect" id="node3" href="$render_8h.html#a597d35b7bd3aa66272e3c2ff3a1e8f78" title="Manipulates the ambient light." alt="" coords="6,5,146,32"/>
-<area shape="rect" id="node4" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="7,56,145,83"/>
-<area shape="rect" id="node5" href="$render_8h.html#a16d57d13773703e93274caef6b5ccde1" title="Manipulates a light source." alt="" coords="5,107,147,133"/>
-<area shape="rect" id="node6" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="15,157,137,184"/>
-<area shape="rect" id="node7" href="$render_8h.html#a3af9cb325ad292f339446b63917a9ea2" title="Manipulates the active sphere." alt="" coords="11,208,141,235"/>
+<area shape="rect" id="node1" title="Interpolates between two colours while keeping track of progress." alt="" coords="600,132,752,159"/>
+<area shape="rect" id="node2" href="$render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f" title="Changes the colour with a keypress." alt="" coords="379,132,552,159"/>
+<area shape="rect" id="node3" href="$render_8h.html#a597d35b7bd3aa66272e3c2ff3a1e8f78" title="Manipulates the ambient light." alt="" coords="190,5,330,32"/>
+<area shape="rect" id="node4" href="$render__bonus_8h.html#a81fa5494e17be06ab12b226ff9dd7c2a" title="Manipulates the active cone." alt="" coords="201,56,319,83"/>
+<area shape="rect" id="node6" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="191,107,329,133"/>
+<area shape="rect" id="node7" href="$render_8h.html#a16d57d13773703e93274caef6b5ccde1" title="Manipulates a light source." alt="" coords="189,157,331,184"/>
+<area shape="rect" id="node8" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="199,208,321,235"/>
+<area shape="rect" id="node9" href="$render_8h.html#a3af9cb325ad292f339446b63917a9ea2" title="Manipulates the active sphere." alt="" coords="195,259,325,285"/>
+<area shape="rect" id="node5" href="$render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="5,157,141,184"/>
 </map>

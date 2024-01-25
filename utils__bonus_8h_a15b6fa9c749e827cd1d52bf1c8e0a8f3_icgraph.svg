@@ -66,7 +66,7 @@ var sectionId = 'dynsection-2';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="utils__bonus_8h.html#a4b67c731c02a7ba35f27473295bfb753" target="_top" xlink:title="Performs a rotation of a given vector around an axis by a given angle.">
+<g id="a_node2"><a xlink:href="utils_8h.html#a4b67c731c02a7ba35f27473295bfb753" target="_top" xlink:title="Performs a rotation of a given vector around an axis by a given angle.">
 <polygon fill="none" stroke="black" points="2164,-47.5 2164,-66.5 2264,-66.5 2264,-47.5 2164,-47.5"/>
 <text text-anchor="middle" x="2214" y="-54.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_quaternion_rot</text>
 </a>

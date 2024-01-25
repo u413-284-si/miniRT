@@ -1,8 +1,9 @@
 <map id="inc/texture_bonus.h" name="inc/texture_bonus.h">
-<area shape="rect" id="node1" title=" " alt="" coords="286,5,437,32"/>
-<area shape="rect" id="node2" href="$lighting__bonus_8h.html" title=" " alt="" coords="111,87,263,114"/>
-<area shape="rect" id="node5" href="$texture__bonus_8c.html" title=" " alt="" coords="287,87,436,114"/>
-<area shape="rect" id="node6" href="$utils__cylinder__bonus_8c.html" title=" " alt="" coords="461,80,593,121"/>
-<area shape="rect" id="node3" href="$scene__light__bonus_8c.html" title=" " alt="" coords="5,177,181,203"/>
-<area shape="rect" id="node4" href="$scene__reflection__bonus_8c.html" title=" " alt="" coords="206,169,357,211"/>
+<area shape="rect" id="node1" title=" " alt="" coords="339,5,490,32"/>
+<area shape="rect" id="node2" href="$lighting__bonus_8h.html" title=" " alt="" coords="164,87,316,114"/>
+<area shape="rect" id="node6" href="$texture__bonus_8c.html" title=" " alt="" coords="340,87,489,114"/>
+<area shape="rect" id="node7" href="$utils__cylinder__bonus_8c.html" title=" " alt="" coords="514,80,646,121"/>
+<area shape="rect" id="node3" href="$ray__bonus_8c.html" title=" " alt="" coords="5,177,128,203"/>
+<area shape="rect" id="node4" href="$scene__light__bonus_8c.html" title=" " alt="" coords="152,177,328,203"/>
+<area shape="rect" id="node5" href="$scene__reflection__bonus_8c.html" title=" " alt="" coords="353,169,503,211"/>
 </map>

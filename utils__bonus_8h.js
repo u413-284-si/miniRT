@@ -16,5 +16,8 @@ var utils__bonus_8h =
     [ "ft_random_float", "utils__bonus_8h.html#ad2506d7ff542ccee53d1ff751d7ed217", null ],
     [ "ft_random_float_within", "utils__bonus_8h.html#a37e0b6417f5f7ab2acab72c70ddf92e4", null ],
     [ "ft_solve", "utils__bonus_8h.html#ae65513c75ce8a8538c22393e0af3ab1f", null ],
-    [ "ft_surrounds", "utils__bonus_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa", null ]
+    [ "ft_surrounds", "utils__bonus_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa", null ],
+    [ "ft_vec3_rotate_x", "utils__bonus_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0", null ],
+    [ "ft_vec3_rotate_y", "utils__bonus_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46", null ],
+    [ "ft_vec3_rotate_z", "utils__bonus_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc", null ]
 ];

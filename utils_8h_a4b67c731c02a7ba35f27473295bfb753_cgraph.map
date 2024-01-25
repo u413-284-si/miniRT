@@ -1,0 +1,5 @@
+<map id="ft_quaternion_rot" name="ft_quaternion_rot">
+<area shape="rect" id="node1" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="5,31,139,57"/>
+<area shape="rect" id="node2" href="$utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" title="Performs quaternion multiplication." alt="" coords="187,5,332,32"/>
+<area shape="rect" id="node3" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="204,56,315,83"/>
+</map>

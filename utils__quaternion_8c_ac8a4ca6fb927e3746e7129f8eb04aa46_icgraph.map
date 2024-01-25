@@ -1,0 +1,11 @@
+<map id="ft_vec3_rotate_y" name="ft_vec3_rotate_y">
+<area shape="rect" id="node1" title="Rotates a 3D vector around the y&#45;axis." alt="" coords="605,81,736,108"/>
+<area shape="rect" id="node2" href="$render_8h.html#a492035e87e08c0c7a9e93a3fe4605cc2" title="Rotates the camera with a keypress." alt="" coords="390,19,543,45"/>
+<area shape="rect" id="node4" href="$render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed" title="Rotates a 3D vector with a keypress." alt="" coords="393,81,541,108"/>
+<area shape="rect" id="node9" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="376,132,557,159"/>
+<area shape="rect" id="node3" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="201,5,316,32"/>
+<area shape="rect" id="node5" href="$render__bonus_8h.html#a81fa5494e17be06ab12b226ff9dd7c2a" title="Manipulates the active cone." alt="" coords="200,56,317,83"/>
+<area shape="rect" id="node7" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="189,107,328,133"/>
+<area shape="rect" id="node8" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="197,157,320,184"/>
+<area shape="rect" id="node6" href="$render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="5,107,141,133"/>
+</map>

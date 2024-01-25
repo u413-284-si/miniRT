@@ -106,8 +106,6 @@ Include dependency graph for render_keyhook_hittable.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a58cfb6d04ac9120cc228cbc5411b2005"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__keyhook__hittable_8c.html#a58cfb6d04ac9120cc228cbc5411b2005">ft_manip_hittable</a> (int key, <a class="el" href="structt__hittable.html">t_hittable</a> *hittable, float inc)</td></tr>
-<tr class="separator:a58cfb6d04ac9120cc228cbc5411b2005"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3af9cb325ad292f339446b63917a9ea2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__keyhook__hittable_8c.html#a3af9cb325ad292f339446b63917a9ea2">ft_manip_sphere</a> (int key, <a class="el" href="structt__sphere.html">t_sphere</a> *sp, float inc)</td></tr>
 <tr class="separator:a3af9cb325ad292f339446b63917a9ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b397fc2e0dd418d497c05b3dff894f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__keyhook__hittable_8c.html#a2b397fc2e0dd418d497c05b3dff894f1">ft_manip_plane</a> (int key, <a class="el" href="structt__plane.html">t_plane</a> *pl, float inc)</td></tr>
@@ -158,25 +156,21 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="render__keyhook__hittable_8c_source.html#l00045">45</a> of file <a class="el" href="render__keyhook__hittable_8c_source.html">render_keyhook_hittable.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (key &gt;= XK_0 &amp;&amp; key &lt;= XK_9)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f">ft_keyhook_change_col</a>(key, &amp;cy-&gt;<a class="code" href="structt__cylinder.html#ade3aae23d19802dca4a29ac9065742a9">colour</a>, inc);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key &gt;= XK_Left &amp;&amp; key &lt;= XK_Down)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed">ft_keyhook_rot_vec</a>(key, &amp;cy-&gt;<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>, inc);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_r || key == XK_f)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="render_8h.html#a7b262237fcbe352cb4ef79235666956b">ft_keyhook_inc_dec</a>(key, &amp;cy-&gt;<a class="code" href="structt__cylinder.html#a4788d82c901b9367dd5c0daff8a7616b">r</a>, <a class="code" href="mini_r_t__config_8h.html#a2124ca619b2968b0cc8429e2a7036869">FLOAT_MAX</a>, inc);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_t || key == XK_g)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="render_8h.html#a7b262237fcbe352cb4ef79235666956b">ft_keyhook_inc_dec</a>(key, &amp;cy-&gt;<a class="code" href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">h</a>, <a class="code" href="mini_r_t__config_8h.html#a2124ca619b2968b0cc8429e2a7036869">FLOAT_MAX</a>, inc);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="render_8h.html#aa620096ce57b0280c8e9162eff12a938">ft_keyhook_mv_point</a>(key, &amp;cy-&gt;<a class="code" href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">centre</a>, inc);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        cy-&gt;<a class="code" href="structt__cylinder.html#a2df840edc410ea9564f08b4e8ada590a">cap1</a> = <a class="code" href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">centre</a>,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>, -cy-&gt;<a class="code" href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">h</a> * 0.5));</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        cy-&gt;<a class="code" href="structt__cylinder.html#a7b26d2375d2cc500c5d7cef9d849cdab">cap2</a> = <a class="code" href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">centre</a>,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>, cy-&gt;<a class="code" href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">h</a> * 0.5));</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="render__keyhook__hittable_8c_source.html#l00048">48</a> of file <a class="el" href="render__keyhook__hittable_8c_source.html">render_keyhook_hittable.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (key &gt;= XK_0 &amp;&amp; key &lt;= XK_9)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f">ft_keyhook_change_col</a>(key, &amp;cy-&gt;<a class="code" href="structt__cylinder.html#ade3aae23d19802dca4a29ac9065742a9">colour</a>, inc));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key &gt;= XK_Left &amp;&amp; key &lt;= XK_Down)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed">ft_keyhook_rot_vec</a>(key, &amp;cy-&gt;<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>, inc);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_r || key == XK_f)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="render_8h.html#a7b262237fcbe352cb4ef79235666956b">ft_keyhook_inc_dec</a>(key, &amp;cy-&gt;<a class="code" href="structt__cylinder.html#a4788d82c901b9367dd5c0daff8a7616b">r</a>, <a class="code" href="mini_r_t__config_8h.html#a2124ca619b2968b0cc8429e2a7036869">FLOAT_MAX</a>, inc);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_t || key == XK_g)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="render_8h.html#a7b262237fcbe352cb4ef79235666956b">ft_keyhook_inc_dec</a>(key, &amp;cy-&gt;<a class="code" href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">h</a>, <a class="code" href="mini_r_t__config_8h.html#a2124ca619b2968b0cc8429e2a7036869">FLOAT_MAX</a>, inc);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="render_8h.html#aa620096ce57b0280c8e9162eff12a938">ft_keyhook_mv_point</a>(key, &amp;cy-&gt;<a class="code" href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">centre</a>, inc);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    cy-&gt;<a class="code" href="structt__cylinder.html#a2df840edc410ea9564f08b4e8ada590a">cap1</a> = <a class="code" href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">centre</a>, <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>, -cy-&gt;<a class="code" href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">h</a> * 0.5));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    cy-&gt;<a class="code" href="structt__cylinder.html#a7b26d2375d2cc500c5d7cef9d849cdab">cap2</a> = <a class="code" href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">centre</a>, <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(cy-&gt;<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>, cy-&gt;<a class="code" href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">h</a> * 0.5));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 <div class="ttc" id="amini_r_t__config_8h_html_a2124ca619b2968b0cc8429e2a7036869"><div class="ttname"><a href="mini_r_t__config_8h.html#a2124ca619b2968b0cc8429e2a7036869">FLOAT_MAX</a></div><div class="ttdeci">#define FLOAT_MAX</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config_8h_source.html#l00031">miniRT_config.h:31</a></div></div>
 <div class="ttc" id="arender_8h_html_a19285d1e97e1ac6d6d0708ecceb354ed"><div class="ttname"><a href="render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed">ft_keyhook_rot_vec</a></div><div class="ttdeci">void ft_keyhook_rot_vec(int key, t_vec3 *vector, float inc)</div><div class="ttdoc">Rotates a 3D vector with a keypress.</div><div class="ttdef"><b>Definition:</b> <a href="render__keyhook__utils_8c_source.html#l00049">render_keyhook_utils.c:49</a></div></div>
 <div class="ttc" id="arender_8h_html_a7b262237fcbe352cb4ef79235666956b"><div class="ttname"><a href="render_8h.html#a7b262237fcbe352cb4ef79235666956b">ft_keyhook_inc_dec</a></div><div class="ttdeci">void ft_keyhook_inc_dec(int key, float *value, float max, float inc)</div><div class="ttdoc">Increases or decreases a value with a keypress.</div><div class="ttdef"><b>Definition:</b> <a href="render__keyhook__utils_8c_source.html#l00015">render_keyhook_utils.c:15</a></div></div>
@@ -194,84 +188,13 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__keyhook__hittable_8c_a2737927d8cc8ff5dc3bd94b3e11fc1a9_cgraph.svg" width="100%" height="573"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__keyhook__hittable_8c_a2737927d8cc8ff5dc3bd94b3e11fc1a9_cgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="render__keyhook__hittable_8c_a2737927d8cc8ff5dc3bd94b3e11fc1a9_icgraph.svg" width="334" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a58cfb6d04ac9120cc228cbc5411b2005"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58cfb6d04ac9120cc228cbc5411b2005">&#9670;&nbsp;</a></span>ft_manip_hittable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ft_manip_hittable </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structt__hittable.html">t_hittable</a> *&#160;</td>
-          <td class="paramname"><em>hittable</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>inc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Manipulates the active hittable. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Keycode of the pressed key. </td></tr>
-    <tr><td class="paramname">hittable</td><td>Pointer to hittable struct. </td></tr>
-    <tr><td class="paramname">inc</td><td>Increment value. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="render__keyhook__hittable_8c_source.html#l00015">15</a> of file <a class="el" href="render__keyhook__hittable_8c_source.html">render_keyhook_hittable.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> (hittable-&gt;<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a>)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="render__keyhook__hittable_8c.html#a3af9cb325ad292f339446b63917a9ea2">ft_manip_sphere</a>(key, &amp;hittable-&gt;<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#adc9375daac853aada5acdd08f407adf0">sp</a>, inc);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hittable-&gt;<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a>)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="render__keyhook__hittable_8c.html#a2b397fc2e0dd418d497c05b3dff894f1">ft_manip_plane</a>(key, &amp;hittable-&gt;<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#aef96f2ffd702dc2a112eb2d95ac0aa69">pl</a>, inc);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hittable-&gt;<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a>)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="render__keyhook__hittable_8c.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9">ft_manip_cylinder</a>(key, &amp;hittable-&gt;<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#af16d3c8c94f7085273d02d0cf2758e56">cy</a>, inc);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a></div><div class="ttdeci">@ PLANE</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00107">entities.h:107</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a></div><div class="ttdeci">@ CYLINDER</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00108">entities.h:108</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a></div><div class="ttdeci">@ SPHERE</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00106">entities.h:106</a></div></div>
-<div class="ttc" id="arender__keyhook__hittable_8c_html_a2737927d8cc8ff5dc3bd94b3e11fc1a9"><div class="ttname"><a href="render__keyhook__hittable_8c.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9">ft_manip_cylinder</a></div><div class="ttdeci">void ft_manip_cylinder(int key, t_cylinder *cy, float inc)</div><div class="ttdoc">Manipulates the active cylinder.</div><div class="ttdef"><b>Definition:</b> <a href="render__keyhook__hittable_8c_source.html#l00045">render_keyhook_hittable.c:45</a></div></div>
-<div class="ttc" id="arender__keyhook__hittable_8c_html_a2b397fc2e0dd418d497c05b3dff894f1"><div class="ttname"><a href="render__keyhook__hittable_8c.html#a2b397fc2e0dd418d497c05b3dff894f1">ft_manip_plane</a></div><div class="ttdeci">void ft_manip_plane(int key, t_plane *pl, float inc)</div><div class="ttdoc">Manipulates the active plane.</div><div class="ttdef"><b>Definition:</b> <a href="render__keyhook__hittable_8c_source.html#l00035">render_keyhook_hittable.c:35</a></div></div>
-<div class="ttc" id="arender__keyhook__hittable_8c_html_a3af9cb325ad292f339446b63917a9ea2"><div class="ttname"><a href="render__keyhook__hittable_8c.html#a3af9cb325ad292f339446b63917a9ea2">ft_manip_sphere</a></div><div class="ttdeci">void ft_manip_sphere(int key, t_sphere *sp, float inc)</div><div class="ttdoc">Manipulates the active sphere.</div><div class="ttdef"><b>Definition:</b> <a href="render__keyhook__hittable_8c_source.html#l00025">render_keyhook_hittable.c:25</a></div></div>
-<div class="ttc" id="astructt__hittable_html_a118094f64bbd3835838ba79ccccaaa2d"><div class="ttname"><a href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">t_hittable::params</a></div><div class="ttdeci">t_shape params</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00144">entities.h:144</a></div></div>
-<div class="ttc" id="astructt__hittable_html_aab17f2f3d2a1849cc867d31899d451c8"><div class="ttname"><a href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">t_hittable::type</a></div><div class="ttdeci">t_type type</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00143">entities.h:143</a></div></div>
-<div class="ttc" id="auniont__shape_html_adc9375daac853aada5acdd08f407adf0"><div class="ttname"><a href="uniont__shape.html#adc9375daac853aada5acdd08f407adf0">t_shape::sp</a></div><div class="ttdeci">t_sphere sp</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00128">entities.h:128</a></div></div>
-<div class="ttc" id="auniont__shape_html_aef96f2ffd702dc2a112eb2d95ac0aa69"><div class="ttname"><a href="uniont__shape.html#aef96f2ffd702dc2a112eb2d95ac0aa69">t_shape::pl</a></div><div class="ttdeci">t_plane pl</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00129">entities.h:129</a></div></div>
-<div class="ttc" id="auniont__shape_html_af16d3c8c94f7085273d02d0cf2758e56"><div class="ttname"><a href="uniont__shape.html#af16d3c8c94f7085273d02d0cf2758e56">t_shape::cy</a></div><div class="ttdeci">t_cylinder cy</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00130">entities.h:130</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__keyhook__hittable_8c_a58cfb6d04ac9120cc228cbc5411b2005_cgraph.svg" width="100%" height="571"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -319,22 +242,22 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="render__keyhook__hittable_8c_source.html#l00035">35</a> of file <a class="el" href="render__keyhook__hittable_8c_source.html">render_keyhook_hittable.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (key &gt;= XK_0 &amp;&amp; key &lt;= XK_9)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f">ft_keyhook_change_col</a>(key, &amp;pl-&gt;<a class="code" href="structt__plane.html#ade3aae23d19802dca4a29ac9065742a9">colour</a>, inc);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key &gt;= XK_Left &amp;&amp; key &lt;= XK_Down)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed">ft_keyhook_rot_vec</a>(key, &amp;pl-&gt;<a class="code" href="structt__plane.html#ad23ad9cbdcef953410f40c54e85ca1df">normal</a>, inc);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="render_8h.html#aa620096ce57b0280c8e9162eff12a938">ft_keyhook_mv_point</a>(key, &amp;pl-&gt;<a class="code" href="structt__plane.html#a808be608283867f25494f82d235e9570">point</a>, inc);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="render__keyhook__hittable_8c_source.html#l00038">38</a> of file <a class="el" href="render__keyhook__hittable_8c_source.html">render_keyhook_hittable.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (key &gt;= XK_0 &amp;&amp; key &lt;= XK_9)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f">ft_keyhook_change_col</a>(key, &amp;pl-&gt;<a class="code" href="structt__plane.html#ade3aae23d19802dca4a29ac9065742a9">colour</a>, inc);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key &gt;= XK_Left &amp;&amp; key &lt;= XK_Down)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed">ft_keyhook_rot_vec</a>(key, &amp;pl-&gt;<a class="code" href="structt__plane.html#ad23ad9cbdcef953410f40c54e85ca1df">normal</a>, inc);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="render_8h.html#aa620096ce57b0280c8e9162eff12a938">ft_keyhook_mv_point</a>(key, &amp;pl-&gt;<a class="code" href="structt__plane.html#a808be608283867f25494f82d235e9570">point</a>, inc);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 <div class="ttc" id="astructt__plane_html_a808be608283867f25494f82d235e9570"><div class="ttname"><a href="structt__plane.html#a808be608283867f25494f82d235e9570">t_plane::point</a></div><div class="ttdeci">t_vec3 point</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00069">entities.h:69</a></div></div>
 <div class="ttc" id="astructt__plane_html_ad23ad9cbdcef953410f40c54e85ca1df"><div class="ttname"><a href="structt__plane.html#ad23ad9cbdcef953410f40c54e85ca1df">t_plane::normal</a></div><div class="ttdeci">t_vec3 normal</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00070">entities.h:70</a></div></div>
 <div class="ttc" id="astructt__plane_html_ade3aae23d19802dca4a29ac9065742a9"><div class="ttname"><a href="structt__plane.html#ade3aae23d19802dca4a29ac9065742a9">t_plane::colour</a></div><div class="ttdeci">t_colour colour</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00071">entities.h:71</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__keyhook__hittable_8c_a2b397fc2e0dd418d497c05b3dff894f1_cgraph.svg" width="100%" height="532"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__keyhook__hittable_8c_a2b397fc2e0dd418d497c05b3dff894f1_cgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
@@ -388,15 +311,15 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="render__keyhook__hittable_8c_source.html#l00025">25</a> of file <a class="el" href="render__keyhook__hittable_8c_source.html">render_keyhook_hittable.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (key &gt;= XK_0 &amp;&amp; key &lt;= XK_9)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f">ft_keyhook_change_col</a>(key, &amp;sp-&gt;<a class="code" href="structt__sphere.html#ade3aae23d19802dca4a29ac9065742a9">colour</a>, inc);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_r || key == XK_f)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="render_8h.html#a7b262237fcbe352cb4ef79235666956b">ft_keyhook_inc_dec</a>(key, &amp;sp-&gt;<a class="code" href="structt__sphere.html#a4788d82c901b9367dd5c0daff8a7616b">r</a>, <a class="code" href="mini_r_t__config_8h.html#a2124ca619b2968b0cc8429e2a7036869">FLOAT_MAX</a>, inc);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="render_8h.html#aa620096ce57b0280c8e9162eff12a938">ft_keyhook_mv_point</a>(key, &amp;sp-&gt;<a class="code" href="structt__sphere.html#a0f188ccfa73fd29ad62023c50c7d2a5f">centre</a>, inc);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="render__keyhook__hittable_8c_source.html#l00028">28</a> of file <a class="el" href="render__keyhook__hittable_8c_source.html">render_keyhook_hittable.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (key &gt;= XK_0 &amp;&amp; key &lt;= XK_9)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f">ft_keyhook_change_col</a>(key, &amp;sp-&gt;<a class="code" href="structt__sphere.html#ade3aae23d19802dca4a29ac9065742a9">colour</a>, inc);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == XK_r || key == XK_f)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="render_8h.html#a7b262237fcbe352cb4ef79235666956b">ft_keyhook_inc_dec</a>(key, &amp;sp-&gt;<a class="code" href="structt__sphere.html#a4788d82c901b9367dd5c0daff8a7616b">r</a>, <a class="code" href="mini_r_t__config_8h.html#a2124ca619b2968b0cc8429e2a7036869">FLOAT_MAX</a>, inc);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="render_8h.html#aa620096ce57b0280c8e9162eff12a938">ft_keyhook_mv_point</a>(key, &amp;sp-&gt;<a class="code" href="structt__sphere.html#a0f188ccfa73fd29ad62023c50c7d2a5f">centre</a>, inc);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 <div class="ttc" id="astructt__sphere_html_a0f188ccfa73fd29ad62023c50c7d2a5f"><div class="ttname"><a href="structt__sphere.html#a0f188ccfa73fd29ad62023c50c7d2a5f">t_sphere::centre</a></div><div class="ttdeci">t_vec3 centre</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00056">entities.h:56</a></div></div>
 <div class="ttc" id="astructt__sphere_html_a4788d82c901b9367dd5c0daff8a7616b"><div class="ttname"><a href="structt__sphere.html#a4788d82c901b9367dd5c0daff8a7616b">t_sphere::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00057">entities.h:57</a></div></div>
 <div class="ttc" id="astructt__sphere_html_ade3aae23d19802dca4a29ac9065742a9"><div class="ttname"><a href="structt__sphere.html#ade3aae23d19802dca4a29ac9065742a9">t_sphere::colour</a></div><div class="ttdeci">t_colour colour</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00058">entities.h:58</a></div></div>

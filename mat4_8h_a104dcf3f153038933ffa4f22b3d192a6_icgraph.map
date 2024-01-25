@@ -1,4 +1,0 @@
-<map id="ft_mat4_create_rotate_z" name="ft_mat4_create_rotate_z">
-<area shape="rect" id="node1" title="Creates a 4x4 transformation matrix for z&#45;axis rotation." alt="" coords="183,5,363,32"/>
-<area shape="rect" id="node2" href="$mat4__vec3_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc" title="Rotates a 3D vector around the z&#45;axis." alt="" coords="5,5,135,32"/>
-</map>

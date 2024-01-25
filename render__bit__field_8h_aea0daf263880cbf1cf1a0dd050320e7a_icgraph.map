@@ -5,7 +5,7 @@
 <area shape="rect" id="node4" href="$render__loop__mlx__bonus_8c.html#aa3b9ed7edeaf796e06eeceb1874c8fbf" title="Wrapper around mlx_loop_end()." alt="" coords="335,208,433,235"/>
 <area shape="rect" id="node7" href="$render_8h.html#a83e529cd9901f21912824cd776d5aec9" title="Get the current increment value." alt="" coords="757,157,889,184"/>
 <area shape="rect" id="node8" href="$render__keyhook__press__bonus_8c.html#a367bbd1df5c5d7a6480f93589d027d12" title="Handles keypresses." alt="" coords="529,929,663,956"/>
-<area shape="rect" id="node10" href="$render__keyhook__camera__bonus_8c.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="765,259,880,285"/>
+<area shape="rect" id="node10" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="765,259,880,285"/>
 <area shape="rect" id="node11" href="$menu__put__bonus_8h.html#a364e2b6623c434fb926063c5e75699fa" title="Puts the options of renderer on the screen." alt="" coords="743,309,902,336"/>
 <area shape="rect" id="node12" href="$render_8h.html#a735dfeb13434c88e3b4a76990386763b" title="Puts the current menu page on the screen." alt="" coords="755,411,891,437"/>
 <area shape="rect" id="node13" href="$render_8h.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="525,385,667,412"/>

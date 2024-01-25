@@ -1,0 +1,7 @@
+<map id="ft_vec3_rotate_x" name="ft_vec3_rotate_x">
+<area shape="rect" id="node1" title="Rotates a 3D vector around the x&#45;axis." alt="" coords="5,31,136,57"/>
+<area shape="rect" id="node2" href="$utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9" title="Transforms degrees into radian." alt="" coords="184,5,335,32"/>
+<area shape="rect" id="node3" href="$utils__quaternion_8c.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="193,56,326,83"/>
+<area shape="rect" id="node4" href="$utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" title="Performs quaternion multiplication." alt="" coords="383,31,528,57"/>
+<area shape="rect" id="node5" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="400,81,511,108"/>
+</map>
