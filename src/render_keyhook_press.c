@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/25 00:58:16 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/25 00:59:48 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_manip_scene(int key, t_render *render)
 	inc = ft_get_increment(render->options);
 	if (ft_option_isset(render->options, O_MODE_SCENE))
 	{
-		if (render->active_hittable != -1)
+		if (render->active_hittable == -1)
 			return ;
 		else
 			ft_manip_hittable(key,
