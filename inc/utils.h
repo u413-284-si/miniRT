@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/18 23:50:46 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 18:35:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdbool.h>
 
 //home-grown libs
+# include "vec3.h"
 
 /* ====== MACROS ====== */
 
@@ -63,6 +64,18 @@ typedef struct s_equation
 	float	d2;
 }	t_equation;
 
+/**
+ * @brief Quaternion definition with
+ *
+ * @param scalar	Real component
+ * @param vector	Imaginary component consisting of three values/directions
+ */
+typedef struct s_quaternion
+{
+	float	scalar;
+	t_vec3	vector;
+}	t_quaternion;
+
 /* ====== FUNCTIONS ====== */
 
 /**
@@ -71,7 +84,7 @@ typedef struct s_equation
  * @param degrees 	Angle in degrees
  * @return float 	Angle in radians
  */
-float	ft_degree_to_radian(float degrees);
+float			ft_degree_to_radian(float degrees);
 
 /**
  * @brief Transforms radians into degrees
@@ -79,7 +92,7 @@ float	ft_degree_to_radian(float degrees);
  * @param radians 	Angle in radians
  * @return float 	Angle in degrees
  */
-float	ft_radian_to_degree(float radians);
+float			ft_radian_to_degree(float radians);
 
 /**
  * @brief Determines if value is inside the interval
@@ -89,7 +102,7 @@ float	ft_radian_to_degree(float radians);
  * @return true 		Value is inside the interval
  * @return false 		Value is outside the interval
  */
-bool	ft_contains(float x, t_interval interval);
+bool			ft_contains(float x, t_interval interval);
 
 /**
  * @brief Determines if value is surrounded by the interval
@@ -99,7 +112,7 @@ bool	ft_contains(float x, t_interval interval);
  * @return true 		Value is surrounded by the interval
  * @return false 		Value is not surrounded by the interval
  */
-bool	ft_surrounds(float x, t_interval interval);
+bool			ft_surrounds(float x, t_interval interval);
 
 /**
  * @brief Solves the given equation
@@ -115,7 +128,7 @@ bool	ft_surrounds(float x, t_interval interval);
  * @param eq 		Equation to solve
  * @return float
  */
-float	ft_solve(t_equation *eq);
+float			ft_solve(t_equation *eq);
 
 /**
  * @brief Checks if two floats are (almost) equal
@@ -127,15 +140,74 @@ float	ft_solve(t_equation *eq);
  * @return true 	If both floats are (almost) equal
  * @return false 	If they are not equal
  */
-bool	ft_nearly_equal_flt(float one, float two);
+bool			ft_nearly_equal_flt(float one, float two);
 
 /**
  * @brief Ensure that the returned float lies within the interval
- * 
+ *
  * @param x 			Float given
  * @param interval 		Interval with min and max value
- * @return float 
+ * @return float
  */
-float	ft_clamp(float x, t_interval interval);
+float			ft_clamp(float x, t_interval interval);
+
+/**
+ * @brief Performs quaternion multiplication
+ *
+ * @param q1	First quaternion
+ * @param q2 	Second quaternion
+ * @return t_quaternion
+ */
+t_quaternion	ft_quaternion_mult(t_quaternion q1, t_quaternion q2);
+
+/**
+ * @brief Performs a rotation of a given vector around an axis by
+ * a given angle
+ *
+ * The vector is transformed into a quaternion p. A quaternion q is
+ * created with the axis and the given angle. The inverse of q is
+ * calculated by setting the vector of q_inv as the vector of q
+ * scaled by -1.
+ * The rotation is effected by multiplying q with p, and thereafter
+ * the result with q_inv (lefthand multiplication).
+ * @param vec 		Vector to be rotated
+ * @param axis 		Axis around which to rotate
+ * @param angle 	Amount of rotation
+ * @return t_vec3
+ */
+t_vec3			ft_quaternion_rot(t_vec3 vec, t_vec3 axis, float angle);
+
+/**
+ * @brief Rotates a 3D vector around the x-axis.
+ *
+ * Constructs a quaternion and multiplies it with the vector.
+ * The vector gets normalized after the rotation.
+ * @param vec		3D vector.
+ * @param roll		Rotation angle in degrees.
+ * @return t_vec3	Rotated, normalized vector.
+ */
+t_vec3			ft_vec3_rotate_x(const t_vec3 vec, float roll);
+
+/**
+ * @brief Rotates a 3D vector around the y-axis.
+ *
+ * Constructs a quaternion and multiplies it with the vector.
+ * The vector gets normalized after the rotation.
+ * @param vec		3D vector.
+ * @param pitch		Rotation angle in degrees.
+ * @return t_vec3	Rotated, normalized vector.
+ */
+t_vec3			ft_vec3_rotate_y(const t_vec3 vec, float pitch);
+
+/**
+ * @brief Rotates a 3D vector around the z-axis.
+ *
+ * Constructs a quaternion and multiplies it with the vector.
+ * The vector gets normalized after the rotation.
+ * @param vec		3D vector.
+ * @param yaw		Rotation angle in degrees.
+ * @return t_vec3	Rotated, normalized vector.
+ */
+t_vec3			ft_vec3_rotate_z(const t_vec3 vec, float yaw);
 
 #endif
