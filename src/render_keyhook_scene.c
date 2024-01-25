@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_keyhook_select.c                            :+:      :+:    :+:   */
+/*   render_keyhook_scene.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 23:14:53 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 23:22:10 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/25 18:55:59 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,24 @@ void	ft_change_select(int key, t_render *render)
 	else if (ft_option_isset(render->options, O_MODE_LIGHT))
 		ft_change_active(key, render->scene.lsrc_count + 1,
 			&render->active_light);
+}
+
+void	ft_manip_scene(int key, t_render *render)
+{
+	float	inc;
+
+	inc = ft_get_increment(render->options);
+	if (ft_option_isset(render->options, O_MODE_SCENE))
+	{
+		if (render->active_hittable == -1)
+			return ;
+		else
+			ft_manip_hittable(key,
+				&render->scene.obj[render->active_hittable], inc);
+	}
+	else if (ft_option_isset(render->options, O_MODE_LIGHT))
+		ft_manip_light(key, &render->scene, &render->active_light, inc);
+	else if (ft_option_isset(render->options, O_MODE_CAM))
+		ft_manip_cam(key, &render->cam, inc, &render->options);
+	ft_option_set(&render->options, O_SCENE_CHANGED);
 }
