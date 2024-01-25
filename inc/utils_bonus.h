@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/21 13:05:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/24 10:57:09 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,5 +194,38 @@ t_quaternion	ft_quaternion_mult(t_quaternion q1, t_quaternion q2);
  * @return t_vec3
  */
 t_vec3			ft_quaternion_rot(t_vec3 vec, t_vec3 axis, float angle);
+
+/**
+ * @brief Rotates a 3D vector around the x-axis.
+ *
+ * Constructs a quaternion and multiplies it with the vector.
+ * The vector gets normalized after the rotation.
+ * @param vec		3D vector.
+ * @param roll		Rotation angle in degrees.
+ * @return t_vec3	Rotated, normalized vector.
+ */
+t_vec3			ft_vec3_rotate_x(const t_vec3 vec, float roll);
+
+/**
+ * @brief Rotates a 3D vector around the y-axis.
+ *
+ * Constructs a quaternion and multiplies it with the vector.
+ * The vector gets normalized after the rotation.
+ * @param vec		3D vector.
+ * @param pitch		Rotation angle in degrees.
+ * @return t_vec3	Rotated, normalized vector.
+ */
+t_vec3			ft_vec3_rotate_y(const t_vec3 vec, float pitch);
+
+/**
+ * @brief Rotates a 3D vector around the z-axis.
+ *
+ * Constructs a quaternion and multiplies it with the vector.
+ * The vector gets normalized after the rotation.
+ * @param vec		3D vector.
+ * @param yaw		Rotation angle in degrees.
+ * @return t_vec3	Rotated, normalized vector.
+ */
+t_vec3			ft_vec3_rotate_z(const t_vec3 vec, float yaw);
 
 #endif

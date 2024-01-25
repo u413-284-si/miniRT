@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/25 00:54:42 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/25 18:44:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 # include "error_mlx.h"
 # include "camera.h"
 # include "cleanup.h"
-# include "mat4_vec3.h"
 # include "vec2.h"
 # include "render_menu.h"
 
@@ -454,6 +453,17 @@ void		ft_manip_plane(int key, t_plane *pl, float inc);
  * @param inc		Increment value.
  */
 void		ft_manip_cylinder(int key, t_cylinder *cy, float inc);
+
+// render_keyhook_hittable_bonus.c
+
+/**
+ * @brief Manipulates the active cone.
+ *
+ * @param key	Keycode of the pressed key.
+ * @param co	Pointer to cone struct.
+ * @param inc	Increment value.
+ */
+void		ft_manip_cone(int key, t_cone *co, float inc);
 
 // render_keyhook_camera.c
 

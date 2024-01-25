@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/23 18:35:46 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/24 11:47:15 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -176,9 +176,6 @@ SRC_COMMON := 	camera_movement.c \
 				import_file.c \
 				import_file_buffer.c \
 				main.c \
-				mat4.c \
-				mat4_rotation.c \
-				mat4_vec3_rotate.c \
 				menu_init.c \
 				menu_put_cam_light.c \
 				menu_put_cam_light_ctrl.c \
@@ -193,7 +190,6 @@ SRC_COMMON := 	camera_movement.c \
 				parse_entity_ACL.c \
 				parse_entity_sp_pl_cy.c \
 				parse_line.c \
-				ray.c \
 				render_bit_field.c \
 				render_blend_background.c \
 				render_cleanup.c \
@@ -205,9 +201,9 @@ SRC_COMMON := 	camera_movement.c \
 				render_keyhook_options.c \
 				render_keyhook_select.c \
 				render_keyhook_utils.c \
-				render_mouse.c \
 				scene_shadow.c \
 				utils_interval.c \
+				utils_quaternion.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c \
 
@@ -218,10 +214,12 @@ SRC_BASE := 	colour.c \
 				hit_plane.c \
 				hit_sphere.c \
 				menu_put_text.c \
+				ray.c \
 				render_draw.c \
 				render_init_base.c \
 				render_keyhook_press.c \
 				render_loop_mlx.c \
+				render_mouse.c \
 				scene_light.c \
 				utils_cylinder.c \
 				utils_math.c \
@@ -243,12 +241,16 @@ SRC_BONUS :=	check_bonus.c \
 				menu_put_time_bonus.c \
 				parse_bonus.c \
 				parse_entity_sp_pl_cy_bonus.c \
+				ray_bonus.c \
 				render_cleanup_bonus.c \
 				render_draw_bonus.c \
 				render_init_bonus.c \
+				render_keyhook_camera_bonus.c \
+				render_keyhook_hittable_bonus.c \
 				render_keyhook_options_bonus.c \
 				render_keyhook_press_bonus.c \
 				render_loop_mlx_bonus.c \
+				render_mouse_bonus.c \
 				render_output_ppm_bonus.c \
 				render_output_threaded_bonus.c \
 				render_sample_bonus.c \
@@ -260,7 +262,6 @@ SRC_BONUS :=	check_bonus.c \
 				utils_cone_bonus.c \
 				utils_cylinder_bonus.c \
 				utils_math_bonus.c \
-				utils_quaternion_bonus.c \
 				utils_random_bonus.c \
 				threads_bonus.c \
 
