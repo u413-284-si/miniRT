@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 12:17:29 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 14:14:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,14 @@
 
 /* ====== LIBRARIES ====== */
 
-# include "libft.h"
-
-# include "error_type.h"
-# include "error_msg.h"
-# include "ft_strtod.h"
+# include "check.h"
 
 # include "entities_bonus.h"
 # include "miniRT_config_bonus.h"
 
 /* ====== FUNCTIONS ====== */
 
-// check.c
+// check_bonus.c
 
 /**
  * @brief Check array of imported lines.
@@ -67,131 +63,7 @@ t_type		ft_check_line_type_bonus(char *line);
  */
 t_err		ft_incr_ent_count_bonus(int ent_count[SUM_ENTS], t_type ent_type);
 
-/**
- * @brief Check if minimum number of specific entities was found.
- *
- * Following types need at least one:
- * - Ambient light,
- * - Camera,
- * - Light
- * Since its possible to have scene without shapes, this is not seen as error.
- * @param ent_count Array with counts for all entities.
- * @return t_err ERROR if minimum number of an entity is not found.
- */
-t_err		ft_check_entity_count(int ent_count[SUM_ENTS]);
-
-// check_line.c
-
-/**
- * @brief Moves line one space forward and sanitizes spaces.
- *
- * Move line forward if space ' ' is encountered.
- * Search for first non-space char.
- * Shift line to left by copying it, getting rid of spaces.
- * Sanitizes spaces to only one space between numbers.
- * @param line Pointer to current line.
- */
-void		ft_rm_space(char **line);
-
-/**
- * @brief Tries to convert str to float and checks range.
- *
- * Line gets converted with ft_strtod().
- * Error if conversion fails.
- * Error if number is out of range.
- * Error if number is not followed by correct separator.
- * Correct separator can be controlled by passed bool: ',' or ' ' and '\0'.
- * If conversion is successful, the line gets moved forward.
- * @param line Pointer to current line.
- * @param min Minimum value for converted number.
- * @param max Maximum value for converted number.
- * @param comma Controls if separator should be ',' or ' ' and '\0'.
- * @return true Float is valid.
- * @return false Conversion failed, out of range, wrong separator.
- */
-bool		ft_isvalid_float(char **line, float min, float max, bool comma);
-
-/**
- * @brief Checks three floats, separated by ','.
- *
- * Tries to convert three floats (block) with ft_isvalid_float_block().
- * @param line Pointer to current line.
- * @param min Minimum value for converted number.
- * @param max Maximum value for converted number.
- * @return true Block is valid.
- * @return false Block is not valid.
- */
-bool		ft_isvalid_float_block(char **line, float min, float max);
-
-/**
- * @brief Tries to convert str into rgb int and checks range.
- *
- * Error if str does not start with digit
- * (prevents negative numbers and wrong chars).
- * Convert digits as long as value below 255 and moves line forward.
- * Error if number is bigger than 255.
- * Error if number is not followed by correct separator.
- * Correct separator can be controlled by passed bool: ',' or ' ' and '\0'.
- * @param line	Pointer to current line.
- * @param min	Minimum value for converted number.
- * @param max	Maximum value for converted number.
- * @param comma	Controls if separator should be ',' or ' ' and '\0'.
- * @return true Number is valid.
- * @return false Wrong beginning char, out of range, wrong separator.
- */
-bool		ft_isvalid_int(char **line, int min, int max, bool comma);
-
-/**
- * @brief Checks three rgb values, separated by ','.
- *
- * Tries to convert three numbers (Block) with ft_isvalid_int().
- * @param line Pointer to current line.
- * @return true Block is valid.
- * @return false Block is not valid.
- */
-bool		ft_isvalid_rgb_block(char **line);
-
-// check_entity1.c
-
-/**
- * @brief Checks if ambient light line is correct.
- *
- * Function gets called if line has identifier "A".
- * Check if following is true:
- * - ambient lighting ratio in range [0.0,1.0].
- * - R,G,B colors in range [0-255].
- * @param line Pointer to current line.
- * @return t_type AMBIENT on success, UNKNOWN if fail.
- */
-t_type		ft_check_ambient(char *line);
-
-/**
- * @brief Checks if camera line is correct.
- *
- * Function gets called if line has identifier "C".
- * Check if following is true:
- * - x,y,z coordinates of the view point.
- * - 3d normalized orientation vector. In range [-1,1] for each x,y,z axis.
- * - FOV : Horizontal field of view in degrees in range [0,180].
- * @param line Pointer to current line.
- * @return t_type CAMERA on success, UNKNOWN if fail.
- */
-t_type		ft_check_camera(char *line);
-
-/**
- * @brief Checks if light line is correct.
- *
- * Function gets called if line has identifier "L".
- * Check if following is true:
- * - x,y,z coordinates of the light point.
- * - the light brightness ratio in range [0.0,1.0].
- * - R,G,B colors in range [0-255].
- * @param line Pointer to current line.
- * @return t_type LIGHT on success, UNKNOWN if fail.
- */
-t_type		ft_check_light(char *line);
-
-// check_entity2.c
+// check_entity_sp_pl_cy_bonus.c
 
 /**
  * @brief Checks if sphere line is correct.
@@ -260,6 +132,8 @@ t_type		ft_check_cylinder_bonus(char *line);
  * @return t_type CONE on success, UNKNOWN if fail.
  */
 t_type		ft_check_cone_bonus(char *line);
+
+// check_win_size_bonus.c
 
 /**
  * @brief Checks if size line is correct.
