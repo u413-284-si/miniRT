@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_page.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 14:16:43 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 18:26:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/25 00:27:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 void	ft_put_main_page(t_putinfo put, t_render *render)
 {
 	if (ft_option_isset(render->options, O_MODE_SCENE))
-		ft_put_page_scene(put, render->scene.obj[render->active_hittable],
-			render->scene.total, render->options);
+	{
+		if (render->active_hittable == -1)
+			ft_put_str(put, "No objects in scene");
+		else
+			ft_put_page_scene(put, render->scene.obj[render->active_hittable],
+				render->scene.total, render->options);
+	}
 	else if (ft_option_isset(render->options, O_MODE_LIGHT))
 	{
 		if (render->active_light == 0)

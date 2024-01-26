@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:40:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 10:37:52 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/25 00:55:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ static bool	ft_is_manip_key(int key)
 
 int	ft_keyhook_press(int key, t_render *render)
 {
-	float	inc;
-
 	if (ft_option_isset(render->options, O_IS_PRINTING))
 		return (0);
 	if (ft_is_option_key(key))
@@ -46,16 +44,6 @@ int	ft_keyhook_press(int key, t_render *render)
 	else if (key == XK_n || key == XK_m)
 		ft_change_select(key, render);
 	else if (ft_is_manip_key(key))
-	{
-		inc = ft_get_increment(render->options);
-		if (ft_option_isset(render->options, O_MODE_SCENE))
-			ft_manip_hittable(
-				key, &render->scene.obj[render->active_hittable], inc);
-		else if (ft_option_isset(render->options, O_MODE_LIGHT))
-			ft_manip_light(key, &render->scene, &render->active_light, inc);
-		else if (ft_option_isset(render->options, O_MODE_CAM))
-			ft_manip_cam(key, &render->cam, inc, &render->options);
-		ft_option_set(&render->options, O_SCENE_CHANGED);
-	}
+		ft_manip_scene(key, render);
 	return (0);
 }

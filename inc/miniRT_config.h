@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:49:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/25 00:34:08 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@
 
 // menu parameters
 # define MENU_WIDTH 200
-# define REGULAR "-schumacher-*-medium-r-normal-*-*-160-*-*-*-*-*-*"
-# define BOLD "-schumacher-*-bold-r-normal-*-*-160-*-*-*-*-*-*"
 # define MENU_OPACITY 100
 # define MENU_BACK 0x000000
 # define MENU_FONT 0xFFFFFF

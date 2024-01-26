@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 17:21:18 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 16:59:39 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/25 00:56:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ t_err	ft_render_init(t_render *render)
 			* render->cam.image.x * render->cam.image.y))
 		return (ERROR);
 	ft_menu_init(&render->menu, MENU_OPACITY, MENU_BACK, MENU_FONT);
-	mlx_set_font(render->mlx_ptrs.mlx_ptr, render->mlx_ptrs.win_ptr, REGULAR);
+	if (render->scene.total == 0)
+		render->active_hittable = -1;
 	ft_option_set(&render->options, O_MODE_SCENE);
 	ft_option_set(&render->options, O_SCENE_CHANGED);
 	ft_option_set(&render->options, O_MANIP_LOW);

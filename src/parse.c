@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:53:46 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/25 00:32:11 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total)
 {
 	if (ft_err_malloc((void **)lsrc, sizeof(**lsrc) * lsrc_c))
 		return (ERROR);
+	if (total == 0)
+		return (SUCCESS);
 	if (ft_err_malloc((void **)obj, sizeof(**obj) * total))
 	{
 		free(*lsrc);

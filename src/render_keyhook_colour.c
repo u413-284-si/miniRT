@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:47:04 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 22:22:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/25 19:18:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 t_colour	ft_get_colour(t_col_name col_name)
 {
 	static const t_colour	colour_array[NUM_COLOURS] = {
-	[RED] = (t_colour){1.0, 0.0, 0.0},
-	[ORANGE] = (t_colour){1.0, 0.5, 0.0},
-	[YELLOW] = (t_colour){1.0, 1.0, 0.0},
-	[GREEN] = (t_colour){0.0, 1.0, 0.0},
-	[BLUE] = (t_colour){0.0, 0.0, 1.0},
-	[INDIGO] = (t_colour){0.75, 0.0, 1.0},
-	[PURPLE] = (t_colour){1.0, 0.0, 1.0},
+	[RED] = (t_colour){1.0, 0.2, 0.2},
+	[ORANGE] = (t_colour){1.0, 0.6, 0.2},
+	[YELLOW] = (t_colour){1.0, 1.0, 0.2},
+	[GREEN] = (t_colour){0.2, 1.0, 0.2},
+	[BLUE] = (t_colour){0.2, 0.2, 1.0},
+	[INDIGO] = (t_colour){0.6, 0.2, 1.0},
+	[PURPLE] = (t_colour){1.0, 0.2, 1.0},
 	[WHITE] = (t_colour){1.0, 1.0, 1.0},
 	[BLACK] = (t_colour){0.0, 0.0, 0.0}};
 
@@ -74,7 +74,7 @@ void	ft_keyhook_change_col(int key, t_colour *col, float inc)
 	else if (key == XK_7)
 		*col = ft_get_colour(PURPLE);
 	else if (key == XK_8)
-		*col = ft_get_colour(BLACK);
+		*col = ft_get_colour(WHITE);
 	else if (key == XK_9)
 		ft_static_interpolate(col, inc);
 	else if (key == XK_0)

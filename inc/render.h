@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/24 10:58:44 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/25 18:56:49 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -302,6 +302,14 @@ void		ft_menu_put_text(t_render *render);
  */
 int			ft_keyhook_press(int key, t_render *render);
 
+/**
+ * @brief Branches to the corresponding manipulation function.
+ *
+ * @param key		Keycode of the pressed key.
+ * @param render	Pointer to render struct.
+ */
+void		ft_manip_scene(int key, t_render *render);
+
 // render_keyhook_options.c
 
 /**
@@ -326,6 +334,14 @@ void		ft_change_options(int key, t_render *render);
  * @param render	Pointer to render struct.
  */
 void		ft_change_select(int key, t_render *render);
+
+/**
+ * @brief Branches to the corresponding manipulation function.
+ *
+ * @param key		Keycode of the pressed key.
+ * @param render	Pointer to render struct.
+ */
+void		ft_manip_scene(int key, t_render *render);
 
 // render_keyhook_hittable.c
 
