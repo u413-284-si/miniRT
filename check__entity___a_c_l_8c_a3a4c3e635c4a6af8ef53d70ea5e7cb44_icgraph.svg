@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 599;
+var viewWidth = 744;
 var viewHeight = 78;
 var sectionId = 'dynsection-2';
 </script>
@@ -58,8 +58,8 @@ var sectionId = 'dynsection-2';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="Checks if ambient light line is correct.">
-<polygon fill="#bfbfbf" stroke="black" points="488,-28 488,-47 591,-47 591,-28 488,-28"/>
-<text text-anchor="middle" x="539.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_ambient</text>
+<polygon fill="#bfbfbf" stroke="black" points="633,-28 633,-47 736,-47 736,-28 633,-28"/>
+<text text-anchor="middle" x="684.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_ambient</text>
 </a>
 </g>
 </g>
@@ -67,98 +67,113 @@ var sectionId = 'dynsection-2';
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="check_8h.html#a9d550a03e395942fd0bb735c1dda47d9" target="_top" xlink:title="Dispatch function for different line types.">
-<polygon fill="none" stroke="black" points="345,-50 345,-69 452,-69 452,-50 345,-50"/>
-<text text-anchor="middle" x="398.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_line_type</text>
+<polygon fill="none" stroke="black" points="490,-50 490,-69 597,-69 597,-50 490,-50"/>
+<text text-anchor="middle" x="543.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_line_type</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M477.95,-47.08C469.35,-48.44 460.57,-49.83 452.14,-51.17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="478.59,-50.53 487.92,-45.5 477.5,-43.61 478.59,-50.53"/>
+<path fill="none" stroke="midnightblue" d="M622.95,-47.08C614.35,-48.44 605.57,-49.83 597.14,-51.17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="623.59,-50.53 632.92,-45.5 622.5,-43.61 623.59,-50.53"/>
 </g>
-<!-- Node6 -->
-<g id="node6" class="node">
-<title>Node6</title>
-<g id="a_node6"><a xlink:href="check__bonus_8h.html#ae33774d34021cd6fec6863eff3e8e3b0" target="_top" xlink:title="Dispatch function for different line types.">
-<polygon fill="none" stroke="black" points="345,-0.5 345,-30.5 452,-30.5 452,-0.5 345,-0.5"/>
-<text text-anchor="start" x="353" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_line_type</text>
-<text text-anchor="middle" x="398.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_bonus</text>
+<!-- Node7 -->
+<g id="node7" class="node">
+<title>Node7</title>
+<g id="a_node7"><a xlink:href="check__bonus_8h.html#ae33774d34021cd6fec6863eff3e8e3b0" target="_top" xlink:title="Dispatch function for different line types.">
+<polygon fill="none" stroke="black" points="490,-0.5 490,-30.5 597,-30.5 597,-0.5 490,-0.5"/>
+<text text-anchor="start" x="498" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_line_type</text>
+<text text-anchor="middle" x="543.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_bonus</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node6 -->
-<g id="edge5" class="edge">
-<title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M477.95,-27.92C469.35,-26.56 460.57,-25.17 452.14,-23.83"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="477.5,-31.39 487.92,-29.5 478.59,-24.47 477.5,-31.39"/>
+<!-- Node1&#45;&gt;Node7 -->
+<g id="edge6" class="edge">
+<title>Node1&#45;&gt;Node7</title>
+<path fill="none" stroke="midnightblue" d="M622.95,-27.92C614.35,-26.56 605.57,-25.17 597.14,-23.83"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="622.5,-31.39 632.92,-29.5 623.59,-24.47 622.5,-31.39"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" target="_top" xlink:title="Check array of imported lines.">
-<polygon fill="none" stroke="black" points="206,-48 206,-67 292,-67 292,-48 206,-48"/>
-<text text-anchor="middle" x="249" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_lines</text>
+<polygon fill="none" stroke="black" points="351,-48 351,-67 437,-67 437,-48 351,-48"/>
+<text text-anchor="middle" x="394" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_lines</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M334.43,-58.64C320.21,-58.45 305.44,-58.25 292.3,-58.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="334.62,-62.15 344.67,-58.78 334.71,-55.15 334.62,-62.15"/>
+<path fill="none" stroke="midnightblue" d="M479.43,-58.64C465.21,-58.45 450.44,-58.25 437.3,-58.07"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="479.62,-62.15 489.67,-58.78 479.71,-55.15 479.62,-62.15"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" target="_top" xlink:title="Imports, checks, and parses the provided file.">
-<polygon fill="none" stroke="black" points="77,-28 77,-47 153,-47 153,-28 77,-28"/>
-<text text-anchor="middle" x="115" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_file</text>
+<g id="a_node4"><a xlink:href="parse__bonus_8h.html#a1851ac042c8e1f69fe345a139f0eadbd" target="_top" xlink:title="Chooses the correct checker function depending on bool is_bonus.">
+<polygon fill="none" stroke="black" points="189,-28 189,-47 298,-47 298,-28 189,-28"/>
+<text text-anchor="middle" x="243.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">ft_choose_check_ft</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M195.73,-49.58C181.54,-47.43 166.46,-45.14 153.27,-43.15"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="195.46,-53.08 205.87,-51.12 196.51,-46.16 195.46,-53.08"/>
+<path fill="none" stroke="midnightblue" d="M340.58,-50.44C326.83,-48.59 311.99,-46.59 298.17,-44.73"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="340.47,-53.96 350.84,-51.82 341.4,-47.02 340.47,-53.96"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-28 0,-47 41,-47 41,-28 0,-28"/>
-<text text-anchor="middle" x="20.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
+<g id="a_node5"><a xlink:href="parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" target="_top" xlink:title="Imports, checks, and parses the provided file.">
+<polygon fill="none" stroke="black" points="77,-28 77,-47 153,-47 153,-28 77,-28"/>
+<text text-anchor="middle" x="115" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_file</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M66.72,-37.5C57.65,-37.5 48.64,-37.5 41.07,-37.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="66.91,-41 76.91,-37.5 66.91,-34 66.91,-41"/>
+<path fill="none" stroke="midnightblue" d="M178.67,-37.5C169.96,-37.5 161.27,-37.5 153.26,-37.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="178.85,-41 188.85,-37.5 178.85,-34 178.85,-41"/>
 </g>
-<!-- Node7 -->
-<g id="node7" class="node">
-<title>Node7</title>
-<g id="a_node7"><a xlink:href="check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" target="_top" xlink:title="Check array of imported lines.">
-<polygon fill="none" stroke="black" points="189,-9 189,-28 309,-28 309,-9 189,-9"/>
-<text text-anchor="middle" x="249" y="-16" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_lines_bonus</text>
+<!-- Node6 -->
+<g id="node6" class="node">
+<title>Node6</title>
+<g id="a_node6"><a xlink:href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="0,-28 0,-47 41,-47 41,-28 0,-28"/>
+<text text-anchor="middle" x="20.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node7 -->
-<g id="edge6" class="edge">
-<title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M334.55,-16.78C326.15,-16.95 317.56,-17.13 309.23,-17.3"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="334.74,-20.28 344.67,-16.57 334.6,-13.28 334.74,-20.28"/>
+<!-- Node5&#45;&gt;Node6 -->
+<g id="edge5" class="edge">
+<title>Node5&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M66.72,-37.5C57.65,-37.5 48.64,-37.5 41.07,-37.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="66.91,-41 76.91,-37.5 66.91,-34 66.91,-41"/>
 </g>
-<!-- Node7&#45;&gt;Node4 -->
+<!-- Node8 -->
+<g id="node8" class="node">
+<title>Node8</title>
+<g id="a_node8"><a xlink:href="check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" target="_top" xlink:title="Check array of imported lines.">
+<polygon fill="none" stroke="black" points="334,-9 334,-28 454,-28 454,-9 334,-9"/>
+<text text-anchor="middle" x="394" y="-16" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_lines_bonus</text>
+</a>
+</g>
+</g>
+<!-- Node7&#45;&gt;Node8 -->
 <g id="edge7" class="edge">
-<title>Node7&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M178.89,-28.45C169.98,-29.73 161.14,-31 153.03,-32.17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="179.55,-31.89 188.95,-27 178.55,-24.96 179.55,-31.89"/>
+<title>Node7&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M479.55,-16.78C471.15,-16.95 462.56,-17.13 454.23,-17.3"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="479.74,-20.28 489.67,-16.57 479.6,-13.28 479.74,-20.28"/>
+</g>
+<!-- Node8&#45;&gt;Node4 -->
+<g id="edge8" class="edge">
+<title>Node8&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M323.82,-27.35C315.19,-28.46 306.47,-29.57 298.12,-30.64"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="324.41,-30.8 333.88,-26.06 323.52,-23.86 324.41,-30.8"/>
 </g>
 </g>
 </svg>

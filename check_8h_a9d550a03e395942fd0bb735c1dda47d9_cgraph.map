@@ -1,25 +1,25 @@
 <map id="ft_check_line_type" name="ft_check_line_type">
-<area shape="rect" id="node1" title="Dispatch function for different line types." alt="" coords="5,201,148,227"/>
-<area shape="rect" id="node2" href="$check_8h.html#a3a4c3e635c4a6af8ef53d70ea5e7cb44" title="Checks if ambient light line is correct." alt="" coords="196,49,333,75"/>
-<area shape="rect" id="node12" href="$check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675" title="Checks if camera line is correct." alt="" coords="199,302,331,329"/>
-<area shape="rect" id="node19" href="$check_8h.html#ae60d55778d26a79bd9d60676862afcac" title="Checks if cylinder line is correct." alt="" coords="197,201,332,227"/>
-<area shape="rect" id="node20" href="$check_8h.html#a13cb8b89e2be82f5148f2dba42b550e8" title="Checks if light line is correct." alt="" coords="209,150,321,177"/>
-<area shape="rect" id="node21" href="$check_8h.html#a1e36aec7efe086076efcaf9991f28abe" title="Checks if plane line is correct." alt="" coords="205,251,324,278"/>
-<area shape="rect" id="node22" href="$check_8h.html#a2ac6387003baa37c6f8037edf453c8d0" title="Checks if sphere line is correct." alt="" coords="201,99,328,126"/>
-<area shape="rect" id="node23" href="$error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" title="Print generic error message." alt="" coords="226,353,303,379"/>
-<area shape="rect" id="node3" href="$check_8h.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="402,99,519,126"/>
-<area shape="rect" id="node8" href="$check_8h.html#a3327b821f1a4c71183e0448c7023a5aa" title="Checks three rgb values, separated by &#39;,&#39;." alt="" coords="385,49,536,75"/>
-<area shape="rect" id="node10" href="$error__msg_8h.html#a0a61f85709f3119ca9086f591705f294" title="Error message if line doesn&#39;t end with space or zero terminator." alt="" coords="407,150,515,177"/>
-<area shape="rect" id="node11" href="$check_8h.html#a7a10a4efb97dd784c001f96c580d7119" title="Moves line one space or htab forward and sanitizes spaces." alt="" coords="410,201,511,227"/>
-<area shape="rect" id="node4" href="$error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" title="Error message if conversion failed." alt="" coords="985,23,1119,50"/>
-<area shape="rect" id="node5" href="$error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" title="Error message if converted number is out of range." alt="" coords="991,74,1113,101"/>
-<area shape="rect" id="node6" href="$error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" title="Error message if wrong separator was encountered." alt="" coords="979,125,1125,151"/>
-<area shape="rect" id="node7" href="$ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e" title="Converts a String to a double." alt="" coords="1014,226,1090,253"/>
-<area shape="rect" id="node9" href="$check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4" title="Tries to convert str into rgb int and checks range." alt="" coords="795,23,931,50"/>
-<area shape="rect" id="node13" href="$check_8h.html#a399912478dc865909526aa87e6c333df" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="381,251,540,278"/>
-<area shape="rect" id="node15" href="$check_8h.html#a806133750c2b871ad705916e6d997f31" title="Checks three floats, separated by &#39;,&#39; and calcs checksum." alt="" coords="389,302,532,329"/>
-<area shape="rect" id="node14" href="$check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="804,175,921,202"/>
-<area shape="rect" id="node16" href="$check__line_8c.html#a399912478dc865909526aa87e6c333df" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="588,277,747,303"/>
-<area shape="rect" id="node17" href="$error__msg_8h.html#a2eafb62e253f9202b5cb80f4d005ed93" title="Error message if vector is not a unit vector." alt="" coords="599,429,736,455"/>
-<area shape="rect" id="node18" href="$error__msg_8h.html#abd82c129e1342b28d5e8111cf24304f3" title="Warning message if vector is not a unit vector." alt="" coords="588,327,747,354"/>
+<area shape="rect" id="node1" title="Dispatch function for different line types." alt="" coords="5,200,148,227"/>
+<area shape="rect" id="node2" href="$check_8h.html#a3a4c3e635c4a6af8ef53d70ea5e7cb44" title="Checks if ambient light line is correct." alt="" coords="196,48,333,75"/>
+<area shape="rect" id="node12" href="$check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675" title="Checks if camera line is correct." alt="" coords="199,301,331,328"/>
+<area shape="rect" id="node19" href="$check_8h.html#ae60d55778d26a79bd9d60676862afcac" title="Checks if cylinder line is correct." alt="" coords="197,200,332,227"/>
+<area shape="rect" id="node20" href="$check_8h.html#a13cb8b89e2be82f5148f2dba42b550e8" title="Checks if light line is correct." alt="" coords="209,149,321,176"/>
+<area shape="rect" id="node21" href="$check_8h.html#a1e36aec7efe086076efcaf9991f28abe" title="Checks if plane line is correct." alt="" coords="205,251,324,277"/>
+<area shape="rect" id="node22" href="$check_8h.html#a2ac6387003baa37c6f8037edf453c8d0" title="Checks if sphere line is correct." alt="" coords="201,99,328,125"/>
+<area shape="rect" id="node23" href="$error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" title="Print generic error message." alt="" coords="226,352,303,379"/>
+<area shape="rect" id="node3" href="$check_8h.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="402,99,519,125"/>
+<area shape="rect" id="node8" href="$check_8h.html#a3327b821f1a4c71183e0448c7023a5aa" title="Checks three rgb values, separated by &#39;,&#39;." alt="" coords="385,48,536,75"/>
+<area shape="rect" id="node10" href="$error__msg_8h.html#a0a61f85709f3119ca9086f591705f294" title="Error message if line doesn&#39;t end with space or zero terminator." alt="" coords="407,149,515,176"/>
+<area shape="rect" id="node11" href="$check_8h.html#a7a10a4efb97dd784c001f96c580d7119" title="Moves line one space or htab forward and sanitizes spaces." alt="" coords="410,200,511,227"/>
+<area shape="rect" id="node4" href="$error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" title="Error message if conversion failed." alt="" coords="967,23,1100,49"/>
+<area shape="rect" id="node5" href="$error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" title="Error message if converted number is out of range." alt="" coords="973,73,1094,100"/>
+<area shape="rect" id="node6" href="$error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" title="Error message if wrong separator was encountered." alt="" coords="960,124,1107,151"/>
+<area shape="rect" id="node7" href="$ft__strtod_8h.html#a0a1cbf0fef2bdcf6fde79c34014bc10e" title="Converts a String to a double." alt="" coords="995,225,1071,252"/>
+<area shape="rect" id="node9" href="$check__line_8c.html#adae11d3558f785772227f803873ad9d0" title="Tries to convert str into int and checks range." alt="" coords="801,23,906,49"/>
+<area shape="rect" id="node13" href="$check_8h.html#a399912478dc865909526aa87e6c333df" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="381,251,540,277"/>
+<area shape="rect" id="node15" href="$check_8h.html#a806133750c2b871ad705916e6d997f31" title="Checks three floats, separated by &#39;,&#39; and calcs checksum." alt="" coords="389,301,532,328"/>
+<area shape="rect" id="node14" href="$check__line_8c.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="795,175,912,201"/>
+<area shape="rect" id="node16" href="$check__line_8c.html#a399912478dc865909526aa87e6c333df" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="588,276,747,303"/>
+<area shape="rect" id="node17" href="$error__msg_8h.html#a2eafb62e253f9202b5cb80f4d005ed93" title="Error message if vector is not a unit vector." alt="" coords="599,428,736,455"/>
+<area shape="rect" id="node18" href="$error__msg_8h.html#abd82c129e1342b28d5e8111cf24304f3" title="Warning message if vector is not a unit vector." alt="" coords="588,327,747,353"/>
 </map>

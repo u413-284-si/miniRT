@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="render_8h.html#a12e519bd02c237459e067c614b9482e2" target="_top" xlink:title="Initializes the mlx_ptrs struct.">
+<g id="a_node2"><a xlink:href="render_8h.html#a164dea32598176b42c81ea3ae7946387" target="_top" xlink:title="Initializes the mlx_ptrs struct.">
 <polygon fill="none" stroke="black" points="194,-0.5 194,-19.5 286,-19.5 286,-0.5 194,-0.5"/>
 <text text-anchor="middle" x="240" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_init_mlx_ptrs</text>
 </a>

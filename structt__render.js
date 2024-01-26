@@ -12,5 +12,6 @@ var structt__render =
     [ "options", "structt__render.html#a2ba60f781746d31baf29e8c5a35d07e7", null ],
     [ "sample_buffer", "structt__render.html#a67f62f6e2cffe430aa8670ce15995b93", null ],
     [ "sample_goal", "structt__render.html#aedba49e5858a28c81896d6278448084b", null ],
-    [ "scene", "structt__render.html#ab80055edd364356489de21cdad66e875", null ]
+    [ "scene", "structt__render.html#ab80055edd364356489de21cdad66e875", null ],
+    [ "win_size", "structt__render.html#a1b9abb3e2cdff328a442c171e1e10759", null ]
 ];

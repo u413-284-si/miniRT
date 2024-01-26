@@ -112,6 +112,8 @@ Functions</h2></td></tr>
 <tr class="separator:a4df2d6a5cd30a4f3ca3a1283c7afaafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1918f45b6a322a21c3541825b405eb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__line_8c.html#ad1918f45b6a322a21c3541825b405eb6">ft_parse_float_block</a> (char **line, <a class="el" href="structt__vec3.html">t_vec3</a> *vec3)</td></tr>
 <tr class="separator:ad1918f45b6a322a21c3541825b405eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50c16198fd3c53482d16834c3f831e2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__line_8c.html#a50c16198fd3c53482d16834c3f831e2b">ft_parse_int</a> (char **line, int *var)</td></tr>
+<tr class="separator:a50c16198fd3c53482d16834c3f831e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2bb654728a666a68ad6b6627cd27e918"></a>
@@ -295,6 +297,58 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parse__line_8c_ad1918f45b6a322a21c3541825b405eb6_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a50c16198fd3c53482d16834c3f831e2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c16198fd3c53482d16834c3f831e2b">&#9670;&nbsp;</a></span>ft_parse_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_parse_int </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>var</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parses a single int. </p>
+<p>Moves the line forward. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Pointer to current position of line. </td></tr>
+    <tr><td class="paramname">var</td><td>Variable where to save. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="parse__line_8c_source.html#l00046">46</a> of file <a class="el" href="parse__line_8c_source.html">parse_line.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    *var = ft_atoi(*line);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">while</span> (ft_isdigit(**line))</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        (*line)++;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (*(*line + 1) != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        (*line)++;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parse__line_8c_a50c16198fd3c53482d16834c3f831e2b_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

@@ -1,21 +1,21 @@
 <map id="t_render" name="t_render">
-<area shape="rect" id="node1" title="Overarching render struct." alt="" coords="574,599,650,625"/>
-<area shape="rect" id="node2" href="$structt__mouse.html" title="Mouse struct." alt="" coords="139,457,218,484"/>
-<area shape="rect" id="node3" href="$structt__vec2i.html" title="2D vector with int." alt="" coords="45,301,114,328"/>
-<area shape="rect" id="node6" href="$structt__cam.html" title="Contains camera parameters." alt="" coords="267,405,330,432"/>
-<area shape="rect" id="node19" href="$structt__img.html" title="mlx img struct." alt="" coords="117,405,176,432"/>
-<area shape="rect" id="node4" href="$structt__colour.html" title="Represents an RGB colour with float values from 0.0 &#45; 1.0." alt="" coords="888,5,962,32"/>
-<area shape="rect" id="node11" href="$structt__light.html" title="Represents lighting in the scene." alt="" coords="903,139,966,165"/>
-<area shape="rect" id="node14" href="$structt__plane.html" title="Represents a plane." alt="" coords="491,139,562,165"/>
-<area shape="rect" id="node15" href="$structt__sphere.html" title="Represents a sphere." alt="" coords="675,139,754,165"/>
-<area shape="rect" id="node16" href="$structt__cylinder.html" title="Represents a cylinder." alt="" coords="778,139,864,165"/>
-<area shape="rect" id="node17" href="$structt__cone.html" title="Represents a cone." alt="" coords="586,139,651,165"/>
-<area shape="rect" id="node5" href="$structt__menu.html" title=" " alt="" coords="1172,509,1243,536"/>
-<area shape="rect" id="node7" href="$structt__vec2f.html" title="2D vector with float." alt="" coords="182,301,252,328"/>
-<area shape="rect" id="node8" href="$structt__pixel__grid.html" title="Pixel grid is a virtual grid of equispaced pixels in the viewport." alt="" coords="351,220,448,247"/>
-<area shape="rect" id="node9" href="$structt__vec3.html" title="Represents a tridimensional vector." alt="" coords="458,5,523,32"/>
-<area shape="rect" id="node10" href="$structt__entities.html" title="Contains all entities in the scene." alt="" coords="654,509,737,536"/>
-<area shape="rect" id="node12" href="$structt__hittable.html" title="Represents a hittable." alt="" coords="654,405,738,432"/>
-<area shape="rect" id="node13" href="$uniont__shape.html" title="Contains information of the different shapes." alt="" coords="659,301,732,328"/>
-<area shape="rect" id="node18" href="$structt__mlx__ptrs.html" title="mlx pointers struct." alt="" coords="374,509,465,536"/>
+<area shape="rect" id="node1" title="Overarching render struct." alt="" coords="315,599,391,625"/>
+<area shape="rect" id="node2" href="$structt__mouse.html" title="Mouse struct." alt="" coords="91,457,170,484"/>
+<area shape="rect" id="node3" href="$structt__vec2i.html" title="2D vector with int." alt="" coords="75,301,144,328"/>
+<area shape="rect" id="node6" href="$structt__cam.html" title="Contains camera parameters." alt="" coords="322,405,385,432"/>
+<area shape="rect" id="node19" href="$structt__img.html" title="mlx img struct." alt="" coords="164,405,223,432"/>
+<area shape="rect" id="node4" href="$structt__colour.html" title="Represents an RGB colour with float values from 0.0 &#45; 1.0." alt="" coords="957,5,1032,32"/>
+<area shape="rect" id="node11" href="$structt__light.html" title="Represents lighting in the scene." alt="" coords="535,139,598,165"/>
+<area shape="rect" id="node14" href="$structt__plane.html" title="Represents a plane." alt="" coords="859,139,930,165"/>
+<area shape="rect" id="node15" href="$structt__sphere.html" title="Represents a sphere." alt="" coords="757,139,835,165"/>
+<area shape="rect" id="node16" href="$structt__cylinder.html" title="Represents a cylinder." alt="" coords="646,139,733,165"/>
+<area shape="rect" id="node17" href="$structt__cone.html" title="Represents a cone." alt="" coords="966,139,1031,165"/>
+<area shape="rect" id="node5" href="$structt__menu.html" title=" " alt="" coords="1246,509,1317,536"/>
+<area shape="rect" id="node7" href="$structt__vec2f.html" title="2D vector with float." alt="" coords="255,301,326,328"/>
+<area shape="rect" id="node8" href="$structt__pixel__grid.html" title="Pixel grid is a virtual grid of equispaced pixels in the viewport." alt="" coords="425,220,522,247"/>
+<area shape="rect" id="node9" href="$structt__vec3.html" title="Represents a tridimensional vector." alt="" coords="509,5,574,32"/>
+<area shape="rect" id="node10" href="$structt__entities.html" title="Contains all entities in the scene." alt="" coords="525,509,608,536"/>
+<area shape="rect" id="node12" href="$structt__hittable.html" title="Represents a hittable." alt="" coords="655,405,739,432"/>
+<area shape="rect" id="node13" href="$uniont__shape.html" title="Contains information of the different shapes." alt="" coords="759,301,833,328"/>
+<area shape="rect" id="node18" href="$structt__mlx__ptrs.html" title="mlx pointers struct." alt="" coords="212,509,303,536"/>
 </map>

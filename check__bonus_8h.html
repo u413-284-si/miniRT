@@ -94,9 +94,9 @@ $(document).ready(function(){initNavTree('check__bonus_8h.html',''); initResizab
 <div class="title">check_bonus.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="error__type_8h_source.html">error_type.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;libft.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="error__type_8h_source.html">error_type.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="error__msg_8h_source.html">error_msg.h</a>&quot;</code><br />
-<code>#include &quot;ft_char.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="ft__strtod_8h_source.html">ft_strtod.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="entities__bonus_8h_source.html">entities_bonus.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mini_r_t__config__bonus_8h_source.html">miniRT_config_bonus.h</a>&quot;</code><br />
@@ -109,7 +109,7 @@ Include dependency graph for check_bonus.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="check__bonus_8h__dep__incl.svg" width="506" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="check__bonus_8h__dep__incl.svg" width="100%" height="395"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div>
@@ -131,8 +131,8 @@ Functions</h2></td></tr>
 <tr class="separator:a542b81308cf530edfa0a3bfdcefb6002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a399912478dc865909526aa87e6c333df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8h.html#a399912478dc865909526aa87e6c333df">ft_isvalid_float_block</a> (char **line, float min, float max)</td></tr>
 <tr class="separator:a399912478dc865909526aa87e6c333df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7884a3e9489248b242a9fb7da9607bf4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8h.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a> (char **line, bool comma)</td></tr>
-<tr class="separator:a7884a3e9489248b242a9fb7da9607bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae11d3558f785772227f803873ad9d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8h.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a> (char **line, int min, int max, bool comma)</td></tr>
+<tr class="separator:adae11d3558f785772227f803873ad9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3327b821f1a4c71183e0448c7023a5aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8h.html#a3327b821f1a4c71183e0448c7023a5aa">ft_isvalid_rgb_block</a> (char **line)</td></tr>
 <tr class="separator:a3327b821f1a4c71183e0448c7023a5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a4c3e635c4a6af8ef53d70ea5e7cb44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8h.html#a3a4c3e635c4a6af8ef53d70ea5e7cb44">ft_check_ambient</a> (char *line)</td></tr>
@@ -149,6 +149,8 @@ Functions</h2></td></tr>
 <tr class="separator:a4ec77f79add9f7abed23e5b3dd45e94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4044338fccd6b0e9b3e61c2e0c69db12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8h.html#a4044338fccd6b0e9b3e61c2e0c69db12">ft_check_cone_bonus</a> (char *line)</td></tr>
 <tr class="separator:a4044338fccd6b0e9b3e61c2e0c69db12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3535baa3e942ae46ac0974b7cb6e5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8h.html#a9e3535baa3e942ae46ac0974b7cb6e5e">ft_check_win_size</a> (char *line)</td></tr>
+<tr class="separator:a9e3535baa3e942ae46ac0974b7cb6e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a3a4c3e635c4a6af8ef53d70ea5e7cb44"></a>
@@ -193,7 +195,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a0a61f85709f3119ca9086f591705f294">ft_perror_end</a>(line));</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e">AMBIENT</a>);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="ttc" id="acheck_8h_html_a3327b821f1a4c71183e0448c7023a5aa"><div class="ttname"><a href="check_8h.html#a3327b821f1a4c71183e0448c7023a5aa">ft_isvalid_rgb_block</a></div><div class="ttdeci">bool ft_isvalid_rgb_block(char **line)</div><div class="ttdoc">Checks three rgb values, separated by ','.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00098">check_line.c:98</a></div></div>
+<div class="ttc" id="acheck_8h_html_a3327b821f1a4c71183e0448c7023a5aa"><div class="ttname"><a href="check_8h.html#a3327b821f1a4c71183e0448c7023a5aa">ft_isvalid_rgb_block</a></div><div class="ttdeci">bool ft_isvalid_rgb_block(char **line)</div><div class="ttdoc">Checks three rgb values, separated by ','.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00095">check_line.c:95</a></div></div>
 <div class="ttc" id="acheck_8h_html_a542b81308cf530edfa0a3bfdcefb6002"><div class="ttname"><a href="check_8h.html#a542b81308cf530edfa0a3bfdcefb6002">ft_isvalid_float</a></div><div class="ttdeci">bool ft_isvalid_float(char **line, float min, float max, bool comma)</div><div class="ttdoc">Tries to convert str to float and checks range.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00015">check_line.c:15</a></div></div>
 <div class="ttc" id="acheck_8h_html_a7a10a4efb97dd784c001f96c580d7119"><div class="ttname"><a href="check_8h.html#a7a10a4efb97dd784c001f96c580d7119">ft_rm_space</a></div><div class="ttdeci">void ft_rm_space(char **line)</div><div class="ttdoc">Moves line one space or htab forward and sanitizes spaces.</div><div class="ttdef"><b>Definition:</b> <a href="check__rm__space_8c_source.html#l00015">check_rm_space.c:15</a></div></div>
 <div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e">AMBIENT</a></div><div class="ttdeci">@ AMBIENT</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00109">entities.h:109</a></div></div>
@@ -316,7 +318,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a0a61f85709f3119ca9086f591705f294">ft_perror_end</a>(line));</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a>);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a></div><div class="ttdeci">@ CONE</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00130">entities_bonus.h:130</a></div></div>
+<div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a></div><div class="ttdeci">@ CONE</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00131">entities_bonus.h:131</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -461,7 +463,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_a4560f2d54698ffbfb8262bc7cad02768_icgraph.svg" width="590" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_a4560f2d54698ffbfb8262bc7cad02768_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -549,20 +551,22 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675">ft_check_camera</a>(line + 1));</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*line == <span class="charliteral">&#39;L&#39;</span>)</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check_8h.html#a13cb8b89e2be82f5148f2dba42b550e8">ft_check_light</a>(line + 1));</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!ft_strncmp(line, <span class="stringliteral">&quot;sp&quot;</span>, 2))</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check__bonus_8h.html#a649377d201faaa526ad3c355da745325">ft_check_sphere_bonus</a>(line + 2));</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!ft_strncmp(line, <span class="stringliteral">&quot;pl&quot;</span>, 2))</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check__bonus_8h.html#a553c09de200f4ad19c33ab26d11adc29">ft_check_plane_bonus</a>(line + 2));</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!ft_strncmp(line, <span class="stringliteral">&quot;cy&quot;</span>, 2))</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check__bonus_8h.html#a4ec77f79add9f7abed23e5b3dd45e94a">ft_check_cylinder_bonus</a>(line + 2));</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!ft_strncmp(line, <span class="stringliteral">&quot;co&quot;</span>, 2))</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check__bonus_8h.html#a4044338fccd6b0e9b3e61c2e0c69db12">ft_check_cone_bonus</a>(line + 2));</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*line == <span class="charliteral">&#39;#&#39;</span>)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a>(<span class="stringliteral">&quot;Line type not recognized&quot;</span>, 0);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*line == <span class="charliteral">&#39;S&#39;</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check__bonus_8h.html#a9e3535baa3e942ae46ac0974b7cb6e5e">ft_check_win_size</a>(line + 1));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!ft_strncmp(line, <span class="stringliteral">&quot;sp&quot;</span>, 2))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check__bonus_8h.html#a649377d201faaa526ad3c355da745325">ft_check_sphere_bonus</a>(line + 2));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!ft_strncmp(line, <span class="stringliteral">&quot;pl&quot;</span>, 2))</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check__bonus_8h.html#a553c09de200f4ad19c33ab26d11adc29">ft_check_plane_bonus</a>(line + 2));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!ft_strncmp(line, <span class="stringliteral">&quot;cy&quot;</span>, 2))</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check__bonus_8h.html#a4ec77f79add9f7abed23e5b3dd45e94a">ft_check_cylinder_bonus</a>(line + 2));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!ft_strncmp(line, <span class="stringliteral">&quot;co&quot;</span>, 2))</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="check__bonus_8h.html#a4044338fccd6b0e9b3e61c2e0c69db12">ft_check_cone_bonus</a>(line + 2));</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*line == <span class="charliteral">&#39;#&#39;</span>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a>(<span class="stringliteral">&quot;Line type not recognized&quot;</span>, 0);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 <div class="ttc" id="acheck_8h_html_a13cb8b89e2be82f5148f2dba42b550e8"><div class="ttname"><a href="check_8h.html#a13cb8b89e2be82f5148f2dba42b550e8">ft_check_light</a></div><div class="ttdeci">t_type ft_check_light(char *line)</div><div class="ttdoc">Checks if light line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__entity___a_c_l_8c_source.html#l00046">check_entity_ACL.c:46</a></div></div>
 <div class="ttc" id="acheck_8h_html_a3a4c3e635c4a6af8ef53d70ea5e7cb44"><div class="ttname"><a href="check_8h.html#a3a4c3e635c4a6af8ef53d70ea5e7cb44">ft_check_ambient</a></div><div class="ttdeci">t_type ft_check_ambient(char *line)</div><div class="ttdoc">Checks if ambient light line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__entity___a_c_l_8c_source.html#l00015">check_entity_ACL.c:15</a></div></div>
 <div class="ttc" id="acheck_8h_html_ac18c6a2c8fb4ffdeac62341cc67c9675"><div class="ttname"><a href="check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675">ft_check_camera</a></div><div class="ttdeci">t_type ft_check_camera(char *line)</div><div class="ttdoc">Checks if camera line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__entity___a_c_l_8c_source.html#l00029">check_entity_ACL.c:29</a></div></div>
@@ -570,6 +574,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="acheck__bonus_8h_html_a4ec77f79add9f7abed23e5b3dd45e94a"><div class="ttname"><a href="check__bonus_8h.html#a4ec77f79add9f7abed23e5b3dd45e94a">ft_check_cylinder_bonus</a></div><div class="ttdeci">t_type ft_check_cylinder_bonus(char *line)</div><div class="ttdoc">Checks if cylinder line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__entity__sp__pl__cy__bonus_8c_source.html#l00064">check_entity_sp_pl_cy_bonus.c:64</a></div></div>
 <div class="ttc" id="acheck__bonus_8h_html_a553c09de200f4ad19c33ab26d11adc29"><div class="ttname"><a href="check__bonus_8h.html#a553c09de200f4ad19c33ab26d11adc29">ft_check_plane_bonus</a></div><div class="ttdeci">t_type ft_check_plane_bonus(char *line)</div><div class="ttdoc">Checks if plane line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__entity__sp__pl__cy__bonus_8c_source.html#l00038">check_entity_sp_pl_cy_bonus.c:38</a></div></div>
 <div class="ttc" id="acheck__bonus_8h_html_a649377d201faaa526ad3c355da745325"><div class="ttname"><a href="check__bonus_8h.html#a649377d201faaa526ad3c355da745325">ft_check_sphere_bonus</a></div><div class="ttdeci">t_type ft_check_sphere_bonus(char *line)</div><div class="ttdoc">Checks if sphere line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__entity__sp__pl__cy__bonus_8c_source.html#l00015">check_entity_sp_pl_cy_bonus.c:15</a></div></div>
+<div class="ttc" id="acheck__bonus_8h_html_a9e3535baa3e942ae46ac0974b7cb6e5e"><div class="ttname"><a href="check__bonus_8h.html#a9e3535baa3e942ae46ac0974b7cb6e5e">ft_check_win_size</a></div><div class="ttdeci">t_type ft_check_win_size(char *line)</div><div class="ttdoc">Checks if size line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__win__size__bonus_8c_source.html#l00015">check_win_size_bonus.c:15</a></div></div>
 <div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a></div><div class="ttdeci">@ COMMENT</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00104">entities.h:104</a></div></div>
 <div class="ttc" id="aerror__msg_8h_html_aee5d10b82b6780869c9cc69cd64e44cc"><div class="ttname"><a href="error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a></div><div class="ttdeci">void ft_perror(char *msg, int save_errno)</div><div class="ttdoc">Print generic error message.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__generic_8c_source.html#l00015">error_msg_generic.c:15</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -581,7 +586,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_ae33774d34021cd6fec6863eff3e8e3b0_icgraph.svg" width="614" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_ae33774d34021cd6fec6863eff3e8e3b0_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -645,7 +650,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">while</span> (lines[i])</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        type = <a class="code" href="check__bonus_8c.html#ae33774d34021cd6fec6863eff3e8e3b0">ft_check_line_type_bonus</a>(lines[i++]);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (type == <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a>)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (type == <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a> || type == <a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70ac1aaf16935702a3ac842a873f565573d">WIN_SIZE</a>)</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            continue ;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (type == <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            || <a class="code" href="check__bonus_8c.html#a51318eb9ecfb0e802dc1854503517b55">ft_incr_ent_count_bonus</a>(ent_count, type))</div>
@@ -662,11 +667,12 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="ttc" id="acheck_8h_html_a4560f2d54698ffbfb8262bc7cad02768"><div class="ttname"><a href="check_8h.html#a4560f2d54698ffbfb8262bc7cad02768">ft_check_entity_count</a></div><div class="ttdeci">t_err ft_check_entity_count(int ent_count[SUM_ENTS])</div><div class="ttdoc">Check if minimum number of specific entities was found.</div><div class="ttdef"><b>Definition:</b> <a href="check_8c_source.html#l00081">check.c:81</a></div></div>
-<div class="ttc" id="acheck__bonus_8c_html_a51318eb9ecfb0e802dc1854503517b55"><div class="ttname"><a href="check__bonus_8c.html#a51318eb9ecfb0e802dc1854503517b55">ft_incr_ent_count_bonus</a></div><div class="ttdeci">t_err ft_incr_ent_count_bonus(int ent_count[SUM_ENTS], t_type type)</div><div class="ttdoc">Increase entity count, and check if too many.</div><div class="ttdef"><b>Definition:</b> <a href="check__bonus_8c_source.html#l00065">check_bonus.c:65</a></div></div>
+<div class="ttc" id="acheck__bonus_8c_html_a51318eb9ecfb0e802dc1854503517b55"><div class="ttname"><a href="check__bonus_8c.html#a51318eb9ecfb0e802dc1854503517b55">ft_incr_ent_count_bonus</a></div><div class="ttdeci">t_err ft_incr_ent_count_bonus(int ent_count[SUM_ENTS], t_type type)</div><div class="ttdoc">Increase entity count, and check if too many.</div><div class="ttdef"><b>Definition:</b> <a href="check__bonus_8c_source.html#l00067">check_bonus.c:67</a></div></div>
 <div class="ttc" id="acheck__bonus_8c_html_ae33774d34021cd6fec6863eff3e8e3b0"><div class="ttname"><a href="check__bonus_8c.html#ae33774d34021cd6fec6863eff3e8e3b0">ft_check_line_type_bonus</a></div><div class="ttdeci">t_type ft_check_line_type_bonus(char *line)</div><div class="ttdoc">Dispatch function for different line types.</div><div class="ttdef"><b>Definition:</b> <a href="check__bonus_8c_source.html#l00042">check_bonus.c:42</a></div></div>
 <div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b">SUM_ENTS</a></div><div class="ttdeci">@ SUM_ENTS</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00113">entities.h:112</a></div></div>
 <div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a></div><div class="ttdeci">@ PLANE</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00107">entities.h:107</a></div></div>
 <div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a></div><div class="ttdeci">@ SPHERE</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00106">entities.h:106</a></div></div>
+<div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70ac1aaf16935702a3ac842a873f565573d"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70ac1aaf16935702a3ac842a873f565573d">WIN_SIZE</a></div><div class="ttdeci">@ WIN_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00125">entities_bonus.h:125</a></div></div>
 <div class="ttc" id="aerror__msg_8h_html_a278f4b45a52fcddd1925e2b9c50266ed"><div class="ttname"><a href="error__msg_8h.html#a278f4b45a52fcddd1925e2b9c50266ed">ft_perror_number</a></div><div class="ttdeci">void ft_perror_number(char *msg, int number)</div><div class="ttdoc">Print error message with a number.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__generic_8c_source.html#l00027">error_msg_generic.c:27</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -677,7 +683,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_af3ef225f9cf1a304afc28235a98ac241_icgraph.svg" width="423" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_af3ef225f9cf1a304afc28235a98ac241_icgraph.svg" width="616" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -826,6 +832,64 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a9e3535baa3e942ae46ac0974b7cb6e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e3535baa3e942ae46ac0974b7cb6e5e">&#9670;&nbsp;</a></span>ft_check_win_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a> ft_check_win_size </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if size line is correct. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>t_type </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="check__win__size__bonus_8c_source.html#l00015">15</a> of file <a class="el" href="check__win__size__bonus_8c_source.html">check_win_size_bonus.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="check_8h.html#a7a10a4efb97dd784c001f96c580d7119">ft_rm_space</a>(&amp;line);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check_8h.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a>(&amp;line, <a class="code" href="mini_r_t__config_8h.html#a6e1ad85c506456c5e54b5165173315b6">WIN_SIZE_X</a>, <a class="code" href="mini_r_t__config__bonus_8h.html#ab525eed15b2c3009e6e85c79b9e551c4">MAX_WIN_SIZE_X</a>, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    line++;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check_8h.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a>(&amp;line, <a class="code" href="mini_r_t__config_8h.html#a0c212361b1388494c98b2c35db58de19">WIN_SIZE_Y</a>, <a class="code" href="mini_r_t__config__bonus_8h.html#a58807950e49d7f18ef8618f0f1862afc">MAX_WIN_SIZE_Y</a>, <span class="keyword">false</span>))</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="check_8h.html#a7a10a4efb97dd784c001f96c580d7119">ft_rm_space</a>(&amp;line);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (*line != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a0a61f85709f3119ca9086f591705f294">ft_perror_end</a>(line));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70ac1aaf16935702a3ac842a873f565573d">WIN_SIZE</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="ttc" id="acheck_8h_html_adae11d3558f785772227f803873ad9d0"><div class="ttname"><a href="check_8h.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a></div><div class="ttdeci">bool ft_isvalid_int(char **line, int min, int max, bool comma)</div><div class="ttdoc">Tries to convert str into int and checks range.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00076">check_line.c:76</a></div></div>
+<div class="ttc" id="amini_r_t__config_8h_html_a0c212361b1388494c98b2c35db58de19"><div class="ttname"><a href="mini_r_t__config_8h.html#a0c212361b1388494c98b2c35db58de19">WIN_SIZE_Y</a></div><div class="ttdeci">#define WIN_SIZE_Y</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config_8h_source.html#l00035">miniRT_config.h:35</a></div></div>
+<div class="ttc" id="amini_r_t__config_8h_html_a6e1ad85c506456c5e54b5165173315b6"><div class="ttname"><a href="mini_r_t__config_8h.html#a6e1ad85c506456c5e54b5165173315b6">WIN_SIZE_X</a></div><div class="ttdeci">#define WIN_SIZE_X</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config_8h_source.html#l00034">miniRT_config.h:34</a></div></div>
+<div class="ttc" id="amini_r_t__config__bonus_8h_html_a58807950e49d7f18ef8618f0f1862afc"><div class="ttname"><a href="mini_r_t__config__bonus_8h.html#a58807950e49d7f18ef8618f0f1862afc">MAX_WIN_SIZE_Y</a></div><div class="ttdeci">#define MAX_WIN_SIZE_Y</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config__bonus_8h_source.html#l00038">miniRT_config_bonus.h:38</a></div></div>
+<div class="ttc" id="amini_r_t__config__bonus_8h_html_ab525eed15b2c3009e6e85c79b9e551c4"><div class="ttname"><a href="mini_r_t__config__bonus_8h.html#ab525eed15b2c3009e6e85c79b9e551c4">MAX_WIN_SIZE_X</a></div><div class="ttdeci">#define MAX_WIN_SIZE_X</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config__bonus_8h_source.html#l00036">miniRT_config_bonus.h:36</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_a9e3535baa3e942ae46ac0974b7cb6e5e_cgraph.svg" width="500" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_a9e3535baa3e942ae46ac0974b7cb6e5e_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a9158564ed7ebbd6cbd41cf1724419282"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9158564ed7ebbd6cbd41cf1724419282">&#9670;&nbsp;</a></span>ft_incr_ent_count_bonus()</h2>
 
@@ -862,26 +926,26 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>t_err ERROR if increased count is bigger than specific max. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="check__bonus_8c_source.html#l00065">65</a> of file <a class="el" href="check__bonus_8c_source.html">check_bonus.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span>    ent_max[<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b">SUM_ENTS</a>] = {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a>] = <a class="code" href="mini_r_t__config_8h.html#a57075825dcedf2cbc21ae369e0b85ed2">SPHERE_MAX</a>,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a>] = <a class="code" href="mini_r_t__config_8h.html#aa05ccdf1a9806e5271d97dec8fa1a4c5">PLANE_MAX</a>,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a>] = <a class="code" href="mini_r_t__config_8h.html#a6fddccf2e9aec80f8688b9653a52ccb1">CYLINDER_MAX</a>,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    [<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a>] = <a class="code" href="mini_r_t__config__bonus_8h.html#a72b2392643a38d634bb689198208959f">CONE_MAX</a>,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e">AMBIENT</a>] = <a class="code" href="mini_r_t__config_8h.html#aa6f7a0268bf3388557716a90bc584ed5">AMBIENT_MAX</a>,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956">CAMERA</a>] = <a class="code" href="mini_r_t__config_8h.html#a70e42d2839d370a658a763ae8e17b58d">CAMERA_MAX</a>,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb">LIGHT</a>] = <a class="code" href="mini_r_t__config_8h.html#a38b06bbd397785d2ff3ace62c6a4f365">LIGHT_MAX</a></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    };</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    ent_count[type]++;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (ent_count[type] &gt; ent_max[type])</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="error__msg_8h.html#a55f805a774b02619d20d73cba9e90de3">ft_perror_count</a>(type, ent_max[type], ent_count[type], <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="check__bonus_8c_source.html#l00067">67</a> of file <a class="el" href="check__bonus_8c_source.html">check_bonus.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span>    ent_max[<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b">SUM_ENTS</a>] = {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a>] = <a class="code" href="mini_r_t__config_8h.html#a57075825dcedf2cbc21ae369e0b85ed2">SPHERE_MAX</a>,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a>] = <a class="code" href="mini_r_t__config_8h.html#aa05ccdf1a9806e5271d97dec8fa1a4c5">PLANE_MAX</a>,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a>] = <a class="code" href="mini_r_t__config_8h.html#a6fddccf2e9aec80f8688b9653a52ccb1">CYLINDER_MAX</a>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    [<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a>] = <a class="code" href="mini_r_t__config__bonus_8h.html#a72b2392643a38d634bb689198208959f">CONE_MAX</a>,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e">AMBIENT</a>] = <a class="code" href="mini_r_t__config_8h.html#aa6f7a0268bf3388557716a90bc584ed5">AMBIENT_MAX</a>,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956">CAMERA</a>] = <a class="code" href="mini_r_t__config_8h.html#a70e42d2839d370a658a763ae8e17b58d">CAMERA_MAX</a>,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    [<a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb">LIGHT</a>] = <a class="code" href="mini_r_t__config_8h.html#a38b06bbd397785d2ff3ace62c6a4f365">LIGHT_MAX</a></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    };</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ent_count[type]++;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (ent_count[type] &gt; ent_max[type])</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="error__msg_8h.html#a55f805a774b02619d20d73cba9e90de3">ft_perror_count</a>(type, ent_max[type], ent_count[type], <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 <div class="ttc" id="amini_r_t__config_8h_html_a38b06bbd397785d2ff3ace62c6a4f365"><div class="ttname"><a href="mini_r_t__config_8h.html#a38b06bbd397785d2ff3ace62c6a4f365">LIGHT_MAX</a></div><div class="ttdeci">#define LIGHT_MAX</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config_8h_source.html#l00024">miniRT_config.h:24</a></div></div>
 <div class="ttc" id="amini_r_t__config_8h_html_a57075825dcedf2cbc21ae369e0b85ed2"><div class="ttname"><a href="mini_r_t__config_8h.html#a57075825dcedf2cbc21ae369e0b85ed2">SPHERE_MAX</a></div><div class="ttdeci">#define SPHERE_MAX</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config_8h_source.html#l00025">miniRT_config.h:25</a></div></div>
 <div class="ttc" id="amini_r_t__config_8h_html_a6fddccf2e9aec80f8688b9653a52ccb1"><div class="ttname"><a href="mini_r_t__config_8h.html#a6fddccf2e9aec80f8688b9653a52ccb1">CYLINDER_MAX</a></div><div class="ttdeci">#define CYLINDER_MAX</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config_8h_source.html#l00027">miniRT_config.h:27</a></div></div>
@@ -898,7 +962,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_a9158564ed7ebbd6cbd41cf1724419282_icgraph.svg" width="650" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_a9158564ed7ebbd6cbd41cf1724419282_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1054,60 +1118,29 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a3327b821f1a4c71183e0448c7023a5aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3327b821f1a4c71183e0448c7023a5aa">&#9670;&nbsp;</a></span>ft_isvalid_rgb_block()</h2>
+<a id="adae11d3558f785772227f803873ad9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae11d3558f785772227f803873ad9d0">&#9670;&nbsp;</a></span>ft_isvalid_int()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ft_isvalid_rgb_block </td>
-          <td>(</td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>line</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Checks three rgb values, separated by ','. </p>
-<p>Tries to convert three numbers (Block) with <a class="el" href="check__bonus_8h.html#a7884a3e9489248b242a9fb7da9607bf4" title="Tries to convert str into rgb int and checks range.">ft_isvalid_rgb_val()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">line</td><td>Pointer to current line. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true Block is valid. </dd>
-<dd>
-false Block is not valid. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="check__line_8c_source.html#l00098">98</a> of file <a class="el" href="check__line_8c_source.html">check_line.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">true</span>))</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    (*line)++;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">true</span>))</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    (*line)++;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">false</span>))</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
-<div class="ttc" id="acheck__line_8c_html_a7884a3e9489248b242a9fb7da9607bf4"><div class="ttname"><a href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a></div><div class="ttdeci">bool ft_isvalid_rgb_val(char **line, bool comma)</div><div class="ttdoc">Tries to convert str into rgb int and checks range.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00076">check_line.c:76</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a7884a3e9489248b242a9fb7da9607bf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7884a3e9489248b242a9fb7da9607bf4">&#9670;&nbsp;</a></span>ft_isvalid_rgb_val()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ft_isvalid_rgb_val </td>
+          <td class="memname">bool ft_isvalid_int </td>
           <td>(</td>
           <td class="paramtype">char **&#160;</td>
           <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1127,6 +1160,21 @@ false Block is not valid. </dd></dl>
 <p>Error if str does not start with digit (prevents negative numbers and wrong chars). Convert digits as long as value below 255 and moves line forward. Error if number is bigger than 255. Error if number is not followed by correct separator. Correct separator can be controlled by passed bool: ',' or ' ' and '\0'. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">line</td><td>Pointer to current line. </td></tr>
+    <tr><td class="paramname">min</td><td>Minimum value for converted number. </td></tr>
+    <tr><td class="paramname">max</td><td>Maximum value for converted number. </td></tr>
+    <tr><td class="paramname">comma</td><td>Controls if separator should be ',' or ' ' and '\0'. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Number is valid. </dd>
+<dd>
+false Wrong beginning char, out of range, wrong separator.</dd></dl>
+<p>Tries to convert str into rgb int and checks range.</p>
+<p>Error if str does not start with digit (prevents negative numbers and wrong chars). Convert digits as long as value below 255 and moves line forward. Error if number is bigger than 255. Error if number is not followed by correct separator. Correct separator can be controlled by passed bool: ',' or ' ' and '\0'. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Pointer to current line. </td></tr>
+    <tr><td class="paramname">min</td><td>Minimum value for converted number. </td></tr>
+    <tr><td class="paramname">max</td><td>Maximum value for converted number. </td></tr>
     <tr><td class="paramname">comma</td><td>Controls if separator should be ',' or ' ' and '\0'. </td></tr>
   </table>
   </dd>
@@ -1142,27 +1190,67 @@ false Wrong beginning char, out of range, wrong separator. </dd></dl>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    tmp = 0;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (!ft_isdigit(**line))</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe">ft_perror_convert</a>(*line, <span class="keyword">false</span>));</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">while</span> (ft_isdigit(**line) &amp;&amp; tmp &lt; 255)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        tmp *= 10;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        tmp += **line - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    tmp = ft_atoi(*line);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span> (tmp &lt; min || tmp &gt; max)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a>(*line, 3, min, max));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">while</span> (ft_isdigit(**line))</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        (*line)++;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (tmp &gt; 255)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a>(*line - 3, 3, 0, 255));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (comma &amp;&amp; **line != <span class="charliteral">&#39;,&#39;</span>)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (!comma &amp;&amp; **line != <span class="charliteral">&#39; &#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\t&#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (comma &amp;&amp; **line != <span class="charliteral">&#39;,&#39;</span>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> (!comma &amp;&amp; **line != <span class="charliteral">&#39; &#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\t&#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_a7884a3e9489248b242a9fb7da9607bf4_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="check__bonus_8h_adae11d3558f785772227f803873ad9d0_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
+</div>
+</div>
+<a id="a3327b821f1a4c71183e0448c7023a5aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3327b821f1a4c71183e0448c7023a5aa">&#9670;&nbsp;</a></span>ft_isvalid_rgb_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ft_isvalid_rgb_block </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks three rgb values, separated by ','. </p>
+<p>Tries to convert three numbers (Block) with <a class="el" href="check__bonus_8h.html#adae11d3558f785772227f803873ad9d0" title="Tries to convert str into rgb int and checks range.">ft_isvalid_int()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Pointer to current line. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Block is valid. </dd>
+<dd>
+false Block is not valid. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="check__line_8c_source.html#l00095">95</a> of file <a class="el" href="check__line_8c_source.html">check_line.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a>(line, 0, 255, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    (*line)++;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a>(line,0, 255, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    (*line)++;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a>(line, 0, 255, <span class="keyword">false</span>))</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="ttc" id="acheck__line_8c_html_adae11d3558f785772227f803873ad9d0"><div class="ttname"><a href="check__line_8c.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a></div><div class="ttdeci">bool ft_isvalid_int(char **line, int min, int max, bool comma)</div><div class="ttdoc">Tries to convert str into int and checks range.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00076">check_line.c:76</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7a10a4efb97dd784c001f96c580d7119"></a>

@@ -1,7 +1,8 @@
 <map id="ft_perror_number" name="ft_perror_number">
-<area shape="rect" id="node1" title="Print error message with a number." alt="" coords="465,31,600,57"/>
-<area shape="rect" id="node2" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="280,5,395,32"/>
-<area shape="rect" id="node5" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="257,56,417,83"/>
-<area shape="rect" id="node3" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,31,209,57"/>
-<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node1" title="Print error message with a number." alt="" coords="659,31,793,57"/>
+<area shape="rect" id="node2" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="473,5,588,32"/>
+<area shape="rect" id="node6" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="451,56,611,83"/>
+<area shape="rect" id="node3" href="$parse__bonus_8h.html#a1851ac042c8e1f69fe345a139f0eadbd" title="Chooses the correct checker function depending on bool is_bonus." alt="" coords="257,31,403,57"/>
+<area shape="rect" id="node4" href="$parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" title="Imports, checks, and parses the provided file." alt="" coords="108,31,209,57"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,60,57"/>
 </map>

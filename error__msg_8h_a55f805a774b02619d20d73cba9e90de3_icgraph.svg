@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 613;
+var viewWidth = 758;
 var viewHeight = 104;
 var sectionId = 'dynsection-4';
 </script>
@@ -58,8 +58,8 @@ var sectionId = 'dynsection-4';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="Error message if entity count is not correct.">
-<polygon fill="#bfbfbf" stroke="black" points="515,-38.5 515,-57.5 605,-57.5 605,-38.5 515,-38.5"/>
-<text text-anchor="middle" x="560" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_count</text>
+<polygon fill="#bfbfbf" stroke="black" points="660,-38.5 660,-57.5 750,-57.5 750,-38.5 660,-38.5"/>
+<text text-anchor="middle" x="705" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_count</text>
 </a>
 </g>
 </g>
@@ -67,118 +67,133 @@ var sectionId = 'dynsection-4';
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="check_8h.html#a4560f2d54698ffbfb8262bc7cad02768" target="_top" xlink:title="Check if minimum number of specific entities was found.">
-<polygon fill="none" stroke="black" points="350.5,-76.5 350.5,-95.5 473.5,-95.5 473.5,-76.5 350.5,-76.5"/>
-<text text-anchor="middle" x="412" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_entity_count</text>
+<polygon fill="none" stroke="black" points="495.5,-76.5 495.5,-95.5 618.5,-95.5 618.5,-76.5 495.5,-76.5"/>
+<text text-anchor="middle" x="557" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_entity_count</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M512.46,-60.11C492.13,-65.4 468.63,-71.52 449.58,-76.48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="513.36,-63.5 522.16,-57.59 511.6,-56.72 513.36,-63.5"/>
+<path fill="none" stroke="midnightblue" d="M657.46,-60.11C637.13,-65.4 613.63,-71.52 594.58,-76.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="658.36,-63.5 667.16,-57.59 656.6,-56.72 658.36,-63.5"/>
 </g>
-<!-- Node6 -->
-<g id="node6" class="node">
-<title>Node6</title>
-<g id="a_node6"><a xlink:href="check_8h.html#a0bde6c1dee246dd0f75201c62cf3c9f2" target="_top" xlink:title="Increase entity count, and check if too many.">
-<polygon fill="none" stroke="black" points="362,-0.5 362,-19.5 462,-19.5 462,-0.5 362,-0.5"/>
-<text text-anchor="middle" x="412" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_incr_ent_count</text>
+<!-- Node7 -->
+<g id="node7" class="node">
+<title>Node7</title>
+<g id="a_node7"><a xlink:href="check_8h.html#a0bde6c1dee246dd0f75201c62cf3c9f2" target="_top" xlink:title="Increase entity count, and check if too many.">
+<polygon fill="none" stroke="black" points="507,-0.5 507,-19.5 607,-19.5 607,-0.5 507,-0.5"/>
+<text text-anchor="middle" x="557" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_incr_ent_count</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node6 -->
-<g id="edge5" class="edge">
-<title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M512.46,-35.89C492.13,-30.6 468.63,-24.48 449.58,-19.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="511.6,-39.28 522.16,-38.41 513.36,-32.5 511.6,-39.28"/>
+<!-- Node1&#45;&gt;Node7 -->
+<g id="edge6" class="edge">
+<title>Node1&#45;&gt;Node7</title>
+<path fill="none" stroke="midnightblue" d="M657.46,-35.89C637.13,-30.6 613.63,-24.48 594.58,-19.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="656.6,-39.28 667.16,-38.41 658.36,-32.5 656.6,-39.28"/>
 </g>
-<!-- Node8 -->
-<g id="node8" class="node">
-<title>Node8</title>
-<g id="a_node8"><a xlink:href="check__bonus_8h.html#a9158564ed7ebbd6cbd41cf1724419282" target="_top" xlink:title="Increase entity count, and check if too many.">
-<polygon fill="none" stroke="black" points="345,-38.5 345,-57.5 479,-57.5 479,-38.5 345,-38.5"/>
-<text text-anchor="middle" x="412" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_incr_ent_count_bonus</text>
+<!-- Node9 -->
+<g id="node9" class="node">
+<title>Node9</title>
+<g id="a_node9"><a xlink:href="check__bonus_8h.html#a9158564ed7ebbd6cbd41cf1724419282" target="_top" xlink:title="Increase entity count, and check if too many.">
+<polygon fill="none" stroke="black" points="490,-38.5 490,-57.5 624,-57.5 624,-38.5 490,-38.5"/>
+<text text-anchor="middle" x="557" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_incr_ent_count_bonus</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node8 -->
-<g id="edge8" class="edge">
-<title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M504.53,-48C496.25,-48 487.63,-48 479.14,-48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="504.8,-51.5 514.8,-48 504.8,-44.5 504.8,-51.5"/>
+<!-- Node1&#45;&gt;Node9 -->
+<g id="edge9" class="edge">
+<title>Node1&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M649.53,-48C641.25,-48 632.63,-48 624.14,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="649.8,-51.5 659.8,-48 649.8,-44.5 649.8,-51.5"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" target="_top" xlink:title="Check array of imported lines.">
-<polygon fill="none" stroke="black" points="189,-38.5 189,-57.5 309,-57.5 309,-38.5 189,-38.5"/>
-<text text-anchor="middle" x="249" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_lines_bonus</text>
+<polygon fill="none" stroke="black" points="334,-38.5 334,-57.5 454,-57.5 454,-38.5 334,-38.5"/>
+<text text-anchor="middle" x="394" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_lines_bonus</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M360.6,-74.1C337.97,-68.76 311.63,-62.55 290.33,-57.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="359.84,-77.52 370.37,-76.41 361.44,-70.71 359.84,-77.52"/>
+<path fill="none" stroke="midnightblue" d="M505.6,-74.1C482.97,-68.76 456.63,-62.55 435.33,-57.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="504.84,-77.52 515.37,-76.41 506.44,-70.71 504.84,-77.52"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" target="_top" xlink:title="Imports, checks, and parses the provided file.">
-<polygon fill="none" stroke="black" points="77,-19.5 77,-38.5 153,-38.5 153,-19.5 77,-19.5"/>
-<text text-anchor="middle" x="115" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_file</text>
+<g id="a_node4"><a xlink:href="parse__bonus_8h.html#a1851ac042c8e1f69fe345a139f0eadbd" target="_top" xlink:title="Chooses the correct checker function depending on bool is_bonus.">
+<polygon fill="none" stroke="black" points="189,-19.5 189,-38.5 298,-38.5 298,-19.5 189,-19.5"/>
+<text text-anchor="middle" x="243.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_choose_check_ft</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M178.89,-38.05C169.98,-36.77 161.14,-35.5 153.03,-34.33"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="178.55,-41.54 188.95,-39.5 179.55,-34.61 178.55,-41.54"/>
+<path fill="none" stroke="midnightblue" d="M323.82,-39.15C315.19,-38.04 306.47,-36.93 298.12,-35.86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="323.52,-42.64 333.88,-40.44 324.41,-35.7 323.52,-42.64"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-19.5 0,-38.5 41,-38.5 41,-19.5 0,-19.5"/>
-<text text-anchor="middle" x="20.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
+<g id="a_node5"><a xlink:href="parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" target="_top" xlink:title="Imports, checks, and parses the provided file.">
+<polygon fill="none" stroke="black" points="77,-19.5 77,-38.5 153,-38.5 153,-19.5 77,-19.5"/>
+<text text-anchor="middle" x="115" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_parse_file</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M66.72,-29C57.65,-29 48.64,-29 41.07,-29"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="66.91,-32.5 76.91,-29 66.91,-25.5 66.91,-32.5"/>
+<path fill="none" stroke="midnightblue" d="M178.67,-29C169.96,-29 161.27,-29 153.26,-29"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="178.85,-32.5 188.85,-29 178.85,-25.5 178.85,-32.5"/>
 </g>
-<!-- Node7 -->
-<g id="node7" class="node">
-<title>Node7</title>
-<g id="a_node7"><a xlink:href="check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" target="_top" xlink:title="Check array of imported lines.">
-<polygon fill="none" stroke="black" points="206,-0.5 206,-19.5 292,-19.5 292,-0.5 206,-0.5"/>
-<text text-anchor="middle" x="249" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_lines</text>
+<!-- Node6 -->
+<g id="node6" class="node">
+<title>Node6</title>
+<g id="a_node6"><a xlink:href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="0,-19.5 0,-38.5 41,-38.5 41,-19.5 0,-19.5"/>
+<text text-anchor="middle" x="20.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node7 -->
-<g id="edge6" class="edge">
-<title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M351.67,-10C331.89,-10 310.28,-10 292.09,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="351.82,-13.5 361.82,-10 351.82,-6.5 351.82,-13.5"/>
+<!-- Node5&#45;&gt;Node6 -->
+<g id="edge5" class="edge">
+<title>Node5&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M66.72,-29C57.65,-29 48.64,-29 41.07,-29"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="66.91,-32.5 76.91,-29 66.91,-25.5 66.91,-32.5"/>
 </g>
-<!-- Node7&#45;&gt;Node4 -->
+<!-- Node8 -->
+<g id="node8" class="node">
+<title>Node8</title>
+<g id="a_node8"><a xlink:href="check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" target="_top" xlink:title="Check array of imported lines.">
+<polygon fill="none" stroke="black" points="351,-0.5 351,-19.5 437,-19.5 437,-0.5 351,-0.5"/>
+<text text-anchor="middle" x="394" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_lines</text>
+</a>
+</g>
+</g>
+<!-- Node7&#45;&gt;Node8 -->
 <g id="edge7" class="edge">
-<title>Node7&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M195.73,-17.52C181.54,-19.57 166.46,-21.74 153.27,-23.63"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="196.47,-20.95 205.87,-16.06 195.47,-14.02 196.47,-20.95"/>
+<title>Node7&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M496.67,-10C476.89,-10 455.28,-10 437.09,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="496.82,-13.5 506.82,-10 496.82,-6.5 496.82,-13.5"/>
 </g>
-<!-- Node8&#45;&gt;Node3 -->
-<g id="edge9" class="edge">
-<title>Node8&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M334.57,-48C326,-48 317.36,-48 309.05,-48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="334.59,-51.5 344.59,-48 334.59,-44.5 334.59,-51.5"/>
+<!-- Node8&#45;&gt;Node4 -->
+<g id="edge8" class="edge">
+<title>Node8&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M340.58,-16.71C326.83,-18.47 311.99,-20.37 298.17,-22.13"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="341.37,-20.13 350.84,-15.39 340.48,-13.19 341.37,-20.13"/>
+</g>
+<!-- Node9&#45;&gt;Node3 -->
+<g id="edge10" class="edge">
+<title>Node9&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M479.57,-48C471,-48 462.36,-48 454.05,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="479.59,-51.5 489.59,-48 479.59,-44.5 479.59,-51.5"/>
 </g>
 </g>
 </svg>

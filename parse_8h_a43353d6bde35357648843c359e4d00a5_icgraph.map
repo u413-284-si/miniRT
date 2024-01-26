@@ -1,8 +1,7 @@
 <map id="ft_parse_ambient" name="ft_parse_ambient">
-<area shape="rect" id="node1" title="Parse ambient light line." alt="" coords="619,31,753,57"/>
-<area shape="rect" id="node2" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="435,5,547,32"/>
-<area shape="rect" id="node6" href="$parse__bonus_8h.html#a4ce5cad477407308f911966a9446f560" title="Dispatcher for different parsing functions." alt="" coords="412,56,571,83"/>
-<area shape="rect" id="node3" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="257,31,364,57"/>
-<area shape="rect" id="node4" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,31,209,57"/>
-<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node1" title="Parse ambient light line." alt="" coords="464,31,599,57"/>
+<area shape="rect" id="node2" href="$parse_8h.html#aa3cdb9030a467c5959cfa6b6b2dc63d7" title="Dispatcher for different parsing functions." alt="" coords="281,5,393,32"/>
+<area shape="rect" id="node5" href="$parse__bonus_8h.html#add28570024618d943c18498637fc6bb7" title="Dispatcher for different parsing functions." alt="" coords="257,56,416,83"/>
+<area shape="rect" id="node3" href="$parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" title="Imports, checks, and parses the provided file." alt="" coords="108,31,209,57"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,60,57"/>
 </map>

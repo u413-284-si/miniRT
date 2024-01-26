@@ -1,19 +1,20 @@
 <map id="inc/check.h" name="inc/check.h">
-<area shape="rect" id="node1" title=" " alt="" coords="402,5,496,32"/>
-<area shape="rect" id="node2" href="$error__type_8h.html" title=" " alt="" coords="150,80,252,107"/>
-<area shape="rect" id="node3" href="$error__msg_8h.html" title=" " alt="" coords="327,80,427,107"/>
-<area shape="rect" id="node7" href="$entities__bonus_8h.html" title=" " alt="" coords="111,155,240,181"/>
-<area shape="rect" id="node15" title=" " alt="" coords="597,155,674,181"/>
-<area shape="rect" id="node16" href="$ft__strtod_8h.html" title=" " alt="" coords="465,80,553,107"/>
-<area shape="rect" id="node17" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="628,80,798,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="352,304,418,331"/>
-<area shape="rect" id="node5" title=" " alt="" coords="403,155,471,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="264,155,327,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="89,453,172,480"/>
-<area shape="rect" id="node9" title=" " alt="" coords="22,379,92,405"/>
-<area shape="rect" id="node10" href="$vec3_8h.html" title=" " alt="" coords="219,379,284,405"/>
-<area shape="rect" id="node12" href="$colour__bonus_8h.html" title=" " alt="" coords="137,229,257,256"/>
-<area shape="rect" id="node11" title=" " alt="" coords="218,453,286,480"/>
-<area shape="rect" id="node13" title=" " alt="" coords="206,304,276,331"/>
-<area shape="rect" id="node14" href="$utils__bonus_8h.html" title=" " alt="" coords="74,304,182,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="322,5,416,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="104,80,162,107"/>
+<area shape="rect" id="node3" href="$error__type_8h.html" title=" " alt="" coords="186,80,288,107"/>
+<area shape="rect" id="node4" href="$error__msg_8h.html" title=" " alt="" coords="363,80,463,107"/>
+<area shape="rect" id="node8" href="$entities__bonus_8h.html" title=" " alt="" coords="151,155,280,181"/>
+<area shape="rect" id="node16" href="$ft__strtod_8h.html" title=" " alt="" coords="426,229,514,256"/>
+<area shape="rect" id="node18" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="609,80,780,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="328,304,394,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="379,155,447,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="471,155,534,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="117,453,200,480"/>
+<area shape="rect" id="node10" title=" " alt="" coords="30,379,100,405"/>
+<area shape="rect" id="node11" href="$vec3_8h.html" title=" " alt="" coords="247,379,312,405"/>
+<area shape="rect" id="node13" href="$colour__bonus_8h.html" title=" " alt="" coords="133,229,253,256"/>
+<area shape="rect" id="node12" title=" " alt="" coords="246,453,314,480"/>
+<area shape="rect" id="node14" title=" " alt="" coords="50,304,120,331"/>
+<area shape="rect" id="node15" href="$utils__bonus_8h.html" title=" " alt="" coords="144,304,252,331"/>
+<area shape="rect" id="node17" title=" " alt="" coords="469,304,546,331"/>
 </map>

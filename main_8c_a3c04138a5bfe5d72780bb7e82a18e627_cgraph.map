@@ -1,52 +1,52 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1025,60,1052"/>
-<area shape="rect" id="node2" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="133,553,235,580"/>
-<area shape="rect" id="node9" href="$error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" title="Print generic error message." alt="" coords="1001,503,1079,529"/>
-<area shape="rect" id="node28" href="$render_8h.html#a75eff027f3bd12beaa048cf22ca2b9f1" title="Frees ressources allocated for render." alt="" coords="115,1115,253,1141"/>
-<area shape="rect" id="node30" href="$render_8h.html#a5ffbfa92a6da595a38ba795014ee593c" title="Initializes the render struct." alt="" coords="342,1025,450,1052"/>
-<area shape="rect" id="node43" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,1304,260,1331"/>
-<area shape="rect" id="node3" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="339,208,453,235"/>
-<area shape="rect" id="node12" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="316,259,476,285"/>
-<area shape="rect" id="node16" href="$cleanup_8h.html#afd12c2961e60b6147c54c2ea99a70669" title="Frees a NULL&#45;terminated char ** array." alt="" coords="795,629,919,656"/>
-<area shape="rect" id="node17" href="$import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111" title="Check file extension, import file and prepare for use." alt="" coords="569,528,677,555"/>
-<area shape="rect" id="node22" href="$parse__bonus_8c.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="343,705,449,732"/>
-<area shape="rect" id="node4" href="$check_8c.html#a4560f2d54698ffbfb8262bc7cad02768" title="Check if minimum number of specific entities was found." alt="" coords="541,5,705,32"/>
-<area shape="rect" id="node6" href="$check_8c.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="551,208,694,235"/>
-<area shape="rect" id="node10" href="$check_8c.html#a3a2c8238788feab0a8d61cb6ef42d121" title="Increase entity count, and check if too many." alt="" coords="556,56,689,83"/>
-<area shape="rect" id="node11" href="$error__msg_8h.html#a278f4b45a52fcddd1925e2b9c50266ed" title="Print error message with a number." alt="" coords="555,259,690,285"/>
-<area shape="rect" id="node5" href="$error__msg_8h.html#a55f805a774b02619d20d73cba9e90de3" title="Error message if entity count is not correct." alt="" coords="797,81,917,108"/>
-<area shape="rect" id="node7" href="$check_8h.html#a3a4c3e635c4a6af8ef53d70ea5e7cb44" title="Checks if ambient light line is correct." alt="" coords="789,224,926,251"/>
-<area shape="rect" id="node8" href="$check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675" title="Checks if camera line is correct." alt="" coords="791,275,923,301"/>
-<area shape="rect" id="node13" href="$check_8h.html#a4560f2d54698ffbfb8262bc7cad02768" title="Check if minimum number of specific entities was found." alt="" coords="541,107,705,133"/>
-<area shape="rect" id="node14" href="$check__bonus_8c.html#ae33774d34021cd6fec6863eff3e8e3b0" title="Dispatch function for different line types." alt="" coords="551,310,694,351"/>
-<area shape="rect" id="node15" href="$check__bonus_8c.html#a51318eb9ecfb0e802dc1854503517b55" title="Increase entity count, and check if too many." alt="" coords="533,157,712,184"/>
-<area shape="rect" id="node18" href="$error__syscall_8h.html#a3e39b3f560404b954295453e40c41171" title="Wrapper function for close() to print errno." alt="" coords="809,427,906,453"/>
-<area shape="rect" id="node19" href="$error__syscall_8h.html#abf340aed99dd0770e292523412675343" title="Wrapper function for open() to print errno." alt="" coords="810,477,905,504"/>
-<area shape="rect" id="node20" href="$import__file_8c.html#ab0b327c549706e7478db9544c25886a5" title="Check if valid file extension." alt="" coords="785,528,930,555"/>
-<area shape="rect" id="node21" href="$import__file_8c.html#a9260f4680d33314ef51e7096426acdae" title="Import file and split it into lines." alt="" coords="791,579,924,605"/>
-<area shape="rect" id="node23" href="$parse__bonus_8c.html#a4e5c3ac2d79382b3badd1426d1f5428d" title="Initialises the bonus parameters of all entities to zero when reading a base file." alt="" coords="535,731,711,757"/>
-<area shape="rect" id="node24" href="$parse_8h.html#a5c7cd128e38180fcea33c559a075424e" title="Allocates memory for lights and hittable array." alt="" coords="564,680,681,707"/>
-<area shape="rect" id="node26" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="567,781,679,808"/>
-<area shape="rect" id="node27" href="$parse__bonus_8c.html#a4ce5cad477407308f911966a9446f560" title="Dispatcher for different parsing functions." alt="" coords="543,832,702,859"/>
-<area shape="rect" id="node25" href="$error__syscall_8h.html#a1ab50ff4af961d85a53bf12a8f398ba3" title="Wrapper function for malloc() to print errno." alt="" coords="804,680,911,707"/>
-<area shape="rect" id="node29" href="$render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57" title="Frees ressources allocated for mlx." alt="" coords="809,1152,905,1179"/>
-<area shape="rect" id="node31" href="$camera_8h.html#a283b142012bbcea27c39f49e270d8780" title="Initializes camera parameters." alt="" coords="575,883,670,909"/>
-<area shape="rect" id="node36" href="$render_8h.html#a12e519bd02c237459e067c614b9482e2" title="Initializes the mlx_ptrs struct." alt="" coords="561,1000,684,1027"/>
-<area shape="rect" id="node41" href="$render__menu_8h.html#a75e05a690430becef1c647f119c01657" title=" " alt="" coords="571,1051,674,1077"/>
-<area shape="rect" id="node42" href="$render__bit__field_8h.html#ab984d9cbc7c648ef4481b9158b27da30" title="Sets bit in bit field." alt="" coords="569,1101,676,1128"/>
-<area shape="rect" id="node32" href="$camera_8c.html#a02ed3f7206927a02c44eab5f5aba26e1" title="Calculates basis vectors u, v, w." alt="" coords="761,731,953,757"/>
-<area shape="rect" id="node33" href="$camera_8c.html#a525b3073d8f263afa7d81f70fa4b491d" title="Calculates all pixel positions in pixel grid." alt="" coords="779,781,935,808"/>
-<area shape="rect" id="node34" href="$camera_8c.html#a96132dcb4eac578fbee24bbf591fe090" title="Calculates the pixel grid parameters of the viewport." alt="" coords="773,832,942,859"/>
-<area shape="rect" id="node35" href="$camera_8c.html#acf892f39174bd3b89ad83a6e901a7b4f" title="Calculates viewport dimensions." alt="" coords="776,883,939,925"/>
-<area shape="rect" id="node37" href="$error__mlx_8h.html#abd6a66916fc4bc87ff5d14ded2606585" title="Wrapper function for mlx_init() to print errno." alt="" coords="799,949,915,976"/>
-<area shape="rect" id="node38" href="$error__mlx_8h.html#a4901d88031fcb0508d2e6fe728701816" title="Wrapper function for mlx_new_window() to print errno." alt="" coords="768,1000,947,1027"/>
-<area shape="rect" id="node39" href="$render__init__mlx_8c.html#a0af0fd19adc919c3966816890c89f291" title="Initializes the mlx img struct." alt="" coords="804,1051,911,1077"/>
-<area shape="rect" id="node40" href="$render__init__mlx_8c.html#a9e5e36f10c3b51d43b36a71ea2c314bb" title="Sets the window to fullscreen." alt="" coords="793,1101,922,1128"/>
-<area shape="rect" id="node44" href="$render__loop__mlx_8c.html#aa3b9ed7edeaf796e06eeceb1874c8fbf" title="Wrapper around mlx_loop_end()." alt="" coords="347,1203,445,1229"/>
-<area shape="rect" id="node45" href="$render_8h.html#a367bbd1df5c5d7a6480f93589d027d12" title="Handles keypresses." alt="" coords="329,1253,463,1280"/>
-<area shape="rect" id="node46" href="$render_8h.html#a789550edaaab12e30e0d8c779abdc1b8" title="Handles mouse movement." alt="" coords="313,1304,479,1331"/>
-<area shape="rect" id="node48" href="$render_8h.html#a187d0ce87f143b9dcd622e8d34968250" title="Handles mouse button presses." alt="" coords="315,1355,477,1381"/>
-<area shape="rect" id="node49" href="$render_8h.html#aeb525488cde2bb2dd2881042a083957a" title="Handles mouse button releases." alt="" coords="308,1405,484,1432"/>
-<area shape="rect" id="node50" href="$render__loop__mlx_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="325,1456,467,1483"/>
-<area shape="rect" id="node47" href="$render__mouse_8c.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="532,1304,713,1331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,870,60,897"/>
+<area shape="rect" id="node2" href="$parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" title="Imports, checks, and parses the provided file." alt="" coords="133,398,235,425"/>
+<area shape="rect" id="node7" href="$error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" title="Print generic error message." alt="" coords="999,575,1076,602"/>
+<area shape="rect" id="node28" href="$render_8h.html#a75eff027f3bd12beaa048cf22ca2b9f1" title="Frees ressources allocated for render." alt="" coords="115,971,253,998"/>
+<area shape="rect" id="node30" href="$render_8h.html#a5ffbfa92a6da595a38ba795014ee593c" title="Initializes the render struct." alt="" coords="130,870,238,897"/>
+<area shape="rect" id="node43" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,1174,260,1201"/>
+<area shape="rect" id="node3" href="$parse__bonus_8c.html#a1851ac042c8e1f69fe345a139f0eadbd" title="Chooses the correct checker function depending on bool is_bonus." alt="" coords="323,145,469,171"/>
+<area shape="rect" id="node11" href="$cleanup_8h.html#afd12c2961e60b6147c54c2ea99a70669" title="Frees a NULL&#45;terminated char ** array." alt="" coords="799,271,923,298"/>
+<area shape="rect" id="node12" href="$import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111" title="Check file extension, import file and prepare for use." alt="" coords="574,575,682,602"/>
+<area shape="rect" id="node17" href="$parse__bonus_8c.html#a4e5c3ac2d79382b3badd1426d1f5428d" title="Initialises the bonus parameters of all entities to zero when reading a base file." alt="" coords="308,322,484,349"/>
+<area shape="rect" id="node18" href="$parse_8h.html#a5c7cd128e38180fcea33c559a075424e" title="Allocates memory for lights and hittable array." alt="" coords="337,601,455,627"/>
+<area shape="rect" id="node20" href="$parse_8h.html#aa3cdb9030a467c5959cfa6b6b2dc63d7" title="Dispatcher for different parsing functions." alt="" coords="340,373,452,399"/>
+<area shape="rect" id="node25" href="$parse__bonus_8c.html#add28570024618d943c18498637fc6bb7" title="Dispatcher for different parsing functions." alt="" coords="317,423,475,450"/>
+<area shape="rect" id="node4" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="571,119,685,146"/>
+<area shape="rect" id="node10" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="548,69,708,95"/>
+<area shape="rect" id="node5" href="$check_8c.html#a4560f2d54698ffbfb8262bc7cad02768" title="Check if minimum number of specific entities was found." alt="" coords="779,119,943,146"/>
+<area shape="rect" id="node6" href="$check_8c.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="790,170,933,197"/>
+<area shape="rect" id="node8" href="$check_8c.html#a3a2c8238788feab0a8d61cb6ef42d121" title="Increase entity count, and check if too many." alt="" coords="795,221,928,247"/>
+<area shape="rect" id="node9" href="$error__msg_8h.html#a278f4b45a52fcddd1925e2b9c50266ed" title="Print error message with a number." alt="" coords="794,69,929,95"/>
+<area shape="rect" id="node13" href="$error__syscall_8h.html#a3e39b3f560404b954295453e40c41171" title="Wrapper function for close() to print errno." alt="" coords="813,626,910,653"/>
+<area shape="rect" id="node14" href="$error__syscall_8h.html#abf340aed99dd0770e292523412675343" title="Wrapper function for open() to print errno." alt="" coords="814,474,909,501"/>
+<area shape="rect" id="node15" href="$import__file_8c.html#ab0b327c549706e7478db9544c25886a5" title="Check if valid file extension." alt="" coords="789,525,934,551"/>
+<area shape="rect" id="node16" href="$import__file_8c.html#a9260f4680d33314ef51e7096426acdae" title="Import file and split it into lines." alt="" coords="795,575,928,602"/>
+<area shape="rect" id="node19" href="$error__syscall_8h.html#a1ab50ff4af961d85a53bf12a8f398ba3" title="Wrapper function for malloc() to print errno." alt="" coords="575,626,681,653"/>
+<area shape="rect" id="node21" href="$parse_8h.html#a43353d6bde35357648843c359e4d00a5" title="Parse ambient light line." alt="" coords="561,423,695,450"/>
+<area shape="rect" id="node22" href="$parse_8h.html#a39197067937cd8880453eed92148ee31" title="Parse camera line." alt="" coords="563,322,693,349"/>
+<area shape="rect" id="node23" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="569,271,687,298"/>
+<area shape="rect" id="node24" href="$parse_8h.html#a4aae05e7a38646951b318a2de0b24689" title="Parse light line." alt="" coords="573,373,683,399"/>
+<area shape="rect" id="node26" href="$parse__bonus_8c.html#a65db4c46c2af2d9b570687b3a1458f15" title=" " alt="" coords="545,525,711,551"/>
+<area shape="rect" id="node27" href="$parse__bonus_8h.html#a4a3d3c4fa6d369bd3093bff8ebdb46ee" title="Parse window size line." alt="" coords="559,474,697,501"/>
+<area shape="rect" id="node29" href="$render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57" title="Frees ressources allocated for mlx." alt="" coords="580,1098,676,1125"/>
+<area shape="rect" id="node31" href="$camera_8h.html#a283b142012bbcea27c39f49e270d8780" title="Initializes camera parameters." alt="" coords="349,794,443,821"/>
+<area shape="rect" id="node36" href="$render_8h.html#a164dea32598176b42c81ea3ae7946387" title="Initializes the mlx_ptrs struct." alt="" coords="335,921,457,947"/>
+<area shape="rect" id="node41" href="$render__menu_8h.html#a75e05a690430becef1c647f119c01657" title=" " alt="" coords="345,971,447,998"/>
+<area shape="rect" id="node42" href="$render__bit__field_8h.html#ab984d9cbc7c648ef4481b9158b27da30" title="Sets bit in bit field." alt="" coords="343,743,449,770"/>
+<area shape="rect" id="node32" href="$camera_8c.html#a02ed3f7206927a02c44eab5f5aba26e1" title="Calculates basis vectors u, v, w." alt="" coords="532,743,724,770"/>
+<area shape="rect" id="node33" href="$camera_8c.html#a525b3073d8f263afa7d81f70fa4b491d" title="Calculates all pixel positions in pixel grid." alt="" coords="550,794,706,821"/>
+<area shape="rect" id="node34" href="$camera_8c.html#a96132dcb4eac578fbee24bbf591fe090" title="Calculates the pixel grid parameters of the viewport." alt="" coords="543,845,713,871"/>
+<area shape="rect" id="node35" href="$camera_8c.html#acf892f39174bd3b89ad83a6e901a7b4f" title="Calculates viewport dimensions." alt="" coords="547,677,709,719"/>
+<area shape="rect" id="node37" href="$render__init__mlx_8c.html#a05abfdd9398c0f95c23dbd96038f93f5" title="Checks screen size." alt="" coords="549,946,707,973"/>
+<area shape="rect" id="node38" href="$error__mlx_8h.html#abd6a66916fc4bc87ff5d14ded2606585" title="Wrapper function for mlx_init() to print errno." alt="" coords="803,794,919,821"/>
+<area shape="rect" id="node39" href="$error__mlx_8h.html#a4901d88031fcb0508d2e6fe728701816" title="Wrapper function for mlx_new_window() to print errno." alt="" coords="772,979,951,1006"/>
+<area shape="rect" id="node40" href="$render__init__mlx_8c.html#a0af0fd19adc919c3966816890c89f291" title="Initializes the mlx img struct." alt="" coords="575,895,681,922"/>
+<area shape="rect" id="node44" href="$render__loop__mlx_8c.html#aa3b9ed7edeaf796e06eeceb1874c8fbf" title="Wrapper around mlx_loop_end()." alt="" coords="347,1123,445,1150"/>
+<area shape="rect" id="node45" href="$render_8h.html#a367bbd1df5c5d7a6480f93589d027d12" title="Handles keypresses." alt="" coords="329,1174,463,1201"/>
+<area shape="rect" id="node46" href="$render_8h.html#a789550edaaab12e30e0d8c779abdc1b8" title="Handles mouse movement." alt="" coords="313,1225,479,1251"/>
+<area shape="rect" id="node48" href="$render_8h.html#a187d0ce87f143b9dcd622e8d34968250" title="Handles mouse button presses." alt="" coords="315,1275,477,1302"/>
+<area shape="rect" id="node49" href="$render_8h.html#aeb525488cde2bb2dd2881042a083957a" title="Handles mouse button releases." alt="" coords="308,1326,484,1353"/>
+<area shape="rect" id="node50" href="$render__loop__mlx_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="325,1073,467,1099"/>
+<area shape="rect" id="node47" href="$render__mouse_8c.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="537,1225,719,1251"/>
 </map>

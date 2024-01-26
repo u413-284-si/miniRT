@@ -29,13 +29,14 @@ var render_8h =
     [ "ft_blend_background", "render_8h.html#ae04f0ec3394429ff447efb0611a8e78b", null ],
     [ "ft_change_options", "render_8h.html#add0526c14ef9d6085a85763d42fb901f", null ],
     [ "ft_change_select", "render_8h.html#aec3cd597b321f09a5c6b74fc87d4057e", null ],
+    [ "ft_check_screen_size", "render_8h.html#a05abfdd9398c0f95c23dbd96038f93f5", null ],
     [ "ft_end_loop", "render_8h.html#aa3b9ed7edeaf796e06eeceb1874c8fbf", null ],
     [ "ft_fast_alpha_blend", "render_8h.html#a01917537e12f4364de8c1a9795e235c5", null ],
     [ "ft_free_mlx", "render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57", null ],
     [ "ft_get_colour", "render_8h.html#a5d187c5314483276ba15560dcf620e39", null ],
     [ "ft_get_increment", "render_8h.html#a83e529cd9901f21912824cd776d5aec9", null ],
     [ "ft_init_image", "render_8h.html#a0af0fd19adc919c3966816890c89f291", null ],
-    [ "ft_init_mlx_ptrs", "render_8h.html#a12e519bd02c237459e067c614b9482e2", null ],
+    [ "ft_init_mlx_ptrs", "render_8h.html#a164dea32598176b42c81ea3ae7946387", null ],
     [ "ft_interpolate_colour", "render_8h.html#a41e18bc0bce27f7169b29f79e5de0423", null ],
     [ "ft_keyhook_change_col", "render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f", null ],
     [ "ft_keyhook_fov_cam", "render_8h.html#aafd27cf2b06772ec739aa2e97164d8b6", null ],
@@ -65,7 +66,6 @@ var render_8h =
     [ "ft_render_cleanup", "render_8h.html#a75eff027f3bd12beaa048cf22ca2b9f1", null ],
     [ "ft_render_init", "render_8h.html#a5ffbfa92a6da595a38ba795014ee593c", null ],
     [ "ft_render_start_loop", "render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52", null ],
-    [ "ft_set_fullscreen", "render_8h.html#a9e5e36f10c3b51d43b36a71ea2c314bb", null ],
     [ "ft_shoot_ray", "render_8h.html#a2c9085ad1ae8adcd3201a501a9a4dcde", null ],
     [ "ft_static_interpolate", "render_8h.html#a02dd1323bf99ad166e22cf0dcbef39f2", null ]
 ];

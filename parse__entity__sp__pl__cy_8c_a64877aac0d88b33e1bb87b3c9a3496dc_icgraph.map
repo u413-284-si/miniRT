@@ -1,8 +1,7 @@
 <map id="ft_parse_plane" name="ft_parse_plane">
-<area shape="rect" id="node1" title="Parse plane line." alt="" coords="739,5,856,32"/>
-<area shape="rect" id="node2" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="572,5,691,32"/>
-<area shape="rect" id="node3" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="412,5,524,32"/>
-<area shape="rect" id="node4" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="257,5,364,32"/>
-<area shape="rect" id="node5" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,5,209,32"/>
-<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="Parse plane line." alt="" coords="584,5,701,32"/>
+<area shape="rect" id="node2" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="417,5,536,32"/>
+<area shape="rect" id="node3" href="$parse_8h.html#aa3cdb9030a467c5959cfa6b6b2dc63d7" title="Dispatcher for different parsing functions." alt="" coords="257,5,369,32"/>
+<area shape="rect" id="node4" href="$parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" title="Imports, checks, and parses the provided file." alt="" coords="108,5,209,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
 </map>

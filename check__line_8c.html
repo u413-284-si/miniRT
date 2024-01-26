@@ -112,8 +112,8 @@ Functions</h2></td></tr>
 <tr class="separator:a399912478dc865909526aa87e6c333df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a806133750c2b871ad705916e6d997f31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__line_8c.html#a806133750c2b871ad705916e6d997f31">ft_isvalid_unit_vec</a> (char **line, float min, float max)</td></tr>
 <tr class="separator:a806133750c2b871ad705916e6d997f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7884a3e9489248b242a9fb7da9607bf4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a> (char **line, bool comma)</td></tr>
-<tr class="separator:a7884a3e9489248b242a9fb7da9607bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae11d3558f785772227f803873ad9d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__line_8c.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a> (char **line, int min, int max, bool comma)</td></tr>
+<tr class="separator:adae11d3558f785772227f803873ad9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3327b821f1a4c71183e0448c7023a5aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__line_8c.html#a3327b821f1a4c71183e0448c7023a5aa">ft_isvalid_rgb_block</a> (char **line)</td></tr>
 <tr class="separator:a3327b821f1a4c71183e0448c7023a5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -280,6 +280,92 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="adae11d3558f785772227f803873ad9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae11d3558f785772227f803873ad9d0">&#9670;&nbsp;</a></span>ft_isvalid_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ft_isvalid_int </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>comma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tries to convert str into int and checks range. </p>
+<p>Tries to convert str into rgb int and checks range.</p>
+<p>Error if str does not start with digit (prevents negative numbers and wrong chars). Convert digits as long as value below 255 and moves line forward. Error if number is bigger than 255. Error if number is not followed by correct separator. Correct separator can be controlled by passed bool: ',' or ' ' and '\0'. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Pointer to current line. </td></tr>
+    <tr><td class="paramname">min</td><td>Minimum value for converted number. </td></tr>
+    <tr><td class="paramname">max</td><td>Maximum value for converted number. </td></tr>
+    <tr><td class="paramname">comma</td><td>Controls if separator should be ',' or ' ' and '\0'. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Number is valid. </dd>
+<dd>
+false Wrong beginning char, out of range, wrong separator. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="check__line_8c_source.html#l00076">76</a> of file <a class="el" href="check__line_8c_source.html">check_line.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> tmp;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    tmp = 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (!ft_isdigit(**line))</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe">ft_perror_convert</a>(*line, <span class="keyword">false</span>));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    tmp = ft_atoi(*line);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span> (tmp &lt; min || tmp &gt; max)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a>(*line, 3, min, max));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">while</span> (ft_isdigit(**line))</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        (*line)++;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (comma &amp;&amp; **line != <span class="charliteral">&#39;,&#39;</span>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> (!comma &amp;&amp; **line != <span class="charliteral">&#39; &#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\t&#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="check__line_8c_adae11d3558f785772227f803873ad9d0_cgraph.svg" width="311" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="check__line_8c_adae11d3558f785772227f803873ad9d0_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a3327b821f1a4c71183e0448c7023a5aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3327b821f1a4c71183e0448c7023a5aa">&#9670;&nbsp;</a></span>ft_isvalid_rgb_block()</h2>
 
@@ -297,7 +383,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Checks three rgb values, separated by ','. </p>
-<p>Tries to convert three numbers (Block) with <a class="el" href="check_8h.html#a7884a3e9489248b242a9fb7da9607bf4" title="Tries to convert str into rgb int and checks range.">ft_isvalid_rgb_val()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Tries to convert three numbers (Block) with <a class="el" href="check_8h.html#adae11d3558f785772227f803873ad9d0" title="Tries to convert str into int and checks range.">ft_isvalid_int()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">line</td><td>Pointer to current line. </td></tr>
   </table>
@@ -307,103 +393,29 @@ Here is the caller graph for this function:</div>
 <dd>
 false Block is not valid. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="check__line_8c_source.html#l00098">98</a> of file <a class="el" href="check__line_8c_source.html">check_line.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">true</span>))</div>
+<p class="definition">Definition at line <a class="el" href="check__line_8c_source.html#l00095">95</a> of file <a class="el" href="check__line_8c_source.html">check_line.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a>(line, 0, 255, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    (*line)++;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a>(line,0, 255, <span class="keyword">true</span>))</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    (*line)++;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a>(line, 0, 255, <span class="keyword">false</span>))</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    (*line)++;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a>(line, <span class="keyword">false</span>))</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
-<div class="ttc" id="acheck__line_8c_html_a7884a3e9489248b242a9fb7da9607bf4"><div class="ttname"><a href="check__line_8c.html#a7884a3e9489248b242a9fb7da9607bf4">ft_isvalid_rgb_val</a></div><div class="ttdeci">bool ft_isvalid_rgb_val(char **line, bool comma)</div><div class="ttdoc">Tries to convert str into rgb int and checks range.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00076">check_line.c:76</a></div></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="ttc" id="acheck__line_8c_html_adae11d3558f785772227f803873ad9d0"><div class="ttname"><a href="check__line_8c.html#adae11d3558f785772227f803873ad9d0">ft_isvalid_int</a></div><div class="ttdeci">bool ft_isvalid_int(char **line, int min, int max, bool comma)</div><div class="ttdoc">Tries to convert str into int and checks range.</div><div class="ttdef"><b>Definition:</b> <a href="check__line_8c_source.html#l00076">check_line.c:76</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="check__line_8c_a3327b821f1a4c71183e0448c7023a5aa_cgraph.svg" width="540" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="check__line_8c_a3327b821f1a4c71183e0448c7023a5aa_cgraph.svg" width="510" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="check__line_8c_a3327b821f1a4c71183e0448c7023a5aa_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a7884a3e9489248b242a9fb7da9607bf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7884a3e9489248b242a9fb7da9607bf4">&#9670;&nbsp;</a></span>ft_isvalid_rgb_val()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ft_isvalid_rgb_val </td>
-          <td>(</td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>comma</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Tries to convert str into rgb int and checks range. </p>
-<p>Error if str does not start with digit (prevents negative numbers and wrong chars). Convert digits as long as value below 255 and moves line forward. Error if number is bigger than 255. Error if number is not followed by correct separator. Correct separator can be controlled by passed bool: ',' or ' ' and '\0'. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">line</td><td>Pointer to current line. </td></tr>
-    <tr><td class="paramname">comma</td><td>Controls if separator should be ',' or ' ' and '\0'. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true Number is valid. </dd>
-<dd>
-false Wrong beginning char, out of range, wrong separator. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="check__line_8c_source.html#l00076">76</a> of file <a class="el" href="check__line_8c_source.html">check_line.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> tmp;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    tmp = 0;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (!ft_isdigit(**line))</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe">ft_perror_convert</a>(*line, <span class="keyword">false</span>));</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">while</span> (ft_isdigit(**line) &amp;&amp; tmp &lt; 255)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        tmp *= 10;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        tmp += **line - <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        (*line)++;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (tmp &gt; 255)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d">ft_perror_range</a>(*line - 3, 3, 0, 255));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (comma &amp;&amp; **line != <span class="charliteral">&#39;,&#39;</span>)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (!comma &amp;&amp; **line != <span class="charliteral">&#39; &#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\t&#39;</span> &amp;&amp; **line != <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099">ft_perror_separator</a>(*line, comma));</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="check__line_8c_a7884a3e9489248b242a9fb7da9607bf4_cgraph.svg" width="342" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="check__line_8c_a7884a3e9489248b242a9fb7da9607bf4_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

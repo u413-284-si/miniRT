@@ -106,14 +106,72 @@ Include dependency graph for render_init_mlx.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a12e519bd02c237459e067c614b9482e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__init__mlx_8c.html#a12e519bd02c237459e067c614b9482e2">ft_init_mlx_ptrs</a> (<a class="el" href="structt__mlx__ptrs.html">t_mlx_ptrs</a> *mlx_ptrs, bool fullscreen)</td></tr>
-<tr class="separator:a12e519bd02c237459e067c614b9482e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e5e36f10c3b51d43b36a71ea2c314bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__vec2i.html">t_vec2i</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__init__mlx_8c.html#a9e5e36f10c3b51d43b36a71ea2c314bb">ft_set_fullscreen</a> (void *mlx_ptr)</td></tr>
-<tr class="separator:a9e5e36f10c3b51d43b36a71ea2c314bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a164dea32598176b42c81ea3ae7946387"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__init__mlx_8c.html#a164dea32598176b42c81ea3ae7946387">ft_init_mlx_ptrs</a> (<a class="el" href="structt__mlx__ptrs.html">t_mlx_ptrs</a> *mlx_ptrs, <a class="el" href="structt__vec2i.html">t_vec2i</a> *win_size)</td></tr>
+<tr class="separator:a164dea32598176b42c81ea3ae7946387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05abfdd9398c0f95c23dbd96038f93f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__vec2i.html">t_vec2i</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__init__mlx_8c.html#a05abfdd9398c0f95c23dbd96038f93f5">ft_check_screen_size</a> (void *mlx_ptr, <a class="el" href="structt__vec2i.html">t_vec2i</a> win_size)</td></tr>
+<tr class="separator:a05abfdd9398c0f95c23dbd96038f93f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0af0fd19adc919c3966816890c89f291"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__init__mlx_8c.html#a0af0fd19adc919c3966816890c89f291">ft_init_image</a> (<a class="el" href="structt__mlx__ptrs.html">t_mlx_ptrs</a> *mlx_ptrs, <a class="el" href="structt__vec2i.html">t_vec2i</a> size)</td></tr>
 <tr class="separator:a0af0fd19adc919c3966816890c89f291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a05abfdd9398c0f95c23dbd96038f93f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05abfdd9398c0f95c23dbd96038f93f5">&#9670;&nbsp;</a></span>ft_check_screen_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__vec2i.html">t_vec2i</a> ft_check_screen_size </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mlx_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__vec2i.html">t_vec2i</a>&#160;</td>
+          <td class="paramname"><em>win_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks screen size. </p>
+<p>Gets the screen size and compares it to the window size. If the window size is larger than the screen size, the window size is set to the screen size. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mlx_ptr</td><td>Mlx pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec2i.html" title="2D vector with int.">t_vec2i</a> Window size. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="render__init__mlx_8c_source.html#l00034">34</a> of file <a class="el" href="render__init__mlx_8c_source.html">render_init_mlx.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="structt__vec2i.html">t_vec2i</a> screen_size;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    mlx_get_screen_size(mlx_ptr, &amp;screen_size.<a class="code" href="structt__vec2i.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, &amp;screen_size.<a class="code" href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (win_size.<a class="code" href="structt__vec2i.html#a6150e0515f7202e2fb518f7206ed97dc">x</a> &gt; screen_size.<a class="code" href="structt__vec2i.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        win_size.<a class="code" href="structt__vec2i.html#a6150e0515f7202e2fb518f7206ed97dc">x</a> = screen_size.<a class="code" href="structt__vec2i.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (win_size.<a class="code" href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a> &gt; screen_size.<a class="code" href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        win_size.<a class="code" href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a> = screen_size.<a class="code" href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> (win_size);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="astructt__vec2i_html"><div class="ttname"><a href="structt__vec2i.html">t_vec2i</a></div><div class="ttdoc">2D vector with int.</div><div class="ttdef"><b>Definition:</b> <a href="vec2_8h_source.html#l00036">vec2.h:37</a></div></div>
+<div class="ttc" id="astructt__vec2i_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">t_vec2i::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="vec2_8h_source.html#l00039">vec2.h:39</a></div></div>
+<div class="ttc" id="astructt__vec2i_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="structt__vec2i.html#a6150e0515f7202e2fb518f7206ed97dc">t_vec2i::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="vec2_8h_source.html#l00038">vec2.h:38</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="render__init__mlx_8c_a05abfdd9398c0f95c23dbd96038f93f5_icgraph.svg" width="599" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a0af0fd19adc919c3966816890c89f291"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0af0fd19adc919c3966816890c89f291">&#9670;&nbsp;</a></span>ft_init_image()</h2>
 
@@ -150,28 +208,28 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>t_err SUCCESS, ERROR. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="render__init__mlx_8c_source.html#l00050">50</a> of file <a class="el" href="render__init__mlx_8c_source.html">render_init_mlx.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="error__mlx_8h.html#a609cd65b568e138870202147aff64449">ft_err_mlx_new_image</a>((<span class="keywordtype">void</span> **)&amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>, mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, size))</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a1d9c08c38c668f0ff6ea56717940e75a">addr</a> = mlx_get_data_addr(mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">ptr</a>,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a00731ab471a2b38632427d0d80a82278">bpp</a>, &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a82856de6e1d493030f95808886869280">line_len</a>,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a4f31d79e5388508ff9b17230b6cad8d7">endian</a>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a3e18e5ab1201e205ce88c473a2f4bf99">bytes</a> = mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a00731ab471a2b38632427d0d80a82278">bpp</a> / 8;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a0bc7f33f56d51f0d67bebf4a5f20f3a2">size</a> = size;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    size = (<a class="code" href="structt__vec2i.html">t_vec2i</a>){<a class="code" href="mini_r_t__config_8h.html#ae64f028be3d52d84433789a433ba4034">MENU_WIDTH</a>, size.<a class="code" href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="error__mlx_8h.html#a609cd65b568e138870202147aff64449">ft_err_mlx_new_image</a>((<span class="keywordtype">void</span> **)&amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>, mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, size))</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        mlx_destroy_image(mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">ptr</a>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a1d9c08c38c668f0ff6ea56717940e75a">addr</a> = mlx_get_data_addr(mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">ptr</a>,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a00731ab471a2b38632427d0d80a82278">bpp</a>, &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a82856de6e1d493030f95808886869280">line_len</a>,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a4f31d79e5388508ff9b17230b6cad8d7">endian</a>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a3e18e5ab1201e205ce88c473a2f4bf99">bytes</a> = mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a00731ab471a2b38632427d0d80a82278">bpp</a> / 8;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a0bc7f33f56d51f0d67bebf4a5f20f3a2">size</a> = size;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="render__init__mlx_8c_source.html#l00046">46</a> of file <a class="el" href="render__init__mlx_8c_source.html">render_init_mlx.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="error__mlx_8h.html#a609cd65b568e138870202147aff64449">ft_err_mlx_new_image</a>((<span class="keywordtype">void</span> **)&amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>, mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, size))</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a1d9c08c38c668f0ff6ea56717940e75a">addr</a> = mlx_get_data_addr(mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">ptr</a>,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a00731ab471a2b38632427d0d80a82278">bpp</a>, &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a82856de6e1d493030f95808886869280">line_len</a>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a4f31d79e5388508ff9b17230b6cad8d7">endian</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a3e18e5ab1201e205ce88c473a2f4bf99">bytes</a> = mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a00731ab471a2b38632427d0d80a82278">bpp</a> / 8;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#a0bc7f33f56d51f0d67bebf4a5f20f3a2">size</a> = size;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    size = (<a class="code" href="structt__vec2i.html">t_vec2i</a>){<a class="code" href="mini_r_t__config_8h.html#ae64f028be3d52d84433789a433ba4034">MENU_WIDTH</a>, size.<a class="code" href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="error__mlx_8h.html#a609cd65b568e138870202147aff64449">ft_err_mlx_new_image</a>((<span class="keywordtype">void</span> **)&amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>, mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, size))</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        mlx_destroy_image(mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">img</a>.<a class="code" href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">ptr</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a1d9c08c38c668f0ff6ea56717940e75a">addr</a> = mlx_get_data_addr(mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#aaf0497a3bd20a0066017546af6bf80be">ptr</a>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a00731ab471a2b38632427d0d80a82278">bpp</a>, &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a82856de6e1d493030f95808886869280">line_len</a>,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            &amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a4f31d79e5388508ff9b17230b6cad8d7">endian</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a3e18e5ab1201e205ce88c473a2f4bf99">bytes</a> = mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a00731ab471a2b38632427d0d80a82278">bpp</a> / 8;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">veil</a>.<a class="code" href="structt__img.html#a0bc7f33f56d51f0d67bebf4a5f20f3a2">size</a> = size;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 <div class="ttc" id="aerror__mlx_8h_html_a609cd65b568e138870202147aff64449"><div class="ttname"><a href="error__mlx_8h.html#a609cd65b568e138870202147aff64449">ft_err_mlx_new_image</a></div><div class="ttdeci">t_err ft_err_mlx_new_image(void **ptr, void *mlx_ptr, t_vec2i size)</div><div class="ttdoc">Wrapper function for mlx_new_image() to print errno.</div><div class="ttdef"><b>Definition:</b> <a href="error__mlx_8c_source.html#l00040">error_mlx.c:40</a></div></div>
 <div class="ttc" id="aerror__type_8h_html_a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90"><div class="ttname"><a href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdef"><b>Definition:</b> <a href="error__type_8h_source.html#l00026">error_type.h:25</a></div></div>
 <div class="ttc" id="aerror__type_8h_html_a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8"><div class="ttname"><a href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="error__type_8h_source.html#l00024">error_type.h:24</a></div></div>
@@ -186,8 +244,6 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructt__mlx__ptrs_html_a36d268889cd2a32ce78029972c0445a5"><div class="ttname"><a href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">t_mlx_ptrs::mlx_ptr</a></div><div class="ttdeci">void * mlx_ptr</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00085">render.h:85</a></div></div>
 <div class="ttc" id="astructt__mlx__ptrs_html_a3f9d28a9843866e3f0f632f93063f727"><div class="ttname"><a href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">t_mlx_ptrs::img</a></div><div class="ttdeci">t_img img</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00087">render.h:87</a></div></div>
 <div class="ttc" id="astructt__mlx__ptrs_html_adaf60f1c9822bb3cc2ef4df11c3fabb4"><div class="ttname"><a href="structt__mlx__ptrs.html#adaf60f1c9822bb3cc2ef4df11c3fabb4">t_mlx_ptrs::veil</a></div><div class="ttdeci">t_img veil</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00088">render.h:88</a></div></div>
-<div class="ttc" id="astructt__vec2i_html"><div class="ttname"><a href="structt__vec2i.html">t_vec2i</a></div><div class="ttdoc">2D vector with int.</div><div class="ttdef"><b>Definition:</b> <a href="vec2_8h_source.html#l00036">vec2.h:37</a></div></div>
-<div class="ttc" id="astructt__vec2i_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">t_vec2i::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="vec2_8h_source.html#l00039">vec2.h:39</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -203,8 +259,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a12e519bd02c237459e067c614b9482e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12e519bd02c237459e067c614b9482e2">&#9670;&nbsp;</a></span>ft_init_mlx_ptrs()</h2>
+<a id="a164dea32598176b42c81ea3ae7946387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a164dea32598176b42c81ea3ae7946387">&#9670;&nbsp;</a></span>ft_init_mlx_ptrs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,8 +274,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>fullscreen</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structt__vec2i.html">t_vec2i</a> *&#160;</td>
+          <td class="paramname"><em>win_size</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -233,7 +289,7 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mlx_ptrs</td><td>Pointer to mlx_ptrs struct. </td></tr>
-    <tr><td class="paramname">fullscreen</td><td>Fullscreen flag. </td></tr>
+    <tr><td class="paramname">win_size</td><td>Parsed size of window. </td></tr>
   </table>
   </dd>
 </dl>
@@ -241,90 +297,38 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="render__init__mlx_8c_source.html#l00015">15</a> of file <a class="el" href="render__init__mlx_8c_source.html">render_init_mlx.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="structt__vec2i.html">t_vec2i</a> win_size;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="error__mlx_8h.html#abd6a66916fc4bc87ff5d14ded2606585">ft_err_mlx_init</a>((<span class="keywordtype">void</span> **)&amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>))</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (fullscreen)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        win_size = <a class="code" href="render__init__mlx_8c.html#a9e5e36f10c3b51d43b36a71ea2c314bb">ft_set_fullscreen</a>(mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        win_size.<a class="code" href="structt__vec2i.html#a6150e0515f7202e2fb518f7206ed97dc">x</a> = <a class="code" href="mini_r_t__config_8h.html#a6e1ad85c506456c5e54b5165173315b6">WIN_SIZE_X</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        win_size.<a class="code" href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a> = <a class="code" href="mini_r_t__config_8h.html#a0c212361b1388494c98b2c35db58de19">WIN_SIZE_Y</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="error__mlx_8h.html#a4901d88031fcb0508d2e6fe728701816">ft_err_mlx_new_window</a>((<span class="keywordtype">void</span> **)&amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, win_size, <span class="stringliteral">&quot;miniRT&quot;</span>))</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57">ft_free_mlx</a>(mlx_ptrs);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="render__init__mlx_8c.html#a0af0fd19adc919c3966816890c89f291">ft_init_image</a>(mlx_ptrs, win_size))</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57">ft_free_mlx</a>(mlx_ptrs);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="error__mlx_8h.html#abd6a66916fc4bc87ff5d14ded2606585">ft_err_mlx_init</a>((<span class="keywordtype">void</span> **)&amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>))</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    *win_size = <a class="code" href="render__init__mlx_8c.html#a05abfdd9398c0f95c23dbd96038f93f5">ft_check_screen_size</a>(mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, *win_size);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="error__mlx_8h.html#a4901d88031fcb0508d2e6fe728701816">ft_err_mlx_new_window</a>((<span class="keywordtype">void</span> **)&amp;mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">win_ptr</a>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            mlx_ptrs-&gt;<a class="code" href="structt__mlx__ptrs.html#a36d268889cd2a32ce78029972c0445a5">mlx_ptr</a>, *win_size, <span class="stringliteral">&quot;miniRT&quot;</span>))</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57">ft_free_mlx</a>(mlx_ptrs);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="render__init__mlx_8c.html#a0af0fd19adc919c3966816890c89f291">ft_init_image</a>(mlx_ptrs, *win_size))</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57">ft_free_mlx</a>(mlx_ptrs);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="ttc" id="aerror__mlx_8h_html_a4901d88031fcb0508d2e6fe728701816"><div class="ttname"><a href="error__mlx_8h.html#a4901d88031fcb0508d2e6fe728701816">ft_err_mlx_new_window</a></div><div class="ttdeci">t_err ft_err_mlx_new_window(void **ptr, void *mlx_ptr, t_vec2i size, char *title)</div><div class="ttdoc">Wrapper function for mlx_new_window() to print errno.</div><div class="ttdef"><b>Definition:</b> <a href="error__mlx_8c_source.html#l00027">error_mlx.c:27</a></div></div>
 <div class="ttc" id="aerror__mlx_8h_html_abd6a66916fc4bc87ff5d14ded2606585"><div class="ttname"><a href="error__mlx_8h.html#abd6a66916fc4bc87ff5d14ded2606585">ft_err_mlx_init</a></div><div class="ttdeci">t_err ft_err_mlx_init(void **ptr)</div><div class="ttdoc">Wrapper function for mlx_init() to print errno.</div><div class="ttdef"><b>Definition:</b> <a href="error__mlx_8c_source.html#l00015">error_mlx.c:15</a></div></div>
-<div class="ttc" id="amini_r_t__config_8h_html_a0c212361b1388494c98b2c35db58de19"><div class="ttname"><a href="mini_r_t__config_8h.html#a0c212361b1388494c98b2c35db58de19">WIN_SIZE_Y</a></div><div class="ttdeci">#define WIN_SIZE_Y</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config_8h_source.html#l00035">miniRT_config.h:35</a></div></div>
-<div class="ttc" id="amini_r_t__config_8h_html_a6e1ad85c506456c5e54b5165173315b6"><div class="ttname"><a href="mini_r_t__config_8h.html#a6e1ad85c506456c5e54b5165173315b6">WIN_SIZE_X</a></div><div class="ttdeci">#define WIN_SIZE_X</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config_8h_source.html#l00034">miniRT_config.h:34</a></div></div>
 <div class="ttc" id="arender_8h_html_a757dac6825a3bbb51a4c6bff9b7e6b57"><div class="ttname"><a href="render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57">ft_free_mlx</a></div><div class="ttdeci">void ft_free_mlx(t_mlx_ptrs *mlx_ptrs)</div><div class="ttdoc">Frees ressources allocated for mlx.</div><div class="ttdef"><b>Definition:</b> <a href="render__cleanup_8c_source.html#l00015">render_cleanup.c:15</a></div></div>
-<div class="ttc" id="arender__init__mlx_8c_html_a0af0fd19adc919c3966816890c89f291"><div class="ttname"><a href="render__init__mlx_8c.html#a0af0fd19adc919c3966816890c89f291">ft_init_image</a></div><div class="ttdeci">t_err ft_init_image(t_mlx_ptrs *mlx_ptrs, t_vec2i size)</div><div class="ttdoc">Initializes the mlx img struct.</div><div class="ttdef"><b>Definition:</b> <a href="render__init__mlx_8c_source.html#l00050">render_init_mlx.c:50</a></div></div>
-<div class="ttc" id="arender__init__mlx_8c_html_a9e5e36f10c3b51d43b36a71ea2c314bb"><div class="ttname"><a href="render__init__mlx_8c.html#a9e5e36f10c3b51d43b36a71ea2c314bb">ft_set_fullscreen</a></div><div class="ttdeci">t_vec2i ft_set_fullscreen(void *mlx_ptr)</div><div class="ttdoc">Sets the window to fullscreen.</div><div class="ttdef"><b>Definition:</b> <a href="render__init__mlx_8c_source.html#l00042">render_init_mlx.c:42</a></div></div>
+<div class="ttc" id="arender__init__mlx_8c_html_a05abfdd9398c0f95c23dbd96038f93f5"><div class="ttname"><a href="render__init__mlx_8c.html#a05abfdd9398c0f95c23dbd96038f93f5">ft_check_screen_size</a></div><div class="ttdeci">t_vec2i ft_check_screen_size(void *mlx_ptr, t_vec2i win_size)</div><div class="ttdoc">Checks screen size.</div><div class="ttdef"><b>Definition:</b> <a href="render__init__mlx_8c_source.html#l00034">render_init_mlx.c:34</a></div></div>
+<div class="ttc" id="arender__init__mlx_8c_html_a0af0fd19adc919c3966816890c89f291"><div class="ttname"><a href="render__init__mlx_8c.html#a0af0fd19adc919c3966816890c89f291">ft_init_image</a></div><div class="ttdeci">t_err ft_init_image(t_mlx_ptrs *mlx_ptrs, t_vec2i size)</div><div class="ttdoc">Initializes the mlx img struct.</div><div class="ttdef"><b>Definition:</b> <a href="render__init__mlx_8c_source.html#l00046">render_init_mlx.c:46</a></div></div>
 <div class="ttc" id="astructt__mlx__ptrs_html_a1465266e6bfd3cea90a81b747de5b7b9"><div class="ttname"><a href="structt__mlx__ptrs.html#a1465266e6bfd3cea90a81b747de5b7b9">t_mlx_ptrs::win_ptr</a></div><div class="ttdeci">void * win_ptr</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00086">render.h:86</a></div></div>
-<div class="ttc" id="astructt__vec2i_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="structt__vec2i.html#a6150e0515f7202e2fb518f7206ed97dc">t_vec2i::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="vec2_8h_source.html#l00038">vec2.h:38</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="render__init__mlx_8c_a12e519bd02c237459e067c614b9482e2_cgraph.svg" width="663" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__init__mlx_8c_a164dea32598176b42c81ea3ae7946387_cgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="render__init__mlx_8c_a12e519bd02c237459e067c614b9482e2_icgraph.svg" width="392" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a9e5e36f10c3b51d43b36a71ea2c314bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e5e36f10c3b51d43b36a71ea2c314bb">&#9670;&nbsp;</a></span>ft_set_fullscreen()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structt__vec2i.html">t_vec2i</a> ft_set_fullscreen </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>mlx_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the window to fullscreen. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mlx_ptr</td><td>Mlx pointer. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec2i.html" title="2D vector with int.">t_vec2i</a> Window size. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="render__init__mlx_8c_source.html#l00042">42</a> of file <a class="el" href="render__init__mlx_8c_source.html">render_init_mlx.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="structt__vec2i.html">t_vec2i</a> win_size;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    mlx_get_screen_size(mlx_ptr, &amp;win_size.<a class="code" href="structt__vec2i.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, &amp;win_size.<a class="code" href="structt__vec2i.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> (win_size);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="render__init__mlx_8c_a9e5e36f10c3b51d43b36a71ea2c314bb_icgraph.svg" width="570" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="render__init__mlx_8c_a164dea32598176b42c81ea3ae7946387_icgraph.svg" width="392" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

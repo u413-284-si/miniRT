@@ -1,6 +1,0 @@
-<map id="ft_isvalid_rgb_val" name="ft_isvalid_rgb_val">
-<area shape="rect" id="node1" title="Tries to convert str into rgb int and checks range." alt="" coords="5,56,141,83"/>
-<area shape="rect" id="node2" href="$error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" title="Error message if conversion failed." alt="" coords="196,5,329,32"/>
-<area shape="rect" id="node3" href="$error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" title="Error message if converted number is out of range." alt="" coords="202,56,323,83"/>
-<area shape="rect" id="node4" href="$error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" title="Error message if wrong separator was encountered." alt="" coords="189,107,336,133"/>
-</map>

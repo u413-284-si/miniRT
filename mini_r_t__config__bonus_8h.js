@@ -12,6 +12,8 @@ var mini_r_t__config__bonus_8h =
     [ "INC_LOW", "mini_r_t__config__bonus_8h.html#a689db4c3ce7ea317fca523e20b0fe8d6", null ],
     [ "INC_MID", "mini_r_t__config__bonus_8h.html#a4a4de5faf2bb6bc37f4404227160c01b", null ],
     [ "LIGHT_MAX", "mini_r_t__config__bonus_8h.html#a38b06bbd397785d2ff3ace62c6a4f365", null ],
+    [ "MAX_WIN_SIZE_X", "mini_r_t__config__bonus_8h.html#ab525eed15b2c3009e6e85c79b9e551c4", null ],
+    [ "MAX_WIN_SIZE_Y", "mini_r_t__config__bonus_8h.html#a58807950e49d7f18ef8618f0f1862afc", null ],
     [ "MENU_BACK", "mini_r_t__config__bonus_8h.html#ae81a0a27142ec4047577169a5afd80d4", null ],
     [ "MENU_FONT", "mini_r_t__config__bonus_8h.html#a04d46f28d25d5b97d577aa8ddc949fee", null ],
     [ "MENU_OPACITY", "mini_r_t__config__bonus_8h.html#a0c37cd6de6f2158db40db4b9e5af14dd", null ],

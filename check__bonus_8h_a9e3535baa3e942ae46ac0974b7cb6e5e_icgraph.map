@@ -1,0 +1,8 @@
+<map id="ft_check_win_size" name="ft_check_win_size">
+<area shape="rect" id="node1" title="Checks if size line is correct." alt="" coords="849,13,988,39"/>
+<area shape="rect" id="node2" href="$check__bonus_8h.html#ae33774d34021cd6fec6863eff3e8e3b0" title="Dispatch function for different line types." alt="" coords="659,5,801,47"/>
+<area shape="rect" id="node3" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="451,13,611,39"/>
+<area shape="rect" id="node4" href="$parse__bonus_8h.html#a1851ac042c8e1f69fe345a139f0eadbd" title="Chooses the correct checker function depending on bool is_bonus." alt="" coords="257,13,403,39"/>
+<area shape="rect" id="node5" href="$parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" title="Imports, checks, and parses the provided file." alt="" coords="108,13,209,39"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,60,39"/>
+</map>

@@ -1,7 +1,7 @@
 <map id="ft_free_char_arr" name="ft_free_char_arr">
-<area shape="rect" id="node1" title="Frees a NULL&#45;terminated char ** array." alt="" coords="413,56,537,83"/>
-<area shape="rect" id="node2" href="$import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111" title="Check file extension, import file and prepare for use." alt="" coords="257,5,365,32"/>
-<area shape="rect" id="node3" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,56,209,83"/>
-<area shape="rect" id="node5" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="258,107,365,133"/>
+<area shape="rect" id="node1" title="Frees a NULL&#45;terminated char ** array." alt="" coords="451,56,575,83"/>
+<area shape="rect" id="node2" href="$parse__bonus_8h.html#a1851ac042c8e1f69fe345a139f0eadbd" title="Chooses the correct checker function depending on bool is_bonus." alt="" coords="257,5,403,32"/>
+<area shape="rect" id="node3" href="$parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" title="Imports, checks, and parses the provided file." alt="" coords="108,56,209,83"/>
+<area shape="rect" id="node5" href="$import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111" title="Check file extension, import file and prepare for use." alt="" coords="276,107,384,133"/>
 <area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,56,60,83"/>
 </map>

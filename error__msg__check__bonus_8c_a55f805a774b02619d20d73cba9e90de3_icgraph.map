@@ -1,10 +1,11 @@
 <map id="ft_perror_count" name="ft_perror_count">
-<area shape="rect" id="node1" title="Error message if entity count is not correct." alt="" coords="692,56,812,83"/>
-<area shape="rect" id="node2" href="$check_8h.html#a4560f2d54698ffbfb8262bc7cad02768" title="Check if minimum number of specific entities was found." alt="" coords="473,5,637,32"/>
-<area shape="rect" id="node6" href="$check_8h.html#a0bde6c1dee246dd0f75201c62cf3c9f2" title="Increase entity count, and check if too many." alt="" coords="488,107,621,133"/>
-<area shape="rect" id="node8" href="$check__bonus_8h.html#a9158564ed7ebbd6cbd41cf1724419282" title="Increase entity count, and check if too many." alt="" coords="465,56,644,83"/>
-<area shape="rect" id="node3" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="257,56,417,83"/>
-<area shape="rect" id="node4" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,81,209,108"/>
-<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,81,60,108"/>
-<area shape="rect" id="node7" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="280,107,395,133"/>
+<area shape="rect" id="node1" title="Error message if entity count is not correct." alt="" coords="885,56,1005,83"/>
+<area shape="rect" id="node2" href="$check_8h.html#a4560f2d54698ffbfb8262bc7cad02768" title="Check if minimum number of specific entities was found." alt="" coords="666,5,830,32"/>
+<area shape="rect" id="node7" href="$check_8h.html#a0bde6c1dee246dd0f75201c62cf3c9f2" title="Increase entity count, and check if too many." alt="" coords="681,107,815,133"/>
+<area shape="rect" id="node9" href="$check__bonus_8h.html#a9158564ed7ebbd6cbd41cf1724419282" title="Increase entity count, and check if too many." alt="" coords="659,56,837,83"/>
+<area shape="rect" id="node3" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="451,56,611,83"/>
+<area shape="rect" id="node4" href="$parse__bonus_8h.html#a1851ac042c8e1f69fe345a139f0eadbd" title="Chooses the correct checker function depending on bool is_bonus." alt="" coords="257,81,403,108"/>
+<area shape="rect" id="node5" href="$parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" title="Imports, checks, and parses the provided file." alt="" coords="108,81,209,108"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,81,60,108"/>
+<area shape="rect" id="node8" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="473,107,588,133"/>
 </map>

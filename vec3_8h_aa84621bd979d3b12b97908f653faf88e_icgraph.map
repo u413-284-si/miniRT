@@ -44,9 +44,9 @@
 <area shape="rect" id="node36" href="$hit__cylinder__bonus_8c.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="1877,259,1991,285"/>
 <area shape="rect" id="node37" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="1691,208,1803,235"/>
 <area shape="rect" id="node40" href="$parse__bonus_8c.html#a65db4c46c2af2d9b570687b3a1458f15" title=" " alt="" coords="2061,537,2227,564"/>
-<area shape="rect" id="node41" href="$parse__bonus_8h.html#a4ce5cad477407308f911966a9446f560" title="Dispatcher for different parsing functions." alt="" coords="1855,544,2013,571"/>
-<area shape="rect" id="node42" href="$parse__bonus_8h.html#a4192e948800f8db85951eb21432e0ab0" title="Mallocs storage space and writes data into storage." alt="" coords="1694,581,1801,608"/>
-<area shape="rect" id="node43" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="1503,581,1604,608"/>
+<area shape="rect" id="node41" href="$parse__bonus_8h.html#add28570024618d943c18498637fc6bb7" title="Dispatcher for different parsing functions." alt="" coords="1855,544,2013,571"/>
+<area shape="rect" id="node42" href="$parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" title="Imports, checks, and parses the provided file." alt="" coords="1697,581,1798,608"/>
+<area shape="rect" id="node43" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="1526,581,1581,608"/>
 <area shape="rect" id="node45" href="$parse_8c.html#ad530c7e1381c551510afa73f881fb907" title=" " alt="" coords="2085,613,2203,640"/>
-<area shape="rect" id="node46" href="$parse_8h.html#a5da409b03d9f22daaa6d5673944800d3" title="Dispatcher for different parsing functions." alt="" coords="1878,607,1990,633"/>
+<area shape="rect" id="node46" href="$parse_8h.html#aa3cdb9030a467c5959cfa6b6b2dc63d7" title="Dispatcher for different parsing functions." alt="" coords="1878,607,1990,633"/>
 </map>

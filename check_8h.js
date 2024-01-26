@@ -12,8 +12,8 @@ var check_8h =
     [ "ft_incr_ent_count", "check_8h.html#a0bde6c1dee246dd0f75201c62cf3c9f2", null ],
     [ "ft_isvalid_float", "check_8h.html#a542b81308cf530edfa0a3bfdcefb6002", null ],
     [ "ft_isvalid_float_block", "check_8h.html#a399912478dc865909526aa87e6c333df", null ],
+    [ "ft_isvalid_int", "check_8h.html#adae11d3558f785772227f803873ad9d0", null ],
     [ "ft_isvalid_rgb_block", "check_8h.html#a3327b821f1a4c71183e0448c7023a5aa", null ],
-    [ "ft_isvalid_rgb_val", "check_8h.html#a7884a3e9489248b242a9fb7da9607bf4", null ],
     [ "ft_isvalid_unit_vec", "check_8h.html#a806133750c2b871ad705916e6d997f31", null ],
     [ "ft_rm_space", "check_8h.html#a7a10a4efb97dd784c001f96c580d7119", null ]
 ];

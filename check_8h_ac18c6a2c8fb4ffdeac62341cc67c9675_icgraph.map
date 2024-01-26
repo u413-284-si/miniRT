@@ -1,9 +1,10 @@
 <map id="ft_check_camera" name="ft_check_camera">
-<area shape="rect" id="node1" title="Checks if camera line is correct." alt="" coords="656,35,788,61"/>
-<area shape="rect" id="node2" href="$check_8h.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="465,5,608,32"/>
-<area shape="rect" id="node6" href="$check__bonus_8h.html#ae33774d34021cd6fec6863eff3e8e3b0" title="Dispatch function for different line types." alt="" coords="465,57,608,98"/>
-<area shape="rect" id="node3" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="280,8,395,35"/>
-<area shape="rect" id="node4" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,35,209,61"/>
-<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,35,60,61"/>
-<area shape="rect" id="node7" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="257,60,417,87"/>
+<area shape="rect" id="node1" title="Checks if camera line is correct." alt="" coords="849,35,981,61"/>
+<area shape="rect" id="node2" href="$check_8h.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="659,5,801,32"/>
+<area shape="rect" id="node7" href="$check__bonus_8h.html#ae33774d34021cd6fec6863eff3e8e3b0" title="Dispatch function for different line types." alt="" coords="659,57,801,98"/>
+<area shape="rect" id="node3" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="473,8,588,35"/>
+<area shape="rect" id="node4" href="$parse__bonus_8h.html#a1851ac042c8e1f69fe345a139f0eadbd" title="Chooses the correct checker function depending on bool is_bonus." alt="" coords="257,35,403,61"/>
+<area shape="rect" id="node5" href="$parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" title="Imports, checks, and parses the provided file." alt="" coords="108,35,209,61"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,35,60,61"/>
+<area shape="rect" id="node8" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="451,60,611,87"/>
 </map>

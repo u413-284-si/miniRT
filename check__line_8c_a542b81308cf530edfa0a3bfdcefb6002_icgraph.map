@@ -1,20 +1,21 @@
 <map id="ft_isvalid_float" name="ft_isvalid_float">
-<area shape="rect" id="node1" title="Tries to convert str to float and checks range." alt="" coords="1092,233,1209,260"/>
-<area shape="rect" id="node2" href="$check_8h.html#a3a4c3e635c4a6af8ef53d70ea5e7cb44" title="Checks if ambient light line is correct." alt="" coords="678,107,815,133"/>
-<area shape="rect" id="node9" href="$check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675" title="Checks if camera line is correct." alt="" coords="681,208,813,235"/>
-<area shape="rect" id="node10" href="$check__bonus_8h.html#a4044338fccd6b0e9b3e61c2e0c69db12" title="Checks if cone line is correct." alt="" coords="667,360,827,387"/>
-<area shape="rect" id="node11" href="$check_8h.html#ae60d55778d26a79bd9d60676862afcac" title="Checks if cylinder line is correct." alt="" coords="679,56,814,83"/>
-<area shape="rect" id="node12" href="$check__bonus_8h.html#a4ec77f79add9f7abed23e5b3dd45e94a" title="Checks if cylinder line is correct." alt="" coords="656,461,837,488"/>
-<area shape="rect" id="node13" href="$check_8h.html#a13cb8b89e2be82f5148f2dba42b550e8" title="Checks if light line is correct." alt="" coords="691,259,803,285"/>
-<area shape="rect" id="node14" href="$check__bonus_8h.html#a553c09de200f4ad19c33ab26d11adc29" title="Checks if plane line is correct." alt="" coords="664,309,829,336"/>
-<area shape="rect" id="node15" href="$check_8h.html#a2ac6387003baa37c6f8037edf453c8d0" title="Checks if sphere line is correct." alt="" coords="683,5,810,32"/>
-<area shape="rect" id="node16" href="$check__bonus_8h.html#a649377d201faaa526ad3c355da745325" title="Checks if sphere line is correct." alt="" coords="660,411,833,437"/>
-<area shape="rect" id="node17" href="$check_8h.html#a399912478dc865909526aa87e6c333df" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="885,259,1044,285"/>
-<area shape="rect" id="node3" href="$check_8h.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="465,157,608,184"/>
-<area shape="rect" id="node7" href="$check__bonus_8h.html#ae33774d34021cd6fec6863eff3e8e3b0" title="Dispatch function for different line types." alt="" coords="465,277,608,318"/>
-<area shape="rect" id="node4" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="280,196,395,223"/>
-<area shape="rect" id="node5" href="$parse_8h.html#ac08e53c371b438bc37757b81d0df11b8" title="Imports, checks, and parses the provided file." alt="" coords="108,233,209,260"/>
-<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,233,60,260"/>
-<area shape="rect" id="node8" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="257,259,417,285"/>
-<area shape="rect" id="node18" href="$check_8h.html#a1e36aec7efe086076efcaf9991f28abe" title="Checks if plane line is correct." alt="" coords="687,157,806,184"/>
+<area shape="rect" id="node1" title="Tries to convert str to float and checks range." alt="" coords="1285,233,1403,260"/>
+<area shape="rect" id="node2" href="$check_8h.html#a3a4c3e635c4a6af8ef53d70ea5e7cb44" title="Checks if ambient light line is correct." alt="" coords="871,107,1009,133"/>
+<area shape="rect" id="node10" href="$check_8h.html#ac18c6a2c8fb4ffdeac62341cc67c9675" title="Checks if camera line is correct." alt="" coords="874,208,1006,235"/>
+<area shape="rect" id="node11" href="$check__bonus_8h.html#a4044338fccd6b0e9b3e61c2e0c69db12" title="Checks if cone line is correct." alt="" coords="860,360,1020,387"/>
+<area shape="rect" id="node12" href="$check_8h.html#ae60d55778d26a79bd9d60676862afcac" title="Checks if cylinder line is correct." alt="" coords="873,56,1007,83"/>
+<area shape="rect" id="node13" href="$check__bonus_8h.html#a4ec77f79add9f7abed23e5b3dd45e94a" title="Checks if cylinder line is correct." alt="" coords="849,461,1031,488"/>
+<area shape="rect" id="node14" href="$check_8h.html#a13cb8b89e2be82f5148f2dba42b550e8" title="Checks if light line is correct." alt="" coords="884,259,996,285"/>
+<area shape="rect" id="node15" href="$check__bonus_8h.html#a553c09de200f4ad19c33ab26d11adc29" title="Checks if plane line is correct." alt="" coords="857,309,1023,336"/>
+<area shape="rect" id="node16" href="$check_8h.html#a2ac6387003baa37c6f8037edf453c8d0" title="Checks if sphere line is correct." alt="" coords="877,5,1003,32"/>
+<area shape="rect" id="node17" href="$check__bonus_8h.html#a649377d201faaa526ad3c355da745325" title="Checks if sphere line is correct." alt="" coords="853,411,1027,437"/>
+<area shape="rect" id="node18" href="$check_8h.html#a399912478dc865909526aa87e6c333df" title="Checks three floats, separated by &#39;,&#39;." alt="" coords="1079,259,1237,285"/>
+<area shape="rect" id="node3" href="$check_8h.html#a9d550a03e395942fd0bb735c1dda47d9" title="Dispatch function for different line types." alt="" coords="659,157,801,184"/>
+<area shape="rect" id="node8" href="$check__bonus_8h.html#ae33774d34021cd6fec6863eff3e8e3b0" title="Dispatch function for different line types." alt="" coords="659,277,801,318"/>
+<area shape="rect" id="node4" href="$check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8" title="Check array of imported lines." alt="" coords="473,196,588,223"/>
+<area shape="rect" id="node5" href="$parse__bonus_8h.html#a1851ac042c8e1f69fe345a139f0eadbd" title="Chooses the correct checker function depending on bool is_bonus." alt="" coords="257,233,403,260"/>
+<area shape="rect" id="node6" href="$parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169" title="Imports, checks, and parses the provided file." alt="" coords="108,233,209,260"/>
+<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,233,60,260"/>
+<area shape="rect" id="node9" href="$check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241" title="Check array of imported lines." alt="" coords="451,259,611,285"/>
+<area shape="rect" id="node19" href="$check_8h.html#a1e36aec7efe086076efcaf9991f28abe" title="Checks if plane line is correct." alt="" coords="881,157,999,184"/>
 </map>

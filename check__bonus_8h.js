@@ -10,10 +10,11 @@ var check__bonus_8h =
     [ "ft_check_lines_bonus", "check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241", null ],
     [ "ft_check_plane_bonus", "check__bonus_8h.html#a553c09de200f4ad19c33ab26d11adc29", null ],
     [ "ft_check_sphere_bonus", "check__bonus_8h.html#a649377d201faaa526ad3c355da745325", null ],
+    [ "ft_check_win_size", "check__bonus_8h.html#a9e3535baa3e942ae46ac0974b7cb6e5e", null ],
     [ "ft_incr_ent_count_bonus", "check__bonus_8h.html#a9158564ed7ebbd6cbd41cf1724419282", null ],
     [ "ft_isvalid_float", "check__bonus_8h.html#a542b81308cf530edfa0a3bfdcefb6002", null ],
     [ "ft_isvalid_float_block", "check__bonus_8h.html#a399912478dc865909526aa87e6c333df", null ],
+    [ "ft_isvalid_int", "check__bonus_8h.html#adae11d3558f785772227f803873ad9d0", null ],
     [ "ft_isvalid_rgb_block", "check__bonus_8h.html#a3327b821f1a4c71183e0448c7023a5aa", null ],
-    [ "ft_isvalid_rgb_val", "check__bonus_8h.html#a7884a3e9489248b242a9fb7da9607bf4", null ],
     [ "ft_rm_space", "check__bonus_8h.html#a7a10a4efb97dd784c001f96c580d7119", null ]
 ];

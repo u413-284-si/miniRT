@@ -35,7 +35,7 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="render_8h.html#a12e519bd02c237459e067c614b9482e2" target="_top" xlink:title="Initializes the mlx_ptrs struct.">
+<g id="a_node13"><a xlink:href="render_8h.html#a164dea32598176b42c81ea3ae7946387" target="_top" xlink:title="Initializes the mlx_ptrs struct.">
 <polygon fill="none" stroke="black" points="117,-95.5 117,-114.5 209,-114.5 209,-95.5 117,-95.5"/>
 <text text-anchor="middle" x="163" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_init_mlx_ptrs</text>
 </a>
@@ -249,108 +249,108 @@
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="error__mlx_8h.html#abd6a66916fc4bc87ff5d14ded2606585" target="_top" xlink:title="Wrapper function for mlx_init() to print errno.">
-<polygon fill="none" stroke="black" points="448.5,-152.5 448.5,-171.5 535.5,-171.5 535.5,-152.5 448.5,-152.5"/>
-<text text-anchor="middle" x="492" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_err_mlx_init</text>
+<g id="a_node14"><a xlink:href="render__init__mlx_8c.html#a05abfdd9398c0f95c23dbd96038f93f5" target="_top" xlink:title="Checks screen size.">
+<polygon fill="none" stroke="black" points="257.5,-38.5 257.5,-57.5 376.5,-57.5 376.5,-38.5 257.5,-38.5"/>
+<text text-anchor="middle" x="317" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_check_screen_size</text>
 </a>
 </g>
 </g>
 <!-- Node13&#45;&gt;Node14 -->
 <g id="edge16" class="edge">
 <title>Node13&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M193.76,-114.52C208.96,-119.12 227.83,-124.39 245,-128 310.98,-141.86 388.14,-151.47 438.21,-156.86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="438.15,-160.37 448.47,-157.94 438.89,-153.41 438.15,-160.37"/>
+<path fill="none" stroke="midnightblue" d="M187.99,-95.32C194.83,-92.44 202.26,-89.2 209,-86 225.35,-78.25 228.16,-73.6 245,-67 251.23,-64.56 257.88,-62.32 264.52,-60.31"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="265.56,-63.65 274.2,-57.52 263.62,-56.92 265.56,-63.65"/>
 </g>
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:href="error__mlx_8h.html#a4901d88031fcb0508d2e6fe728701816" target="_top" xlink:title="Wrapper function for mlx_new_window() to print errno.">
+<g id="a_node15"><a xlink:href="error__mlx_8h.html#abd6a66916fc4bc87ff5d14ded2606585" target="_top" xlink:title="Wrapper function for mlx_init() to print errno.">
+<polygon fill="none" stroke="black" points="448.5,-152.5 448.5,-171.5 535.5,-171.5 535.5,-152.5 448.5,-152.5"/>
+<text text-anchor="middle" x="492" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_err_mlx_init</text>
+</a>
+</g>
+</g>
+<!-- Node13&#45;&gt;Node15 -->
+<g id="edge17" class="edge">
+<title>Node13&#45;&gt;Node15</title>
+<path fill="none" stroke="midnightblue" d="M195.71,-114.59C210.57,-118.83 228.59,-123.62 245,-127 311.01,-140.61 388.07,-150.64 438.11,-156.4"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="437.73,-159.87 448.06,-157.52 438.52,-152.92 437.73,-159.87"/>
+</g>
+<!-- Node16 -->
+<g id="node16" class="node">
+<title>Node16</title>
+<g id="a_node16"><a xlink:href="error__mlx_8h.html#a4901d88031fcb0508d2e6fe728701816" target="_top" xlink:title="Wrapper function for mlx_new_window() to print errno.">
 <polygon fill="none" stroke="black" points="425,-114.5 425,-133.5 559,-133.5 559,-114.5 425,-114.5"/>
 <text text-anchor="middle" x="492" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_err_mlx_new_window</text>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node15 -->
-<g id="edge18" class="edge">
-<title>Node13&#45;&gt;Node15</title>
+<!-- Node13&#45;&gt;Node16 -->
+<g id="edge19" class="edge">
+<title>Node13&#45;&gt;Node16</title>
 <path fill="none" stroke="midnightblue" d="M209.12,-107.62C262.18,-110.7 351.07,-115.87 414.85,-119.58"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="414.68,-123.07 424.86,-120.16 415.08,-116.08 414.68,-123.07"/>
-</g>
-<!-- Node16 -->
-<g id="node16" class="node">
-<title>Node16</title>
-<g id="a_node16"><a xlink:href="render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57" target="_top" xlink:title="Frees ressources allocated for mlx.">
-<polygon fill="none" stroke="black" points="281,-38.5 281,-57.5 353,-57.5 353,-38.5 281,-38.5"/>
-<text text-anchor="middle" x="317" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_free_mlx</text>
-</a>
-</g>
-</g>
-<!-- Node13&#45;&gt;Node16 -->
-<g id="edge20" class="edge">
-<title>Node13&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M187.99,-95.32C194.83,-92.44 202.26,-89.2 209,-86 225.35,-78.25 228.16,-73.6 245,-67 253.29,-63.75 262.33,-60.86 271.1,-58.38"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="272.09,-61.74 280.83,-55.75 270.26,-54.98 272.09,-61.74"/>
 </g>
 <!-- Node17 -->
 <g id="node17" class="node">
 <title>Node17</title>
-<g id="a_node17"><a xlink:href="render__init__mlx_8c.html#a0af0fd19adc919c3966816890c89f291" target="_top" xlink:title="Initializes the mlx img struct.">
-<polygon fill="none" stroke="black" points="277,-76.5 277,-95.5 357,-95.5 357,-76.5 277,-76.5"/>
-<text text-anchor="middle" x="317" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_init_image</text>
+<g id="a_node17"><a xlink:href="render_8h.html#a757dac6825a3bbb51a4c6bff9b7e6b57" target="_top" xlink:title="Frees ressources allocated for mlx.">
+<polygon fill="none" stroke="black" points="281,-0.5 281,-19.5 353,-19.5 353,-0.5 281,-0.5"/>
+<text text-anchor="middle" x="317" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_free_mlx</text>
 </a>
 </g>
 </g>
 <!-- Node13&#45;&gt;Node17 -->
 <g id="edge21" class="edge">
 <title>Node13&#45;&gt;Node17</title>
-<path fill="none" stroke="midnightblue" d="M209.19,-99.35C227.36,-97.08 248.35,-94.46 266.89,-92.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="267.41,-95.6 276.9,-90.89 266.54,-88.65 267.41,-95.6"/>
-</g>
-<!-- Node19 -->
-<g id="node19" class="node">
-<title>Node19</title>
-<g id="a_node19"><a xlink:href="render__init__mlx_8c.html#a9e5e36f10c3b51d43b36a71ea2c314bb" target="_top" xlink:title="Sets the window to fullscreen.">
-<polygon fill="none" stroke="black" points="268.5,-0.5 268.5,-19.5 365.5,-19.5 365.5,-0.5 268.5,-0.5"/>
-<text text-anchor="middle" x="317" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_set_fullscreen</text>
-</a>
-</g>
-</g>
-<!-- Node13&#45;&gt;Node19 -->
-<g id="edge24" class="edge">
-<title>Node13&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M194.05,-95.34C199.37,-92.82 204.6,-89.73 209,-86 231.85,-66.62 220.87,-46.76 245,-29 249.2,-25.91 253.86,-23.33 258.73,-21.16"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="260.22,-24.34 268.3,-17.49 257.71,-17.8 260.22,-24.34"/>
-</g>
-<!-- Node14&#45;&gt;Node12 -->
-<g id="edge17" class="edge">
-<title>Node14&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M535.57,-155.78C551.33,-153.47 569.1,-150.88 584.48,-148.63"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="585.31,-152.05 594.7,-147.14 584.3,-145.12 585.31,-152.05"/>
-</g>
-<!-- Node15&#45;&gt;Node12 -->
-<g id="edge19" class="edge">
-<title>Node15&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M558.38,-133.56C567.45,-134.88 576.51,-136.21 584.85,-137.42"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="584.58,-140.92 594.98,-138.91 585.6,-134 584.58,-140.92"/>
+<path fill="none" stroke="midnightblue" d="M194.05,-95.34C199.37,-92.82 204.6,-89.73 209,-86 231.85,-66.62 220.87,-46.76 245,-29 252.62,-23.39 261.79,-19.44 270.96,-16.65"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="272.06,-19.98 280.85,-14.06 270.29,-13.21 272.06,-19.98"/>
 </g>
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:href="error__mlx_8h.html#a609cd65b568e138870202147aff64449" target="_top" xlink:title="Wrapper function for mlx_new_image() to print errno.">
+<g id="a_node18"><a xlink:href="render__init__mlx_8c.html#a0af0fd19adc919c3966816890c89f291" target="_top" xlink:title="Initializes the mlx img struct.">
+<polygon fill="none" stroke="black" points="277,-76.5 277,-95.5 357,-95.5 357,-76.5 277,-76.5"/>
+<text text-anchor="middle" x="317" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_init_image</text>
+</a>
+</g>
+</g>
+<!-- Node13&#45;&gt;Node18 -->
+<g id="edge22" class="edge">
+<title>Node13&#45;&gt;Node18</title>
+<path fill="none" stroke="midnightblue" d="M209.19,-99.35C227.36,-97.08 248.35,-94.46 266.89,-92.14"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="267.41,-95.6 276.9,-90.89 266.54,-88.65 267.41,-95.6"/>
+</g>
+<!-- Node15&#45;&gt;Node12 -->
+<g id="edge18" class="edge">
+<title>Node15&#45;&gt;Node12</title>
+<path fill="none" stroke="midnightblue" d="M535.57,-155.78C551.33,-153.47 569.1,-150.88 584.48,-148.63"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="585.31,-152.05 594.7,-147.14 584.3,-145.12 585.31,-152.05"/>
+</g>
+<!-- Node16&#45;&gt;Node12 -->
+<g id="edge20" class="edge">
+<title>Node16&#45;&gt;Node12</title>
+<path fill="none" stroke="midnightblue" d="M558.38,-133.56C567.45,-134.88 576.51,-136.21 584.85,-137.42"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="584.58,-140.92 594.98,-138.91 585.6,-134 584.58,-140.92"/>
+</g>
+<!-- Node19 -->
+<g id="node19" class="node">
+<title>Node19</title>
+<g id="a_node19"><a xlink:href="error__mlx_8h.html#a609cd65b568e138870202147aff64449" target="_top" xlink:title="Wrapper function for mlx_new_image() to print errno.">
 <polygon fill="none" stroke="black" points="428,-76.5 428,-95.5 556,-95.5 556,-76.5 428,-76.5"/>
 <text text-anchor="middle" x="492" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_err_mlx_new_image</text>
 </a>
 </g>
 </g>
-<!-- Node17&#45;&gt;Node18 -->
-<g id="edge22" class="edge">
-<title>Node17&#45;&gt;Node18</title>
+<!-- Node18&#45;&gt;Node19 -->
+<g id="edge23" class="edge">
+<title>Node18&#45;&gt;Node19</title>
 <path fill="none" stroke="midnightblue" d="M357.26,-86C375.16,-86 396.96,-86 417.72,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="417.81,-89.5 427.81,-86 417.81,-82.5 417.81,-89.5"/>
 </g>
-<!-- Node18&#45;&gt;Node12 -->
-<g id="edge23" class="edge">
-<title>Node18&#45;&gt;Node12</title>
+<!-- Node19&#45;&gt;Node12 -->
+<g id="edge24" class="edge">
+<title>Node19&#45;&gt;Node12</title>
 <path fill="none" stroke="midnightblue" d="M532.32,-95.53C541.24,-98.19 550.57,-101.36 559,-105 573.56,-111.29 588.86,-120.28 600.86,-127.94"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.03,-130.93 609.32,-133.47 602.86,-125.07 599.03,-130.93"/>
 </g>

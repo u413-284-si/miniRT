@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('mini_r_t__config__bonus_8h_source.html
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/25 00:32:51 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/26 10:38:55 by gwolf            ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -127,36 +127,38 @@ $(document).ready(function(){initNavTree('mini_r_t__config__bonus_8h_source.html
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// standard window size</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a6e1ad85c506456c5e54b5165173315b6">   35</a></span>&#160;<span class="preprocessor"># define WIN_SIZE_X 800</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a0c212361b1388494c98b2c35db58de19">   36</a></span>&#160;<span class="preprocessor"># define WIN_SIZE_Y 600</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// standard increments</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a689db4c3ce7ea317fca523e20b0fe8d6">   39</a></span>&#160;<span class="preprocessor"># define INC_LOW 0.1f</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a4a4de5faf2bb6bc37f4404227160c01b">   40</a></span>&#160;<span class="preprocessor"># define INC_MID 0.5f</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a54ec76664820875cac178b73f9bb1c8e">   41</a></span>&#160;<span class="preprocessor"># define INC_HIGH 1.0f</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// menu parameters</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#ae64f028be3d52d84433789a433ba4034">   44</a></span>&#160;<span class="preprocessor"># define MENU_WIDTH 200</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a0c37cd6de6f2158db40db4b9e5af14dd">   45</a></span>&#160;<span class="preprocessor"># define MENU_OPACITY 100</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#ae81a0a27142ec4047577169a5afd80d4">   46</a></span>&#160;<span class="preprocessor"># define MENU_BACK 0x000000</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a04d46f28d25d5b97d577aa8ddc949fee">   47</a></span>&#160;<span class="preprocessor"># define MENU_FONT 0xFFFFFF</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// number of threads to use</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a7735206bdfad487588bba2126b806ab7">   50</a></span>&#160;<span class="preprocessor"># define NUM_THREADS 16</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// sample size</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#ab525eed15b2c3009e6e85c79b9e551c4">   36</a></span>&#160;<span class="preprocessor"># define MAX_WIN_SIZE_X 1920</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a0c212361b1388494c98b2c35db58de19">   37</a></span>&#160;<span class="preprocessor"># define WIN_SIZE_Y 600</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a58807950e49d7f18ef8618f0f1862afc">   38</a></span>&#160;<span class="preprocessor"># define MAX_WIN_SIZE_Y 1080</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// standard increments</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a689db4c3ce7ea317fca523e20b0fe8d6">   41</a></span>&#160;<span class="preprocessor"># define INC_LOW 0.1f</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a4a4de5faf2bb6bc37f4404227160c01b">   42</a></span>&#160;<span class="preprocessor"># define INC_MID 0.5f</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a54ec76664820875cac178b73f9bb1c8e">   43</a></span>&#160;<span class="preprocessor"># define INC_HIGH 1.0f</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// menu parameters</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#ae64f028be3d52d84433789a433ba4034">   46</a></span>&#160;<span class="preprocessor"># define MENU_WIDTH 200</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a0c37cd6de6f2158db40db4b9e5af14dd">   47</a></span>&#160;<span class="preprocessor"># define MENU_OPACITY 100</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#ae81a0a27142ec4047577169a5afd80d4">   48</a></span>&#160;<span class="preprocessor"># define MENU_BACK 0x000000</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a04d46f28d25d5b97d577aa8ddc949fee">   49</a></span>&#160;<span class="preprocessor"># define MENU_FONT 0xFFFFFF</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// number of threads to use</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a7735206bdfad487588bba2126b806ab7">   52</a></span>&#160;<span class="preprocessor"># define NUM_THREADS 16</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// Adjusting this value allows to tweak the degree of anti-aliasing.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// The more samples are used to calculate the colour of a pixel,</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// the smoother are the transitions, yet the more costly the calculations.</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#ae25e0da7cdb20c758a56dc6aece92ba7">   57</a></span>&#160;<span class="preprocessor"># define SAMPLE_SIZE 5</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// maximum reflection of rays in scene</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a387d9d8c183953f922357e446fc3545a">   60</a></span>&#160;<span class="preprocessor"># define REFLECTION_MAX 3</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// checker tiling scale</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#adcb94ba4819975129c350098b2fdf389">   63</a></span>&#160;<span class="preprocessor"># define CHECKER_SCALE 10</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// sample size</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// Adjusting this value allows to tweak the degree of anti-aliasing.</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// The more samples are used to calculate the colour of a pixel,</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">// the smoother are the transitions, yet the more costly the calculations.</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#ae25e0da7cdb20c758a56dc6aece92ba7">   59</a></span>&#160;<span class="preprocessor"># define SAMPLE_SIZE 5</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">// maximum reflection of rays in scene</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#a387d9d8c183953f922357e446fc3545a">   62</a></span>&#160;<span class="preprocessor"># define REFLECTION_MAX 3</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">// checker tiling scale</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="mini_r_t__config__bonus_8h.html#adcb94ba4819975129c350098b2fdf389">   65</a></span>&#160;<span class="preprocessor"># define CHECKER_SCALE 10</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
