@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 10:17:42 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 10:28:35 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,7 @@ t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam,
 		ft_free_char_arr(lines);
 		return (ERROR);
 	}
-	ft_parse_lines(lines, scene, cam);
-	win_size->x = WIN_SIZE_X;
-	win_size->y = WIN_SIZE_Y;
+	ft_parse_lines(lines, scene, cam, win_size);
 	ft_free_char_arr(lines);
 	return (SUCCESS);
 }
@@ -68,7 +66,8 @@ void	ft_parse_entity(char *line, t_hittable *obj)
 	id++;
 }
 
-void	ft_parse_lines(char **lines, t_entities *scene, t_cam *cam)
+void	ft_parse_lines(char **lines, t_entities *scene, t_cam *cam,
+			t_vec2i *win_size)
 {
 	static int	light_id = 0;
 
@@ -87,4 +86,6 @@ void	ft_parse_lines(char **lines, t_entities *scene, t_cam *cam)
 			ft_parse_entity(*lines, scene->obj);
 		lines++;
 	}
+	win_size->x = WIN_SIZE_X;
+	win_size->y = WIN_SIZE_Y;
 }

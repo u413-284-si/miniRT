@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 15:08:23 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 10:29:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,8 @@ t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total);
  * @param cam	Camera used in program.
  * @param lines	Imported file in sanitized array.
  */
-void	ft_parse_lines(char **lines, t_entities *scene, t_cam *cam);
+void	ft_parse_lines(char **lines, t_entities *scene, t_cam *cam,
+			t_vec2i *win_size);
 
 // parse_entity1.c
 

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:02:54 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 15:13:53 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 10:29:38 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam,
 		ft_parse_lines_bonus(lines, scene, cam, win_size);
 	else
 	{
-		ft_parse_lines(lines, scene, cam);
+		ft_parse_lines(lines, scene, cam, win_size);
 		ft_initialise_non_parsed(scene);
 	}
 	ft_free_char_arr(lines);
@@ -107,4 +107,8 @@ void	ft_parse_lines_bonus(char **lines, t_entities *scene, t_cam *cam,
 			ft_parse_entity_bonus(*lines, scene->obj);
 		lines++;
 	}
+	if (win_size->x == 0)
+		win_size->x = WIN_SIZE_X;
+	if (win_size->y == 0)
+		win_size->y = WIN_SIZE_Y;
 }

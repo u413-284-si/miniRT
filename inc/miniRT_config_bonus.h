@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/25 00:32:51 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 10:38:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@
 
 // standard window size
 # define WIN_SIZE_X 800
+# define MAX_WIN_SIZE_X 1920
 # define WIN_SIZE_Y 600
+# define MAX_WIN_SIZE_Y 1080
 
 // standard increments
 # define INC_LOW 0.1f
