@@ -1,7 +1,9 @@
 <map id="ft_put_pl" name="ft_put_pl">
 <area shape="rect" id="node1" title="Puts plane info on the screen." alt="" coords="5,56,84,83"/>
 <area shape="rect" id="node2" href="$menu__put_8h.html#a250c5483eff2fa1f225b6a16dab45481" title="Puts a 3D point on the screen." alt="" coords="132,5,255,32"/>
-<area shape="rect" id="node4" href="$menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7" title="Puts a colour on the screen." alt="" coords="140,56,247,83"/>
-<area shape="rect" id="node5" href="$menu__put_8h.html#a1fd4ce789738bee4ae9d35045cb21a2a" title="Puts a unit vector on the screen." alt="" coords="133,107,254,133"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7" title="Puts a colour on the screen." alt="" coords="140,107,247,133"/>
+<area shape="rect" id="node7" href="$menu__put_8h.html#a1fd4ce789738bee4ae9d35045cb21a2a" title="Puts a unit vector on the screen." alt="" coords="133,56,254,83"/>
 <area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="303,56,385,83"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#afdfa5611d84fa2c8cbb73cb66a339c98" title="Converts integer to string and puts it on the screen." alt="" coords="303,107,385,133"/>
+<area shape="rect" id="node6" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="433,107,516,133"/>
 </map>

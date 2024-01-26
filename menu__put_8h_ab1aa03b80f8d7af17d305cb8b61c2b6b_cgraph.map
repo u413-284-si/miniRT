@@ -1,12 +1,12 @@
 <map id="ft_put_light" name="ft_put_light">
-<area shape="rect" id="node1" title="Puts light info on the screen." alt="" coords="5,107,100,133"/>
-<area shape="rect" id="node2" href="$menu__put_8h.html#a250c5483eff2fa1f225b6a16dab45481" title="Puts a 3D point on the screen." alt="" coords="157,5,280,32"/>
-<area shape="rect" id="node4" href="$menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7" title="Puts a colour on the screen." alt="" coords="165,56,272,83"/>
-<area shape="rect" id="node5" href="$menu__put_8h.html#a9435ae23ec438c58bcd794dcb400a8ae" title="Puts the ID of a hittable or a light on the screen." alt="" coords="179,224,258,251"/>
-<area shape="rect" id="node8" href="$menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03" title="Puts a single float value on the screen." alt="" coords="148,158,289,199"/>
-<area shape="rect" id="node10" href="$menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724" title="Puts the type of a hittable or a light on the screen." alt="" coords="171,107,266,133"/>
-<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="343,107,426,133"/>
-<area shape="rect" id="node6" href="$menu__put_8h.html#afdfa5611d84fa2c8cbb73cb66a339c98" title="Converts integer to string and puts it on the screen." alt="" coords="343,221,426,248"/>
-<area shape="rect" id="node7" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="480,196,563,223"/>
-<area shape="rect" id="node9" href="$menu__put_8h.html#abba80f1bfc48c436f54f5a0740683a75" title="Converts float to string and puts it on the screen." alt="" coords="337,169,432,196"/>
+<area shape="rect" id="node1" title="Puts light info on the screen." alt="" coords="5,122,100,149"/>
+<area shape="rect" id="node2" href="$menu__put_8h.html#a250c5483eff2fa1f225b6a16dab45481" title="Puts a 3D point on the screen." alt="" coords="157,71,280,98"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7" title="Puts a colour on the screen." alt="" coords="165,223,272,250"/>
+<area shape="rect" id="node7" href="$menu__put_8h.html#a9435ae23ec438c58bcd794dcb400a8ae" title="Puts the ID of a hittable or a light on the screen." alt="" coords="179,173,258,199"/>
+<area shape="rect" id="node8" href="$menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03" title="Puts a single float value on the screen." alt="" coords="148,5,289,47"/>
+<area shape="rect" id="node10" href="$menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724" title="Puts the type of a hittable or a light on the screen." alt="" coords="171,122,266,149"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="343,122,426,149"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#afdfa5611d84fa2c8cbb73cb66a339c98" title="Converts integer to string and puts it on the screen." alt="" coords="343,173,426,199"/>
+<area shape="rect" id="node6" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="480,122,563,149"/>
+<area shape="rect" id="node9" href="$menu__put_8h.html#abba80f1bfc48c436f54f5a0740683a75" title="Converts float to string and puts it on the screen." alt="" coords="337,42,432,69"/>
 </map>

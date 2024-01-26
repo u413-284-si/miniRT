@@ -1,10 +1,11 @@
 <map id="ft_put_cy" name="ft_put_cy">
-<area shape="rect" id="node1" title="Puts cylinder info on the screen." alt="" coords="5,81,87,108"/>
+<area shape="rect" id="node1" title="Puts cylinder info on the screen." alt="" coords="5,85,87,112"/>
 <area shape="rect" id="node2" href="$menu__put_8h.html#a250c5483eff2fa1f225b6a16dab45481" title="Puts a 3D point on the screen." alt="" coords="144,5,267,32"/>
-<area shape="rect" id="node4" href="$menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7" title="Puts a colour on the screen." alt="" coords="152,56,259,83"/>
-<area shape="rect" id="node5" href="$menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03" title="Puts a single float value on the screen." alt="" coords="135,158,276,199"/>
-<area shape="rect" id="node8" href="$menu__put_8h.html#a1fd4ce789738bee4ae9d35045cb21a2a" title="Puts a unit vector on the screen." alt="" coords="145,107,266,133"/>
-<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="330,81,413,108"/>
-<area shape="rect" id="node6" href="$menu__put_8h.html#abba80f1bfc48c436f54f5a0740683a75" title="Converts float to string and puts it on the screen." alt="" coords="324,165,419,192"/>
-<area shape="rect" id="node7" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="467,165,549,192"/>
+<area shape="rect" id="node4" href="$menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7" title="Puts a colour on the screen." alt="" coords="152,173,259,200"/>
+<area shape="rect" id="node7" href="$menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03" title="Puts a single float value on the screen." alt="" coords="135,107,276,149"/>
+<area shape="rect" id="node9" href="$menu__put_8h.html#a1fd4ce789738bee4ae9d35045cb21a2a" title="Puts a unit vector on the screen." alt="" coords="145,56,266,83"/>
+<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="330,61,413,88"/>
+<area shape="rect" id="node5" href="$menu__put_8h.html#afdfa5611d84fa2c8cbb73cb66a339c98" title="Converts integer to string and puts it on the screen." alt="" coords="330,169,413,196"/>
+<area shape="rect" id="node6" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="467,144,549,171"/>
+<area shape="rect" id="node8" href="$menu__put_8h.html#abba80f1bfc48c436f54f5a0740683a75" title="Converts float to string and puts it on the screen." alt="" coords="324,117,419,144"/>
 </map>
