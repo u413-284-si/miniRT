@@ -1,17 +1,7 @@
 # miniRT
 
-<table align=center>
-	<thead>
-		<tr>
-			<th colspan=2>42 logo</th>
-		</tr>
-	</thead>
-  <tbody>
-      <tr>
-        <td><image src="renders/42.png"></image></td>
-      </tr>
-  </tbody>
-</table>
+
+![42logo](renders/42.png)
 
 You know you have been ray tracing too long when you wonder which RT God used.
 
