@@ -29,19 +29,6 @@ Every hittable is described mathematically in order to calculate whether an inte
 <table align=center>
 	<thead>
 		<tr>
-			<th colspan=2>Kuddelmuddel</th>
-		</tr>
-	</thead>
-  <tbody>
-      <tr>
-        <td><image src="renders/complex.png"></image></td>
-      </tr>
-  </tbody>
-</table>
-
-<table align=center>
-	<thead>
-		<tr>
 			<th colspan=2>Reflections</th>
 		</tr>
 	</thead>
@@ -81,37 +68,16 @@ Every hittable is described mathematically in order to calculate whether an inte
 <table align=center>
 	<thead>
 		<tr>
-			<th colspan=2>Shadows</th>
+			<th colspan=2>More renders</th>
 		</tr>
 	</thead>
   <tbody>
       <tr>
+	<td><image src="renders/complex.png"></image></td>
         <td><image src="renders/shadows.png"></image></td>
       </tr>
-  </tbody>
-</table>
-
-<table align=center>
-	<thead>
-		<tr>
-			<th colspan=2>Pokeball</th>
-		</tr>
-	</thead>
-  <tbody>
       <tr>
-        <td><image src="renders/pokeball.png"></image></td>
-      </tr>
-  </tbody>
-</table>
-
-<table align=center>
-	<thead>
-		<tr>
-			<th colspan=2>Snowman</th>
-		</tr>
-	</thead>
-  <tbody>
-      <tr>
+	<td><image src="renders/pokeball.png"></image></td>
         <td><image src="renders/snowman.png"></image></td>
       </tr>
   </tbody>
