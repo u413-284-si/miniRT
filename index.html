@@ -92,8 +92,68 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">miniRT </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a>You know you have been raytracing too long when you wonder which RT God used.</p>
-<p><a href="https://u413-284-si.github.io/miniRT">LINK</a> to documentation </p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a>You know you have been ray tracing too long when you wonder which RT God used.</p>
+<p><a href="https://u413-284-si.github.io/miniRT">LINK</a> to documentation</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Intro</h1>
+<p>A first introduction into the world of 3D computer graphics and CGI (computer generated images) - widely used in the filming and gaming industry.</p>
+<p>The project covers the topic of ray tracing - a technique used to create/render digital images artificially. In contrast to other techniques as ray casting, it is more complex requiring a higher computational cost. In exchange for this greater effort the quality of the generated images in terms of visual fidelity is much higher.</p>
+<p>Ray tracing is the method of creating and shooting rays from an observer (called camera) through the pixels of a virtual screen (viewport) into the artificial scene and then calculating the colour of any object (hittable) that is hit by the ray and is closest to the viewport. Each ray must be tested for intersection with all the hittables in the scene. Once the nearest object has been identified, the colour is obtained at the very intersection point. The colour depends on different conditions such as the position of the camera, the position of one or more light sources, material properties of the hittable and of course the colour of the hittable.</p>
+<p>Every hittable is described mathematically in order to calculate whether an intersection occured or not. More complex hittables require a superposition of different base calculations such as cylinders or cones.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Sample renders</h1>
+<p><img src="renders/bonus.png" alt="Bonus" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Project overview</h1>
+<p>Following a short summary of the features covered by the project:</p>
+<ul>
+<li>Basic objects:<ul>
+<li>sphere</li>
+<li>plane</li>
+<li>cylinder</li>
+</ul>
+</li>
+<li>2nd degree object:<ul>
+<li>cone (bonus part)</li>
+</ul>
+</li>
+<li>Interactive GUI:<ul>
+<li>translation &amp; rotation of objects</li>
+<li>translation of light source(s)</li>
+<li>manipulation of object &amp; light parameters</li>
+<li>translation &amp; rotation of camera</li>
+</ul>
+</li>
+<li>Full Phong lighting modell:<ul>
+<li>diffusive lighting</li>
+<li>ambient lighting</li>
+<li>specular lighting (bonus part)</li>
+</ul>
+</li>
+<li>Reflections (bonus part)</li>
+<li>Coloured light sources (bonus part)</li>
+<li>Texture mapping:<ul>
+<li>Checker texture (bonus part)</li>
+</ul>
+</li>
+<li>Accumulative, temporal anti-aliasing for smoother scene transitions by reducing jagged edges (bonus part)</li>
+<li>Multi-threaded processing (bonus part)</li>
+<li>Export of rendered images as ppm files</li>
+<li>FPS calculation</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Installation and Usage</h1>
+<div class="fragment"><div class="line">git clone git@github.com:u413-284-si/minirt.git minirt</div>
+<div class="line">cd minirt</div>
+<div class="line">make</div>
+<div class="line">./minirt scenes/&lt;choose a scene&gt;</div>
+</div><!-- fragment --><p>For bonus program (inside of minirt directory):</p>
+<div class="fragment"><div class="line">make bonus</div>
+<div class="line">./minirt_supreme scenes/&lt;choose a scene&gt;</div>
+</div><!-- fragment --><p> Scene files have the .rt-extension. Scenes marked with *#bonus* in the beginning can only be processed with the bonus program.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Contact &amp; contribute</h1>
+<p>To contact me and for feedback in order to fix bugs/improve the project you may write me a message to Discord u413q#6851. Or simply create a merge request ;) </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

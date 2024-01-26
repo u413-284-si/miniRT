@@ -25,6 +25,11 @@
 var NAVTREE =
 [
   [ "MiniRT", "index.html", [
+    [ "Intro", "index.html#autotoc_md1", null ],
+    [ "Sample renders", "index.html#autotoc_md2", null ],
+    [ "Project overview", "index.html#autotoc_md3", null ],
+    [ "Installation and Usage", "index.html#autotoc_md4", null ],
+    [ "Contact & contribute", "index.html#autotoc_md5", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Fields", "functions.html", [
@@ -49,10 +54,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "error__syscall_8c_source.html",
-"menu__put__hittable_8c.html",
-"render_8h.html#a7b262237fcbe352cb4ef79235666956b",
-"render__loop__mlx_8c.html#a012503b6ad6ee8198a601dad994c09b7",
-"utils_8h.html#a49f519544f51627ced8238dfd72ce20a"
+"menu__put__general__info_8c.html#a9435ae23ec438c58bcd794dcb400a8ae",
+"render_8h.html#a735dfeb13434c88e3b4a76990386763b",
+"render__keyhook__utils_8c.html#a7b262237fcbe352cb4ef79235666956b",
+"utils_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
