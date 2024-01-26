@@ -1,0 +1,48 @@
+<map id="ft_manip_scene" name="ft_manip_scene">
+<area shape="rect" id="node1" title="Branches to the corresponding manipulation function." alt="" coords="5,477,129,504"/>
+<area shape="rect" id="node2" href="$render_8h.html#a83e529cd9901f21912824cd776d5aec9" title="Get the current increment value." alt="" coords="179,165,311,192"/>
+<area shape="rect" id="node3" href="$render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a" title="Checks if bit is set in the bit field." alt="" coords="588,5,705,32"/>
+<area shape="rect" id="node4" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="375,325,489,352"/>
+<area shape="rect" id="node27" href="$render__bit__field_8h.html#ab984d9cbc7c648ef4481b9158b27da30" title="Sets bit in bit field." alt="" coords="593,655,700,681"/>
+<area shape="rect" id="node32" href="$render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="177,920,313,947"/>
+<area shape="rect" id="node44" href="$render_8h.html#acff7acf5eb6145177496e67b32a74fba" title="Manipulates the active light." alt="" coords="188,1072,303,1099"/>
+<area shape="rect" id="node5" href="$camera_8h.html#a02ed3f7206927a02c44eab5f5aba26e1" title="Calculates basis vectors u, v, w." alt="" coords="551,325,743,352"/>
+<area shape="rect" id="node8" href="$camera_8h.html#a525b3073d8f263afa7d81f70fa4b491d" title="Calculates all pixel positions in pixel grid." alt="" coords="797,56,953,83"/>
+<area shape="rect" id="node10" href="$render__bonus_8h.html#ab23f44f179d8be5ae75128694b1b0133" title="Like ft_cam_calc_pix_pos(), but threaded." alt="" coords="797,158,953,199"/>
+<area shape="rect" id="node11" href="$camera_8h.html#a96132dcb4eac578fbee24bbf591fe090" title="Calculates the pixel grid parameters of the viewport." alt="" coords="791,107,960,133"/>
+<area shape="rect" id="node13" href="$camera_8h.html#acf892f39174bd3b89ad83a6e901a7b4f" title="Calculates viewport dimensions." alt="" coords="565,158,728,199"/>
+<area shape="rect" id="node14" href="$render_8h.html#aafd27cf2b06772ec739aa2e97164d8b6" title="Changes the camera FOV with a keypress." alt="" coords="569,604,725,631"/>
+<area shape="rect" id="node17" href="$render_8h.html#ab974018238f1a6e6a86b44e139f5d672" title="Moves the camera with a keypress." alt="" coords="561,477,733,504"/>
+<area shape="rect" id="node21" href="$render_8h.html#a492035e87e08c0c7a9e93a3fe4605cc2" title="Rotates the camera with a keypress." alt="" coords="570,819,723,845"/>
+<area shape="rect" id="node26" href="$render__bit__field_8h.html#a0e353bbefbfd549ad2ebb5b821fc7900" title="Clears bit in bit field." alt="" coords="587,224,706,251"/>
+<area shape="rect" id="node28" href="$threads__bonus_8h.html#a2ebd69dd0aea05d27136b23dfb779788" title="Creates NUM_THREADS threads and joins them." alt="" coords="586,553,707,580"/>
+<area shape="rect" id="node6" href="$vec3_8h.html#a19bc1d17592698776e89a5093110320c" title="Calculate the cross product of two vectors." alt="" coords="820,224,931,251"/>
+<area shape="rect" id="node7" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="1229,452,1340,479"/>
+<area shape="rect" id="node9" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="1036,351,1136,377"/>
+<area shape="rect" id="node12" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="1037,157,1135,184"/>
+<area shape="rect" id="node15" href="$utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9" title="Transforms degrees into radian." alt="" coords="1011,807,1161,833"/>
+<area shape="rect" id="node16" href="$utils_8h.html#a49f519544f51627ced8238dfd72ce20a" title="Transforms radians into degrees." alt="" coords="800,680,951,707"/>
+<area shape="rect" id="node18" href="$camera_8h.html#a86320a08df936f0fb2174d3fb4dbd0d4" title="Moves the camera along its direction vector." alt="" coords="792,477,959,504"/>
+<area shape="rect" id="node19" href="$camera_8h.html#a06b571f6e8edf474da02fa605c074c12" title="Moves the camera along its right vector." alt="" coords="802,528,949,555"/>
+<area shape="rect" id="node20" href="$camera_8h.html#a9cfc7dcbb8ce4312ff22dcc43f3c4019" title="Moves the camera along the world up vector." alt="" coords="809,427,942,453"/>
+<area shape="rect" id="node22" href="$utils_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" title="Rotates a 3D vector around the x&#45;axis." alt="" coords="810,832,941,859"/>
+<area shape="rect" id="node25" href="$utils_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46" title="Rotates a 3D vector around the y&#45;axis." alt="" coords="810,883,941,909"/>
+<area shape="rect" id="node23" href="$utils__quaternion_8c.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="1019,857,1153,884"/>
+<area shape="rect" id="node24" href="$utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" title="Performs quaternion multiplication." alt="" coords="1212,857,1357,884"/>
+<area shape="rect" id="node29" href="$threads__bonus_8c.html#adef619e7d6d95dba7464efd3edac7ca0" title="Creates NUM_THREADS threads and calls routine with arg." alt="" coords="808,579,943,605"/>
+<area shape="rect" id="node31" href="$threads__bonus_8c.html#a8e3352c99f6ff37fac8b8c0f33e934ed" title="Joins threads." alt="" coords="816,629,935,656"/>
+<area shape="rect" id="node30" href="$error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" title="Print generic error message." alt="" coords="1047,604,1125,631"/>
+<area shape="rect" id="node33" href="$render__keyhook__hittable__bonus_8c.html#a81fa5494e17be06ab12b226ff9dd7c2a" title="Manipulates the active cone." alt="" coords="373,920,491,947"/>
+<area shape="rect" id="node41" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="363,869,501,896"/>
+<area shape="rect" id="node42" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="371,971,493,997"/>
+<area shape="rect" id="node43" href="$render_8h.html#a3af9cb325ad292f339446b63917a9ea2" title="Manipulates the active sphere." alt="" coords="367,1021,497,1048"/>
+<area shape="rect" id="node34" href="$render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f" title="Changes the colour with a keypress." alt="" coords="560,1021,733,1048"/>
+<area shape="rect" id="node38" href="$render_8h.html#a7b262237fcbe352cb4ef79235666956b" title="Increases or decreases a value with a keypress." alt="" coords="572,1072,721,1099"/>
+<area shape="rect" id="node39" href="$render_8h.html#aa620096ce57b0280c8e9162eff12a938" title="Moves a 3D point with a keypress." alt="" coords="566,971,727,997"/>
+<area shape="rect" id="node40" href="$render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed" title="Rotates a 3D vector with a keypress." alt="" coords="573,869,721,896"/>
+<area shape="rect" id="node35" href="$render__keyhook__colour_8c.html#a5d187c5314483276ba15560dcf620e39" title="Returns a colour based on the given colour name." alt="" coords="1231,1035,1338,1061"/>
+<area shape="rect" id="node36" href="$render__keyhook__colour_8c.html#a02dd1323bf99ad166e22cf0dcbef39f2" title="Interpolates between two colours while keeping track of progress." alt="" coords="799,1009,951,1036"/>
+<area shape="rect" id="node37" href="$render__keyhook__colour_8c.html#a41e18bc0bce27f7169b29f79e5de0423" title="Interpolates between two colours." alt="" coords="1008,1009,1164,1036"/>
+<area shape="rect" id="node45" href="$render__keyhook__light_8c.html#a597d35b7bd3aa66272e3c2ff3a1e8f78" title="Manipulates the ambient light." alt="" coords="362,1123,502,1149"/>
+<area shape="rect" id="node46" href="$render__keyhook__light_8c.html#a16d57d13773703e93274caef6b5ccde1" title="Manipulates a light source." alt="" coords="361,1072,503,1099"/>
+</map>

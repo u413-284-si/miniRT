@@ -50,9 +50,9 @@ var NAVTREEINDEX =
 "annotated.html",
 "error__syscall_8h_source.html",
 "menu__put__general__info__bonus_8c.html",
-"render_8h.html#aa3b9ed7edeaf796e06eeceb1874c8fbf",
-"render__loop__mlx__bonus_8c_source.html",
-"utils_8h.html#ab812f1e2f95156906fcaca00bc6f490e"
+"render_8h.html#ab974018238f1a6e6a86b44e139f5d672",
+"render__menu_8h.html",
+"utils_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

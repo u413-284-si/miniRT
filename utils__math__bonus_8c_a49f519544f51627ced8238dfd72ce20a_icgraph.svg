@@ -78,33 +78,33 @@ var sectionId = 'dynsection-3';
 <path fill="none" stroke="midnightblue" d="M437.01,-60.11C416.26,-65.4 392.27,-71.52 372.83,-76.48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="438.08,-63.45 446.9,-57.59 436.35,-56.67 438.08,-63.45"/>
 </g>
-<!-- Node4 -->
-<g id="node4" class="node">
-<title>Node4</title>
-<g id="a_node4"><a xlink:href="debug__print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2" target="_top" xlink:title="Prints parameters of camera struct.">
-<polygon fill="none" stroke="black" points="296,-38.5 296,-57.5 373,-57.5 373,-38.5 296,-38.5"/>
-<text text-anchor="middle" x="334.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_print_cam</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
-<title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M418.49,-48C402.97,-48 386.95,-48 373.17,-48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="418.59,-51.5 428.59,-48 418.59,-44.5 418.59,-51.5"/>
-</g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="menu__put_8h.html#a86f02d860bd5b9a3795b20ba72f8e359" target="_top" xlink:title="Puts camera info on the screen.">
-<polygon fill="none" stroke="black" points="299,-0.5 299,-19.5 370,-19.5 370,-0.5 299,-0.5"/>
-<text text-anchor="middle" x="334.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_cam</text>
+<g id="a_node5"><a xlink:href="debug__print_8h.html#a108d195ad2cb3a1e983e5e2e1cab34c2" target="_top" xlink:title="Prints parameters of camera struct.">
+<polygon fill="none" stroke="black" points="296,-38.5 296,-57.5 373,-57.5 373,-38.5 296,-38.5"/>
+<text text-anchor="middle" x="334.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_print_cam</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node5</title>
+<path fill="none" stroke="midnightblue" d="M418.49,-48C402.97,-48 386.95,-48 373.17,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="418.59,-51.5 428.59,-48 418.59,-44.5 418.59,-51.5"/>
+</g>
+<!-- Node6 -->
+<g id="node6" class="node">
+<title>Node6</title>
+<g id="a_node6"><a xlink:href="menu__put_8h.html#a86f02d860bd5b9a3795b20ba72f8e359" target="_top" xlink:title="Puts camera info on the screen.">
+<polygon fill="none" stroke="black" points="299,-0.5 299,-19.5 370,-19.5 370,-0.5 299,-0.5"/>
+<text text-anchor="middle" x="334.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_cam</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node6 -->
+<g id="edge5" class="edge">
+<title>Node1&#45;&gt;Node6</title>
 <path fill="none" stroke="midnightblue" d="M437.17,-35.93C415.37,-30.37 389.98,-23.89 370.02,-18.8"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="436.35,-39.33 446.9,-38.41 438.08,-32.55 436.35,-39.33"/>
 </g>
@@ -123,33 +123,48 @@ var sectionId = 'dynsection-3';
 <path fill="none" stroke="midnightblue" d="M265.86,-86C254.81,-86 243.64,-86 233.42,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="265.95,-89.5 275.95,-86 265.95,-82.5 265.95,-89.5"/>
 </g>
-<!-- Node6 -->
-<g id="node6" class="node">
-<title>Node6</title>
-<g id="a_node6"><a xlink:href="menu__put_8h.html#a6466842cb9367072865c07608f1e4c7d" target="_top" xlink:title="Puts a camera page on the screen.">
-<polygon fill="none" stroke="black" points="140,-0.5 140,-19.5 240,-19.5 240,-0.5 140,-0.5"/>
-<text text-anchor="middle" x="190" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_page_cam</text>
+<!-- Node4 -->
+<g id="node4" class="node">
+<title>Node4</title>
+<g id="a_node4"><a xlink:href="render_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" target="_top" xlink:title="Branches to the corresponding manipulation function.">
+<polygon fill="none" stroke="black" points="5.5,-76.5 5.5,-95.5 98.5,-95.5 98.5,-76.5 5.5,-76.5"/>
+<text text-anchor="middle" x="52" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_scene</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node6 -->
-<g id="edge5" class="edge">
-<title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M288.34,-10C272.96,-10 255.69,-10 240.03,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="288.64,-13.5 298.64,-10 288.64,-6.5 288.64,-13.5"/>
+<!-- Node3&#45;&gt;Node4 -->
+<g id="edge3" class="edge">
+<title>Node3&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M136.43,-86C123.94,-86 110.71,-86 98.56,-86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="136.71,-89.5 146.71,-86 136.71,-82.5 136.71,-89.5"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" target="_top" xlink:title="Puts the main page of menu on the screen.">
-<polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 104,-19.5 104,-0.5 0,-0.5"/>
-<text text-anchor="middle" x="52" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_main_page</text>
+<g id="a_node7"><a xlink:href="menu__put_8h.html#a6466842cb9367072865c07608f1e4c7d" target="_top" xlink:title="Puts a camera page on the screen.">
+<polygon fill="none" stroke="black" points="140,-0.5 140,-19.5 240,-19.5 240,-0.5 140,-0.5"/>
+<text text-anchor="middle" x="190" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_page_cam</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node6&#45;&gt;Node7</title>
+<path fill="none" stroke="midnightblue" d="M288.34,-10C272.96,-10 255.69,-10 240.03,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="288.64,-13.5 298.64,-10 288.64,-6.5 288.64,-13.5"/>
+</g>
+<!-- Node8 -->
+<g id="node8" class="node">
+<title>Node8</title>
+<g id="a_node8"><a xlink:href="menu__put_8h.html#aaa97bcdc39838b3da803447ea82e444c" target="_top" xlink:title="Puts the main page of menu on the screen.">
+<polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 104,-19.5 104,-0.5 0,-0.5"/>
+<text text-anchor="middle" x="52" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_put_main_page</text>
+</a>
+</g>
+</g>
+<!-- Node7&#45;&gt;Node8 -->
+<g id="edge7" class="edge">
+<title>Node7&#45;&gt;Node8</title>
 <path fill="none" stroke="midnightblue" d="M129.71,-10C121.25,-10 112.61,-10 104.32,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="129.9,-13.5 139.9,-10 129.9,-6.5 129.9,-13.5"/>
 </g>

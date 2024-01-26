@@ -1,7 +1,6 @@
 var mini_r_t__config__bonus_8h =
 [
     [ "AMBIENT_MAX", "mini_r_t__config__bonus_8h.html#aa6f7a0268bf3388557716a90bc584ed5", null ],
-    [ "BOLD", "mini_r_t__config__bonus_8h.html#a26cdbb1a00213c810caccf21cd33a631", null ],
     [ "BUF_SIZE", "mini_r_t__config__bonus_8h.html#a6821bafc3c88dfb2e433a095df9940c6", null ],
     [ "CAMERA_MAX", "mini_r_t__config__bonus_8h.html#a70e42d2839d370a658a763ae8e17b58d", null ],
     [ "CHECKER_SCALE", "mini_r_t__config__bonus_8h.html#adcb94ba4819975129c350098b2fdf389", null ],
@@ -20,7 +19,6 @@ var mini_r_t__config__bonus_8h =
     [ "NUM_THREADS", "mini_r_t__config__bonus_8h.html#a7735206bdfad487588bba2126b806ab7", null ],
     [ "PLANE_MAX", "mini_r_t__config__bonus_8h.html#aa05ccdf1a9806e5271d97dec8fa1a4c5", null ],
     [ "REFLECTION_MAX", "mini_r_t__config__bonus_8h.html#a387d9d8c183953f922357e446fc3545a", null ],
-    [ "REGULAR", "mini_r_t__config__bonus_8h.html#a9988ccc764be87fa1a8280b60d9e28c6", null ],
     [ "SAMPLE_SIZE", "mini_r_t__config__bonus_8h.html#ae25e0da7cdb20c758a56dc6aece92ba7", null ],
     [ "SPHERE_MAX", "mini_r_t__config__bonus_8h.html#a57075825dcedf2cbc21ae369e0b85ed2", null ],
     [ "WIN_SIZE_X", "mini_r_t__config__bonus_8h.html#a6e1ad85c506456c5e54b5165173315b6", null ],

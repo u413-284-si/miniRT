@@ -1,16 +1,16 @@
 <map id="ft_quaternion_rot" name="ft_quaternion_rot">
-<area shape="rect" id="node1" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="2975,197,3108,224"/>
-<area shape="rect" id="node2" href="$hit__manager__bonus_8h.html#abc28bafc00495161db9de547a9461cb1" title="Transforms the Cartesian coordinates of a hit point on a cone wall into 2D texture UV&#45;coordinates in ..." alt="" coords="2780,96,2927,123"/>
-<area shape="rect" id="node23" href="$hit__manager__bonus_8h.html#aeb33f439a0d2093bdbcca7468e2e78b4" title="Transforms the Cartesian coordinates of a hit point on a cylinder wall into 2D texture UV&#45;coordinates..." alt="" coords="2780,147,2927,173"/>
-<area shape="rect" id="node27" href="$utils_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" title="Rotates a 3D vector around the x&#45;axis." alt="" coords="2788,248,2919,275"/>
-<area shape="rect" id="node36" href="$utils_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46" title="Rotates a 3D vector around the y&#45;axis." alt="" coords="2788,197,2919,224"/>
-<area shape="rect" id="node37" href="$utils_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc" title="Rotates a 3D vector around the z&#45;axis." alt="" coords="2789,299,2918,325"/>
-<area shape="rect" id="node3" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2569,96,2714,123"/>
-<area shape="rect" id="node4" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="2387,96,2480,123"/>
-<area shape="rect" id="node5" href="$hit__bonus_8c.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="2192,96,2304,123"/>
+<area shape="rect" id="node1" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="2975,147,3108,173"/>
+<area shape="rect" id="node2" href="$hit__manager__bonus_8h.html#abc28bafc00495161db9de547a9461cb1" title="Transforms the Cartesian coordinates of a hit point on a cone wall into 2D texture UV&#45;coordinates in ..." alt="" coords="2780,45,2927,72"/>
+<area shape="rect" id="node23" href="$hit__manager__bonus_8h.html#aeb33f439a0d2093bdbcca7468e2e78b4" title="Transforms the Cartesian coordinates of a hit point on a cylinder wall into 2D texture UV&#45;coordinates..." alt="" coords="2780,96,2927,123"/>
+<area shape="rect" id="node27" href="$utils_8h.html#a211f9d6535bb54bea2299ee5ea8a54a0" title="Rotates a 3D vector around the x&#45;axis." alt="" coords="2788,197,2919,224"/>
+<area shape="rect" id="node37" href="$utils_8h.html#ac8a4ca6fb927e3746e7129f8eb04aa46" title="Rotates a 3D vector around the y&#45;axis." alt="" coords="2788,147,2919,173"/>
+<area shape="rect" id="node38" href="$utils_8h.html#ad39f8d1d44f9bce6c5025b87a09f7dfc" title="Rotates a 3D vector around the z&#45;axis." alt="" coords="2789,248,2918,275"/>
+<area shape="rect" id="node3" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2569,45,2714,72"/>
+<area shape="rect" id="node4" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="2387,45,2480,72"/>
+<area shape="rect" id="node5" href="$hit__bonus_8c.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="2192,45,2304,72"/>
 <area shape="rect" id="node6" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="1977,96,2113,123"/>
 <area shape="rect" id="node10" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="1284,96,1391,123"/>
-<area shape="rect" id="node22" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="1959,147,2132,173"/>
+<area shape="rect" id="node22" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="1959,45,2132,72"/>
 <area shape="rect" id="node7" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="1776,96,1911,123"/>
 <area shape="rect" id="node8" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="1585,96,1728,123"/>
 <area shape="rect" id="node9" href="$scene__light__bonus_8c.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="1439,96,1537,123"/>
@@ -25,15 +25,16 @@
 <area shape="rect" id="node19" href="$render__loop__mlx__bonus_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,129,449,156"/>
 <area shape="rect" id="node20" href="$render__loop__mlx__bonus_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,129,260,156"/>
 <area shape="rect" id="node21" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,129,60,156"/>
-<area shape="rect" id="node24" href="$hit__cylinder__bonus_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2569,147,2714,173"/>
-<area shape="rect" id="node25" href="$hit__cylinder__bonus_8c.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="2376,147,2491,173"/>
-<area shape="rect" id="node26" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="2192,147,2304,173"/>
-<area shape="rect" id="node28" href="$render_8h.html#a492035e87e08c0c7a9e93a3fe4605cc2" title="Rotates the camera with a keypress." alt="" coords="2565,197,2718,224"/>
-<area shape="rect" id="node30" href="$render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed" title="Rotates a 3D vector with a keypress." alt="" coords="2567,248,2715,275"/>
-<area shape="rect" id="node35" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="2551,299,2732,325"/>
-<area shape="rect" id="node29" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="2376,197,2491,224"/>
-<area shape="rect" id="node31" href="$render__bonus_8h.html#a81fa5494e17be06ab12b226ff9dd7c2a" title="Manipulates the active cone." alt="" coords="2375,349,2492,376"/>
-<area shape="rect" id="node33" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="2364,248,2503,275"/>
-<area shape="rect" id="node34" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="2372,299,2495,325"/>
-<area shape="rect" id="node32" href="$render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="2180,299,2316,325"/>
+<area shape="rect" id="node24" href="$hit__cylinder__bonus_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2569,96,2714,123"/>
+<area shape="rect" id="node25" href="$hit__cylinder__bonus_8c.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="2376,96,2491,123"/>
+<area shape="rect" id="node26" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="2192,96,2304,123"/>
+<area shape="rect" id="node28" href="$render_8h.html#a492035e87e08c0c7a9e93a3fe4605cc2" title="Rotates the camera with a keypress." alt="" coords="2565,147,2718,173"/>
+<area shape="rect" id="node31" href="$render_8h.html#a19285d1e97e1ac6d6d0708ecceb354ed" title="Rotates a 3D vector with a keypress." alt="" coords="2567,197,2715,224"/>
+<area shape="rect" id="node36" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="2551,248,2732,275"/>
+<area shape="rect" id="node29" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="2191,147,2305,173"/>
+<area shape="rect" id="node30" href="$render_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" title="Branches to the corresponding manipulation function." alt="" coords="1983,209,2107,236"/>
+<area shape="rect" id="node32" href="$render__bonus_8h.html#a81fa5494e17be06ab12b226ff9dd7c2a" title="Manipulates the active cone." alt="" coords="2375,299,2492,325"/>
+<area shape="rect" id="node34" href="$render_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="2364,197,2503,224"/>
+<area shape="rect" id="node35" href="$render_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="2372,248,2495,275"/>
+<area shape="rect" id="node33" href="$render_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="2180,235,2316,261"/>
 </map>

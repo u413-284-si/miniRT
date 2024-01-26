@@ -623,10 +623,10 @@
 <!-- Node31 -->
 <g id="node31" class="node">
 <title>Node31</title>
-<g id="a_node31"><a xlink:href="render__keyhook__select_8c.html" target="_top" xlink:title=" ">
+<g id="a_node31"><a xlink:href="render__keyhook__scene_8c.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="570.5,-0.5 570.5,-30.5 682.5,-30.5 682.5,-0.5 570.5,-0.5"/>
 <text text-anchor="start" x="578.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/render_keyhook</text>
-<text text-anchor="middle" x="626.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_select.c</text>
+<text text-anchor="middle" x="626.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_scene.c</text>
 </a>
 </g>
 </g>

@@ -1,16 +1,16 @@
 <map id="ft_put_main_page" name="ft_put_main_page">
-<area shape="rect" id="node1" title="Puts the main page of menu on the screen." alt="" coords="5,132,144,159"/>
+<area shape="rect" id="node1" title="Puts the main page of menu on the screen." alt="" coords="5,256,144,283"/>
 <area shape="rect" id="node2" href="$render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a" title="Checks if bit is set in the bit field." alt="" coords="577,56,695,83"/>
-<area shape="rect" id="node3" href="$menu__put__page_8c.html#a6466842cb9367072865c07608f1e4c7d" title="Puts a camera page on the screen." alt="" coords="388,56,521,83"/>
-<area shape="rect" id="node17" href="$menu__put__page_8c.html#a11eed0e0d38826c89da2d71031a08593" title="Puts a light page on the screen." alt="" coords="387,297,522,324"/>
-<area shape="rect" id="node26" href="$menu__put__page_8c.html#a18613445d2379eca738e6cf789dfecf5" title="Puts a scene page on the screen." alt="" coords="192,183,335,209"/>
+<area shape="rect" id="node3" href="$menu__put__page_8c.html#a6466842cb9367072865c07608f1e4c7d" title="Puts a camera page on the screen." alt="" coords="388,60,521,87"/>
+<area shape="rect" id="node6" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="975,487,1058,513"/>
+<area shape="rect" id="node17" href="$menu__put__page_8c.html#a11eed0e0d38826c89da2d71031a08593" title="Puts a light page on the screen." alt="" coords="387,308,522,335"/>
+<area shape="rect" id="node26" href="$menu__put__page_8c.html#a18613445d2379eca738e6cf789dfecf5" title="Puts a scene page on the screen." alt="" coords="192,256,335,283"/>
 <area shape="rect" id="node4" href="$menu__put_8h.html#a86f02d860bd5b9a3795b20ba72f8e359" title="Puts camera info on the screen." alt="" coords="589,5,683,32"/>
 <area shape="rect" id="node12" href="$menu__put_8h.html#a6f5886ed0d2e8de8f0df680db3535336" title="Puts control scheme for camera on the screen." alt="" coords="575,512,697,539"/>
 <area shape="rect" id="node5" href="$menu__put_8h.html#a250c5483eff2fa1f225b6a16dab45481" title="Puts a 3D point on the screen." alt="" coords="772,224,895,251"/>
 <area shape="rect" id="node7" href="$menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03" title="Puts a single float value on the screen." alt="" coords="763,158,904,199"/>
 <area shape="rect" id="node10" href="$menu__put_8h.html#a1fd4ce789738bee4ae9d35045cb21a2a" title="Puts a unit vector on the screen." alt="" coords="773,107,894,133"/>
 <area shape="rect" id="node11" href="$utils_8h.html#a49f519544f51627ced8238dfd72ce20a" title="Transforms radians into degrees." alt="" coords="758,5,909,32"/>
-<area shape="rect" id="node6" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="975,436,1058,463"/>
 <area shape="rect" id="node8" href="$menu__put_8h.html#abba80f1bfc48c436f54f5a0740683a75" title="Converts float to string and puts it on the screen." alt="" coords="969,237,1064,264"/>
 <area shape="rect" id="node9" href="$menu__put__str__num_8c.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="1112,360,1195,387"/>
 <area shape="rect" id="node13" href="$menu__put_8h.html#a0dd38606280deb85fca8f3d4db628552" title="Puts control scheme for incrementing and decrementing a value on the screen." alt="" coords="762,563,905,589"/>
@@ -19,16 +19,16 @@
 <area shape="rect" id="node16" href="$menu__put_8h.html#a297dd823c51fe8c418aa75fc1cbfa0a5" title="Puts a string and moves to next line." alt="" coords="745,765,921,792"/>
 <area shape="rect" id="node18" href="$menu__put_8h.html#acb49d711643bd638023d9317cd528174" title="Puts control scheme for light on the screen." alt="" coords="575,715,697,741"/>
 <area shape="rect" id="node22" href="$menu__put_8h.html#ab1aa03b80f8d7af17d305cb8b61c2b6b" title="Puts light info on the screen." alt="" coords="589,309,683,336"/>
-<area shape="rect" id="node19" href="$menu__put_8h.html#a5aceec72932738d71b7d1bbd95ce525c" title="Puts control scheme for changing active entity on the screen." alt="" coords="749,715,918,741"/>
-<area shape="rect" id="node20" href="$menu__put_8h.html#a50838cd4750b34dedcc348fbdc91f908" title="Puts control scheme for changing colour on the screen." alt="" coords="766,664,901,691"/>
-<area shape="rect" id="node21" href="$menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724" title="Puts the type of a hittable or a light on the screen." alt="" coords="786,436,881,463"/>
+<area shape="rect" id="node19" href="$menu__put_8h.html#a5aceec72932738d71b7d1bbd95ce525c" title="Puts control scheme for changing active entity on the screen." alt="" coords="749,664,918,691"/>
+<area shape="rect" id="node20" href="$menu__put_8h.html#a50838cd4750b34dedcc348fbdc91f908" title="Puts control scheme for changing colour on the screen." alt="" coords="766,715,901,741"/>
+<area shape="rect" id="node21" href="$menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724" title="Puts the type of a hittable or a light on the screen." alt="" coords="786,461,881,488"/>
 <area shape="rect" id="node23" href="$menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7" title="Puts a colour on the screen." alt="" coords="780,275,887,301"/>
 <area shape="rect" id="node24" href="$menu__put_8h.html#a9435ae23ec438c58bcd794dcb400a8ae" title="Puts the ID of a hittable or a light on the screen." alt="" coords="794,360,873,387"/>
 <area shape="rect" id="node25" href="$menu__put_8h.html#afdfa5611d84fa2c8cbb73cb66a339c98" title="Converts integer to string and puts it on the screen." alt="" coords="975,360,1058,387"/>
 <area shape="rect" id="node27" href="$menu__put_8h.html#a4297546f5daae0553e8fb746134a720d" title="Puts control scheme for hittable on the screen." alt="" coords="383,613,527,640"/>
-<area shape="rect" id="node32" href="$menu__put_8h.html#a893f0e65e417aaf6be0152e2f74782d1" title="Puts hittable info on the screen." alt="" coords="397,208,513,235"/>
-<area shape="rect" id="node28" href="$menu__put__hittable__ctrl__bonus_8c.html#af8c58ee6bca605b3e9c5642fcb76cdc5" title="Puts control scheme for cone on the screen." alt="" coords="581,563,691,589"/>
-<area shape="rect" id="node29" href="$menu__put_8h.html#a458660b29d84e5f35cb7d4e7fc1e0308" title="Puts control scheme for cylinder on the screen." alt="" coords="581,613,691,640"/>
+<area shape="rect" id="node32" href="$menu__put_8h.html#a893f0e65e417aaf6be0152e2f74782d1" title="Puts hittable info on the screen." alt="" coords="397,256,513,283"/>
+<area shape="rect" id="node28" href="$menu__put__hittable__ctrl__bonus_8c.html#af8c58ee6bca605b3e9c5642fcb76cdc5" title="Puts control scheme for cone on the screen." alt="" coords="581,613,691,640"/>
+<area shape="rect" id="node29" href="$menu__put_8h.html#a458660b29d84e5f35cb7d4e7fc1e0308" title="Puts control scheme for cylinder on the screen." alt="" coords="581,563,691,589"/>
 <area shape="rect" id="node30" href="$menu__put_8h.html#abd4665c14b3ab0c1c22d5b2b93b898b6" title="Puts control scheme for plane on the screen." alt="" coords="583,664,689,691"/>
 <area shape="rect" id="node31" href="$menu__put_8h.html#a068dec8435039453ac1f404de98bd31c" title="Puts control scheme for sphere on the screen." alt="" coords="581,765,691,792"/>
 <area shape="rect" id="node33" href="$menu__put__hittable__bonus_8c.html#af86e62ade8b462c44092a160d876544e" title="Puts cone info on the screen." alt="" coords="595,157,677,184"/>

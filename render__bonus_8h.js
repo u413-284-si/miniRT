@@ -60,6 +60,7 @@ var render__bonus_8h =
     [ "ft_manip_light", "render__bonus_8h.html#acff7acf5eb6145177496e67b32a74fba", null ],
     [ "ft_manip_light_src", "render__bonus_8h.html#a16d57d13773703e93274caef6b5ccde1", null ],
     [ "ft_manip_plane", "render__bonus_8h.html#a2b397fc2e0dd418d497c05b3dff894f1", null ],
+    [ "ft_manip_scene", "render__bonus_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d", null ],
     [ "ft_manip_sphere", "render__bonus_8h.html#a3af9cb325ad292f339446b63917a9ea2", null ],
     [ "ft_menu_put_text", "render__bonus_8h.html#a735dfeb13434c88e3b4a76990386763b", null ],
     [ "ft_mouse_hook_move", "render__bonus_8h.html#a789550edaaab12e30e0d8c779abdc1b8", null ],

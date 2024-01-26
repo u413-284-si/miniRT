@@ -1,4 +1,4 @@
-<map id="src/render_keyhook_select.c" name="src/render_keyhook_select.c">
+<map id="src/render_keyhook_scene.c" name="src/render_keyhook_scene.c">
 <area shape="rect" id="node1" title=" " alt="" coords="526,5,675,47"/>
 <area shape="rect" id="node2" href="$render_8h.html" title=" " alt="" coords="563,95,638,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="179,319,238,345"/>

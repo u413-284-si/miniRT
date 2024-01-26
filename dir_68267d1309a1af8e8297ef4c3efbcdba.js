@@ -77,7 +77,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "render_keyhook_options_bonus.c", "render__keyhook__options__bonus_8c.html", "render__keyhook__options__bonus_8c" ],
     [ "render_keyhook_press.c", "render__keyhook__press_8c.html", "render__keyhook__press_8c" ],
     [ "render_keyhook_press_bonus.c", "render__keyhook__press__bonus_8c.html", "render__keyhook__press__bonus_8c" ],
-    [ "render_keyhook_select.c", "render__keyhook__select_8c.html", "render__keyhook__select_8c" ],
+    [ "render_keyhook_scene.c", "render__keyhook__scene_8c.html", "render__keyhook__scene_8c" ],
     [ "render_keyhook_utils.c", "render__keyhook__utils_8c.html", "render__keyhook__utils_8c" ],
     [ "render_loop_mlx.c", "render__loop__mlx_8c.html", "render__loop__mlx_8c" ],
     [ "render_loop_mlx_bonus.c", "render__loop__mlx__bonus_8c.html", "render__loop__mlx__bonus_8c" ],

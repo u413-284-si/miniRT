@@ -1,12 +1,13 @@
 <map id="ft_option_set" name="ft_option_set">
-<area shape="rect" id="node1" title="Sets bit in bit field." alt="" coords="909,107,1016,133"/>
+<area shape="rect" id="node1" title="Sets bit in bit field." alt="" coords="909,132,1016,159"/>
 <area shape="rect" id="node2" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="693,5,849,32"/>
 <area shape="rect" id="node3" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="713,56,828,83"/>
-<area shape="rect" id="node4" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="680,107,861,133"/>
-<area shape="rect" id="node5" href="$render_8h.html#a5ffbfa92a6da595a38ba795014ee593c" title="Initializes the render struct." alt="" coords="511,157,619,184"/>
-<area shape="rect" id="node7" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="705,208,837,235"/>
-<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,183,60,209"/>
-<area shape="rect" id="node8" href="$render__bonus_8h.html#a9c57490cfa20448a418091aa47a49245" title="Raytraces a sample of the scene to the sample buffer." alt="" coords="497,208,632,235"/>
-<area shape="rect" id="node9" href="$render__loop__mlx__bonus_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,208,449,235"/>
-<area shape="rect" id="node10" href="$render__loop__mlx__bonus_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,208,260,235"/>
+<area shape="rect" id="node4" href="$render_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" title="Branches to the corresponding manipulation function." alt="" coords="503,81,627,108"/>
+<area shape="rect" id="node5" href="$render_8h.html#a8b0cab63a8053d366bbefead351d039a" title="Rotates the camera with the mouse." alt="" coords="680,157,861,184"/>
+<area shape="rect" id="node6" href="$render_8h.html#a5ffbfa92a6da595a38ba795014ee593c" title="Initializes the render struct." alt="" coords="325,208,433,235"/>
+<area shape="rect" id="node8" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="705,259,837,285"/>
+<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,233,60,260"/>
+<area shape="rect" id="node9" href="$render__bonus_8h.html#a9c57490cfa20448a418091aa47a49245" title="Raytraces a sample of the scene to the sample buffer." alt="" coords="497,259,632,285"/>
+<area shape="rect" id="node10" href="$render__loop__mlx__bonus_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,259,449,285"/>
+<area shape="rect" id="node11" href="$render__loop__mlx__bonus_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,259,260,285"/>
 </map>
