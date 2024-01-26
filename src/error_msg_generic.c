@@ -6,11 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:17:35 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 18:00:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 18:17:27 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "error_msg.h"
+#include "miniRT_error.h"
 
 void	ft_perror(char *msg, int save_errno)
 {

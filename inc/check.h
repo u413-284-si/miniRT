@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 18:10:28 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 18:17:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 
 # include "libft.h"
 
-# include "error_type.h"
-# include "error_msg.h"
+# include "miniRT_error.h"
 # include "ft_strtod.h"
 
 # if IS_BONUS
