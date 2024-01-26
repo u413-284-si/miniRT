@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/26 14:30:17 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/26 14:47:22 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -165,11 +165,12 @@ SRC_COMMON := 	camera_movement.c \
 				check_entity_sp_pl_cy.c \
 				check_line.c \
 				check_rm_space.c \
+				check_error.c \
+				check_error2.c \
 				cleanup.c \
 				colour.c \
 				debug_print_entity.c \
 				debug_print_struct.c \
-				error_msg_check2.c \
 				error_msg_generic.c \
 				error_mlx.c \
 				error_syscall.c \
@@ -209,8 +210,7 @@ SRC_COMMON := 	camera_movement.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c
 
-SRC_BASE := 	error_msg_check.c \
-				hit.c \
+SRC_BASE := 	hit.c \
 				hit_cylinder.c \
 				hit_plane.c \
 				hit_sphere.c \
@@ -225,8 +225,8 @@ SRC_BASE := 	error_msg_check.c \
 
 SRC_BONUS :=	check_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
+				check_error_bonus.c \
 				check_win_size_bonus.c \
-				error_msg_check_bonus.c \
 				hit_bonus.c \
 				hit_cone_bonus.c \
 				hit_cylinder_bonus.c \

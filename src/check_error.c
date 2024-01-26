@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_msg_check.c                                  :+:      :+:    :+:   */
+/*   check_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:25:28 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 12:22:13 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 14:45:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
+
+#ifndef IS_BONUS
 
 void	ft_perror_count(t_type type, int max, int count, bool high)
 {
@@ -39,6 +41,7 @@ void	ft_perror_count(t_type type, int max, int count, bool high)
 	ft_putnbr_fd(count, 2);
 	ft_putendl_fd("", 2);
 }
+#endif
 
 bool	ft_perror_range(char *line, size_t offset, int min, int max)
 {
