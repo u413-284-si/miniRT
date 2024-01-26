@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 10:17:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:13:22 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@
 # include "camera.h"
 # include "cleanup.h"
 # include "vec2.h"
-# include "render_menu.h"
 
 # if IS_BONUS
 #  include "miniRT_config_bonus.h"
@@ -103,6 +102,22 @@ typedef struct s_mouse
 }	t_mouse;
 
 /**
+ * @brief Menu struct.
+ *
+ * @param inv_alpha		Inverse of the transparency value.
+ * @param rb			Background colour channel R and B.
+ * @param g				Background colour channel G.
+ * @param font_col		Text colour.
+ */
+typedef struct s_menu
+{
+	uint8_t		inv_alpha;
+	uint32_t	rb;
+	uint32_t	g;
+	uint32_t	font_col;
+}	t_menu;
+
+/**
  * @brief Overarching render struct.
  *
  * @param mlx_ptrs		mlx pointers struct.
@@ -154,6 +169,19 @@ typedef enum e_col_name
  */
 t_err		ft_render_init(t_render *render);
 
+/**
+ * @brief Initializes the render menu.
+ * 
+ * Sets the background and text colour. Also pre-calculates the RB and G colour
+ * mixes. 
+ * @param menu 		Pointer to menu struct
+ * @param alpha 	Transparency for menu
+ * @param colour 	Background colour
+ * @param font_col 	Text colour
+ */
+void		ft_menu_init(t_menu *menu, uint8_t alpha, uint32_t colour,
+				uint32_t font_col);
+
 // render_init_mlx.c
 
 /**
@@ -163,7 +191,7 @@ t_err		ft_render_init(t_render *render);
  * @param win_size		Parsed size of window.
  * @return t_err		SUCCESS, ERROR.
  */
-t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, t_vec2i *win_size);
+t_err		ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, t_vec2i *win_size);
 
 /**
  * @brief Initializes the mlx img struct.

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
+#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/26 10:14:47 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/26 12:14:24 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -176,7 +176,6 @@ SRC_COMMON := 	camera_movement.c \
 				import_file.c \
 				import_file_buffer.c \
 				main.c \
-				menu_init.c \
 				menu_put_cam_light.c \
 				menu_put_cam_light_ctrl.c \
 				menu_put_general_info.c \
@@ -193,6 +192,7 @@ SRC_COMMON := 	camera_movement.c \
 				render_bit_field.c \
 				render_blend_background.c \
 				render_cleanup.c \
+				render_init.c \
 				render_init_mlx.c \
 				render_keyhook_camera.c \
 				render_keyhook_colour.c \
@@ -216,7 +216,6 @@ SRC_BASE := 	colour.c \
 				menu_put_text.c \
 				ray.c \
 				render_draw.c \
-				render_init_base.c \
 				render_keyhook_press.c \
 				render_loop_mlx.c \
 				render_mouse.c \

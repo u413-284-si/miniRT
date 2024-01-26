@@ -21,6 +21,7 @@
 		"render.h": "c",
 		"render_bit_field.h": "c",
 		"render_options_bonus.h": "c",
-		"error_mlx.h": "c"
+		"error_mlx.h": "c",
+		"stdint.h": "c"
 	}
 }

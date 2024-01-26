@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_text.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 10:12:52 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:05:42 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ static t_vec2i	ft_put_footer(t_putinfo put, bool show_ctrl, int img_height)
 		put.pos = ft_put_str_and_advance(put, "Ctrl:  Switch mode");
 		put.pos = ft_put_str_and_advance(put, "U:     Change inc");
 		put.pos = ft_put_str_and_advance(put, "I:     Toggle menu");
-		put.pos = ft_put_str_and_advance(put, "P:     Print scene");
 		put.pos = ft_put_str_and_advance(put, "Shift: Show info");
 	}
 	else
