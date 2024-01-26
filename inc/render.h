@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/25 18:56:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 10:17:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,14 +111,15 @@ typedef struct s_mouse
  */
 typedef struct s_render
 {
-	t_mlx_ptrs		mlx_ptrs;
-	t_cam			cam;
-	t_entities		scene;
-	t_mouse			mouse;
-	t_menu			menu;
-	uint32_t		options;
-	int				active_hittable;
-	int				active_light;
+	t_mlx_ptrs	mlx_ptrs;
+	t_cam		cam;
+	t_entities	scene;
+	t_vec2i		win_size;
+	t_mouse		mouse;
+	t_menu		menu;
+	uint32_t	options;
+	int			active_hittable;
+	int			active_light;
 }	t_render;
 
 /**
@@ -159,10 +160,10 @@ t_err		ft_render_init(t_render *render);
  * @brief Initializes the mlx_ptrs struct.
  *
  * @param mlx_ptrs		Pointer to mlx_ptrs struct.
- * @param fullscreen	Fullscreen flag.
+ * @param win_size		Parsed size of window.
  * @return t_err		SUCCESS, ERROR.
  */
-t_err		ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen);
+t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, t_vec2i *win_size);
 
 /**
  * @brief Initializes the mlx img struct.
@@ -174,12 +175,15 @@ t_err		ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, bool fullscreen);
 t_err		ft_init_image(t_mlx_ptrs *mlx_ptrs, t_vec2i size);
 
 /**
- * @brief Sets the window to fullscreen.
+ * @brief Checks screen size.
  *
+ * Gets the screen size and compares it to the window size.
+ * If the window size is larger than the screen size, the window size is
+ * set to the screen size.
  * @param mlx_ptr	Mlx pointer.
  * @return t_vec2i	Window size.
  */
-t_vec2i		ft_set_fullscreen(void *mlx_ptr);
+t_vec2i		ft_check_screen_size(void *mlx_ptr, t_vec2i win_size);
 
 // render_loop_mlx.c
 

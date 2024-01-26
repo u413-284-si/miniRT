@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:27:34 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 09:38:45 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 15:12:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,21 +73,18 @@ bool	ft_isvalid_unit_vec(char **line, float min, float max)
 	return (true);
 }
 
-bool	ft_isvalid_rgb_val(char **line, bool comma)
+bool	ft_isvalid_int(char **line, int min, int max, bool comma)
 {
 	int	tmp;
 
 	tmp = 0;
 	if (!ft_isdigit(**line))
 		return (ft_perror_convert(*line, false));
-	while (ft_isdigit(**line) && tmp < 255)
-	{
-		tmp *= 10;
-		tmp += **line - '0';
+	tmp = ft_atoi(*line);
+	if (tmp < min || tmp > max)
+		return (ft_perror_range(*line, 3, min, max));
+	while (ft_isdigit(**line))
 		(*line)++;
-	}
-	if (tmp > 255)
-		return (ft_perror_range(*line - 3, 3, 0, 255));
 	if (comma && **line != ',')
 		return (ft_perror_separator(*line, comma));
 	if (!comma && **line != ' ' && **line != '\t' && **line != '\0')
@@ -97,13 +94,13 @@ bool	ft_isvalid_rgb_val(char **line, bool comma)
 
 bool	ft_isvalid_rgb_block(char **line)
 {
-	if (!ft_isvalid_rgb_val(line, true))
+	if (!ft_isvalid_int(line, 0, 255, true))
 		return (false);
 	(*line)++;
-	if (!ft_isvalid_rgb_val(line, true))
+	if (!ft_isvalid_int(line,0, 255, true))
 		return (false);
 	(*line)++;
-	if (!ft_isvalid_rgb_val(line, false))
+	if (!ft_isvalid_int(line, 0, 255, false))
 		return (false);
 	return (true);
 }

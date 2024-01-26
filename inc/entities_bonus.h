@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/22 13:18:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 10:14:52 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,7 @@ typedef struct s_cone
  */
 typedef enum e_type
 {
+	WIN_SIZE = -3,
 	COMMENT = -2,
 	UNKNOWN = -1,
 	SPHERE,

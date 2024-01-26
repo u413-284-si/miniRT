@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 16:33:54 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 15:10:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 
 /* ====== LIBRARIES ====== */
 
+# include "libft.h"
+
 # include "error_type.h"
 # include "error_msg.h"
-# include "ft_char.h"
 # include "ft_strtod.h"
 
 # if IS_BONUS
@@ -149,7 +150,7 @@ bool		ft_isvalid_float_block(char **line, float min, float max);
 bool		ft_isvalid_unit_vec(char **line, float min, float max);
 
 /**
- * @brief Tries to convert str into rgb int and checks range.
+ * @brief Tries to convert str into int and checks range.
  *
  * Error if str does not start with digit
  * (prevents negative numbers and wrong chars).
@@ -157,17 +158,19 @@ bool		ft_isvalid_unit_vec(char **line, float min, float max);
  * Error if number is bigger than 255.
  * Error if number is not followed by correct separator.
  * Correct separator can be controlled by passed bool: ',' or ' ' and '\0'.
- * @param line Pointer to current line.
- * @param comma Controls if separator should be ',' or ' ' and '\0'.
+ * @param line	Pointer to current line.
+ * @param min	Minimum value for converted number.
+ * @param max	Maximum value for converted number.
+ * @param comma	Controls if separator should be ',' or ' ' and '\0'.
  * @return true Number is valid.
  * @return false Wrong beginning char, out of range, wrong separator.
  */
-bool		ft_isvalid_rgb_val(char **line, bool comma);
+bool		ft_isvalid_int(char **line, int min, int max, bool comma);
 
 /**
  * @brief Checks three rgb values, separated by ','.
  *
- * Tries to convert three numbers (Block) with ft_isvalid_rgb_val().
+ * Tries to convert three numbers (Block) with ft_isvalid_int().
  * @param line Pointer to current line.
  * @return true Block is valid.
  * @return false Block is not valid.

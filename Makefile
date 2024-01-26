@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/25 18:56:20 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/26 10:14:47 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -226,6 +226,7 @@ SRC_BASE := 	colour.c \
 
 SRC_BONUS :=	check_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
+				check_win_size_bonus.c \
 				colour_bonus.c \
 				error_msg_check_bonus.c \
 				hit_bonus.c \
@@ -241,6 +242,7 @@ SRC_BONUS :=	check_bonus.c \
 				menu_put_time_bonus.c \
 				parse_bonus.c \
 				parse_entity_sp_pl_cy_bonus.c \
+				parse_win_size_bonus.c \
 				ray_bonus.c \
 				render_cleanup_bonus.c \
 				render_draw_bonus.c \

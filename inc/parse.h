@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 00:19:56 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 10:29:13 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PARSE_H
 
 /* ====== LIBRARIES ====== */
+
+# include "libft.h"
 
 # include "error_syscall.h"
 # include "cleanup.h"
@@ -46,9 +48,11 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total);
  * @param filename	Provided filename.
  * @param scene		Where entities are stored.
  * @param cam		Camera used in program.
+ * @param win_size	Window size.
  * @return t_err SUCCESS, ERROR if subfunction fails.
  */
-t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam);
+t_err	ft_parse_file(char *filename, t_entities *scene, t_cam *cam,
+			t_vec2i *win_size);
 
 /**
  * @brief Allocates memory for lights and hittable array.
@@ -70,7 +74,8 @@ t_err	ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total);
  * @param cam	Camera used in program.
  * @param lines	Imported file in sanitized array.
  */
-void	ft_parse_lines(t_entities *scene, t_cam *cam, char **lines);
+void	ft_parse_lines(char **lines, t_entities *scene, t_cam *cam,
+			t_vec2i *win_size);
 
 // parse_entity1.c
 

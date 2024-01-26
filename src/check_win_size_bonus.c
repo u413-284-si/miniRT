@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check_win_size_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 14:55:47 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/26 10:17:37 by gwolf            ###   ########.fr       */
+/*   Created: 2024/01/22 14:04:43 by gwolf             #+#    #+#             */
+/*   Updated: 2024/01/26 10:39:11 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "miniRT.h"
+#include "check_bonus.h"
 
-int	main(int argc, char **argv)
+t_type	ft_check_win_size(char *line)
 {
-	static t_render	render;
-
-	if (argc != 2)
-	{
-		ft_perror("Usage: ./miniRT file.rt", 0);
-		exit(1);
-	}
-	if (ft_parse_file(argv[1], &render.scene, &render.cam, &render.win_size))
-		return (1);
-	if (ft_render_init(&render))
-	{
-		ft_render_cleanup(&render);
-		return (1);
-	}
-	ft_render_start_loop(&render);
-	ft_render_cleanup(&render);
-	return (0);
+	ft_rm_space(&line);
+	if (!ft_isvalid_int(&line, WIN_SIZE_X, MAX_WIN_SIZE_X, true))
+		return (UNKNOWN);
+	line++;
+	if (!ft_isvalid_int(&line, WIN_SIZE_Y, MAX_WIN_SIZE_Y, false))
+		return (UNKNOWN);
+	ft_rm_space(&line);
+	if (*line != '\0')
+		return (ft_perror_end(line));
+	return (WIN_SIZE);
 }
