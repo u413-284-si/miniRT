@@ -13,7 +13,18 @@ Ray tracing is the method of creating and shooting rays from an observer (called
 Every hittable is described mathematically in order to calculate whether an intersection occured or not. More complex hittables require a superposition of different base calculations such as cylinders or cones.
 
 ## Sample renders
-![Bonus](renders/bonus.png)
+<table align=center>
+	<thead>
+		<tr>
+			<th colspan=2>Some renders</th>
+		</tr>
+	</thead>
+  <tbody>
+      <tr>
+        <td><image src="renders/bonus.png"></image></td>
+      </tr>
+  </tbody>
+</table>
 
 ## Project overview
 
