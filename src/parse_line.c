@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_line.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:38:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 15:08:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 13:48:30 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,6 @@ void	ft_parse_int(char **line, int *var)
 	*var = ft_atoi(*line);
 	while (ft_isdigit(**line))
 		(*line)++;
-	if (*(*line + 1) != '\0')
+	if (**line && *(*line + 1) != '\0')
 		(*line)++;
 }
