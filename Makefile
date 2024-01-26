@@ -6,7 +6,7 @@
 #    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/26 12:14:24 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/26 14:12:14 by sqiu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -203,9 +203,10 @@ SRC_COMMON := 	camera_movement.c \
 				render_keyhook_utils.c \
 				scene_shadow.c \
 				utils_interval.c \
+				utils_math.c \
 				utils_quaternion.c \
 				vec3_arithmetics.c \
-				vec3_linalgebra.c \
+				vec3_linalgebra.c 
 
 SRC_BASE := 	colour.c \
 				error_msg_check.c \
@@ -220,8 +221,7 @@ SRC_BASE := 	colour.c \
 				render_loop_mlx.c \
 				render_mouse.c \
 				scene_light.c \
-				utils_cylinder.c \
-				utils_math.c \
+				utils_cylinder.c
 
 SRC_BONUS :=	check_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
@@ -262,9 +262,8 @@ SRC_BONUS :=	check_bonus.c \
 				time_bonus.c \
 				utils_cone_bonus.c \
 				utils_cylinder_bonus.c \
-				utils_math_bonus.c \
 				utils_random_bonus.c \
-				threads_bonus.c \
+				threads_bonus.c
 
 # ******************************
 # *     Object files           *
