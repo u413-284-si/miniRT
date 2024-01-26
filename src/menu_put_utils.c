@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:16:08 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/07 12:41:15 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:01:07 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,24 @@ t_vec2i	ft_put_colour(t_putinfo put, t_colour colour)
 	t_numinfo	numinfo;
 
 	ft_put_str(put, "Colour");
-	put.pos.y += Y_NEXT_LINE;
 	numinfo.pad = 3;
+	put.pos.y += Y_NEXT_LINE;
+	put.pos.x += 10;
+	ft_put_str(put, "R:");
+	put.pos.x += 20;
 	numinfo.numi = colour.r * 255.99;
-	put.pos = ft_put_coord(" r:    ", put, numinfo, true);
+	ft_put_int(put, numinfo);
+	put.pos.x += 30;
+	ft_put_str(put, "G:");
+	put.pos.x += 20;
 	numinfo.numi = colour.g * 255.99;
-	put.pos = ft_put_coord(" g:    ", put, numinfo, true);
+	ft_put_int(put, numinfo);
+	put.pos.x += 30;
+	ft_put_str(put, "B:");
+	put.pos.x += 20;
 	numinfo.numi = colour.b * 255.99;
-	put.pos = ft_put_coord(" b:    ", put, numinfo, true);
+	ft_put_int(put, numinfo);
+	put.pos.x += 40;
 	put.pos.y += Y_HALF_LINE;
 	return (put.pos);
 }
