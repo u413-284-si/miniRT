@@ -58,7 +58,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/miniRT_supreme",
-			"args": ["scenes/cone.rt"],
+			"args": ["scenes/test_bonus.rt"],
 			"stopAtEntry": true,
 			"cwd": "${workspaceFolder}",
 			"environment": [],

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:32:23 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/15 12:02:17 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 11:50:54 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,6 @@ void	ft_set_hitrecord_features(t_hitrecord *rec, t_hittable cur, \
 	rec->reflectivity = cur.reflectivity;
 	if (cur.checkered)
 		rec->checkered = true;
+	else
+		rec->checkered = false;
 }
