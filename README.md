@@ -128,7 +128,7 @@ Following a short summary of the features covered by the project:
 ## Installation and Usage
 
 ```
-git clone git@github.com:u413-284-si/minirt.git minirt
+git clone --recursive git@github.com:u413-284-si/minirt.git minirt
 cd minirt
 make
 ./minirt scenes/<choose a scene>
