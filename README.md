@@ -16,12 +16,103 @@ Every hittable is described mathematically in order to calculate whether an inte
 <table align=center>
 	<thead>
 		<tr>
-			<th colspan=2>Some renders</th>
+			<th colspan=2>Bonus demonstration</th>
 		</tr>
 	</thead>
   <tbody>
       <tr>
         <td><image src="renders/bonus.png"></image></td>
+      </tr>
+  </tbody>
+</table>
+
+<table align=center>
+	<thead>
+		<tr>
+			<th colspan=2>Kuddelmuddel</th>
+		</tr>
+	</thead>
+  <tbody>
+      <tr>
+        <td><image src="renders/complex.png"></image></td>
+      </tr>
+  </tbody>
+</table>
+
+<table align=center>
+	<thead>
+		<tr>
+			<th colspan=2>Reflections</th>
+		</tr>
+	</thead>
+  <tbody>
+      <tr>
+        <td><image src="renders/reflection.png"></image></td>
+      </tr>
+  </tbody>
+</table>
+
+<table align=center>
+	<thead>
+		<tr>
+			<th colspan=2>White</th>
+		</tr>
+	</thead>
+  <tbody>
+      <tr>
+        <td><image src="renders/white.png"></image></td>
+      </tr>
+  </tbody>
+</table>
+
+<table align=center>
+	<thead>
+		<tr>
+			<th colspan=2>Spheres</th>
+		</tr>
+	</thead>
+  <tbody>
+      <tr>
+        <td><image src="renders/spheres.png"></image></td>
+      </tr>
+  </tbody>
+</table>
+
+<table align=center>
+	<thead>
+		<tr>
+			<th colspan=2>Shadows</th>
+		</tr>
+	</thead>
+  <tbody>
+      <tr>
+        <td><image src="renders/shadows.png"></image></td>
+      </tr>
+  </tbody>
+</table>
+
+<table align=center>
+	<thead>
+		<tr>
+			<th colspan=2>Pokeball</th>
+		</tr>
+	</thead>
+  <tbody>
+      <tr>
+        <td><image src="renders/pokeball.png"></image></td>
+      </tr>
+  </tbody>
+</table>
+
+<table align=center>
+	<thead>
+		<tr>
+			<th colspan=2>Snowman</th>
+		</tr>
+	</thead>
+  <tbody>
+      <tr>
+        <td><image src="renders/snowman.png"></image></td>
       </tr>
   </tbody>
 </table>
