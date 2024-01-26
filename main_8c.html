@@ -143,7 +143,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (argc != 2)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a>(<span class="stringliteral">&quot;Usage: ./miniRT file.rt&quot;</span>, 0);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        exit(1);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span> (1);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="parse_8h.html#a158705dee8e9b7ce48184c8e2fa3c169">ft_parse_file</a>(argv[1], &amp;render.<a class="code" href="structt__render.html#ab80055edd364356489de21cdad66e875">scene</a>, &amp;render.<a class="code" href="structt__render.html#a5b0002493ad73e0a6a3a45de57db20df">cam</a>, &amp;render.<a class="code" href="structt__render.html#a1b9abb3e2cdff328a442c171e1e10759">win_size</a>))</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> (1);</div>
