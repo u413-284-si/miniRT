@@ -29,19 +29,6 @@ Every hittable is described mathematically in order to calculate whether an inte
 <table align=center>
 	<thead>
 		<tr>
-			<th colspan=2>Reflections</th>
-		</tr>
-	</thead>
-  <tbody>
-      <tr>
-        <td><image src="renders/reflection.png"></image></td>
-      </tr>
-  </tbody>
-</table>
-
-<table align=center>
-	<thead>
-		<tr>
 			<th colspan=2>White</th>
 		</tr>
 	</thead>
@@ -61,6 +48,19 @@ Every hittable is described mathematically in order to calculate whether an inte
   <tbody>
       <tr>
         <td><image src="renders/spheres.png"></image></td>
+      </tr>
+  </tbody>
+</table>
+
+<table align=center>
+	<thead>
+		<tr>
+			<th colspan=2>Reflections</th>
+		</tr>
+	</thead>
+  <tbody>
+      <tr>
+        <td><image src="renders/reflection.png"></image></td>
       </tr>
   </tbody>
 </table>
