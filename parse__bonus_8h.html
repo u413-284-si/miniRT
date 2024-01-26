@@ -1203,7 +1203,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    *var = ft_atoi(*line);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">while</span> (ft_isdigit(**line))</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        (*line)++;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (*(*line + 1) != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (**line &amp;&amp; *(*line + 1) != <span class="charliteral">&#39;\0&#39;</span>)</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        (*line)++;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
