@@ -100,7 +100,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "utils_cylinder_bonus.c", "utils__cylinder__bonus_8c.html", "utils__cylinder__bonus_8c" ],
     [ "utils_interval.c", "utils__interval_8c.html", "utils__interval_8c" ],
     [ "utils_math.c", "utils__math_8c.html", "utils__math_8c" ],
-    [ "utils_math_bonus.c", "utils__math__bonus_8c.html", "utils__math__bonus_8c" ],
     [ "utils_quaternion.c", "utils__quaternion_8c.html", "utils__quaternion_8c" ],
     [ "utils_random_bonus.c", "utils__random__bonus_8c.html", "utils__random__bonus_8c" ],
     [ "vec3_arithmetics.c", "vec3__arithmetics_8c.html", "vec3__arithmetics_8c" ],

@@ -9,7 +9,6 @@ var searchData=
   ['utils_5fcylinder_5fbonus_2ec_588',['utils_cylinder_bonus.c',['../utils__cylinder__bonus_8c.html',1,'']]],
   ['utils_5finterval_2ec_589',['utils_interval.c',['../utils__interval_8c.html',1,'']]],
   ['utils_5fmath_2ec_590',['utils_math.c',['../utils__math_8c.html',1,'']]],
-  ['utils_5fmath_5fbonus_2ec_591',['utils_math_bonus.c',['../utils__math__bonus_8c.html',1,'']]],
-  ['utils_5fquaternion_2ec_592',['utils_quaternion.c',['../utils__quaternion_8c.html',1,'']]],
-  ['utils_5frandom_5fbonus_2ec_593',['utils_random_bonus.c',['../utils__random__bonus_8c.html',1,'']]]
+  ['utils_5fquaternion_2ec_591',['utils_quaternion.c',['../utils__quaternion_8c.html',1,'']]],
+  ['utils_5frandom_5fbonus_2ec_592',['utils_random_bonus.c',['../utils__random__bonus_8c.html',1,'']]]
 ];

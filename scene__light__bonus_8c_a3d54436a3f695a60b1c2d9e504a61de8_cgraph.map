@@ -30,7 +30,7 @@
 <area shape="rect" id="node23" href="$hit__manager_8h.html#a55af5b9bdf1ed07d3128dd3e15dd3e6b" title="Checks if cylinder is not blocked by another object." alt="" coords="1155,991,1257,1018"/>
 <area shape="rect" id="node24" href="$utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa" title="Determines if value is surrounded by the interval." alt="" coords="1331,738,1433,764"/>
 <area shape="rect" id="node27" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="1156,535,1256,562"/>
-<area shape="rect" id="node29" href="$utils_8h.html#ae65513c75ce8a8538c22393e0af3ab1f" title="Solves the given equation." alt="" coords="1169,636,1243,663"/>
+<area shape="rect" id="node29" href="$utils_8h.html#a90ba8fcafcfab2af9f361cde331dbb06" title="Solves the given equation." alt="" coords="1169,636,1243,663"/>
 <area shape="rect" id="node28" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="1332,535,1432,562"/>
 <area shape="rect" id="node33" href="$utils_8h.html#a241b2b1d75c68c1eefd36b569901c9f9" title="Ensure that the returned float lies within the interval." alt="" coords="413,383,492,410"/>
 <area shape="rect" id="node35" href="$scene__shadow_8c.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="568,687,741,714"/>

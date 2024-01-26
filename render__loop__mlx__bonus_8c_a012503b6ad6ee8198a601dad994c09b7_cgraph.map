@@ -43,7 +43,7 @@
 <area shape="rect" id="node34" href="$utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa" title="Determines if value is surrounded by the interval." alt="" coords="2273,335,2376,361"/>
 <area shape="rect" id="node37" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="2099,436,2199,463"/>
 <area shape="rect" id="node38" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="2269,512,2380,539"/>
-<area shape="rect" id="node39" href="$utils_8h.html#ae65513c75ce8a8538c22393e0af3ab1f" title="Solves the given equation." alt="" coords="2112,487,2185,513"/>
+<area shape="rect" id="node39" href="$utils_8h.html#a90ba8fcafcfab2af9f361cde331dbb06" title="Solves the given equation." alt="" coords="2112,487,2185,513"/>
 <area shape="rect" id="node43" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="2275,639,2374,665"/>
 <area shape="rect" id="node46" href="$render_8h.html#a2c9085ad1ae8adcd3201a501a9a4dcde" title="Constructs a ray and shoots it through the pixel." alt="" coords="813,563,916,589"/>
 <area shape="rect" id="node48" href="$threads__bonus_8c.html#adef619e7d6d95dba7464efd3edac7ca0" title="Creates NUM_THREADS threads and calls routine with arg." alt="" coords="797,639,932,665"/>

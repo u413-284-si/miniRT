@@ -143,8 +143,8 @@ Functions</h2></td></tr>
 <tr class="separator:a6dd7e1d91f9eba773bbc84ee1768e27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add4de5ba94d3f8475d0a1c4ce8abd3aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__bonus_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa">ft_surrounds</a> (float x, <a class="el" href="structt__interval.html">t_interval</a> interval)</td></tr>
 <tr class="separator:add4de5ba94d3f8475d0a1c4ce8abd3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae65513c75ce8a8538c22393e0af3ab1f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__bonus_8h.html#ae65513c75ce8a8538c22393e0af3ab1f">ft_solve</a> (<a class="el" href="structt__equation.html">t_equation</a> *eq)</td></tr>
-<tr class="separator:ae65513c75ce8a8538c22393e0af3ab1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ba8fcafcfab2af9f361cde331dbb06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__bonus_8h.html#a90ba8fcafcfab2af9f361cde331dbb06">ft_solve</a> (<a class="el" href="structt__equation.html">t_equation</a> *eq)</td></tr>
+<tr class="separator:a90ba8fcafcfab2af9f361cde331dbb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a518be72ffbfd90cedf995e72dde0aff6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__bonus_8h.html#a518be72ffbfd90cedf995e72dde0aff6">ft_nearly_equal_flt</a> (float one, float two)</td></tr>
 <tr class="separator:a518be72ffbfd90cedf995e72dde0aff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2506d7ff542ccee53d1ff751d7ed217"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils__bonus_8h.html#ad2506d7ff542ccee53d1ff751d7ed217">ft_random_float</a> (void)</td></tr>
@@ -646,14 +646,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ae65513c75ce8a8538c22393e0af3ab1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae65513c75ce8a8538c22393e0af3ab1f">&#9670;&nbsp;</a></span>ft_solve()</h2>
+<a id="a90ba8fcafcfab2af9f361cde331dbb06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90ba8fcafcfab2af9f361cde331dbb06">&#9670;&nbsp;</a></span>ft_solve()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float ft_solve </td>
+          <td class="memname">bool ft_solve </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structt__equation.html">t_equation</a> *&#160;</td>
           <td class="paramname"><em>eq</em></td><td>)</td>
@@ -670,7 +670,9 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>float</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true Equation has real solution </dd>
+<dd>
+false Equation has no real solution</dd></dl>
 <p>If the parameter a = 0, the equation is linear and the sole solution is calculated and stored in d1. Otherwise the equation is quadratic and dependent on the discriminant real solutions exist or not:</p>
 <p>Discriminant &lt; 0: no real solution, return -1 Discriminant = 0: one solution, return 0 Discriminant &gt; 0: two solutions, return &gt; 0 </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -678,7 +680,9 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true Equation has real solution </dd>
+<dd>
+false Equation has no real solution </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="utils__math_8c_source.html#l00029">29</a> of file <a class="el" href="utils__math_8c_source.html">utils_math.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
@@ -687,14 +691,14 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (eq-&gt;<a class="code" href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a> == 0.0 &amp;&amp; eq-&gt;<a class="code" href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">b</a> != 0.0)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        eq-&gt;<a class="code" href="structt__equation.html#a3967641da3863c1f79e94be997341402">d1</a> = -eq-&gt;<a class="code" href="structt__equation.html#ae78103ab33f03590e84ff7bc735629d7">c</a> / eq-&gt;<a class="code" href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">b</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> (0);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    discriminant = eq-&gt;<a class="code" href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">b</a> * eq-&gt;<a class="code" href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">b</a> - 4.0 * eq-&gt;<a class="code" href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a> * eq-&gt;<a class="code" href="structt__equation.html#ae78103ab33f03590e84ff7bc735629d7">c</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (discriminant &lt; 0)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> (-1);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    eq-&gt;<a class="code" href="structt__equation.html#a3967641da3863c1f79e94be997341402">d1</a> = (-eq-&gt;<a class="code" href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">b</a> - sqrt(discriminant)) / (2.0 * eq-&gt;<a class="code" href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a>);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    eq-&gt;<a class="code" href="structt__equation.html#aac1777fc7cfc528c03b3e8c38f14e2b9">d2</a> = (-eq-&gt;<a class="code" href="structt__equation.html#a83fc1af92e29717b4513d121b0c72c7d">b</a> + sqrt(discriminant)) / (2.0 * eq-&gt;<a class="code" href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> (discriminant);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="ttc" id="astructt__equation_html_a3967641da3863c1f79e94be997341402"><div class="ttname"><a href="structt__equation.html#a3967641da3863c1f79e94be997341402">t_equation::d1</a></div><div class="ttdeci">float d1</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00063">utils.h:63</a></div></div>
 <div class="ttc" id="astructt__equation_html_a4aec1a5be9d9a4a394a2e49e9744286e"><div class="ttname"><a href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">t_equation::a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00060">utils.h:60</a></div></div>

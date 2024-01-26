@@ -38,7 +38,7 @@
 <area shape="rect" id="node29" href="$utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa" title="Determines if value is surrounded by the interval." alt="" coords="2229,360,2332,387"/>
 <area shape="rect" id="node32" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="2055,107,2155,133"/>
 <area shape="rect" id="node34" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="2225,56,2336,83"/>
-<area shape="rect" id="node35" href="$utils_8h.html#ae65513c75ce8a8538c22393e0af3ab1f" title="Solves the given equation." alt="" coords="2068,208,2141,235"/>
+<area shape="rect" id="node35" href="$utils_8h.html#a90ba8fcafcfab2af9f361cde331dbb06" title="Solves the given equation." alt="" coords="2068,208,2141,235"/>
 <area shape="rect" id="node36" href="$vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91" title="Calculate the scalar product of two vectors." alt="" coords="2056,259,2153,285"/>
 <area shape="rect" id="node33" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="2231,107,2331,133"/>
 <area shape="rect" id="node40" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="2231,5,2330,32"/>
