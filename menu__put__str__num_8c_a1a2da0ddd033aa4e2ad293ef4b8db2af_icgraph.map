@@ -21,7 +21,7 @@
 <area shape="rect" id="node39" href="$menu__put_8h.html#a1fd4ce789738bee4ae9d35045cb21a2a" title="Puts a unit vector on the screen." alt="" coords="767,563,889,589"/>
 <area shape="rect" id="node3" href="$render_8h.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="757,5,899,32"/>
 <area shape="rect" id="node5" href="$menu__put_8h.html#a86f02d860bd5b9a3795b20ba72f8e359" title="Puts camera info on the screen." alt="" coords="590,528,685,555"/>
-<area shape="rect" id="node8" href="$menu__put_8h.html#af86e62ade8b462c44092a160d876544e" title="Puts cone info on the screen." alt="" coords="597,680,678,707"/>
+<area shape="rect" id="node8" href="$menu__put__bonus_8h.html#af86e62ade8b462c44092a160d876544e" title="Puts cone info on the screen." alt="" coords="597,680,678,707"/>
 <area shape="rect" id="node11" href="$menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b" title="Puts cylinder info on the screen." alt="" coords="597,629,678,656"/>
 <area shape="rect" id="node12" href="$menu__put_8h.html#ab1aa03b80f8d7af17d305cb8b61c2b6b" title="Puts light info on the screen." alt="" coords="590,781,685,808"/>
 <area shape="rect" id="node14" href="$menu__put_8h.html#ac2a5de89e48dc4e914b474c744618e1f" title="Puts plane info on the screen." alt="" coords="598,579,677,605"/>

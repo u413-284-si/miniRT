@@ -104,7 +104,7 @@ Include dependency graph for menu_put_bonus.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu__put__bonus_8h__dep__incl.svg" width="400" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__put__bonus_8h__dep__incl.svg" width="592" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -116,6 +116,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8f946374b776bc149c5bc03048f6ed7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a364e2b6623c434fb926063c5e75699fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu__put__bonus_8h.html#a364e2b6623c434fb926063c5e75699fa">ft_menu_put_options</a> (<a class="el" href="structt__putinfo.html">t_putinfo</a> put, uint32_t options)</td></tr>
 <tr class="separator:a364e2b6623c434fb926063c5e75699fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86e62ade8b462c44092a160d876544e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu__put__bonus_8h.html#af86e62ade8b462c44092a160d876544e">ft_put_co</a> (<a class="el" href="structt__putinfo.html">t_putinfo</a> put, <a class="el" href="structt__cone.html">t_cone</a> co)</td></tr>
+<tr class="separator:af86e62ade8b462c44092a160d876544e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a364e2b6623c434fb926063c5e75699fa"></a>
@@ -197,6 +199,73 @@ Functions</h2></td></tr>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="menu__put__bonus_8h_a364e2b6623c434fb926063c5e75699fa_cgraph.svg" width="335" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af86e62ade8b462c44092a160d876544e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af86e62ade8b462c44092a160d876544e">&#9670;&nbsp;</a></span>ft_put_co()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_put_co </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__putinfo.html">t_putinfo</a>&#160;</td>
+          <td class="paramname"><em>put</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__cone.html">t_cone</a>&#160;</td>
+          <td class="paramname"><em>co</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Puts cone info on the screen. </p>
+<p>Writes the centre, axis, diameter, height and colour of the cone. Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">put</td><td><a class="el" href="structt__putinfo.html" title="Contains info about text for putting on the screen.">t_putinfo</a> struct. </td></tr>
+    <tr><td class="paramname">co</td><td>Cone to be put on screen. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="menu__put__hittable__bonus_8c_source.html#l00030">30</a> of file <a class="el" href="menu__put__hittable__bonus_8c_source.html">menu_put_hittable_bonus.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    put.<a class="code" href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">pos</a> = <a class="code" href="menu__put_8h.html#a250c5483eff2fa1f225b6a16dab45481">ft_put_3d_point</a>(<span class="stringliteral">&quot;Apex&quot;</span>, put, co.<a class="code" href="structt__cone.html#afcd43ca207d5e563d12249b1c2bf10f0">apex</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    put.<a class="code" href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">pos</a> = <a class="code" href="menu__put_8h.html#a1fd4ce789738bee4ae9d35045cb21a2a">ft_put_unit_vec</a>(<span class="stringliteral">&quot;Axis&quot;</span>, put, co.<a class="code" href="structt__cone.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    put.<a class="code" href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">pos</a> = <a class="code" href="menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03">ft_put_single_float_value</a>(<span class="stringliteral">&quot;Diameter&quot;</span>, put, co.<a class="code" href="structt__cone.html#a4788d82c901b9367dd5c0daff8a7616b">r</a> * 2);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    put.<a class="code" href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">pos</a> = <a class="code" href="menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03">ft_put_single_float_value</a>(<span class="stringliteral">&quot;Height&quot;</span>, put, co.<a class="code" href="structt__cone.html#a85f2f1bd58b3b44ffdf3881823393959">h</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    put.<a class="code" href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">pos</a> = <a class="code" href="menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7">ft_put_colour</a>(put, co.<a class="code" href="structt__cone.html#ade3aae23d19802dca4a29ac9065742a9">colour</a>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="ttc" id="amenu__put_8h_html_a05f3a769bd3fbea5c4d66ce5055701c7"><div class="ttname"><a href="menu__put_8h.html#a05f3a769bd3fbea5c4d66ce5055701c7">ft_put_colour</a></div><div class="ttdeci">t_vec2i ft_put_colour(t_putinfo put, t_colour colour)</div><div class="ttdoc">Puts a colour on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__utils_8c_source.html#l00067">menu_put_utils.c:67</a></div></div>
+<div class="ttc" id="amenu__put_8h_html_a1fd4ce789738bee4ae9d35045cb21a2a"><div class="ttname"><a href="menu__put_8h.html#a1fd4ce789738bee4ae9d35045cb21a2a">ft_put_unit_vec</a></div><div class="ttdeci">t_vec2i ft_put_unit_vec(char *name, t_putinfo put, t_vec3 vec)</div><div class="ttdoc">Puts a unit vector on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__utils_8c_source.html#l00049">menu_put_utils.c:49</a></div></div>
+<div class="ttc" id="amenu__put_8h_html_a250c5483eff2fa1f225b6a16dab45481"><div class="ttname"><a href="menu__put_8h.html#a250c5483eff2fa1f225b6a16dab45481">ft_put_3d_point</a></div><div class="ttdeci">t_vec2i ft_put_3d_point(char *name, t_putinfo put, t_vec3 point)</div><div class="ttdoc">Puts a 3D point on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__utils_8c_source.html#l00031">menu_put_utils.c:31</a></div></div>
+<div class="ttc" id="amenu__put_8h_html_a46110b7c3be87e212dcfd9105fb4df03"><div class="ttname"><a href="menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03">ft_put_single_float_value</a></div><div class="ttdeci">t_vec2i ft_put_single_float_value(char *name, t_putinfo put, float value)</div><div class="ttdoc">Puts a single float value on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__utils_8c_source.html#l00094">menu_put_utils.c:94</a></div></div>
+<div class="ttc" id="astructt__cone_html_a4788d82c901b9367dd5c0daff8a7616b"><div class="ttname"><a href="structt__cone.html#a4788d82c901b9367dd5c0daff8a7616b">t_cone::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00110">entities_bonus.h:110</a></div></div>
+<div class="ttc" id="astructt__cone_html_a7f4ed5c02961988cdae75eb415b617a6"><div class="ttname"><a href="structt__cone.html#a7f4ed5c02961988cdae75eb415b617a6">t_cone::axis</a></div><div class="ttdeci">t_vec3 axis</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00109">entities_bonus.h:109</a></div></div>
+<div class="ttc" id="astructt__cone_html_a85f2f1bd58b3b44ffdf3881823393959"><div class="ttname"><a href="structt__cone.html#a85f2f1bd58b3b44ffdf3881823393959">t_cone::h</a></div><div class="ttdeci">float h</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00111">entities_bonus.h:111</a></div></div>
+<div class="ttc" id="astructt__cone_html_ade3aae23d19802dca4a29ac9065742a9"><div class="ttname"><a href="structt__cone.html#ade3aae23d19802dca4a29ac9065742a9">t_cone::colour</a></div><div class="ttdeci">t_colour colour</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00113">entities_bonus.h:113</a></div></div>
+<div class="ttc" id="astructt__cone_html_afcd43ca207d5e563d12249b1c2bf10f0"><div class="ttname"><a href="structt__cone.html#afcd43ca207d5e563d12249b1c2bf10f0">t_cone::apex</a></div><div class="ttdeci">t_vec3 apex</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00107">entities_bonus.h:107</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__put__bonus_8h_af86e62ade8b462c44092a160d876544e_cgraph.svg" width="555" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__put__bonus_8h_af86e62ade8b462c44092a160d876544e_icgraph.svg" width="634" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

@@ -1,7 +1,7 @@
 <map id="ft_put_3d_point" name="ft_put_3d_point">
 <area shape="rect" id="node1" title="Puts a 3D point on the screen." alt="" coords="708,132,831,159"/>
 <area shape="rect" id="node2" href="$menu__put_8h.html#a86f02d860bd5b9a3795b20ba72f8e359" title="Puts camera info on the screen." alt="" coords="565,5,660,32"/>
-<area shape="rect" id="node5" href="$menu__put_8h.html#af86e62ade8b462c44092a160d876544e" title="Puts cone info on the screen." alt="" coords="572,56,653,83"/>
+<area shape="rect" id="node5" href="$menu__put__bonus_8h.html#af86e62ade8b462c44092a160d876544e" title="Puts cone info on the screen." alt="" coords="572,56,653,83"/>
 <area shape="rect" id="node8" href="$menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b" title="Puts cylinder info on the screen." alt="" coords="572,107,653,133"/>
 <area shape="rect" id="node9" href="$menu__put_8h.html#ab1aa03b80f8d7af17d305cb8b61c2b6b" title="Puts light info on the screen." alt="" coords="565,259,660,285"/>
 <area shape="rect" id="node11" href="$menu__put_8h.html#ac2a5de89e48dc4e914b474c744618e1f" title="Puts plane info on the screen." alt="" coords="573,157,652,184"/>
