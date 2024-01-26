@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:46:04 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/24 10:57:09 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 14:17:02 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,9 +128,10 @@ bool			ft_surrounds(float x, t_interval interval);
  * Discriminant > 0: two solutions, return > 0
  * Two solutions are stored in d1 and d2.
  * @param eq 		Equation to solve
- * @return float
+ * @return true		Equation has real solution
+ * @return false	Equation has no real solution
  */
-float			ft_solve(t_equation *eq);
+bool			ft_solve(t_equation *eq);
 
 /**
  * @brief Checks if two floats are (almost) equal

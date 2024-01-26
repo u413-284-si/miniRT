@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:48:18 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/23 15:32:22 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 14:15:13 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,21 @@ float	ft_radian_to_degree(float radians)
 	return (radians * DEG);
 }
 
-float	ft_solve(t_equation *eq)
+bool	ft_solve(t_equation *eq)
 {
 	float	discriminant;
 
 	if (eq->a == 0.0 && eq->b != 0.0)
 	{
 		eq->d1 = -eq->c / eq->b;
-		return (0);
+		return (true);
 	}
 	discriminant = eq->b * eq->b - 4.0 * eq->a * eq->c;
 	if (discriminant < 0)
-		return (-1);
+		return (false);
 	eq->d1 = (-eq->b - sqrt(discriminant)) / (2.0 * eq->a);
 	eq->d2 = (-eq->b + sqrt(discriminant)) / (2.0 * eq->a);
-	return (discriminant);
+	return (true);
 }
 
 bool	ft_nearly_equal_flt(float one, float two)
