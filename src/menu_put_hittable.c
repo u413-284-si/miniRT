@@ -6,13 +6,14 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:55:32 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 12:02:23 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 12:26:08 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
 
 #ifndef IS_BONUS
+
 void	ft_put_hittable(t_putinfo put, t_hittable hittable, int total)
 {
 	put.pos = ft_put_id(put, hittable.id, total);

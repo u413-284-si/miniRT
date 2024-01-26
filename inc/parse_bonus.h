@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 12:17:42 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 12:27:13 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_err	ft_check_lines_bonus(char **lines, int *lsrc_c, int *total);
 
 // import from parse.h
 void	ft_parse_lines(char **lines, t_entities *scene, t_cam *cam,
-				t_vec2i *win_size);
+			t_vec2i *win_size);
 
 // parse.c
 

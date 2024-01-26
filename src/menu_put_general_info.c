@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_general_info.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:54:31 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/25 00:31:58 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:25:48 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ t_vec2i	ft_put_mode(t_putinfo put, uint32_t options)
 }
 
 #ifndef IS_BONUS
+
 t_vec2i	ft_put_type(t_putinfo put, t_type type)
 {
 	ft_put_str(put, "Type:");

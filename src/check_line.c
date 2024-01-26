@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_line.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:27:34 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 15:12:17 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:25:33 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ bool	ft_isvalid_rgb_block(char **line)
 	if (!ft_isvalid_int(line, 0, 255, true))
 		return (false);
 	(*line)++;
-	if (!ft_isvalid_int(line,0, 255, true))
+	if (!ft_isvalid_int(line, 0, 255, true))
 		return (false);
 	(*line)++;
 	if (!ft_isvalid_int(line, 0, 255, false))

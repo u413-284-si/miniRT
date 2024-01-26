@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:31:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 12:20:21 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 12:27:22 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -384,7 +384,6 @@ t_vec2i	ft_put_ctrl_cy(t_putinfo put);
  * @return t_vec2i	Next position of text.
  */
 t_vec2i	ft_put_ctrl_co(t_putinfo put);
-
 
 // menu_put_cam_light_ctrl.c
 

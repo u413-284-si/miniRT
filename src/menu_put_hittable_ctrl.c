@@ -6,13 +6,14 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:09:14 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 16:57:40 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 12:25:18 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "menu_put.h"
 
 #ifndef IS_BONUS
+
 t_vec2i	ft_put_ctrl_hittable(t_putinfo put, t_type type)
 {
 	put.pos = ft_put_str_and_advance(put, "Controls");

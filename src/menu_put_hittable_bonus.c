@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:49:29 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/26 12:19:47 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 12:25:59 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	ft_put_hittable(t_putinfo put, t_hittable hittable, int total)
 		ft_put_co(put, hittable.params.co);
 }
 
-
 void	ft_put_co(t_putinfo put, t_cone co)
 {
 	put.pos = ft_put_3d_point("Apex", put, co.apex);
@@ -35,4 +34,3 @@ void	ft_put_co(t_putinfo put, t_cone co)
 	put.pos = ft_put_single_float_value("Height", put, co.h);
 	put.pos = ft_put_colour(put, co.colour);
 }
-

@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:58:50 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/22 17:00:02 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 12:25:42 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,3 @@ t_vec2i	ft_put_ctrl_co(t_putinfo put)
 	put.pos = ft_put_ctrl_change_ent(put, "Object");
 	return (put.pos);
 }
-

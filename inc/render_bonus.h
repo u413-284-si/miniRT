@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 12:13:30 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 12:27:00 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -208,7 +208,7 @@ t_err		ft_init_image(t_mlx_ptrs *mlx_ptrs, t_vec2i size);
  * @param mlx_ptr	Mlx pointer.
  * @return t_vec2i	Window size.
  */
-t_vec2i	ft_check_screen_size(void *mlx_ptr, t_vec2i win_size);
+t_vec2i		ft_check_screen_size(void *mlx_ptr, t_vec2i win_size);
 
 // render_loop_mlx_bonus.c
 

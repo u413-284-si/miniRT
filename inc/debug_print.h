@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   debug_print.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 11:26:06 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/24 10:59:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:26:39 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_H
-# define PRINT_H
+#ifndef DEBUG_PRINT_H
+# define DEBUG_PRINT_H
 
 /* ====== LIBRARIES ====== */
 
