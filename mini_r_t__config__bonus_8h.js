@@ -6,6 +6,7 @@ var mini_r_t__config__bonus_8h =
     [ "CHECKER_SCALE", "mini_r_t__config__bonus_8h.html#adcb94ba4819975129c350098b2fdf389", null ],
     [ "CONE_MAX", "mini_r_t__config__bonus_8h.html#a72b2392643a38d634bb689198208959f", null ],
     [ "CYLINDER_MAX", "mini_r_t__config__bonus_8h.html#a6fddccf2e9aec80f8688b9653a52ccb1", null ],
+    [ "DARK_MODERATE_CYAN", "mini_r_t__config__bonus_8h.html#afd31954fa2713a057b80262b2ebea325", null ],
     [ "FLOAT_MAX", "mini_r_t__config__bonus_8h.html#a2124ca619b2968b0cc8429e2a7036869", null ],
     [ "FLOAT_MIN", "mini_r_t__config__bonus_8h.html#af5950268eabe03299763ca25bc35d33d", null ],
     [ "INC_HIGH", "mini_r_t__config__bonus_8h.html#a54ec76664820875cac178b73f9bb1c8e", null ],
@@ -23,6 +24,7 @@ var mini_r_t__config__bonus_8h =
     [ "REFLECTION_MAX", "mini_r_t__config__bonus_8h.html#a387d9d8c183953f922357e446fc3545a", null ],
     [ "SAMPLE_SIZE", "mini_r_t__config__bonus_8h.html#ae25e0da7cdb20c758a56dc6aece92ba7", null ],
     [ "SPHERE_MAX", "mini_r_t__config__bonus_8h.html#a57075825dcedf2cbc21ae369e0b85ed2", null ],
+    [ "VERY_LIGHT_GRAY", "mini_r_t__config__bonus_8h.html#a25b466e9dc23ec43cc5721c8d3dddf6c", null ],
     [ "WIN_SIZE_X", "mini_r_t__config__bonus_8h.html#a6e1ad85c506456c5e54b5165173315b6", null ],
     [ "WIN_SIZE_Y", "mini_r_t__config__bonus_8h.html#a0c212361b1388494c98b2c35db58de19", null ]
 ];

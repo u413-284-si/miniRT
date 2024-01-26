@@ -32,8 +32,8 @@ var NAVTREEINDEX1 =
 "globals_enum.html":[1,1,2],
 "globals_eval.html":[1,1,3],
 "globals_f.html":[1,1,0,5],
-"globals_func.html":[1,1,1],
 "globals_func.html":[1,1,1,0],
+"globals_func.html":[1,1,1],
 "globals_func_m.html":[1,1,1,1],
 "globals_g.html":[1,1,0,6],
 "globals_i.html":[1,1,0,7],
@@ -46,9 +46,10 @@ var NAVTREEINDEX1 =
 "globals_s.html":[1,1,0,14],
 "globals_t.html":[1,1,0,15],
 "globals_u.html":[1,1,0,16],
-"globals_w.html":[1,1,0,17],
-"globals_x.html":[1,1,0,18],
-"globals_y.html":[1,1,0,19],
+"globals_v.html":[1,1,0,17],
+"globals_w.html":[1,1,0,18],
+"globals_x.html":[1,1,0,19],
+"globals_y.html":[1,1,0,20],
 "hit_8c.html":[1,0,2,22],
 "hit_8c.html#a9d5972226064b0a4d0e1359d9230abec":[1,0,2,22,0],
 "hit_8c.html#aa5acefb1538a700dc595870ad630f83d":[1,0,2,22,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "menu__put__general__info_8c_source.html":[1,0,2,36],
 "menu__put__general__info__bonus_8c.html":[1,0,2,37],
 "menu__put__general__info__bonus_8c.html#a8d53c0c28e59d4db8e6bb03ee433f724":[1,0,2,37,0],
-"menu__put__general__info__bonus_8c_source.html":[1,0,2,37],
-"menu__put__hittable_8c.html":[1,0,2,38]
+"menu__put__general__info__bonus_8c_source.html":[1,0,2,37]
 };
