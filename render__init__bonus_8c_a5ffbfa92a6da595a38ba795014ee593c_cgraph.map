@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$camera_8h.html#a283b142012bbcea27c39f49e270d8780" title="Initializes camera parameters." alt="" coords="175,148,270,175"/>
 <area shape="rect" id="node11" href="$error__syscall_8h.html#a1ab50ff4af961d85a53bf12a8f398ba3" title="Wrapper function for malloc() to print errno." alt="" coords="375,224,481,251"/>
 <area shape="rect" id="node13" href="$render_8h.html#a164dea32598176b42c81ea3ae7946387" title="Initializes the mlx_ptrs struct." alt="" coords="161,325,284,352"/>
-<area shape="rect" id="node20" href="$render__menu_8h.html#a75e05a690430becef1c647f119c01657" title=" " alt="" coords="171,376,274,403"/>
+<area shape="rect" id="node20" href="$render_8h.html#a75e05a690430becef1c647f119c01657" title="Initializes the render menu." alt="" coords="171,376,274,403"/>
 <area shape="rect" id="node21" href="$render__bit__field_8h.html#ab984d9cbc7c648ef4481b9158b27da30" title="Sets bit in bit field." alt="" coords="169,427,276,453"/>
 <area shape="rect" id="node3" href="$camera_8c.html#a02ed3f7206927a02c44eab5f5aba26e1" title="Calculates basis vectors u, v, w." alt="" coords="332,173,524,200"/>
 <area shape="rect" id="node6" href="$camera_8c.html#a525b3073d8f263afa7d81f70fa4b491d" title="Calculates all pixel positions in pixel grid." alt="" coords="350,123,506,149"/>

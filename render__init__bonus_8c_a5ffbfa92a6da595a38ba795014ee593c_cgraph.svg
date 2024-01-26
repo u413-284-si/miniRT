@@ -111,7 +111,7 @@ var sectionId = 'dynsection-1';
 <!-- Node20 -->
 <g id="node20" class="node">
 <title>Node20</title>
-<g id="a_node20"><a xlink:href="render__menu_8h.html#a75e05a690430becef1c647f119c01657" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="render_8h.html#a75e05a690430becef1c647f119c01657" target="_top" xlink:title="Initializes the render menu.">
 <polygon fill="none" stroke="black" points="124.5,-76.5 124.5,-95.5 201.5,-95.5 201.5,-76.5 124.5,-76.5"/>
 <text text-anchor="middle" x="163" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_menu_init</text>
 </a>

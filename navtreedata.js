@@ -49,10 +49,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "error__syscall_8c_source.html",
-"menu__put__cam__light__ctrl_8c_source.html",
-"render_8h.html#a5d187c5314483276ba15560dcf620e39",
-"render__keyhook__utils_8c.html#a7b262237fcbe352cb4ef79235666956b",
-"uniont__shape.html#adc9375daac853aada5acdd08f407adf0"
+"menu__put__hittable_8c.html#a8fb9ef8bf3aa98d9125937611f738a9b",
+"render_8h.html#a8b0cab63a8053d366bbefead351d039a",
+"render__loop__mlx_8c_source.html",
+"utils_8h.html#a536e48026a77f8365359a33a3e0eb726"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -10,7 +10,7 @@
 <area shape="rect" id="node15" href="$structt__sphere.html" title="Represents a sphere." alt="" coords="757,139,835,165"/>
 <area shape="rect" id="node16" href="$structt__cylinder.html" title="Represents a cylinder." alt="" coords="646,139,733,165"/>
 <area shape="rect" id="node17" href="$structt__cone.html" title="Represents a cone." alt="" coords="966,139,1031,165"/>
-<area shape="rect" id="node5" href="$structt__menu.html" title=" " alt="" coords="1246,509,1317,536"/>
+<area shape="rect" id="node5" href="$structt__menu.html" title="Menu struct." alt="" coords="1246,509,1317,536"/>
 <area shape="rect" id="node7" href="$structt__vec2f.html" title="2D vector with float." alt="" coords="255,301,326,328"/>
 <area shape="rect" id="node8" href="$structt__pixel__grid.html" title="Pixel grid is a virtual grid of equispaced pixels in the viewport." alt="" coords="425,220,522,247"/>
 <area shape="rect" id="node9" href="$structt__vec3.html" title="Represents a tridimensional vector." alt="" coords="509,5,574,32"/>

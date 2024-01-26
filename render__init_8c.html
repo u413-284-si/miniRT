@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiniRT: src/menu_init.c File Reference</title>
+<title>MiniRT: src/render_init.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('menu__init_8c.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('render__init_8c.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,22 +91,22 @@ $(document).ready(function(){initNavTree('menu__init_8c.html',''); initResizable
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">menu_init.c File Reference</div>  </div>
+<div class="title">render_init.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="render__menu_8h_source.html">render_menu.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="render_8h_source.html">render.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for menu_init.c:</div>
+Include dependency graph for render_init.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu__init_8c__incl.svg" width="278" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__init_8c__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div>
-<p><a href="menu__init_8c_source.html">Go to the source code of this file.</a></p>
+<p><a href="render__init_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a75e05a690430becef1c647f119c01657"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu__init_8c.html#a75e05a690430becef1c647f119c01657">ft_menu_init</a> (<a class="el" href="structt__menu.html">t_menu</a> *menu, uint8_t alpha, uint32_t colour, uint32_t font_col)</td></tr>
+<tr class="memitem:a75e05a690430becef1c647f119c01657"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render__init_8c.html#a75e05a690430becef1c647f119c01657">ft_menu_init</a> (<a class="el" href="structt__menu.html">t_menu</a> *menu, uint8_t alpha, uint32_t colour, uint32_t font_col)</td></tr>
 <tr class="separator:a75e05a690430becef1c647f119c01657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -148,21 +148,32 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="menu__init_8c_source.html#l00015">15</a> of file <a class="el" href="menu__init_8c_source.html">menu_init.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    menu-&gt;<a class="code" href="structt__menu.html#ad48d2a429fd287bcb84cb09cab666af5">inv_alpha</a> = 255 - alpha;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    menu-&gt;<a class="code" href="structt__menu.html#ac91b2b11ae96c1a44e8a2fad473771c7">rb</a> = (colour &amp; 0xFF00FF) * alpha;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    menu-&gt;<a class="code" href="structt__menu.html#a1fab8d68d051eca3d118d5408e1200ca">g</a> = (colour &amp; 0x00FF00) * alpha;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    menu-&gt;<a class="code" href="structt__menu.html#afb5f84f687a6d9352d91b4ec96ff6c98">font_col</a> = font_col;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="ttc" id="astructt__menu_html_a1fab8d68d051eca3d118d5408e1200ca"><div class="ttname"><a href="structt__menu.html#a1fab8d68d051eca3d118d5408e1200ca">t_menu::g</a></div><div class="ttdeci">uint32_t g</div><div class="ttdef"><b>Definition:</b> <a href="render__menu_8h_source.html#l00032">render_menu.h:32</a></div></div>
-<div class="ttc" id="astructt__menu_html_ac91b2b11ae96c1a44e8a2fad473771c7"><div class="ttname"><a href="structt__menu.html#ac91b2b11ae96c1a44e8a2fad473771c7">t_menu::rb</a></div><div class="ttdeci">uint32_t rb</div><div class="ttdef"><b>Definition:</b> <a href="render__menu_8h_source.html#l00031">render_menu.h:31</a></div></div>
-<div class="ttc" id="astructt__menu_html_ad48d2a429fd287bcb84cb09cab666af5"><div class="ttname"><a href="structt__menu.html#ad48d2a429fd287bcb84cb09cab666af5">t_menu::inv_alpha</a></div><div class="ttdeci">uint8_t inv_alpha</div><div class="ttdef"><b>Definition:</b> <a href="render__menu_8h_source.html#l00030">render_menu.h:30</a></div></div>
-<div class="ttc" id="astructt__menu_html_afb5f84f687a6d9352d91b4ec96ff6c98"><div class="ttname"><a href="structt__menu.html#afb5f84f687a6d9352d91b4ec96ff6c98">t_menu::font_col</a></div><div class="ttdeci">uint32_t font_col</div><div class="ttdef"><b>Definition:</b> <a href="render__menu_8h_source.html#l00033">render_menu.h:33</a></div></div>
+<p>Initializes the render menu. </p>
+<p>Sets the background and text colour. Also pre-calculates the RB and G colour mixes. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">menu</td><td>Pointer to menu struct </td></tr>
+    <tr><td class="paramname">alpha</td><td>Transparency for menu </td></tr>
+    <tr><td class="paramname">colour</td><td>Background colour </td></tr>
+    <tr><td class="paramname">font_col</td><td>Text colour </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="render__init_8c_source.html#l00033">33</a> of file <a class="el" href="render__init_8c_source.html">render_init.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    menu-&gt;<a class="code" href="structt__menu.html#ad48d2a429fd287bcb84cb09cab666af5">inv_alpha</a> = 255 - alpha;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    menu-&gt;<a class="code" href="structt__menu.html#ac91b2b11ae96c1a44e8a2fad473771c7">rb</a> = (colour &amp; 0xFF00FF) * alpha;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    menu-&gt;<a class="code" href="structt__menu.html#a1fab8d68d051eca3d118d5408e1200ca">g</a> = (colour &amp; 0x00FF00) * alpha;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    menu-&gt;<a class="code" href="structt__menu.html#afb5f84f687a6d9352d91b4ec96ff6c98">font_col</a> = font_col;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="ttc" id="astructt__menu_html_a1fab8d68d051eca3d118d5408e1200ca"><div class="ttname"><a href="structt__menu.html#a1fab8d68d051eca3d118d5408e1200ca">t_menu::g</a></div><div class="ttdeci">uint32_t g</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00116">render.h:116</a></div></div>
+<div class="ttc" id="astructt__menu_html_ac91b2b11ae96c1a44e8a2fad473771c7"><div class="ttname"><a href="structt__menu.html#ac91b2b11ae96c1a44e8a2fad473771c7">t_menu::rb</a></div><div class="ttdeci">uint32_t rb</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00115">render.h:115</a></div></div>
+<div class="ttc" id="astructt__menu_html_ad48d2a429fd287bcb84cb09cab666af5"><div class="ttname"><a href="structt__menu.html#ad48d2a429fd287bcb84cb09cab666af5">t_menu::inv_alpha</a></div><div class="ttdeci">uint8_t inv_alpha</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00114">render.h:114</a></div></div>
+<div class="ttc" id="astructt__menu_html_afb5f84f687a6d9352d91b4ec96ff6c98"><div class="ttname"><a href="structt__menu.html#afb5f84f687a6d9352d91b4ec96ff6c98">t_menu::font_col</a></div><div class="ttdeci">uint32_t font_col</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00117">render.h:117</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu__init_8c_a75e05a690430becef1c647f119c01657_icgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="render__init_8c_a75e05a690430becef1c647f119c01657_icgraph.svg" width="372" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -173,7 +184,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="menu__init_8c.html">menu_init.c</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="render__init_8c.html">render_init.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
