@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/19 00:19:48 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 12:04:27 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 
 // Home-grown libs
 # include "ft_print.h"
-# include "init.h"
 # include "camera.h"
 
 # if IS_BONUS
