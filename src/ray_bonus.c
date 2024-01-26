@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray_bonus.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:20 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/23 18:32:17 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:45:55 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ t_colour	ft_ray_colour(t_ray ray, t_entities scene)
 		ft_enlighten(&ray_colour, rec, scene);
 		return (ray_colour);
 	}
-	return (ft_background_colour(ray));
+	return ((t_colour){0});
 }
 
-t_colour	ft_background_colour(t_ray ray)
+/* t_colour	ft_background_colour(t_ray ray)
 {
 	t_vec3		unit_direction;
 	float		a;
@@ -65,4 +65,4 @@ t_colour	ft_background_colour(t_ray ray)
 	ray_colour.g = (1.0 - a) * white.g + a * blue.g;
 	ray_colour.b = (1.0 - a) * white.b + a * blue.b;
 	return (ray_colour);
-}
+} */
