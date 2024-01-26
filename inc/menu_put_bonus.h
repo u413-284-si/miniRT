@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 14:51:20 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/21 23:50:28 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:20:41 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,15 @@ t_vec2i	ft_put_time(t_putinfo put, uint64_t last_render_time, bool show_fps);
  * @param options	Options bit field.
  */
 void	ft_menu_put_options(t_putinfo put, uint32_t options);
+
+/**
+  * @brief Puts cone info on the screen.
+ *
+ * Writes the centre, axis, diameter, height and colour of the cone.
+ * Separated by Y_NEXT_LINE and Y_NEXT_LINE_BIG.
+ * @param put		t_putinfo struct.
+ * @param co		Cone to be put on screen.
+ */
+void	ft_put_co(t_putinfo put, t_cone co);
 
 #endif
