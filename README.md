@@ -1,4 +1,18 @@
 # miniRT
+
+<table align=center>
+	<thead>
+		<tr>
+			<th colspan=2>42 logo</th>
+		</tr>
+	</thead>
+  <tbody>
+      <tr>
+        <td><image src="renders/42.png"></image></td>
+      </tr>
+  </tbody>
+</table>
+
 You know you have been ray tracing too long when you wonder which RT God used.
 
 [LINK](https://u413-284-si.github.io/miniRT) to documentation
