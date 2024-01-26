@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   miniRT_config.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:13:48 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/25 00:34:08 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:59:56 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,14 @@
 # define INC_MID 0.5f
 # define INC_HIGH 1.0f
 
+// menu colours
+# define DARK_MODERATE_CYAN 0x3391A1
+# define VERY_LIGHT_GRAY	0xEBEBEB
+
 // menu parameters
 # define MENU_WIDTH 200
 # define MENU_OPACITY 100
-# define MENU_BACK 0x000000
-# define MENU_FONT 0xFFFFFF
+# define MENU_BACK DARK_MODERATE_CYAN
+# define MENU_FONT VERY_LIGHT_GRAY
 
 #endif
