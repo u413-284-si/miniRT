@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:25:28 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 14:45:19 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 18:07:05 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,9 @@ bool	ft_perror_convert(char *line, bool is_float)
 	ft_putstr_fd("Conversion failed here: -->", 2);
 	ft_putendl_fd(line, 2);
 	if (is_float)
-		ft_putendl_fd("Expected: float (1.2 or 3) with maximum of \
-15 digits", 2);
+		ft_putendl_fd(MSG_EXP_FLOAT, 2);
 	else
-		ft_putendl_fd("Expected: positive int (1 or 23) with maximum of \
-3 digits", 2);
+		ft_putendl_fd(MSG_EXP_INT, 2);
 	return (false);
 }
 
@@ -78,9 +76,9 @@ bool	ft_perror_separator(char *line, bool comma)
 	ft_putstr_fd("Separator not recognized: -->", 2);
 	ft_putendl_fd(line, 2);
 	if (comma)
-		ft_putendl_fd("Expected: comma ','", 2);
+		ft_putendl_fd(MSG_EXP_COMMA, 2);
 	else
-		ft_putendl_fd("Expected: space ' ' or zero terminator '\\0'", 2);
+		ft_putendl_fd(MSG_EXP_SPACE, 2);
 	return (false);
 }
 
@@ -89,6 +87,6 @@ t_type	ft_perror_end(char *line)
 	ft_putendl_fd("Error", 2);
 	ft_putstr_fd("Not recognized line end: -->", 2);
 	ft_putendl_fd(line, 2);
-	ft_putendl_fd("Expected: 0 to n space ' ' before zero terminator '\\0'", 2);
+	ft_putendl_fd(MSG_EXP_END, 2);
 	return (UNKNOWN);
 }

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 17:59:44 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 18:10:28 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,14 @@
 #  include "miniRT_config.h"
 # endif
 
-/* ====== TYPEDEFS ====== */
+/* ====== MACROS ====== */
+
+# define MSG_EXP_FLOAT "Expected: float (1.2 or 3) with maximum of 15 digits"
+# define MSG_EXP_INT "Expected: positive int (1 or 23) with maximum of 3 digits"
+# define MSG_EXP_COMMA "Expected: comma ','"
+# define MSG_EXP_SPACE "Expected: space ' ' or zero terminator '\\0'"
+# define MSG_EXP_END "Expected: 0 to n space ' ' before zero terminator '\\0'"
+# define MSG_EXP_UNIT "Expected: Not the zero vector {0,0,0}"
 
 /* ====== FUNCTIONS ====== */
 
@@ -331,6 +338,6 @@ void		ft_pwarning_not_unit(char *line);
  * @param msg		Error message to print.
  * @param number	Number to print.
  */
-void		ft_perror_line_number(int line_num);
+void		ft_pinfo_line_number(int line_num);
 
 #endif
