@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_entity_sp_pl_cy_bonus.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:34:38 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 17:05:15 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 13:17:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,10 @@ void	ft_parse_cylinder_bonus(char *line, t_hittable *cylinder, size_t id)
 	ft_parse_float(&line, &cylinder->reflectivity);
 	ft_parse_float(&line, &cylinder->checkered);
 	ft_parse_colour_block(&line, &params->colour);
-	ft_cy_calc_caps(params);
+	params->cap1 = ft_vec3_add(params->centre,
+			ft_vec3_scale(params->axis, -params->h * 0.5));
+	params->cap2 = ft_vec3_add(params->centre,
+			ft_vec3_scale(params->axis, params->h * 0.5));
 }
 
 void	ft_parse_cone_bonus(char *line, t_hittable *cone, size_t id)

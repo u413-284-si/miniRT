@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_text_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 12:35:59 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 18:25:48 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 00:18:51 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,20 @@ static t_vec2i	ft_put_header(t_putinfo put, uint32_t options,
 	return (put.pos);
 }
 
-static t_vec2i	ft_put_footer(t_putinfo put, bool show_ctrl, int img_height)
+static t_vec2i	ft_put_footer(t_putinfo put, uint32_t options, int img_height)
 {
-	if (show_ctrl == true)
-		put.pos.y = img_height - Y_MENU_BOTTOM_BIG;
-	else
-		put.pos.y = img_height - Y_MENU_BOTTOM_SMALL;
+	put.pos.y = img_height - Y_MENU_BOTTOM_SMALL;
 	put.pos.x -= 15;
 	put.pos = ft_put_str_and_advance(put, "-------General----------");
 	put.pos.x += 15;
-	if (show_ctrl == true)
-	{
-		put.pos = ft_put_str_and_advance(put, "Ctrl:  Switch mode");
-		put.pos = ft_put_str_and_advance(put, "U:     Change inc");
-		put.pos = ft_put_str_and_advance(put, "I:     Toggle menu");
-		put.pos = ft_put_str_and_advance(put, "O:     Toggle FPS");
-		put.pos = ft_put_str_and_advance(put, "P:     Print scene");
-		put.pos = ft_put_str_and_advance(put, "Shift: Show info");
-	}
+	if (!ft_option_isset(options, O_SHOW_OPTIONS))
+		put.pos = ft_put_str_and_advance(put, "O:     Show options");
 	else
+		put.pos = ft_put_str_and_advance(put, "O:     Hide options");
+	if (!ft_option_isset(options, O_SHOW_CTRL))
 		put.pos = ft_put_str_and_advance(put, "Shift: Show controls");
+	else
+		put.pos = ft_put_str_and_advance(put, "Shift: Hide controls");
 	put.pos = ft_put_str_and_advance(put, "ESC:   Exit");
 	return (put.pos);
 }
@@ -65,7 +59,9 @@ void	ft_menu_put_text(t_render *render)
 	mlx_put_image_to_window(render->mlx_ptrs.mlx_ptr,
 		render->mlx_ptrs.win_ptr, render->mlx_ptrs.veil.ptr, 0, 0);
 	put.pos = ft_put_header(put, render->options, render->last_render_time);
-	ft_put_main_page(put, render);
-	ft_put_footer(put, ft_option_isset(render->options, O_SHOW_CTRL),
-		render->mlx_ptrs.img.size.y);
+	if (ft_option_isset(render->options, O_SHOW_OPTIONS))
+		ft_menu_put_options(put, render->options);
+	else
+		ft_put_main_page(put, render);
+	ft_put_footer(put, render->options, render->mlx_ptrs.img.size.y);
 }

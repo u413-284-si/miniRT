@@ -6,72 +6,38 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:15:52 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/13 09:27:13 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/22 10:34:03 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "render.h"
+#include "render_bonus.h"
 
-static void	ft_change_inc(uint32_t *options)
+static void	ft_start_printing(t_render *render)
 {
-	if (ft_option_isset(*options, O_MANIP_LOW))
-	{
-		ft_option_clear(options, O_MANIP_LOW);
-		ft_option_set(options, O_MANIP_MID);
-	}
-	else if (ft_option_isset(*options, O_MANIP_MID))
-	{
-		ft_option_clear(options, O_MANIP_MID);
-		ft_option_set(options, O_MANIP_HIGH);
-	}
-	else if (ft_option_isset(*options, O_MANIP_HIGH))
-	{
-		ft_option_clear(options, O_MANIP_HIGH);
-		ft_option_set(options, O_MANIP_LOW);
-	}
+	ft_option_set(&render->options, O_IS_PRINTING);
+	ft_toggle_is_printing(render);
+	ft_spin_detached_thread(render, ft_output_threaded);
 }
 
-static void	ft_change_mode(uint32_t *options)
+static void	ft_toggle_anti_alias(t_render *render)
 {
-	if (ft_option_isset(*options, O_MODE_SCENE))
-	{
-		ft_option_clear(options, O_MODE_SCENE);
-		ft_option_set(options, O_MODE_LIGHT);
-	}
-	else if (ft_option_isset(*options, O_MODE_LIGHT))
-	{
-		ft_option_clear(options, O_MODE_LIGHT);
-		ft_option_set(options, O_MODE_CAM);
-	}
-	else if (ft_option_isset(*options, O_MODE_CAM))
-	{
-		ft_option_clear(options, O_MODE_CAM);
-		ft_option_set(options, O_MODE_SCENE);
-	}
+	ft_option_toggle(&render->options, O_IS_ANTI_ALIAS);
+	if (ft_option_isset(render->options, O_IS_ANTI_ALIAS))
+		render->sample_goal = SAMPLE_SIZE;
+	else
+		render->sample_goal = 1;
 }
 
-static void	ft_toggle_menu(uint32_t *options, const t_mlx_ptrs mlx_ptrs)
+void	ft_change_options_bonus(int key, t_render *render)
 {
-	ft_option_toggle(options, O_SHOW_MENU);
-	if (!ft_option_isset(*options, O_SHOW_MENU))
-	{
-		mlx_put_image_to_window(mlx_ptrs.mlx_ptr,
-			mlx_ptrs.win_ptr, mlx_ptrs.img.ptr, 0, 0);
-	}
-}
-
-void	ft_change_options(int key, t_render *render)
-{
-	if (key == XK_Escape)
-		mlx_loop_end(render->mlx_ptrs.mlx_ptr);
-	else if (key == XK_i)
-		ft_toggle_menu(&render->options, render->mlx_ptrs);
-	else if (key == XK_Control_L)
-		ft_change_mode(&render->options);
-	else if (key == XK_Shift_L)
-		ft_option_toggle(&render->options, O_SHOW_CTRL);
-	else if (key == XK_u)
-		ft_change_inc(&render->options);
-	else if (key == XK_o)
+	if (key == XK_o)
+		ft_option_toggle(&render->options, O_SHOW_OPTIONS);
+	else if (key == XK_p)
+		ft_start_printing(render);
+	else if (key == XK_j)
+		ft_option_toggle(&render->options, O_IS_THREADED);
+	else if (key == XK_k)
+		ft_toggle_anti_alias(render);
+	else if (key == XK_l)
 		ft_option_toggle(&render->options, O_SHOW_FPS);
 }

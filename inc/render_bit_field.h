@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:06:03 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 10:10:01 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/20 14:15:19 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,20 @@
 # include <stdint.h>
 # include <stdbool.h>
 
-# if IS_BONUS
-#  include "render_options_bonus.h"
-# else
-#  include "render_options.h"
-# endif
+/* ====== TYPEDEF ====== */
+
+typedef enum e_options
+{
+	O_MODE_SCENE = 1,
+	O_MODE_LIGHT = 2,
+	O_MODE_CAM = 3,
+	O_SCENE_CHANGED = 4,
+	O_SHOW_MENU = 5,
+	O_SHOW_CTRL = 6,
+	O_MANIP_LOW = 7,
+	O_MANIP_MID = 8,
+	O_MANIP_HIGH = 9
+}	t_options;
 
 /* ====== FUNCTIONS ====== */
 

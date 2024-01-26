@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:19:10 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 15:27:46 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 10:17:47 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ t_err	ft_init_mlx_ptrs(t_mlx_ptrs *mlx_ptrs, t_vec2i *win_size)
 	if (ft_err_mlx_new_window((void **)&mlx_ptrs->win_ptr,
 			mlx_ptrs->mlx_ptr, *win_size, "miniRT"))
 	{
-		ft_free_mlx(mlx_ptrs->mlx_ptr, NULL, NULL, NULL);
+		ft_free_mlx(mlx_ptrs);
 		return (ERROR);
 	}
 	if (ft_init_image(mlx_ptrs, *win_size))
 	{
-		ft_free_mlx(mlx_ptrs->mlx_ptr, mlx_ptrs->win_ptr, NULL, NULL);
+		ft_free_mlx(mlx_ptrs);
 		return (ERROR);
 	}
 	return (SUCCESS);

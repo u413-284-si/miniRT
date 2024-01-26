@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:39:35 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/17 13:30:59 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/23 15:27:35 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ bool	ft_hit_sphere(t_sphere sp, t_hitrecord *rec, t_interval ray_d)
 	sp_centre_ray = ft_vec3_sub(rec->ray.origin, sp.centre);
 	eq.a = ft_vec3_dot(rec->ray.direction, rec->ray.direction);
 	eq.b = 2.0 * ft_vec3_dot(rec->ray.direction, sp_centre_ray);
-	eq.c = ft_vec3_dot(sp_centre_ray, sp_centre_ray) - pow(sp.r, 2);
+	eq.c = ft_vec3_dot(sp_centre_ray, sp_centre_ray) - (sp.r * sp.r);
 	if (ft_solve(&eq) < 0)
 		return (false);
 	closest_d = eq.d1;

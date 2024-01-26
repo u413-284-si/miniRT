@@ -17,6 +17,10 @@
 		"menu_put_bonus.h": "c",
 		"menu_put.h": "c",
 		"render_bonus.h": "c",
-		"print.h": "c"
+		"print.h": "c",
+		"render.h": "c",
+		"render_bit_field.h": "c",
+		"render_options_bonus.h": "c",
+		"error_mlx.h": "c"
 	}
 }

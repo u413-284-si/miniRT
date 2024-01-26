@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_entity_sp_pl_cy.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:34:38 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 12:50:03 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/22 13:17:24 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,8 @@ void	ft_parse_cylinder(char *line, t_hittable *cylinder, size_t id)
 	params->r = params->r / 2.0;
 	ft_parse_float(&line, &params->h);
 	ft_parse_colour_block(&line, &params->colour);
-	ft_cy_calc_caps(params);
+	params->cap1 = ft_vec3_add(params->centre,
+			ft_vec3_scale(params->axis, -params->h * 0.5));
+	params->cap2 = ft_vec3_add(params->centre,
+			ft_vec3_scale(params->axis, params->h * 0.5));
 }

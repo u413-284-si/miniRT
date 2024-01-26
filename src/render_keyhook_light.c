@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 11:40:21 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/09 17:11:11 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/21 23:30:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,28 +30,8 @@ void	ft_manip_ambient(int key, t_light *ambient, float inc)
 		ft_keyhook_inc_dec(key, &ambient->ratio, 1.0, inc * 0.1);
 }
 
-void	ft_change_active_light(int key, t_entities *scene, int *active)
-{
-	if (*active == -1)
-		return ;
-	if (key == XK_n)
-	{
-		*active -= 1;
-		if (*active < 0)
-			*active = scene->lsrc_count;
-	}
-	if (key == XK_m)
-	{
-		*active += 1;
-		if (*active > scene->lsrc_count)
-			*active = 0;
-	}
-}
-
 void	ft_manip_light(int key, t_entities *scene, int *active, float inc)
 {
-	if (key == XK_n || key == XK_m)
-		return (ft_change_active_light(key, scene, active));
 	if (*active == 0)
 		ft_manip_ambient(key, &scene->ambient, inc);
 	else

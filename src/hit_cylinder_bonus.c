@@ -6,7 +6,7 @@
 /*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:38 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/19 12:50:26 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/23 15:30:18 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ bool	ft_cy_calc_pot_hits(t_cylinder cy, t_ray ray, float potential_hits[4])
 	dot_product_ray_axis = ft_vec3_dot(ray.direction, cy.axis);
 	dot_product_cap_axis = ft_vec3_dot(cap1_ray, cy.axis);
 	eq.a = ft_vec3_dot(ray.direction, ray.direction) - \
-		pow(dot_product_ray_axis, 2);
+		dot_product_ray_axis * dot_product_ray_axis;
 	eq.b = 2.0 * (ft_vec3_dot(ray.direction, cap1_ray) - \
 		(dot_product_ray_axis * dot_product_cap_axis));
 	eq.c = ft_vec3_dot(cap1_ray, cap1_ray) - \
-		pow(dot_product_cap_axis, 2) - pow(cy.r, 2);
+		dot_product_cap_axis * dot_product_cap_axis - cy.r * cy.r;
 	if (ft_solve(&eq) < 0)
 		return (false);
 	potential_hits[0] = eq.d1;

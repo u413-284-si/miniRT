@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 08:30:26 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/19 15:17:56 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/24 23:42:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ void	ft_mouse_hook_rot_cam(int x, int y, t_render *render)
 {
 	t_vec2f	delta;
 
-	delta.x = (render->mouse.last_pos.x - x) * 0.1;
-	delta.y = (render->mouse.last_pos.y - y) * 0.1;
+	delta.x = (render->mouse.last_pos.x - x) * 0.01;
+	delta.y = (render->mouse.last_pos.y - y) * 0.01;
 	if (delta.x != 0)
 		render->cam.direction = ft_vec3_rotate_y(render->cam.direction,
 				delta.x);
@@ -62,5 +62,6 @@ void	ft_mouse_hook_rot_cam(int x, int y, t_render *render)
 	render->mouse.last_pos.y = y;
 	ft_cam_calc_base_vectors(&render->cam);
 	ft_cam_calc_pixel_grid(&render->cam);
+	ft_cam_calc_pix_pos(&render->cam);
 	ft_option_set(&render->options, O_SCENE_CHANGED);
 }
