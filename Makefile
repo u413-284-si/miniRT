@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
+#    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/26 14:12:14 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/26 14:30:17 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -166,6 +166,7 @@ SRC_COMMON := 	camera_movement.c \
 				check_line.c \
 				check_rm_space.c \
 				cleanup.c \
+				colour.c \
 				debug_print_entity.c \
 				debug_print_struct.c \
 				error_msg_check2.c \
@@ -206,10 +207,9 @@ SRC_COMMON := 	camera_movement.c \
 				utils_math.c \
 				utils_quaternion.c \
 				vec3_arithmetics.c \
-				vec3_linalgebra.c 
+				vec3_linalgebra.c
 
-SRC_BASE := 	colour.c \
-				error_msg_check.c \
+SRC_BASE := 	error_msg_check.c \
 				hit.c \
 				hit_cylinder.c \
 				hit_plane.c \
@@ -226,7 +226,6 @@ SRC_BASE := 	colour.c \
 SRC_BONUS :=	check_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
 				check_win_size_bonus.c \
-				colour_bonus.c \
 				error_msg_check_bonus.c \
 				hit_bonus.c \
 				hit_cone_bonus.c \

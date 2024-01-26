@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/22 13:18:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 14:32:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,7 @@
 
 // Home-grown libs
 # include "vec3.h"
-
-# if IS_BONUS
-#  include "colour_bonus.h"
-# else
-#  include "colour.h"
-# endif
+# include "colour.h"
 
 /* ====== TYPEDEFS ====== */
 
