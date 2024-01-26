@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 11:40:11 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 18:00:58 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_err	ft_check_lines(char **lines, int *lsrc_c, int *total)
 			continue ;
 		if (type == UNKNOWN || ft_incr_ent_count(ent_count, type))
 		{
-			ft_perror_number("Line number [ignoring empty lines]", i - 1);
+			ft_perror_line_number(i - 1);
 			return (ERROR);
 		}
 	}

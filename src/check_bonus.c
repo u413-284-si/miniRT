@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 13:59:11 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 10:17:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 18:01:14 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_err	ft_check_lines_bonus(char **lines, int *lsrc_c, int *total)
 		if (type == UNKNOWN
 			|| ft_incr_ent_count_bonus(ent_count, type))
 		{
-			ft_perror_number("Line number [ignoring empty lines]", i - 1);
+			ft_perror_line_number(i - 1);
 			return (ERROR);
 		}
 	}

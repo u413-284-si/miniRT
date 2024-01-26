@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 14:37:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 17:59:44 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -323,5 +323,14 @@ bool		ft_perror_not_unit(char *line);
  * @param line		Line with position, where vector starts.
  */
 void		ft_pwarning_not_unit(char *line);
+
+/**
+ * @brief Print error message with a number
+ *
+ * The number gets enclosed with <>. *
+ * @param msg		Error message to print.
+ * @param number	Number to print.
+ */
+void		ft_perror_line_number(int line_num);
 
 #endif
