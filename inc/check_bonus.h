@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 15:10:29 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:17:29 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,16 +256,16 @@ t_type		ft_check_cylinder_bonus(char *line);
  * - the reflectivity value.
  * - whether it is checkered.
  * - R,G,B colors in range [0,255].
- * @param line
- * @return t_type
+ * @param line	Pointer to current line.
+ * @return t_type CONE on success, UNKNOWN if fail.
  */
 t_type		ft_check_cone_bonus(char *line);
 
 /**
  * @brief Checks if size line is correct.
  *
- * @param line
- * @return t_type
+ * @param line		Pointer to current line.
+ * @return t_type	SIZE on success, UNKNOWN if fail
  */
 t_type		ft_check_win_size(char *line);
 

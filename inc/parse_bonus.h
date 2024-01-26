@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
+/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:03:19 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 10:30:17 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 12:17:42 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -217,9 +217,9 @@ void	ft_parse_cylinder_bonus(char *line, t_hittable *cylinder, size_t id);
  * - whether it's checkered.
  * - R,G,B colors in range [0,255].
  * Also sets type and id.
- * @param line
- * @param cone
- * @param id
+ * @param line		Pointer to current line.
+ * @param cone		Struct where to save.
+ * @param id		Current shape id.
  */
 void	ft_parse_cone_bonus(char *line, t_hittable *cone, size_t id);
 
