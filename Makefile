@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/26 14:47:22 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/27 10:58:07 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -210,18 +210,18 @@ SRC_COMMON := 	camera_movement.c \
 				vec3_arithmetics.c \
 				vec3_linalgebra.c
 
-SRC_BASE := 	hit.c \
-				hit_cylinder.c \
-				hit_plane.c \
-				hit_sphere.c \
-				menu_put_text.c \
-				ray.c \
-				render_draw.c \
-				render_keyhook_press.c \
-				render_loop_mlx.c \
-				render_mouse.c \
-				scene_light.c \
-				utils_cylinder.c
+SRC_BASE := 	hit_base.c \
+				hit_cylinder_base.c \
+				hit_plane_base.c \
+				hit_sphere_base.c \
+				menu_put_text_base.c \
+				ray_base.c \
+				render_draw_base.c \
+				render_keyhook_press_base.c \
+				render_loop_mlx_base.c \
+				render_mouse_base.c \
+				scene_light_base.c \
+				utils_cylinder_base.c
 
 SRC_BONUS :=	check_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
