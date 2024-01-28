@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 15:52:34 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/28 15:54:50 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 17:48:34 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
  *
  * @return float
  */
-float			ft_random_float(void);
+float	ft_random_float(void);
 
 /**
  * @brief Return a random float within min and max
@@ -33,6 +33,6 @@ float			ft_random_float(void);
  * @param max 		Upper bounder
  * @return float
  */
-float			ft_random_float_within(float min, float max);
+float	ft_random_float_within(float min, float max);
 
 #endif

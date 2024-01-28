@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/28 15:41:58 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 17:40:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,9 @@ typedef struct s_cone
 /**
  * @brief Enumeration of all different entity types.
  *
- * @param COMMENT	Used for comments: line beginning with # is ignored.
- * @param UNKOWN	Used, if line not recognized, set to -1.
+ * @param WIN_SIZE	(-3) Used for window size: line beginning with R.
+ * @param COMMENT	(-2) Used for comments: line beginning with # is ignored.
+ * @param UNKNOWN	(-1) Used, if line not recognized, set to -1.
  * @param SUM_ENTS	Amounts to sum of all entity types.
  */
 typedef enum e_type
@@ -73,6 +74,7 @@ typedef enum e_type
  * @param sp	Union variable addressed as sphere.
  * @param pl	Union variable addressed as plane.
  * @param cy	Union variable addressed as cylinder.
+ * @param co	Union variable addressed as cone.
  */
 typedef union u_shape
 {
@@ -93,7 +95,7 @@ typedef union u_shape
  * 						(the higher, the smoother the surface appears)
  * @param reflectivity	Material property of point of intersection
  * 						on share of reflected light
- * @param Checkered		Indicates whether the hittable has a checker texture
+ * @param checkered		Indicates whether the hittable has a checker texture
  */
 typedef struct s_hittable
 {

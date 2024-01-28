@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 15:00:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/28 16:22:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 17:48:01 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,24 @@
 
 /* ====== TYPEDEFS ====== */
 
+/**
+ * @brief Bit field which keeps track of different options.
+ *
+ * @param O_MODE_SCENE		Active mode: Scene.
+ * @param O_MODE_LIGHT		Active mode: Light.
+ * @param O_MODE_CAM		Active mode: Camera.
+ * @param O_SCENE_CHANGED	Scene changed flag.
+ * @param O_SHOW_MENU		Show menu flag.
+ * @param O_SHOW_CTRL		Show controls flag.
+ * @param O_MANIP_LOW		Manipulation speed: Low.
+ * @param O_MANIP_MID		Manipulation speed: Medium.
+ * @param O_MANIP_HIGH		Manipulation speed: High.
+ * @param O_SHOW_FPS		Show FPS flag.
+ * @param O_IS_THREADED		Is threaded flag.
+ * @param O_IS_ANTI_ALIAS	Is anti-aliasing flag.
+ * @param O_SHOW_OPTIONS	Show options flag.
+ * @param O_IS_PRINTING		Is printing flag.
+ */
 typedef enum e_options
 {
 	O_MODE_SCENE = 1,
@@ -41,9 +59,20 @@ typedef enum e_options
 /**
  * @brief Overarching render struct.
  *
- * @param mlx_ptrs		mlx pointers struct.
- * @param cam			Camera struct.
- * @param scene			Scene struct.
+ * @param mlx_ptrs			mlx pointers struct.
+ * @param cam				Camera struct.
+ * @param scene				Scene struct.
+ * @param win_size			Window size.
+ * @param mouse				Mouse struct.
+ * @param menu				Menu struct.
+ * @param options			Bit field of options.
+ * @param active_hittable	Selected hittable entity.
+ * @param active_light		Selected light entity.
+ * @param last_render_time	Time delta for the last rendered frame.
+ * @param is_printing		Is printing flag.
+ * @param mut_print			Mutex for is_printing flag.
+ * @param sample_buffer		Sample buffer to store generated image samples.
+ * @param sample_goal		Amount of samples to generate.
  */
 typedef struct s_render
 {
