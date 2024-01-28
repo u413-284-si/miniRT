@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 12:13:22 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/28 15:29:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,120 +22,29 @@
 
 # include "libft.h"
 
-# include "error_mlx.h"
-# include "camera.h"
-# include "cleanup.h"
-# include "vec2.h"
+# include "render_struct.h"
 
 # if IS_BONUS
+#  include "render_struct_bonus.h"
 #  include "miniRT_config_bonus.h"
 #  include "ray_bonus.h"
-#  include "entities_bonus.h"
-#  include "render_bit_field_bonus.h"
 #  include "threads_bonus.h"
 #  include "utils_bonus.h"
 # else
 #  include "miniRT_config.h"
 #  include "ray.h"
-#  include "entities.h"
-#  include "render_bit_field.h"
 #  include "utils.h"
 # endif
+
+# include "render_bit_field.h"
+# include "cleanup.h"
+# include "error_mlx.h"
 
 /* ====== MACROS ========*/
 
 # define NUM_COLOURS 9
 # define NUM_RAINBOW_COLOURS 7
 
-/* ====== TYPEDEFS ====== */
-
-/**
- * @brief mlx img struct.
- *
- * @param ptr		Pointer to mlx img.
- * @param addr		Pointer to the char *buffer of the mlx img.
- * @param bpp		Bytes per pixel.
- * @param line_len	Line length.
- * @param endian	Endian.
- * @param bytes		Number of bytes per pixel.
- * @param size		Size of the img as int vector.
- */
-typedef struct s_img
-{
-	void	*ptr;
-	char	*addr;
-	int		bpp;
-	int		line_len;
-	int		endian;
-	int		bytes;
-	t_vec2i	size;
-}	t_img;
-
-/**
- * @brief mlx pointers struct.
- *
- * @param mlx_ptr	Pointer to mlx.
- * @param win_ptr	Pointer to mlx window.
- * @param img		mlx img struct for rendered image.
- * @param veil		mlx img struct for menu overlay.
- */
-typedef struct s_mlx_ptrs
-{
-	void	*mlx_ptr;
-	void	*win_ptr;
-	t_img	img;
-	t_img	veil;
-}	t_mlx_ptrs;
-
-/**
- * @brief Mouse struct.
- *
- * @param left		Left mouse button pressed flag.
- * @param right		Right mouse button pressed flag.
- * @param last_pos	Last mouse position.
- */
-typedef struct s_mouse
-{
-	bool	left;
-	bool	right;
-	t_vec2i	last_pos;
-}	t_mouse;
-
-/**
- * @brief Menu struct.
- *
- * @param inv_alpha		Inverse of the transparency value.
- * @param rb			Background colour channel R and B.
- * @param g				Background colour channel G.
- * @param font_col		Text colour.
- */
-typedef struct s_menu
-{
-	uint8_t		inv_alpha;
-	uint32_t	rb;
-	uint32_t	g;
-	uint32_t	font_col;
-}	t_menu;
-
-/**
- * @brief Overarching render struct.
- *
- * @param mlx_ptrs		mlx pointers struct.
- * @param cam			Camera struct.
- * @param scene			Scene struct.
- */
-typedef struct s_render
-{
-	t_mlx_ptrs	mlx_ptrs;
-	t_cam		cam;
-	t_entities	scene;
-	t_vec2i		win_size;
-	t_mouse		mouse;
-	t_menu		menu;
-	uint32_t	options;
-	int			active_hittable;
-	int			active_light;
-}	t_render;
 
 /**
  * @brief Enumeration of colour names.
@@ -171,9 +80,9 @@ t_err		ft_render_init(t_render *render);
 
 /**
  * @brief Initializes the render menu.
- * 
+ *
  * Sets the background and text colour. Also pre-calculates the RB and G colour
- * mixes. 
+ * mixes.
  * @param menu 		Pointer to menu struct
  * @param alpha 	Transparency for menu
  * @param colour 	Background colour
@@ -266,9 +175,9 @@ void		ft_put_pix_to_image(t_img *img, int x, int y, int color);
  * @param ray		Partly build Ray struct.
  * @param scene		Scene struct.
  * @param cam		Camera struct.
- * @return uint32_t	Colour of the pixel.
+ * @return t_colour	Colour of the pixel.
  */
-uint32_t	ft_shoot_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
+t_colour	ft_shoot_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam);
 
 /**
  * @brief Raytraces the scene to the mlx img.
@@ -333,14 +242,6 @@ void		ft_menu_put_text(t_render *render);
  * @return int		0 if successful, -1 if not.
  */
 int			ft_keyhook_press(int key, t_render *render);
-
-/**
- * @brief Branches to the corresponding manipulation function.
- *
- * @param key		Keycode of the pressed key.
- * @param render	Pointer to render struct.
- */
-void		ft_manip_scene(int key, t_render *render);
 
 // render_keyhook_options.c
 

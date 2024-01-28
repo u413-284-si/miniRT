@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_draw.c                                      :+:      :+:    :+:   */
+/*   render_draw_base.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:52:55 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 09:06:17 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 15:12:57 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,20 @@ void	ft_put_pix_to_image(t_img *img, int x, int y, int color)
 	}
 }
 
-uint32_t	ft_shoot_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
+t_colour	ft_shoot_ray(t_vec2i pos, t_ray ray, t_entities scene, t_cam cam)
 {
 	t_vec3		pixel_centre;
 
 	pixel_centre = cam.pix_cache[pos.y * cam.image.x + pos.x];
 	ray.direction = ft_vec3_norm(ft_vec3_sub(pixel_centre, ray.origin));
-	return (ft_convert_colour2int(ft_ray_colour(ray, scene)));
+	return (ft_ray_colour(ray, scene));
 }
 
 void	ft_raytrace_image(t_render *render)
 {
 	t_vec2i		pos;
 	t_ray		ray;
-	int			colour;
+	t_colour	colour;
 
 	ray.origin = render->cam.centre;
 	ray.d = 1.0;
@@ -54,7 +54,7 @@ void	ft_raytrace_image(t_render *render)
 		{
 			colour = ft_shoot_ray(pos, ray, render->scene, render->cam);
 			ft_put_pix_to_image(&render->mlx_ptrs.img, pos.x, \
-				pos.y, colour);
+				pos.y, ft_convert_colour2int(colour));
 		}
 	}
 }
