@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/28 15:59:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 16:24:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
 # include "render_struct_bonus.h"
 # include "miniRT_config_bonus.h"
 # include "ray_bonus.h"
-# include "entities_bonus.h"
+# include "manip_bonus.h"
+
 # include "threads_bonus.h"
 # include "time_bonus.h"
 # include "utils_random_bonus.h"
@@ -117,32 +118,6 @@ t_colour	ft_shoot_aa_ray(t_vec2i pos, t_ray ray, t_entities scene,
  * @param render	Pointer to render struct.
  */
 void		ft_add_raytrace_sample(t_render *render);
-
-// render_keyhook_options_bonus.c
-
-/**
- * @brief Handles bonus option keys.
- *
- * 'O': Show options.
- * 'P': Start printing.
- * 'J': Toggle threading.
- * 'K': Toggle anti-aliasing.
- * 'L': Toggle time unit.
- * @param key		Keycode of the pressed key.
- * @param render	Pointer to render struct.
- */
-void		ft_change_options_bonus(int key, t_render *render);
-
-// render_keyhook_hittable_bonus.c
-
-/**
- * @brief Manipulates the active cone.
- *
- * @param key	Keycode of the pressed key.
- * @param co	Pointer to cone struct.
- * @param inc	Increment value.
- */
-void		ft_manip_cone(int key, t_cone *co, float inc);
 
 // threads_alt_versions_bonus.c
 

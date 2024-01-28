@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 15:00:01 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/28 15:30:03 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 16:22:49 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 /* ====== LIBRARIES ====== */
 
 # include "render_struct.h"
+# include "entities_bonus.h"
 
 /* ====== TYPEDEFS ====== */
 
