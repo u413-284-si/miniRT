@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 16:14:05 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/28 16:19:12 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 17:50:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # if IS_BONUS
 #  include "render_struct_bonus.h"
 # else
-# 	include "render_struct.h"
+#  include "render_struct.h"
 # endif
 
 /* ====== MACROS ========*/
