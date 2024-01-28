@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/28 15:32:59 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 15:34:07 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@
 # include "render_struct_bonus.h"
 # include "miniRT_config_bonus.h"
 # include "ray_bonus.h"
-# include "utils_bonus.h"
-
+# include "entities_bonus.h"
 # include "threads_bonus.h"
 # include "time_bonus.h"
 
