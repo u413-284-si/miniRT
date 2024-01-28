@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/26 14:32:04 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 15:41:24 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,8 @@ typedef struct s_cylinder
 	t_vec3		cap2;
 }	t_cylinder;
 
+# ifndef IS_BONUS
+
 /**
  * @brief Enumeration of all different entity types.
  *
@@ -155,5 +157,6 @@ typedef struct s_entities
 	int			lsrc_count;
 	int			total;
 }	t_entities;
+# endif
 
 #endif

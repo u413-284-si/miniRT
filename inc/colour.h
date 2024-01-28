@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/26 14:25:32 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 15:57:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,7 @@
 # include <stdint.h>
 
 //home-grown libs
-# if IS_BONUS
-#  include "utils_bonus.h"
-# else
-#  include "utils.h"
-# endif
+# include "utils.h"
 
 /* ====== TYPEDEFS ====== */
 

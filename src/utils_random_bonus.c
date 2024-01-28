@@ -6,11 +6,11 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 20:20:40 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/20 14:30:42 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 15:55:33 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils_bonus.h"
+#include "utils_random_bonus.h"
 
 float	ft_random_float(void)
 {

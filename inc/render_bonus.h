@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/28 15:34:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 15:59:04 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include "entities_bonus.h"
 # include "threads_bonus.h"
 # include "time_bonus.h"
+# include "utils_random_bonus.h"
 
 /* ====== FUNCTIONS ====== */
 

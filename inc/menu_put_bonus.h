@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   menu_put_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 14:51:20 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 12:20:41 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/28 15:44:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 /* ====== LIBRARIES ====== */
 
 # include "menu_put.h"
+# include "render_bonus.h"
 
 /* ====== FUNCTIONS ====== */
 

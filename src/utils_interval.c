@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   utils_interval.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 15:52:42 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/19 00:20:23 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/28 15:55:11 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#if IS_BONUS
-# include "utils_bonus.h"
-#else
 # include "utils.h"
-#endif
 
 bool	ft_contains(float x, t_interval interval)
 {

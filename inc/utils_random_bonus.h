@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   miniRT.h                                           :+:      :+:    :+:   */
+/*   utils_random_bonus.h                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 14:58:45 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/28 15:46:53 by gwolf            ###   ########.fr       */
+/*   Created: 2024/01/28 15:52:34 by gwolf             #+#    #+#             */
+/*   Updated: 2024/01/28 15:54:50 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_H
-# define MINIRT_H
+#ifndef UTILS_RANDOM_BONUS_H
+# define UTILS_RANDOM_BONUS_H
 
 /* ====== LIBRARIES ====== */
 
-# if IS_BONUS
-#  include "parse_bonus.h"
-#  include "render_bonus.h"
-# else
-#  include "parse.h"
-#  include "render.h"
-# endif
+# include <stdlib.h>
+
+/* ====== FUNCTIONS ====== */
+
+/**
+ * @brief Return a random float
+ *
+ * @return float
+ */
+float			ft_random_float(void);
+
+/**
+ * @brief Return a random float within min and max
+ *
+ * @param min 		Lower bounder
+ * @param max 		Upper bounder
+ * @return float
+ */
+float			ft_random_float_within(float min, float max);
 
 #endif

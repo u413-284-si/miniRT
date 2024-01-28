@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:49:33 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/28 15:34:31 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 15:58:40 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,15 @@
 #  include "render_struct_bonus.h"
 #  include "miniRT_config_bonus.h"
 #  include "ray_bonus.h"
-#  include "utils_bonus.h"
 # else
 #  include "miniRT_config.h"
 #  include "ray.h"
-#  include "utils.h"
 # endif
 
 # include "render_bit_field.h"
 # include "cleanup.h"
 # include "error_mlx.h"
+# include "utils.h"
 
 /* ====== MACROS ========*/
 
