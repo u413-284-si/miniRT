@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:34:50 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 18:17:47 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 17:11:40 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,13 @@
 
 /* ====== STRUCTS ====== */
 
+/**
+ * @brief Contains data for a thread.
+ *
+ * @param id		Number of the thread.
+ * @param t_id		ID of thread for pthread_create().
+ * @param arg		Argument to pass to routine.
+ */
 typedef struct s_thread_data
 {
 	int32_t		id;
