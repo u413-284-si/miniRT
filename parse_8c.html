@@ -106,7 +106,7 @@ Include dependency graph for parse.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5c7cd128e38180fcea33c559a075424e"><td class="memItemLeft" align="right" valign="top">t_err&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse_8c.html#a5c7cd128e38180fcea33c559a075424e">ft_malloc_ents</a> (<a class="el" href="structt__light.html">t_light</a> **lsrc, <a class="el" href="structt__hittable.html">t_hittable</a> **obj, int lsrc_c, int total)</td></tr>
+<tr class="memitem:a5c7cd128e38180fcea33c559a075424e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse_8c.html#a5c7cd128e38180fcea33c559a075424e">ft_malloc_ents</a> (<a class="el" href="structt__light.html">t_light</a> **lsrc, <a class="el" href="structt__hittable.html">t_hittable</a> **obj, int lsrc_c, int total)</td></tr>
 <tr class="separator:a5c7cd128e38180fcea33c559a075424e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad530c7e1381c551510afa73f881fb907"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse_8c.html#ad530c7e1381c551510afa73f881fb907">ft_parse_entity</a> (char *line, <a class="el" href="structt__hittable.html">t_hittable</a> *obj)</td></tr>
 <tr class="separator:ad530c7e1381c551510afa73f881fb907"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,7 +121,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">t_err ft_malloc_ents </td>
+          <td class="memname"><a class="el" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a> ft_malloc_ents </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structt__light.html">t_light</a> **&#160;</td>
           <td class="paramname"><em>lsrc</em>, </td>
@@ -167,17 +167,19 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="parse_8c_source.html#l00042">42</a> of file <a class="el" href="parse_8c_source.html">parse.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="error__syscall_8h.html#a1ab50ff4af961d85a53bf12a8f398ba3">ft_err_malloc</a>((<span class="keywordtype">void</span> **)lsrc, <span class="keyword">sizeof</span>(**lsrc) * lsrc_c))</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> (ERROR);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (total == 0)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> (SUCCESS);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="error__syscall_8h.html#a1ab50ff4af961d85a53bf12a8f398ba3">ft_err_malloc</a>((<span class="keywordtype">void</span> **)obj, <span class="keyword">sizeof</span>(**obj) * total))</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        free(*lsrc);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> (ERROR);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> (SUCCESS);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="ttc" id="aerror__syscall_8h_html_a1ab50ff4af961d85a53bf12a8f398ba3"><div class="ttname"><a href="error__syscall_8h.html#a1ab50ff4af961d85a53bf12a8f398ba3">ft_err_malloc</a></div><div class="ttdeci">t_err ft_err_malloc(void **ptr, size_t size)</div><div class="ttdoc">Wrapper function for malloc() to print errno.</div><div class="ttdef"><b>Definition:</b> <a href="error__syscall_8c_source.html#l00041">error_syscall.c:41</a></div></div>
+<div class="ttc" id="amini_r_t__error_8h_html_a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90"><div class="ttname"><a href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__error_8h_source.html#l00035">miniRT_error.h:34</a></div></div>
+<div class="ttc" id="amini_r_t__error_8h_html_a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8"><div class="ttname"><a href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__error_8h_source.html#l00033">miniRT_error.h:33</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

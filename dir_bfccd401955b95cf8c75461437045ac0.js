@@ -28,6 +28,7 @@ var dir_bfccd401955b95cf8c75461437045ac0 =
     [ "miniRT.h", "mini_r_t_8h.html", null ],
     [ "miniRT_config.h", "mini_r_t__config_8h.html", "mini_r_t__config_8h" ],
     [ "miniRT_config_bonus.h", "mini_r_t__config__bonus_8h.html", "mini_r_t__config__bonus_8h" ],
+    [ "miniRT_error.h", "mini_r_t__error_8h.html", "mini_r_t__error_8h" ],
     [ "parse.h", "parse_8h.html", "parse_8h" ],
     [ "parse_bonus.h", "parse__bonus_8h.html", "parse__bonus_8h" ],
     [ "ray.h", "ray_8h.html", "ray_8h" ],

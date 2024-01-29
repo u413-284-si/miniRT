@@ -16,7 +16,7 @@
 <area shape="rect" id="node9" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="501,242,599,269"/>
 <area shape="rect" id="node14" href="$threads__bonus_8c.html#adef619e7d6d95dba7464efd3edac7ca0" title="Creates NUM_THREADS threads and calls routine with arg." alt="" coords="483,525,617,552"/>
 <area shape="rect" id="node16" href="$threads__bonus_8c.html#a8e3352c99f6ff37fac8b8c0f33e934ed" title="Joins threads." alt="" coords="491,576,609,602"/>
-<area shape="rect" id="node15" href="$error__msg__generic_8c.html#aee5d10b82b6780869c9cc69cd64e44cc" title=" " alt="" coords="707,550,785,577"/>
+<area shape="rect" id="node15" href="$mini_r_t__error_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" title="Print generic error message." alt="" coords="707,550,785,577"/>
 <area shape="rect" id="node18" href="$utils_8h.html#a7d1328722f9dc6edd652f7c732856ae9" title="Transforms degrees into radian." alt="" coords="475,344,625,370"/>
 <area shape="rect" id="node19" href="$utils__quaternion_8c.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="483,394,617,421"/>
 <area shape="rect" id="node20" href="$utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" title="Performs quaternion multiplication." alt="" coords="673,394,819,421"/>

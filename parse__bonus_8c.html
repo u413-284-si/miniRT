@@ -106,9 +106,9 @@ Include dependency graph for parse_bonus.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a158705dee8e9b7ce48184c8e2fa3c169"><td class="memItemLeft" align="right" valign="top">t_err&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__bonus_8c.html#a158705dee8e9b7ce48184c8e2fa3c169">ft_parse_file</a> (char *filename, <a class="el" href="structt__entities.html">t_entities</a> *scene, <a class="el" href="structt__cam.html">t_cam</a> *cam, <a class="el" href="structt__vec2i.html">t_vec2i</a> *win_size)</td></tr>
+<tr class="memitem:a158705dee8e9b7ce48184c8e2fa3c169"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__bonus_8c.html#a158705dee8e9b7ce48184c8e2fa3c169">ft_parse_file</a> (char *filename, <a class="el" href="structt__entities.html">t_entities</a> *scene, <a class="el" href="structt__cam.html">t_cam</a> *cam, <a class="el" href="structt__vec2i.html">t_vec2i</a> *win_size)</td></tr>
 <tr class="separator:a158705dee8e9b7ce48184c8e2fa3c169"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1851ac042c8e1f69fe345a139f0eadbd"><td class="memItemLeft" align="right" valign="top">t_err&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__bonus_8c.html#a1851ac042c8e1f69fe345a139f0eadbd">ft_choose_check_ft</a> (char **lines, int *lsrc_c, int *total, bool is_bonus)</td></tr>
+<tr class="memitem:a1851ac042c8e1f69fe345a139f0eadbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__bonus_8c.html#a1851ac042c8e1f69fe345a139f0eadbd">ft_choose_check_ft</a> (char **lines, int *lsrc_c, int *total, bool is_bonus)</td></tr>
 <tr class="separator:a1851ac042c8e1f69fe345a139f0eadbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e5c3ac2d79382b3badd1426d1f5428d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__bonus_8c.html#a4e5c3ac2d79382b3badd1426d1f5428d">ft_initialise_non_parsed</a> (<a class="el" href="structt__entities.html">t_entities</a> *scene)</td></tr>
 <tr class="separator:a4e5c3ac2d79382b3badd1426d1f5428d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,7 +125,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">t_err ft_parse_file </td>
+          <td class="memname"><a class="el" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a> ft_parse_file </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>filename</em>, </td>
@@ -175,15 +175,15 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    lines = NULL;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111">ft_import_file</a>(filename, &amp;lines))</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> (ERROR);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    is_bonus = !ft_strncmp(*lines, <span class="stringliteral">&quot;#bonus&quot;</span>, 6);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="parse__bonus_8c.html#a1851ac042c8e1f69fe345a139f0eadbd">ft_choose_check_ft</a>(lines, &amp;scene-&gt;<a class="code" href="structt__entities.html#a41095695a4b729ef79d0c98e432ce62b">lsrc_count</a>, &amp;scene-&gt;<a class="code" href="structt__entities.html#ac7af894858cf396a219d632f40afdc8d">total</a>, is_bonus))</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> (ERROR);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="parse_8h.html#a5c7cd128e38180fcea33c559a075424e">ft_malloc_ents</a>(&amp;scene-&gt;<a class="code" href="structt__entities.html#ad6ca2988c2a2c6b37d9e1e5fa7d3f2f2">lsrc</a>, &amp;scene-&gt;<a class="code" href="structt__entities.html#a65db50568efc1e70b28b181328d14367">obj</a>, scene-&gt;<a class="code" href="structt__entities.html#a41095695a4b729ef79d0c98e432ce62b">lsrc_count</a>,</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            scene-&gt;<a class="code" href="structt__entities.html#ac7af894858cf396a219d632f40afdc8d">total</a>))</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="cleanup_8h.html#afd12c2961e60b6147c54c2ea99a70669">ft_free_char_arr</a>(lines);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> (ERROR);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (is_bonus)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="parse__bonus_8c.html#add28570024618d943c18498637fc6bb7">ft_parse_lines_bonus</a>(lines, scene, cam, win_size);</div>
@@ -193,10 +193,12 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="parse__bonus_8c.html#a4e5c3ac2d79382b3badd1426d1f5428d">ft_initialise_non_parsed</a>(scene);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="cleanup_8h.html#afd12c2961e60b6147c54c2ea99a70669">ft_free_char_arr</a>(lines);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> (SUCCESS);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 <div class="ttc" id="acleanup_8h_html_afd12c2961e60b6147c54c2ea99a70669"><div class="ttname"><a href="cleanup_8h.html#afd12c2961e60b6147c54c2ea99a70669">ft_free_char_arr</a></div><div class="ttdeci">void ft_free_char_arr(char **array)</div><div class="ttdoc">Frees a NULL-terminated char ** array.</div><div class="ttdef"><b>Definition:</b> <a href="cleanup_8c_source.html#l00015">cleanup.c:15</a></div></div>
 <div class="ttc" id="aimport__file_8h_html_a996e353fb1cf0ba1e9706f5d0c12e111"><div class="ttname"><a href="import__file_8h.html#a996e353fb1cf0ba1e9706f5d0c12e111">ft_import_file</a></div><div class="ttdeci">t_err ft_import_file(char *filename, char ***lines)</div><div class="ttdoc">Check file extension, import file and prepare for use.</div><div class="ttdef"><b>Definition:</b> <a href="import__file_8c_source.html#l00015">import_file.c:15</a></div></div>
+<div class="ttc" id="amini_r_t__error_8h_html_a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90"><div class="ttname"><a href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__error_8h_source.html#l00035">miniRT_error.h:34</a></div></div>
+<div class="ttc" id="amini_r_t__error_8h_html_a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8"><div class="ttname"><a href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__error_8h_source.html#l00033">miniRT_error.h:33</a></div></div>
 <div class="ttc" id="aparse_8h_html_a5c7cd128e38180fcea33c559a075424e"><div class="ttname"><a href="parse_8h.html#a5c7cd128e38180fcea33c559a075424e">ft_malloc_ents</a></div><div class="ttdeci">t_err ft_malloc_ents(t_light **lsrc, t_hittable **obj, int lsrc_c, int total)</div><div class="ttdoc">Allocates memory for lights and hittable array.</div><div class="ttdef"><b>Definition:</b> <a href="parse_8c_source.html#l00042">parse.c:42</a></div></div>
 <div class="ttc" id="aparse_8h_html_aa3cdb9030a467c5959cfa6b6b2dc63d7"><div class="ttname"><a href="parse_8h.html#aa3cdb9030a467c5959cfa6b6b2dc63d7">ft_parse_lines</a></div><div class="ttdeci">void ft_parse_lines(char **lines, t_entities *scene, t_cam *cam, t_vec2i *win_size)</div><div class="ttdoc">Dispatcher for different parsing functions.</div><div class="ttdef"><b>Definition:</b> <a href="parse_8c_source.html#l00069">parse.c:69</a></div></div>
 <div class="ttc" id="aparse__bonus_8c_html_a1851ac042c8e1f69fe345a139f0eadbd"><div class="ttname"><a href="parse__bonus_8c.html#a1851ac042c8e1f69fe345a139f0eadbd">ft_choose_check_ft</a></div><div class="ttdeci">t_err ft_choose_check_ft(char **lines, int *lsrc_c, int *total, bool is_bonus)</div><div class="ttdoc">Chooses the correct checker function depending on bool is_bonus.</div><div class="ttdef"><b>Definition:</b> <a href="parse__bonus_8c_source.html#l00044">parse_bonus.c:44</a></div></div>
@@ -228,7 +230,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">t_err ft_choose_check_ft </td>
+          <td class="memname"><a class="el" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a> ft_choose_check_ft </td>
           <td>(</td>
           <td class="paramtype">char **&#160;</td>
           <td class="paramname"><em>lines</em>, </td>
@@ -273,7 +275,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="parse__bonus_8c_source.html#l00044">44</a> of file <a class="el" href="parse__bonus_8c_source.html">parse_bonus.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    t_err   err;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>   err;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (is_bonus)</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        err = <a class="code" href="check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241">ft_check_lines_bonus</a>(lines, lsrc_c, total);</div>
@@ -282,12 +284,13 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (err)</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="cleanup_8h.html#afd12c2961e60b6147c54c2ea99a70669">ft_free_char_arr</a>(lines);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> (ERROR);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> (SUCCESS);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
 <div class="ttc" id="acheck_8h_html_afdfc858822cc349d9aa87b6aa28a6dd8"><div class="ttname"><a href="check_8h.html#afdfc858822cc349d9aa87b6aa28a6dd8">ft_check_lines</a></div><div class="ttdeci">t_err ft_check_lines(char **lines, int *lsrc_count, int *total)</div><div class="ttdoc">Check array of imported lines.</div><div class="ttdef"><b>Definition:</b> <a href="check_8c_source.html#l00015">check.c:15</a></div></div>
 <div class="ttc" id="acheck__bonus_8h_html_af3ef225f9cf1a304afc28235a98ac241"><div class="ttname"><a href="check__bonus_8h.html#af3ef225f9cf1a304afc28235a98ac241">ft_check_lines_bonus</a></div><div class="ttdeci">t_err ft_check_lines_bonus(char **lines, int *lsrc_count, int *total)</div><div class="ttdoc">Check array of imported lines.</div><div class="ttdef"><b>Definition:</b> <a href="check__bonus_8c_source.html#l00015">check_bonus.c:15</a></div></div>
+<div class="ttc" id="amini_r_t__error_8h_html_a1302176c6f5df85cc624eb5f5594a933"><div class="ttname"><a href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a></div><div class="ttdeci">t_err</div><div class="ttdoc">Gives return of function explicit meaning with SUCCESS or ERROR.</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__error_8h_source.html#l00031">miniRT_error.h:32</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

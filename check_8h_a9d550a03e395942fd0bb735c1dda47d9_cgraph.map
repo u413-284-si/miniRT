@@ -6,7 +6,7 @@
 <area shape="rect" id="node20" href="$check_8h.html#a13cb8b89e2be82f5148f2dba42b550e8" title="Checks if light line is correct." alt="" coords="209,149,321,176"/>
 <area shape="rect" id="node21" href="$check_8h.html#a1e36aec7efe086076efcaf9991f28abe" title="Checks if plane line is correct." alt="" coords="205,251,324,277"/>
 <area shape="rect" id="node22" href="$check_8h.html#a2ac6387003baa37c6f8037edf453c8d0" title="Checks if sphere line is correct." alt="" coords="201,99,328,125"/>
-<area shape="rect" id="node23" href="$error__msg__generic_8c.html#aee5d10b82b6780869c9cc69cd64e44cc" title=" " alt="" coords="226,352,303,379"/>
+<area shape="rect" id="node23" href="$mini_r_t__error_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" title="Print generic error message." alt="" coords="226,352,303,379"/>
 <area shape="rect" id="node3" href="$check_8h.html#a542b81308cf530edfa0a3bfdcefb6002" title="Tries to convert str to float and checks range." alt="" coords="402,99,519,125"/>
 <area shape="rect" id="node8" href="$check_8h.html#a3327b821f1a4c71183e0448c7023a5aa" title="Checks three rgb values, separated by &#39;,&#39;." alt="" coords="385,48,536,75"/>
 <area shape="rect" id="node10" href="$check_8h.html#a0a61f85709f3119ca9086f591705f294" title="Error message if line doesn&#39;t end with space or zero terminator." alt="" coords="407,149,515,176"/>

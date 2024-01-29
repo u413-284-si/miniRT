@@ -1,6 +1,9 @@
 <map id="inc/error_mlx.h" name="inc/error_mlx.h">
 <area shape="rect" id="node1" title=" " alt="" coords="87,5,207,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,64,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,80,205,107"/>
-<area shape="rect" id="node4" href="$vec2_8h.html" title=" " alt="" coords="229,80,294,107"/>
+<area shape="rect" id="node3" href="$mini_r_t__error_8h.html" title=" " alt="" coords="89,80,205,107"/>
+<area shape="rect" id="node7" href="$vec2_8h.html" title=" " alt="" coords="229,80,294,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="21,155,88,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="113,155,181,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="205,155,267,181"/>
 </map>

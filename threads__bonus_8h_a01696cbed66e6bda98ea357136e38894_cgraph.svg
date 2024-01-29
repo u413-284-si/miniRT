@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="error__msg__generic_8c.html#aee5d10b82b6780869c9cc69cd64e44cc" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="mini_r_t__error_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" target="_top" xlink:title="Print generic error message.">
 <polygon fill="none" stroke="black" points="172,-0.5 172,-19.5 230,-19.5 230,-0.5 172,-0.5"/>
 <text text-anchor="middle" x="201" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror</text>
 </a>

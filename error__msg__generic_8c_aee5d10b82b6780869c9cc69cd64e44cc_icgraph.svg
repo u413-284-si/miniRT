@@ -57,7 +57,7 @@ var sectionId = 'dynsection-1';
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Print generic error message.">
 <polygon fill="#bfbfbf" stroke="black" points="1024,-304.5 1024,-323.5 1082,-323.5 1082,-304.5 1024,-304.5"/>
 <text text-anchor="middle" x="1053" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror</text>
 </a>

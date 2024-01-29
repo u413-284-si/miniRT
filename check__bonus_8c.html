@@ -106,11 +106,11 @@ Include dependency graph for check_bonus.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a01132699886a016718dc18d4e1a59f62"><td class="memItemLeft" align="right" valign="top">t_err&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8c.html#a01132699886a016718dc18d4e1a59f62">ft_check_lines_bonus</a> (char **lines, int *lsrc_c, int *total)</td></tr>
+<tr class="memitem:a01132699886a016718dc18d4e1a59f62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8c.html#a01132699886a016718dc18d4e1a59f62">ft_check_lines_bonus</a> (char **lines, int *lsrc_c, int *total)</td></tr>
 <tr class="separator:a01132699886a016718dc18d4e1a59f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae33774d34021cd6fec6863eff3e8e3b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8c.html#ae33774d34021cd6fec6863eff3e8e3b0">ft_check_line_type_bonus</a> (char *line)</td></tr>
 <tr class="separator:ae33774d34021cd6fec6863eff3e8e3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51318eb9ecfb0e802dc1854503517b55"><td class="memItemLeft" align="right" valign="top">t_err&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8c.html#a51318eb9ecfb0e802dc1854503517b55">ft_incr_ent_count_bonus</a> (int ent_count[<a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b">SUM_ENTS</a>], <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a> type)</td></tr>
+<tr class="memitem:a51318eb9ecfb0e802dc1854503517b55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__bonus_8c.html#a51318eb9ecfb0e802dc1854503517b55">ft_incr_ent_count_bonus</a> (int ent_count[<a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b">SUM_ENTS</a>], <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a> type)</td></tr>
 <tr class="separator:a51318eb9ecfb0e802dc1854503517b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -121,7 +121,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">t_err ft_check_lines_bonus </td>
+          <td class="memname"><a class="el" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a> ft_check_lines_bonus </td>
           <td>(</td>
           <td class="paramtype">char **&#160;</td>
           <td class="paramname"><em>lines</em>, </td>
@@ -178,15 +178,15 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            || <a class="code" href="check__bonus_8c.html#a51318eb9ecfb0e802dc1854503517b55">ft_incr_ent_count_bonus</a>(ent_count, type))</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="check_8h.html#a465f527c713c053a0736a33f05b5a445">ft_pinfo_line_number</a>(i - 1);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> (ERROR);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="check_8h.html#a4560f2d54698ffbfb8262bc7cad02768">ft_check_entity_count</a>(ent_count))</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> (ERROR);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    *lsrc_c = ent_count[<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb">LIGHT</a>];</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    *total = ent_count[<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a>] + ent_count[<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a>] + ent_count[<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a>] + \</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        ent_count[<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a>];</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> (SUCCESS);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="ttc" id="acheck_8h_html_a4560f2d54698ffbfb8262bc7cad02768"><div class="ttname"><a href="check_8h.html#a4560f2d54698ffbfb8262bc7cad02768">ft_check_entity_count</a></div><div class="ttdeci">t_err ft_check_entity_count(int ent_count[SUM_ENTS])</div><div class="ttdoc">Check if minimum number of specific entities was found.</div><div class="ttdef"><b>Definition:</b> <a href="check_8c_source.html#l00081">check.c:81</a></div></div>
 <div class="ttc" id="acheck_8h_html_a465f527c713c053a0736a33f05b5a445"><div class="ttname"><a href="check_8h.html#a465f527c713c053a0736a33f05b5a445">ft_pinfo_line_number</a></div><div class="ttdeci">void ft_pinfo_line_number(int line_num)</div><div class="ttdoc">Print error message with a number.</div><div class="ttdef"><b>Definition:</b> <a href="check__error2_8c_source.html#l00032">check_error2.c:32</a></div></div>
@@ -202,6 +202,8 @@ Functions</h2></td></tr>
 <div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a></div><div class="ttdeci">@ COMMENT</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00055">entities_bonus.h:55</a></div></div>
 <div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70ac1aaf16935702a3ac842a873f565573d"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70ac1aaf16935702a3ac842a873f565573d">WIN_SIZE</a></div><div class="ttdeci">@ WIN_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00054">entities_bonus.h:54</a></div></div>
 <div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb">LIGHT</a></div><div class="ttdeci">@ LIGHT</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00063">entities_bonus.h:63</a></div></div>
+<div class="ttc" id="amini_r_t__error_8h_html_a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90"><div class="ttname"><a href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__error_8h_source.html#l00035">miniRT_error.h:34</a></div></div>
+<div class="ttc" id="amini_r_t__error_8h_html_a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8"><div class="ttname"><a href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__error_8h_source.html#l00033">miniRT_error.h:33</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -263,7 +265,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*line == <span class="charliteral">&#39;#&#39;</span>)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a>);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="error__msg__generic_8c.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a>(<span class="stringliteral">&quot;Line type not recognized&quot;</span>, 0);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="mini_r_t__error_8h.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a>(<span class="stringliteral">&quot;Line type not recognized&quot;</span>, 0);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 <div class="ttc" id="acheck_8h_html_a13cb8b89e2be82f5148f2dba42b550e8"><div class="ttname"><a href="check_8h.html#a13cb8b89e2be82f5148f2dba42b550e8">ft_check_light</a></div><div class="ttdeci">t_type ft_check_light(char *line)</div><div class="ttdoc">Checks if light line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__entity___a_c_l_8c_source.html#l00046">check_entity_ACL.c:46</a></div></div>
@@ -274,7 +276,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="acheck__bonus_8h_html_a553c09de200f4ad19c33ab26d11adc29"><div class="ttname"><a href="check__bonus_8h.html#a553c09de200f4ad19c33ab26d11adc29">ft_check_plane_bonus</a></div><div class="ttdeci">t_type ft_check_plane_bonus(char *line)</div><div class="ttdoc">Checks if plane line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__entity__sp__pl__cy__bonus_8c_source.html#l00038">check_entity_sp_pl_cy_bonus.c:38</a></div></div>
 <div class="ttc" id="acheck__bonus_8h_html_a649377d201faaa526ad3c355da745325"><div class="ttname"><a href="check__bonus_8h.html#a649377d201faaa526ad3c355da745325">ft_check_sphere_bonus</a></div><div class="ttdeci">t_type ft_check_sphere_bonus(char *line)</div><div class="ttdoc">Checks if sphere line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__entity__sp__pl__cy__bonus_8c_source.html#l00015">check_entity_sp_pl_cy_bonus.c:15</a></div></div>
 <div class="ttc" id="acheck__bonus_8h_html_a9e3535baa3e942ae46ac0974b7cb6e5e"><div class="ttname"><a href="check__bonus_8h.html#a9e3535baa3e942ae46ac0974b7cb6e5e">ft_check_win_size</a></div><div class="ttdeci">t_type ft_check_win_size(char *line)</div><div class="ttdoc">Checks if size line is correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__win__size__bonus_8c_source.html#l00015">check_win_size_bonus.c:15</a></div></div>
-<div class="ttc" id="aerror__msg__generic_8c_html_aee5d10b82b6780869c9cc69cd64e44cc"><div class="ttname"><a href="error__msg__generic_8c.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a></div><div class="ttdeci">void ft_perror(char *msg, int save_errno)</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__generic_8c_source.html#l00015">error_msg_generic.c:15</a></div></div>
+<div class="ttc" id="amini_r_t__error_8h_html_aee5d10b82b6780869c9cc69cd64e44cc"><div class="ttname"><a href="mini_r_t__error_8h.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a></div><div class="ttdeci">void ft_perror(char *msg, int save_errno)</div><div class="ttdoc">Print generic error message.</div><div class="ttdef"><b>Definition:</b> <a href="error__msg__generic_8c_source.html#l00015">error_msg_generic.c:15</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -297,7 +299,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">t_err ft_incr_ent_count_bonus </td>
+          <td class="memname"><a class="el" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a> ft_incr_ent_count_bonus </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>ent_count</em>[SUM_ENTS], </td>
@@ -342,9 +344,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (ent_count[type] &gt; ent_max[type])</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="check_8h.html#a55f805a774b02619d20d73cba9e90de3">ft_perror_count</a>(type, ent_max[type], ent_count[type], <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> (ERROR);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933a2fd6f336d08340583bd620a7f5694c90">ERROR</a>);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> (SUCCESS);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="mini_r_t__error_8h.html#a1302176c6f5df85cc624eb5f5594a933ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 <div class="ttc" id="acheck_8h_html_a55f805a774b02619d20d73cba9e90de3"><div class="ttname"><a href="check_8h.html#a55f805a774b02619d20d73cba9e90de3">ft_perror_count</a></div><div class="ttdeci">void ft_perror_count(t_type type, int max, int count, bool high)</div><div class="ttdoc">Error message if entity count is not correct.</div><div class="ttdef"><b>Definition:</b> <a href="check__error__bonus_8c_source.html#l00015">check_error_bonus.c:15</a></div></div>
 <div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e">AMBIENT</a></div><div class="ttdeci">@ AMBIENT</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00061">entities_bonus.h:61</a></div></div>

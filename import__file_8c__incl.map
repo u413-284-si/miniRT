@@ -2,9 +2,12 @@
 <area shape="rect" id="node1" title=" " alt="" coords="208,5,335,32"/>
 <area shape="rect" id="node2" href="$import__file_8h.html" title=" " alt="" coords="219,80,323,107"/>
 <area shape="rect" id="node3" href="$error__syscall_8h.html" title=" " alt="" coords="87,155,205,181"/>
-<area shape="rect" id="node6" href="$cleanup_8h.html" title=" " alt="" coords="229,155,314,181"/>
-<area shape="rect" id="node8" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="338,155,509,181"/>
+<area shape="rect" id="node9" href="$cleanup_8h.html" title=" " alt="" coords="229,155,314,181"/>
+<area shape="rect" id="node11" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="338,155,509,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,229,68,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="92,229,208,256"/>
-<area shape="rect" id="node7" title=" " alt="" coords="236,229,307,256"/>
+<area shape="rect" id="node5" href="$mini_r_t__error_8h.html" title=" " alt="" coords="92,229,208,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="25,304,91,331"/>
+<area shape="rect" id="node7" title=" " alt="" coords="116,304,184,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="208,304,271,331"/>
+<area shape="rect" id="node10" title=" " alt="" coords="236,229,307,256"/>
 </map>

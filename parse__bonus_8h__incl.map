@@ -1,24 +1,26 @@
 <map id="inc/parse_bonus.h" name="inc/parse_bonus.h">
-<area shape="rect" id="node1" title=" " alt="" coords="310,5,449,32"/>
-<area shape="rect" id="node2" href="$parse_8h.html" title=" " alt="" coords="308,80,379,107"/>
-<area shape="rect" id="node19" href="$entities__bonus_8h.html" title=" " alt="" coords="519,155,648,181"/>
-<area shape="rect" id="node3" title=" " alt="" coords="111,155,170,181"/>
-<area shape="rect" id="node4" href="$error__syscall_8h.html" title=" " alt="" coords="34,229,151,256"/>
-<area shape="rect" id="node7" href="$cleanup_8h.html" title=" " alt="" coords="409,155,494,181"/>
-<area shape="rect" id="node9" href="$ft__strtod_8h.html" title=" " alt="" coords="374,304,462,331"/>
-<area shape="rect" id="node13" href="$camera_8h.html" title=" " alt="" coords="302,155,385,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,304,68,331"/>
-<area shape="rect" id="node6" title=" " alt="" coords="92,304,208,331"/>
-<area shape="rect" id="node8" title=" " alt="" coords="623,304,693,331"/>
-<area shape="rect" id="node10" title=" " alt="" coords="571,379,638,405"/>
-<area shape="rect" id="node11" title=" " alt="" coords="589,528,657,555"/>
-<area shape="rect" id="node12" title=" " alt="" coords="419,379,497,405"/>
-<area shape="rect" id="node14" href="$vec2_8h.html" title=" " alt="" coords="236,229,301,256"/>
-<area shape="rect" id="node15" href="$vec3_8h.html" title=" " alt="" coords="661,453,727,480"/>
-<area shape="rect" id="node17" href="$utils_8h.html" title=" " alt="" coords="663,379,725,405"/>
-<area shape="rect" id="node18" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="326,229,497,256"/>
-<area shape="rect" id="node16" title=" " alt="" coords="723,528,806,555"/>
-<area shape="rect" id="node20" href="$entities_8h.html" title=" " alt="" coords="713,229,795,256"/>
-<area shape="rect" id="node21" href="$colour_8h.html" title=" " alt="" coords="717,304,791,331"/>
-<area shape="rect" id="node22" title=" " alt="" coords="749,379,820,405"/>
+<area shape="rect" id="node1" title=" " alt="" coords="447,5,585,32"/>
+<area shape="rect" id="node2" href="$parse_8h.html" title=" " alt="" coords="445,80,515,107"/>
+<area shape="rect" id="node21" href="$entities__bonus_8h.html" title=" " alt="" coords="643,155,773,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="451,155,509,181"/>
+<area shape="rect" id="node4" href="$error__syscall_8h.html" title=" " alt="" coords="160,229,277,256"/>
+<area shape="rect" id="node10" href="$cleanup_8h.html" title=" " alt="" coords="533,155,619,181"/>
+<area shape="rect" id="node12" href="$ft__strtod_8h.html" title=" " alt="" coords="5,304,93,331"/>
+<area shape="rect" id="node15" href="$camera_8h.html" title=" " alt="" coords="344,155,427,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="258,304,321,331"/>
+<area shape="rect" id="node6" href="$mini_r_t__error_8h.html" title=" " alt="" coords="118,304,234,331"/>
+<area shape="rect" id="node7" title=" " alt="" coords="307,379,373,405"/>
+<area shape="rect" id="node8" title=" " alt="" coords="127,379,195,405"/>
+<area shape="rect" id="node9" title=" " alt="" coords="219,379,282,405"/>
+<area shape="rect" id="node11" title=" " alt="" coords="666,304,737,331"/>
+<area shape="rect" id="node13" title=" " alt="" coords="474,528,542,555"/>
+<area shape="rect" id="node14" title=" " alt="" coords="25,379,103,405"/>
+<area shape="rect" id="node16" href="$vec2_8h.html" title=" " alt="" coords="353,229,418,256"/>
+<area shape="rect" id="node17" href="$vec3_8h.html" title=" " alt="" coords="597,453,662,480"/>
+<area shape="rect" id="node19" href="$utils_8h.html" title=" " alt="" coords="527,379,590,405"/>
+<area shape="rect" id="node20" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="443,229,613,256"/>
+<area shape="rect" id="node18" title=" " alt="" coords="588,528,671,555"/>
+<area shape="rect" id="node22" href="$entities_8h.html" title=" " alt="" coords="756,229,839,256"/>
+<area shape="rect" id="node23" href="$colour_8h.html" title=" " alt="" coords="761,304,834,331"/>
+<area shape="rect" id="node24" title=" " alt="" coords="762,379,833,405"/>
 </map>

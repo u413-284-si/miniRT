@@ -94,11 +94,11 @@ $(document).ready(function(){initNavTree('error__msg__generic_8c.html',''); init
 <div class="title">error_msg_generic.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;miniRT_error.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="mini_r_t__error_8h_source.html">miniRT_error.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for error_msg_generic.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="error__msg__generic_8c__incl.svg" width="188" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="error__msg__generic_8c__incl.svg" width="258" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -135,6 +135,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Print generic error message. </p>
+<p>Prints "Error\n" and then</p><ul>
+<li>prints the passed error msg with perror().</li>
+<li>if errno = 0 just the msg gets printed with ft_putendl_fd() <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Error message to print. </td></tr>
+    <tr><td class="paramname">save_errno</td><td>Errno at the time of calling the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
 
 <p class="definition">Definition at line <a class="el" href="error__msg__generic_8c_source.html#l00015">15</a> of file <a class="el" href="error__msg__generic_8c_source.html">error_msg_generic.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>

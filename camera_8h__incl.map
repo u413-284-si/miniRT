@@ -3,10 +3,13 @@
 <area shape="rect" id="node2" href="$vec2_8h.html" title=" " alt="" coords="5,80,71,107"/>
 <area shape="rect" id="node3" href="$vec3_8h.html" title=" " alt="" coords="67,155,132,181"/>
 <area shape="rect" id="node6" href="$error__syscall_8h.html" title=" " alt="" coords="250,80,367,107"/>
-<area shape="rect" id="node9" href="$utils_8h.html" title=" " alt="" coords="147,80,209,107"/>
-<area shape="rect" id="node10" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="391,80,562,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="181,229,249,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="69,229,151,256"/>
+<area shape="rect" id="node12" href="$utils_8h.html" title=" " alt="" coords="147,80,209,107"/>
+<area shape="rect" id="node13" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="391,80,562,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="165,229,233,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="58,229,141,256"/>
 <area shape="rect" id="node7" title=" " alt="" coords="399,155,461,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="259,155,375,181"/>
+<area shape="rect" id="node8" href="$mini_r_t__error_8h.html" title=" " alt="" coords="259,155,375,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="258,229,325,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="349,229,417,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="441,229,504,256"/>
 </map>
