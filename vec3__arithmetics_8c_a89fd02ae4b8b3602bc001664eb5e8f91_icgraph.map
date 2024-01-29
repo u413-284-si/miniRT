@@ -1,41 +1,39 @@
 <map id="ft_vec3_dot" name="ft_vec3_dot">
-<area shape="rect" id="node1" title="Calculate the scalar product of two vectors." alt="" coords="3267,461,3364,488"/>
-<area shape="rect" id="node2" href="$hit__manager__bonus_8h.html#a9752309af1756a6360c6459ed6747f83" title="Calculates potential hits of a cone." alt="" coords="2524,157,2669,184"/>
-<area shape="rect" id="node6" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="1776,461,1911,488"/>
-<area shape="rect" id="node22" href="$hit__manager__bonus_8h.html#ac1c274bfe31accc081355bdd98133056" title="Check if the ray actually hit the cone wall." alt="" coords="3080,5,3212,32"/>
-<area shape="rect" id="node24" href="$hit__manager_8h.html#afb7b50ad2f9161c61fc1065975ec7cbf" title="Calculates all four potential hits of a cylinder." alt="" coords="3073,613,3219,640"/>
-<area shape="rect" id="node25" href="$hit__manager_8h.html#a7071fcc84ae72a9f04ce375b87d46c77" title="Checks if the ray actually hit the cylinder wall." alt="" coords="3080,664,3212,691"/>
-<area shape="rect" id="node27" href="$lighting_8h.html#ae50a6e06925c764b3caad3f805bc4c8a" title="Create diffuse lighting." alt="" coords="2180,461,2299,488"/>
-<area shape="rect" id="node28" href="$hit__manager__bonus_8h.html#a87d41de805dc36f90fb5002fa2d34da0" title="Transforms the Cartesian coordinates of a hit point on a plane into 2D texture UV&#45;coordinates in the ..." alt="" coords="3074,328,3218,355"/>
-<area shape="rect" id="node36" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="2903,233,3002,260"/>
-<area shape="rect" id="node37" href="$hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" title="Calculates if a sphere was hit by a ray." alt="" coords="2721,411,2828,437"/>
-<area shape="rect" id="node38" href="$lighting__bonus_8h.html#af0db0e12e85b772afed9cdfac4c33437" title="Create specular lighting." alt="" coords="2347,563,2476,589"/>
-<area shape="rect" id="node39" href="$vec3_8h.html#ac4489813ff658c30fd273d47498b1c8d" title="Calculate the angle betwee two vectors." alt="" coords="3090,715,3202,741"/>
-<area shape="rect" id="node3" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="2365,132,2458,159"/>
-<area shape="rect" id="node4" href="$hit__bonus_8c.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="2183,309,2295,336"/>
-<area shape="rect" id="node5" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="1977,411,2113,437"/>
-<area shape="rect" id="node9" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="1284,309,1391,336"/>
-<area shape="rect" id="node21" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="1959,360,2132,387"/>
-<area shape="rect" id="node7" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="1585,461,1728,488"/>
-<area shape="rect" id="node8" href="$scene__light__bonus_8c.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="1439,411,1537,437"/>
-<area shape="rect" id="node10" href="$render__bonus_8h.html#af5fa16c9ea3d6e6884604009e31c83de" title="Constructs a random sample ray for anti&#45;aliasing." alt="" coords="1111,277,1236,304"/>
-<area shape="rect" id="node14" href="$render_8h.html#a2c9085ad1ae8adcd3201a501a9a4dcde" title="Constructs a ray and shoots it through the pixel." alt="" coords="1122,335,1225,361"/>
-<area shape="rect" id="node11" href="$render__bonus_8h.html#afef92ac33f530ff1e1ca1049ffa14d23" title="Raytraces the scene and adds it to the sample buffer." alt="" coords="884,219,1063,245"/>
-<area shape="rect" id="node13" href="$render__bonus_8h.html#a6f833a234cbdbc69ce5458c79d1242a1" title="Like ft_add_raytrace_sample(), but threaded." alt="" coords="884,270,1063,311"/>
-<area shape="rect" id="node12" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="680,248,836,275"/>
-<area shape="rect" id="node15" href="$render__bonus_8h.html#a5d5ed6b28be3a532b4e17bd4a05df4d3" title="Like ft_raytrace_sample(), but threaded." alt="" coords="900,335,1047,377"/>
-<area shape="rect" id="node16" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="692,343,824,369"/>
-<area shape="rect" id="node17" href="$render__bonus_8h.html#a9c57490cfa20448a418091aa47a49245" title="Raytraces a sample of the scene to the sample buffer." alt="" coords="497,343,632,369"/>
-<area shape="rect" id="node18" href="$render__loop__mlx__bonus_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,343,449,369"/>
-<area shape="rect" id="node19" href="$render__loop__mlx__bonus_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,343,260,369"/>
-<area shape="rect" id="node20" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,343,60,369"/>
-<area shape="rect" id="node23" href="$hit__manager__bonus_8h.html#a049d2a1135caa57d1d9ed8845f229620" title="Determines whether the potential hits are accurate." alt="" coords="2527,31,2667,57"/>
-<area shape="rect" id="node26" href="$hit__manager_8h.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="2883,664,3023,691"/>
-<area shape="rect" id="node29" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2524,107,2669,133"/>
-<area shape="rect" id="node30" href="$hit__cylinder__bonus_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2880,353,3025,380"/>
-<area shape="rect" id="node33" href="$hit__plane__bonus_8c.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="2903,291,3002,317"/>
-<area shape="rect" id="node31" href="$hit__cylinder__bonus_8c.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="2717,360,2832,387"/>
-<area shape="rect" id="node32" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="2541,360,2653,387"/>
-<area shape="rect" id="node34" href="$hit__manager__bonus_8h.html#aee5824df7f0e0c2698306f49f9a1c790" title="Calculates potential hit of cone cap." alt="" coords="2721,259,2828,285"/>
-<area shape="rect" id="node35" href="$hit__manager_8h.html#af2540784b9e01fbdfeacb544ea2c169a" title="Calculates the hit point of the ray with the cylinder cap." alt="" coords="2721,208,2828,235"/>
+<area shape="rect" id="node1" title="Calculate the scalar product of two vectors." alt="" coords="3275,365,3372,392"/>
+<area shape="rect" id="node2" href="$hit__manager__bonus_8h.html#a9752309af1756a6360c6459ed6747f83" title="Calculates potential hits of a cone." alt="" coords="2507,213,2652,240"/>
+<area shape="rect" id="node6" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="1776,264,1911,290"/>
+<area shape="rect" id="node23" href="$hit__manager__bonus_8h.html#ac1c274bfe31accc081355bdd98133056" title="Check if the ray actually hit the cone wall." alt="" coords="3088,365,3220,392"/>
+<area shape="rect" id="node25" href="$hit__manager_8h.html#afb7b50ad2f9161c61fc1065975ec7cbf" title="Calculates all four potential hits of a cylinder." alt="" coords="3081,517,3227,544"/>
+<area shape="rect" id="node26" href="$hit__manager_8h.html#a7071fcc84ae72a9f04ce375b87d46c77" title="Checks if the ray actually hit the cylinder wall." alt="" coords="3088,568,3220,594"/>
+<area shape="rect" id="node28" href="$lighting_8h.html#ae50a6e06925c764b3caad3f805bc4c8a" title="Create diffuse lighting." alt="" coords="2340,466,2459,493"/>
+<area shape="rect" id="node29" href="$hit__manager__bonus_8h.html#a87d41de805dc36f90fb5002fa2d34da0" title="Transforms the Cartesian coordinates of a hit point on a plane into 2D texture UV&#45;coordinates in the ..." alt="" coords="3082,238,3226,265"/>
+<area shape="rect" id="node32" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="2911,162,3010,189"/>
+<area shape="rect" id="node35" href="$hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" title="Calculates if a sphere was hit by a ray." alt="" coords="2717,61,2823,88"/>
+<area shape="rect" id="node36" href="$lighting__bonus_8h.html#af0db0e12e85b772afed9cdfac4c33437" title="Create specular lighting." alt="" coords="2515,17,2644,44"/>
+<area shape="rect" id="node37" href="$vec3_8h.html#ac4489813ff658c30fd273d47498b1c8d" title="Calculate the angle betwee two vectors." alt="" coords="3098,618,3210,645"/>
+<area shape="rect" id="node3" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="2353,238,2446,265"/>
+<area shape="rect" id="node4" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="2180,188,2292,214"/>
+<area shape="rect" id="node5" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="1977,264,2113,290"/>
+<area shape="rect" id="node9" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="1284,200,1391,226"/>
+<area shape="rect" id="node22" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="1959,213,2132,240"/>
+<area shape="rect" id="node7" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="1585,250,1728,277"/>
+<area shape="rect" id="node8" href="$lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="1439,225,1537,252"/>
+<area shape="rect" id="node10" href="$render__bonus_8h.html#af5fa16c9ea3d6e6884604009e31c83de" title="Constructs a random sample ray for anti&#45;aliasing." alt="" coords="1111,170,1236,197"/>
+<area shape="rect" id="node14" href="$render_8h.html#a8d0bd9d9ea57df013aa96dee7558d4b3" title="Constructs a ray and shoots it through the pixel." alt="" coords="1122,229,1225,256"/>
+<area shape="rect" id="node11" href="$render__bonus_8h.html#afef92ac33f530ff1e1ca1049ffa14d23" title="Raytraces the scene and adds it to the sample buffer." alt="" coords="884,112,1063,138"/>
+<area shape="rect" id="node13" href="$render__bonus_8h.html#a6f833a234cbdbc69ce5458c79d1242a1" title="Like ft_add_raytrace_sample(), but threaded." alt="" coords="884,163,1063,204"/>
+<area shape="rect" id="node12" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="680,141,836,168"/>
+<area shape="rect" id="node15" href="$render__bonus_8h.html#a396a2e84d5040d414ec16ab32303c8d1" title="Raytraces the scene to the sample buffer." alt="" coords="900,229,1047,256"/>
+<area shape="rect" id="node21" href="$render__bonus_8h.html#a5d5ed6b28be3a532b4e17bd4a05df4d3" title="Like ft_raytrace_sample(), but threaded." alt="" coords="900,280,1047,322"/>
+<area shape="rect" id="node16" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="692,258,824,285"/>
+<area shape="rect" id="node17" href="$render__bonus_8h.html#a9c57490cfa20448a418091aa47a49245" title="Raytraces a sample of the scene to the sample buffer." alt="" coords="497,258,632,285"/>
+<area shape="rect" id="node18" href="$render_8h.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,258,449,285"/>
+<area shape="rect" id="node19" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,258,260,285"/>
+<area shape="rect" id="node20" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,258,60,285"/>
+<area shape="rect" id="node24" href="$hit__manager__bonus_8h.html#a049d2a1135caa57d1d9ed8845f229620" title="Determines whether the potential hits are accurate." alt="" coords="2700,365,2840,392"/>
+<area shape="rect" id="node27" href="$hit__manager_8h.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="2891,568,3031,594"/>
+<area shape="rect" id="node30" href="$hit__manager__bonus_8h.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2507,264,2652,290"/>
+<area shape="rect" id="node31" href="$hit__manager_8h.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="2888,264,3033,290"/>
+<area shape="rect" id="node33" href="$hit__manager__bonus_8h.html#aee5824df7f0e0c2698306f49f9a1c790" title="Calculates potential hit of cone cap." alt="" coords="2717,213,2823,240"/>
+<area shape="rect" id="node34" href="$hit__manager_8h.html#af2540784b9e01fbdfeacb544ea2c169a" title="Calculates the hit point of the ray with the cylinder cap." alt="" coords="2717,112,2823,138"/>
 </map>

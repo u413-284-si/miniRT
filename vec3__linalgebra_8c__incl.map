@@ -1,8 +1,7 @@
 <map id="src/vec3_linalgebra.c" name="src/vec3_linalgebra.c">
-<area shape="rect" id="node1" title=" " alt="" coords="109,5,268,32"/>
-<area shape="rect" id="node2" href="$vec3_8h.html" title=" " alt="" coords="203,155,268,181"/>
-<area shape="rect" id="node5" href="$utils__bonus_8h.html" title=" " alt="" coords="89,80,197,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="196,229,264,256"/>
-<area shape="rect" id="node4" title=" " alt="" coords="83,229,166,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,155,76,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="42,5,201,32"/>
+<area shape="rect" id="node2" href="$vec3_8h.html" title=" " alt="" coords="125,155,190,181"/>
+<area shape="rect" id="node5" href="$utils_8h.html" title=" " alt="" coords="55,80,118,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="118,229,186,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,229,88,256"/>
 </map>

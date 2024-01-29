@@ -65,7 +65,7 @@
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:href="error__msg_8h.html#a0a61f85709f3119ca9086f591705f294" target="_top" xlink:title="Error message if line doesn&#39;t end with space or zero terminator.">
+<g id="a_node11"><a xlink:href="check_8h.html#a0a61f85709f3119ca9086f591705f294" target="_top" xlink:title="Error message if line doesn&#39;t end with space or zero terminator.">
 <polygon fill="none" stroke="black" points="191,-38.5 191,-57.5 272,-57.5 272,-38.5 191,-38.5"/>
 <text text-anchor="middle" x="231.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_end</text>
 </a>
@@ -95,7 +95,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" target="_top" xlink:title="Error message if conversion failed.">
+<g id="a_node3"><a xlink:href="check_8h.html#a207347473e8d1cf324c6b70fca7155fe" target="_top" xlink:title="Error message if conversion failed.">
 <polygon fill="none" stroke="black" points="456,-152.5 456,-171.5 556,-171.5 556,-152.5 456,-152.5"/>
 <text text-anchor="middle" x="506" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_convert</text>
 </a>
@@ -110,7 +110,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" target="_top" xlink:title="Error message if converted number is out of range.">
+<g id="a_node4"><a xlink:href="check_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" target="_top" xlink:title="Error message if converted number is out of range.">
 <polygon fill="none" stroke="black" points="460.5,-114.5 460.5,-133.5 551.5,-133.5 551.5,-114.5 460.5,-114.5"/>
 <text text-anchor="middle" x="506" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_range</text>
 </a>
@@ -125,7 +125,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" target="_top" xlink:title="Error message if wrong separator was encountered.">
+<g id="a_node5"><a xlink:href="check_8h.html#a66c0aad31fa186667840a2c0a5004099" target="_top" xlink:title="Error message if wrong separator was encountered.">
 <polygon fill="none" stroke="black" points="451,-76.5 451,-95.5 561,-95.5 561,-76.5 451,-76.5"/>
 <text text-anchor="middle" x="506" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_separator</text>
 </a>

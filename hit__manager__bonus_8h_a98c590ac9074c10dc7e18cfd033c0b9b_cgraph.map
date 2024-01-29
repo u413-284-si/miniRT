@@ -1,8 +1,0 @@
-<map id="ft_cy_check_cap" name="ft_cy_check_cap">
-<area shape="rect" id="node1" title="Checks if the ray actually hit the cylinder cap." alt="" coords="5,81,133,108"/>
-<area shape="rect" id="node2" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="181,31,281,57"/>
-<area shape="rect" id="node5" href="$vec3_8h.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="182,81,281,108"/>
-<area shape="rect" id="node6" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="182,132,281,159"/>
-<area shape="rect" id="node3" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="335,5,435,32"/>
-<area shape="rect" id="node4" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="329,56,440,83"/>
-</map>

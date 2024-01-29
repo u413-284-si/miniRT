@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="render_8h.html#add0526c14ef9d6085a85763d42fb901f" target="_top" xlink:title="Handles option keys.">
+<g id="a_node2"><a xlink:href="manip_8h.html#add0526c14ef9d6085a85763d42fb901f" target="_top" xlink:title="Handles option keys.">
 <polygon fill="none" stroke="black" points="17.5,-38.5 17.5,-57.5 122.5,-57.5 122.5,-38.5 17.5,-38.5"/>
 <text text-anchor="middle" x="70" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_change_options</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="render__bonus_8h.html#afef117398ad110d4bd93da9edb52bd0b" target="_top" xlink:title="Handles bonus option keys.">
+<g id="a_node3"><a xlink:href="manip__bonus_8h.html#afef117398ad110d4bd93da9edb52bd0b" target="_top" xlink:title="Handles bonus option keys.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 140,-19.5 140,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="70" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_change_options_bonus</text>
 </a>

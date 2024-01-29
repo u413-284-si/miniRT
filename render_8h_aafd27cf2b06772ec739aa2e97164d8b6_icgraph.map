@@ -1,5 +1,0 @@
-<map id="ft_keyhook_fov_cam" name="ft_keyhook_fov_cam">
-<area shape="rect" id="node1" title="Changes the camera FOV with a keypress." alt="" coords="340,5,496,32"/>
-<area shape="rect" id="node2" href="$render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" title="Manipulates the camera with a keypress." alt="" coords="177,5,292,32"/>
-<area shape="rect" id="node3" href="$render_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" title="Branches to the corresponding manipulation function." alt="" coords="5,5,129,32"/>
-</map>

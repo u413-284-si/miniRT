@@ -94,11 +94,11 @@ $(document).ready(function(){initNavTree('error__msg__generic_8c.html',''); init
 <div class="title">error_msg_generic.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="error__msg_8h_source.html">error_msg.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;miniRT_error.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for error_msg_generic.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="error__msg__generic_8c__incl.svg" width="456" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="error__msg__generic_8c__incl.svg" width="188" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -108,8 +108,6 @@ Include dependency graph for error_msg_generic.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:aee5d10b82b6780869c9cc69cd64e44cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__msg__generic_8c.html#aee5d10b82b6780869c9cc69cd64e44cc">ft_perror</a> (char *msg, int save_errno)</td></tr>
 <tr class="separator:aee5d10b82b6780869c9cc69cd64e44cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a278f4b45a52fcddd1925e2b9c50266ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__msg__generic_8c.html#a278f4b45a52fcddd1925e2b9c50266ed">ft_perror_number</a> (char *msg, int number)</td></tr>
-<tr class="separator:a278f4b45a52fcddd1925e2b9c50266ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aee5d10b82b6780869c9cc69cd64e44cc"></a>
@@ -138,19 +136,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print generic error message. </p>
-<p>Prints "Error\n" and then</p><ul>
-<li>prints the passed error msg with perror().</li>
-<li>if errno = 0 just the msg gets printed with ft_putendl_fd() <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">msg</td><td>Error message to print. </td></tr>
-    <tr><td class="paramname">save_errno</td><td>Errno at the time of calling the function. </td></tr>
-  </table>
-  </dd>
-</dl>
-</li>
-</ul>
-
 <p class="definition">Definition at line <a class="el" href="error__msg__generic_8c_source.html#l00015">15</a> of file <a class="el" href="error__msg__generic_8c_source.html">error_msg_generic.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ft_putendl_fd(<span class="stringliteral">&quot;Error&quot;</span>, 2);</div>
@@ -166,57 +151,6 @@ Functions</h2></td></tr>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="error__msg__generic_8c_aee5d10b82b6780869c9cc69cd64e44cc_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a278f4b45a52fcddd1925e2b9c50266ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a278f4b45a52fcddd1925e2b9c50266ed">&#9670;&nbsp;</a></span>ft_perror_number()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ft_perror_number </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>msg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>number</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Print error message with a number. </p>
-<p>The number gets enclosed with &lt;&gt;. * </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">msg</td><td>Error message to print. </td></tr>
-    <tr><td class="paramname">number</td><td>Number to print. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="error__msg__generic_8c_source.html#l00027">27</a> of file <a class="el" href="error__msg__generic_8c_source.html">error_msg_generic.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ft_putstr_fd(msg, 2);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    ft_putstr_fd(<span class="stringliteral">&quot;: &lt;&quot;</span>, 2);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    ft_putnbr_fd(number, 2);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ft_putendl_fd(<span class="stringliteral">&quot;&gt;&quot;</span>, 2);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="error__msg__generic_8c_a278f4b45a52fcddd1925e2b9c50266ed_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

@@ -1,0 +1,5 @@
+<map id="ft_manip_cylinder" name="ft_manip_cylinder">
+<area shape="rect" id="node1" title="Manipulates the active cylinder." alt="" coords="361,5,500,32"/>
+<area shape="rect" id="node2" href="$manip_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="177,5,313,32"/>
+<area shape="rect" id="node3" href="$manip_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" title="Branches to the corresponding manipulation function." alt="" coords="5,5,129,32"/>
+</map>

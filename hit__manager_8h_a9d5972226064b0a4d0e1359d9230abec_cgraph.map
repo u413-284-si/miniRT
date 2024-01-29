@@ -1,20 +1,44 @@
 <map id="ft_hit_hittable" name="ft_hit_hittable">
-<area shape="rect" id="node1" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="5,397,117,424"/>
-<area shape="rect" id="node2" href="$hit__manager_8h.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="165,132,280,159"/>
-<area shape="rect" id="node9" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="173,397,272,424"/>
-<area shape="rect" id="node16" href="$hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" title="Calculates if a sphere was hit by a ray." alt="" coords="169,473,276,500"/>
-<area shape="rect" id="node3" href="$hit__cylinder_8c.html#afb7b50ad2f9161c61fc1065975ec7cbf" title="Calculates all four potential hits of a cylinder." alt="" coords="328,56,473,83"/>
-<area shape="rect" id="node4" href="$hit__cylinder_8c.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="331,107,471,133"/>
-<area shape="rect" id="node5" href="$hit__cylinder_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="328,157,473,184"/>
-<area shape="rect" id="node6" href="$hit__manager_8h.html#a55af5b9bdf1ed07d3128dd3e15dd3e6b" title="Checks if cylinder is not blocked by another object." alt="" coords="349,208,452,235"/>
-<area shape="rect" id="node8" href="$hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d" title="Initiates hitrecord struct." alt="" coords="339,5,463,32"/>
-<area shape="rect" id="node7" href="$utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa" title="Determines if value is surrounded by the interval." alt="" coords="525,259,628,285"/>
-<area shape="rect" id="node10" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="351,512,451,539"/>
-<area shape="rect" id="node12" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="521,588,632,615"/>
-<area shape="rect" id="node13" href="$utils_8h.html#a90ba8fcafcfab2af9f361cde331dbb06" title="Solves the given equation." alt="" coords="364,360,437,387"/>
-<area shape="rect" id="node14" href="$vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91" title="Calculate the scalar product of two vectors." alt="" coords="352,411,449,437"/>
-<area shape="rect" id="node15" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="351,563,450,589"/>
-<area shape="rect" id="node11" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="527,512,627,539"/>
-<area shape="rect" id="node17" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="345,664,456,691"/>
-<area shape="rect" id="node18" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="527,664,626,691"/>
+<area shape="rect" id="node1" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="5,1098,117,1125"/>
+<area shape="rect" id="node2" href="$hit__manager__bonus_8h.html#aebab6e1f11fc5b2e6c420276c9beee96" title="Calculates if a cone was hit by a ray." alt="" coords="176,896,269,922"/>
+<area shape="rect" id="node5" href="$hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e" title="Calculates if a plane was hit by a ray." alt="" coords="739,997,837,1024"/>
+<area shape="rect" id="node31" href="$hit__manager_8h.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="165,972,280,998"/>
+<area shape="rect" id="node41" href="$hit__manager_8h.html#aee999b32d6cebbb7bcd64995f8e88b6e" title="Calculates if a sphere was hit by a ray." alt="" coords="735,1048,841,1074"/>
+<area shape="rect" id="node3" href="$hit__cone__bonus_8c.html#a9752309af1756a6360c6459ed6747f83" title="Calculates potential hits of a cone." alt="" coords="328,946,473,973"/>
+<area shape="rect" id="node17" href="$hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d" title="Initiates hitrecord struct." alt="" coords="726,896,850,922"/>
+<area shape="rect" id="node18" href="$hit__cone__bonus_8c.html#a049d2a1135caa57d1d9ed8845f229620" title="Determines whether the potential hits are accurate." alt="" coords="524,541,664,568"/>
+<area shape="rect" id="node22" href="$hit__cone__bonus_8c.html#a69c648bba2a12763904900ce56cadb8a" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="521,389,667,416"/>
+<area shape="rect" id="node30" href="$hit__manager__bonus_8h.html#ad993587b48c94f1634b1ff05b6c48d9d" title="Checks whether the cone is blocked by another object." alt="" coords="349,1250,452,1277"/>
+<area shape="rect" id="node4" href="$hit__cone__bonus_8c.html#aee5824df7f0e0c2698306f49f9a1c790" title="Calculates potential hit of cone cap." alt="" coords="541,946,647,973"/>
+<area shape="rect" id="node8" href="$vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91" title="Calculate the scalar product of two vectors." alt="" coords="1128,997,1225,1024"/>
+<area shape="rect" id="node14" href="$utils_8h.html#a90ba8fcafcfab2af9f361cde331dbb06" title="Solves the given equation." alt="" coords="946,1250,1019,1277"/>
+<area shape="rect" id="node16" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="933,642,1032,669"/>
+<area shape="rect" id="node6" href="$hit__plane__bonus_8c.html#a87d41de805dc36f90fb5002fa2d34da0" title="Transforms the Cartesian coordinates of a hit point on a plane into 2D texture UV&#45;coordinates in the ..." alt="" coords="911,845,1055,872"/>
+<area shape="rect" id="node11" href="$ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63" title="Represents a ray." alt="" coords="933,744,1033,770"/>
+<area shape="rect" id="node13" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="1121,693,1232,720"/>
+<area shape="rect" id="node15" href="$utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa" title="Determines if value is surrounded by the interval." alt="" coords="931,1301,1034,1328"/>
+<area shape="rect" id="node7" href="$vec3_8h.html#a19bc1d17592698776e89a5093110320c" title="Calculate the cross product of two vectors." alt="" coords="1121,200,1232,226"/>
+<area shape="rect" id="node9" href="$vec3_8h.html#add7f4f27ee8cadcbf62ffbfecb98f64f" title="Determines if two vectors are equal." alt="" coords="1121,440,1233,466"/>
+<area shape="rect" id="node10" href="$utils_8h.html#a518be72ffbfd90cedf995e72dde0aff6" title="Checks if two floats are (almost) equal." alt="" coords="1297,440,1440,466"/>
+<area shape="rect" id="node12" href="$vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3" title="Add two vectors." alt="" coords="1127,124,1227,150"/>
+<area shape="rect" id="node19" href="$hit__manager__bonus_8h.html#a5daa3987cf663970a55423c4d47d2d64" title="Check if the ray actually hit the cone cap." alt="" coords="724,541,852,568"/>
+<area shape="rect" id="node21" href="$hit__manager__bonus_8h.html#ac1c274bfe31accc081355bdd98133056" title="Check if the ray actually hit the cone wall." alt="" coords="722,794,854,821"/>
+<area shape="rect" id="node20" href="$vec3_8h.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="933,592,1032,618"/>
+<area shape="rect" id="node23" href="$hit__manager__bonus_8h.html#a9874994177d1382ce3e76988ca7cee3b" title="Calculates the normal on the point of intersection of the cone." alt="" coords="735,338,841,365"/>
+<area shape="rect" id="node26" href="$hit__manager__bonus_8h.html#abc28bafc00495161db9de547a9461cb1" title="Transforms the Cartesian coordinates of a hit point on a cone wall into 2D texture UV&#45;coordinates in ..." alt="" coords="715,389,861,416"/>
+<area shape="rect" id="node29" href="$hit__manager__bonus_8h.html#a87d41de805dc36f90fb5002fa2d34da0" title="Transforms the Cartesian coordinates of a hit point on a plane into 2D texture UV&#45;coordinates in the ..." alt="" coords="911,237,1055,264"/>
+<area shape="rect" id="node24" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="927,490,1038,517"/>
+<area shape="rect" id="node25" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="1127,490,1226,517"/>
+<area shape="rect" id="node27" href="$utils_8h.html#a4b67c731c02a7ba35f27473295bfb753" title="Performs a rotation of a given vector around an axis by a given angle." alt="" coords="916,389,1049,416"/>
+<area shape="rect" id="node28" href="$utils__quaternion_8c.html#a15b6fa9c749e827cd1d52bf1c8e0a8f3" title="Performs quaternion multiplication." alt="" coords="1104,389,1249,416"/>
+<area shape="rect" id="node32" href="$hit__cylinder__bonus_8c.html#afb7b50ad2f9161c61fc1065975ec7cbf" title="Calculates all four potential hits of a cylinder." alt="" coords="328,1048,473,1074"/>
+<area shape="rect" id="node34" href="$hit__cylinder__bonus_8c.html#a40c47553b6ecb8ff1834e44c4c308e9b" title="Determines if the potential hits are accurate." alt="" coords="524,592,664,618"/>
+<area shape="rect" id="node37" href="$hit__cylinder__bonus_8c.html#a72c52cc4f5c57fc6171137d9eb6c3500" title="Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record." alt="" coords="521,490,667,517"/>
+<area shape="rect" id="node40" href="$hit__manager_8h.html#a55af5b9bdf1ed07d3128dd3e15dd3e6b" title="Checks if cylinder is not blocked by another object." alt="" coords="349,1402,452,1429"/>
+<area shape="rect" id="node33" href="$hit__cylinder__bonus_8c.html#af2540784b9e01fbdfeacb544ea2c169a" title="Calculates the hit point of the ray with the cylinder cap." alt="" coords="541,997,647,1024"/>
+<area shape="rect" id="node35" href="$hit__manager_8h.html#a98c590ac9074c10dc7e18cfd033c0b9b" title="Checks if the ray actually hit the cylinder cap." alt="" coords="724,592,852,618"/>
+<area shape="rect" id="node36" href="$hit__manager_8h.html#a7071fcc84ae72a9f04ce375b87d46c77" title="Checks if the ray actually hit the cylinder wall." alt="" coords="722,693,854,720"/>
+<area shape="rect" id="node38" href="$hit__manager_8h.html#a873b926722f5b8fada3f51432dccd4be" title="Calculates the normal on the point of intersection of the cylinder." alt="" coords="735,490,841,517"/>
+<area shape="rect" id="node39" href="$hit__manager__bonus_8h.html#aeb33f439a0d2093bdbcca7468e2e78b4" title="Transforms the Cartesian coordinates of a hit point on a cylinder wall into 2D texture UV&#45;coordinates..." alt="" coords="715,440,861,466"/>
+<area shape="rect" id="node42" href="$hit__sphere__bonus_8c.html#a475c1367dbad1a2c3793001bc23313bc" title="Transforms the Cartesian coordinates of a hit point on a sphere into 2D texture UV&#45;coordinates in the..." alt="" coords="909,1200,1056,1226"/>
 </map>

@@ -112,6 +112,94 @@ Functions</h2></td></tr>
 <tr class="separator:af86e62ade8b462c44092a160d876544e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a893f0e65e417aaf6be0152e2f74782d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a893f0e65e417aaf6be0152e2f74782d1">&#9670;&nbsp;</a></span>ft_put_hittable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_put_hittable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__putinfo.html">t_putinfo</a>&#160;</td>
+          <td class="paramname"><em>put</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__hittable.html">t_hittable</a>&#160;</td>
+          <td class="paramname"><em>hittable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>total</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Puts hittable info on the screen. </p>
+<p>Writes the id and type of the hittable. Then calls the appropriate function for the hittable type. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">put</td><td><a class="el" href="structt__putinfo.html" title="Contains info about text for putting on the screen.">t_putinfo</a> struct. </td></tr>
+    <tr><td class="paramname">hittable</td><td>Hittable to be put on screen. </td></tr>
+    <tr><td class="paramname">total</td><td>Total number of hittables. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="menu__put__hittable__bonus_8c_source.html#l00015">15</a> of file <a class="el" href="menu__put__hittable__bonus_8c_source.html">menu_put_hittable_bonus.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    put.<a class="code" href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">pos</a> = <a class="code" href="menu__put_8h.html#a9435ae23ec438c58bcd794dcb400a8ae">ft_put_id</a>(put, hittable.<a class="code" href="structt__hittable.html#a7441ef0865bcb3db9b8064dd7375c1ea">id</a>, total);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    put.<a class="code" href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">pos</a> = <a class="code" href="menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724">ft_put_type</a>(put, hittable.<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (hittable.<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="menu__put_8h.html#a94cfa4cebace291a60ab7a8bd9bd852c">ft_put_sp</a>(put, hittable.<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#adc9375daac853aada5acdd08f407adf0">sp</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hittable.<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a>)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="menu__put_8h.html#ac2a5de89e48dc4e914b474c744618e1f">ft_put_pl</a>(put, hittable.<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#aef96f2ffd702dc2a112eb2d95ac0aa69">pl</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hittable.<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a>)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b">ft_put_cy</a>(put, hittable.<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#af16d3c8c94f7085273d02d0cf2758e56">cy</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hittable.<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="menu__put__hittable__bonus_8c.html#af86e62ade8b462c44092a160d876544e">ft_put_co</a>(put, hittable.<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#a76a2556c11c381611b7e38ac04c05899">co</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a></div><div class="ttdeci">@ PLANE</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00058">entities_bonus.h:58</a></div></div>
+<div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a></div><div class="ttdeci">@ CYLINDER</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00059">entities_bonus.h:59</a></div></div>
+<div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a></div><div class="ttdeci">@ CONE</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00060">entities_bonus.h:60</a></div></div>
+<div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a></div><div class="ttdeci">@ SPHERE</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00057">entities_bonus.h:57</a></div></div>
+<div class="ttc" id="amenu__put_8h_html_a8d53c0c28e59d4db8e6bb03ee433f724"><div class="ttname"><a href="menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724">ft_put_type</a></div><div class="ttdeci">t_vec2i ft_put_type(t_putinfo put, t_type type)</div><div class="ttdoc">Puts the type of a hittable or a light on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__general__info__bonus_8c_source.html#l00015">menu_put_general_info_bonus.c:15</a></div></div>
+<div class="ttc" id="amenu__put_8h_html_a8fb9ef8bf3aa98d9125937611f738a9b"><div class="ttname"><a href="menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b">ft_put_cy</a></div><div class="ttdeci">void ft_put_cy(t_putinfo put, t_cylinder cy)</div><div class="ttdoc">Puts cylinder info on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__hittable_8c_source.html#l00044">menu_put_hittable.c:44</a></div></div>
+<div class="ttc" id="amenu__put_8h_html_a9435ae23ec438c58bcd794dcb400a8ae"><div class="ttname"><a href="menu__put_8h.html#a9435ae23ec438c58bcd794dcb400a8ae">ft_put_id</a></div><div class="ttdeci">t_vec2i ft_put_id(t_putinfo put, int id, int total)</div><div class="ttdoc">Puts the ID of a hittable or a light on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__general__info_8c_source.html#l00052">menu_put_general_info.c:52</a></div></div>
+<div class="ttc" id="amenu__put_8h_html_a94cfa4cebace291a60ab7a8bd9bd852c"><div class="ttname"><a href="menu__put_8h.html#a94cfa4cebace291a60ab7a8bd9bd852c">ft_put_sp</a></div><div class="ttdeci">void ft_put_sp(t_putinfo put, t_sphere sp)</div><div class="ttdoc">Puts sphere info on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__hittable_8c_source.html#l00030">menu_put_hittable.c:30</a></div></div>
+<div class="ttc" id="amenu__put_8h_html_ac2a5de89e48dc4e914b474c744618e1f"><div class="ttname"><a href="menu__put_8h.html#ac2a5de89e48dc4e914b474c744618e1f">ft_put_pl</a></div><div class="ttdeci">void ft_put_pl(t_putinfo put, t_plane pl)</div><div class="ttdoc">Puts plane info on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__hittable_8c_source.html#l00037">menu_put_hittable.c:37</a></div></div>
+<div class="ttc" id="amenu__put__hittable__bonus_8c_html_af86e62ade8b462c44092a160d876544e"><div class="ttname"><a href="menu__put__hittable__bonus_8c.html#af86e62ade8b462c44092a160d876544e">ft_put_co</a></div><div class="ttdeci">void ft_put_co(t_putinfo put, t_cone co)</div><div class="ttdoc">Puts cone info on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__hittable__bonus_8c_source.html#l00029">menu_put_hittable_bonus.c:29</a></div></div>
+<div class="ttc" id="astructt__hittable_html_a118094f64bbd3835838ba79ccccaaa2d"><div class="ttname"><a href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">t_hittable::params</a></div><div class="ttdeci">t_shape params</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00104">entities_bonus.h:104</a></div></div>
+<div class="ttc" id="astructt__hittable_html_a7441ef0865bcb3db9b8064dd7375c1ea"><div class="ttname"><a href="structt__hittable.html#a7441ef0865bcb3db9b8064dd7375c1ea">t_hittable::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00102">entities_bonus.h:102</a></div></div>
+<div class="ttc" id="astructt__hittable_html_aab17f2f3d2a1849cc867d31899d451c8"><div class="ttname"><a href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">t_hittable::type</a></div><div class="ttdeci">t_type type</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00103">entities_bonus.h:103</a></div></div>
+<div class="ttc" id="astructt__putinfo_html_a2390e7d8c951dee5c28dbd6d7203a4c9"><div class="ttname"><a href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">t_putinfo::pos</a></div><div class="ttdeci">t_vec2i pos</div><div class="ttdef"><b>Definition:</b> <a href="menu__put_8h_source.html#l00051">menu_put.h:51</a></div></div>
+<div class="ttc" id="auniont__shape_html_a76a2556c11c381611b7e38ac04c05899"><div class="ttname"><a href="uniont__shape.html#a76a2556c11c381611b7e38ac04c05899">t_shape::co</a></div><div class="ttdeci">t_cone co</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00084">entities_bonus.h:84</a></div></div>
+<div class="ttc" id="auniont__shape_html_adc9375daac853aada5acdd08f407adf0"><div class="ttname"><a href="uniont__shape.html#adc9375daac853aada5acdd08f407adf0">t_shape::sp</a></div><div class="ttdeci">t_sphere sp</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00081">entities_bonus.h:81</a></div></div>
+<div class="ttc" id="auniont__shape_html_aef96f2ffd702dc2a112eb2d95ac0aa69"><div class="ttname"><a href="uniont__shape.html#aef96f2ffd702dc2a112eb2d95ac0aa69">t_shape::pl</a></div><div class="ttdeci">t_plane pl</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00082">entities_bonus.h:82</a></div></div>
+<div class="ttc" id="auniont__shape_html_af16d3c8c94f7085273d02d0cf2758e56"><div class="ttname"><a href="uniont__shape.html#af16d3c8c94f7085273d02d0cf2758e56">t_shape::cy</a></div><div class="ttdeci">t_cylinder cy</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00083">entities_bonus.h:83</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__put__hittable__bonus_8c_a893f0e65e417aaf6be0152e2f74782d1_cgraph.svg" width="100%" height="524"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__put__hittable__bonus_8c_a893f0e65e417aaf6be0152e2f74782d1_icgraph.svg" width="504" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="af86e62ade8b462c44092a160d876544e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af86e62ade8b462c44092a160d876544e">&#9670;&nbsp;</a></span>ft_put_co()</h2>
 
@@ -159,12 +247,11 @@ Functions</h2></td></tr>
 <div class="ttc" id="amenu__put_8h_html_a1fd4ce789738bee4ae9d35045cb21a2a"><div class="ttname"><a href="menu__put_8h.html#a1fd4ce789738bee4ae9d35045cb21a2a">ft_put_unit_vec</a></div><div class="ttdeci">t_vec2i ft_put_unit_vec(char *name, t_putinfo put, t_vec3 vec)</div><div class="ttdoc">Puts a unit vector on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__utils_8c_source.html#l00049">menu_put_utils.c:49</a></div></div>
 <div class="ttc" id="amenu__put_8h_html_a250c5483eff2fa1f225b6a16dab45481"><div class="ttname"><a href="menu__put_8h.html#a250c5483eff2fa1f225b6a16dab45481">ft_put_3d_point</a></div><div class="ttdeci">t_vec2i ft_put_3d_point(char *name, t_putinfo put, t_vec3 point)</div><div class="ttdoc">Puts a 3D point on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__utils_8c_source.html#l00031">menu_put_utils.c:31</a></div></div>
 <div class="ttc" id="amenu__put_8h_html_a46110b7c3be87e212dcfd9105fb4df03"><div class="ttname"><a href="menu__put_8h.html#a46110b7c3be87e212dcfd9105fb4df03">ft_put_single_float_value</a></div><div class="ttdeci">t_vec2i ft_put_single_float_value(char *name, t_putinfo put, float value)</div><div class="ttdoc">Puts a single float value on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__utils_8c_source.html#l00094">menu_put_utils.c:94</a></div></div>
-<div class="ttc" id="astructt__cone_html_a4788d82c901b9367dd5c0daff8a7616b"><div class="ttname"><a href="structt__cone.html#a4788d82c901b9367dd5c0daff8a7616b">t_cone::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00110">entities_bonus.h:110</a></div></div>
-<div class="ttc" id="astructt__cone_html_a7f4ed5c02961988cdae75eb415b617a6"><div class="ttname"><a href="structt__cone.html#a7f4ed5c02961988cdae75eb415b617a6">t_cone::axis</a></div><div class="ttdeci">t_vec3 axis</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00109">entities_bonus.h:109</a></div></div>
-<div class="ttc" id="astructt__cone_html_a85f2f1bd58b3b44ffdf3881823393959"><div class="ttname"><a href="structt__cone.html#a85f2f1bd58b3b44ffdf3881823393959">t_cone::h</a></div><div class="ttdeci">float h</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00111">entities_bonus.h:111</a></div></div>
-<div class="ttc" id="astructt__cone_html_ade3aae23d19802dca4a29ac9065742a9"><div class="ttname"><a href="structt__cone.html#ade3aae23d19802dca4a29ac9065742a9">t_cone::colour</a></div><div class="ttdeci">t_colour colour</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00113">entities_bonus.h:113</a></div></div>
-<div class="ttc" id="astructt__cone_html_afcd43ca207d5e563d12249b1c2bf10f0"><div class="ttname"><a href="structt__cone.html#afcd43ca207d5e563d12249b1c2bf10f0">t_cone::apex</a></div><div class="ttdeci">t_vec3 apex</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00107">entities_bonus.h:107</a></div></div>
-<div class="ttc" id="astructt__putinfo_html_a2390e7d8c951dee5c28dbd6d7203a4c9"><div class="ttname"><a href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">t_putinfo::pos</a></div><div class="ttdeci">t_vec2i pos</div><div class="ttdef"><b>Definition:</b> <a href="menu__put_8h_source.html#l00051">menu_put.h:51</a></div></div>
+<div class="ttc" id="astructt__cone_html_a4788d82c901b9367dd5c0daff8a7616b"><div class="ttname"><a href="structt__cone.html#a4788d82c901b9367dd5c0daff8a7616b">t_cone::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00038">entities_bonus.h:38</a></div></div>
+<div class="ttc" id="astructt__cone_html_a7f4ed5c02961988cdae75eb415b617a6"><div class="ttname"><a href="structt__cone.html#a7f4ed5c02961988cdae75eb415b617a6">t_cone::axis</a></div><div class="ttdeci">t_vec3 axis</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00037">entities_bonus.h:37</a></div></div>
+<div class="ttc" id="astructt__cone_html_a85f2f1bd58b3b44ffdf3881823393959"><div class="ttname"><a href="structt__cone.html#a85f2f1bd58b3b44ffdf3881823393959">t_cone::h</a></div><div class="ttdeci">float h</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00039">entities_bonus.h:39</a></div></div>
+<div class="ttc" id="astructt__cone_html_ade3aae23d19802dca4a29ac9065742a9"><div class="ttname"><a href="structt__cone.html#ade3aae23d19802dca4a29ac9065742a9">t_cone::colour</a></div><div class="ttdeci">t_colour colour</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00041">entities_bonus.h:41</a></div></div>
+<div class="ttc" id="astructt__cone_html_afcd43ca207d5e563d12249b1c2bf10f0"><div class="ttname"><a href="structt__cone.html#afcd43ca207d5e563d12249b1c2bf10f0">t_cone::apex</a></div><div class="ttdeci">t_vec3 apex</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00035">entities_bonus.h:35</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -175,93 +262,6 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="menu__put__hittable__bonus_8c_af86e62ade8b462c44092a160d876544e_icgraph.svg" width="634" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a893f0e65e417aaf6be0152e2f74782d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a893f0e65e417aaf6be0152e2f74782d1">&#9670;&nbsp;</a></span>ft_put_hittable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ft_put_hittable </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structt__putinfo.html">t_putinfo</a>&#160;</td>
-          <td class="paramname"><em>put</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structt__hittable.html">t_hittable</a>&#160;</td>
-          <td class="paramname"><em>hittable</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>total</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Puts hittable info on the screen. </p>
-<p>Writes the id and type of the hittable. Then calls the appropriate function for the hittable type. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">put</td><td><a class="el" href="structt__putinfo.html" title="Contains info about text for putting on the screen.">t_putinfo</a> struct. </td></tr>
-    <tr><td class="paramname">hittable</td><td>Hittable to be put on screen. </td></tr>
-    <tr><td class="paramname">total</td><td>Total number of hittables. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="menu__put__hittable__bonus_8c_source.html#l00015">15</a> of file <a class="el" href="menu__put__hittable__bonus_8c_source.html">menu_put_hittable_bonus.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    put.<a class="code" href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">pos</a> = <a class="code" href="menu__put_8h.html#a9435ae23ec438c58bcd794dcb400a8ae">ft_put_id</a>(put, hittable.<a class="code" href="structt__hittable.html#a7441ef0865bcb3db9b8064dd7375c1ea">id</a>, total);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    put.<a class="code" href="structt__putinfo.html#a2390e7d8c951dee5c28dbd6d7203a4c9">pos</a> = <a class="code" href="menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724">ft_put_type</a>(put, hittable.<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (hittable.<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a>)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="menu__put_8h.html#a94cfa4cebace291a60ab7a8bd9bd852c">ft_put_sp</a>(put, hittable.<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#adc9375daac853aada5acdd08f407adf0">sp</a>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hittable.<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a>)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="menu__put_8h.html#ac2a5de89e48dc4e914b474c744618e1f">ft_put_pl</a>(put, hittable.<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#aef96f2ffd702dc2a112eb2d95ac0aa69">pl</a>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hittable.<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a>)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b">ft_put_cy</a>(put, hittable.<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#af16d3c8c94f7085273d02d0cf2758e56">cy</a>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hittable.<a class="code" href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">type</a> == <a class="code" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a>)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="menu__put__hittable__bonus_8c.html#af86e62ade8b462c44092a160d876544e">ft_put_co</a>(put, hittable.<a class="code" href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">params</a>.<a class="code" href="uniont__shape.html#a76a2556c11c381611b7e38ac04c05899">co</a>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a></div><div class="ttdeci">@ PLANE</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00107">entities.h:107</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a></div><div class="ttdeci">@ CYLINDER</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00108">entities.h:108</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a></div><div class="ttdeci">@ SPHERE</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00106">entities.h:106</a></div></div>
-<div class="ttc" id="aentities__bonus_8h_html_a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a"><div class="ttname"><a href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a></div><div class="ttdeci">@ CONE</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00131">entities_bonus.h:131</a></div></div>
-<div class="ttc" id="amenu__put_8h_html_a8d53c0c28e59d4db8e6bb03ee433f724"><div class="ttname"><a href="menu__put_8h.html#a8d53c0c28e59d4db8e6bb03ee433f724">ft_put_type</a></div><div class="ttdeci">t_vec2i ft_put_type(t_putinfo put, t_type type)</div><div class="ttdoc">Puts the type of a hittable or a light on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__general__info__bonus_8c_source.html#l00015">menu_put_general_info_bonus.c:15</a></div></div>
-<div class="ttc" id="amenu__put_8h_html_a8fb9ef8bf3aa98d9125937611f738a9b"><div class="ttname"><a href="menu__put_8h.html#a8fb9ef8bf3aa98d9125937611f738a9b">ft_put_cy</a></div><div class="ttdeci">void ft_put_cy(t_putinfo put, t_cylinder cy)</div><div class="ttdoc">Puts cylinder info on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__hittable_8c_source.html#l00044">menu_put_hittable.c:44</a></div></div>
-<div class="ttc" id="amenu__put_8h_html_a9435ae23ec438c58bcd794dcb400a8ae"><div class="ttname"><a href="menu__put_8h.html#a9435ae23ec438c58bcd794dcb400a8ae">ft_put_id</a></div><div class="ttdeci">t_vec2i ft_put_id(t_putinfo put, int id, int total)</div><div class="ttdoc">Puts the ID of a hittable or a light on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__general__info_8c_source.html#l00052">menu_put_general_info.c:52</a></div></div>
-<div class="ttc" id="amenu__put_8h_html_a94cfa4cebace291a60ab7a8bd9bd852c"><div class="ttname"><a href="menu__put_8h.html#a94cfa4cebace291a60ab7a8bd9bd852c">ft_put_sp</a></div><div class="ttdeci">void ft_put_sp(t_putinfo put, t_sphere sp)</div><div class="ttdoc">Puts sphere info on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__hittable_8c_source.html#l00030">menu_put_hittable.c:30</a></div></div>
-<div class="ttc" id="amenu__put_8h_html_ac2a5de89e48dc4e914b474c744618e1f"><div class="ttname"><a href="menu__put_8h.html#ac2a5de89e48dc4e914b474c744618e1f">ft_put_pl</a></div><div class="ttdeci">void ft_put_pl(t_putinfo put, t_plane pl)</div><div class="ttdoc">Puts plane info on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__hittable_8c_source.html#l00037">menu_put_hittable.c:37</a></div></div>
-<div class="ttc" id="amenu__put__hittable__bonus_8c_html_af86e62ade8b462c44092a160d876544e"><div class="ttname"><a href="menu__put__hittable__bonus_8c.html#af86e62ade8b462c44092a160d876544e">ft_put_co</a></div><div class="ttdeci">void ft_put_co(t_putinfo put, t_cone co)</div><div class="ttdoc">Puts cone info on the screen.</div><div class="ttdef"><b>Definition:</b> <a href="menu__put__hittable__bonus_8c_source.html#l00029">menu_put_hittable_bonus.c:29</a></div></div>
-<div class="ttc" id="astructt__hittable_html_a118094f64bbd3835838ba79ccccaaa2d"><div class="ttname"><a href="structt__hittable.html#a118094f64bbd3835838ba79ccccaaa2d">t_hittable::params</a></div><div class="ttdeci">t_shape params</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00144">entities.h:144</a></div></div>
-<div class="ttc" id="astructt__hittable_html_a7441ef0865bcb3db9b8064dd7375c1ea"><div class="ttname"><a href="structt__hittable.html#a7441ef0865bcb3db9b8064dd7375c1ea">t_hittable::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00142">entities.h:142</a></div></div>
-<div class="ttc" id="astructt__hittable_html_aab17f2f3d2a1849cc867d31899d451c8"><div class="ttname"><a href="structt__hittable.html#aab17f2f3d2a1849cc867d31899d451c8">t_hittable::type</a></div><div class="ttdeci">t_type type</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00143">entities.h:143</a></div></div>
-<div class="ttc" id="auniont__shape_html_a76a2556c11c381611b7e38ac04c05899"><div class="ttname"><a href="uniont__shape.html#a76a2556c11c381611b7e38ac04c05899">t_shape::co</a></div><div class="ttdeci">t_cone co</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00154">entities_bonus.h:154</a></div></div>
-<div class="ttc" id="auniont__shape_html_adc9375daac853aada5acdd08f407adf0"><div class="ttname"><a href="uniont__shape.html#adc9375daac853aada5acdd08f407adf0">t_shape::sp</a></div><div class="ttdeci">t_sphere sp</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00128">entities.h:128</a></div></div>
-<div class="ttc" id="auniont__shape_html_aef96f2ffd702dc2a112eb2d95ac0aa69"><div class="ttname"><a href="uniont__shape.html#aef96f2ffd702dc2a112eb2d95ac0aa69">t_shape::pl</a></div><div class="ttdeci">t_plane pl</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00129">entities.h:129</a></div></div>
-<div class="ttc" id="auniont__shape_html_af16d3c8c94f7085273d02d0cf2758e56"><div class="ttname"><a href="uniont__shape.html#af16d3c8c94f7085273d02d0cf2758e56">t_shape::cy</a></div><div class="ttdeci">t_cylinder cy</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00130">entities.h:130</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__put__hittable__bonus_8c_a893f0e65e417aaf6be0152e2f74782d1_cgraph.svg" width="100%" height="524"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu__put__hittable__bonus_8c_a893f0e65e417aaf6be0152e2f74782d1_icgraph.svg" width="504" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

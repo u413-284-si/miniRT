@@ -1,25 +1,24 @@
 <map id="inc/parse_bonus.h" name="inc/parse_bonus.h">
-<area shape="rect" id="node1" title=" " alt="" coords="139,5,277,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,64,107"/>
-<area shape="rect" id="node3" href="$error__syscall_8h.html" title=" " alt="" coords="269,155,387,181"/>
-<area shape="rect" id="node10" href="$entities__bonus_8h.html" title=" " alt="" coords="161,304,290,331"/>
-<area shape="rect" id="node18" href="$cleanup_8h.html" title=" " alt="" coords="84,379,169,405"/>
-<area shape="rect" id="node19" href="$ft__strtod_8h.html" title=" " alt="" coords="700,379,788,405"/>
-<area shape="rect" id="node21" href="$camera_8h.html" title=" " alt="" coords="525,80,608,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="190,229,253,256"/>
-<area shape="rect" id="node5" href="$error__type_8h.html" title=" " alt="" coords="277,229,379,256"/>
-<area shape="rect" id="node6" href="$error__msg_8h.html" title=" " alt="" coords="403,229,503,256"/>
-<area shape="rect" id="node7" title=" " alt="" coords="523,453,589,480"/>
-<area shape="rect" id="node8" title=" " alt="" coords="419,304,487,331"/>
-<area shape="rect" id="node9" title=" " alt="" coords="333,304,395,331"/>
-<area shape="rect" id="node11" title=" " alt="" coords="332,603,415,629"/>
-<area shape="rect" id="node12" title=" " alt="" coords="171,528,242,555"/>
-<area shape="rect" id="node13" href="$vec3_8h.html" title=" " alt="" coords="411,528,477,555"/>
-<area shape="rect" id="node15" href="$colour__bonus_8h.html" title=" " alt="" coords="332,379,452,405"/>
-<area shape="rect" id="node14" title=" " alt="" coords="481,603,549,629"/>
-<area shape="rect" id="node16" title=" " alt="" coords="295,453,366,480"/>
-<area shape="rect" id="node17" href="$utils__bonus_8h.html" title=" " alt="" coords="390,453,498,480"/>
-<area shape="rect" id="node20" title=" " alt="" coords="664,453,741,480"/>
-<area shape="rect" id="node22" href="$vec2_8h.html" title=" " alt="" coords="630,155,695,181"/>
-<area shape="rect" id="node23" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="720,155,891,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="310,5,449,32"/>
+<area shape="rect" id="node2" href="$parse_8h.html" title=" " alt="" coords="308,80,379,107"/>
+<area shape="rect" id="node19" href="$entities__bonus_8h.html" title=" " alt="" coords="519,155,648,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="111,155,170,181"/>
+<area shape="rect" id="node4" href="$error__syscall_8h.html" title=" " alt="" coords="34,229,151,256"/>
+<area shape="rect" id="node7" href="$cleanup_8h.html" title=" " alt="" coords="409,155,494,181"/>
+<area shape="rect" id="node9" href="$ft__strtod_8h.html" title=" " alt="" coords="374,304,462,331"/>
+<area shape="rect" id="node13" href="$camera_8h.html" title=" " alt="" coords="302,155,385,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,304,68,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="92,304,208,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="623,304,693,331"/>
+<area shape="rect" id="node10" title=" " alt="" coords="571,379,638,405"/>
+<area shape="rect" id="node11" title=" " alt="" coords="589,528,657,555"/>
+<area shape="rect" id="node12" title=" " alt="" coords="419,379,497,405"/>
+<area shape="rect" id="node14" href="$vec2_8h.html" title=" " alt="" coords="236,229,301,256"/>
+<area shape="rect" id="node15" href="$vec3_8h.html" title=" " alt="" coords="661,453,727,480"/>
+<area shape="rect" id="node17" href="$utils_8h.html" title=" " alt="" coords="663,379,725,405"/>
+<area shape="rect" id="node18" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="326,229,497,256"/>
+<area shape="rect" id="node16" title=" " alt="" coords="723,528,806,555"/>
+<area shape="rect" id="node20" href="$entities_8h.html" title=" " alt="" coords="713,229,795,256"/>
+<area shape="rect" id="node21" href="$colour_8h.html" title=" " alt="" coords="717,304,791,331"/>
+<area shape="rect" id="node22" title=" " alt="" coords="749,379,820,405"/>
 </map>

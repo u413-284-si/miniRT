@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('ray_8h.html',''); initResizable(); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ray.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="ray_8h__incl.svg" width="392" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="ray_8h__incl.svg" width="346" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -120,30 +120,62 @@ Functions</h2></td></tr>
 <tr class="separator:a165a4eb7af65fda20a69dfd50b9ed119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a165a4eb7af65fda20a69dfd50b9ed119"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a165a4eb7af65fda20a69dfd50b9ed119">&#9670;&nbsp;</a></span>ft_background_colour()</h2>
+<a id="ac56e9ac7acfb4658469e190c022b0d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56e9ac7acfb4658469e190c022b0d63">&#9670;&nbsp;</a></span>ft_scale_ray()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structt__colour.html">t_colour</a> ft_background_colour </td>
+          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_scale_ray </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structt__ray.html">t_ray</a>&#160;</td>
-          <td class="paramname"><em>ray</em></td><td>)</td>
+          <td class="paramname"><em>ray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the background colour. </p>
-<p>The background colour depends on the ray direction and creates a transition between two colours </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Represents a ray. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ray</td><td>Ray shot into scene </td></tr>
+    <tr><td class="paramname">ray</td><td>General ray created by the image manager </td></tr>
+    <tr><td class="paramname">d</td><td>Distance traveled upon hit </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__colour.html" title="Represents an RGB colour with float values from 0.0 - 1.0.">t_colour</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> Ray vector to hit </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ray__bonus_8c_source.html#l00015">15</a> of file <a class="el" href="ray__bonus_8c_source.html">ray_bonus.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a>(ray.<a class="code" href="structt__ray.html#a428dad59baf203faaf08742b885037c1">origin</a>, <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(ray.<a class="code" href="structt__ray.html#af64cb245ee8ece9da45ed51f894db302">direction</a>, d)));</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="ttc" id="astructt__ray_html_a428dad59baf203faaf08742b885037c1"><div class="ttname"><a href="structt__ray.html#a428dad59baf203faaf08742b885037c1">t_ray::origin</a></div><div class="ttdeci">t_vec3 origin</div><div class="ttdef"><b>Definition:</b> <a href="ray_8h_source.html#l00034">ray.h:34</a></div></div>
+<div class="ttc" id="astructt__ray_html_af64cb245ee8ece9da45ed51f894db302"><div class="ttname"><a href="structt__ray.html#af64cb245ee8ece9da45ed51f894db302">t_ray::direction</a></div><div class="ttdeci">t_vec3 direction</div><div class="ttdef"><b>Definition:</b> <a href="ray_8h_source.html#l00035">ray.h:35</a></div></div>
+<div class="ttc" id="avec3_8h_html_a73e2caf4c2a51ed954b7349c6be2b3c3"><div class="ttname"><a href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a></div><div class="ttdeci">t_vec3 ft_vec3_add(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Add two vectors.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00015">vec3_arithmetics.c:15</a></div></div>
+<div class="ttc" id="avec3_8h_html_ac80a1c20941c96a8fafad255dac59092"><div class="ttname"><a href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a></div><div class="ttdeci">t_vec3 ft_vec3_scale(t_vec3 v, float a)</div><div class="ttdoc">Scale a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00033">vec3_arithmetics.c:33</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ray_8h_ac56e9ac7acfb4658469e190c022b0d63_cgraph.svg" width="270" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="ray_8h_ac56e9ac7acfb4658469e190c022b0d63_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -183,7 +215,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__colour.html" title="Represents an RGB colour with float values from 0.0 - 1.0.">t_colour</a> Ray colour </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ray_8c_source.html#l00020">20</a> of file <a class="el" href="ray_8c_source.html">ray.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ray__bonus_8c_source.html#l00020">20</a> of file <a class="el" href="ray__bonus_8c_source.html">ray_bonus.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="structt__colour.html">t_colour</a>    ray_colour;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="structt__hitrecord.html">t_hitrecord</a> rec;</div>
@@ -198,10 +230,10 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    i = -1;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">while</span> (++i &lt; scene.<a class="code" href="structt__entities.html#ac7af894858cf396a219d632f40afdc8d">total</a>)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        cur = scene.<a class="code" href="structt__entities.html#aff3b118f65a7ab1c247de6b7765f92a3">obj</a>[i];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        cur = scene.<a class="code" href="structt__entities.html#a65db50568efc1e70b28b181328d14367">obj</a>[i];</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec">ft_hit_hittable</a>(cur, &amp;rec, ray_d))</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (rec.<a class="code" href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">d</a> &lt; ray_d.<a class="code" href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">max</a>)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                ray_d.<a class="code" href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">max</a> = rec.<a class="code" href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">d</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="hit__manager__bonus_8h.html#ada887e6d7ee9d18bab38319f99dfa9f4">ft_set_hitrecord_features</a>(&amp;rec, cur, &amp;ray_d);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (ray_d.<a class="code" href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">max</a> &lt; INFINITY)</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
@@ -210,16 +242,17 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="structt__colour.html">t_colour</a>){0});</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="ttc" id="ahit__manager_8h_html_a9d5972226064b0a4d0e1359d9230abec"><div class="ttname"><a href="hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec">ft_hit_hittable</a></div><div class="ttdeci">bool ft_hit_hittable(t_hittable obj, t_hitrecord *rec, t_interval ray_d)</div><div class="ttdoc">Investigate a hittable and returns whether a hit occured or not.</div><div class="ttdef"><b>Definition:</b> <a href="hit_8c_source.html#l00025">hit.c:25</a></div></div>
-<div class="ttc" id="ahit__manager_8h_html_aa5acefb1538a700dc595870ad630f83d"><div class="ttname"><a href="hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d">ft_init_hitrecord</a></div><div class="ttdeci">void ft_init_hitrecord(t_hitrecord *rec)</div><div class="ttdoc">Initiates hitrecord struct.</div><div class="ttdef"><b>Definition:</b> <a href="hit_8c_source.html#l00015">hit.c:15</a></div></div>
-<div class="ttc" id="alighting_8h_html_a3d54436a3f695a60b1c2d9e504a61de8"><div class="ttname"><a href="lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8">ft_enlighten</a></div><div class="ttdeci">void ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene)</div><div class="ttdoc">Calculate the effect of different lighting on perception.</div><div class="ttdef"><b>Definition:</b> <a href="scene__light_8c_source.html#l00015">scene_light.c:15</a></div></div>
-<div class="ttc" id="astructt__colour_html"><div class="ttname"><a href="structt__colour.html">t_colour</a></div><div class="ttdoc">Represents an RGB colour with float values from 0.0 - 1.0.</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00036">colour.h:37</a></div></div>
-<div class="ttc" id="astructt__entities_html_ac7af894858cf396a219d632f40afdc8d"><div class="ttname"><a href="structt__entities.html#ac7af894858cf396a219d632f40afdc8d">t_entities::total</a></div><div class="ttdeci">int total</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00161">entities.h:161</a></div></div>
-<div class="ttc" id="astructt__entities_html_aff3b118f65a7ab1c247de6b7765f92a3"><div class="ttname"><a href="structt__entities.html#aff3b118f65a7ab1c247de6b7765f92a3">t_entities::obj</a></div><div class="ttdeci">t_hittable * obj</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00159">entities.h:159</a></div></div>
+<div class="ttc" id="ahit__manager_8h_html_a9d5972226064b0a4d0e1359d9230abec"><div class="ttname"><a href="hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec">ft_hit_hittable</a></div><div class="ttdeci">bool ft_hit_hittable(t_hittable obj, t_hitrecord *rec, t_interval ray_d)</div><div class="ttdoc">Investigate a hittable and returns whether a hit occured or not.</div><div class="ttdef"><b>Definition:</b> <a href="hit__bonus_8c_source.html#l00031">hit_bonus.c:31</a></div></div>
+<div class="ttc" id="ahit__manager_8h_html_aa5acefb1538a700dc595870ad630f83d"><div class="ttname"><a href="hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d">ft_init_hitrecord</a></div><div class="ttdeci">void ft_init_hitrecord(t_hitrecord *rec)</div><div class="ttdoc">Initiates hitrecord struct.</div><div class="ttdef"><b>Definition:</b> <a href="hit__bonus_8c_source.html#l00015">hit_bonus.c:15</a></div></div>
+<div class="ttc" id="ahit__manager__bonus_8h_html_ada887e6d7ee9d18bab38319f99dfa9f4"><div class="ttname"><a href="hit__manager__bonus_8h.html#ada887e6d7ee9d18bab38319f99dfa9f4">ft_set_hitrecord_features</a></div><div class="ttdeci">void ft_set_hitrecord_features(t_hitrecord *rec, t_hittable cur, t_interval *ray_d)</div><div class="ttdoc">Sets hit record values after a valid hit has been found.</div><div class="ttdef"><b>Definition:</b> <a href="hit__bonus_8c_source.html#l00045">hit_bonus.c:45</a></div></div>
+<div class="ttc" id="alighting_8h_html_a3d54436a3f695a60b1c2d9e504a61de8"><div class="ttname"><a href="lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8">ft_enlighten</a></div><div class="ttdeci">void ft_enlighten(t_colour *ray_colour, t_hitrecord rec, t_entities scene)</div><div class="ttdoc">Calculate the effect of different lighting on perception.</div><div class="ttdef"><b>Definition:</b> <a href="scene__light__bonus_8c_source.html#l00015">scene_light_bonus.c:15</a></div></div>
+<div class="ttc" id="astructt__colour_html"><div class="ttname"><a href="structt__colour.html">t_colour</a></div><div class="ttdoc">Represents an RGB colour with float values from 0.0 - 1.0.</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00032">colour.h:33</a></div></div>
+<div class="ttc" id="astructt__entities_html_a65db50568efc1e70b28b181328d14367"><div class="ttname"><a href="structt__entities.html#a65db50568efc1e70b28b181328d14367">t_entities::obj</a></div><div class="ttdeci">t_hittable * obj</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00122">entities_bonus.h:122</a></div></div>
+<div class="ttc" id="astructt__entities_html_ac7af894858cf396a219d632f40afdc8d"><div class="ttname"><a href="structt__entities.html#ac7af894858cf396a219d632f40afdc8d">t_entities::total</a></div><div class="ttdeci">int total</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00124">entities_bonus.h:124</a></div></div>
 <div class="ttc" id="astructt__hitrecord_html"><div class="ttname"><a href="structt__hitrecord.html">t_hitrecord</a></div><div class="ttdoc">Shows point of intersection.</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00040">hit_manager.h:41</a></div></div>
 <div class="ttc" id="astructt__hitrecord_html_a3e7ae304525bac56f4d09724ea2c080f"><div class="ttname"><a href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">t_hitrecord::ray</a></div><div class="ttdeci">t_ray ray</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00042">hit_manager.h:42</a></div></div>
 <div class="ttc" id="astructt__hitrecord_html_a3fbbd8a3959e76a2bc3455d3bade52dc"><div class="ttname"><a href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">t_hitrecord::d</a></div><div class="ttdeci">float d</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00046">hit_manager.h:46</a></div></div>
-<div class="ttc" id="astructt__hittable_html"><div class="ttname"><a href="structt__hittable.html">t_hittable</a></div><div class="ttdoc">Represents a hittable.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00140">entities.h:141</a></div></div>
+<div class="ttc" id="astructt__hittable_html"><div class="ttname"><a href="structt__hittable.html">t_hittable</a></div><div class="ttdoc">Represents a hittable.</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00100">entities_bonus.h:101</a></div></div>
 <div class="ttc" id="astructt__interval_html"><div class="ttname"><a href="structt__interval.html">t_interval</a></div><div class="ttdoc">Interval of accepted values.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00038">utils.h:39</a></div></div>
 <div class="ttc" id="astructt__interval_html_a306b5ca364bf842a8ff5bbfc0b4d4a4b"><div class="ttname"><a href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">t_interval::max</a></div><div class="ttdeci">float max</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00041">utils.h:41</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -231,68 +264,36 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="ray_8h_a2cffd188fb76990901db47a2c3ac638f_icgraph.svg" width="100%" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="ray_8h_a2cffd188fb76990901db47a2c3ac638f_icgraph.svg" width="100%" height="466"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ac56e9ac7acfb4658469e190c022b0d63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac56e9ac7acfb4658469e190c022b0d63">&#9670;&nbsp;</a></span>ft_scale_ray()</h2>
+<a id="a165a4eb7af65fda20a69dfd50b9ed119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a165a4eb7af65fda20a69dfd50b9ed119">&#9670;&nbsp;</a></span>ft_background_colour()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_scale_ray </td>
+          <td class="memname"><a class="el" href="structt__colour.html">t_colour</a> ft_background_colour </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structt__ray.html">t_ray</a>&#160;</td>
-          <td class="paramname"><em>ray</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>ray</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>d</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Represents a ray. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Returns the background colour. </p>
+<p>The background colour depends on the ray direction and creates a transition between two colours </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ray</td><td>General ray created by the image manager </td></tr>
-    <tr><td class="paramname">d</td><td>Distance traveled upon hit </td></tr>
+    <tr><td class="paramname">ray</td><td>Ray shot into scene </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> Ray vector to hit </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="ray_8c_source.html#l00015">15</a> of file <a class="el" href="ray_8c_source.html">ray.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a>(ray.<a class="code" href="structt__ray.html#a428dad59baf203faaf08742b885037c1">origin</a>, <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(ray.<a class="code" href="structt__ray.html#af64cb245ee8ece9da45ed51f894db302">direction</a>, d)));</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="ttc" id="astructt__ray_html_a428dad59baf203faaf08742b885037c1"><div class="ttname"><a href="structt__ray.html#a428dad59baf203faaf08742b885037c1">t_ray::origin</a></div><div class="ttdeci">t_vec3 origin</div><div class="ttdef"><b>Definition:</b> <a href="ray_8h_source.html#l00034">ray.h:34</a></div></div>
-<div class="ttc" id="astructt__ray_html_af64cb245ee8ece9da45ed51f894db302"><div class="ttname"><a href="structt__ray.html#af64cb245ee8ece9da45ed51f894db302">t_ray::direction</a></div><div class="ttdeci">t_vec3 direction</div><div class="ttdef"><b>Definition:</b> <a href="ray_8h_source.html#l00035">ray.h:35</a></div></div>
-<div class="ttc" id="avec3_8h_html_a73e2caf4c2a51ed954b7349c6be2b3c3"><div class="ttname"><a href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a></div><div class="ttdeci">t_vec3 ft_vec3_add(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Add two vectors.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00015">vec3_arithmetics.c:15</a></div></div>
-<div class="ttc" id="avec3_8h_html_ac80a1c20941c96a8fafad255dac59092"><div class="ttname"><a href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a></div><div class="ttdeci">t_vec3 ft_vec3_scale(t_vec3 v, float a)</div><div class="ttdoc">Scale a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00033">vec3_arithmetics.c:33</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="ray_8h_ac56e9ac7acfb4658469e190c022b0d63_cgraph.svg" width="270" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="ray_8h_ac56e9ac7acfb4658469e190c022b0d63_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__colour.html" title="Represents an RGB colour with float values from 0.0 - 1.0.">t_colour</a> </dd></dl>
 
 </div>
 </div>

@@ -1,4 +1,0 @@
-<map id="ft_cy_visible" name="ft_cy_visible">
-<area shape="rect" id="node1" title="Checks if cylinder is not blocked by another object." alt="" coords="5,5,108,32"/>
-<area shape="rect" id="node2" href="$utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa" title="Determines if value is surrounded by the interval." alt="" coords="156,5,259,32"/>
-</map>

@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('error__syscall_8h_source.html',''); in
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/11/14 07:50:58 by gwolf             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2023/11/20 11:50:30 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/26 18:17:02 by gwolf            ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -113,27 +113,23 @@ $(document).ready(function(){initNavTree('error__syscall_8h_source.html',''); in
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"># include &lt;fcntl.h&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Home-grown libs</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="error__type_8h.html">error_type.h</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="error__msg_8h.html">error_msg.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>   <a class="code" href="error__syscall_8h.html#abf340aed99dd0770e292523412675343">ft_err_open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *path, <span class="keywordtype">int</span> flag, <span class="keywordtype">int</span> *fd);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>   <a class="code" href="error__syscall_8h.html#a3e39b3f560404b954295453e40c41171">ft_err_close</a>(<span class="keywordtype">int</span> fd);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>   <a class="code" href="error__syscall_8h.html#a1ab50ff4af961d85a53bf12a8f398ba3">ft_err_malloc</a>(<span class="keywordtype">void</span> **ptr, <span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="code" href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a>   <a class="code" href="error__syscall_8h.html#af521961510b5af3e286f0ccd77cd691d">ft_err_read</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">void</span> *buf, <span class="keywordtype">size_t</span> size, ssize_t *rd_bytes);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aerror__msg_8h_html"><div class="ttname"><a href="error__msg_8h.html">error_msg.h</a></div></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"># include &quot;miniRT_error.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* ====== FUNCTIONS ====== */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;t_err   <a class="code" href="error__syscall_8h.html#abf340aed99dd0770e292523412675343">ft_err_open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *path, <span class="keywordtype">int</span> flag, <span class="keywordtype">int</span> *fd);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;t_err   <a class="code" href="error__syscall_8h.html#a3e39b3f560404b954295453e40c41171">ft_err_close</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;t_err   <a class="code" href="error__syscall_8h.html#a1ab50ff4af961d85a53bf12a8f398ba3">ft_err_malloc</a>(<span class="keywordtype">void</span> **ptr, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;t_err   <a class="code" href="error__syscall_8h.html#af521961510b5af3e286f0ccd77cd691d">ft_err_read</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">void</span> *buf, <span class="keywordtype">size_t</span> size, ssize_t *rd_bytes);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aerror__syscall_8h_html_a1ab50ff4af961d85a53bf12a8f398ba3"><div class="ttname"><a href="error__syscall_8h.html#a1ab50ff4af961d85a53bf12a8f398ba3">ft_err_malloc</a></div><div class="ttdeci">t_err ft_err_malloc(void **ptr, size_t size)</div><div class="ttdoc">Wrapper function for malloc() to print errno.</div><div class="ttdef"><b>Definition:</b> <a href="error__syscall_8c_source.html#l00041">error_syscall.c:41</a></div></div>
 <div class="ttc" id="aerror__syscall_8h_html_a3e39b3f560404b954295453e40c41171"><div class="ttname"><a href="error__syscall_8h.html#a3e39b3f560404b954295453e40c41171">ft_err_close</a></div><div class="ttdeci">t_err ft_err_close(int fd)</div><div class="ttdoc">Wrapper function for close() to print errno.</div><div class="ttdef"><b>Definition:</b> <a href="error__syscall_8c_source.html#l00027">error_syscall.c:27</a></div></div>
 <div class="ttc" id="aerror__syscall_8h_html_abf340aed99dd0770e292523412675343"><div class="ttname"><a href="error__syscall_8h.html#abf340aed99dd0770e292523412675343">ft_err_open</a></div><div class="ttdeci">t_err ft_err_open(const char *path, int flag, int *fd)</div><div class="ttdoc">Wrapper function for open() to print errno.</div><div class="ttdef"><b>Definition:</b> <a href="error__syscall_8c_source.html#l00015">error_syscall.c:15</a></div></div>
 <div class="ttc" id="aerror__syscall_8h_html_af521961510b5af3e286f0ccd77cd691d"><div class="ttname"><a href="error__syscall_8h.html#af521961510b5af3e286f0ccd77cd691d">ft_err_read</a></div><div class="ttdeci">t_err ft_err_read(int fd, void *buf, size_t size, ssize_t *rd_bytes)</div><div class="ttdoc">Wrapper function for read() to print errno.</div><div class="ttdef"><b>Definition:</b> <a href="error__syscall_8c_source.html#l00053">error_syscall.c:53</a></div></div>
-<div class="ttc" id="aerror__type_8h_html"><div class="ttname"><a href="error__type_8h.html">error_type.h</a></div></div>
-<div class="ttc" id="aerror__type_8h_html_a1302176c6f5df85cc624eb5f5594a933"><div class="ttname"><a href="error__type_8h.html#a1302176c6f5df85cc624eb5f5594a933">t_err</a></div><div class="ttdeci">t_err</div><div class="ttdoc">Gives return of function explicit meaning with SUCCESS or ERROR.</div><div class="ttdef"><b>Definition:</b> <a href="error__type_8h_source.html#l00022">error_type.h:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

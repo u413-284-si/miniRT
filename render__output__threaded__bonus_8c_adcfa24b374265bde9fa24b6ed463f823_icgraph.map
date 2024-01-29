@@ -1,6 +1,6 @@
 <map id="ft_is_printing" name="ft_is_printing">
 <area shape="rect" id="node1" title="Helper function to check is_printing flag." alt="" coords="497,5,604,32"/>
-<area shape="rect" id="node2" href="$render__loop__mlx__bonus_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,5,449,32"/>
-<area shape="rect" id="node3" href="$render__loop__mlx__bonus_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,5,260,32"/>
+<area shape="rect" id="node2" href="$render_8h.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,5,449,32"/>
+<area shape="rect" id="node3" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,5,260,32"/>
 <area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
 </map>

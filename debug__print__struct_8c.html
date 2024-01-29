@@ -112,46 +112,6 @@ Functions</h2></td></tr>
 <tr class="separator:a1246f44754b1a8c705c0c9c66ba5eca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a1246f44754b1a8c705c0c9c66ba5eca5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1246f44754b1a8c705c0c9c66ba5eca5">&#9670;&nbsp;</a></span>ft_print_colour()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ft_print_colour </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structt__colour.html">t_colour</a>&#160;</td>
-          <td class="paramname"><em>colour</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Prints variables of a colour. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">colour</td><td>Colour to print. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="debug__print__struct_8c_source.html#l00020">20</a> of file <a class="el" href="debug__print__struct_8c_source.html">debug_print_struct.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    printf(<span class="stringliteral">&quot;r: %.6f, g: %.6f, b: %.6f\n&quot;</span>, col.<a class="code" href="structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b">r</a>, col.<a class="code" href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">g</a>, col.<a class="code" href="structt__colour.html#a83fc1af92e29717b4513d121b0c72c7d">b</a>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="ttc" id="astructt__colour_html_a4788d82c901b9367dd5c0daff8a7616b"><div class="ttname"><a href="structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b">t_colour::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00038">colour.h:38</a></div></div>
-<div class="ttc" id="astructt__colour_html_a83fc1af92e29717b4513d121b0c72c7d"><div class="ttname"><a href="structt__colour.html#a83fc1af92e29717b4513d121b0c72c7d">t_colour::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00040">colour.h:40</a></div></div>
-<div class="ttc" id="astructt__colour_html_a8cf17d727651616de6f2b79ef32170cd"><div class="ttname"><a href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">t_colour::g</a></div><div class="ttdeci">float g</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00039">colour.h:39</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="debug__print__struct_8c_a1246f44754b1a8c705c0c9c66ba5eca5_icgraph.svg" width="474" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
 <a id="a99a90f3ee5487824a003c2196bf2f56c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99a90f3ee5487824a003c2196bf2f56c">&#9670;&nbsp;</a></span>ft_print_vec3()</h2>
 
@@ -180,13 +140,53 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    printf(<span class="stringliteral">&quot;x: %.6f, y: %.6f, z: %.6f\n&quot;</span>, vec.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a>, vec.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a>, vec.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="ttc" id="astructt__vec3_html_aa4f0d3eebc3c443f9be81bf48561a217"><div class="ttname"><a href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">t_vec3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00036">vec3.h:36</a></div></div>
-<div class="ttc" id="astructt__vec3_html_ad0da36b2558901e21e7a30f6c227a45e"><div class="ttname"><a href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">t_vec3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00035">vec3.h:35</a></div></div>
-<div class="ttc" id="astructt__vec3_html_af73583b1e980b0aa03f9884812e9fd4d"><div class="ttname"><a href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">t_vec3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00037">vec3.h:37</a></div></div>
+<div class="ttc" id="astructt__vec3_html_aa4f0d3eebc3c443f9be81bf48561a217"><div class="ttname"><a href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">t_vec3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00034">vec3.h:34</a></div></div>
+<div class="ttc" id="astructt__vec3_html_ad0da36b2558901e21e7a30f6c227a45e"><div class="ttname"><a href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">t_vec3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00033">vec3.h:33</a></div></div>
+<div class="ttc" id="astructt__vec3_html_af73583b1e980b0aa03f9884812e9fd4d"><div class="ttname"><a href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">t_vec3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00035">vec3.h:35</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="debug__print__struct_8c_a99a90f3ee5487824a003c2196bf2f56c_icgraph.svg" width="466" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1246f44754b1a8c705c0c9c66ba5eca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1246f44754b1a8c705c0c9c66ba5eca5">&#9670;&nbsp;</a></span>ft_print_colour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ft_print_colour </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structt__colour.html">t_colour</a>&#160;</td>
+          <td class="paramname"><em>colour</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints variables of a colour. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">colour</td><td>Colour to print. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="debug__print__struct_8c_source.html#l00020">20</a> of file <a class="el" href="debug__print__struct_8c_source.html">debug_print_struct.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    printf(<span class="stringliteral">&quot;r: %.6f, g: %.6f, b: %.6f\n&quot;</span>, col.<a class="code" href="structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b">r</a>, col.<a class="code" href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">g</a>, col.<a class="code" href="structt__colour.html#a83fc1af92e29717b4513d121b0c72c7d">b</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="ttc" id="astructt__colour_html_a4788d82c901b9367dd5c0daff8a7616b"><div class="ttname"><a href="structt__colour.html#a4788d82c901b9367dd5c0daff8a7616b">t_colour::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00034">colour.h:34</a></div></div>
+<div class="ttc" id="astructt__colour_html_a83fc1af92e29717b4513d121b0c72c7d"><div class="ttname"><a href="structt__colour.html#a83fc1af92e29717b4513d121b0c72c7d">t_colour::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00036">colour.h:36</a></div></div>
+<div class="ttc" id="astructt__colour_html_a8cf17d727651616de6f2b79ef32170cd"><div class="ttname"><a href="structt__colour.html#a8cf17d727651616de6f2b79ef32170cd">t_colour::g</a></div><div class="ttdeci">float g</div><div class="ttdef"><b>Definition:</b> <a href="colour_8h_source.html#l00035">colour.h:35</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="debug__print__struct_8c_a1246f44754b1a8c705c0c9c66ba5eca5_icgraph.svg" width="474" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

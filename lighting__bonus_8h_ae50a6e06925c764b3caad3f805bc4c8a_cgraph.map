@@ -1,8 +1,0 @@
-<map id="ft_diffuse_light" name="ft_diffuse_light">
-<area shape="rect" id="node1" title="Create diffuse lighting." alt="" coords="5,56,124,83"/>
-<area shape="rect" id="node2" href="$vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91" title="Calculate the scalar product of two vectors." alt="" coords="179,5,276,32"/>
-<area shape="rect" id="node3" href="$vec3_8h.html#a38fe500bd27847b866b9630146e43250" title="Normalise a vector." alt="" coords="172,56,283,83"/>
-<area shape="rect" id="node6" href="$vec3_8h.html#a54e984820b74bd803de43ce36c8cb292" title="Subtract two vectors." alt="" coords="178,107,277,133"/>
-<area shape="rect" id="node4" href="$vec3__linalgebra_8c.html#aa84621bd979d3b12b97908f653faf88e" title="Calculate the absolute value of a vector." alt="" coords="337,31,435,57"/>
-<area shape="rect" id="node5" href="$vec3_8h.html#ac80a1c20941c96a8fafad255dac59092" title="Scale a vector." alt="" coords="331,81,441,108"/>
-</map>

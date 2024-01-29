@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('structt__render.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="render_8h_source.html">render.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for t_render:</div>
 <div class="dyncontent">
@@ -141,41 +141,36 @@ Data Fields</h2></td></tr>
     <tr><td class="paramname">mlx_ptrs</td><td>mlx pointers struct. </td></tr>
     <tr><td class="paramname">cam</td><td>Camera struct. </td></tr>
     <tr><td class="paramname">scene</td><td>Scene struct. </td></tr>
+    <tr><td class="paramname">win_size</td><td>Window size. </td></tr>
+    <tr><td class="paramname">mouse</td><td>Mouse struct. </td></tr>
+    <tr><td class="paramname">menu</td><td>Menu struct. </td></tr>
+    <tr><td class="paramname">options</td><td>Bit field of options. </td></tr>
+    <tr><td class="paramname">active_hittable</td><td>Selected hittable entity. </td></tr>
+    <tr><td class="paramname">active_light</td><td>Selected light entity. </td></tr>
+    <tr><td class="paramname">last_render_time</td><td>Time delta for the last rendered frame. </td></tr>
+    <tr><td class="paramname">is_printing</td><td>Is printing flag. </td></tr>
+    <tr><td class="paramname">mut_print</td><td>Mutex for is_printing flag. </td></tr>
+    <tr><td class="paramname">sample_buffer</td><td>Sample buffer to store generated image samples. </td></tr>
+    <tr><td class="paramname">sample_goal</td><td>Amount of samples to generate. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="render_8h_source.html#l00127">127</a> of file <a class="el" href="render_8h_source.html">render.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00077">77</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a97dbc86c41e52e91a8d6b9cb64c5f62e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97dbc86c41e52e91a8d6b9cb64c5f62e">&#9670;&nbsp;</a></span>active_hittable</h2>
+<a id="a9ce880ae43b7ec34ab96f0a387451285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce880ae43b7ec34ab96f0a387451285">&#9670;&nbsp;</a></span>mlx_ptrs</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int active_hittable</td>
+          <td class="memname"><a class="el" href="structt__mlx__ptrs.html">t_mlx_ptrs</a> mlx_ptrs</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="render_8h_source.html#l00136">136</a> of file <a class="el" href="render_8h_source.html">render.h</a>.</p>
-
-</div>
-</div>
-<a id="aea093a88779f1f5045a2b62d4534a562"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea093a88779f1f5045a2b62d4534a562">&#9670;&nbsp;</a></span>active_light</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int active_light</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render_8h_source.html#l00137">137</a> of file <a class="el" href="render_8h_source.html">render.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00079">79</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
 
 </div>
 </div>
@@ -191,151 +186,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="render_8h_source.html#l00130">130</a> of file <a class="el" href="render_8h_source.html">render.h</a>.</p>
-
-</div>
-</div>
-<a id="a39431f3a6d5f8a483fc5788f9ac113d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39431f3a6d5f8a483fc5788f9ac113d5">&#9670;&nbsp;</a></span>is_printing</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_printing</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render__bonus_8h_source.html#l00131">131</a> of file <a class="el" href="render__bonus_8h_source.html">render_bonus.h</a>.</p>
-
-</div>
-</div>
-<a id="a682f59d7ca7a9e9dc4471348fde5cafc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a682f59d7ca7a9e9dc4471348fde5cafc">&#9670;&nbsp;</a></span>last_render_time</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64_t last_render_time</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render__bonus_8h_source.html#l00130">130</a> of file <a class="el" href="render__bonus_8h_source.html">render_bonus.h</a>.</p>
-
-</div>
-</div>
-<a id="a09ec586ea52e834febce30c11612d8cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09ec586ea52e834febce30c11612d8cb">&#9670;&nbsp;</a></span>menu</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structt__menu.html">t_menu</a> menu</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render_8h_source.html#l00134">134</a> of file <a class="el" href="render_8h_source.html">render.h</a>.</p>
-
-</div>
-</div>
-<a id="a9ce880ae43b7ec34ab96f0a387451285"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ce880ae43b7ec34ab96f0a387451285">&#9670;&nbsp;</a></span>mlx_ptrs</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structt__mlx__ptrs.html">t_mlx_ptrs</a> mlx_ptrs</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render_8h_source.html#l00129">129</a> of file <a class="el" href="render_8h_source.html">render.h</a>.</p>
-
-</div>
-</div>
-<a id="a05e7793b8f9e571d32eb579f5e4362c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05e7793b8f9e571d32eb579f5e4362c9">&#9670;&nbsp;</a></span>mouse</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structt__mouse.html">t_mouse</a> mouse</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render_8h_source.html#l00133">133</a> of file <a class="el" href="render_8h_source.html">render.h</a>.</p>
-
-</div>
-</div>
-<a id="a198d940ac7111b0f9328e051c093b5c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a198d940ac7111b0f9328e051c093b5c4">&#9670;&nbsp;</a></span>mut_print</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pthread_mutex_t mut_print</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render__bonus_8h_source.html#l00132">132</a> of file <a class="el" href="render__bonus_8h_source.html">render_bonus.h</a>.</p>
-
-</div>
-</div>
-<a id="a2ba60f781746d31baf29e8c5a35d07e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ba60f781746d31baf29e8c5a35d07e7">&#9670;&nbsp;</a></span>options</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t options</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render_8h_source.html#l00135">135</a> of file <a class="el" href="render_8h_source.html">render.h</a>.</p>
-
-</div>
-</div>
-<a id="a67f62f6e2cffe430aa8670ce15995b93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67f62f6e2cffe430aa8670ce15995b93">&#9670;&nbsp;</a></span>sample_buffer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structt__colour.html">t_colour</a>* sample_buffer</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render__bonus_8h_source.html#l00133">133</a> of file <a class="el" href="render__bonus_8h_source.html">render_bonus.h</a>.</p>
-
-</div>
-</div>
-<a id="aedba49e5858a28c81896d6278448084b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedba49e5858a28c81896d6278448084b">&#9670;&nbsp;</a></span>sample_goal</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t sample_goal</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render__bonus_8h_source.html#l00134">134</a> of file <a class="el" href="render__bonus_8h_source.html">render_bonus.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00080">80</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
 
 </div>
 </div>
@@ -351,7 +202,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="render_8h_source.html#l00131">131</a> of file <a class="el" href="render_8h_source.html">render.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00081">81</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
 
 </div>
 </div>
@@ -367,7 +218,167 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="render_8h_source.html#l00132">132</a> of file <a class="el" href="render_8h_source.html">render.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00082">82</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
+
+</div>
+</div>
+<a id="a05e7793b8f9e571d32eb579f5e4362c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05e7793b8f9e571d32eb579f5e4362c9">&#9670;&nbsp;</a></span>mouse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__mouse.html">t_mouse</a> mouse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00083">83</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
+
+</div>
+</div>
+<a id="a09ec586ea52e834febce30c11612d8cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ec586ea52e834febce30c11612d8cb">&#9670;&nbsp;</a></span>menu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__menu.html">t_menu</a> menu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00084">84</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
+
+</div>
+</div>
+<a id="a2ba60f781746d31baf29e8c5a35d07e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba60f781746d31baf29e8c5a35d07e7">&#9670;&nbsp;</a></span>options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t options</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00085">85</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
+
+</div>
+</div>
+<a id="a97dbc86c41e52e91a8d6b9cb64c5f62e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97dbc86c41e52e91a8d6b9cb64c5f62e">&#9670;&nbsp;</a></span>active_hittable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int active_hittable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00086">86</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
+
+</div>
+</div>
+<a id="aea093a88779f1f5045a2b62d4534a562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea093a88779f1f5045a2b62d4534a562">&#9670;&nbsp;</a></span>active_light</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int active_light</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00087">87</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
+
+</div>
+</div>
+<a id="a682f59d7ca7a9e9dc4471348fde5cafc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682f59d7ca7a9e9dc4471348fde5cafc">&#9670;&nbsp;</a></span>last_render_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t last_render_time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00088">88</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
+
+</div>
+</div>
+<a id="a39431f3a6d5f8a483fc5788f9ac113d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39431f3a6d5f8a483fc5788f9ac113d5">&#9670;&nbsp;</a></span>is_printing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_printing</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00089">89</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
+
+</div>
+</div>
+<a id="a198d940ac7111b0f9328e051c093b5c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198d940ac7111b0f9328e051c093b5c4">&#9670;&nbsp;</a></span>mut_print</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t mut_print</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00090">90</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
+
+</div>
+</div>
+<a id="a67f62f6e2cffe430aa8670ce15995b93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67f62f6e2cffe430aa8670ce15995b93">&#9670;&nbsp;</a></span>sample_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__colour.html">t_colour</a>* sample_buffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00091">91</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
+
+</div>
+</div>
+<a id="aedba49e5858a28c81896d6278448084b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedba49e5858a28c81896d6278448084b">&#9670;&nbsp;</a></span>sample_goal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t sample_goal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="render__struct__bonus_8h_source.html#l00092">92</a> of file <a class="el" href="render__struct__bonus_8h_source.html">render_struct_bonus.h</a>.</p>
 
 </div>
 </div>

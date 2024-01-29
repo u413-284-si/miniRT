@@ -162,10 +162,10 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        .z = v1.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> + v2.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>,</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    });</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="ttc" id="astructt__vec3_html"><div class="ttname"><a href="structt__vec3.html">t_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00033">vec3.h:34</a></div></div>
-<div class="ttc" id="astructt__vec3_html_aa4f0d3eebc3c443f9be81bf48561a217"><div class="ttname"><a href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">t_vec3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00036">vec3.h:36</a></div></div>
-<div class="ttc" id="astructt__vec3_html_ad0da36b2558901e21e7a30f6c227a45e"><div class="ttname"><a href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">t_vec3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00035">vec3.h:35</a></div></div>
-<div class="ttc" id="astructt__vec3_html_af73583b1e980b0aa03f9884812e9fd4d"><div class="ttname"><a href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">t_vec3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00037">vec3.h:37</a></div></div>
+<div class="ttc" id="astructt__vec3_html"><div class="ttname"><a href="structt__vec3.html">t_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00031">vec3.h:32</a></div></div>
+<div class="ttc" id="astructt__vec3_html_aa4f0d3eebc3c443f9be81bf48561a217"><div class="ttname"><a href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">t_vec3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00034">vec3.h:34</a></div></div>
+<div class="ttc" id="astructt__vec3_html_ad0da36b2558901e21e7a30f6c227a45e"><div class="ttname"><a href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">t_vec3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00033">vec3.h:33</a></div></div>
+<div class="ttc" id="astructt__vec3_html_af73583b1e980b0aa03f9884812e9fd4d"><div class="ttname"><a href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">t_vec3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00035">vec3.h:35</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -175,14 +175,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a19bc1d17592698776e89a5093110320c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19bc1d17592698776e89a5093110320c">&#9670;&nbsp;</a></span>ft_vec3_cross()</h2>
+<a id="a54e984820b74bd803de43ce36c8cb292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e984820b74bd803de43ce36c8cb292">&#9670;&nbsp;</a></span>ft_vec3_sub()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_vec3_cross </td>
+          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_vec3_sub </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td>
           <td class="paramname"><em>v1</em>, </td>
@@ -201,28 +201,81 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Calculate the cross product of two vectors. </p>
+<p>Subtract two vectors. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v1</td><td>The first vector </td></tr>
-    <tr><td class="paramname">v2</td><td>The second vector </td></tr>
+    <tr><td class="paramname">v1</td><td>The vector from which to subtract (minuend) </td></tr>
+    <tr><td class="paramname">v2</td><td>The vector being subtracted (subtrahend) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vec3__arithmetics_8c_source.html#l00047">47</a> of file <a class="el" href="vec3__arithmetics_8c_source.html">vec3_arithmetics.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="structt__vec3.html">t_vec3</a>){</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        .x = v1.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * v2.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> - v1.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * v2.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a>,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        .y = v1.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * v2.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> - v1.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * v2.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        .z = v1.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * v2.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> - v1.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * v2.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a>,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    });</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="vec3__arithmetics_8c_source.html#l00024">24</a> of file <a class="el" href="vec3__arithmetics_8c_source.html">vec3_arithmetics.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="structt__vec3.html">t_vec3</a>){</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        .x = v1.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> - v2.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        .y = v1.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> - v2.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a>,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        .z = v1.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> - v2.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    });</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="vec3__arithmetics_8c_a19bc1d17592698776e89a5093110320c_icgraph.svg" width="100%" height="546"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="vec3__arithmetics_8c_a54e984820b74bd803de43ce36c8cb292_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac80a1c20941c96a8fafad255dac59092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80a1c20941c96a8fafad255dac59092">&#9670;&nbsp;</a></span>ft_vec3_scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_vec3_scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Scale a vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>The vector to be scaled </td></tr>
+    <tr><td class="paramname">a</td><td>Scalar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="vec3__arithmetics_8c_source.html#l00033">33</a> of file <a class="el" href="vec3__arithmetics_8c_source.html">vec3_arithmetics.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="structt__vec3.html">t_vec3</a>){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        .x = v.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * a,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        .y = v.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * a,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        .z = v.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * a,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    });</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="vec3__arithmetics_8c_ac80a1c20941c96a8fafad255dac59092_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -277,68 +330,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ac80a1c20941c96a8fafad255dac59092"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac80a1c20941c96a8fafad255dac59092">&#9670;&nbsp;</a></span>ft_vec3_scale()</h2>
+<a id="a19bc1d17592698776e89a5093110320c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19bc1d17592698776e89a5093110320c">&#9670;&nbsp;</a></span>ft_vec3_cross()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_vec3_scale </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td>
-          <td class="paramname"><em>v</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Scale a vector. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v</td><td>The vector to be scaled </td></tr>
-    <tr><td class="paramname">a</td><td>Scalar <br  />
- </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="vec3__arithmetics_8c_source.html#l00033">33</a> of file <a class="el" href="vec3__arithmetics_8c_source.html">vec3_arithmetics.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="structt__vec3.html">t_vec3</a>){</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        .x = v.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * a,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        .y = v.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * a,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        .z = v.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * a,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    });</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="vec3__arithmetics_8c_ac80a1c20941c96a8fafad255dac59092_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a54e984820b74bd803de43ce36c8cb292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54e984820b74bd803de43ce36c8cb292">&#9670;&nbsp;</a></span>ft_vec3_sub()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_vec3_sub </td>
+          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_vec3_cross </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td>
           <td class="paramname"><em>v1</em>, </td>
@@ -357,28 +356,28 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Subtract two vectors. </p>
+<p>Calculate the cross product of two vectors. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v1</td><td>The vector from which to subtract (minuend) </td></tr>
-    <tr><td class="paramname">v2</td><td>The vector being subtracted (subtrahend) </td></tr>
+    <tr><td class="paramname">v1</td><td>The first vector </td></tr>
+    <tr><td class="paramname">v2</td><td>The second vector </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vec3__arithmetics_8c_source.html#l00024">24</a> of file <a class="el" href="vec3__arithmetics_8c_source.html">vec3_arithmetics.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="structt__vec3.html">t_vec3</a>){</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        .x = v1.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> - v2.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a>,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        .y = v1.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> - v2.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a>,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        .z = v1.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> - v2.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    });</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="vec3__arithmetics_8c_source.html#l00047">47</a> of file <a class="el" href="vec3__arithmetics_8c_source.html">vec3_arithmetics.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="structt__vec3.html">t_vec3</a>){</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        .x = v1.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * v2.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> - v1.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * v2.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a>,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        .y = v1.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a> * v2.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> - v1.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * v2.<a class="code" href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">z</a>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        .z = v1.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a> * v2.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> - v1.<a class="code" href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a> * v2.<a class="code" href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">x</a>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    });</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="vec3__arithmetics_8c_a54e984820b74bd803de43ce36c8cb292_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="vec3__arithmetics_8c_a19bc1d17592698776e89a5093110320c_icgraph.svg" width="100%" height="550"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

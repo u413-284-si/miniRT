@@ -1,0 +1,22 @@
+<map id="inc/manip_bonus.h" name="inc/manip_bonus.h">
+<area shape="rect" id="node1" title=" " alt="" coords="217,5,361,32"/>
+<area shape="rect" id="node2" href="$manip_8h.html" title=" " alt="" coords="289,80,364,107"/>
+<area shape="rect" id="node3" href="$render__struct__bonus_8h.html" title=" " alt="" coords="206,155,372,181"/>
+<area shape="rect" id="node4" href="$render__struct_8h.html" title=" " alt="" coords="181,229,301,256"/>
+<area shape="rect" id="node16" href="$entities__bonus_8h.html" title=" " alt="" coords="291,304,420,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="529,677,612,704"/>
+<area shape="rect" id="node6" title=" " alt="" coords="91,528,162,555"/>
+<area shape="rect" id="node7" href="$vec2_8h.html" title=" " alt="" coords="26,379,91,405"/>
+<area shape="rect" id="node8" href="$camera_8h.html" title=" " alt="" coords="184,304,266,331"/>
+<area shape="rect" id="node9" href="$vec3_8h.html" title=" " alt="" coords="483,603,548,629"/>
+<area shape="rect" id="node11" href="$error__syscall_8h.html" title=" " alt="" coords="166,379,284,405"/>
+<area shape="rect" id="node14" href="$utils_8h.html" title=" " alt="" coords="324,528,387,555"/>
+<area shape="rect" id="node15" href="$mini_r_t__config__bonus_8h.html" title=" " alt="" coords="308,379,478,405"/>
+<area shape="rect" id="node10" title=" " alt="" coords="426,677,494,704"/>
+<area shape="rect" id="node12" title=" " alt="" coords="170,453,232,480"/>
+<area shape="rect" id="node13" title=" " alt="" coords="256,453,372,480"/>
+<area shape="rect" id="node17" href="$entities_8h.html" title=" " alt="" coords="553,379,636,405"/>
+<area shape="rect" id="node18" title=" " alt="" coords="604,453,675,480"/>
+<area shape="rect" id="node19" href="$colour_8h.html" title=" " alt="" coords="402,453,475,480"/>
+<area shape="rect" id="node20" title=" " alt="" coords="412,528,478,555"/>
+</map>

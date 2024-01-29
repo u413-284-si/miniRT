@@ -1,5 +1,0 @@
-<map id="ft_manip_ambient" name="ft_manip_ambient">
-<area shape="rect" id="node1" title="Manipulates the ambient light." alt="" coords="340,5,480,32"/>
-<area shape="rect" id="node2" href="$render_8h.html#acff7acf5eb6145177496e67b32a74fba" title="Manipulates the active light." alt="" coords="177,5,292,32"/>
-<area shape="rect" id="node3" href="$render_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" title="Branches to the corresponding manipulation function." alt="" coords="5,5,129,32"/>
-</map>

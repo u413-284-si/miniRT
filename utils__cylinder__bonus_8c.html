@@ -119,35 +119,23 @@ Functions</h2></td></tr>
 <tr class="separator:aeb33f439a0d2093bdbcca7468e2e78b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a98c590ac9074c10dc7e18cfd033c0b9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98c590ac9074c10dc7e18cfd033c0b9b">&#9670;&nbsp;</a></span>ft_cy_check_cap()</h2>
+<a id="a873b926722f5b8fada3f51432dccd4be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873b926722f5b8fada3f51432dccd4be">&#9670;&nbsp;</a></span>ft_cy_normal()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ft_cy_check_cap </td>
+          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_cy_normal </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__hitrecord.html">t_hitrecord</a>&#160;</td>
+          <td class="paramname"><em>rec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="structt__cylinder.html">t_cylinder</a>&#160;</td>
-          <td class="paramname"><em>cy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td>
-          <td class="paramname"><em>cap</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structt__hitrecord.html">t_hitrecord</a> *&#160;</td>
-          <td class="paramname"><em>rec</em>&#160;</td>
+          <td class="paramname"><em>cy</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -157,54 +145,48 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if the ray actually hit the cylinder cap. </p>
-<p>Verifies if hit point is within the boundaries of the cylinder radius. Also discriminates rounding errors. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Calculates the normal on the point of intersection of the cylinder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">rec</td><td>Hit record of ray containing intersection with cylinder </td></tr>
     <tr><td class="paramname">cy</td><td>Cylinder </td></tr>
-    <tr><td class="paramname">cap</td><td>Cap in question </td></tr>
-    <tr><td class="paramname">d</td><td>Distance of ray indicating the potential hit </td></tr>
-    <tr><td class="paramname">rec</td><td>Hit record of ray containing most recent hit </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true If cap is hit </dd>
-<dd>
-false If cap is missed </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utils__cylinder__bonus_8c_source.html#l00054">54</a> of file <a class="el" href="utils__cylinder__bonus_8c_source.html">utils_cylinder_bonus.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="structt__vec3.html">t_vec3</a>  hit;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">float</span>   len;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    hit = <a class="code" href="ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63">ft_scale_ray</a>(rec-&gt;<a class="code" href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">ray</a>, d);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    len = <a class="code" href="vec3_8h.html#aa84621bd979d3b12b97908f653faf88e">ft_vec3_abs</a>(<a class="code" href="vec3_8h.html#a54e984820b74bd803de43ce36c8cb292">ft_vec3_sub</a>(hit, cap));</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    len += <a class="code" href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (len &lt;= cy.r &amp;&amp; d &gt; <a class="code" href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a> &amp;&amp; d &lt; rec-&gt;d)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        rec-&gt;<a class="code" href="structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07">axis_hit</a> = cap;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        rec-&gt;<a class="code" href="structt__hitrecord.html#a74e9a805207c5cc9511101a6f269fb02">wall_hit</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="ttc" id="aray_8h_html_ac56e9ac7acfb4658469e190c022b0d63"><div class="ttname"><a href="ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63">ft_scale_ray</a></div><div class="ttdeci">t_vec3 ft_scale_ray(t_ray ray, float d)</div><div class="ttdoc">Represents a ray.</div><div class="ttdef"><b>Definition:</b> <a href="ray_8c_source.html#l00015">ray.c:15</a></div></div>
-<div class="ttc" id="astructt__hitrecord_html_a3e7ae304525bac56f4d09724ea2c080f"><div class="ttname"><a href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">t_hitrecord::ray</a></div><div class="ttdeci">t_ray ray</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00042">hit_manager.h:42</a></div></div>
-<div class="ttc" id="astructt__hitrecord_html_a74e9a805207c5cc9511101a6f269fb02"><div class="ttname"><a href="structt__hitrecord.html#a74e9a805207c5cc9511101a6f269fb02">t_hitrecord::wall_hit</a></div><div class="ttdeci">bool wall_hit</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager__bonus_8h_source.html#l00062">hit_manager_bonus.h:62</a></div></div>
+<p class="definition">Definition at line <a class="el" href="utils__cylinder__bonus_8c_source.html#l00016">16</a> of file <a class="el" href="utils__cylinder__bonus_8c_source.html">utils_cylinder_bonus.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="structt__vec3.html">t_vec3</a>  normal;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="vec3_8h.html#add7f4f27ee8cadcbf62ffbfecb98f64f">ft_vec3_equal</a>(rec.<a class="code" href="structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07">axis_hit</a>, cy.<a class="code" href="structt__cylinder.html#a2df840edc410ea9564f08b4e8ada590a">cap1</a>))</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        normal = <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(cy.<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>, -1);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="vec3_8h.html#add7f4f27ee8cadcbf62ffbfecb98f64f">ft_vec3_equal</a>(rec.<a class="code" href="structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07">axis_hit</a>, cy.<a class="code" href="structt__cylinder.html#a7b26d2375d2cc500c5d7cef9d849cdab">cap2</a>))</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        normal = cy.<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        normal = <a class="code" href="vec3_8h.html#a38fe500bd27847b866b9630146e43250">ft_vec3_norm</a>(<a class="code" href="vec3_8h.html#a54e984820b74bd803de43ce36c8cb292">ft_vec3_sub</a>(rec.<a class="code" href="structt__hitrecord.html#a808be608283867f25494f82d235e9570">point</a>, rec.<a class="code" href="structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07">axis_hit</a>));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> (normal);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="ttc" id="astructt__cylinder_html_a2df840edc410ea9564f08b4e8ada590a"><div class="ttname"><a href="structt__cylinder.html#a2df840edc410ea9564f08b4e8ada590a">t_cylinder::cap1</a></div><div class="ttdeci">t_vec3 cap1</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00086">entities.h:86</a></div></div>
+<div class="ttc" id="astructt__cylinder_html_a7b26d2375d2cc500c5d7cef9d849cdab"><div class="ttname"><a href="structt__cylinder.html#a7b26d2375d2cc500c5d7cef9d849cdab">t_cylinder::cap2</a></div><div class="ttdeci">t_vec3 cap2</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00087">entities.h:87</a></div></div>
+<div class="ttc" id="astructt__cylinder_html_a7f4ed5c02961988cdae75eb415b617a6"><div class="ttname"><a href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">t_cylinder::axis</a></div><div class="ttdeci">t_vec3 axis</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00082">entities.h:82</a></div></div>
+<div class="ttc" id="astructt__hitrecord_html_a808be608283867f25494f82d235e9570"><div class="ttname"><a href="structt__hitrecord.html#a808be608283867f25494f82d235e9570">t_hitrecord::point</a></div><div class="ttdeci">t_vec3 point</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00043">hit_manager.h:43</a></div></div>
 <div class="ttc" id="astructt__hitrecord_html_a83c66f8e7af04debcb3b6c7013b4ac07"><div class="ttname"><a href="structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07">t_hitrecord::axis_hit</a></div><div class="ttdeci">t_vec3 axis_hit</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00045">hit_manager.h:45</a></div></div>
-<div class="ttc" id="astructt__vec3_html"><div class="ttname"><a href="structt__vec3.html">t_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00033">vec3.h:34</a></div></div>
-<div class="ttc" id="autils_8h_html_a002b2f4894492820fe708b1b7e7c5e70"><div class="ttname"><a href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a></div><div class="ttdeci">#define EPSILON</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00028">utils.h:28</a></div></div>
+<div class="ttc" id="astructt__vec3_html"><div class="ttname"><a href="structt__vec3.html">t_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00031">vec3.h:32</a></div></div>
+<div class="ttc" id="avec3_8h_html_a38fe500bd27847b866b9630146e43250"><div class="ttname"><a href="vec3_8h.html#a38fe500bd27847b866b9630146e43250">ft_vec3_norm</a></div><div class="ttdeci">t_vec3 ft_vec3_norm(t_vec3 v)</div><div class="ttdoc">Normalise a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__linalgebra_8c_source.html#l00021">vec3_linalgebra.c:21</a></div></div>
 <div class="ttc" id="avec3_8h_html_a54e984820b74bd803de43ce36c8cb292"><div class="ttname"><a href="vec3_8h.html#a54e984820b74bd803de43ce36c8cb292">ft_vec3_sub</a></div><div class="ttdeci">t_vec3 ft_vec3_sub(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Subtract two vectors.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00024">vec3_arithmetics.c:24</a></div></div>
-<div class="ttc" id="avec3_8h_html_aa84621bd979d3b12b97908f653faf88e"><div class="ttname"><a href="vec3_8h.html#aa84621bd979d3b12b97908f653faf88e">ft_vec3_abs</a></div><div class="ttdeci">float ft_vec3_abs(t_vec3 v)</div><div class="ttdoc">Calculate the absolute value of a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__linalgebra_8c_source.html#l00021">vec3_linalgebra.c:21</a></div></div>
+<div class="ttc" id="avec3_8h_html_ac80a1c20941c96a8fafad255dac59092"><div class="ttname"><a href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a></div><div class="ttdeci">t_vec3 ft_vec3_scale(t_vec3 v, float a)</div><div class="ttdoc">Scale a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00033">vec3_arithmetics.c:33</a></div></div>
+<div class="ttc" id="avec3_8h_html_add7f4f27ee8cadcbf62ffbfecb98f64f"><div class="ttname"><a href="vec3_8h.html#add7f4f27ee8cadcbf62ffbfecb98f64f">ft_vec3_equal</a></div><div class="ttdeci">bool ft_vec3_equal(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Determines if two vectors are equal.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__linalgebra_8c_source.html#l00043">vec3_linalgebra.c:43</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_a98c590ac9074c10dc7e18cfd033c0b9b_cgraph.svg" width="446" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_a873b926722f5b8fada3f51432dccd4be_cgraph.svg" width="468" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_a98c590ac9074c10dc7e18cfd033c0b9b_icgraph.svg" width="327" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_a873b926722f5b8fada3f51432dccd4be_icgraph.svg" width="311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -279,14 +261,16 @@ false If wall is missed </dd></dl>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="ttc" id="astructt__cylinder_html_a2df840edc410ea9564f08b4e8ada590a"><div class="ttname"><a href="structt__cylinder.html#a2df840edc410ea9564f08b4e8ada590a">t_cylinder::cap1</a></div><div class="ttdeci">t_vec3 cap1</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00091">entities.h:91</a></div></div>
-<div class="ttc" id="astructt__cylinder_html_a7f4ed5c02961988cdae75eb415b617a6"><div class="ttname"><a href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">t_cylinder::axis</a></div><div class="ttdeci">t_vec3 axis</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00087">entities.h:87</a></div></div>
-<div class="ttc" id="astructt__cylinder_html_a85f2f1bd58b3b44ffdf3881823393959"><div class="ttname"><a href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">t_cylinder::h</a></div><div class="ttdeci">float h</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00089">entities.h:89</a></div></div>
+<div class="ttc" id="aray_8h_html_ac56e9ac7acfb4658469e190c022b0d63"><div class="ttname"><a href="ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63">ft_scale_ray</a></div><div class="ttdeci">t_vec3 ft_scale_ray(t_ray ray, float d)</div><div class="ttdoc">Represents a ray.</div><div class="ttdef"><b>Definition:</b> <a href="ray__bonus_8c_source.html#l00015">ray_bonus.c:15</a></div></div>
+<div class="ttc" id="astructt__cylinder_html_a85f2f1bd58b3b44ffdf3881823393959"><div class="ttname"><a href="structt__cylinder.html#a85f2f1bd58b3b44ffdf3881823393959">t_cylinder::h</a></div><div class="ttdeci">float h</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00084">entities.h:84</a></div></div>
+<div class="ttc" id="astructt__hitrecord_html_a3e7ae304525bac56f4d09724ea2c080f"><div class="ttname"><a href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">t_hitrecord::ray</a></div><div class="ttdeci">t_ray ray</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00042">hit_manager.h:42</a></div></div>
+<div class="ttc" id="astructt__hitrecord_html_a74e9a805207c5cc9511101a6f269fb02"><div class="ttname"><a href="structt__hitrecord.html#a74e9a805207c5cc9511101a6f269fb02">t_hitrecord::wall_hit</a></div><div class="ttdeci">bool wall_hit</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager__bonus_8h_source.html#l00062">hit_manager_bonus.h:62</a></div></div>
 <div class="ttc" id="astructt__ray_html_a428dad59baf203faaf08742b885037c1"><div class="ttname"><a href="structt__ray.html#a428dad59baf203faaf08742b885037c1">t_ray::origin</a></div><div class="ttdeci">t_vec3 origin</div><div class="ttdef"><b>Definition:</b> <a href="ray_8h_source.html#l00034">ray.h:34</a></div></div>
 <div class="ttc" id="astructt__ray_html_af64cb245ee8ece9da45ed51f894db302"><div class="ttname"><a href="structt__ray.html#af64cb245ee8ece9da45ed51f894db302">t_ray::direction</a></div><div class="ttdeci">t_vec3 direction</div><div class="ttdef"><b>Definition:</b> <a href="ray_8h_source.html#l00035">ray.h:35</a></div></div>
+<div class="ttc" id="autils_8h_html_a002b2f4894492820fe708b1b7e7c5e70"><div class="ttname"><a href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a></div><div class="ttdeci">#define EPSILON</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00028">utils.h:28</a></div></div>
 <div class="ttc" id="avec3_8h_html_a73e2caf4c2a51ed954b7349c6be2b3c3"><div class="ttname"><a href="vec3_8h.html#a73e2caf4c2a51ed954b7349c6be2b3c3">ft_vec3_add</a></div><div class="ttdeci">t_vec3 ft_vec3_add(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Add two vectors.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00015">vec3_arithmetics.c:15</a></div></div>
 <div class="ttc" id="avec3_8h_html_a89fd02ae4b8b3602bc001664eb5e8f91"><div class="ttname"><a href="vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91">ft_vec3_dot</a></div><div class="ttdeci">float ft_vec3_dot(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Calculate the scalar product of two vectors.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00042">vec3_arithmetics.c:42</a></div></div>
-<div class="ttc" id="avec3_8h_html_ac80a1c20941c96a8fafad255dac59092"><div class="ttname"><a href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a></div><div class="ttdeci">t_vec3 ft_vec3_scale(t_vec3 v, float a)</div><div class="ttdoc">Scale a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00033">vec3_arithmetics.c:33</a></div></div>
+<div class="ttc" id="avec3_8h_html_aa84621bd979d3b12b97908f653faf88e"><div class="ttname"><a href="vec3_8h.html#aa84621bd979d3b12b97908f653faf88e">ft_vec3_abs</a></div><div class="ttdeci">float ft_vec3_abs(t_vec3 v)</div><div class="ttdoc">Calculate the absolute value of a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__linalgebra_8c_source.html#l00016">vec3_linalgebra.c:16</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -302,23 +286,35 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a873b926722f5b8fada3f51432dccd4be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a873b926722f5b8fada3f51432dccd4be">&#9670;&nbsp;</a></span>ft_cy_normal()</h2>
+<a id="a98c590ac9074c10dc7e18cfd033c0b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c590ac9074c10dc7e18cfd033c0b9b">&#9670;&nbsp;</a></span>ft_cy_check_cap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structt__vec3.html">t_vec3</a> ft_cy_normal </td>
+          <td class="memname">bool ft_cy_check_cap </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structt__hitrecord.html">t_hitrecord</a>&#160;</td>
-          <td class="paramname"><em>rec</em>, </td>
+          <td class="paramtype"><a class="el" href="structt__cylinder.html">t_cylinder</a>&#160;</td>
+          <td class="paramname"><em>cy</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structt__cylinder.html">t_cylinder</a>&#160;</td>
-          <td class="paramname"><em>cy</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structt__vec3.html">t_vec3</a>&#160;</td>
+          <td class="paramname"><em>cap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__hitrecord.html">t_hitrecord</a> *&#160;</td>
+          <td class="paramname"><em>rec</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -328,42 +324,46 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the normal on the point of intersection of the cylinder. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Checks if the ray actually hit the cylinder cap. </p>
+<p>Verifies if hit point is within the boundaries of the cylinder radius. Also discriminates rounding errors. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rec</td><td>Hit record of ray containing intersection with cylinder </td></tr>
     <tr><td class="paramname">cy</td><td>Cylinder </td></tr>
+    <tr><td class="paramname">cap</td><td>Cap in question </td></tr>
+    <tr><td class="paramname">d</td><td>Distance of ray indicating the potential hit </td></tr>
+    <tr><td class="paramname">rec</td><td>Hit record of ray containing most recent hit </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structt__vec3.html" title="Represents a tridimensional vector.">t_vec3</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true If cap is hit </dd>
+<dd>
+false If cap is missed </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utils__cylinder__bonus_8c_source.html#l00016">16</a> of file <a class="el" href="utils__cylinder__bonus_8c_source.html">utils_cylinder_bonus.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="structt__vec3.html">t_vec3</a>  normal;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="vec3_8h.html#add7f4f27ee8cadcbf62ffbfecb98f64f">ft_vec3_equal</a>(rec.<a class="code" href="structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07">axis_hit</a>, cy.<a class="code" href="structt__cylinder.html#a2df840edc410ea9564f08b4e8ada590a">cap1</a>))</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        normal = <a class="code" href="vec3_8h.html#ac80a1c20941c96a8fafad255dac59092">ft_vec3_scale</a>(cy.<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>, -1);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="vec3_8h.html#add7f4f27ee8cadcbf62ffbfecb98f64f">ft_vec3_equal</a>(rec.<a class="code" href="structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07">axis_hit</a>, cy.<a class="code" href="structt__cylinder.html#a7b26d2375d2cc500c5d7cef9d849cdab">cap2</a>))</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        normal = cy.<a class="code" href="structt__cylinder.html#a7f4ed5c02961988cdae75eb415b617a6">axis</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        normal = <a class="code" href="vec3_8h.html#a38fe500bd27847b866b9630146e43250">ft_vec3_norm</a>(<a class="code" href="vec3_8h.html#a54e984820b74bd803de43ce36c8cb292">ft_vec3_sub</a>(rec.<a class="code" href="structt__hitrecord.html#a808be608283867f25494f82d235e9570">point</a>, rec.<a class="code" href="structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07">axis_hit</a>));</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> (normal);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="ttc" id="astructt__cylinder_html_a7b26d2375d2cc500c5d7cef9d849cdab"><div class="ttname"><a href="structt__cylinder.html#a7b26d2375d2cc500c5d7cef9d849cdab">t_cylinder::cap2</a></div><div class="ttdeci">t_vec3 cap2</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00092">entities.h:92</a></div></div>
-<div class="ttc" id="astructt__hitrecord_html_a808be608283867f25494f82d235e9570"><div class="ttname"><a href="structt__hitrecord.html#a808be608283867f25494f82d235e9570">t_hitrecord::point</a></div><div class="ttdeci">t_vec3 point</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00043">hit_manager.h:43</a></div></div>
-<div class="ttc" id="avec3_8h_html_a38fe500bd27847b866b9630146e43250"><div class="ttname"><a href="vec3_8h.html#a38fe500bd27847b866b9630146e43250">ft_vec3_norm</a></div><div class="ttdeci">t_vec3 ft_vec3_norm(t_vec3 v)</div><div class="ttdoc">Normalise a vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__linalgebra_8c_source.html#l00026">vec3_linalgebra.c:26</a></div></div>
-<div class="ttc" id="avec3_8h_html_add7f4f27ee8cadcbf62ffbfecb98f64f"><div class="ttname"><a href="vec3_8h.html#add7f4f27ee8cadcbf62ffbfecb98f64f">ft_vec3_equal</a></div><div class="ttdeci">bool ft_vec3_equal(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Determines if two vectors are equal.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__linalgebra_8c_source.html#l00048">vec3_linalgebra.c:48</a></div></div>
+<p class="definition">Definition at line <a class="el" href="utils__cylinder__bonus_8c_source.html#l00054">54</a> of file <a class="el" href="utils__cylinder__bonus_8c_source.html">utils_cylinder_bonus.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="structt__vec3.html">t_vec3</a>  hit;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">float</span>   len;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    hit = <a class="code" href="ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63">ft_scale_ray</a>(rec-&gt;<a class="code" href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">ray</a>, d);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    len = <a class="code" href="vec3_8h.html#aa84621bd979d3b12b97908f653faf88e">ft_vec3_abs</a>(<a class="code" href="vec3_8h.html#a54e984820b74bd803de43ce36c8cb292">ft_vec3_sub</a>(hit, cap));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    len += <a class="code" href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (len &lt;= cy.r &amp;&amp; d &gt; <a class="code" href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a> &amp;&amp; d &lt; rec-&gt;d)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        rec-&gt;<a class="code" href="structt__hitrecord.html#a83c66f8e7af04debcb3b6c7013b4ac07">axis_hit</a> = cap;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        rec-&gt;<a class="code" href="structt__hitrecord.html#a74e9a805207c5cc9511101a6f269fb02">wall_hit</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_a873b926722f5b8fada3f51432dccd4be_cgraph.svg" width="468" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_a98c590ac9074c10dc7e18cfd033c0b9b_cgraph.svg" width="446" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_a873b926722f5b8fada3f51432dccd4be_icgraph.svg" width="311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_a98c590ac9074c10dc7e18cfd033c0b9b_icgraph.svg" width="327" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -413,7 +413,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-<div class="ttc" id="autils_8h_html_add4de5ba94d3f8475d0a1c4ce8abd3aa"><div class="ttname"><a href="utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa">ft_surrounds</a></div><div class="ttdeci">bool ft_surrounds(float x, t_interval interval)</div><div class="ttdoc">Determines if value is surrounded by the interval.</div><div class="ttdef"><b>Definition:</b> <a href="utils__interval_8c_source.html#l00024">utils_interval.c:24</a></div></div>
+<div class="ttc" id="autils_8h_html_add4de5ba94d3f8475d0a1c4ce8abd3aa"><div class="ttname"><a href="utils_8h.html#add4de5ba94d3f8475d0a1c4ce8abd3aa">ft_surrounds</a></div><div class="ttdeci">bool ft_surrounds(float x, t_interval interval)</div><div class="ttdoc">Determines if value is surrounded by the interval.</div><div class="ttdef"><b>Definition:</b> <a href="utils__interval_8c_source.html#l00020">utils_interval.c:20</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -423,7 +423,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_a55af5b9bdf1ed07d3128dd3e15dd3e6b_icgraph.svg" width="100%" height="453"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_a55af5b9bdf1ed07d3128dd3e15dd3e6b_icgraph.svg" width="100%" height="466"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -485,13 +485,13 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    rec-&gt;<a class="code" href="structt__hitrecord.html#a48d9522e58fa05906c6dba23e5745a72">v</a> *= <a class="code" href="mini_r_t__config__bonus_8h.html#adcb94ba4819975129c350098b2fdf389">CHECKER_SCALE</a>;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 <div class="ttc" id="amini_r_t__config__bonus_8h_html_adcb94ba4819975129c350098b2fdf389"><div class="ttname"><a href="mini_r_t__config__bonus_8h.html#adcb94ba4819975129c350098b2fdf389">CHECKER_SCALE</a></div><div class="ttdeci">#define CHECKER_SCALE</div><div class="ttdef"><b>Definition:</b> <a href="mini_r_t__config__bonus_8h_source.html#l00069">miniRT_config_bonus.h:69</a></div></div>
-<div class="ttc" id="astructt__cylinder_html_a0f188ccfa73fd29ad62023c50c7d2a5f"><div class="ttname"><a href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">t_cylinder::centre</a></div><div class="ttdeci">t_vec3 centre</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00086">entities.h:86</a></div></div>
-<div class="ttc" id="astructt__cylinder_html_a4788d82c901b9367dd5c0daff8a7616b"><div class="ttname"><a href="structt__cylinder.html#a4788d82c901b9367dd5c0daff8a7616b">t_cylinder::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00088">entities.h:88</a></div></div>
+<div class="ttc" id="astructt__cylinder_html_a0f188ccfa73fd29ad62023c50c7d2a5f"><div class="ttname"><a href="structt__cylinder.html#a0f188ccfa73fd29ad62023c50c7d2a5f">t_cylinder::centre</a></div><div class="ttdeci">t_vec3 centre</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00081">entities.h:81</a></div></div>
+<div class="ttc" id="astructt__cylinder_html_a4788d82c901b9367dd5c0daff8a7616b"><div class="ttname"><a href="structt__cylinder.html#a4788d82c901b9367dd5c0daff8a7616b">t_cylinder::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00083">entities.h:83</a></div></div>
 <div class="ttc" id="astructt__hitrecord_html_a48d9522e58fa05906c6dba23e5745a72"><div class="ttname"><a href="structt__hitrecord.html#a48d9522e58fa05906c6dba23e5745a72">t_hitrecord::v</a></div><div class="ttdeci">float v</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager__bonus_8h_source.html#l00061">hit_manager_bonus.h:61</a></div></div>
 <div class="ttc" id="astructt__hitrecord_html_a55831f7eab5ed2917a0191e858852f42"><div class="ttname"><a href="structt__hitrecord.html#a55831f7eab5ed2917a0191e858852f42">t_hitrecord::u</a></div><div class="ttdeci">float u</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager__bonus_8h_source.html#l00060">hit_manager_bonus.h:60</a></div></div>
-<div class="ttc" id="astructt__vec3_html_aa4f0d3eebc3c443f9be81bf48561a217"><div class="ttname"><a href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">t_vec3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00036">vec3.h:36</a></div></div>
-<div class="ttc" id="astructt__vec3_html_ad0da36b2558901e21e7a30f6c227a45e"><div class="ttname"><a href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">t_vec3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00035">vec3.h:35</a></div></div>
-<div class="ttc" id="astructt__vec3_html_af73583b1e980b0aa03f9884812e9fd4d"><div class="ttname"><a href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">t_vec3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00037">vec3.h:37</a></div></div>
+<div class="ttc" id="astructt__vec3_html_aa4f0d3eebc3c443f9be81bf48561a217"><div class="ttname"><a href="structt__vec3.html#aa4f0d3eebc3c443f9be81bf48561a217">t_vec3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00034">vec3.h:34</a></div></div>
+<div class="ttc" id="astructt__vec3_html_ad0da36b2558901e21e7a30f6c227a45e"><div class="ttname"><a href="structt__vec3.html#ad0da36b2558901e21e7a30f6c227a45e">t_vec3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00033">vec3.h:33</a></div></div>
+<div class="ttc" id="astructt__vec3_html_af73583b1e980b0aa03f9884812e9fd4d"><div class="ttname"><a href="structt__vec3.html#af73583b1e980b0aa03f9884812e9fd4d">t_vec3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00035">vec3.h:35</a></div></div>
 <div class="ttc" id="autils_8h_html_a4b67c731c02a7ba35f27473295bfb753"><div class="ttname"><a href="utils_8h.html#a4b67c731c02a7ba35f27473295bfb753">ft_quaternion_rot</a></div><div class="ttdeci">t_vec3 ft_quaternion_rot(t_vec3 vec, t_vec3 axis, float angle)</div><div class="ttdoc">Performs a rotation of a given vector around an axis by a given angle.</div><div class="ttdef"><b>Definition:</b> <a href="utils__quaternion_8c_source.html#l00037">utils_quaternion.c:37</a></div></div>
 <div class="ttc" id="avec3_8h_html_a19bc1d17592698776e89a5093110320c"><div class="ttname"><a href="vec3_8h.html#a19bc1d17592698776e89a5093110320c">ft_vec3_cross</a></div><div class="ttdeci">t_vec3 ft_vec3_cross(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Calculate the cross product of two vectors.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00047">vec3_arithmetics.c:47</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -503,7 +503,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_aeb33f439a0d2093bdbcca7468e2e78b4_icgraph.svg" width="100%" height="453"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="utils__cylinder__bonus_8c_aeb33f439a0d2093bdbcca7468e2e78b4_icgraph.svg" width="351" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

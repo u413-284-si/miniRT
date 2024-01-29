@@ -100,24 +100,24 @@ $(document).ready(function(){initNavTree('utils__random__bonus_8c_source.html','
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: gwolf &lt;gwolf@student.42vienna.com&gt;         +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2023/11/19 20:20:40 by u413q             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/20 14:30:42 by gwolf            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2024/01/28 15:55:33 by gwolf            ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils__bonus_8h.html">utils_bonus.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils__random__bonus_8h.html">utils_random_bonus.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="utils__bonus_8h.html#ad2506d7ff542ccee53d1ff751d7ed217">   15</a></span>&#160;<span class="keywordtype">float</span>   <a class="code" href="utils__random__bonus_8c.html#ad2506d7ff542ccee53d1ff751d7ed217">ft_random_float</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="utils__random__bonus_8h.html#ad2506d7ff542ccee53d1ff751d7ed217">   15</a></span>&#160;<span class="keywordtype">float</span>   <a class="code" href="utils__random__bonus_8c.html#ad2506d7ff542ccee53d1ff751d7ed217">ft_random_float</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> (rand() / (RAND_MAX + 1.0));</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="utils__bonus_8h.html#a37e0b6417f5f7ab2acab72c70ddf92e4">   20</a></span>&#160;<span class="keywordtype">float</span>   <a class="code" href="utils__random__bonus_8c.html#a37e0b6417f5f7ab2acab72c70ddf92e4">ft_random_float_within</a>(<span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max)</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="utils__random__bonus_8h.html#a37e0b6417f5f7ab2acab72c70ddf92e4">   20</a></span>&#160;<span class="keywordtype">float</span>   <a class="code" href="utils__random__bonus_8c.html#a37e0b6417f5f7ab2acab72c70ddf92e4">ft_random_float_within</a>(<span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> (min + (max - min) * <a class="code" href="utils__random__bonus_8c.html#ad2506d7ff542ccee53d1ff751d7ed217">ft_random_float</a>());</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="ttc" id="autils__bonus_8h_html"><div class="ttname"><a href="utils__bonus_8h.html">utils_bonus.h</a></div></div>
 <div class="ttc" id="autils__random__bonus_8c_html_a37e0b6417f5f7ab2acab72c70ddf92e4"><div class="ttname"><a href="utils__random__bonus_8c.html#a37e0b6417f5f7ab2acab72c70ddf92e4">ft_random_float_within</a></div><div class="ttdeci">float ft_random_float_within(float min, float max)</div><div class="ttdoc">Return a random float within min and max.</div><div class="ttdef"><b>Definition:</b> <a href="utils__random__bonus_8c_source.html#l00020">utils_random_bonus.c:20</a></div></div>
 <div class="ttc" id="autils__random__bonus_8c_html_ad2506d7ff542ccee53d1ff751d7ed217"><div class="ttname"><a href="utils__random__bonus_8c.html#ad2506d7ff542ccee53d1ff751d7ed217">ft_random_float</a></div><div class="ttdeci">float ft_random_float(void)</div><div class="ttdoc">Return a random float.</div><div class="ttdef"><b>Definition:</b> <a href="utils__random__bonus_8c_source.html#l00015">utils_random_bonus.c:15</a></div></div>
+<div class="ttc" id="autils__random__bonus_8h_html"><div class="ttname"><a href="utils__random__bonus_8h.html">utils_random_bonus.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

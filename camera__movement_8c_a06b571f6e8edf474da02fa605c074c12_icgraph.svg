@@ -66,7 +66,7 @@ var sectionId = 'dynsection-4';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="render_8h.html#ab974018238f1a6e6a86b44e139f5d672" target="_top" xlink:title="Moves the camera with a keypress.">
+<g id="a_node2"><a xlink:href="manip_8h.html#ab974018238f1a6e6a86b44e139f5d672" target="_top" xlink:title="Moves the camera with a keypress.">
 <polygon fill="none" stroke="black" points="251,-0.5 251,-19.5 380,-19.5 380,-0.5 251,-0.5"/>
 <text text-anchor="middle" x="315.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_move_cam</text>
 </a>
@@ -81,7 +81,7 @@ var sectionId = 'dynsection-4';
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" target="_top" xlink:title="Manipulates the camera with a keypress.">
+<g id="a_node3"><a xlink:href="manip_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" target="_top" xlink:title="Manipulates the camera with a keypress.">
 <polygon fill="none" stroke="black" points="129,-0.5 129,-19.5 215,-19.5 215,-0.5 129,-0.5"/>
 <text text-anchor="middle" x="172" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cam</text>
 </a>
@@ -96,7 +96,7 @@ var sectionId = 'dynsection-4';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="render_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" target="_top" xlink:title="Branches to the corresponding manipulation function.">
+<g id="a_node4"><a xlink:href="manip_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" target="_top" xlink:title="Branches to the corresponding manipulation function.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 93,-19.5 93,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="46.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_scene</text>
 </a>

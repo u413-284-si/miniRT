@@ -48,7 +48,7 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 684;
 var viewHeight = 66;
-var sectionId = 'dynsection-9';
+var sectionId = 'dynsection-21';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
@@ -67,7 +67,7 @@ var sectionId = 'dynsection-9';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" target="_top" xlink:title="Manipulates the camera with a keypress.">
+<g id="a_node2"><a xlink:href="manip_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" target="_top" xlink:title="Manipulates the camera with a keypress.">
 <polygon fill="none" stroke="black" points="412,-38.5 412,-57.5 498,-57.5 498,-38.5 412,-38.5"/>
 <text text-anchor="middle" x="455" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cam</text>
 </a>
@@ -82,7 +82,7 @@ var sectionId = 'dynsection-9';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="render__mouse__bonus_8c.html#a8b0cab63a8053d366bbefead351d039a" target="_top" xlink:title="Rotates the camera with the mouse.">
+<g id="a_node4"><a xlink:href="manip_8h.html#a8b0cab63a8053d366bbefead351d039a" target="_top" xlink:title="Rotates the camera with the mouse.">
 <polygon fill="none" stroke="black" points="387,-0.5 387,-19.5 523,-19.5 523,-0.5 387,-0.5"/>
 <text text-anchor="middle" x="455" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_mouse_hook_rot_cam</text>
 </a>
@@ -97,7 +97,7 @@ var sectionId = 'dynsection-9';
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="render_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" target="_top" xlink:title="Branches to the corresponding manipulation function.">
+<g id="a_node3"><a xlink:href="manip_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" target="_top" xlink:title="Branches to the corresponding manipulation function.">
 <polygon fill="none" stroke="black" points="242.5,-38.5 242.5,-57.5 335.5,-57.5 335.5,-38.5 242.5,-38.5"/>
 <text text-anchor="middle" x="289" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_scene</text>
 </a>
@@ -112,7 +112,7 @@ var sectionId = 'dynsection-9';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="render__mouse__bonus_8c.html#a789550edaaab12e30e0d8c779abdc1b8" target="_top" xlink:title="Handles mouse movement.">
+<g id="a_node5"><a xlink:href="manip_8h.html#a789550edaaab12e30e0d8c779abdc1b8" target="_top" xlink:title="Handles mouse movement.">
 <polygon fill="none" stroke="black" points="227,-0.5 227,-19.5 351,-19.5 351,-0.5 227,-0.5"/>
 <text text-anchor="middle" x="289" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_mouse_hook_move</text>
 </a>

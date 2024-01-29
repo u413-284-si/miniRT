@@ -1,4 +1,0 @@
-<map id="ft_hadamard_colour" name="ft_hadamard_colour">
-<area shape="rect" id="node1" title="Calculates the Hadamard product of two colours." alt="" coords="5,5,156,32"/>
-<area shape="rect" id="node2" href="$utils_8h.html#a241b2b1d75c68c1eefd36b569901c9f9" title="Ensure that the returned float lies within the interval." alt="" coords="204,5,283,32"/>
-</map>

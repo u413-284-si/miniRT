@@ -1,22 +1,23 @@
 <map id="ft_cy_calc_pot_hits" name="ft_cy_calc_pot_hits">
-<area shape="rect" id="node1" title="Calculates all four potential hits of a cylinder." alt="" coords="2503,121,2648,148"/>
-<area shape="rect" id="node2" href="$hit__manager_8h.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="2340,121,2455,148"/>
-<area shape="rect" id="node3" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="2180,121,2292,148"/>
-<area shape="rect" id="node4" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="1977,71,2113,97"/>
-<area shape="rect" id="node8" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="1284,96,1391,123"/>
-<area shape="rect" id="node20" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="1959,172,2132,199"/>
-<area shape="rect" id="node5" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="1776,71,1911,97"/>
-<area shape="rect" id="node6" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="1585,71,1728,97"/>
-<area shape="rect" id="node7" href="$scene__light__bonus_8c.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="1439,71,1537,97"/>
+<area shape="rect" id="node1" title="Calculates all four potential hits of a cylinder." alt="" coords="2503,119,2648,145"/>
+<area shape="rect" id="node2" href="$hit__manager_8h.html#ad1c0dcb3141fe78ed26368ca7bb8d2b8" title="Calculates if a cylinder was hit by a ray." alt="" coords="2340,119,2455,145"/>
+<area shape="rect" id="node3" href="$hit__manager_8h.html#a9d5972226064b0a4d0e1359d9230abec" title="Investigate a hittable and returns whether a hit occured or not." alt="" coords="2180,119,2292,145"/>
+<area shape="rect" id="node4" href="$lighting__bonus_8h.html#a7fe107fe556fd497ebfc4c4df70b83da" title="Looks for the closest object hit by a ray." alt="" coords="1977,68,2113,95"/>
+<area shape="rect" id="node8" href="$ray_8h.html#a2cffd188fb76990901db47a2c3ac638f" title="Returns the colour of a ray." alt="" coords="1284,93,1391,120"/>
+<area shape="rect" id="node21" href="$lighting_8h.html#a931177e8edb2dd5393cef7a468389a4d" title="Determines whether the shadow ray emitted from the point of intersection is blocked on its way to the..." alt="" coords="1959,169,2132,196"/>
+<area shape="rect" id="node5" href="$lighting__bonus_8h.html#ab380b8bbadc80a5a668141c8edcc4754" title="Create reflective lighting by recursion." alt="" coords="1776,68,1911,95"/>
+<area shape="rect" id="node6" href="$lighting__bonus_8h.html#a31af89240f5ffa2f65f1525d06121d73" title="Computes the colour of light interacting with different material properties." alt="" coords="1585,68,1728,95"/>
+<area shape="rect" id="node7" href="$lighting_8h.html#a3d54436a3f695a60b1c2d9e504a61de8" title="Calculate the effect of different lighting on perception." alt="" coords="1439,68,1537,95"/>
 <area shape="rect" id="node9" href="$render__bonus_8h.html#af5fa16c9ea3d6e6884604009e31c83de" title="Constructs a random sample ray for anti&#45;aliasing." alt="" coords="1111,64,1236,91"/>
-<area shape="rect" id="node13" href="$render_8h.html#a2c9085ad1ae8adcd3201a501a9a4dcde" title="Constructs a ray and shoots it through the pixel." alt="" coords="1122,121,1225,148"/>
+<area shape="rect" id="node13" href="$render_8h.html#a8d0bd9d9ea57df013aa96dee7558d4b3" title="Constructs a ray and shoots it through the pixel." alt="" coords="1122,123,1225,149"/>
 <area shape="rect" id="node10" href="$render__bonus_8h.html#afef92ac33f530ff1e1ca1049ffa14d23" title="Raytraces the scene and adds it to the sample buffer." alt="" coords="884,5,1063,32"/>
 <area shape="rect" id="node12" href="$render__bonus_8h.html#a6f833a234cbdbc69ce5458c79d1242a1" title="Like ft_add_raytrace_sample(), but threaded." alt="" coords="884,57,1063,98"/>
 <area shape="rect" id="node11" href="$render__bonus_8h.html#a46e5a7c75a4d9fb06252d28cf8d18821" title="Raytraces a sample of the scene and adds it to the sample buffer." alt="" coords="680,35,836,61"/>
-<area shape="rect" id="node14" href="$render__bonus_8h.html#a5d5ed6b28be3a532b4e17bd4a05df4d3" title="Like ft_raytrace_sample(), but threaded." alt="" coords="900,122,1047,163"/>
-<area shape="rect" id="node15" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="692,129,824,156"/>
-<area shape="rect" id="node16" href="$render__bonus_8h.html#a9c57490cfa20448a418091aa47a49245" title="Raytraces a sample of the scene to the sample buffer." alt="" coords="497,129,632,156"/>
-<area shape="rect" id="node17" href="$render__loop__mlx__bonus_8c.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,129,449,156"/>
-<area shape="rect" id="node18" href="$render__loop__mlx__bonus_8c.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,129,260,156"/>
-<area shape="rect" id="node19" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,129,60,156"/>
+<area shape="rect" id="node14" href="$render__bonus_8h.html#a396a2e84d5040d414ec16ab32303c8d1" title="Raytraces the scene to the sample buffer." alt="" coords="900,123,1047,149"/>
+<area shape="rect" id="node20" href="$render__bonus_8h.html#a5d5ed6b28be3a532b4e17bd4a05df4d3" title="Like ft_raytrace_sample(), but threaded." alt="" coords="900,174,1047,215"/>
+<area shape="rect" id="node15" href="$render__bonus_8h.html#a0ab696b1752ed3551f1cf8d8c2e7c5d8" title="Raytraces a single sample of the scene to the sample buffer." alt="" coords="692,152,824,179"/>
+<area shape="rect" id="node16" href="$render__bonus_8h.html#a9c57490cfa20448a418091aa47a49245" title="Raytraces a sample of the scene to the sample buffer." alt="" coords="497,152,632,179"/>
+<area shape="rect" id="node17" href="$render_8h.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="308,152,449,179"/>
+<area shape="rect" id="node18" href="$render_8h.html#ab7a01aa5d27d2fad2942a43a31ae0d52" title="Starts the mlx loop." alt="" coords="108,152,260,179"/>
+<area shape="rect" id="node19" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,152,60,179"/>
 </map>

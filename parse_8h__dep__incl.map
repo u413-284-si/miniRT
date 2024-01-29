@@ -1,7 +1,13 @@
 <map id="inc/parse.h" name="inc/parse.h">
-<area shape="rect" id="node1" title=" " alt="" coords="250,5,343,32"/>
-<area shape="rect" id="node2" href="$parse_8c.html" title=" " alt="" coords="5,87,97,114"/>
-<area shape="rect" id="node3" href="$parse__entity___a_c_l_8c.html" title=" " alt="" coords="121,87,291,114"/>
-<area shape="rect" id="node4" href="$parse__entity__sp__pl__cy_8c.html" title=" " alt="" coords="315,80,463,121"/>
-<area shape="rect" id="node5" href="$parse__line_8c.html" title=" " alt="" coords="487,87,610,114"/>
+<area shape="rect" id="node1" title=" " alt="" coords="532,5,625,32"/>
+<area shape="rect" id="node2" href="$parse__bonus_8h.html" title=" " alt="" coords="215,87,353,114"/>
+<area shape="rect" id="node8" href="$parse_8c.html" title=" " alt="" coords="378,87,470,114"/>
+<area shape="rect" id="node9" href="$parse__entity___a_c_l_8c.html" title=" " alt="" coords="494,87,663,114"/>
+<area shape="rect" id="node10" href="$parse__entity__sp__pl__cy_8c.html" title=" " alt="" coords="687,80,835,121"/>
+<area shape="rect" id="node11" href="$parse__line_8c.html" title=" " alt="" coords="860,87,983,114"/>
+<area shape="rect" id="node3" href="$mini_r_t_8h.html" title=" " alt="" coords="5,177,107,203"/>
+<area shape="rect" id="node5" href="$parse__bonus_8c.html" title=" " alt="" coords="131,177,269,203"/>
+<area shape="rect" id="node6" href="$parse__entity__sp__pl__cy__bonus_8c.html" title=" " alt="" coords="294,169,442,211"/>
+<area shape="rect" id="node7" href="$parse__win__size__bonus_8c.html" title=" " alt="" coords="467,169,611,211"/>
+<area shape="rect" id="node4" href="$main_8c.html" title=" " alt="" coords="11,259,101,285"/>
 </map>

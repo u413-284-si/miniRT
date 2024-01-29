@@ -66,7 +66,7 @@ var sectionId = 'dynsection-8';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="render__mouse__bonus_8c.html#a789550edaaab12e30e0d8c779abdc1b8" target="_top" xlink:title="Handles mouse movement.">
+<g id="a_node2"><a xlink:href="manip_8h.html#a789550edaaab12e30e0d8c779abdc1b8" target="_top" xlink:title="Handles mouse movement.">
 <polygon fill="none" stroke="black" points="227,-0.5 227,-19.5 351,-19.5 351,-0.5 227,-0.5"/>
 <text text-anchor="middle" x="289" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_mouse_hook_move</text>
 </a>

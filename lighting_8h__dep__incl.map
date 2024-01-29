@@ -1,6 +1,4 @@
 <map id="inc/lighting.h" name="inc/lighting.h">
-<area shape="rect" id="node1" title=" " alt="" coords="116,5,223,32"/>
-<area shape="rect" id="node2" href="$ray_8c.html" title=" " alt="" coords="5,80,80,107"/>
-<area shape="rect" id="node3" href="$scene__light_8c.html" title=" " alt="" coords="104,80,235,107"/>
-<area shape="rect" id="node4" href="$scene__shadow_8c.html" title=" " alt="" coords="259,80,410,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="27,5,134,32"/>
+<area shape="rect" id="node2" href="$scene__shadow_8c.html" title=" " alt="" coords="5,80,156,107"/>
 </map>

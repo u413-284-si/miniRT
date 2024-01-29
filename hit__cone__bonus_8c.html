@@ -118,6 +118,97 @@ Functions</h2></td></tr>
 <tr class="separator:a69c648bba2a12763904900ce56cadb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aebab6e1f11fc5b2e6c420276c9beee96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebab6e1f11fc5b2e6c420276c9beee96">&#9670;&nbsp;</a></span>ft_hit_cone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ft_hit_cone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__cone.html">t_cone</a>&#160;</td>
+          <td class="paramname"><em>co</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__hitrecord.html">t_hitrecord</a> *&#160;</td>
+          <td class="paramname"><em>rec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__interval.html">t_interval</a>&#160;</td>
+          <td class="paramname"><em>ray_d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates if a cone was hit by a ray. </p>
+<p>The calculation is very similar to the cylinder with a few adjustments in the equation and the amount of possible hits. The ray can hit the cone in three different spots. Two represent the wall of the cone. The third one is at the end cap or base. The three potential hits are calculated and checked whether they are "visible" - not blocked by another object - and if the calculated hit is actually a hit and not result of a rounding error. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">co</td><td>Cone </td></tr>
+    <tr><td class="paramname">rec</td><td>Hit record of ray containing most recent hit </td></tr>
+    <tr><td class="paramname">ray_d</td><td>Interval of min and max defining area of visibility </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true If cone is hit </dd>
+<dd>
+false If cone is not hit </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="hit__cone__bonus_8c_source.html#l00015">15</a> of file <a class="el" href="hit__cone__bonus_8c_source.html">hit_cone_bonus.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="structt__hitrecord.html">t_hitrecord</a> tmp;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">float</span>       potential_hits[3];</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    potential_hits[0] = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    potential_hits[1] = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    potential_hits[2] = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d">ft_init_hitrecord</a>(&amp;tmp);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    tmp.<a class="code" href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">ray</a> = rec-&gt;<a class="code" href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">ray</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="hit__cone__bonus_8c.html#a9752309af1756a6360c6459ed6747f83">ft_co_calc_pot_hits</a>(co, rec-&gt;<a class="code" href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">ray</a>, potential_hits))</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="hit__manager__bonus_8h.html#ad993587b48c94f1634b1ff05b6c48d9d">ft_co_visible</a>(ray_d, potential_hits))</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="hit__cone__bonus_8c.html#a049d2a1135caa57d1d9ed8845f229620">ft_co_identify_hits</a>(co, &amp;tmp, potential_hits);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (tmp.<a class="code" href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">d</a> &gt;= <a class="code" href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a> &amp;&amp; tmp.<a class="code" href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">d</a> &lt; rec-&gt;<a class="code" href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">d</a>)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="hit__cone__bonus_8c.html#a69c648bba2a12763904900ce56cadb8a">ft_co_set_hitrecord</a>(co, rec, tmp);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="ttc" id="ahit__cone__bonus_8c_html_a049d2a1135caa57d1d9ed8845f229620"><div class="ttname"><a href="hit__cone__bonus_8c.html#a049d2a1135caa57d1d9ed8845f229620">ft_co_identify_hits</a></div><div class="ttdeci">void ft_co_identify_hits(t_cone co, t_hitrecord *rec, float potential_hits[3])</div><div class="ttdoc">Determines whether the potential hits are accurate.</div><div class="ttdef"><b>Definition:</b> <a href="hit__cone__bonus_8c_source.html#l00080">hit_cone_bonus.c:80</a></div></div>
+<div class="ttc" id="ahit__cone__bonus_8c_html_a69c648bba2a12763904900ce56cadb8a"><div class="ttname"><a href="hit__cone__bonus_8c.html#a69c648bba2a12763904900ce56cadb8a">ft_co_set_hitrecord</a></div><div class="ttdeci">void ft_co_set_hitrecord(t_cone co, t_hitrecord *rec, t_hitrecord tmp)</div><div class="ttdoc">Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record.</div><div class="ttdef"><b>Definition:</b> <a href="hit__cone__bonus_8c_source.html#l00093">hit_cone_bonus.c:93</a></div></div>
+<div class="ttc" id="ahit__cone__bonus_8c_html_a9752309af1756a6360c6459ed6747f83"><div class="ttname"><a href="hit__cone__bonus_8c.html#a9752309af1756a6360c6459ed6747f83">ft_co_calc_pot_hits</a></div><div class="ttdeci">bool ft_co_calc_pot_hits(t_cone co, t_ray ray, float potential_hits[3])</div><div class="ttdoc">Calculates potential hits of a cone.</div><div class="ttdef"><b>Definition:</b> <a href="hit__cone__bonus_8c_source.html#l00038">hit_cone_bonus.c:38</a></div></div>
+<div class="ttc" id="ahit__manager_8h_html_aa5acefb1538a700dc595870ad630f83d"><div class="ttname"><a href="hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d">ft_init_hitrecord</a></div><div class="ttdeci">void ft_init_hitrecord(t_hitrecord *rec)</div><div class="ttdoc">Initiates hitrecord struct.</div><div class="ttdef"><b>Definition:</b> <a href="hit__bonus_8c_source.html#l00015">hit_bonus.c:15</a></div></div>
+<div class="ttc" id="ahit__manager__bonus_8h_html_ad993587b48c94f1634b1ff05b6c48d9d"><div class="ttname"><a href="hit__manager__bonus_8h.html#ad993587b48c94f1634b1ff05b6c48d9d">ft_co_visible</a></div><div class="ttdeci">bool ft_co_visible(t_interval ray_d, float potential_hits[3])</div><div class="ttdoc">Checks whether the cone is blocked by another object.</div><div class="ttdef"><b>Definition:</b> <a href="utils__cone__bonus_8c_source.html#l00078">utils_cone_bonus.c:78</a></div></div>
+<div class="ttc" id="astructt__hitrecord_html"><div class="ttname"><a href="structt__hitrecord.html">t_hitrecord</a></div><div class="ttdoc">Shows point of intersection.</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00040">hit_manager.h:41</a></div></div>
+<div class="ttc" id="astructt__hitrecord_html_a3e7ae304525bac56f4d09724ea2c080f"><div class="ttname"><a href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">t_hitrecord::ray</a></div><div class="ttdeci">t_ray ray</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00042">hit_manager.h:42</a></div></div>
+<div class="ttc" id="astructt__hitrecord_html_a3fbbd8a3959e76a2bc3455d3bade52dc"><div class="ttname"><a href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">t_hitrecord::d</a></div><div class="ttdeci">float d</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00046">hit_manager.h:46</a></div></div>
+<div class="ttc" id="autils_8h_html_a002b2f4894492820fe708b1b7e7c5e70"><div class="ttname"><a href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a></div><div class="ttdeci">#define EPSILON</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00028">utils.h:28</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_aebab6e1f11fc5b2e6c420276c9beee96_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_aebab6e1f11fc5b2e6c420276c9beee96_icgraph.svg" width="100%" height="466"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a9752309af1756a6360c6459ed6747f83"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9752309af1756a6360c6459ed6747f83">&#9670;&nbsp;</a></span>ft_co_calc_pot_hits()</h2>
 
@@ -189,9 +280,9 @@ false If cone is not hit </dd></dl>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 <div class="ttc" id="ahit__cone__bonus_8c_html_aee5824df7f0e0c2698306f49f9a1c790"><div class="ttname"><a href="hit__cone__bonus_8c.html#aee5824df7f0e0c2698306f49f9a1c790">ft_co_cap_hit</a></div><div class="ttdeci">float ft_co_cap_hit(t_cone co, t_ray ray)</div><div class="ttdoc">Calculates potential hit of cone cap.</div><div class="ttdef"><b>Definition:</b> <a href="hit__cone__bonus_8c_source.html#l00064">hit_cone_bonus.c:64</a></div></div>
-<div class="ttc" id="astructt__cone_html_a7f4ed5c02961988cdae75eb415b617a6"><div class="ttname"><a href="structt__cone.html#a7f4ed5c02961988cdae75eb415b617a6">t_cone::axis</a></div><div class="ttdeci">t_vec3 axis</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00109">entities_bonus.h:109</a></div></div>
-<div class="ttc" id="astructt__cone_html_ab8ef1bf8a70cc07c6d55823c390a7e76"><div class="ttname"><a href="structt__cone.html#ab8ef1bf8a70cc07c6d55823c390a7e76">t_cone::angle</a></div><div class="ttdeci">float angle</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00112">entities_bonus.h:112</a></div></div>
-<div class="ttc" id="astructt__cone_html_afcd43ca207d5e563d12249b1c2bf10f0"><div class="ttname"><a href="structt__cone.html#afcd43ca207d5e563d12249b1c2bf10f0">t_cone::apex</a></div><div class="ttdeci">t_vec3 apex</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00107">entities_bonus.h:107</a></div></div>
+<div class="ttc" id="astructt__cone_html_a7f4ed5c02961988cdae75eb415b617a6"><div class="ttname"><a href="structt__cone.html#a7f4ed5c02961988cdae75eb415b617a6">t_cone::axis</a></div><div class="ttdeci">t_vec3 axis</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00037">entities_bonus.h:37</a></div></div>
+<div class="ttc" id="astructt__cone_html_ab8ef1bf8a70cc07c6d55823c390a7e76"><div class="ttname"><a href="structt__cone.html#ab8ef1bf8a70cc07c6d55823c390a7e76">t_cone::angle</a></div><div class="ttdeci">float angle</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00040">entities_bonus.h:40</a></div></div>
+<div class="ttc" id="astructt__cone_html_afcd43ca207d5e563d12249b1c2bf10f0"><div class="ttname"><a href="structt__cone.html#afcd43ca207d5e563d12249b1c2bf10f0">t_cone::apex</a></div><div class="ttdeci">t_vec3 apex</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00035">entities_bonus.h:35</a></div></div>
 <div class="ttc" id="astructt__equation_html"><div class="ttname"><a href="structt__equation.html">t_equation</a></div><div class="ttdoc">Contains factors to solve linear and quadratic equations.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00058">utils.h:59</a></div></div>
 <div class="ttc" id="astructt__equation_html_a3967641da3863c1f79e94be997341402"><div class="ttname"><a href="structt__equation.html#a3967641da3863c1f79e94be997341402">t_equation::d1</a></div><div class="ttdeci">float d1</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00063">utils.h:63</a></div></div>
 <div class="ttc" id="astructt__equation_html_a4aec1a5be9d9a4a394a2e49e9744286e"><div class="ttname"><a href="structt__equation.html#a4aec1a5be9d9a4a394a2e49e9744286e">t_equation::a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00060">utils.h:60</a></div></div>
@@ -200,20 +291,20 @@ false If cone is not hit </dd></dl>
 <div class="ttc" id="astructt__equation_html_ae78103ab33f03590e84ff7bc735629d7"><div class="ttname"><a href="structt__equation.html#ae78103ab33f03590e84ff7bc735629d7">t_equation::c</a></div><div class="ttdeci">float c</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00062">utils.h:62</a></div></div>
 <div class="ttc" id="astructt__ray_html_a428dad59baf203faaf08742b885037c1"><div class="ttname"><a href="structt__ray.html#a428dad59baf203faaf08742b885037c1">t_ray::origin</a></div><div class="ttdeci">t_vec3 origin</div><div class="ttdef"><b>Definition:</b> <a href="ray_8h_source.html#l00034">ray.h:34</a></div></div>
 <div class="ttc" id="astructt__ray_html_af64cb245ee8ece9da45ed51f894db302"><div class="ttname"><a href="structt__ray.html#af64cb245ee8ece9da45ed51f894db302">t_ray::direction</a></div><div class="ttdeci">t_vec3 direction</div><div class="ttdef"><b>Definition:</b> <a href="ray_8h_source.html#l00035">ray.h:35</a></div></div>
-<div class="ttc" id="astructt__vec3_html"><div class="ttname"><a href="structt__vec3.html">t_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00033">vec3.h:34</a></div></div>
-<div class="ttc" id="autils_8h_html_a90ba8fcafcfab2af9f361cde331dbb06"><div class="ttname"><a href="utils_8h.html#a90ba8fcafcfab2af9f361cde331dbb06">ft_solve</a></div><div class="ttdeci">bool ft_solve(t_equation *eq)</div><div class="ttdoc">Solves the given equation.</div><div class="ttdef"><b>Definition:</b> <a href="utils__math_8c_source.html#l00029">utils_math.c:29</a></div></div>
+<div class="ttc" id="astructt__vec3_html"><div class="ttname"><a href="structt__vec3.html">t_vec3</a></div><div class="ttdoc">Represents a tridimensional vector.</div><div class="ttdef"><b>Definition:</b> <a href="vec3_8h_source.html#l00031">vec3.h:32</a></div></div>
+<div class="ttc" id="autils_8h_html_a90ba8fcafcfab2af9f361cde331dbb06"><div class="ttname"><a href="utils_8h.html#a90ba8fcafcfab2af9f361cde331dbb06">ft_solve</a></div><div class="ttdeci">bool ft_solve(t_equation *eq)</div><div class="ttdoc">Solves the given equation.</div><div class="ttdef"><b>Definition:</b> <a href="utils__math_8c_source.html#l00025">utils_math.c:25</a></div></div>
 <div class="ttc" id="avec3_8h_html_a54e984820b74bd803de43ce36c8cb292"><div class="ttname"><a href="vec3_8h.html#a54e984820b74bd803de43ce36c8cb292">ft_vec3_sub</a></div><div class="ttdeci">t_vec3 ft_vec3_sub(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Subtract two vectors.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00024">vec3_arithmetics.c:24</a></div></div>
 <div class="ttc" id="avec3_8h_html_a89fd02ae4b8b3602bc001664eb5e8f91"><div class="ttname"><a href="vec3_8h.html#a89fd02ae4b8b3602bc001664eb5e8f91">ft_vec3_dot</a></div><div class="ttdeci">float ft_vec3_dot(t_vec3 v1, t_vec3 v2)</div><div class="ttdoc">Calculate the scalar product of two vectors.</div><div class="ttdef"><b>Definition:</b> <a href="vec3__arithmetics_8c_source.html#l00042">vec3_arithmetics.c:42</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_a9752309af1756a6360c6459ed6747f83_cgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_a9752309af1756a6360c6459ed6747f83_cgraph.svg" width="100%" height="571"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_a9752309af1756a6360c6459ed6747f83_icgraph.svg" width="100%" height="453"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_a9752309af1756a6360c6459ed6747f83_icgraph.svg" width="100%" height="466"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -270,27 +361,23 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> (-1);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="ttc" id="ahit__manager_8h_html_a04f04eb6383f01a28b0c7201ab52782e"><div class="ttname"><a href="hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e">ft_hit_plane</a></div><div class="ttdeci">bool ft_hit_plane(t_plane pl, t_hitrecord *rec, t_interval ray_d)</div><div class="ttdoc">Calculates if a plane was hit by a ray.</div><div class="ttdef"><b>Definition:</b> <a href="hit__plane_8c_source.html#l00015">hit_plane.c:15</a></div></div>
-<div class="ttc" id="ahit__manager_8h_html_aa5acefb1538a700dc595870ad630f83d"><div class="ttname"><a href="hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d">ft_init_hitrecord</a></div><div class="ttdeci">void ft_init_hitrecord(t_hitrecord *rec)</div><div class="ttdoc">Initiates hitrecord struct.</div><div class="ttdef"><b>Definition:</b> <a href="hit_8c_source.html#l00015">hit.c:15</a></div></div>
-<div class="ttc" id="astructt__cone_html_a305b131e66a84eabfa71e5366fe76bce"><div class="ttname"><a href="structt__cone.html#a305b131e66a84eabfa71e5366fe76bce">t_cone::base</a></div><div class="ttdeci">t_vec3 base</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00108">entities_bonus.h:108</a></div></div>
-<div class="ttc" id="astructt__cone_html_ade3aae23d19802dca4a29ac9065742a9"><div class="ttname"><a href="structt__cone.html#ade3aae23d19802dca4a29ac9065742a9">t_cone::colour</a></div><div class="ttdeci">t_colour colour</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00113">entities_bonus.h:113</a></div></div>
-<div class="ttc" id="astructt__hitrecord_html"><div class="ttname"><a href="structt__hitrecord.html">t_hitrecord</a></div><div class="ttdoc">Shows point of intersection.</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00040">hit_manager.h:41</a></div></div>
-<div class="ttc" id="astructt__hitrecord_html_a3e7ae304525bac56f4d09724ea2c080f"><div class="ttname"><a href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">t_hitrecord::ray</a></div><div class="ttdeci">t_ray ray</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00042">hit_manager.h:42</a></div></div>
-<div class="ttc" id="astructt__hitrecord_html_a3fbbd8a3959e76a2bc3455d3bade52dc"><div class="ttname"><a href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">t_hitrecord::d</a></div><div class="ttdeci">float d</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager_8h_source.html#l00046">hit_manager.h:46</a></div></div>
+<div class="ttc" id="ahit__manager_8h_html_a04f04eb6383f01a28b0c7201ab52782e"><div class="ttname"><a href="hit__manager_8h.html#a04f04eb6383f01a28b0c7201ab52782e">ft_hit_plane</a></div><div class="ttdeci">bool ft_hit_plane(t_plane pl, t_hitrecord *rec, t_interval ray_d)</div><div class="ttdoc">Calculates if a plane was hit by a ray.</div><div class="ttdef"><b>Definition:</b> <a href="hit__plane__bonus_8c_source.html#l00015">hit_plane_bonus.c:15</a></div></div>
+<div class="ttc" id="astructt__cone_html_a305b131e66a84eabfa71e5366fe76bce"><div class="ttname"><a href="structt__cone.html#a305b131e66a84eabfa71e5366fe76bce">t_cone::base</a></div><div class="ttdeci">t_vec3 base</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00036">entities_bonus.h:36</a></div></div>
+<div class="ttc" id="astructt__cone_html_ade3aae23d19802dca4a29ac9065742a9"><div class="ttname"><a href="structt__cone.html#ade3aae23d19802dca4a29ac9065742a9">t_cone::colour</a></div><div class="ttdeci">t_colour colour</div><div class="ttdef"><b>Definition:</b> <a href="entities__bonus_8h_source.html#l00041">entities_bonus.h:41</a></div></div>
 <div class="ttc" id="astructt__interval_html"><div class="ttname"><a href="structt__interval.html">t_interval</a></div><div class="ttdoc">Interval of accepted values.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00038">utils.h:39</a></div></div>
 <div class="ttc" id="astructt__interval_html_a306b5ca364bf842a8ff5bbfc0b4d4a4b"><div class="ttname"><a href="structt__interval.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">t_interval::max</a></div><div class="ttdeci">float max</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00041">utils.h:41</a></div></div>
-<div class="ttc" id="astructt__plane_html"><div class="ttname"><a href="structt__plane.html">t_plane</a></div><div class="ttdoc">Represents a plane.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00067">entities.h:68</a></div></div>
-<div class="ttc" id="astructt__plane_html_a808be608283867f25494f82d235e9570"><div class="ttname"><a href="structt__plane.html#a808be608283867f25494f82d235e9570">t_plane::point</a></div><div class="ttdeci">t_vec3 point</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00069">entities.h:69</a></div></div>
+<div class="ttc" id="astructt__plane_html"><div class="ttname"><a href="structt__plane.html">t_plane</a></div><div class="ttdoc">Represents a plane.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00062">entities.h:63</a></div></div>
+<div class="ttc" id="astructt__plane_html_a808be608283867f25494f82d235e9570"><div class="ttname"><a href="structt__plane.html#a808be608283867f25494f82d235e9570">t_plane::point</a></div><div class="ttdeci">t_vec3 point</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00064">entities.h:64</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_aee5824df7f0e0c2698306f49f9a1c790_cgraph.svg" width="599" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_aee5824df7f0e0c2698306f49f9a1c790_cgraph.svg" width="100%" height="594"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_aee5824df7f0e0c2698306f49f9a1c790_icgraph.svg" width="100%" height="453"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_aee5824df7f0e0c2698306f49f9a1c790_icgraph.svg" width="100%" height="466"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -360,7 +447,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_a049d2a1135caa57d1d9ed8845f229620_icgraph.svg" width="100%" height="453"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_a049d2a1135caa57d1d9ed8845f229620_icgraph.svg" width="100%" height="466"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -427,7 +514,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="ahit__manager__bonus_8h_html_a87d41de805dc36f90fb5002fa2d34da0"><div class="ttname"><a href="hit__manager__bonus_8h.html#a87d41de805dc36f90fb5002fa2d34da0">ft_get_pl_uvcoords</a></div><div class="ttdeci">void ft_get_pl_uvcoords(t_hitrecord *rec)</div><div class="ttdoc">Transforms the Cartesian coordinates of a hit point on a plane into 2D texture UV-coordinates in the ...</div><div class="ttdef"><b>Definition:</b> <a href="hit__plane__bonus_8c_source.html#l00040">hit_plane_bonus.c:40</a></div></div>
 <div class="ttc" id="ahit__manager__bonus_8h_html_a9874994177d1382ce3e76988ca7cee3b"><div class="ttname"><a href="hit__manager__bonus_8h.html#a9874994177d1382ce3e76988ca7cee3b">ft_co_normal</a></div><div class="ttdeci">t_vec3 ft_co_normal(t_hitrecord rec, t_cone co)</div><div class="ttdoc">Calculates the normal on the point of intersection of the cone.</div><div class="ttdef"><b>Definition:</b> <a href="utils__cone__bonus_8c_source.html#l00057">utils_cone_bonus.c:57</a></div></div>
 <div class="ttc" id="ahit__manager__bonus_8h_html_abc28bafc00495161db9de547a9461cb1"><div class="ttname"><a href="hit__manager__bonus_8h.html#abc28bafc00495161db9de547a9461cb1">ft_get_co_uvcoords</a></div><div class="ttdeci">void ft_get_co_uvcoords(t_hitrecord *rec, t_cone co)</div><div class="ttdoc">Transforms the Cartesian coordinates of a hit point on a cone wall into 2D texture UV-coordinates in ...</div><div class="ttdef"><b>Definition:</b> <a href="utils__cone__bonus_8c_source.html#l00087">utils_cone_bonus.c:87</a></div></div>
-<div class="ttc" id="aray_8h_html_ac56e9ac7acfb4658469e190c022b0d63"><div class="ttname"><a href="ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63">ft_scale_ray</a></div><div class="ttdeci">t_vec3 ft_scale_ray(t_ray ray, float d)</div><div class="ttdoc">Represents a ray.</div><div class="ttdef"><b>Definition:</b> <a href="ray_8c_source.html#l00015">ray.c:15</a></div></div>
+<div class="ttc" id="aray_8h_html_ac56e9ac7acfb4658469e190c022b0d63"><div class="ttname"><a href="ray_8h.html#ac56e9ac7acfb4658469e190c022b0d63">ft_scale_ray</a></div><div class="ttdeci">t_vec3 ft_scale_ray(t_ray ray, float d)</div><div class="ttdoc">Represents a ray.</div><div class="ttdef"><b>Definition:</b> <a href="ray__bonus_8c_source.html#l00015">ray_bonus.c:15</a></div></div>
 <div class="ttc" id="astructt__hitrecord_html_a48d9522e58fa05906c6dba23e5745a72"><div class="ttname"><a href="structt__hitrecord.html#a48d9522e58fa05906c6dba23e5745a72">t_hitrecord::v</a></div><div class="ttdeci">float v</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager__bonus_8h_source.html#l00061">hit_manager_bonus.h:61</a></div></div>
 <div class="ttc" id="astructt__hitrecord_html_a55831f7eab5ed2917a0191e858852f42"><div class="ttname"><a href="structt__hitrecord.html#a55831f7eab5ed2917a0191e858852f42">t_hitrecord::u</a></div><div class="ttdeci">float u</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager__bonus_8h_source.html#l00060">hit_manager_bonus.h:60</a></div></div>
 <div class="ttc" id="astructt__hitrecord_html_a74e9a805207c5cc9511101a6f269fb02"><div class="ttname"><a href="structt__hitrecord.html#a74e9a805207c5cc9511101a6f269fb02">t_hitrecord::wall_hit</a></div><div class="ttdeci">bool wall_hit</div><div class="ttdef"><b>Definition:</b> <a href="hit__manager__bonus_8h_source.html#l00062">hit_manager_bonus.h:62</a></div></div>
@@ -444,94 +531,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_a69c648bba2a12763904900ce56cadb8a_icgraph.svg" width="100%" height="453"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="aebab6e1f11fc5b2e6c420276c9beee96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebab6e1f11fc5b2e6c420276c9beee96">&#9670;&nbsp;</a></span>ft_hit_cone()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ft_hit_cone </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structt__cone.html">t_cone</a>&#160;</td>
-          <td class="paramname"><em>co</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structt__hitrecord.html">t_hitrecord</a> *&#160;</td>
-          <td class="paramname"><em>rec</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structt__interval.html">t_interval</a>&#160;</td>
-          <td class="paramname"><em>ray_d</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculates if a cone was hit by a ray. </p>
-<p>The calculation is very similar to the cylinder with a few adjustments in the equation and the amount of possible hits. The ray can hit the cone in three different spots. Two represent the wall of the cone. The third one is at the end cap or base. The three potential hits are calculated and checked whether they are "visible" - not blocked by another object - and if the calculated hit is actually a hit and not result of a rounding error. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">co</td><td>Cone </td></tr>
-    <tr><td class="paramname">rec</td><td>Hit record of ray containing most recent hit </td></tr>
-    <tr><td class="paramname">ray_d</td><td>Interval of min and max defining area of visibility </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true If cone is hit </dd>
-<dd>
-false If cone is not hit </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="hit__cone__bonus_8c_source.html#l00015">15</a> of file <a class="el" href="hit__cone__bonus_8c_source.html">hit_cone_bonus.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="structt__hitrecord.html">t_hitrecord</a> tmp;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">float</span>       potential_hits[3];</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    potential_hits[0] = 0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    potential_hits[1] = 0;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    potential_hits[2] = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="hit__manager_8h.html#aa5acefb1538a700dc595870ad630f83d">ft_init_hitrecord</a>(&amp;tmp);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    tmp.<a class="code" href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">ray</a> = rec-&gt;<a class="code" href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">ray</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="hit__cone__bonus_8c.html#a9752309af1756a6360c6459ed6747f83">ft_co_calc_pot_hits</a>(co, rec-&gt;<a class="code" href="structt__hitrecord.html#a3e7ae304525bac56f4d09724ea2c080f">ray</a>, potential_hits))</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="hit__manager__bonus_8h.html#ad993587b48c94f1634b1ff05b6c48d9d">ft_co_visible</a>(ray_d, potential_hits))</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="hit__cone__bonus_8c.html#a049d2a1135caa57d1d9ed8845f229620">ft_co_identify_hits</a>(co, &amp;tmp, potential_hits);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (tmp.<a class="code" href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">d</a> &gt;= <a class="code" href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a> &amp;&amp; tmp.<a class="code" href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">d</a> &lt; rec-&gt;<a class="code" href="structt__hitrecord.html#a3fbbd8a3959e76a2bc3455d3bade52dc">d</a>)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="hit__cone__bonus_8c.html#a69c648bba2a12763904900ce56cadb8a">ft_co_set_hitrecord</a>(co, rec, tmp);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="ttc" id="ahit__cone__bonus_8c_html_a049d2a1135caa57d1d9ed8845f229620"><div class="ttname"><a href="hit__cone__bonus_8c.html#a049d2a1135caa57d1d9ed8845f229620">ft_co_identify_hits</a></div><div class="ttdeci">void ft_co_identify_hits(t_cone co, t_hitrecord *rec, float potential_hits[3])</div><div class="ttdoc">Determines whether the potential hits are accurate.</div><div class="ttdef"><b>Definition:</b> <a href="hit__cone__bonus_8c_source.html#l00080">hit_cone_bonus.c:80</a></div></div>
-<div class="ttc" id="ahit__cone__bonus_8c_html_a69c648bba2a12763904900ce56cadb8a"><div class="ttname"><a href="hit__cone__bonus_8c.html#a69c648bba2a12763904900ce56cadb8a">ft_co_set_hitrecord</a></div><div class="ttdeci">void ft_co_set_hitrecord(t_cone co, t_hitrecord *rec, t_hitrecord tmp)</div><div class="ttdoc">Overwrites the hit record &quot;rec&quot; with the new hit data found in the &quot;tmp&quot; hit record.</div><div class="ttdef"><b>Definition:</b> <a href="hit__cone__bonus_8c_source.html#l00093">hit_cone_bonus.c:93</a></div></div>
-<div class="ttc" id="ahit__cone__bonus_8c_html_a9752309af1756a6360c6459ed6747f83"><div class="ttname"><a href="hit__cone__bonus_8c.html#a9752309af1756a6360c6459ed6747f83">ft_co_calc_pot_hits</a></div><div class="ttdeci">bool ft_co_calc_pot_hits(t_cone co, t_ray ray, float potential_hits[3])</div><div class="ttdoc">Calculates potential hits of a cone.</div><div class="ttdef"><b>Definition:</b> <a href="hit__cone__bonus_8c_source.html#l00038">hit_cone_bonus.c:38</a></div></div>
-<div class="ttc" id="ahit__manager__bonus_8h_html_ad993587b48c94f1634b1ff05b6c48d9d"><div class="ttname"><a href="hit__manager__bonus_8h.html#ad993587b48c94f1634b1ff05b6c48d9d">ft_co_visible</a></div><div class="ttdeci">bool ft_co_visible(t_interval ray_d, float potential_hits[3])</div><div class="ttdoc">Checks whether the cone is blocked by another object.</div><div class="ttdef"><b>Definition:</b> <a href="utils__cone__bonus_8c_source.html#l00078">utils_cone_bonus.c:78</a></div></div>
-<div class="ttc" id="autils_8h_html_a002b2f4894492820fe708b1b7e7c5e70"><div class="ttname"><a href="utils_8h.html#a002b2f4894492820fe708b1b7e7c5e70">EPSILON</a></div><div class="ttdeci">#define EPSILON</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00028">utils.h:28</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_aebab6e1f11fc5b2e6c420276c9beee96_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_aebab6e1f11fc5b2e6c420276c9beee96_icgraph.svg" width="100%" height="453"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="hit__cone__bonus_8c_a69c648bba2a12763904900ce56cadb8a_icgraph.svg" width="100%" height="466"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

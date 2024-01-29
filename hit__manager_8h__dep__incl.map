@@ -1,8 +1,0 @@
-<map id="inc/hit_manager.h" name="inc/hit_manager.h">
-<area shape="rect" id="node1" title=" " alt="" coords="247,5,386,32"/>
-<area shape="rect" id="node2" href="$hit_8c.html" title=" " alt="" coords="5,80,79,107"/>
-<area shape="rect" id="node3" href="$hit__cylinder_8c.html" title=" " alt="" coords="103,80,234,107"/>
-<area shape="rect" id="node4" href="$hit__plane_8c.html" title=" " alt="" coords="259,80,375,107"/>
-<area shape="rect" id="node5" href="$hit__sphere_8c.html" title=" " alt="" coords="399,80,523,107"/>
-<area shape="rect" id="node6" href="$utils__cylinder_8c.html" title=" " alt="" coords="547,80,689,107"/>
-</map>

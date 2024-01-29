@@ -1,11 +1,11 @@
 <map id="inc/entities.h" name="inc/entities.h">
-<area shape="rect" id="node1" title=" " alt="" coords="86,5,193,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="89,304,172,331"/>
-<area shape="rect" id="node3" title=" " alt="" coords="22,229,92,256"/>
-<area shape="rect" id="node4" href="$vec3_8h.html" title=" " alt="" coords="219,229,284,256"/>
-<area shape="rect" id="node6" href="$colour__bonus_8h.html" title=" " alt="" coords="132,80,252,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="207,304,275,331"/>
-<area shape="rect" id="node7" title=" " alt="" coords="209,155,276,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="300,155,371,181"/>
-<area shape="rect" id="node9" href="$utils__bonus_8h.html" title=" " alt="" coords="76,155,184,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="37,5,144,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="12,304,94,331"/>
+<area shape="rect" id="node3" title=" " alt="" coords="188,80,259,107"/>
+<area shape="rect" id="node4" href="$vec3_8h.html" title=" " alt="" coords="20,229,86,256"/>
+<area shape="rect" id="node6" href="$colour_8h.html" title=" " alt="" coords="91,80,164,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="130,304,198,331"/>
+<area shape="rect" id="node7" title=" " alt="" coords="178,155,245,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="270,155,340,181"/>
+<area shape="rect" id="node9" href="$utils_8h.html" title=" " alt="" coords="91,155,154,181"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="inc/check_bonus.h" name="inc/check_bonus.h">
-<area shape="rect" id="node1" title=" " alt="" coords="261,5,402,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="269,5,410,32"/>
 <area shape="rect" id="node2" href="$check__bonus_8c.html" title=" " alt="" coords="5,87,145,114"/>
 <area shape="rect" id="node3" href="$check__entity__sp__pl__cy__bonus_8c.html" title=" " alt="" coords="169,80,320,121"/>
-<area shape="rect" id="node4" href="$check__win__size__bonus_8c.html" title=" " alt="" coords="345,80,491,121"/>
-<area shape="rect" id="node5" href="$error__msg__check__bonus_8c.html" title=" " alt="" coords="516,80,672,121"/>
+<area shape="rect" id="node4" href="$check__error__bonus_8c.html" title=" " alt="" coords="345,87,523,114"/>
+<area shape="rect" id="node5" href="$check__win__size__bonus_8c.html" title=" " alt="" coords="547,80,694,121"/>
 </map>

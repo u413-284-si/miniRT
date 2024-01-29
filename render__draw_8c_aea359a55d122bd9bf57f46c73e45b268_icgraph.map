@@ -1,4 +1,0 @@
-<map id="ft_raytrace_image" name="ft_raytrace_image">
-<area shape="rect" id="node1" title="Raytraces the scene to the mlx img." alt="" coords="195,5,335,32"/>
-<area shape="rect" id="node2" href="$render_8h.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="5,5,147,32"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="ft_manip_sphere" name="ft_manip_sphere">
-<area shape="rect" id="node1" title="Manipulates the active sphere." alt="" coords="5,56,136,83"/>
-<area shape="rect" id="node2" href="$render_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f" title="Changes the colour with a keypress." alt="" coords="184,5,357,32"/>
-<area shape="rect" id="node6" href="$render_8h.html#a7b262237fcbe352cb4ef79235666956b" title="Increases or decreases a value with a keypress." alt="" coords="196,56,345,83"/>
-<area shape="rect" id="node7" href="$render_8h.html#aa620096ce57b0280c8e9162eff12a938" title="Moves a 3D point with a keypress." alt="" coords="190,107,351,133"/>
-<area shape="rect" id="node3" href="$render__keyhook__colour_8c.html#a5d187c5314483276ba15560dcf620e39" title="Returns a colour based on the given colour name." alt="" coords="809,5,916,32"/>
-<area shape="rect" id="node4" href="$render__keyhook__colour_8c.html#a02dd1323bf99ad166e22cf0dcbef39f2" title="Interpolates between two colours while keeping track of progress." alt="" coords="405,31,557,57"/>
-<area shape="rect" id="node5" href="$render__keyhook__colour_8c.html#a41e18bc0bce27f7169b29f79e5de0423" title="Interpolates between two colours." alt="" coords="605,31,761,57"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="ft_cy_cap_hit" name="ft_cy_cap_hit">
-<area shape="rect" id="node1" title="Calculates the hit point of the ray with the cylinder cap." alt="" coords="199,5,305,32"/>
-<area shape="rect" id="node2" href="$hit__manager_8h.html#afb7b50ad2f9161c61fc1065975ec7cbf" title="Calculates all four potential hits of a cylinder." alt="" coords="5,5,151,32"/>
-</map>

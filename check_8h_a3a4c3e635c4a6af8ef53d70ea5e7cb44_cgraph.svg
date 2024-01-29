@@ -48,7 +48,7 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 530;
 var viewHeight = 180;
-var sectionId = 'dynsection-2';
+var sectionId = 'dynsection-21';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
@@ -96,7 +96,7 @@ var sectionId = 'dynsection-2';
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="error__msg_8h.html#a0a61f85709f3119ca9086f591705f294" target="_top" xlink:title="Error message if line doesn&#39;t end with space or zero terminator.">
+<g id="a_node9"><a xlink:href="check_8h.html#a0a61f85709f3119ca9086f591705f294" target="_top" xlink:title="Error message if line doesn&#39;t end with space or zero terminator.">
 <polygon fill="none" stroke="black" points="155,-38.5 155,-57.5 236,-57.5 236,-38.5 155,-38.5"/>
 <text text-anchor="middle" x="195.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_end</text>
 </a>
@@ -126,7 +126,7 @@ var sectionId = 'dynsection-2';
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" target="_top" xlink:title="Error message if conversion failed.">
+<g id="a_node3"><a xlink:href="check_8h.html#a207347473e8d1cf324c6b70fca7155fe" target="_top" xlink:title="Error message if conversion failed.">
 <polygon fill="none" stroke="black" points="417,-152.5 417,-171.5 517,-171.5 517,-152.5 417,-152.5"/>
 <text text-anchor="middle" x="467" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_convert</text>
 </a>
@@ -141,7 +141,7 @@ var sectionId = 'dynsection-2';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" target="_top" xlink:title="Error message if converted number is out of range.">
+<g id="a_node4"><a xlink:href="check_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" target="_top" xlink:title="Error message if converted number is out of range.">
 <polygon fill="none" stroke="black" points="421.5,-114.5 421.5,-133.5 512.5,-133.5 512.5,-114.5 421.5,-114.5"/>
 <text text-anchor="middle" x="467" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_range</text>
 </a>
@@ -156,7 +156,7 @@ var sectionId = 'dynsection-2';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" target="_top" xlink:title="Error message if wrong separator was encountered.">
+<g id="a_node5"><a xlink:href="check_8h.html#a66c0aad31fa186667840a2c0a5004099" target="_top" xlink:title="Error message if wrong separator was encountered.">
 <polygon fill="none" stroke="black" points="412,-76.5 412,-95.5 522,-95.5 522,-76.5 412,-76.5"/>
 <text text-anchor="middle" x="467" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_separator</text>
 </a>

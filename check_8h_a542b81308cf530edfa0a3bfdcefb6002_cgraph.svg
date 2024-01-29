@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" target="_top" xlink:title="Error message if conversion failed.">
+<g id="a_node2"><a xlink:href="check_8h.html#a207347473e8d1cf324c6b70fca7155fe" target="_top" xlink:title="Error message if conversion failed.">
 <polygon fill="none" stroke="black" points="129,-114.5 129,-133.5 229,-133.5 229,-114.5 129,-114.5"/>
 <text text-anchor="middle" x="179" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_convert</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" target="_top" xlink:title="Error message if converted number is out of range.">
+<g id="a_node3"><a xlink:href="check_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" target="_top" xlink:title="Error message if converted number is out of range.">
 <polygon fill="none" stroke="black" points="133.5,-76.5 133.5,-95.5 224.5,-95.5 224.5,-76.5 133.5,-76.5"/>
 <text text-anchor="middle" x="179" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_range</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" target="_top" xlink:title="Error message if wrong separator was encountered.">
+<g id="a_node4"><a xlink:href="check_8h.html#a66c0aad31fa186667840a2c0a5004099" target="_top" xlink:title="Error message if wrong separator was encountered.">
 <polygon fill="none" stroke="black" points="124,-38.5 124,-57.5 234,-57.5 234,-38.5 124,-38.5"/>
 <text text-anchor="middle" x="179" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_separator</text>
 </a>

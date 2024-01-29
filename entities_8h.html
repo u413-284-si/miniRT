@@ -89,8 +89,7 @@ $(document).ready(function(){initNavTree('entities_8h.html',''); initResizable()
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#nested-classes">Data Structures</a>  </div>
   <div class="headertitle">
 <div class="title">entities.h File Reference</div>  </div>
 </div><!--header-->
@@ -98,11 +97,17 @@ $(document).ready(function(){initNavTree('entities_8h.html',''); initResizable()
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="vec3_8h_source.html">vec3.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="colour__bonus_8h_source.html">colour_bonus.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="colour_8h_source.html">colour.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for entities.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="entities_8h__incl.svg" width="392" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="entities_8h__incl.svg" width="346" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="entities_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div>
@@ -118,114 +123,7 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__cylinder.html">t_cylinder</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uniont__shape.html">t_shape</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__hittable.html">t_hittable</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__entities.html">t_entities</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a61532cc2157d912259fdd9aa25ca6d70"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a> { <br />
-&#160;&#160;<a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a> = -2
-, <a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a> = -1
-, <a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a>
-, <a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a>
-, <br />
-&#160;&#160;<a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a>
-, <a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e">AMBIENT</a>
-, <a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956">CAMERA</a>
-, <a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb">LIGHT</a>
-, <br />
-&#160;&#160;<a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b">SUM_ENTS</a>
-, <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70ac1aaf16935702a3ac842a873f565573d">WIN_SIZE</a> = -3
-, <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a> = -2
-, <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a> = -1
-, <br />
-&#160;&#160;<a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a>
-, <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a>
-, <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a>
-, <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a">CONE</a>
-, <br />
-&#160;&#160;<a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e">AMBIENT</a>
-, <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956">CAMERA</a>
-, <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb">LIGHT</a>
-, <a class="el" href="entities__bonus_8h.html#a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b">SUM_ENTS</a>
-<br />
- }</td></tr>
-<tr class="separator:a61532cc2157d912259fdd9aa25ca6d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a61532cc2157d912259fdd9aa25ca6d70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61532cc2157d912259fdd9aa25ca6d70">&#9670;&nbsp;</a></span>t_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enumeration of all different entity types. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">COMMENT</td><td>Used for comments: line beginning with # is ignored. </td></tr>
-    <tr><td class="paramname">UNKOWN</td><td>Used, if line not recognized, set to -1. </td></tr>
-    <tr><td class="paramname">SUM_ENTS</td><td>Amounts to sum of all entity types. </td></tr>
-  </table>
-  </dd>
-</dl>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb"></a>COMMENT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d"></a>SPHERE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24"></a>PLANE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2"></a>CYLINDER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e"></a>AMBIENT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956"></a>CAMERA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb"></a>LIGHT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b"></a>SUM_ENTS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70ac1aaf16935702a3ac842a873f565573d"></a>WIN_SIZE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb"></a>COMMENT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d"></a>SPHERE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24"></a>PLANE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2"></a>CYLINDER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70aa605d54c59c22e477ca0e4b94de94a4a"></a>CONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e"></a>AMBIENT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956"></a>CAMERA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb"></a>LIGHT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b"></a>SUM_ENTS&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="entities_8h_source.html#l00102">102</a> of file <a class="el" href="entities_8h_source.html">entities.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a> = -2,</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a> = -1,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a>,</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a>,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a>,</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e">AMBIENT</a>,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956">CAMERA</a>,</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb">LIGHT</a>,</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b">SUM_ENTS</a></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}   <a class="code" href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a>;</div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70">t_type</a></div><div class="ttdeci">t_type</div><div class="ttdoc">Enumeration of all different entity types.</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00102">entities.h:103</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a01eaec024a78f1d2e73b59e5d281251e">AMBIENT</a></div><div class="ttdeci">@ AMBIENT</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00109">entities.h:109</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a10880fedabd808b1e9c828bea931785b">SUM_ENTS</a></div><div class="ttdeci">@ SUM_ENTS</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00113">entities.h:112</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a67572d1492c84d8d417b61e864f13f24">PLANE</a></div><div class="ttdeci">@ PLANE</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00107">entities.h:107</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00105">entities.h:105</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70a888b08e657c6e46ad6f758e66b4e6bd2">CYLINDER</a></div><div class="ttdeci">@ CYLINDER</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00108">entities.h:108</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae4f0962d104ea473feec5598689316d">SPHERE</a></div><div class="ttdeci">@ SPHERE</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00106">entities.h:106</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70aae696377c19e507b64e16be78ce3bbdb">COMMENT</a></div><div class="ttdeci">@ COMMENT</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00104">entities.h:104</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70ada31f516cdf218b68b790fb31e8a6956">CAMERA</a></div><div class="ttdeci">@ CAMERA</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00110">entities.h:110</a></div></div>
-<div class="ttc" id="aentities_8h_html_a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb"><div class="ttname"><a href="entities_8h.html#a61532cc2157d912259fdd9aa25ca6d70af917d6c11c85b4ac32e30d1cc9da25eb">LIGHT</a></div><div class="ttdeci">@ LIGHT</div><div class="ttdef"><b>Definition:</b> <a href="entities_8h_source.html#l00111">entities.h:111</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

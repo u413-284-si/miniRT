@@ -1,4 +1,4 @@
 <map id="ft_incr_ent_count_bonus" name="ft_incr_ent_count_bonus">
 <area shape="rect" id="node1" title="Increase entity count, and check if too many." alt="" coords="5,5,184,32"/>
-<area shape="rect" id="node2" href="$error__msg_8h.html#a55f805a774b02619d20d73cba9e90de3" title="Error message if entity count is not correct." alt="" coords="232,5,352,32"/>
+<area shape="rect" id="node2" href="$check_8h.html#a55f805a774b02619d20d73cba9e90de3" title="Error message if entity count is not correct." alt="" coords="232,5,352,32"/>
 </map>

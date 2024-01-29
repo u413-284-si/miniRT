@@ -1,5 +1,0 @@
-<map id="ft_shoot_ray" name="ft_shoot_ray">
-<area shape="rect" id="node1" title="Constructs a ray and shoots it through the pixel." alt="" coords="383,5,485,32"/>
-<area shape="rect" id="node2" href="$render_8h.html#aea359a55d122bd9bf57f46c73e45b268" title="Raytraces the scene to the mlx img." alt="" coords="195,5,335,32"/>
-<area shape="rect" id="node3" href="$render_8h.html#a012503b6ad6ee8198a601dad994c09b7" title="Main loop of the program." alt="" coords="5,5,147,32"/>
-</map>

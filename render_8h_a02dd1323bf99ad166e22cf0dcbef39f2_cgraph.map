@@ -1,5 +1,0 @@
-<map id="ft_static_interpolate" name="ft_static_interpolate">
-<area shape="rect" id="node1" title="Interpolates between two colours while keeping track of progress." alt="" coords="5,5,157,32"/>
-<area shape="rect" id="node2" href="$render__keyhook__colour_8c.html#a41e18bc0bce27f7169b29f79e5de0423" title="Interpolates between two colours." alt="" coords="205,5,361,32"/>
-<area shape="rect" id="node3" href="$render__keyhook__colour_8c.html#a5d187c5314483276ba15560dcf620e39" title="Returns a colour based on the given colour name." alt="" coords="409,5,516,32"/>
-</map>

@@ -48,7 +48,7 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 550;
 var viewHeight = 104;
-var sectionId = 'dynsection-3';
+var sectionId = 'dynsection-2';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
@@ -66,7 +66,7 @@ var sectionId = 'dynsection-3';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="render_8h.html#aafd27cf2b06772ec739aa2e97164d8b6" target="_top" xlink:title="Changes the camera FOV with a keypress.">
+<g id="a_node2"><a xlink:href="manip_8h.html#aafd27cf2b06772ec739aa2e97164d8b6" target="_top" xlink:title="Changes the camera FOV with a keypress.">
 <polygon fill="none" stroke="black" points="276,-76.5 276,-95.5 393,-95.5 393,-76.5 276,-76.5"/>
 <text text-anchor="middle" x="334.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_keyhook_fov_cam</text>
 </a>
@@ -111,7 +111,7 @@ var sectionId = 'dynsection-3';
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="render_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" target="_top" xlink:title="Manipulates the camera with a keypress.">
+<g id="a_node3"><a xlink:href="manip_8h.html#a0225ca8a98c8d5cfe2e9d259b5788e33" target="_top" xlink:title="Manipulates the camera with a keypress.">
 <polygon fill="none" stroke="black" points="147,-76.5 147,-95.5 233,-95.5 233,-76.5 147,-76.5"/>
 <text text-anchor="middle" x="190" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_cam</text>
 </a>
@@ -126,7 +126,7 @@ var sectionId = 'dynsection-3';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="render_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" target="_top" xlink:title="Branches to the corresponding manipulation function.">
+<g id="a_node4"><a xlink:href="manip_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" target="_top" xlink:title="Branches to the corresponding manipulation function.">
 <polygon fill="none" stroke="black" points="5.5,-76.5 5.5,-95.5 98.5,-95.5 98.5,-76.5 5.5,-76.5"/>
 <text text-anchor="middle" x="52" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_manip_scene</text>
 </a>

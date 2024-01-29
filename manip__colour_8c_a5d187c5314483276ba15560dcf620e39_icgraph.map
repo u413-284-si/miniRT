@@ -1,0 +1,15 @@
+<map id="ft_get_colour" name="ft_get_colour">
+<area shape="rect" id="node1" title="Returns a colour based on the given colour name." alt="" coords="1176,132,1283,159"/>
+<area shape="rect" id="node2" href="$manip_8h.html#a41e18bc0bce27f7169b29f79e5de0423" title="Interpolates between two colours." alt="" coords="972,107,1128,133"/>
+<area shape="rect" id="node4" href="$manip_8h.html#a7f7526c1b74ae22e7d9f477e20a9890f" title="Changes the colour with a keypress." alt="" coords="551,132,724,159"/>
+<area shape="rect" id="node3" href="$manip_8h.html#a02dd1323bf99ad166e22cf0dcbef39f2" title="Interpolates between two colours while keeping track of progress." alt="" coords="772,107,924,133"/>
+<area shape="rect" id="node5" href="$manip_8h.html#a597d35b7bd3aa66272e3c2ff3a1e8f78" title="Manipulates the ambient light." alt="" coords="362,5,502,32"/>
+<area shape="rect" id="node8" href="$manip__bonus_8h.html#a81fa5494e17be06ab12b226ff9dd7c2a" title="Manipulates the active cone." alt="" coords="373,107,491,133"/>
+<area shape="rect" id="node10" href="$manip_8h.html#a2737927d8cc8ff5dc3bd94b3e11fc1a9" title="Manipulates the active cylinder." alt="" coords="363,157,501,184"/>
+<area shape="rect" id="node11" href="$manip_8h.html#a16d57d13773703e93274caef6b5ccde1" title="Manipulates a light source." alt="" coords="361,56,503,83"/>
+<area shape="rect" id="node12" href="$manip_8h.html#a2b397fc2e0dd418d497c05b3dff894f1" title="Manipulates the active plane." alt="" coords="371,208,493,235"/>
+<area shape="rect" id="node13" href="$manip_8h.html#a3af9cb325ad292f339446b63917a9ea2" title="Manipulates the active sphere." alt="" coords="367,259,497,285"/>
+<area shape="rect" id="node6" href="$manip_8h.html#acff7acf5eb6145177496e67b32a74fba" title="Manipulates the active light." alt="" coords="188,56,303,83"/>
+<area shape="rect" id="node7" href="$manip_8h.html#ad4c2931e2e9392390f987c8ca3c99a5d" title="Branches to the corresponding manipulation function." alt="" coords="5,107,129,133"/>
+<area shape="rect" id="node9" href="$manip_8h.html#a58cfb6d04ac9120cc228cbc5411b2005" title="Manipulates the active hittable." alt="" coords="177,157,313,184"/>
+</map>

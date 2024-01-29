@@ -114,53 +114,6 @@ Functions</h2></td></tr>
 <tr class="separator:af0a811069d8f0d83135af5c7a8b60c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="adcfa24b374265bde9fa24b6ed463f823"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcfa24b374265bde9fa24b6ed463f823">&#9670;&nbsp;</a></span>ft_is_printing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ft_is_printing </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structt__render.html">t_render</a> *&#160;</td>
-          <td class="paramname"><em>render</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Helper function to check is_printing flag. </p>
-<p>Flag is_printing is protected by a mutex. This function locks the mutex, checks the flag and unlocks the mutex. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">render</td><td>Pointer to render struct. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true Flag is true. </dd>
-<dd>
-false Flag is false. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="render__output__threaded__bonus_8c_source.html#l00025">25</a> of file <a class="el" href="render__output__threaded__bonus_8c_source.html">render_output_threaded_bonus.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span>    ret;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    pthread_mutex_lock(&amp;render-&gt;<a class="code" href="structt__render.html#a198d940ac7111b0f9328e051c093b5c4">mut_print</a>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    ret = render-&gt;<a class="code" href="structt__render.html#a39431f3a6d5f8a483fc5788f9ac113d5">is_printing</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    pthread_mutex_unlock(&amp;render-&gt;<a class="code" href="structt__render.html#a198d940ac7111b0f9328e051c093b5c4">mut_print</a>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> (ret);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="ttc" id="astructt__render_html_a198d940ac7111b0f9328e051c093b5c4"><div class="ttname"><a href="structt__render.html#a198d940ac7111b0f9328e051c093b5c4">t_render::mut_print</a></div><div class="ttdeci">pthread_mutex_t mut_print</div><div class="ttdef"><b>Definition:</b> <a href="render__bonus_8h_source.html#l00132">render_bonus.h:132</a></div></div>
-<div class="ttc" id="astructt__render_html_a39431f3a6d5f8a483fc5788f9ac113d5"><div class="ttname"><a href="structt__render.html#a39431f3a6d5f8a483fc5788f9ac113d5">t_render::is_printing</a></div><div class="ttdeci">bool is_printing</div><div class="ttdef"><b>Definition:</b> <a href="render__bonus_8h_source.html#l00131">render_bonus.h:131</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="render__output__threaded__bonus_8c_adcfa24b374265bde9fa24b6ed463f823_icgraph.svg" width="610" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
 <a id="a0781cc8b5d9e3dbf273924114d5c73fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0781cc8b5d9e3dbf273924114d5c73fe">&#9670;&nbsp;</a></span>ft_output_threaded()</h2>
 
@@ -197,14 +150,61 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="ttc" id="arender__bonus_8h_html_a68b534edacde73b5710a8bcc823a1c1a"><div class="ttname"><a href="render__bonus_8h.html#a68b534edacde73b5710a8bcc823a1c1a">ft_output_as_ppm</a></div><div class="ttdeci">t_err ft_output_as_ppm(const t_img img)</div><div class="ttdoc">Outputs the current render as a ppm file.</div><div class="ttdef"><b>Definition:</b> <a href="render__output__ppm__bonus_8c_source.html#l00055">render_output_ppm_bonus.c:55</a></div></div>
 <div class="ttc" id="arender__output__threaded__bonus_8c_html_af0a811069d8f0d83135af5c7a8b60c76"><div class="ttname"><a href="render__output__threaded__bonus_8c.html#af0a811069d8f0d83135af5c7a8b60c76">ft_toggle_is_printing</a></div><div class="ttdeci">void ft_toggle_is_printing(t_render *render)</div><div class="ttdoc">Helper function to toggle is_printing flag.</div><div class="ttdef"><b>Definition:</b> <a href="render__output__threaded__bonus_8c_source.html#l00035">render_output_threaded_bonus.c:35</a></div></div>
-<div class="ttc" id="astructt__mlx__ptrs_html_a3f9d28a9843866e3f0f632f93063f727"><div class="ttname"><a href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">t_mlx_ptrs::img</a></div><div class="ttdeci">t_img img</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00086">render.h:86</a></div></div>
-<div class="ttc" id="astructt__render_html"><div class="ttname"><a href="structt__render.html">t_render</a></div><div class="ttdoc">Overarching render struct.</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00127">render.h:128</a></div></div>
-<div class="ttc" id="astructt__render_html_a9ce880ae43b7ec34ab96f0a387451285"><div class="ttname"><a href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">t_render::mlx_ptrs</a></div><div class="ttdeci">t_mlx_ptrs mlx_ptrs</div><div class="ttdef"><b>Definition:</b> <a href="render_8h_source.html#l00129">render.h:129</a></div></div>
-<div class="ttc" id="astructt__thread__data_html"><div class="ttname"><a href="structt__thread__data.html">t_thread_data</a></div><div class="ttdef"><b>Definition:</b> <a href="threads__bonus_8h_source.html#l00026">threads_bonus.h:27</a></div></div>
+<div class="ttc" id="astructt__mlx__ptrs_html_a3f9d28a9843866e3f0f632f93063f727"><div class="ttname"><a href="structt__mlx__ptrs.html#a3f9d28a9843866e3f0f632f93063f727">t_mlx_ptrs::img</a></div><div class="ttdeci">t_img img</div><div class="ttdef"><b>Definition:</b> <a href="render__struct_8h_source.html#l00065">render_struct.h:65</a></div></div>
+<div class="ttc" id="astructt__render_html"><div class="ttname"><a href="structt__render.html">t_render</a></div><div class="ttdoc">Overarching render struct.</div><div class="ttdef"><b>Definition:</b> <a href="render__struct__bonus_8h_source.html#l00077">render_struct_bonus.h:78</a></div></div>
+<div class="ttc" id="astructt__render_html_a9ce880ae43b7ec34ab96f0a387451285"><div class="ttname"><a href="structt__render.html#a9ce880ae43b7ec34ab96f0a387451285">t_render::mlx_ptrs</a></div><div class="ttdeci">t_mlx_ptrs mlx_ptrs</div><div class="ttdef"><b>Definition:</b> <a href="render__struct__bonus_8h_source.html#l00079">render_struct_bonus.h:79</a></div></div>
+<div class="ttc" id="astructt__thread__data_html"><div class="ttname"><a href="structt__thread__data.html">t_thread_data</a></div><div class="ttdoc">Contains data for a thread.</div><div class="ttdef"><b>Definition:</b> <a href="threads__bonus_8h_source.html#l00032">threads_bonus.h:33</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="render__output__threaded__bonus_8c_a0781cc8b5d9e3dbf273924114d5c73fe_cgraph.svg" width="359" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adcfa24b374265bde9fa24b6ed463f823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcfa24b374265bde9fa24b6ed463f823">&#9670;&nbsp;</a></span>ft_is_printing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ft_is_printing </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__render.html">t_render</a> *&#160;</td>
+          <td class="paramname"><em>render</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper function to check is_printing flag. </p>
+<p>Flag is_printing is protected by a mutex. This function locks the mutex, checks the flag and unlocks the mutex. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">render</td><td>Pointer to render struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Flag is true. </dd>
+<dd>
+false Flag is false. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="render__output__threaded__bonus_8c_source.html#l00025">25</a> of file <a class="el" href="render__output__threaded__bonus_8c_source.html">render_output_threaded_bonus.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span>    ret;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    pthread_mutex_lock(&amp;render-&gt;<a class="code" href="structt__render.html#a198d940ac7111b0f9328e051c093b5c4">mut_print</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    ret = render-&gt;<a class="code" href="structt__render.html#a39431f3a6d5f8a483fc5788f9ac113d5">is_printing</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    pthread_mutex_unlock(&amp;render-&gt;<a class="code" href="structt__render.html#a198d940ac7111b0f9328e051c093b5c4">mut_print</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> (ret);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="ttc" id="astructt__render_html_a198d940ac7111b0f9328e051c093b5c4"><div class="ttname"><a href="structt__render.html#a198d940ac7111b0f9328e051c093b5c4">t_render::mut_print</a></div><div class="ttdeci">pthread_mutex_t mut_print</div><div class="ttdef"><b>Definition:</b> <a href="render__struct__bonus_8h_source.html#l00090">render_struct_bonus.h:90</a></div></div>
+<div class="ttc" id="astructt__render_html_a39431f3a6d5f8a483fc5788f9ac113d5"><div class="ttname"><a href="structt__render.html#a39431f3a6d5f8a483fc5788f9ac113d5">t_render::is_printing</a></div><div class="ttdeci">bool is_printing</div><div class="ttdef"><b>Definition:</b> <a href="render__struct__bonus_8h_source.html#l00089">render_struct_bonus.h:89</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="render__output__threaded__bonus_8c_adcfa24b374265bde9fa24b6ed463f823_icgraph.svg" width="610" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

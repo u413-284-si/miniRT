@@ -1,15 +1,4 @@
 <map id="src/error_msg_generic.c" name="src/error_msg_generic.c">
-<area shape="rect" id="node1" title=" " alt="" coords="79,5,257,32"/>
-<area shape="rect" id="node2" href="$error__msg_8h.html" title=" " alt="" coords="118,80,218,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,304,72,331"/>
-<area shape="rect" id="node4" title=" " alt="" coords="90,155,158,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="182,155,245,181"/>
-<area shape="rect" id="node6" href="$entities__bonus_8h.html" title=" " alt="" coords="273,155,402,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="255,453,337,480"/>
-<area shape="rect" id="node8" title=" " alt="" coords="353,379,423,405"/>
-<area shape="rect" id="node9" href="$vec3_8h.html" title=" " alt="" coords="263,379,329,405"/>
-<area shape="rect" id="node11" href="$colour__bonus_8h.html" title=" " alt="" coords="131,229,251,256"/>
-<area shape="rect" id="node10" title=" " alt="" coords="151,453,219,480"/>
-<area shape="rect" id="node12" title=" " alt="" coords="97,304,167,331"/>
-<area shape="rect" id="node13" href="$utils__bonus_8h.html" title=" " alt="" coords="191,304,299,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="36,80,152,107"/>
 </map>

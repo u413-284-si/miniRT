@@ -48,7 +48,7 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 867;
 var viewHeight = 428;
-var sectionId = 'dynsection-1';
+var sectionId = 'dynsection-3';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
@@ -187,7 +187,7 @@ var sectionId = 'dynsection-1';
 <!-- Node26 -->
 <g id="node26" class="node">
 <title>Node26</title>
-<g id="a_node26"><a xlink:href="error__msg_8h.html#aee5d10b82b6780869c9cc69cd64e44cc" target="_top" xlink:title="Print generic error message.">
+<g id="a_node26"><a xlink:href="error__msg__generic_8c.html#aee5d10b82b6780869c9cc69cd64e44cc" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="182,-96.28 182,-115.28 240,-115.28 240,-96.28 182,-96.28"/>
 <text text-anchor="middle" x="211" y="-103.28" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror</text>
 </a>
@@ -232,7 +232,7 @@ var sectionId = 'dynsection-1';
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="error__msg_8h.html#a0a61f85709f3119ca9086f591705f294" target="_top" xlink:title="Error message if line doesn&#39;t end with space or zero terminator.">
+<g id="a_node10"><a xlink:href="check_8h.html#a0a61f85709f3119ca9086f591705f294" target="_top" xlink:title="Error message if line doesn&#39;t end with space or zero terminator.">
 <polygon fill="none" stroke="black" points="334,-324.28 334,-343.28 415,-343.28 415,-324.28 334,-324.28"/>
 <text text-anchor="middle" x="374.5" y="-331.28" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_end</text>
 </a>
@@ -262,7 +262,7 @@ var sectionId = 'dynsection-1';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="error__msg_8h.html#a207347473e8d1cf324c6b70fca7155fe" target="_top" xlink:title="Error message if conversion failed.">
+<g id="a_node4"><a xlink:href="check_8h.html#a207347473e8d1cf324c6b70fca7155fe" target="_top" xlink:title="Error message if conversion failed.">
 <polygon fill="none" stroke="black" points="754,-314.28 754,-333.28 854,-333.28 854,-314.28 754,-314.28"/>
 <text text-anchor="middle" x="804" y="-321.28" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_convert</text>
 </a>
@@ -277,7 +277,7 @@ var sectionId = 'dynsection-1';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="error__msg_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" target="_top" xlink:title="Error message if converted number is out of range.">
+<g id="a_node5"><a xlink:href="check_8h.html#ae79c226d26bf8b2dbd74bf7440eefa7d" target="_top" xlink:title="Error message if converted number is out of range.">
 <polygon fill="none" stroke="black" points="758.5,-267.28 758.5,-286.28 849.5,-286.28 849.5,-267.28 758.5,-267.28"/>
 <text text-anchor="middle" x="804" y="-274.28" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_range</text>
 </a>
@@ -292,7 +292,7 @@ var sectionId = 'dynsection-1';
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="error__msg_8h.html#a66c0aad31fa186667840a2c0a5004099" target="_top" xlink:title="Error message if wrong separator was encountered.">
+<g id="a_node6"><a xlink:href="check_8h.html#a66c0aad31fa186667840a2c0a5004099" target="_top" xlink:title="Error message if wrong separator was encountered.">
 <polygon fill="none" stroke="black" points="749,-229.28 749,-248.28 859,-248.28 859,-229.28 749,-229.28"/>
 <text text-anchor="middle" x="804" y="-236.28" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_separator</text>
 </a>
@@ -463,7 +463,7 @@ var sectionId = 'dynsection-1';
 <!-- Node17 -->
 <g id="node17" class="node">
 <title>Node17</title>
-<g id="a_node17"><a xlink:href="error__msg_8h.html#a2eafb62e253f9202b5cb80f4d005ed93" target="_top" xlink:title="Error message if vector is not a unit vector.">
+<g id="a_node17"><a xlink:href="check_8h.html#a2eafb62e253f9202b5cb80f4d005ed93" target="_top" xlink:title="Error message if vector is not a unit vector.">
 <polygon fill="none" stroke="black" points="478,-58.28 478,-77.28 581,-77.28 581,-58.28 478,-58.28"/>
 <text text-anchor="middle" x="529.5" y="-65.28" font-family="Helvetica,sans-Serif" font-size="10.00">ft_perror_not_unit</text>
 </a>
@@ -478,7 +478,7 @@ var sectionId = 'dynsection-1';
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:href="error__msg_8h.html#abd82c129e1342b28d5e8111cf24304f3" target="_top" xlink:title="Warning message if vector is not a unit vector.">
+<g id="a_node18"><a xlink:href="check_8h.html#abd82c129e1342b28d5e8111cf24304f3" target="_top" xlink:title="Warning message if vector is not a unit vector.">
 <polygon fill="none" stroke="black" points="470,-20.28 470,-39.28 589,-39.28 589,-20.28 470,-20.28"/>
 <text text-anchor="middle" x="529.5" y="-27.28" font-family="Helvetica,sans-Serif" font-size="10.00">ft_pwarning_not_unit</text>
 </a>

@@ -81,7 +81,7 @@ var sectionId = 'dynsection-1';
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="utils__bonus_8h.html#a37e0b6417f5f7ab2acab72c70ddf92e4" target="_top" xlink:title="Return a random float within min and max.">
+<g id="a_node7"><a xlink:href="utils__random__bonus_8h.html#a37e0b6417f5f7ab2acab72c70ddf92e4" target="_top" xlink:title="Return a random float within min and max.">
 <polygon fill="none" stroke="black" points="453,-0.5 453,-19.5 581,-19.5 581,-0.5 453,-0.5"/>
 <text text-anchor="middle" x="517" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_random_float_within</text>
 </a>

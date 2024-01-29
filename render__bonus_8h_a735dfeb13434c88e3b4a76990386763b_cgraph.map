@@ -1,5 +1,0 @@
-<map id="ft_menu_put_text" name="ft_menu_put_text">
-<area shape="rect" id="node1" title="Puts the current menu page on the screen." alt="" coords="5,31,141,57"/>
-<area shape="rect" id="node2" href="$render__bit__field_8h.html#aea0daf263880cbf1cf1a0dd050320e7a" title="Checks if bit is set in the bit field." alt="" coords="189,5,307,32"/>
-<area shape="rect" id="node3" href="$menu__put_8h.html#a1a2da0ddd033aa4e2ad293ef4b8db2af" title="Wrapper for mlx_string_put()." alt="" coords="207,56,289,83"/>
-</map>
