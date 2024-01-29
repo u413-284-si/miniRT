@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:05:05 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/20 15:23:10 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 15:57:55 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,7 @@
 # include <stdint.h>
 
 //home-grown libs
-# if IS_BONUS
-#  include "utils_bonus.h"
-# else
-#  include "utils.h"
-# endif
+# include "utils.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -60,6 +56,15 @@ t_colour	ft_add_colour(t_colour c1, t_colour c2);
  * @return t_colour
  */
 t_colour	ft_hadamard_colour(t_colour c1, t_colour c2);
+
+/**
+ * @brief Scales the colour values
+ *
+ * @param c 			Colour to be scaled
+ * @param scale 		Scalar
+ * @return t_colour
+ */
+t_colour	ft_scale_colour(t_colour c, float scale);
 
 /**
  * @brief Converts a t_colour struct to an int32_t.

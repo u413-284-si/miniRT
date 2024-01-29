@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   utils_math.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:48:18 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/26 14:15:13 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/28 17:50:41 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#if IS_BONUS
-# include "utils_bonus.h"
-#else
-# include "utils.h"
-#endif
+#include "utils.h"
 
 float	ft_degree_to_radian(float degrees)
 {

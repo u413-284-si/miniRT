@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+         #
+#    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/26 14:12:14 by sqiu             ###   ########.fr        #
+#    Updated: 2024/01/28 16:29:00 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -165,10 +165,12 @@ SRC_COMMON := 	camera_movement.c \
 				check_entity_sp_pl_cy.c \
 				check_line.c \
 				check_rm_space.c \
+				check_error.c \
+				check_error2.c \
 				cleanup.c \
+				colour.c \
 				debug_print_entity.c \
 				debug_print_struct.c \
-				error_msg_check2.c \
 				error_msg_generic.c \
 				error_mlx.c \
 				error_syscall.c \
@@ -176,6 +178,13 @@ SRC_COMMON := 	camera_movement.c \
 				import_file.c \
 				import_file_buffer.c \
 				main.c \
+				manip_camera.c \
+				manip_colour.c \
+				manip_hittable.c \
+				manip_light.c \
+				manip_options.c \
+				manip_scene.c \
+				manip_utils.c \
 				menu_put_cam_light.c \
 				menu_put_cam_light_ctrl.c \
 				menu_put_general_info.c \
@@ -194,45 +203,38 @@ SRC_COMMON := 	camera_movement.c \
 				render_cleanup.c \
 				render_init.c \
 				render_init_mlx.c \
-				render_keyhook_camera.c \
-				render_keyhook_colour.c \
-				render_keyhook_hittable.c \
-				render_keyhook_light.c \
-				render_keyhook_options.c \
-				render_keyhook_scene.c \
-				render_keyhook_utils.c \
 				scene_shadow.c \
 				utils_interval.c \
 				utils_math.c \
 				utils_quaternion.c \
 				vec3_arithmetics.c \
-				vec3_linalgebra.c 
+				vec3_linalgebra.c
 
-SRC_BASE := 	colour.c \
-				error_msg_check.c \
-				hit.c \
-				hit_cylinder.c \
-				hit_plane.c \
-				hit_sphere.c \
-				menu_put_text.c \
-				ray.c \
-				render_draw.c \
-				render_keyhook_press.c \
-				render_loop_mlx.c \
-				render_mouse.c \
-				scene_light.c \
-				utils_cylinder.c
+SRC_BASE := 	hit_base.c \
+				hit_cylinder_base.c \
+				hit_plane_base.c \
+				hit_sphere_base.c \
+				menu_put_text_base.c \
+				ray_base.c \
+				render_draw_base.c \
+				render_keyhook_press_base.c \
+				render_loop_mlx_base.c \
+				render_mouse_base.c \
+				scene_light_base.c \
+				utils_cylinder_base.c
 
 SRC_BONUS :=	check_bonus.c \
 				check_entity_sp_pl_cy_bonus.c \
+				check_error_bonus.c \
 				check_win_size_bonus.c \
-				colour_bonus.c \
-				error_msg_check_bonus.c \
 				hit_bonus.c \
 				hit_cone_bonus.c \
 				hit_cylinder_bonus.c \
 				hit_plane_bonus.c \
 				hit_sphere_bonus.c \
+				manip_camera_bonus.c \
+				manip_hittable_bonus.c \
+				manip_options_bonus.c \
 				menu_put_general_info_bonus.c \
 				menu_put_hittable_bonus.c \
 				menu_put_hittable_ctrl_bonus.c \
@@ -246,9 +248,6 @@ SRC_BONUS :=	check_bonus.c \
 				render_cleanup_bonus.c \
 				render_draw_bonus.c \
 				render_init_bonus.c \
-				render_keyhook_camera_bonus.c \
-				render_keyhook_hittable_bonus.c \
-				render_keyhook_options_bonus.c \
 				render_keyhook_press_bonus.c \
 				render_loop_mlx_bonus.c \
 				render_mouse_bonus.c \

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:37:46 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 15:10:55 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 18:17:17 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 
 # include "libft.h"
 
-# include "error_type.h"
-# include "error_msg.h"
+# include "miniRT_error.h"
 # include "ft_strtod.h"
 
 # if IS_BONUS
@@ -29,7 +28,14 @@
 #  include "miniRT_config.h"
 # endif
 
-/* ====== TYPEDEFS ====== */
+/* ====== MACROS ====== */
+
+# define MSG_EXP_FLOAT "Expected: float (1.2 or 3) with maximum of 15 digits"
+# define MSG_EXP_INT "Expected: positive int (1 or 23) with maximum of 3 digits"
+# define MSG_EXP_COMMA "Expected: comma ','"
+# define MSG_EXP_SPACE "Expected: space ' ' or zero terminator '\\0'"
+# define MSG_EXP_END "Expected: 0 to n space ' ' before zero terminator '\\0'"
+# define MSG_EXP_UNIT "Expected: Not the zero vector {0,0,0}"
 
 /* ====== FUNCTIONS ====== */
 
@@ -259,5 +265,78 @@ t_type		ft_check_plane(char *line);
  * @return t_type CYLINDER on success, UNKNOWN if fail.
  */
 t_type		ft_check_cylinder(char *line);
+
+//
+
+/**
+ * @brief Error message if entity count is not correct.
+ *
+ * @param type Entity type.
+ * @param max Maximum number for entity type.
+ * @param count Found number for entity type.
+ * @param high Controls if count is too high or too low.
+ */
+void		ft_perror_count(t_type type, int max, int count, bool high);
+
+/**
+ * @brief Error message if converted number is out of range.
+ *
+ * @param line Start position of converted number.
+ * @param offset Offset from start position.
+ * @param min Minimum for number.
+ * @param max Maximum for number.
+ * @return false Always returns false to chain msg and false in return.
+ */
+bool		ft_perror_range(char *line, size_t offset, int min, int max);
+
+/**
+ * @brief Error message if conversion failed.
+ *
+ * @param line Line with current position, where conversion failed.
+ * @param is_float Controls if converted number should have been float.
+ * @return false Always returns false to chain msg and false in return.
+ */
+bool		ft_perror_convert(char *line, bool is_float);
+
+/**
+ * @brief Error message if wrong separator was encountered.
+ *
+ * @param line Line with current position, where separator was encountered.
+ * @param comma Controls if separator should be ',' or ' ' and '\0'.
+ * @return false Always returns false to chain msg and false in return.
+ */
+bool		ft_perror_separator(char *line, bool comma);
+
+/**
+ * @brief Error message if line doesn't end with space or zero terminator.
+ *
+ * @param line Line with current position, where wrong char was encountered.
+ * @return t_type Always returns UNKNOWN to chain msg and UNKNOWN in return.
+ */
+t_type		ft_perror_end(char *line);
+
+/**
+ * @brief Error message if vector is not a unit vector.
+ *
+ * @param line		Line with position, where vector starts.
+ * @return false	Always returns false to chain msg and false in return.
+ */
+bool		ft_perror_not_unit(char *line);
+
+/**
+ * @brief Warning message if vector is not a unit vector.
+ *
+ * @param line		Line with position, where vector starts.
+ */
+void		ft_pwarning_not_unit(char *line);
+
+/**
+ * @brief Print error message with a number
+ *
+ * The number gets enclosed with <>. *
+ * @param msg		Error message to print.
+ * @param number	Number to print.
+ */
+void		ft_pinfo_line_number(int line_num);
 
 #endif

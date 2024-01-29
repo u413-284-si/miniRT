@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_mlx.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 14:06:44 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/15 12:17:48 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 18:16:46 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 # include <mlx.h>
 
 // Home-grown libs
-# include "error_type.h"
-# include "error_msg.h"
+# include "miniRT_error.h"
 # include "vec2.h"
 
 /* ====== FUNCTIONS ====== */

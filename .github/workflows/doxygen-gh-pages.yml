@@ -13,5 +13,5 @@ jobs:
       - uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          config_file: doc/Doxyfile
+          config_file: doc/Doxyfile_bonus
           folder: doc/html

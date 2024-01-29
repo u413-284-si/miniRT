@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/26 10:14:52 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 17:40:20 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,81 +15,9 @@
 
 /* ====== LIBRARIES ====== */
 
-// Standard C libs
-# include <stdbool.h>
-# include <stdlib.h>
-
-// Home-grown libs
-# include "vec3.h"
-# include "colour_bonus.h"
+# include "entities.h"
 
 /* ====== TYPEDEFS ====== */
-
-/**
- * @brief Represents lighting in the scene
- *
- * @param id		ID of the light
- * @param pos		Position of the light
- * @param ratio		Light brightess ratio
- * @param colour	Colour of the light
- */
-typedef struct s_light
-{
-	int			id;
-	t_vec3		pos;
-	float		ratio;
-	t_colour	colour;
-}	t_light;
-
-/**
- * @brief Represents a sphere
- *
- * @param centre	Centre of the sphere
- * @param r			Radius of the sphere
- * @param colour	Colour of the sphere
- */
-typedef struct s_sphere
-{
-	t_vec3		centre;
-	float		r;
-	t_colour	colour;
-}	t_sphere;
-
-/**
- * @brief Represents a plane
- *
- * @param point		Point on the plane
- * @param normal	Normalised [-1, 1] normal vector of the plane
- * @param colour	Colour of the plane
- */
-typedef struct s_plane
-{
-	t_vec3		point;
-	t_vec3		normal;
-	t_colour	colour;
-}	t_plane;
-
-/**
- * @brief Represents a cylinder
- *
- * @param centre	Centre of the cylinder
- * @param axis		Normalised [-1, 1] axis of the cylinder
- * @param r			Radius of the cylinder
- * @param h			Height of the cylinder
- * @param colour	Colour of the cylinder
- * @param cap1		Centre of first cap = centre - h/2 * axis
- * @param cap2		Centre of second cap = centre + h/2 * axis
- */
-typedef struct s_cylinder
-{
-	t_vec3		centre;
-	t_vec3		axis;
-	float		r;
-	float		h;
-	t_colour	colour;
-	t_vec3		cap1;
-	t_vec3		cap2;
-}	t_cylinder;
 
 /**
  * @brief Represents a cone
@@ -116,8 +44,9 @@ typedef struct s_cone
 /**
  * @brief Enumeration of all different entity types.
  *
- * @param COMMENT	Used for comments: line beginning with # is ignored.
- * @param UNKOWN	Used, if line not recognized, set to -1.
+ * @param WIN_SIZE	(-3) Used for window size: line beginning with R.
+ * @param COMMENT	(-2) Used for comments: line beginning with # is ignored.
+ * @param UNKNOWN	(-1) Used, if line not recognized, set to -1.
  * @param SUM_ENTS	Amounts to sum of all entity types.
  */
 typedef enum e_type
@@ -145,6 +74,7 @@ typedef enum e_type
  * @param sp	Union variable addressed as sphere.
  * @param pl	Union variable addressed as plane.
  * @param cy	Union variable addressed as cylinder.
+ * @param co	Union variable addressed as cone.
  */
 typedef union u_shape
 {
@@ -165,7 +95,7 @@ typedef union u_shape
  * 						(the higher, the smoother the surface appears)
  * @param reflectivity	Material property of point of intersection
  * 						on share of reflected light
- * @param Checkered		Indicates whether the hittable has a checker texture
+ * @param checkered		Indicates whether the hittable has a checker texture
  */
 typedef struct s_hittable
 {

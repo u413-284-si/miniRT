@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 17:02:07 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/22 13:18:49 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 17:41:12 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,7 @@
 
 // Home-grown libs
 # include "vec3.h"
-
-# if IS_BONUS
-#  include "colour_bonus.h"
-# else
-#  include "colour.h"
-# endif
+# include "colour.h"
 
 /* ====== TYPEDEFS ====== */
 
@@ -92,11 +87,13 @@ typedef struct s_cylinder
 	t_vec3		cap2;
 }	t_cylinder;
 
+# ifndef IS_BONUS
+
 /**
  * @brief Enumeration of all different entity types.
  *
- * @param COMMENT	Used for comments: line beginning with # is ignored.
- * @param UNKOWN	Used, if line not recognized, set to -1.
+ * @param COMMENT	(-2) Used for comments: line beginning with # is ignored.
+ * @param UNKNOWN	(-1) Used, if line not recognized, set to -1.
  * @param SUM_ENTS	Amounts to sum of all entity types.
  */
 typedef enum e_type
@@ -160,5 +157,6 @@ typedef struct s_entities
 	int			lsrc_count;
 	int			total;
 }	t_entities;
+# endif
 
 #endif

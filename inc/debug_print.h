@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   debug_print.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 11:26:06 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/26 12:26:39 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/26 14:31:29 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@
 // Home-grown libs
 # include "vec3.h"
 # include "camera.h"
+# include "colour.h"
 
 # if IS_BONUS
-#  include "colour_bonus.h"
 #  include "entities_bonus.h"
 # else
-#  include "colour.h"
 #  include "entities.h"
 # endif
 

@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:34:50 by gwolf             #+#    #+#             */
-/*   Updated: 2024/01/22 17:11:43 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/28 17:11:40 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,18 @@
 
 # include <pthread.h>
 
-# include "error_type.h"
-# include "error_msg.h"
+# include "miniRT_error.h"
 # include "miniRT_config_bonus.h"
 
 /* ====== STRUCTS ====== */
 
+/**
+ * @brief Contains data for a thread.
+ *
+ * @param id		Number of the thread.
+ * @param t_id		ID of thread for pthread_create().
+ * @param arg		Argument to pass to routine.
+ */
 typedef struct s_thread_data
 {
 	int32_t		id;

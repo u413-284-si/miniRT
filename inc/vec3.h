@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sqiu <sqiu@student.42vienna.com>           +#+  +:+       +#+        */
+/*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:45:53 by sqiu              #+#    #+#             */
-/*   Updated: 2024/01/12 20:27:12 by sqiu             ###   ########.fr       */
+/*   Updated: 2024/01/28 15:57:12 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 # include <math.h>
 # include <stdbool.h>
-
-//home-grown libs
 
 /* ====== MACROS ====== */
 
@@ -58,7 +56,7 @@ t_vec3	ft_vec3_sub(t_vec3 v1, t_vec3 v2);
 /**
  * @brief Scale a vector
  * @param v		The vector to be scaled
- * @param a		Scalar	
+ * @param a		Scalar
  * @return t_vec3
  */
 t_vec3	ft_vec3_scale(t_vec3 v, float a);
@@ -103,17 +101,17 @@ float	ft_vec3_angle(t_vec3 v1, t_vec3 v2);
 
 /**
  * @brief Calculates the Hadamard product of two vectors
- * 
+ *
  * Component-wise vector multiplication
  * @param v1 	The first vector
  * @param v2 	The second vector
- * @return t_vec3 
+ * @return t_vec3
  */
 t_vec3	ft_vec3_hadamard(t_vec3 v1, t_vec3 v2);
 
 /**
  * @brief Determines if two vectors are equal
- * 
+ *
  * @param v1 		The first vector
  * @param v2 		The second vector
  * @return true 	If both vectors are equal

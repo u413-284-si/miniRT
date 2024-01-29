@@ -6,7 +6,7 @@
 /*   By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:30:57 by u413q             #+#    #+#             */
-/*   Updated: 2024/01/21 13:07:07 by gwolf            ###   ########.fr       */
+/*   Updated: 2024/01/26 14:24:39 by gwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,15 @@ t_colour	ft_add_colour(t_colour c1, t_colour c2)
 		.r = c1.r + c2.r,
 		.b = c1.b + c2.b,
 		.g = c1.g + c2.g
+	});
+}
+
+t_colour	ft_scale_colour(t_colour c, float scale)
+{
+	return ((t_colour){
+		.r = c.r * scale,
+		.g = c.g * scale,
+		.b = c.b * scale
 	});
 }
 
