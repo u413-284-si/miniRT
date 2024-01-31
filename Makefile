@@ -6,7 +6,7 @@
 #    By: gwolf <gwolf@student.42vienna.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 13:03:05 by gwolf             #+#    #+#              #
-#    Updated: 2024/01/28 16:29:00 by gwolf            ###   ########.fr        #
+#    Updated: 2024/01/31 12:55:30 by gwolf            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,9 +65,12 @@ endif
 # Subdirectory for library files
 LIB_DIR := lib
 LIB_DIR_FT := $(LIB_DIR)/libft
+LIB_DIR_MLX := $(LIB_DIR)/minilibx-linux
 
 # Subdirectory for header files
 INC_DIR := inc
+INC_DIR_FT := $(LIB_DIR_FT)/include
+INC_DIR_MLX := $(LIB_DIR_MLX)
 
 # Subdirectories for dependency files
 DEP_DIR_BASE := $(OBJ_DIR_BASE)/dep
@@ -88,7 +91,7 @@ LDLIBS := -lft -lm -lmlx -lXext -lX11
 # ******************************
 
 CC := cc
-CPPFLAGS := -I $(INC_DIR) -I lib/libft/include
+CPPFLAGS := -I $(INC_DIR) -I $(INC_DIR_FT) -I $(INC_DIR_MLX)
 CFLAGS = -Wall -Werror -Wextra -gdwarf-4
 DEPFLAGS = -MT $@ -MMD -MP -MF $(DEP_DIR)/$*.Td
 COMPILE = $(CC) $(DEPFLAGS) $(CPPFLAGS) $(CFLAGS) -c
@@ -153,6 +156,9 @@ endif
 
 # Library target libft
 LIBFT := $(LIB_DIR_FT)/libft.a
+
+# Library target minilibx
+LIBMLX := $(LIB_DIR_MLX)/libmlx.a
 
 # ******************************
 # *     Source files           *
@@ -310,7 +316,7 @@ all: $(NAME)
 # ******************************
 
 # Linking the NAME target
-$(NAME): $(LIBFT) $(OBJS)
+$(NAME): $(LIBFT) $(LIBMLX) $(OBJS)
 	@printf "$(YELLOW)$(BOLD)link binary$(RESET) [$(BLUE)miniRT$(RESET)]\n"
 	$(SILENT)$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
 	@printf "$(YELLOW)$(BOLD)compilation successful$(RESET) [$(BLUE)miniRT$(RESET)]\n"
@@ -407,7 +413,12 @@ $(DEPFILES):
 # Use Makefile of libft to compile the library.
 $(LIBFT):
 	@printf "$(YELLOW)$(BOLD)compilation$(RESET) [$(BLUE)libft$(RESET)]\n"
-	@$(MAKE) --no-print-directory -C $(LIB_DIR)/libft
+	@$(MAKE) --no-print-directory -C $(LIB_DIR_FT)
+
+# Use Makefile of minilibx to compile the library.
+$(LIBMLX):
+	@printf "$(YELLOW)$(BOLD)compilation$(RESET) [$(BLUE)minilibx$(RESET)]\n"
+	@$(MAKE) --no-print-directory -C $(LIB_DIR_MLX)
 
 # ******************************
 # *     Cleanup                *
@@ -420,8 +431,7 @@ clean:
 	@rm -rf $(BASE_OBJ_DIR)
 	@printf "$(RED)removed subdir $(BASE_OBJ_DIR)$(RESET)\n"
 
-# Remove all object, dependency, binaries and log files
-# Remove all object, dependency, binaries and log files
+# Remove all object, dependency, binaries, libraries and log files
 .PHONY: fclean
 fclean: clean
 	@rm -rf $(NAME)*
@@ -430,6 +440,8 @@ fclean: clean
 	@printf "$(RED)removed subdir $(LOG_DIR)$(RESET)\n"
 	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)libft$(RESET)]\n"
 	@$(MAKE) --no-print-directory -C $(LIB_DIR_FT) fclean
+	@printf "$(YELLOW)$(BOLD)clean$(RESET) [$(BLUE)minilibx$(RESET)]\n"
+	@$(MAKE) --no-print-directory -C $(LIB_DIR_MLX) clean
 	@echo
 
 # ******************************
